@@ -26,11 +26,15 @@ def main():
         raw=json.loads(args.input.read_text()) if args.input else fetch_cdg()
         candidate,details=import_session(fixture,raw,mapping,now=now)
         status.update(last_session=details["session"],details=details)
+        conflicting = len(details["conflicts"])
         if details["new_bars"]:
             atomic_json(data/"market_snapshot.json",candidate)
-            status.update(result="updated",message=f"{details['new_bars']} bougies validées")
+            status.update(result="partial" if conflicting else "updated",
+                          message=f"{details['new_bars']} bougies validées ; {conflicting} conflit(s) conservés")
         else:
-            status.update(result="unchanged",message="Aucune nouvelle séance vérifiée")
+            status.update(result="conflict" if conflicting else "unchanged",
+                          message=(f"{conflicting} bougie(s) divergente(s) non remplacée(s)"
+                                   if conflicting else "Aucune nouvelle séance vérifiée"))
     except Exception as exc:
         status["message"]=f"Collecte refusée : {exc}"
         atomic_json(data/"health.json",status)
