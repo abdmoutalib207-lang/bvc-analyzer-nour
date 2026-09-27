@@ -1,34 +1,26 @@
 # BVC Analyzer Nour
 
-**Prototype indépendant** alimenté par une copie en lecture seule des données du moteur BVC Analyzer au 25/09/2026. Nour inclut l'univers des **80 titres** : 78 historiques disponibles dans cette archive, deux absents (DIS et DLM). Il ne modifie ni les sources du projet principal ni son déploiement.
+Moteur d'analyse indépendant de `-bvc-analyzer` : 80 fiches, graphiques historiques, indicateurs techniques, fondamentaux sourcés, score descriptif unique, briefing de séance et radar de publications. Aucun NLP ni texte WhatsApp n'entre dans les calculs. Le projet principal ne reçoit aucune écriture.
 
-## Voir immédiatement le résultat
+## Utilisation
 
-Ouvrir [l'interface pré-générée](web/index.html) dans un navigateur : **aucun serveur, paquet ou JavaScript n'est nécessaire pour voir les cours, le graphique par défaut et les dernières séances**. Sélectionner un ticker dans le tableau pour ouvrir sa fiche, puis télécharger son historique complet en CSV. JavaScript ajoute simplement le filtre des titres et les périodes **1M / 3M / 1A / Tout** des graphiques.
+- Site : ouvrir `web/index.html`, puis choisir un titre, filtrer l'univers ou ouvrir **Briefing** / **Actualités**. Les graphiques SVG et les liens restent lisibles sans JavaScript ; les périodes, la recherche et le tri ajoutent de l'interactivité.
+- Recalcul local : `python run.py --asof 2026-09-27`.
+- Serveur local : `python run.py --serve` puis http://127.0.0.1:8765/.
+- Import de séance : `python tools/update_market.py`. Une réponse CDG invalide ne remplace pas l'instantané précédent et écrit `data/health.json`.
+- Veille documentaire : `python tools/update_news.py`. Les liens AMMC attestent la présence d'un document dans l'index, les autres restent des alertes non vérifiées ; aucun contenu intégral n'est copié.
+- Tests : `python -m unittest discover -s tests -v`.
 
-Pour régénérer le rapport et consulter le site par HTTP :
+Sur GitHub, le workflow `nour_daily.yml` relève le marché et la veille deux fois chaque jour ouvré à 07:11 et 17:41 UTC, regénère les pages, valide les contrats, versionne les fichiers Nour et déploie GitHub Pages. Les horaires planifiés peuvent subir un retard GitHub ; `workflow_dispatch` permet le déclenchement manuel. Le tableau montre toujours la date réelle du cours et l'état de la dernière tentative de collecte.
 
-```bash
-python run.py --asof 2026-09-26
-python run.py --asof 2026-09-26 --serve
-# puis http://127.0.0.1:8765/
-```
+## Contrats de calcul
 
-Le serveur écoute sur `127.0.0.1` seulement. `web/index.html` et 80 pages `web/titres/TICKER.html` sont des fichiers HTML autonomes avec graphique SVG déjà dessiné ; `web/historique/TICKER.csv` contient toutes les séances présentes dans l'archive de ce titre. `web/report.json` expose les mêmes contrôles de qualité pour un usage programmatique.
+- Les codes fournisseur sont traduits explicitement par `data/source_codes.json` : `SNA` est **Stokvis (STK)**, `SID` est **Sonasid (SNA)**.
+- La séance annulée du 17/09/2026 est refusée. L'OHLC doit contenir des extrêmes réels, et la quantité ne remplace pas le montant MAD. Les jours sans transaction ne créent aucune bougie. Une séance nouvelle exige au moins 20 valeurs datées pareillement et une clôture effective.
+- CMT ne mélange pas les observations de liquidité antérieures à sa reprise du 16/09/2026 avec les suivantes ; les comparaisons postérieures attendent un échantillon suffisant.
+- Le score canonique `nour-quant-v1` décrit tendance, momentum, activité, liquidité et rentabilité avec leurs poids et couverture explicites. Il reste non calculable si les données sont insuffisantes ; aucun ancien signal `sig` / `sigBvc` ne le pilote. Il n'a **aucune performance prédictive validée** et n'est pas une recommandation.
+- Les ratios fondamentaux sont recalculés à partir des chiffres et pages du rapport annuel référencé dans `data/facts_reference.json`. La couverture n'est que partielle : 31 fiches documentées, exercices historiques souvent 2025. Chaque chiffre requiert un recoupement du PDF avant un usage financier. Le moteur ne prolonge pas un exercice ancien comme récent.
+- Les actualités sont des métadonnées et des liens publics sans note NLP, `usable_for_score=false`. Le briefing est déterministe et reproductible, sans génération IA ni promesse de précision prédictive.
+- Les montants historiques reconstitués par `clôture × titres` sont des **estimations** ; la dernière séance importée conserve le montant réel du fournisseur. Pas de spread, carnet, fixing, blocs ou « Smart Money » inventés.
 
-Pour exporter une courbe en image partageable, `python tools/export_chart.py ADI` crée `web/ADI_historique.png` à partir des cours et volumes archivés. Cette commande facultative demande Matplotlib ; les pages HTML et les graphiques SVG intégrés n'en ont pas besoin.
-
-## Provenance
-
-- Source figée : archive du projet principal, commit `dd8e89f29f6e6777f783db634a12fcccb3d5088a`. Les cours viennent de `data.json`, les séries complètes de `pipeline/candles/*.json`. Des empreintes SHA-256 par fichier sont conservées dans `data/market_snapshot.json`.
-- Pour reconstruire la copie à partir d'une autre archive **contrôlée** : `python tools/import_market.py --source /chemin/vers/archive`, puis `python run.py --asof AAAA-MM-JJ`. Ce script n'écrit jamais dans l'archive source.
-- Les longueurs d'historique varient : ADI 811 séances, CMT 688, SMI 577, T2S 38. Le chiffre affiché est le nombre réellement présent, pas une promesse de trois années pour tous les titres.
-- Les anciens champs `sig` et `sigBvc` sont conservés uniquement pour comparaison. La seule décision émise par Nour porte sur **l'état des données** : `OBSERVABLE`, `LIMITÉ`, `INDISPONIBLE`, `SUSPENDU`.
-
-## Contrôles et limites
-
-- Le moteur confronte dernier cours et dernière bougie, âge du prix, suspensions/reprises, OHLC et profondeur de série. Les ouvertures hors des extrêmes sont signalées ; les clôtures hors fourchette sont rejetées. CMT : sept séances depuis la reprise, aucune estimation de sortie chiffrée avant dix séances comparables.
-- Valeur échangée de la dernière séance : montant du snapshot. Valeur historique : **estimation** clôture × titres, jamais un montant de transaction exact. Aucun spread, carnet ni « Smart Money » n'est déduit de la seule courbe.
-- Le site est **figé**. Pour une séance ultérieure, les données doivent être importées et revérifiées ; Nour ne prétend pas être un flux en direct. La qualité et la direction boursière sont deux notions distinctes.
-
-Tests : `python -m unittest discover -s tests -v`. La [feuille de route](ROADMAP.md) décrit la connexion aux nouvelles séances et la validation à réaliser avant toute utilisation décisionnelle.
+La base historique initiale provient de la copie du moteur principal du 25/09/2026, commit `dd8e89f29f6e6777f783db634a12fcccb3d5088a` : 78 séries sur 80, les deux séries manquantes affichent explicitement leur absence. Une nouvelle séance validée peut enrichir ces titres. [Contrôles et prochaines validations](ROADMAP.md).

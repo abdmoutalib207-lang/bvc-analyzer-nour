@@ -7,6 +7,7 @@ from pathlib import Path
 
 from nour.engine import build_report
 from nour.site import build_site
+from nour.briefing import create_briefing
 
 ROOT = Path(__file__).resolve().parent
 
@@ -18,10 +19,18 @@ def main():
     parser.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
     fixture = json.loads((ROOT / "data/market_snapshot.json").read_text(encoding="utf-8"))
-    report = build_report(fixture, args.asof)
+    facts=json.loads((ROOT/"data/facts_reference.json").read_text(encoding="utf-8")).get("records",{})
+    news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
+    report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
+    health_file=ROOT/"data/health.json"
+    report["health"] = json.loads(health_file.read_text()) if health_file.exists() else {
+        "result":"not_configured","message":"Collecte automatique non encore exécutée"}
+    briefing=create_briefing(report)
     target = ROOT / "web/report.json"
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    build_site(fixture, report, ROOT / "web")
+    (ROOT/"web/news.json").write_text(json.dumps(news,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    (ROOT/"web/briefing.json").write_text(json.dumps(briefing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    build_site(fixture, report, ROOT / "web", briefing=briefing)
     print(f"Site Nour : {len(report['results'])} titres, date {args.asof} → {ROOT / 'web/index.html'}")
     if args.serve:
         class LocalHandler(SimpleHTTPRequestHandler):
