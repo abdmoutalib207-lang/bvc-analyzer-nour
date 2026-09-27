@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-27T12:49:00.766136+00:00",
+  "updated_at": "2026-09-27T13:33:06.883809+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -342,9 +342,7 @@
       "url": "https://www.ammc.ma/sites/default/files/CIH_Bank_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T17:22:01+00:00",
-      "tickers": [
-        "CIH"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -631,9 +629,7 @@
       "url": "https://www.ammc.ma/sites/default/files/MLE_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:32:37+00:00",
-      "tickers": [
-        "MRL"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -677,9 +673,7 @@
       "url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:18:10+00:00",
-      "tickers": [
-        "ARD"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -690,9 +684,7 @@
       "url": "https://www.ammc.ma/sites/default/files/Colorado_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:13:37+00:00",
-      "tickers": [
-        "COL"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -725,9 +717,7 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Cimar_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:09:42+00:00",
-      "tickers": [
-        "CIM"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -760,9 +750,7 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Managem_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:01:22+00:00",
-      "tickers": [
-        "MNG"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
@@ -773,9 +761,7 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Auto_Hall_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:00:31+00:00",
-      "tickers": [
-        "HAL"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
