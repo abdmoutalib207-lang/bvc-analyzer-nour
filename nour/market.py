@@ -113,6 +113,7 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
     fresh = {s: q for s, q in quote_by_ticker.items() if q["bar"]["d"] == session}
     updated = copy.deepcopy(fixture)
     changed = 0
+    conflicts = []
     for ticker, quote in fresh.items():
         rec = updated["records"][ticker]
         bar = quote["bar"]
@@ -121,8 +122,14 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
             raise ValueError(f"{ticker}: date source antérieure à l'instantané")
         existing = next((b for b in rec["candles"] if b["d"] == session), None)
         if existing:
-            if any(float(existing[k]) != float(bar[k]) for k in ("o", "h", "l", "c", "v")):
-                raise ValueError(f"{ticker}: séance déjà enregistrée avec des cours différents")
+            differing = [k for k in ("o", "h", "l", "c", "v")
+                         if float(existing[k]) != float(bar[k])]
+            if differing:
+                # Never revise historical candles based on a live response. Flag
+                # the discrepancy without preventing other tickers from updating.
+                conflicts.append({"symbol": ticker, "session": session,
+                                  "fields": differing})
+                continue
         else:
             if rec["candles"] and rec["candles"][-1]["d"] > session:
                 raise ValueError(f"{ticker}: historique désordonné")
@@ -142,7 +149,8 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
         updated["market"]["masi"]["stale"] = (
             updated["market"]["masi"].get("asof") != session)
     return updated, {"session": session, "active_quotes": len(fresh), "new_bars": changed,
-                     "source": SOURCE_URL, "ignored_old_quotes": len(quote_by_ticker)-len(fresh)}
+                     "source": SOURCE_URL, "ignored_old_quotes": len(quote_by_ticker)-len(fresh),
+                     "conflicts": conflicts}
 
 
 def atomic_json(path, data):
