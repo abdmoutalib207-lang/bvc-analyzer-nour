@@ -1,1 +1,1 @@
-{"checked_at":"2026-09-27T17:56:06.271667+00:00","source":"CDG Capital Bourse","result":"error","last_session":null,"message":"Collecte refusée : ADH: séance déjà enregistrée avec des cours différents"}
+{"checked_at":"2026-09-27T18:03:11.549121+00:00","source":"CDG Capital Bourse","result":"unchanged","last_session":"2026-09-25","message":"Aucune nouvelle séance vérifiée","details":{"session":"2026-09-25","active_quotes":62,"new_bars":0,"source":"https://www.cdgcapitalbourse.ma/api/","ignored_old_quotes":0,"conflicts":[]}}
