@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "generated_for": "2026-09-27",
+  "market_session": "2026-09-25",
+  "snapshot_updated": "2026-09-25T21:23:53+0000",
+  "market_status": "CLOSED",
+  "coverage": {
+    "titles": 80,
+    "quoted_session": 63,
+    "observable": 57
+  },
+  "index": {
+    "value": 17818.0946,
+    "change_pct": -0.29,
+    "asof": "2026-09-25",
+    "stale": false,
+    "largeur": {
+      "ratio": -0.3651,
+      "participation_pct": 90.5,
+      "_lecture": "17 hausses contre 40 baisses sur 63 valeurs — marché en repli"
+    },
+    "hausses": 17,
+    "baisses": 40,
+    "inchanges": 6,
+    "valeurs_traitees": 63,
+    "volume_mad": 477819735.78,
+    "titres_echanges": 1397123,
+    "transactions": 3943,
+    "ytd_pct": -5.46
+  },
+  "index_notice": null,
+  "focus": [
+    {
+      "symbol": "ADI",
+      "name": "Alliances",
+      "price": 383.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 29.5,
+      "score_state": "CALCULABLE",
+      "support": 376.0,
+      "resistance": 442.0,
+      "rsi": 40.07,
+      "activity": 4.65,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "RDS",
+      "name": "Résidences Dar Saada",
+      "price": 172.95,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 37.5,
+      "score_state": "CALCULABLE",
+      "support": 167.8,
+      "resistance": 190.0,
+      "rsi": 46.22,
+      "activity": 0.31,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "TGCC",
+      "name": "TGCC SA",
+      "price": 665.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 27.5,
+      "score_state": "CALCULABLE",
+      "support": 665.0,
+      "resistance": 785.0,
+      "rsi": 24.65,
+      "activity": 9.76,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "SGTM",
+      "name": "SGTM SA",
+      "price": 620.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 46.88,
+      "score_state": "CALCULABLE",
+      "support": 570.0,
+      "resistance": 707.5,
+      "rsi": 42.59,
+      "activity": 0.94,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "CMGP",
+      "name": "CMGP Group",
+      "price": 282.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 24.38,
+      "score_state": "CALCULABLE",
+      "support": 287.0,
+      "resistance": 335.0,
+      "rsi": 32.98,
+      "activity": 3.8,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "MSA",
+      "name": "Sodep-Marsa Maroc",
+      "price": 815.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 57.5,
+      "score_state": "CALCULABLE",
+      "support": 813.0,
+      "resistance": 875.0,
+      "rsi": 33.57,
+      "activity": 2.07,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "SMI",
+      "name": "Société Métallurgique d'Imiter",
+      "price": 6550.0,
+      "asof": "2026-09-25",
+      "data_status": "OBSERVABLE",
+      "score": 62.5,
+      "score_state": "CALCULABLE",
+      "support": 6381.0,
+      "resistance": 7276.0,
+      "rsi": 46.82,
+      "activity": 0.88,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": []
+    },
+    {
+      "symbol": "T2S",
+      "name": "T2S Group Holding",
+      "price": 218.15,
+      "asof": "2026-09-25",
+      "data_status": "LIMITÉ",
+      "score": null,
+      "score_state": "PARTIEL",
+      "support": 215.0,
+      "resistance": 240.0,
+      "rsi": 26.57,
+      "activity": 0.53,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": [
+        "Historique limité à 38 séances dans l'extrait"
+      ]
+    },
+    {
+      "symbol": "CMT",
+      "name": "Minière Touissit",
+      "price": 4315.0,
+      "asof": "2026-09-25",
+      "data_status": "LIMITÉ",
+      "score": null,
+      "score_state": "PARTIEL",
+      "support": null,
+      "resistance": null,
+      "rsi": null,
+      "activity": null,
+      "scenario": "Attendre des séances comparables après la reprise",
+      "issues": [
+        "Reprise récente : 7 séances ; tendance antérieure non comparable",
+        "Liquidité récente insuffisante pour estimer la capacité de sortie"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "id": "35b2d11880453e9d75",
+      "title": "Le bénéfice de ce géant minier marocain a été multiplié par dix en six mois",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYUJ6OWx2RS1BdnlGZ3FJOE1IcnlCajdnWUh2Vk85bVhuaEx3TmVxNFpodmJHYXFJZGU0X0VJSkVxckp3RDJOclZMTHV3b1FWSEIyQUlrREYwaTVmRUE5LS0yV1RHRUxXTV93dGJJVG9jSWdFTF84OTNCZGptaGpSdV9HeE9QbVBvUjEwRlF2Tmg?oc=5",
+      "publisher": "BVC Sociétés",
+      "published_at": "2026-09-26T03:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "cd3963c7a2293ba62d",
+      "title": "El Harraz, un chef-d'œuvre revisité au Théâtre National Mohammed V",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQc2luV3k5WENscVVZbmZaNk9yWFVGSXdOcDhYT3ozYzlXSktDX0daMVJlNkpHUjRNQ3F6NzExNGdXRmFkVE9Sd01PWEdMY0tVVm5jR2tiZkxtNmNmWHFPcWhueUJicnI3aWhiRnRjSFNSTExxbXJuX1l3eElseTREZUNwODZYQWlJTkpBc0hYOWhZc3pxYVZVMWVCQ0RKZUdWZ1hIZUVxVFE0RFAyTWc0Ql9UVUU1cG03WlRhMXhYSGRGc090d1VNNzNfWkc?oc=5",
+      "publisher": "MAP",
+      "published_at": "2026-09-25T23:48:12+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "7188f8cc82a547fa87",
+      "title": "Meknès: Célébration du 89ème anniversaire de la bataille des eaux de Boufekrane",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNFFtMllMVGpVUjFGTUVHUFRwVVFMWnZkYndpWGpIX0wtZDlCQjlBaVAxQ21EUVlwOUpPb1ZBN2tndUJ5Mm9ycnYxMjA3YUh0Q3dRWkY3QUJ0UXhRSFlQeTFzX0daekpncENGN2lkSXhnYlBJdkRjME8xMC12RFlvMnZrRnRybVpmV3VjaFd2Ql8xSmswcnNORnF0OVpBRUZSMEIxUUVBVW12Mmdra1kyMGpndDNOT1ViSm1fLW5MSzZkc3paVC1XV2c4Vmo2OGdLdkdnZHZoWkJBbnViZlA0eVk4NkJIZG8?oc=5",
+      "publisher": "MAP",
+      "published_at": "2026-09-25T23:26:03+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "1eadd5dedfd3ebdb86",
+      "title": "Cadeau d'entreprise: Les commandes baissent de moitié",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaXhsVUVGV0NGZG94MHlMT2dyVUZOYnNHYmJBcl9YN09wZHBlb2lTMDdFd3l1X25CRFdpMUltVXhDeEZiWGRETUR4bWVXUkk1UGRISGtWd29fOVJBWEtSR2VSUEFiOUZlZGllWk5kbm1ieVM2VmZpQkc1Qy1rT2hzYTdVZkh1eUU?oc=5",
+      "publisher": "L'Économiste",
+      "published_at": "2026-09-25T22:33:56+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "4e6cb7c97083681e1d",
+      "title": "Dawajine 2026 : le salon avicole marocain se prépare à relever les défis de 2030",
+      "url": "https://fr.hespress.com/489930-dawajine-2026-le-salon-avicole-marocain-se-prepare-a-relever-les-defis-de-2030.html",
+      "publisher": "Hespress Éco",
+      "published_at": "2026-09-25T22:10:18+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "aad8d30040eca670d2",
+      "title": "Législatives 2026 : les résultats définitifs donnent le PAM vainqueur",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZGJZSVBBX1M0LVJkQnpJeWNJeWM2cGtHMUhSVG5MSWxaVEx2OUE4SDVIb0NFbWpCSDhEbmRlLTlFRklzbW03eWZDMUJWaGZnZW4tVG9hNXJXdExXT1lack42RDVILXVPeWgzS1ZINWhLVDFJTFNQeFI2UWU2Wk9jcVg0dTRFbU1XaGpoMmxjSzJKc0ZaYmc?oc=5",
+      "publisher": "Le Desk",
+      "published_at": "2026-09-25T22:03:35+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "0d8c149922ca97bcb6",
+      "title": "Ciments du Maroc: Reclassement interne au sein du groupe Heidelberg Materials",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdjRwY1FiMUZuckJMVmNEd3RFbUJrZDlmSzc3bEJGcURPVVNqTUJxVmJrY0lUMm1FT1lMbGFDNlUzdVNsbWswZVYza0ZpMldIaWk1NkpsTGZib2Z0M3BjR2NXdWZHNzNkdEljM1Nueng1ZDFNLVBJcFk1WWJUbGltM2FBVlVtLUxxS1A1bkxJWWpnZ0pZNlV4NWNZVVpiZVZZWDZlSA?oc=5",
+      "publisher": "BVC Sociétés",
+      "published_at": "2026-09-25T21:54:51+00:00",
+      "tickers": [
+        "CIM"
+      ],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "65eeef02b7576e4442",
+      "title": "Bourse : Heidelberg Materials se désengage de Ciments du Maroc",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNc09Mdk8zZTl6dnAzNHF1dm5sY1gzcWxUb18teDNLcTREb0p6X2xLNWxJQ3FTVU1SWDZRLVlhb3Vjc0dQRXVJVy1WY0pZSGZEQUNUSDZwWVZtdXBmb291SERIcGFBZVU1c2dLbjRHOExNeHo1bF9qanBVMVcwQWdXX0JzRVcxc2QtWm5kOHIzclNWV1R6MHBQQQ?oc=5",
+      "publisher": "BVC Sociétés",
+      "published_at": "2026-09-25T21:42:41+00:00",
+      "tickers": [
+        "CIM"
+      ],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "28d4d744eeb78f91f4",
+      "title": "Nigeria–États-Unis : un accord-cadre pour mobiliser les investissements autour d’un potentiel minier de 700 milliards de dollars",
+      "url": "https://www.financialafrik.com/2026/09/25/nigeria-etats-unis-un-accord-cadre-pour-mobiliser-les-investissements-autour-dun-potentiel-minier-de-700-milliards-de-dollars/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-09-25T21:34:44+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "ca1d71d8c71fc50ba9",
+      "title": "Eliminatoires CAN-2027: Les Lions de l’Atlas assurent face au Gabon (2-0), Bounou garde sa cage inviolée",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQXR3OUtOclVMWmZ0eWQyUnJKWnFONi05a0hwbmRtSFhCaW5YelZMZVh6WkJBV3dzZUdsRzVjU0VMM1ZzbDJiWWtQbUFkQlhYTHNUamt2Ulp6dHpsRUdJUXRyNmJkYXNCSXZGdzhsZG5rcms5ZHBCeXJXdjBBdVNTNVNZQ0RWdmp0Y1c4QVVWQ1JETzZxZmlqOXlyYzBhODVJdGZnNzY3QzdESzF3QnNfeF9pTnp2S0JJUnBWTnBtRzJITXM2VjJZaGhxTQ?oc=5",
+      "publisher": "Maroc Diplomatique",
+      "published_at": "2026-09-25T21:18:04+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "1ca316fdac9802fd82",
+      "title": "Journal de l'Afrique - Maroc: les alliances prennent forme en attente du chef du gouvernement",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNanc0cTdfR1RJellWc3hvMmdqSk1uaTljcEUya2RyMG1VSGUwUHVWZmN2YXFFeTJSUkJaUDVNdzlpYXlvdWtFaWkyelpMa2tMbGthRDJMaHRJUXRQV1NFcE4wazRpLTViZ2tvbXlCQjYtNUloR3c0T2JUQ2EtQnViVUZrNFpxMlg2SnViNWRFTk9ZTEdOcDY0alpwazljaWU1ZFI0LVBfQjJrOXpKenNWZ1YzcnRDUl81aGV4V203dG1FcnVuWVVnY1ZJV2NlWW9DTEp0UFRaT2cwQQ?oc=5",
+      "publisher": "BVC Sociétés",
+      "published_at": "2026-09-25T21:13:02+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    },
+    {
+      "id": "ee0b36b8321345e766",
+      "title": "Législatives 2026 : les résultats définitifs donnent le PAM vainqueur",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNd0Y1RlQwR2xnMlB2T1FMc1ctbklncmVTZkhnVWNxX0FQTDZYdW5KWGo2aEE4ZGdVWVFSNmFKYWlEdmtvVEdRZHo3VENFVHFJZFo3eTJWR1NOckZaV3BzSERxVnp2WVJNOTBXV1NGTE54ZXdSWkt1Y1Y1SzlQeEZFTTl4QU5BNjFLS3ZXNGNhako0M1Vl?oc=5",
+      "publisher": "Le Desk",
+      "published_at": "2026-09-25T21:11:44+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false
+    }
+  ],
+  "news_role": "veille uniquement",
+  "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."
+}
