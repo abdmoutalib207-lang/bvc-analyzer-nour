@@ -1,0 +1,57 @@
+name: Nour market, news and public site
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 7 * * 1-5'
+    - cron: '41 17 * * 1-5'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: nour-publication
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Import last completed market session
+        id: market
+        continue-on-error: true
+        run: python tools/update_market.py
+      - name: Refresh official documents and press radar
+        id: news
+        continue-on-error: true
+        run: python tools/update_news.py
+      - name: Build dashboard and briefing
+        run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)"
+      - name: Verify the generated output
+        run: python -m unittest discover -s tests -v
+      - name: Save validated snapshots and pages
+        run: |
+          git config user.name 'bvc-nour-bot'
+          git config user.email 'bvc-nour-bot@users.noreply.github.com'
+          git add data/market_snapshot.json data/news.json data/health.json web
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh Nour market and news snapshots"
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Report collector outcomes
+        if: always()
+        run: |
+          echo 'Market: ${{ steps.market.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'News: ${{ steps.news.outcome }}' >> "$GITHUB_STEP_SUMMARY"
