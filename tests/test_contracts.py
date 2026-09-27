@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 
 from nour.market import import_session, normalized_quote
 from nour.engine import build_report
-from nour.briefing import create_briefing
+from nour.briefing import create_briefing, market_relevant
 from nour.news import merge_news
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,6 +69,12 @@ class Contracts(unittest.TestCase):
         brief=create_briefing(with_news)
         self.assertEqual(brief['news_role'],'veille uniquement')
         self.assertTrue(all('scenario' in f for f in brief['focus']))
+
+    def test_market_briefing_rejects_irrelevant_headlines(self):
+        self.assertFalse(market_relevant({'title':'Concert au théâtre national', 'tier':'S2'}))
+        self.assertFalse(market_relevant({'title':'Résultats des élections', 'tier':'S2'}))
+        self.assertTrue(market_relevant({'title':'Résultats financiers semestriels', 'tier':'S2'}))
+        self.assertTrue(market_relevant({'title':'Publication d’un émetteur', 'tier':'S1'}))
 
 
 if __name__=='__main__': unittest.main()
