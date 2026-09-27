@@ -3,6 +3,7 @@ import json
 import re
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 from nour.engine import build_report
@@ -17,7 +18,10 @@ class VisibleMarketSite(unittest.TestCase):
         cls.fixture = json.loads((ROOT / "data/market_snapshot.json").read_text())
         cls.temporary = tempfile.TemporaryDirectory()
         cls.output = Path(cls.temporary.name)
-        build_site(cls.fixture, build_report(cls.fixture, "2026-09-26"), cls.output)
+        cls.asof = max(date.today().isoformat(), *(r.get("price_asof") or ""
+                      for r in cls.fixture["records"].values()))
+        cls.report = build_report(cls.fixture, cls.asof)
+        build_site(cls.fixture, cls.report, cls.output)
 
     @classmethod
     def tearDownClass(cls):
@@ -52,6 +56,24 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn("Dernières 40 séances", static)
         self.assertIn(self.fixture["records"]["ADI"]["candles"][-1]["d"], static)
         self.assertIn('href="../historique/ADI.csv"', static)
+
+    def test_csv_matches_snapshot_and_published_quality_counts(self):
+        """The audit counters and each warning must describe exported rows."""
+        self.assertEqual(len(self.fixture["symbols"]), 80)
+        self.assertEqual(set(self.fixture["records"]), set(self.fixture["symbols"]))
+        by_symbol = {r["symbol"]: r for r in self.report["results"]}
+        for symbol in self.fixture["symbols"]:
+            candles = self.fixture["records"][symbol]["candles"]
+            with (self.output / "historique" / f"{symbol}.csv").open(encoding="utf-8-sig") as fp:
+                rows = list(csv.DictReader(fp, delimiter=";"))
+            self.assertEqual(len(rows), len(candles), symbol)
+            dates = [r["Séance"] for r in rows]
+            self.assertEqual(dates, sorted(set(dates)), symbol)
+            self.assertTrue(all(date.fromisoformat(d) <= date.fromisoformat(self.asof) for d in dates), symbol)
+            self.assertEqual(sum(r["Contrôle OHLC"] == "Ouverture hors fourchette" for r in rows),
+                             by_symbol[symbol]["quality"]["invalid_open_count"], symbol)
+            self.assertEqual(sum(r["Contrôle OHLC"] == "Clôture hors fourchette" for r in rows),
+                             by_symbol[symbol]["quality"]["invalid_close_count"], symbol)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 """High-risk contracts at the ingestion / score / publication boundaries."""
+import copy
 import json
 import unittest
 from datetime import date, datetime, timedelta
@@ -46,6 +47,28 @@ class Contracts(unittest.TestCase):
         self.assertEqual(updated['records']['SNA']['candles'][-1]['l'],98)
         self.assertEqual(self.fixture['records']['STK']['price_asof'],original)
         self.assertTrue(updated['market']['masi']['stale'])
+
+    def test_one_historical_conflict_does_not_block_other_tickers(self):
+        fixture = copy.deepcopy(self.fixture)
+        latest = max(date.fromisoformat(r['price_asof']) for r in self.fixture['records'].values()
+                     if r.get('price_asof'))
+        # Simulate ADI needing the current session while ADH has a conflicting
+        # previously published candle for that very session.
+        self.assertEqual(fixture['records']['ADI']['candles'][-1]['d'], latest.isoformat())
+        fixture['records']['ADI']['candles'].pop()
+        fixture['records']['ADI']['price_asof'] = fixture['records']['ADI']['candles'][-1]['d']
+        lines = []
+        for ticker in self.fixture['symbols'][:35]:
+            lines.append({'Symbol':self.codes[ticker], 'DateDernierCours': latest.strftime('%d/%m/%Y'),
+                          'Cours':100,'Ouverture':101,'PlusHaut':103,'PlusBas':98,
+                          'QteEchangee':1000,'Volumes':100000})
+        original = fixture['records']['ADH']['candles'][-1].copy()
+        updated, summary = import_session(fixture, lines, self.codes,
+            now=datetime(latest.year, latest.month, latest.day,19,tzinfo=ZoneInfo('Africa/Casablanca')))
+        self.assertIn('ADH',[c['symbol'] for c in summary['conflicts']])
+        self.assertEqual(updated['records']['ADH']['candles'][-1],original)
+        self.assertGreaterEqual(summary['new_bars'],1)
+        self.assertEqual(updated['records']['ADI']['candles'][-1]['d'], latest.isoformat())
 
     def test_no_fabricated_candle_and_cancelled_session(self):
         row={'DateDernierCours':'28/09/2026','Cours':100,'Ouverture':100,
