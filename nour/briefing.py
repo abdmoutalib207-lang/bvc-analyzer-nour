@@ -22,6 +22,18 @@ def market_relevant(article):
             or bool(MARKET_WORDS.search(article.get("title") or "")))
 
 
+def level_scenario(price, support, resistance, resumed=False):
+    if resumed:
+        return "Attendre des séances comparables après la reprise"
+    if price is None or support is None or resistance is None:
+        return "Données insuffisantes pour établir des niveaux"
+    if price < support:
+        return "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future"
+    if price > resistance:
+        return "Clôture au-dessus de la résistance de référence ; vérifier si ce niveau se maintient"
+    return "Surveiller la tenue du support et le franchissement confirmé de la résistance"
+
+
 def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI","T2S","CMT")):
     market = report.get("market", {})
     masi = market.get("masi") or {}
@@ -45,10 +57,8 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
                       "data_status":r["decision"],"score":s["value"],"score_state":s["state"],
                       "support":t["support20"],"resistance":t["resistance20"],
                       "rsi":t["rsi14"],"activity":t["volume_vs_median20"],
-                      "scenario": ("Attendre des séances comparables après la reprise" if t["limited_by_resumption"]
-                                   else "Surveiller la tenue du support et le franchissement confirmé de la résistance" if
-                                   t["support20"] is not None and t["resistance20"] is not None else
-                                   "Données insuffisantes pour établir des niveaux"),
+                      "scenario": level_scenario(r["price"], t["support20"],
+                                                  t["resistance20"], t["limited_by_resumption"]),
                       "issues":r["quality"]["issues"][:2]})
     index_current = masi.get("asof") == session and session is not None
     return {"schema_version":1,"generated_for":asof,"market_session":session,
