@@ -41,15 +41,16 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn("Historique de cours indisponible", (self.output / "titres/DIS.html").read_text())
         with (self.output / "historique/ADI.csv").open(encoding="utf-8-sig") as fp:
             rows = list(csv.reader(fp, delimiter=";"))
-        self.assertEqual(len(rows) - 1, 811)
-        self.assertEqual(rows[-1][0], "2026-09-25")
+        candles = self.fixture["records"]["ADI"]["candles"]
+        self.assertEqual(len(rows) - 1, len(candles))
+        self.assertEqual(rows[-1][0], candles[-1]["d"])
 
     def test_static_detail_chart_and_recent_session_table(self):
         page = (self.output / "titres/ADI.html").read_text()
         static = re.sub(r"<script\b[^>]*>.*?</script>", "", page, flags=re.DOTALL)
         self.assertIn('<polyline points="', static)
         self.assertIn("Dernières 40 séances", static)
-        self.assertIn("2026-09-25", static)
+        self.assertIn(self.fixture["records"]["ADI"]["candles"][-1]["d"], static)
         self.assertIn('href="../historique/ADI.csv"', static)
 
 
