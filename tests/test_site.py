@@ -7,7 +7,7 @@ from datetime import date
 from pathlib import Path
 
 from nour.engine import build_report
-from nour.site import build_site
+from nour.site import build_site, news_page
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -74,6 +74,17 @@ class VisibleMarketSite(unittest.TestCase):
                              by_symbol[symbol]["quality"]["invalid_open_count"], symbol)
             self.assertEqual(sum(r["Contrôle OHLC"] == "Clôture hors fourchette" for r in rows),
                              by_symbol[symbol]["quality"]["invalid_close_count"], symbol)
+
+    def test_news_lists_official_documents_before_secondary_off_topic_alerts(self):
+        report = {"news": [
+            {"tier":"S2", "title":"Concert au théâtre", "published_at":"2026-09-27", "url":"https://example.org/concert"},
+            {"tier":"S1", "title":"Résultats d’un émetteur", "published_at":"2026-09-25", "url":"https://example.org/resultats"},
+            {"tier":"S2", "title":"Dividende coté", "published_at":"2026-09-26", "url":"https://example.org/dividende"},
+        ]}
+        rendered = news_page(self.fixture, report, "", "")
+        self.assertLess(rendered.index("Résultats d’un émetteur"), rendered.index("Dividende coté"))
+        self.assertLess(rendered.index("Dividende coté"), rendered.index("Concert au théâtre"))
+        self.assertIn("alertes à vérifier", rendered)
 
 
 if __name__ == "__main__":
