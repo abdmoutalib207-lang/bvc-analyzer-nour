@@ -2,6 +2,24 @@
 from __future__ import annotations
 
 from datetime import date, datetime, timedelta
+import re
+
+
+# The complete news page can carry broader context. A market briefing must not
+# let an unrelated cultural or political headline displace an issuer release.
+MARKET_WORDS = re.compile(
+    r"\b(?:bourse|boursier|masi|ammc|dividende|capitalisation|actionnaires?|"
+    r"résultats?\s+financiers?|bénéfices?|chiffre\s+d'affaires|"
+    r"taux\s+directeur|bank\s+al.maghrib|banques?|financement|"
+    r"cotation|introduction\s+en\s+bourse|obligations?|"
+    r"minier|ciment|semestre|immobilier|trésor|adjudication)\b",
+    re.IGNORECASE,
+)
+
+
+def market_relevant(article):
+    return (article.get("tier") == "S1" or bool(article.get("tickers"))
+            or bool(MARKET_WORDS.search(article.get("title") or "")))
 
 
 def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI","T2S","CMT")):
@@ -12,7 +30,12 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
     session = max(latest_dates) if latest_dates else None
     active = [r for r in report["results"] if r["asof"] == session and r["decision"] != "INDISPONIBLE"]
     previous = (date.fromisoformat(asof)-timedelta(days=4)).isoformat()
-    news = [a for a in report.get("news", []) if a.get("published_at","")[:10] >= previous][:12]
+    news = [a for a in report.get("news", [])
+            if a.get("published_at", "")[:10] >= previous and market_relevant(a)]
+    # Official issuer documents precede secondary alerts; within each tier,
+    # retain date order. This is editorial order, never a scoring factor.
+    news = sorted(news, key=lambda a: (a.get("tier") == "S1", a.get("published_at", "")),
+                  reverse=True)[:12]
     focus = []
     by = {r["symbol"]:r for r in report["results"]}
     for symbol in watch:
