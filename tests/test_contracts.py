@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 
 from nour.market import import_session, normalized_quote
 from nour.engine import build_report
-from nour.briefing import create_briefing, market_relevant
+from nour.briefing import create_briefing, level_scenario, market_relevant
 from nour.news import merge_news
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -98,6 +98,12 @@ class Contracts(unittest.TestCase):
         self.assertFalse(market_relevant({'title':'Résultats des élections', 'tier':'S2'}))
         self.assertTrue(market_relevant({'title':'Résultats financiers semestriels', 'tier':'S2'}))
         self.assertTrue(market_relevant({'title':'Publication d’un émetteur', 'tier':'S1'}))
+
+    def test_briefing_describes_broken_support_without_claiming_it_holds(self):
+        self.assertIn('sous le support', level_scenario(282,287,335))
+        self.assertIn('au-dessus de la résistance', level_scenario(342,287,335))
+        self.assertIn('tenue du support', level_scenario(300,287,335))
+        self.assertIn('après la reprise', level_scenario(300,287,335,True))
 
 
 if __name__=='__main__': unittest.main()
