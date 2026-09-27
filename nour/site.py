@@ -5,6 +5,8 @@ import json
 import re
 from pathlib import Path
 
+from .briefing import market_relevant
+
 
 def esc(value):
     return html.escape(str(value if value is not None else "—"), quote=True)
@@ -185,7 +187,11 @@ def home_page(fixture, report, style, script):
 
 
 def news_page(fixture, report, style, script):
-    articles = report.get('news', [])
+    # Preserve every archived alert for search, but present official documents
+    # and market-relevant items first. A secondary headline is not proof.
+    articles = sorted(report.get('news', []),
+                      key=lambda a: (a.get('tier') == 'S1', market_relevant(a),
+                                     a.get('published_at') or ''), reverse=True)
     rows = []
     for a in articles:
         title, url = esc(a.get('title')), esc(a.get('url'))
@@ -193,7 +199,7 @@ def news_page(fixture, report, style, script):
         searchable = ' '.join((str(a.get('title') or ''), str(a.get('publisher') or ''), tickers)).lower()
         rows.append(f'<article class="news-item" data-news-row data-search="{esc(searchable)}" data-tier="{esc(a.get("tier"))}"><span class="eyebrow">{esc(a.get("publisher"))} · {esc(a.get("published_at","")[:10])} · {esc(a.get("tier"))}</span><h2><a href="{url}" target="_blank" rel="noopener noreferrer">{title} ↗</a></h2><p>{esc(a.get("status"))} · Titres associés : {esc(tickers or "non établis")}</p></article>')
     body = (header('index.html', fixture['snapshot_updated'])
-            + '<main><div class="hero"><span class="eyebrow">Radar documentaire</span><h1>Actualités vérifiables</h1><p>Alertes et index de publications. Le rattachement au titre et la source sont visibles ; aucun article ne contribue au score.</p></div>'
+            + '<main><div class="hero"><span class="eyebrow">Radar documentaire</span><h1>Publications et alertes à vérifier</h1><p>Documents officiels d’abord, puis alertes de marché, puis autres éléments de veille. Le rattachement au titre et la source sont visibles ; aucun article ne contribue au score.</p></div>'
             + '<section class="panel"><div class="filters"><input class="search" id="news-search" type="search" placeholder="Rechercher un titre ou une source" aria-label="Rechercher dans les actualités"><select id="news-tier" aria-label="Filtrer par niveau de source"><option value="">Toutes les sources</option><option value="S1">Index officiel AMMC</option><option value="S2">Veille secondaire</option></select></div><p class="fineprint">Une ligne S1 atteste la présence d’un document sur l’index AMMC ; son contenu financier n’est pas analysé automatiquement. Les autres lignes attendent une validation primaire.</p>'
             + '<div class="news-list">' + (''.join(rows) or '<p>Aucune actualité disponible.</p>') + '</div></section></main><footer>BVC Analyzer Nour · actualités réservées à la veille · NLP 0 %.</footer>')
     return shell('Actualités', body, style, script)
