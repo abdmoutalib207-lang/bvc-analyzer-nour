@@ -2,6 +2,7 @@
 from datetime import date
 from math import ceil, sqrt
 from statistics import median, stdev
+from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
 
 
 def _mean(items):
@@ -119,13 +120,22 @@ def analyze(record, asof, quantity=1000):
     }
 
 
-def build_report(fixture, asof=None, quantity=1000):
+def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
     asof = asof or date.today().isoformat()
-    results = [analyze(fixture["records"][symbol], asof, quantity) for symbol in fixture["symbols"]]
+    facts = facts or {}
+    results = []
+    for symbol in fixture["symbols"]:
+        rec = fixture["records"][symbol]
+        item = analyze(rec, asof, quantity)
+        item["technical"] = technical(rec)
+        item["fundamental"] = fundamentals(rec, facts.get(symbol))
+        item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
+        results.append(item)
     return {
-        "project": fixture["project"], "schema_version": 1, "analysis_date": asof,
+        "project": fixture["project"], "schema_version": 2, "analysis_date": asof,
         "snapshot_updated": fixture["snapshot_updated"], "source_commit": fixture["source_commit"],
         "source_files": fixture["source_files"],
-        "method": "Static observation; no trading recommendation. Historic turnover estimate = close × traded shares; 10% participation is a scenario, not a guaranteed execution rate.",
-        "results": results,
+        "score_version": SCORE_VERSION, "news_role": "veille uniquement", "nlp_weight": 0,
+        "method": "Score descriptif plafonné par la qualité et la couverture; jamais un ordre. MAD historiques estimés = cours × quantité sauf champ réel explicite; 10% de participation est un scénario.",
+        "market": fixture.get("market", {}), "news": news or [], "results": results,
     }
