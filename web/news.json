@@ -1,8 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T15:23:29.138750+00:00",
+  "updated_at": "2026-09-28T22:37:43.508972+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "629b2cb4d0118fd6fc",
+      "title": "Sofac - CP suite à la mise à jour annuelle et occasionnelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Sofac_MAJ_BSF_2026.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-28T16:43:20+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "a7041de4611d263429",
       "title": "HPS - Résultats financiers du 1er semestre 2026",
@@ -3524,19 +3535,6 @@
       "published_at": "2026-08-31T21:24:25+00:00",
       "tickers": [
         "CMT"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "7fe3df01a07e92170a",
-      "title": "Oulmes - CP relatif aux indicateurs du 2ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Oulmes_T2_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-08-31T18:26:18+00:00",
-      "tickers": [
-        "OUL"
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",

@@ -2,7 +2,7 @@
   "project": "BVC Analyzer Nour",
   "schema_version": 2,
   "analysis_date": "2026-09-28",
-  "snapshot_updated": "2026-09-25T21:23:53+0000",
+  "snapshot_updated": "2026-09-28T22:37:41.421828+00:00",
   "source_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
   "source_files": {
     "data.json": "34f9938ce30942bf8e3dfc780cf19b3167c792b5f3947f5436391a1a2334a837",
@@ -97,7 +97,7 @@
       "value": 17818.0946,
       "change_pct": -0.29,
       "asof": "2026-09-25",
-      "stale": false,
+      "stale": true,
       "largeur": {
         "ratio": -0.3651,
         "participation_pct": 90.5,
@@ -111,9 +111,21 @@
       "titres_echanges": 1397123,
       "transactions": 3943,
       "ytd_pct": -5.46
-    }
+    },
+    "last_session": "2026-09-28"
   },
   "news": [
+    {
+      "id": "629b2cb4d0118fd6fc",
+      "title": "Sofac - CP suite à la mise à jour annuelle et occasionnelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Sofac_MAJ_BSF_2026.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-28T16:43:20+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "a7041de4611d263429",
       "title": "HPS - Résultats financiers du 1er semestre 2026",
@@ -3639,19 +3651,6 @@
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
-    },
-    {
-      "id": "7fe3df01a07e92170a",
-      "title": "Oulmes - CP relatif aux indicateurs du 2ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Oulmes_T2_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-08-31T18:26:18+00:00",
-      "tickers": [
-        "OUL"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
     }
   ],
   "results": [
@@ -3660,16 +3659,16 @@
       "name": "Douja Prom Addoha",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 33.59,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 7619647.75,
-      "day_shares": 226856,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 33.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2218389.3,
+      "day_shares": 67182,
       "quality": {
-        "candles_in_extract": 808,
-        "full_history_count_reported": 808,
-        "usable_close_bars": 808,
+        "candles_in_extract": 809,
+        "full_history_count_reported": 809,
+        "usable_close_bars": 809,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -3679,10 +3678,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 83547.5,
-        "median_turnover_mad_estimated": 2877577.42,
+        "median_shares": 79473.0,
+        "median_turnover_mad_estimated": 2716396.38,
         "median_turnover_ex_top5_mad_estimated": 2042093.0,
-        "capacity_shares_per_session_at_10pct": 8354.75,
+        "capacity_shares_per_session_at_10pct": 7947.3,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -3690,12 +3689,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 34.72,
-        "change_20_sessions_pct": -9.09,
-        "realized_volatility_20d_pct": 32.7
+        "ma20": 34.57,
+        "change_20_sessions_pct": -8.46,
+        "realized_volatility_20d_pct": 32.24
       },
       "close_series_last_60": [
-        35.2,
         34.65,
         34.3,
         34.2,
@@ -3754,25 +3752,26 @@
         34.49,
         34.1,
         33.8,
-        33.59
+        33.59,
+        33.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 808,
-        "sma20": 34.72,
-        "sma50": 34.8,
-        "sma200": 33.45,
-        "rsi14": 42.14,
-        "macd": -0.45,
-        "macd_signal": -0.29,
-        "atr14": 0.82,
-        "return20_pct": -9.09,
+        "sessions": 809,
+        "sma20": 34.57,
+        "sma50": 34.77,
+        "sma200": 33.43,
+        "rsi14": 38.83,
+        "macd": -0.51,
+        "macd_signal": -0.33,
+        "atr14": 0.87,
+        "return20_pct": -8.46,
         "support20": 32.4,
-        "resistance20": 36.95,
-        "volume_vs_median20": 2.85,
+        "resistance20": 36.64,
+        "volume_vs_median20": 0.8,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -3803,11 +3802,11 @@
         },
         "eps_mad": 1.13,
         "book_value_per_share_mad": 23.55,
-        "pe": 29.73,
-        "pb": 1.43,
+        "pe": 29.2,
+        "pb": 1.4,
         "revenue_growth_pct": null,
         "roe_pct": 4.79,
-        "dividend_yield_pct": 1.49,
+        "dividend_yield_pct": 1.52,
         "earnings_mmad": 453.719
       },
       "canonical_score": {
@@ -3849,16 +3848,16 @@
       "name": "Alliances",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 383.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 11280158.0,
-      "day_shares": 29395,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 377.1,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2486355.2,
+      "day_shares": 6529,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -3869,7 +3868,7 @@
         "window_sessions": 20,
         "active_sessions": 20,
         "median_shares": 6325.5,
-        "median_turnover_mad_estimated": 2522753.0,
+        "median_turnover_mad_estimated": 2420680.95,
         "median_turnover_ex_top5_mad_estimated": 1239472.0,
         "capacity_shares_per_session_at_10pct": 632.55,
         "exit_days_at_10pct": 2,
@@ -3879,12 +3878,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 406.43,
-        "change_20_sessions_pct": -12.36,
-        "realized_volatility_20d_pct": 31.56
+        "ma20": 403.79,
+        "change_20_sessions_pct": -12.3,
+        "realized_volatility_20d_pct": 31.54
       },
       "close_series_last_60": [
-        405.0,
         399.0,
         393.5,
         400.0,
@@ -3943,25 +3941,26 @@
         404.0,
         390.0,
         387.0,
-        383.0
+        383.0,
+        377.1
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 406.43,
-        "sma50": 395.88,
-        "sma200": 449.53,
-        "rsi14": 40.07,
-        "macd": -5.02,
-        "macd_signal": -1.37,
-        "atr14": 11.98,
-        "return20_pct": -12.36,
+        "sessions": 812,
+        "sma20": 403.79,
+        "sma50": 395.57,
+        "sma200": 448.47,
+        "rsi14": 37.58,
+        "macd": -6.12,
+        "macd_signal": -2.32,
+        "atr14": 11.97,
+        "return20_pct": -12.3,
         "support20": 376.0,
-        "resistance20": 442.0,
-        "volume_vs_median20": 4.65,
+        "resistance20": 438.0,
+        "volume_vs_median20": 1.03,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -3997,15 +3996,15 @@
         },
         "eps_mad": 18.46,
         "book_value_per_share_mad": 180.86,
-        "pe": 20.75,
-        "pb": 2.12,
+        "pe": 20.43,
+        "pb": 2.09,
         "revenue_growth_pct": 2.92,
         "roe_pct": 10.21,
         "dividend_yield_pct": null,
         "earnings_mmad": 407.601
       },
       "canonical_score": {
-        "value": 29.5,
+        "value": 37.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -4024,7 +4023,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -4043,16 +4042,16 @@
       "name": "Afric Industries SA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 328.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 67327.75,
-      "day_shares": 205,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 330.5,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 74214.3,
+      "day_shares": 224,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -4062,23 +4061,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 90.5,
-        "median_turnover_mad_estimated": 30091.85,
-        "median_turnover_ex_top5_mad_estimated": 23579.1,
-        "capacity_shares_per_session_at_10pct": 9.05,
-        "exit_days_at_10pct": 111,
+        "median_shares": 102.0,
+        "median_turnover_mad_estimated": 33921.35,
+        "median_turnover_ex_top5_mad_estimated": 26600.0,
+        "capacity_shares_per_session_at_10pct": 10.2,
+        "exit_days_at_10pct": 99,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 332.68,
-        "change_20_sessions_pct": -0.91,
-        "realized_volatility_20d_pct": 14.1
+        "ma20": 332.56,
+        "change_20_sessions_pct": -0.75,
+        "realized_volatility_20d_pct": 14.21
       },
       "close_series_last_60": [
-        337.0,
         336.95,
         339.0,
         338.0,
@@ -4137,25 +4135,26 @@
         333.0,
         333.0,
         333.0,
-        328.0
+        328.0,
+        330.5
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 332.68,
-        "sma50": 330.79,
-        "sma200": 338.98,
-        "rsi14": 42.31,
-        "macd": -0.33,
-        "macd_signal": 0.03,
-        "atr14": 3.39,
-        "return20_pct": -0.91,
+        "sessions": 812,
+        "sma20": 332.56,
+        "sma50": 330.81,
+        "sma200": 338.99,
+        "rsi14": 46.87,
+        "macd": -0.43,
+        "macd_signal": -0.06,
+        "atr14": 3.61,
+        "return20_pct": -0.75,
         "support20": 328.0,
         "resistance20": 337.95,
-        "volume_vs_median20": 2.27,
+        "volume_vs_median20": 2.48,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -4173,7 +4172,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 21.88,
+        "value": 31.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -4188,7 +4187,7 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 15
           },
           "activité": {
             "weight": 10,
@@ -4540,16 +4539,16 @@
       "name": "Akdital",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1122.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 14215237.0,
-      "day_shares": 12628,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1103.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 6098580.0,
+      "day_shares": 5457,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -4559,10 +4558,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 9049.0,
-        "median_turnover_mad_estimated": 10375379.0,
+        "median_shares": 7390.5,
+        "median_turnover_mad_estimated": 8440765.5,
         "median_turnover_ex_top5_mad_estimated": 4923520.0,
-        "capacity_shares_per_session_at_10pct": 904.9,
+        "capacity_shares_per_session_at_10pct": 739.05,
         "exit_days_at_10pct": 2,
         "scenario_shares": 1000,
         "ready": true,
@@ -4570,12 +4569,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 1139.35,
-        "change_20_sessions_pct": -1.58,
-        "realized_volatility_20d_pct": 14.98
+        "ma20": 1138.15,
+        "change_20_sessions_pct": -2.13,
+        "realized_volatility_20d_pct": 15.61
       },
       "close_series_last_60": [
-        1171.0,
         1178.0,
         1180.0,
         1189.0,
@@ -4634,25 +4632,26 @@
         1132.0,
         1139.0,
         1120.0,
-        1122.0
+        1122.0,
+        1103.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 1139.35,
-        "sma50": 1144.92,
-        "sma200": 1169.97,
-        "rsi14": 41.75,
-        "macd": -5.94,
-        "macd_signal": -3.5,
-        "atr14": 16.21,
-        "return20_pct": -1.58,
+        "sessions": 742,
+        "sma20": 1138.15,
+        "sma50": 1143.62,
+        "sma200": 1168.74,
+        "rsi14": 35.91,
+        "macd": -8.05,
+        "macd_signal": -4.41,
+        "atr14": 17.07,
+        "return20_pct": -2.13,
         "support20": 1115.0,
         "resistance20": 1169.0,
-        "volume_vs_median20": 1.4,
+        "volume_vs_median20": 0.6,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -4674,14 +4673,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 201.53,
         "pe": null,
-        "pb": 5.57,
+        "pb": 5.47,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 46.88,
+        "value": 40.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -4700,7 +4699,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -4713,26 +4712,23 @@
     {
       "symbol": "ALU",
       "name": "Aluminium du Maroc",
-      "decision": "INDISPONIBLE",
+      "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1850.0,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 7,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1830.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1830.0,
+      "day_shares": 1,
       "quality": {
-        "candles_in_extract": 76,
-        "full_history_count_reported": 76,
-        "usable_close_bars": 76,
+        "candles_in_extract": 77,
+        "full_history_count_reported": 77,
+        "usable_close_bars": 77,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
-        "issues": [
-          "Cours absent, futur ou périmé à la date du rapport",
-          "Liquidité récente insuffisante pour estimer la capacité de sortie"
-        ]
+        "issues": []
       },
       "liquidity": {
         "window_sessions": 20,
@@ -4740,20 +4736,19 @@
         "median_shares": 13.5,
         "median_turnover_mad_estimated": 24961.0,
         "median_turnover_ex_top5_mad_estimated": 12950.0,
-        "capacity_shares_per_session_at_10pct": null,
-        "exit_days_at_10pct": null,
+        "capacity_shares_per_session_at_10pct": 1.35,
+        "exit_days_at_10pct": 741,
         "scenario_shares": 1000,
-        "ready": false,
+        "ready": true,
         "post_resume_only": false
       },
       "trend": {
-        "ready": false,
-        "ma20": null,
-        "change_20_sessions_pct": null,
-        "realized_volatility_20d_pct": null
+        "ready": true,
+        "ma20": 1852.5,
+        "change_20_sessions_pct": -1.08,
+        "realized_volatility_20d_pct": 26.88
       },
       "close_series_last_60": [
-        1889.0,
         1955.0,
         1955.0,
         1955.0,
@@ -4812,25 +4807,26 @@
         1849.0,
         1847.0,
         1850.0,
-        1850.0
+        1850.0,
+        1830.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 76,
-        "sma20": 1853.5,
-        "sma50": 1826.5,
+        "sessions": 77,
+        "sma20": 1852.5,
+        "sma50": 1824.9,
         "sma200": null,
-        "rsi14": 51.97,
-        "macd": 5.66,
-        "macd_signal": 6.64,
-        "atr14": 39.14,
-        "return20_pct": 0.0,
+        "rsi14": 47.7,
+        "macd": 3.93,
+        "macd_signal": 6.1,
+        "atr14": 39.29,
+        "return20_pct": -1.08,
         "support20": 1786.0,
         "resistance20": 1905.0,
-        "volume_vs_median20": 0.48,
+        "volume_vs_median20": 0.07,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -4848,11 +4844,32 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": null,
-        "state": "NON_CALCULABLE",
+        "value": 43.75,
+        "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 0,
-        "contributors": {},
+        "coverage_pct": 80,
+        "contributors": {
+          "tendance20": {
+            "weight": 20,
+            "points": 0
+          },
+          "tendance50": {
+            "weight": 15,
+            "points": 15
+          },
+          "momentum": {
+            "weight": 15,
+            "points": 15
+          },
+          "activité": {
+            "weight": 10,
+            "points": 5
+          },
+          "liquidité": {
+            "weight": 20,
+            "points": 0
+          }
+        },
         "nlp_weight": 0
       }
     },
@@ -4861,16 +4878,16 @@
       "name": "Aradei Capital",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 433.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 70292.85,
-      "day_shares": 162,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 170845.25,
+      "day_shares": 393,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -4882,7 +4899,7 @@
         "active_sessions": 20,
         "median_shares": 710.0,
         "median_turnover_mad_estimated": 316120.0,
-        "median_turnover_ex_top5_mad_estimated": 210720.0,
+        "median_turnover_ex_top5_mad_estimated": 199320.0,
         "capacity_shares_per_session_at_10pct": 71.0,
         "exit_days_at_10pct": 15,
         "scenario_shares": 1000,
@@ -4891,12 +4908,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 442.85,
-        "change_20_sessions_pct": -0.92,
-        "realized_volatility_20d_pct": 40.04
+        "ma20": 442.55,
+        "change_20_sessions_pct": -1.37,
+        "realized_volatility_20d_pct": 40.01
       },
       "close_series_last_60": [
-        423.0,
         410.0,
         420.0,
         410.0,
@@ -4955,6 +4971,7 @@
         440.0,
         438.0,
         435.0,
+        433.0,
         433.0
       ],
       "legacy_comparison": {
@@ -4962,18 +4979,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 442.85,
-        "sma50": 435.05,
-        "sma200": 433.82,
+        "sessions": 812,
+        "sma20": 442.55,
+        "sma50": 435.33,
+        "sma200": 433.81,
         "rsi14": 44.35,
-        "macd": 0.61,
-        "macd_signal": 2.76,
-        "atr14": 13.24,
-        "return20_pct": -0.92,
+        "macd": -0.1,
+        "macd_signal": 2.19,
+        "atr14": 13.74,
+        "return20_pct": -1.37,
         "support20": 430.2,
         "resistance20": 480.0,
-        "volume_vs_median20": 0.21,
+        "volume_vs_median20": 0.55,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5036,16 +5053,16 @@
       "name": "AtlantaSanad",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 120.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 2361640.5,
-      "day_shares": 19659,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 327441.3,
+      "day_shares": 2700,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -5066,12 +5083,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 123.68,
-        "change_20_sessions_pct": -6.25,
-        "realized_volatility_20d_pct": 31.41
+        "ma20": 123.48,
+        "change_20_sessions_pct": -3.34,
+        "realized_volatility_20d_pct": 29.74
       },
       "close_series_last_60": [
-        128.2,
         128.8,
         126.6,
         127.85,
@@ -5130,6 +5146,7 @@
         124.3,
         124.0,
         122.0,
+        120.0,
         120.0
       ],
       "legacy_comparison": {
@@ -5137,18 +5154,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 123.68,
-        "sma50": 124.64,
-        "sma200": 133.37,
+        "sessions": 812,
+        "sma20": 123.48,
+        "sma50": 124.54,
+        "sma200": 133.28,
         "rsi14": 39.71,
-        "macd": -1.05,
-        "macd_signal": -0.82,
-        "atr14": 2.79,
-        "return20_pct": -6.25,
+        "macd": -1.2,
+        "macd_signal": -0.89,
+        "atr14": 2.84,
+        "return20_pct": -3.34,
         "support20": 119.0,
         "resistance20": 129.0,
-        "volume_vs_median20": 16.82,
+        "volume_vs_median20": 2.02,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5177,7 +5194,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 21.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -5196,7 +5213,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -5211,16 +5228,16 @@
       "name": "Attijariwafa Bank",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 680.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 57089424.0,
-      "day_shares": 83956,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 676.1,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 286128577.7,
+      "day_shares": 419613,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -5241,12 +5258,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 699.87,
-        "change_20_sessions_pct": -3.81,
-        "realized_volatility_20d_pct": 15.88
+        "ma20": 698.43,
+        "change_20_sessions_pct": -4.1,
+        "realized_volatility_20d_pct": 15.94
       },
       "close_series_last_60": [
-        685.0,
         684.9,
         680.6,
         687.9,
@@ -5305,25 +5321,26 @@
         691.0,
         691.1,
         680.5,
-        680.0
+        680.0,
+        676.1
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 699.87,
-        "sma50": 693.93,
-        "sma200": 707.61,
-        "rsi14": 37.22,
-        "macd": -3.76,
-        "macd_signal": -0.64,
-        "atr14": 9.4,
-        "return20_pct": -3.81,
-        "support20": 680.5,
+        "sessions": 812,
+        "sma20": 698.43,
+        "sma50": 693.9,
+        "sma200": 707.33,
+        "rsi14": 35.03,
+        "macd": -4.77,
+        "macd_signal": -1.46,
+        "atr14": 9.11,
+        "return20_pct": -4.1,
+        "support20": 677.0,
         "resistance20": 718.0,
-        "volume_vs_median20": 3.91,
+        "volume_vs_median20": 15.79,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5521,16 +5538,16 @@
       "name": "Banque Populaire",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 247.2,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 51928203.75,
-      "day_shares": 208242,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 250.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 54239615.15,
+      "day_shares": 217086,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -5540,10 +5557,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 25957.5,
-        "median_turnover_mad_estimated": 6374878.0,
-        "median_turnover_ex_top5_mad_estimated": 4199880.0,
-        "capacity_shares_per_session_at_10pct": 2595.75,
+        "median_shares": 27633.0,
+        "median_turnover_mad_estimated": 6847267.4,
+        "median_turnover_ex_top5_mad_estimated": 6080912.0,
+        "capacity_shares_per_session_at_10pct": 2763.3,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -5552,11 +5569,10 @@
       "trend": {
         "ready": true,
         "ma20": 245.87,
-        "change_20_sessions_pct": -1.12,
-        "realized_volatility_20d_pct": 25.15
+        "change_20_sessions_pct": 0.0,
+        "realized_volatility_20d_pct": 25.49
       },
       "close_series_last_60": [
-        250.0,
         257.05,
         260.0,
         269.0,
@@ -5615,25 +5631,26 @@
         250.0,
         250.95,
         250.0,
-        247.2
+        247.2,
+        250.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
+        "sessions": 812,
         "sma20": 245.87,
-        "sma50": 248.09,
-        "sma200": 257.69,
-        "rsi14": 49.95,
-        "macd": -0.23,
-        "macd_signal": -0.88,
-        "atr14": 5.22,
-        "return20_pct": -1.12,
+        "sma50": 248.11,
+        "sma200": 257.55,
+        "rsi14": 54.94,
+        "macd": 0.03,
+        "macd_signal": -0.7,
+        "atr14": 5.3,
+        "return20_pct": 0.0,
         "support20": 237.0,
         "resistance20": 252.0,
-        "volume_vs_median20": 8.02,
+        "volume_vs_median20": 8.36,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5651,7 +5668,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 71.25,
+        "value": 90.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -5662,7 +5679,7 @@
           },
           "tendance50": {
             "weight": 15,
-            "points": 0
+            "points": 15
           },
           "momentum": {
             "weight": 15,
@@ -5685,16 +5702,16 @@
       "name": "BMCI",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 550.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 507922.6,
-      "day_shares": 922,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 132440.0,
+      "day_shares": 240,
       "quality": {
-        "candles_in_extract": 61,
-        "full_history_count_reported": 61,
-        "usable_close_bars": 61,
+        "candles_in_extract": 62,
+        "full_history_count_reported": 62,
+        "usable_close_bars": 62,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -5715,12 +5732,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 590.5,
-        "change_20_sessions_pct": -9.84,
-        "realized_volatility_20d_pct": 37.59
+        "ma20": 587.75,
+        "change_20_sessions_pct": -9.09,
+        "realized_volatility_20d_pct": 37.61
       },
       "close_series_last_60": [
-        622.7,
         622.7,
         582.4,
         626.0,
@@ -5779,6 +5795,7 @@
         580.0,
         565.0,
         556.2,
+        550.0,
         550.0
       ],
       "legacy_comparison": {
@@ -5786,18 +5803,18 @@
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 61,
-        "sma20": 590.5,
-        "sma50": 598.94,
+        "sessions": 62,
+        "sma20": 587.75,
+        "sma50": 597.84,
         "sma200": null,
         "rsi14": 35.63,
-        "macd": -13.42,
-        "macd_signal": -8.85,
-        "atr14": 20.89,
-        "return20_pct": -9.84,
+        "macd": -14.32,
+        "macd_signal": -9.94,
+        "atr14": 21.47,
+        "return20_pct": -9.09,
         "support20": 540.0,
         "resistance20": 618.9,
-        "volume_vs_median20": 0.42,
+        "volume_vs_median20": 0.11,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5849,16 +5866,16 @@
       "name": "Bank of Africa",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 194.8,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 8333008.25,
-      "day_shares": 42945,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 194.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1137628.65,
+      "day_shares": 5874,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -5868,10 +5885,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 26367.0,
-        "median_turnover_mad_estimated": 5044839.0,
-        "median_turnover_ex_top5_mad_estimated": 4137098.35,
-        "capacity_shares_per_session_at_10pct": 2636.7,
+        "median_shares": 24665.0,
+        "median_turnover_mad_estimated": 4773327.0,
+        "median_turnover_ex_top5_mad_estimated": 3391500.0,
+        "capacity_shares_per_session_at_10pct": 2466.5,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -5879,12 +5896,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 190.46,
-        "change_20_sessions_pct": 3.07,
-        "realized_volatility_20d_pct": 29.18
+        "ma20": 190.76,
+        "change_20_sessions_pct": 3.19,
+        "realized_volatility_20d_pct": 29.14
       },
       "close_series_last_60": [
-        194.95,
         192.5,
         193.6,
         193.65,
@@ -5943,25 +5959,26 @@
         195.0,
         194.8,
         194.9,
-        194.8
+        194.8,
+        194.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 190.46,
-        "sma50": 190.11,
-        "sma200": 205.05,
-        "rsi14": 57.98,
-        "macd": 1.32,
-        "macd_signal": 0.75,
-        "atr14": 3.9,
-        "return20_pct": 3.07,
+        "sessions": 812,
+        "sma20": 190.76,
+        "sma50": 190.12,
+        "sma200": 204.9,
+        "rsi14": 55.84,
+        "macd": 1.31,
+        "macd_signal": 0.86,
+        "atr14": 3.81,
+        "return20_pct": 3.19,
         "support20": 178.0,
         "resistance20": 197.0,
-        "volume_vs_median20": 1.74,
+        "volume_vs_median20": 0.22,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -5979,7 +5996,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 100.0,
+        "value": 81.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -5998,11 +6015,11 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
-            "points": 20
+            "points": 10
           }
         },
         "nlp_weight": 0
@@ -6013,16 +6030,16 @@
       "name": "Cartier Saada",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 18.06,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 552570.17,
-      "day_shares": 30282,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 18.29,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 400453.85,
+      "day_shares": 21928,
       "quality": {
-        "candles_in_extract": 80,
-        "full_history_count_reported": 80,
-        "usable_close_bars": 80,
+        "candles_in_extract": 81,
+        "full_history_count_reported": 81,
+        "usable_close_bars": 81,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6032,10 +6049,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 23839.0,
-        "median_turnover_mad_estimated": 472786.46,
-        "median_turnover_ex_top5_mad_estimated": 359066.4,
-        "capacity_shares_per_session_at_10pct": 2383.9,
+        "median_shares": 24836.0,
+        "median_turnover_mad_estimated": 473978.02,
+        "median_turnover_ex_top5_mad_estimated": 380330.73,
+        "capacity_shares_per_session_at_10pct": 2483.6,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -6043,12 +6060,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 21.28,
-        "change_20_sessions_pct": -24.75,
-        "realized_volatility_20d_pct": 49.9
+        "ma20": 21.0,
+        "change_20_sessions_pct": -23.02,
+        "realized_volatility_20d_pct": 50.77
       },
       "close_series_last_60": [
-        28.03,
         28.15,
         28.99,
         28.75,
@@ -6107,25 +6123,26 @@
         18.0,
         18.01,
         18.25,
-        18.06
+        18.06,
+        18.29
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 80,
-        "sma20": 21.28,
-        "sma50": 23.01,
+        "sessions": 81,
+        "sma20": 21.0,
+        "sma50": 22.87,
         "sma200": null,
-        "rsi14": 22.99,
-        "macd": -1.64,
-        "macd_signal": -1.31,
-        "atr14": 0.85,
-        "return20_pct": -24.75,
+        "rsi14": 25.81,
+        "macd": -1.62,
+        "macd_signal": -1.37,
+        "atr14": 0.82,
+        "return20_pct": -23.02,
         "support20": 17.9,
-        "resistance20": 24.3,
-        "volume_vs_median20": 1.61,
+        "resistance20": 24.18,
+        "volume_vs_median20": 0.92,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6177,16 +6194,16 @@
       "name": "Cash Plus SA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 223.1,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 550479.45,
-      "day_shares": 2448,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 220.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 509830.7,
+      "day_shares": 2310,
       "quality": {
-        "candles_in_extract": 173,
-        "full_history_count_reported": 173,
-        "usable_close_bars": 173,
+        "candles_in_extract": 174,
+        "full_history_count_reported": 174,
+        "usable_close_bars": 174,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6196,23 +6213,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 1643.0,
-        "median_turnover_mad_estimated": 401525.2,
+        "median_shares": 1834.0,
+        "median_turnover_mad_estimated": 439580.4,
         "median_turnover_ex_top5_mad_estimated": 350224.0,
-        "capacity_shares_per_session_at_10pct": 164.3,
-        "exit_days_at_10pct": 7,
+        "capacity_shares_per_session_at_10pct": 183.4,
+        "exit_days_at_10pct": 6,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 236.02,
-        "change_20_sessions_pct": -12.13,
-        "realized_volatility_20d_pct": 34.43
+        "ma20": 234.76,
+        "change_20_sessions_pct": -10.28,
+        "realized_volatility_20d_pct": 32.95
       },
       "close_series_last_60": [
-        260.2,
         260.0,
         265.0,
         269.9,
@@ -6271,25 +6287,26 @@
         240.0,
         230.0,
         226.0,
-        223.1
+        223.1,
+        220.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 173,
-        "sma20": 236.02,
-        "sma50": 244.05,
+        "sessions": 174,
+        "sma20": 234.76,
+        "sma50": 243.29,
         "sma200": null,
-        "rsi14": 36.18,
-        "macd": -5.49,
-        "macd_signal": -4.79,
-        "atr14": 6.8,
-        "return20_pct": -12.13,
+        "rsi14": 34.21,
+        "macd": -6.06,
+        "macd_signal": -5.04,
+        "atr14": 7.05,
+        "return20_pct": -10.28,
         "support20": 223.0,
-        "resistance20": 253.9,
-        "volume_vs_median20": 1.49,
+        "resistance20": 251.0,
+        "volume_vs_median20": 1.41,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6341,16 +6358,16 @@
       "name": "Crédit du Maroc",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 945.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 4220143.0,
-      "day_shares": 4465,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 943.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 270672.4,
+      "day_shares": 284,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6360,23 +6377,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 1470.5,
-        "median_turnover_mad_estimated": 1407748.0,
-        "median_turnover_ex_top5_mad_estimated": 580000.0,
-        "capacity_shares_per_session_at_10pct": 147.05,
-        "exit_days_at_10pct": 7,
+        "median_shares": 960.0,
+        "median_turnover_mad_estimated": 947200.0,
+        "median_turnover_ex_top5_mad_estimated": 367852.6,
+        "capacity_shares_per_session_at_10pct": 96.0,
+        "exit_days_at_10pct": 11,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 981.78,
-        "change_20_sessions_pct": -4.28,
-        "realized_volatility_20d_pct": 27.16
+        "ma20": 979.03,
+        "change_20_sessions_pct": -5.51,
+        "realized_volatility_20d_pct": 26.73
       },
       "close_series_last_60": [
-        1018.0,
         994.0,
         970.0,
         962.0,
@@ -6435,25 +6451,26 @@
         980.0,
         960.0,
         960.0,
-        945.0
+        945.0,
+        943.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 981.78,
-        "sma50": 981.66,
-        "sma200": 1020.82,
-        "rsi14": 39.84,
-        "macd": -8.53,
-        "macd_signal": -4.03,
-        "atr14": 22.09,
-        "return20_pct": -4.28,
+        "sessions": 812,
+        "sma20": 979.03,
+        "sma50": 981.1,
+        "sma200": 1020.7,
+        "rsi14": 39.36,
+        "macd": -10.01,
+        "macd_signal": -5.23,
+        "atr14": 23.95,
+        "return20_pct": -5.51,
         "support20": 936.0,
         "resistance20": 1015.0,
-        "volume_vs_median20": 4.65,
+        "volume_vs_median20": 0.19,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6471,7 +6488,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 24.38,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -6490,11 +6507,11 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
-            "points": 10
+            "points": 0
           }
         },
         "nlp_weight": 0
@@ -6505,16 +6522,16 @@
       "name": "CFG Bank",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 200.15,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 11232259.9,
-      "day_shares": 56135,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 200.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2674763.05,
+      "day_shares": 13374,
       "quality": {
-        "candles_in_extract": 577,
-        "full_history_count_reported": 577,
-        "usable_close_bars": 577,
+        "candles_in_extract": 578,
+        "full_history_count_reported": 578,
+        "usable_close_bars": 578,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6524,10 +6541,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 18842.0,
-        "median_turnover_mad_estimated": 3820350.2,
+        "median_shares": 17971.5,
+        "median_turnover_mad_estimated": 3640487.5,
         "median_turnover_ex_top5_mad_estimated": 2291536.0,
-        "capacity_shares_per_session_at_10pct": 1884.2,
+        "capacity_shares_per_session_at_10pct": 1797.15,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -6535,12 +6552,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 204.9,
-        "change_20_sessions_pct": 1.34,
-        "realized_volatility_20d_pct": 24.31
+        "ma20": 204.87,
+        "change_20_sessions_pct": -0.3,
+        "realized_volatility_20d_pct": 23.67
       },
       "close_series_last_60": [
-        203.35,
         202.0,
         197.0,
         194.2,
@@ -6599,25 +6615,26 @@
         203.0,
         205.9,
         200.0,
-        200.15
+        200.15,
+        200.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 577,
-        "sma20": 204.9,
-        "sma50": 199.15,
-        "sma200": 216.11,
-        "rsi14": 45.49,
-        "macd": 0.65,
-        "macd_signal": 1.68,
-        "atr14": 4.37,
-        "return20_pct": 1.34,
-        "support20": 197.5,
+        "sessions": 578,
+        "sma20": 204.87,
+        "sma50": 199.28,
+        "sma200": 215.9,
+        "rsi14": 45.26,
+        "macd": 0.32,
+        "macd_signal": 1.4,
+        "atr14": 4.55,
+        "return20_pct": -0.3,
+        "support20": 198.0,
         "resistance20": 213.5,
-        "volume_vs_median20": 3.12,
+        "volume_vs_median20": 0.71,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6646,7 +6663,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 52.5,
+        "value": 56.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -6665,7 +6682,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -6680,16 +6697,16 @@
       "name": "CIH Bank",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 320.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 9634360.65,
-      "day_shares": 29910,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 319.8,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1004135.6,
+      "day_shares": 3133,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6701,7 +6718,7 @@
         "active_sessions": 20,
         "median_shares": 4826.0,
         "median_turnover_mad_estimated": 1630594.15,
-        "median_turnover_ex_top5_mad_estimated": 1008305.1,
+        "median_turnover_ex_top5_mad_estimated": 1001933.4,
         "capacity_shares_per_session_at_10pct": 482.6,
         "exit_days_at_10pct": 3,
         "scenario_shares": 1000,
@@ -6710,12 +6727,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 338.99,
-        "change_20_sessions_pct": -8.05,
-        "realized_volatility_20d_pct": 28.45
+        "ma20": 337.68,
+        "change_20_sessions_pct": -7.57,
+        "realized_volatility_20d_pct": 28.47
       },
       "close_series_last_60": [
-        350.9,
         351.0,
         355.0,
         351.3,
@@ -6774,25 +6790,26 @@
         335.0,
         330.0,
         325.05,
-        320.0
+        320.0,
+        319.8
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 338.99,
-        "sma50": 344.11,
-        "sma200": 370.52,
-        "rsi14": 34.43,
-        "macd": -5.97,
-        "macd_signal": -3.96,
-        "atr14": 8.86,
-        "return20_pct": -8.05,
+        "sessions": 812,
+        "sma20": 337.68,
+        "sma50": 343.5,
+        "sma200": 370.11,
+        "rsi14": 34.32,
+        "macd": -6.5,
+        "macd_signal": -4.46,
+        "atr14": 8.53,
+        "return20_pct": -7.57,
         "support20": 320.0,
         "resistance20": 353.5,
-        "volume_vs_median20": 7.74,
+        "volume_vs_median20": 0.65,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6810,7 +6827,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 24.38,
+        "value": 28.12,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -6829,7 +6846,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -6844,16 +6861,16 @@
       "name": "Ciments du Maroc",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1550.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 16963833.0,
-      "day_shares": 10942,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1520.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2561569.0,
+      "day_shares": 1676,
       "quality": {
-        "candles_in_extract": 85,
-        "full_history_count_reported": 85,
-        "usable_close_bars": 85,
+        "candles_in_extract": 86,
+        "full_history_count_reported": 86,
+        "usable_close_bars": 86,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -6863,23 +6880,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 433.0,
-        "median_turnover_mad_estimated": 730290.0,
+        "median_shares": 446.5,
+        "median_turnover_mad_estimated": 732193.5,
         "median_turnover_ex_top5_mad_estimated": 349440.0,
-        "capacity_shares_per_session_at_10pct": 43.3,
-        "exit_days_at_10pct": 24,
+        "capacity_shares_per_session_at_10pct": 44.65,
+        "exit_days_at_10pct": 23,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 1648.7,
-        "change_20_sessions_pct": -8.28,
-        "realized_volatility_20d_pct": 31.76
+        "ma20": 1640.7,
+        "change_20_sessions_pct": -9.52,
+        "realized_volatility_20d_pct": 32.22
       },
       "close_series_last_60": [
-        1640.0,
         1674.0,
         1638.0,
         1688.0,
@@ -6938,25 +6954,26 @@
         1600.0,
         1555.0,
         1551.0,
-        1550.0
+        1550.0,
+        1520.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 85,
-        "sma20": 1648.7,
-        "sma50": 1659.18,
+        "sessions": 86,
+        "sma20": 1640.7,
+        "sma50": 1657.14,
         "sma200": null,
-        "rsi14": 35.42,
-        "macd": -32.69,
-        "macd_signal": -18.9,
-        "atr14": 42.79,
-        "return20_pct": -8.28,
+        "rsi14": 32.21,
+        "macd": -36.94,
+        "macd_signal": -22.51,
+        "atr14": 45.36,
+        "return20_pct": -9.52,
         "support20": 1550.0,
         "resistance20": 1750.0,
-        "volume_vs_median20": 25.27,
+        "volume_vs_median20": 3.87,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -6978,7 +6995,7 @@
         "eps_mad": null,
         "book_value_per_share_mad": 259.03,
         "pe": null,
-        "pb": 5.98,
+        "pb": 5.87,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
@@ -7019,16 +7036,16 @@
       "name": "CMGP Group",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 282.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 7819343.9,
-      "day_shares": 27586,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 284.9,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1188988.9,
+      "day_shares": 4165,
       "quality": {
-        "candles_in_extract": 414,
-        "full_history_count_reported": 414,
-        "usable_close_bars": 414,
+        "candles_in_extract": 415,
+        "full_history_count_reported": 415,
+        "usable_close_bars": 415,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -7038,10 +7055,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 7255.5,
-        "median_turnover_mad_estimated": 2214525.75,
-        "median_turnover_ex_top5_mad_estimated": 2014320.0,
-        "capacity_shares_per_session_at_10pct": 725.55,
+        "median_shares": 6820.5,
+        "median_turnover_mad_estimated": 2090738.65,
+        "median_turnover_ex_top5_mad_estimated": 1981515.0,
+        "capacity_shares_per_session_at_10pct": 682.05,
         "exit_days_at_10pct": 2,
         "scenario_shares": 1000,
         "ready": true,
@@ -7049,12 +7066,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 310.8,
-        "change_20_sessions_pct": -11.88,
-        "realized_volatility_20d_pct": 43.26
+        "ma20": 308.64,
+        "change_20_sessions_pct": -13.14,
+        "realized_volatility_20d_pct": 42.17
       },
       "close_series_last_60": [
-        340.0,
         345.0,
         341.0,
         350.0,
@@ -7113,25 +7129,26 @@
         299.9,
         295.0,
         295.0,
-        282.0
+        282.0,
+        284.9
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 414,
-        "sma20": 310.8,
-        "sma50": 318.67,
-        "sma200": 356.06,
-        "rsi14": 32.98,
-        "macd": -8.77,
-        "macd_signal": -5.97,
-        "atr14": 11.74,
-        "return20_pct": -11.88,
-        "support20": 287.0,
+        "sessions": 415,
+        "sma20": 308.64,
+        "sma50": 317.69,
+        "sma200": 355.55,
+        "rsi14": 35.2,
+        "macd": -9.45,
+        "macd_signal": -6.66,
+        "atr14": 11.88,
+        "return20_pct": -13.14,
+        "support20": 282.0,
         "resistance20": 335.0,
-        "volume_vs_median20": 3.8,
+        "volume_vs_median20": 0.57,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -7153,14 +7170,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 164.01,
         "pe": null,
-        "pb": 1.72,
+        "pb": 1.74,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 24.38,
+        "value": 28.12,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -7179,7 +7196,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -7194,30 +7211,30 @@
       "name": "Minière Touissit",
       "decision": "LIMITÉ",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 4315.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 112190.0,
-      "day_shares": 26,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 4350.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 26658263.0,
+      "day_shares": 6007,
       "quality": {
-        "candles_in_extract": 688,
-        "full_history_count_reported": 688,
-        "usable_close_bars": 688,
+        "candles_in_extract": 689,
+        "full_history_count_reported": 689,
+        "usable_close_bars": 689,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
         "issues": [
-          "Reprise récente : 7 séances ; tendance antérieure non comparable",
+          "Reprise récente : 8 séances ; tendance antérieure non comparable",
           "Liquidité récente insuffisante pour estimer la capacité de sortie"
         ]
       },
       "liquidity": {
-        "window_sessions": 7,
-        "active_sessions": 7,
-        "median_shares": 5.0,
-        "median_turnover_mad_estimated": 16215.0,
+        "window_sessions": 8,
+        "active_sessions": 8,
+        "median_shares": 13.5,
+        "median_turnover_mad_estimated": 47344.5,
         "median_turnover_ex_top5_mad_estimated": null,
         "capacity_shares_per_session_at_10pct": null,
         "exit_days_at_10pct": null,
@@ -7232,7 +7249,6 @@
         "realized_volatility_20d_pct": null
       },
       "close_series_last_60": [
-        4800.0,
         4875.0,
         4899.0,
         4899.0,
@@ -7291,14 +7307,15 @@
         3243.0,
         3567.0,
         3923.0,
-        4315.0
+        4315.0,
+        4350.0
       ],
       "legacy_comparison": {
         "sig": "Données insuffisantes",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 7,
+        "sessions": 8,
         "sma20": null,
         "sma50": null,
         "sma200": null,
@@ -7345,8 +7362,8 @@
         },
         "eps_mad": 116.86,
         "book_value_per_share_mad": 536.0,
-        "pe": 36.92,
-        "pb": 8.05,
+        "pe": 37.22,
+        "pb": 8.12,
         "revenue_growth_pct": null,
         "roe_pct": 21.8,
         "dividend_yield_pct": 0.0,
@@ -7371,16 +7388,16 @@
       "name": "Colorado",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 79.7,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 84480.99,
-      "day_shares": 1062,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 78.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 16493.94,
+      "day_shares": 214,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -7390,23 +7407,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 619.0,
-        "median_turnover_mad_estimated": 48673.19,
-        "median_turnover_ex_top5_mad_estimated": 29322.0,
-        "capacity_shares_per_session_at_10pct": 61.9,
-        "exit_days_at_10pct": 17,
+        "median_shares": 534.0,
+        "median_turnover_mad_estimated": 42795.39,
+        "median_turnover_ex_top5_mad_estimated": 25726.95,
+        "capacity_shares_per_session_at_10pct": 53.4,
+        "exit_days_at_10pct": 19,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 80.07,
-        "change_20_sessions_pct": -2.33,
-        "realized_volatility_20d_pct": 13.97
+        "ma20": 79.89,
+        "change_20_sessions_pct": -4.4,
+        "realized_volatility_20d_pct": 15.69
       },
       "close_series_last_60": [
-        78.89,
         80.0,
         78.5,
         77.52,
@@ -7465,25 +7481,26 @@
         79.65,
         79.59,
         80.0,
-        79.7
+        79.7,
+        78.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 80.07,
-        "sma50": 79.57,
-        "sma200": 82.16,
-        "rsi14": 48.8,
-        "macd": -0.16,
-        "macd_signal": -0.11,
-        "atr14": 1.92,
-        "return20_pct": -2.33,
+        "sessions": 812,
+        "sma20": 79.89,
+        "sma50": 79.55,
+        "sma200": 82.14,
+        "rsi14": 39.2,
+        "macd": -0.28,
+        "macd_signal": -0.15,
+        "atr14": 1.99,
+        "return20_pct": -4.4,
         "support20": 76.0,
         "resistance20": 81.8,
-        "volume_vs_median20": 1.72,
+        "volume_vs_median20": 0.35,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -7501,7 +7518,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 50.0,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -7512,15 +7529,15 @@
           },
           "tendance50": {
             "weight": 15,
-            "points": 15
+            "points": 0
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -7535,16 +7552,16 @@
       "name": "Cosumar",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 177.5,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 4299248.95,
-      "day_shares": 24381,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 180.1,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 263722.2,
+      "day_shares": 1474,
       "quality": {
-        "candles_in_extract": 805,
-        "full_history_count_reported": 805,
-        "usable_close_bars": 805,
+        "candles_in_extract": 806,
+        "full_history_count_reported": 806,
+        "usable_close_bars": 806,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -7554,10 +7571,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 14950.0,
-        "median_turnover_mad_estimated": 2895815.6,
-        "median_turnover_ex_top5_mad_estimated": 1576723.8,
-        "capacity_shares_per_session_at_10pct": 1495.0,
+        "median_shares": 12301.0,
+        "median_turnover_mad_estimated": 2372255.6,
+        "median_turnover_ex_top5_mad_estimated": 1448811.0,
+        "capacity_shares_per_session_at_10pct": 1230.1,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -7565,12 +7582,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 188.21,
-        "change_20_sessions_pct": -10.04,
-        "realized_volatility_20d_pct": 24.99
+        "ma20": 187.29,
+        "change_20_sessions_pct": -9.22,
+        "realized_volatility_20d_pct": 25.71
       },
       "close_series_last_60": [
-        187.0,
         187.5,
         189.75,
         190.0,
@@ -7629,25 +7645,26 @@
         179.95,
         179.9,
         179.0,
-        177.5
+        177.5,
+        180.1
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 805,
-        "sma20": 188.21,
-        "sma50": 189.71,
-        "sma200": 192.97,
-        "rsi14": 32.45,
-        "macd": -3.46,
-        "macd_signal": -1.93,
-        "atr14": 4.73,
-        "return20_pct": -10.04,
-        "support20": 179.0,
+        "sessions": 806,
+        "sma20": 187.29,
+        "sma50": 189.53,
+        "sma200": 192.9,
+        "rsi14": 38.22,
+        "macd": -3.49,
+        "macd_signal": -2.24,
+        "atr14": 4.8,
+        "return20_pct": -9.22,
+        "support20": 175.0,
         "resistance20": 198.4,
-        "volume_vs_median20": 1.63,
+        "volume_vs_median20": 0.1,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -7673,15 +7690,15 @@
         },
         "eps_mad": 7.45,
         "book_value_per_share_mad": 59.63,
-        "pe": 23.83,
-        "pb": 2.98,
+        "pe": 24.17,
+        "pb": 3.02,
         "revenue_growth_pct": null,
         "roe_pct": 12.49,
         "dividend_yield_pct": null,
         "earnings_mmad": 703.7
       },
       "canonical_score": {
-        "value": 47.5,
+        "value": 42.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -7700,7 +7717,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -7719,16 +7736,16 @@
       "name": "CTM",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 847.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 23716.0,
-      "day_shares": 28,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 852.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 26285.0,
+      "day_shares": 31,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -7738,23 +7755,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 39.5,
-        "median_turnover_mad_estimated": 34723.0,
-        "median_turnover_ex_top5_mad_estimated": 28432.0,
-        "capacity_shares_per_session_at_10pct": 3.95,
-        "exit_days_at_10pct": 254,
+        "median_shares": 32.5,
+        "median_turnover_mad_estimated": 28560.4,
+        "median_turnover_ex_top5_mad_estimated": 26412.0,
+        "capacity_shares_per_session_at_10pct": 3.25,
+        "exit_days_at_10pct": 308,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 872.24,
-        "change_20_sessions_pct": -4.68,
-        "realized_volatility_20d_pct": 15.99
+        "ma20": 870.49,
+        "change_20_sessions_pct": -3.95,
+        "realized_volatility_20d_pct": 16.26
       },
       "close_series_last_60": [
-        888.0,
         888.0,
         898.0,
         840.0,
@@ -7813,25 +7829,26 @@
         858.8,
         850.0,
         857.9,
-        847.0
+        847.0,
+        852.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 872.24,
-        "sma50": 873.75,
-        "sma200": 874.85,
-        "rsi14": 37.26,
-        "macd": -7.19,
-        "macd_signal": -4.34,
-        "atr14": 25.74,
-        "return20_pct": -4.68,
+        "sessions": 812,
+        "sma20": 870.49,
+        "sma50": 873.31,
+        "sma200": 874.75,
+        "rsi14": 40.66,
+        "macd": -7.44,
+        "macd_signal": -4.96,
+        "atr14": 25.49,
+        "return20_pct": -3.95,
         "support20": 783.1,
         "resistance20": 898.0,
-        "volume_vs_median20": 0.71,
+        "volume_vs_median20": 0.78,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -7853,7 +7870,7 @@
         "eps_mad": null,
         "book_value_per_share_mad": 198.6,
         "pe": null,
-        "pb": 4.26,
+        "pb": 4.29,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
@@ -8040,16 +8057,16 @@
       "name": "Delta Holding",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 50.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 2044335.52,
-      "day_shares": 40863,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 49.75,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 294152.29,
+      "day_shares": 5882,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -8059,10 +8076,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 8281.0,
-        "median_turnover_mad_estimated": 461684.02,
-        "median_turnover_ex_top5_mad_estimated": 378125.0,
-        "capacity_shares_per_session_at_10pct": 828.1,
+        "median_shares": 7897.5,
+        "median_turnover_mad_estimated": 436933.8,
+        "median_turnover_ex_top5_mad_estimated": 312350.0,
+        "capacity_shares_per_session_at_10pct": 789.75,
         "exit_days_at_10pct": 2,
         "scenario_shares": 1000,
         "ready": true,
@@ -8070,12 +8087,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 53.25,
-        "change_20_sessions_pct": -9.91,
-        "realized_volatility_20d_pct": 28.76
+        "ma20": 52.96,
+        "change_20_sessions_pct": -10.36,
+        "realized_volatility_20d_pct": 28.7
       },
       "close_series_last_60": [
-        59.0,
         59.0,
         59.0,
         60.3,
@@ -8134,25 +8150,26 @@
         51.55,
         50.0,
         50.0,
-        50.0
+        50.0,
+        49.75
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 53.25,
-        "sma50": 54.8,
-        "sma200": 62.17,
-        "rsi14": 31.73,
-        "macd": -1.54,
-        "macd_signal": -1.19,
-        "atr14": 1.79,
-        "return20_pct": -9.91,
+        "sessions": 812,
+        "sma20": 52.96,
+        "sma50": 54.63,
+        "sma200": 62.06,
+        "rsi14": 30.88,
+        "macd": -1.58,
+        "macd_signal": -1.27,
+        "atr14": 1.72,
+        "return20_pct": -10.36,
         "support20": 49.68,
         "resistance20": 57.3,
-        "volume_vs_median20": 4.93,
+        "volume_vs_median20": 0.71,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -8170,7 +8187,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -8189,7 +8206,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -8378,16 +8395,16 @@
       "name": "Disway",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 737.5,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 484232.0,
-      "day_shares": 657,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 750.1,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 136834.0,
+      "day_shares": 182,
       "quality": {
-        "candles_in_extract": 80,
-        "full_history_count_reported": 80,
-        "usable_close_bars": 80,
+        "candles_in_extract": 81,
+        "full_history_count_reported": 81,
+        "usable_close_bars": 81,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -8408,12 +8425,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 746.87,
-        "change_20_sessions_pct": -4.72,
-        "realized_volatility_20d_pct": 35.9
+        "ma20": 745.82,
+        "change_20_sessions_pct": -2.71,
+        "realized_volatility_20d_pct": 36.53
       },
       "close_series_last_60": [
-        785.0,
         764.5,
         763.0,
         760.0,
@@ -8472,25 +8488,26 @@
         749.8,
         749.9,
         740.0,
-        737.5
+        737.5,
+        750.1
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 80,
-        "sma20": 746.87,
-        "sma50": 761.32,
+        "sessions": 81,
+        "sma20": 745.82,
+        "sma50": 760.92,
         "sma200": null,
-        "rsi14": 42.81,
-        "macd": -6.28,
-        "macd_signal": -6.86,
-        "atr14": 16.79,
-        "return20_pct": -4.72,
+        "rsi14": 49.53,
+        "macd": -5.36,
+        "macd_signal": -6.56,
+        "atr14": 14.18,
+        "return20_pct": -2.71,
         "support20": 701.0,
-        "resistance20": 774.9,
-        "volume_vs_median20": 6.26,
+        "resistance20": 774.8,
+        "volume_vs_median20": 1.54,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -8512,21 +8529,21 @@
         "eps_mad": null,
         "book_value_per_share_mad": 363.7,
         "pe": null,
-        "pb": 2.03,
+        "pb": 2.06,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 56.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
         "contributors": {
           "tendance20": {
             "weight": 20,
-            "points": 0
+            "points": 20
           },
           "tendance50": {
             "weight": 15,
@@ -8534,11 +8551,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 15
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -8553,16 +8570,16 @@
       "name": "Disty Technologies",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 345.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 88248.3,
-      "day_shares": 256,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 360.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1342064.0,
+      "day_shares": 3727,
       "quality": {
-        "candles_in_extract": 80,
-        "full_history_count_reported": 80,
-        "usable_close_bars": 80,
+        "candles_in_extract": 81,
+        "full_history_count_reported": 81,
+        "usable_close_bars": 81,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -8583,12 +8600,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 353.95,
-        "change_20_sessions_pct": -5.48,
-        "realized_volatility_20d_pct": 16.04
+        "ma20": 353.8,
+        "change_20_sessions_pct": -0.83,
+        "realized_volatility_20d_pct": 22.89
       },
       "close_series_last_60": [
-        367.0,
         354.0,
         356.0,
         349.0,
@@ -8647,25 +8663,26 @@
         351.9,
         352.0,
         345.6,
-        345.0
+        345.0,
+        360.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 80,
-        "sma20": 353.95,
-        "sma50": 348.37,
+        "sessions": 81,
+        "sma20": 353.8,
+        "sma50": 348.75,
         "sma200": null,
-        "rsi14": 39.81,
-        "macd": -1.3,
-        "macd_signal": 0.06,
-        "atr14": 3.98,
-        "return20_pct": -5.48,
+        "rsi14": 59.2,
+        "macd": -0.42,
+        "macd_signal": -0.03,
+        "atr14": 5.69,
+        "return20_pct": -0.83,
         "support20": 340.0,
-        "resistance20": 369.0,
-        "volume_vs_median20": 0.57,
+        "resistance20": 366.0,
+        "volume_vs_median20": 9.1,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -8683,26 +8700,26 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 15.62,
+        "value": 65.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
         "contributors": {
           "tendance20": {
             "weight": 20,
-            "points": 0
+            "points": 20
           },
           "tendance50": {
             "weight": 15,
-            "points": 0
+            "points": 15
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 15
           },
           "activité": {
             "weight": 10,
-            "points": 5
+            "points": 2
           },
           "liquidité": {
             "weight": 20,
@@ -8717,16 +8734,16 @@
       "name": "Ennakl",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 47.65,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 129562.24,
-      "day_shares": 2735,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 48.5,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 11353.3,
+      "day_shares": 237,
       "quality": {
-        "candles_in_extract": 736,
-        "full_history_count_reported": 736,
-        "usable_close_bars": 736,
+        "candles_in_extract": 737,
+        "full_history_count_reported": 737,
+        "usable_close_bars": 737,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -8736,23 +8753,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 1693.5,
-        "median_turnover_mad_estimated": 82926.25,
-        "median_turnover_ex_top5_mad_estimated": 48658.1,
-        "capacity_shares_per_session_at_10pct": 169.35,
-        "exit_days_at_10pct": 6,
+        "median_shares": 1348.5,
+        "median_turnover_mad_estimated": 66278.47,
+        "median_turnover_ex_top5_mad_estimated": 41952.56,
+        "capacity_shares_per_session_at_10pct": 134.85,
+        "exit_days_at_10pct": 8,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 48.9,
-        "change_20_sessions_pct": -2.97,
-        "realized_volatility_20d_pct": 16.79
+        "ma20": 48.83,
+        "change_20_sessions_pct": -2.81,
+        "realized_volatility_20d_pct": 17.04
       },
       "close_series_last_60": [
-        53.0,
         52.2,
         53.8,
         53.0,
@@ -8811,25 +8827,26 @@
         48.05,
         48.1,
         48.3,
-        47.65
+        47.65,
+        48.5
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 736,
-        "sma20": 48.9,
-        "sma50": 49.38,
-        "sma200": 51.62,
-        "rsi14": 38.2,
-        "macd": -0.47,
-        "macd_signal": -0.38,
-        "atr14": 0.83,
-        "return20_pct": -2.97,
-        "support20": 48.0,
-        "resistance20": 50.0,
-        "volume_vs_median20": 1.61,
+        "sessions": 737,
+        "sma20": 48.83,
+        "sma50": 49.31,
+        "sma200": 51.59,
+        "rsi14": 46.3,
+        "macd": -0.43,
+        "macd_signal": -0.39,
+        "atr14": 0.8,
+        "return20_pct": -2.81,
+        "support20": 47.0,
+        "resistance20": 49.99,
+        "volume_vs_median20": 0.14,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -8847,7 +8864,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 21.88,
+        "value": 25.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -8862,11 +8879,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 15
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -9027,16 +9044,16 @@
       "name": "Fénie Brossette",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 365.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 379000.2,
-      "day_shares": 1096,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 353.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 468932.15,
+      "day_shares": 1284,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -9057,12 +9074,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 364.62,
-        "change_20_sessions_pct": -9.9,
-        "realized_volatility_20d_pct": 43.91
+        "ma20": 362.67,
+        "change_20_sessions_pct": -9.95,
+        "realized_volatility_20d_pct": 43.96
       },
       "close_series_last_60": [
-        276.0,
         285.5,
         285.0,
         283.85,
@@ -9121,25 +9137,26 @@
         343.95,
         343.9,
         342.7,
-        365.0
+        365.0,
+        353.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 364.62,
-        "sma50": 336.76,
-        "sma200": 339.92,
-        "rsi14": 54.75,
-        "macd": -1.24,
-        "macd_signal": 2.71,
-        "atr14": 15.21,
-        "return20_pct": -9.9,
-        "support20": 331.0,
-        "resistance20": 424.1,
-        "volume_vs_median20": 1.97,
+        "sessions": 742,
+        "sma20": 362.67,
+        "sma50": 338.32,
+        "sma200": 339.55,
+        "rsi14": 49.02,
+        "macd": -1.25,
+        "macd_signal": 1.92,
+        "atr14": 15.89,
+        "return20_pct": -9.95,
+        "support20": 330.15,
+        "resistance20": 410.0,
+        "volume_vs_median20": 2.31,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -9157,14 +9174,14 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 75.0,
+        "value": 50.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
         "contributors": {
           "tendance20": {
             "weight": 20,
-            "points": 20
+            "points": 0
           },
           "tendance50": {
             "weight": 15,
@@ -9191,16 +9208,16 @@
       "name": "Afriquia Gaz",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 3620.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1398520.0,
-      "day_shares": 386,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 83260.0,
+      "day_shares": 23,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -9210,23 +9227,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 18,
-        "median_shares": 41.5,
-        "median_turnover_mad_estimated": 154232.0,
-        "median_turnover_ex_top5_mad_estimated": 86880.0,
-        "capacity_shares_per_session_at_10pct": 4.15,
-        "exit_days_at_10pct": 241,
+        "median_shares": 28.5,
+        "median_turnover_mad_estimated": 106575.0,
+        "median_turnover_ex_top5_mad_estimated": 83260.0,
+        "capacity_shares_per_session_at_10pct": 2.85,
+        "exit_days_at_10pct": 351,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 3718.8,
-        "change_20_sessions_pct": -3.21,
+        "ma20": 3712.9,
+        "change_20_sessions_pct": -3.16,
         "realized_volatility_20d_pct": 24.49
       },
       "close_series_last_60": [
-        3675.0,
         3650.0,
         3750.0,
         3701.0,
@@ -9285,6 +9301,7 @@
         3700.0,
         3630.0,
         3620.0,
+        3620.0,
         3620.0
       ],
       "legacy_comparison": {
@@ -9292,18 +9309,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 3718.8,
-        "sma50": 3692.66,
-        "sma200": 3864.07,
+        "sessions": 812,
+        "sma20": 3712.9,
+        "sma50": 3691.06,
+        "sma200": 3862.01,
         "rsi14": 41.87,
-        "macd": -18.48,
-        "macd_signal": -1.78,
-        "atr14": 67.14,
-        "return20_pct": -3.21,
+        "macd": -21.66,
+        "macd_signal": -5.75,
+        "atr14": 60.0,
+        "return20_pct": -3.16,
         "support20": 3610.0,
         "resistance20": 3899.0,
-        "volume_vs_median20": 13.54,
+        "volume_vs_median20": 0.81,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -9332,7 +9349,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 21.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -9351,7 +9368,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -9366,16 +9383,16 @@
       "name": "Auto Hall",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 62.99,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 884527.73,
-      "day_shares": 14032,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 62.96,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 79947.21,
+      "day_shares": 1258,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -9385,23 +9402,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 6309.0,
-        "median_turnover_mad_estimated": 399077.7,
-        "median_turnover_ex_top5_mad_estimated": 154115.0,
-        "capacity_shares_per_session_at_10pct": 630.9,
-        "exit_days_at_10pct": 2,
+        "median_shares": 3416.5,
+        "median_turnover_mad_estimated": 224555.5,
+        "median_turnover_ex_top5_mad_estimated": 108049.2,
+        "capacity_shares_per_session_at_10pct": 341.65,
+        "exit_days_at_10pct": 3,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 65.77,
-        "change_20_sessions_pct": -8.71,
-        "realized_volatility_20d_pct": 29.4
+        "ma20": 65.52,
+        "change_20_sessions_pct": -7.41,
+        "realized_volatility_20d_pct": 29.18
       },
       "close_series_last_60": [
-        71.85,
         73.9,
         72.0,
         73.5,
@@ -9460,25 +9476,26 @@
         64.5,
         62.0,
         62.58,
-        62.99
+        62.99,
+        62.96
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 65.77,
-        "sma50": 66.79,
-        "sma200": 78.71,
-        "rsi14": 38.41,
-        "macd": -1.43,
-        "macd_signal": -1.07,
-        "atr14": 2.17,
-        "return20_pct": -8.71,
+        "sessions": 742,
+        "sma20": 65.52,
+        "sma50": 66.67,
+        "sma200": 78.55,
+        "rsi14": 38.31,
+        "macd": -1.42,
+        "macd_signal": -1.14,
+        "atr14": 2.13,
+        "return20_pct": -7.41,
         "support20": 62.0,
-        "resistance20": 69.99,
-        "volume_vs_median20": 4.11,
+        "resistance20": 69.9,
+        "volume_vs_median20": 0.2,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -9496,7 +9513,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -9515,7 +9532,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -9530,16 +9547,16 @@
       "name": "HPS",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 638.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 3543139.5,
-      "day_shares": 5557,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 615.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 383841.0,
+      "day_shares": 619,
       "quality": {
-        "candles_in_extract": 800,
-        "full_history_count_reported": 800,
-        "usable_close_bars": 800,
+        "candles_in_extract": 801,
+        "full_history_count_reported": 801,
+        "usable_close_bars": 801,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -9549,23 +9566,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 1196.5,
-        "median_turnover_mad_estimated": 777725.0,
-        "median_turnover_ex_top5_mad_estimated": 555430.0,
-        "capacity_shares_per_session_at_10pct": 119.65,
-        "exit_days_at_10pct": 9,
+        "median_shares": 985.0,
+        "median_turnover_mad_estimated": 645820.5,
+        "median_turnover_ex_top5_mad_estimated": 391300.0,
+        "capacity_shares_per_session_at_10pct": 98.5,
+        "exit_days_at_10pct": 11,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 650.45,
-        "change_20_sessions_pct": -2.3,
-        "realized_volatility_20d_pct": 24.57
+        "ma20": 648.69,
+        "change_20_sessions_pct": -5.4,
+        "realized_volatility_20d_pct": 27.53
       },
       "close_series_last_60": [
-        618.0,
         616.0,
         621.0,
         639.0,
@@ -9624,25 +9640,26 @@
         635.0,
         638.0,
         638.6,
-        638.0
+        638.0,
+        615.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 800,
-        "sma20": 650.45,
-        "sma50": 630.78,
-        "sma200": 579.14,
-        "rsi14": 47.78,
-        "macd": -0.54,
-        "macd_signal": 2.68,
-        "atr14": 13.62,
-        "return20_pct": -2.3,
+        "sessions": 801,
+        "sma20": 648.69,
+        "sma50": 630.68,
+        "sma200": 579.59,
+        "rsi14": 36.67,
+        "macd": -2.58,
+        "macd_signal": 1.63,
+        "atr14": 14.69,
+        "return20_pct": -5.4,
         "support20": 620.0,
         "resistance20": 679.9,
-        "volume_vs_median20": 4.64,
+        "volume_vs_median20": 0.52,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -9668,15 +9685,15 @@
         },
         "eps_mad": 14.31,
         "book_value_per_share_mad": 110.26,
-        "pe": 44.58,
-        "pb": 5.79,
+        "pe": 42.98,
+        "pb": 5.58,
         "revenue_growth_pct": null,
         "roe_pct": 12.98,
         "dividend_yield_pct": null,
         "earnings_mmad": 106.0
       },
       "canonical_score": {
-        "value": 52.0,
+        "value": 32.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -9687,15 +9704,15 @@
           },
           "tendance50": {
             "weight": 15,
-            "points": 15
+            "points": 0
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -9714,16 +9731,16 @@
       "name": "Maroc Telecom",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 94.75,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 19351309.65,
-      "day_shares": 203950,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 94.3,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1970348.81,
+      "day_shares": 20828,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -9733,10 +9750,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 159928.0,
-        "median_turnover_mad_estimated": 15435477.82,
-        "median_turnover_ex_top5_mad_estimated": 9922270.5,
-        "capacity_shares_per_session_at_10pct": 15992.8,
+        "median_shares": 121211.0,
+        "median_turnover_mad_estimated": 11661473.4,
+        "median_turnover_ex_top5_mad_estimated": 9161553.0,
+        "capacity_shares_per_session_at_10pct": 12121.1,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -9744,12 +9761,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 97.24,
-        "change_20_sessions_pct": -8.19,
+        "ma20": 96.82,
+        "change_20_sessions_pct": -8.22,
         "realized_volatility_20d_pct": 15.74
       },
       "close_series_last_60": [
-        91.75,
         91.7,
         91.71,
         91.8,
@@ -9808,25 +9824,26 @@
         96.2,
         96.3,
         95.05,
-        94.75
+        94.75,
+        94.3
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 97.24,
-        "sma50": 95.78,
-        "sma200": 99.07,
-        "rsi14": 40.34,
-        "macd": -0.53,
-        "macd_signal": -0.16,
-        "atr14": 1.21,
-        "return20_pct": -8.19,
+        "sessions": 812,
+        "sma20": 96.82,
+        "sma50": 95.83,
+        "sma200": 98.97,
+        "rsi14": 38.49,
+        "macd": -0.63,
+        "macd_signal": -0.25,
+        "atr14": 1.25,
+        "return20_pct": -8.22,
         "support20": 94.0,
         "resistance20": 103.55,
-        "volume_vs_median20": 1.28,
+        "volume_vs_median20": 0.13,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -9844,7 +9861,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 46.88,
+        "value": 40.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -9863,7 +9880,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -10024,16 +10041,16 @@
       "name": "Immorente Invest",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 91.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1115621.49,
-      "day_shares": 12254,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 187313.82,
+      "day_shares": 2058,
       "quality": {
-        "candles_in_extract": 80,
-        "full_history_count_reported": 80,
-        "usable_close_bars": 80,
+        "candles_in_extract": 81,
+        "full_history_count_reported": 81,
+        "usable_close_bars": 81,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -10054,12 +10071,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 92.29,
+        "ma20": 92.24,
         "change_20_sessions_pct": -1.09,
         "realized_volatility_20d_pct": 8.03
       },
       "close_series_last_60": [
-        91.0,
         91.0,
         90.5,
         90.5,
@@ -10118,6 +10134,7 @@
         92.0,
         92.5,
         92.0,
+        91.0,
         91.0
       ],
       "legacy_comparison": {
@@ -10125,18 +10142,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 80,
-        "sma20": 92.29,
+        "sessions": 81,
+        "sma20": 92.24,
         "sma50": 91.57,
         "sma200": null,
         "rsi14": 38.13,
-        "macd": 0.05,
-        "macd_signal": 0.23,
-        "atr14": 0.76,
+        "macd": -0.04,
+        "macd_signal": 0.18,
+        "atr14": 0.82,
         "return20_pct": -1.09,
-        "support20": 91.02,
+        "support20": 91.0,
         "resistance20": 93.0,
-        "volume_vs_median20": 4.75,
+        "volume_vs_median20": 0.8,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10154,7 +10171,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 21.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -10173,7 +10190,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -10188,16 +10205,16 @@
       "name": "Involys",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 123.75,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 9453.8,
-      "day_shares": 76,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 125.55,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 90196.8,
+      "day_shares": 677,
       "quality": {
-        "candles_in_extract": 810,
-        "full_history_count_reported": 810,
-        "usable_close_bars": 810,
+        "candles_in_extract": 811,
+        "full_history_count_reported": 811,
+        "usable_close_bars": 811,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -10218,12 +10235,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 128.55,
-        "change_20_sessions_pct": -4.07,
-        "realized_volatility_20d_pct": 34.56
+        "ma20": 128.38,
+        "change_20_sessions_pct": -2.67,
+        "realized_volatility_20d_pct": 35.05
       },
       "close_series_last_60": [
-        136.0,
         142.5,
         136.0,
         136.0,
@@ -10282,25 +10298,26 @@
         129.95,
         130.0,
         124.2,
-        123.75
+        123.75,
+        125.55
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 810,
-        "sma20": 128.55,
-        "sma50": 128.95,
-        "sma200": 158.58,
-        "rsi14": 42.19,
-        "macd": -1.26,
-        "macd_signal": -0.93,
-        "atr14": 5.03,
-        "return20_pct": -4.07,
+        "sessions": 811,
+        "sma20": 128.38,
+        "sma50": 128.86,
+        "sma200": 158.02,
+        "rsi14": 45.27,
+        "macd": -1.31,
+        "macd_signal": -1.01,
+        "atr14": 5.64,
+        "return20_pct": -2.67,
         "support20": 123.0,
         "resistance20": 137.7,
-        "volume_vs_median20": 0.41,
+        "volume_vs_median20": 3.92,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10318,7 +10335,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 15.62,
+        "value": 21.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -10333,11 +10350,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 15
           },
           "activité": {
             "weight": 10,
-            "points": 5
+            "points": 2
           },
           "liquidité": {
             "weight": 20,
@@ -10352,16 +10369,16 @@
       "name": "Jet Contractors",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1930.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 4705742.0,
-      "day_shares": 2491,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1879.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1375428.0,
+      "day_shares": 732,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -10371,23 +10388,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 652.0,
-        "median_turnover_mad_estimated": 1256270.0,
+        "median_shares": 701.0,
+        "median_turnover_mad_estimated": 1354364.0,
         "median_turnover_ex_top5_mad_estimated": 990450.0,
-        "capacity_shares_per_session_at_10pct": 65.2,
-        "exit_days_at_10pct": 16,
+        "capacity_shares_per_session_at_10pct": 70.1,
+        "exit_days_at_10pct": 15,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 1993.0,
-        "change_20_sessions_pct": -9.81,
-        "realized_volatility_20d_pct": 35.79
+        "ma20": 1979.45,
+        "change_20_sessions_pct": -12.6,
+        "realized_volatility_20d_pct": 36.39
       },
       "close_series_last_60": [
-        2233.0,
         2220.0,
         2179.0,
         2188.0,
@@ -10446,25 +10462,26 @@
         1903.0,
         1900.0,
         1860.0,
-        1930.0
+        1930.0,
+        1879.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 1993.0,
-        "sma50": 2052.52,
-        "sma200": 2313.64,
-        "rsi14": 40.78,
-        "macd": -53.54,
-        "macd_signal": -43.89,
-        "atr14": 64.43,
-        "return20_pct": -9.81,
-        "support20": 1860.0,
+        "sessions": 812,
+        "sma20": 1979.45,
+        "sma50": 2048.7,
+        "sma200": 2310.41,
+        "rsi14": 36.01,
+        "macd": -54.82,
+        "macd_signal": -46.07,
+        "atr14": 63.57,
+        "return20_pct": -12.6,
+        "support20": 1855.0,
         "resistance20": 2150.0,
-        "volume_vs_median20": 4.31,
+        "volume_vs_median20": 1.12,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10482,7 +10499,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 24.38,
+        "value": 34.38,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -10501,7 +10518,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -10516,16 +10533,16 @@
       "name": "Label Vie",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 4000.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 10756000.0,
-      "day_shares": 2689,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 328246.0,
+      "day_shares": 82,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -10546,12 +10563,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 4181.6,
-        "change_20_sessions_pct": -5.12,
-        "realized_volatility_20d_pct": 25.17
+        "ma20": 4169.1,
+        "change_20_sessions_pct": -5.88,
+        "realized_volatility_20d_pct": 24.88
       },
       "close_series_last_60": [
-        3840.0,
         3840.0,
         3800.0,
         3800.0,
@@ -10610,6 +10626,7 @@
         4100.0,
         4000.0,
         4022.0,
+        4000.0,
         4000.0
       ],
       "legacy_comparison": {
@@ -10617,18 +10634,18 @@
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 4181.6,
-        "sma50": 3942.66,
-        "sma200": 4095.21,
+        "sessions": 812,
+        "sma20": 4169.1,
+        "sma50": 3950.66,
+        "sma200": 4092.76,
         "rsi14": 43.25,
-        "macd": 6.69,
-        "macd_signal": 48.37,
-        "atr14": 107.36,
-        "return20_pct": -5.12,
+        "macd": -1.42,
+        "macd_signal": 38.42,
+        "atr14": 111.14,
+        "return20_pct": -5.88,
         "support20": 4000.0,
         "resistance20": 4395.0,
-        "volume_vs_median20": 3.37,
+        "volume_vs_median20": 0.1,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10646,7 +10663,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 43.12,
+        "value": 46.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -10665,7 +10682,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -10678,47 +10695,43 @@
     {
       "symbol": "LES",
       "name": "Lesieur Cristal",
-      "decision": "INDISPONIBLE",
+      "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 309.0,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 10,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 300.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 9000.0,
+      "day_shares": 30,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
-        "issues": [
-          "Cours absent, futur ou périmé à la date du rapport",
-          "Liquidité récente insuffisante pour estimer la capacité de sortie"
-        ]
+        "issues": []
       },
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 19,
-        "median_shares": 62.0,
-        "median_turnover_mad_estimated": 19089.8,
-        "median_turnover_ex_top5_mad_estimated": 14185.1,
-        "capacity_shares_per_session_at_10pct": null,
-        "exit_days_at_10pct": null,
+        "median_shares": 57.0,
+        "median_turnover_mad_estimated": 17442.0,
+        "median_turnover_ex_top5_mad_estimated": 10752.5,
+        "capacity_shares_per_session_at_10pct": 5.7,
+        "exit_days_at_10pct": 176,
         "scenario_shares": 1000,
-        "ready": false,
+        "ready": true,
         "post_resume_only": false
       },
       "trend": {
-        "ready": false,
-        "ma20": null,
-        "change_20_sessions_pct": null,
-        "realized_volatility_20d_pct": null
+        "ready": true,
+        "ma20": 306.11,
+        "change_20_sessions_pct": -3.85,
+        "realized_volatility_20d_pct": 38.53
       },
       "close_series_last_60": [
-        395.0,
         370.0,
         370.0,
         371.0,
@@ -10777,25 +10790,26 @@
         310.0,
         309.9,
         309.0,
-        309.0
+        309.0,
+        300.0
       ],
       "legacy_comparison": {
         "sig": "ÉVITER FORT",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 306.71,
-        "sma50": 310.76,
-        "sma200": 343.97,
-        "rsi14": 49.74,
-        "macd": -2.07,
-        "macd_signal": -3.22,
-        "atr14": 6.95,
-        "return20_pct": -3.44,
+        "sessions": 812,
+        "sma20": 306.11,
+        "sma50": 309.76,
+        "sma200": 344.02,
+        "rsi14": 43.15,
+        "macd": -2.47,
+        "macd_signal": -3.07,
+        "atr14": 7.54,
+        "return20_pct": -3.85,
         "support20": 281.1,
         "resistance20": 320.0,
-        "volume_vs_median20": 0.17,
+        "volume_vs_median20": 0.5,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10817,18 +10831,39 @@
         "eps_mad": null,
         "book_value_per_share_mad": 60.58,
         "pe": null,
-        "pb": 5.1,
+        "pb": 4.95,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": null,
-        "state": "NON_CALCULABLE",
+        "value": 15.62,
+        "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 0,
-        "contributors": {},
+        "coverage_pct": 80,
+        "contributors": {
+          "tendance20": {
+            "weight": 20,
+            "points": 0
+          },
+          "tendance50": {
+            "weight": 15,
+            "points": 0
+          },
+          "momentum": {
+            "weight": 15,
+            "points": 7.5
+          },
+          "activité": {
+            "weight": 10,
+            "points": 5
+          },
+          "liquidité": {
+            "weight": 20,
+            "points": 0
+          }
+        },
         "nlp_weight": 0
       }
     },
@@ -10837,16 +10872,16 @@
       "name": "Holcim Maroc SA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1656.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 12852403.0,
-      "day_shares": 7759,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1630.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2754872.0,
+      "day_shares": 1683,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -10858,7 +10893,7 @@
         "active_sessions": 20,
         "median_shares": 3603.0,
         "median_turnover_mad_estimated": 6209157.5,
-        "median_turnover_ex_top5_mad_estimated": 2592452.0,
+        "median_turnover_ex_top5_mad_estimated": 2743290.0,
         "capacity_shares_per_session_at_10pct": 360.3,
         "exit_days_at_10pct": 3,
         "scenario_shares": 1000,
@@ -10867,12 +10902,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 1718.85,
-        "change_20_sessions_pct": -6.23,
-        "realized_volatility_20d_pct": 37.51
+        "ma20": 1714.05,
+        "change_20_sessions_pct": -5.56,
+        "realized_volatility_20d_pct": 37.1
       },
       "close_series_last_60": [
-        1763.0,
         1760.0,
         1770.0,
         1755.0,
@@ -10931,25 +10965,26 @@
         1671.0,
         1665.0,
         1709.0,
-        1656.0
+        1656.0,
+        1630.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 1718.85,
-        "sma50": 1748.96,
-        "sma200": 1784.38,
-        "rsi14": 41.15,
-        "macd": -25.75,
-        "macd_signal": -19.89,
-        "atr14": 56.07,
-        "return20_pct": -6.23,
+        "sessions": 812,
+        "sma20": 1714.05,
+        "sma50": 1746.5,
+        "sma200": 1783.28,
+        "rsi14": 38.51,
+        "macd": -29.12,
+        "macd_signal": -21.74,
+        "atr14": 56.29,
+        "return20_pct": -5.56,
         "support20": 1610.0,
         "resistance20": 1808.0,
-        "volume_vs_median20": 2.15,
+        "volume_vs_median20": 0.47,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -10967,7 +11002,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 46.88,
+        "value": 40.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -10986,7 +11021,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -11147,30 +11182,30 @@
       "name": "Med Paper",
       "decision": "LIMITÉ",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 24.49,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1753.76,
-      "day_shares": 73,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 24.2,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 8710.1,
+      "day_shares": 364,
       "quality": {
-        "candles_in_extract": 6,
-        "full_history_count_reported": 6,
-        "usable_close_bars": 6,
+        "candles_in_extract": 7,
+        "full_history_count_reported": 7,
+        "usable_close_bars": 7,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
         "issues": [
-          "Historique limité à 6 séances dans l'extrait",
+          "Historique limité à 7 séances dans l'extrait",
           "Liquidité récente insuffisante pour estimer la capacité de sortie"
         ]
       },
       "liquidity": {
-        "window_sessions": 6,
-        "active_sessions": 6,
-        "median_shares": 131.5,
-        "median_turnover_mad_estimated": 3205.24,
+        "window_sessions": 7,
+        "active_sessions": 7,
+        "median_shares": 152.0,
+        "median_turnover_mad_estimated": 3720.96,
         "median_turnover_ex_top5_mad_estimated": null,
         "capacity_shares_per_session_at_10pct": null,
         "exit_days_at_10pct": null,
@@ -11190,14 +11225,15 @@
         24.5,
         24.23,
         24.48,
-        24.49
+        24.49,
+        24.2
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 6,
+        "sessions": 7,
         "sma20": null,
         "sma50": null,
         "sma200": null,
@@ -11237,26 +11273,23 @@
     {
       "symbol": "MGL",
       "name": "Maghrebail",
-      "decision": "INDISPONIBLE",
+      "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 890.1,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 25,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 883.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 17660.0,
+      "day_shares": 20,
       "quality": {
-        "candles_in_extract": 740,
-        "full_history_count_reported": 740,
-        "usable_close_bars": 740,
+        "candles_in_extract": 741,
+        "full_history_count_reported": 741,
+        "usable_close_bars": 741,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
-        "issues": [
-          "Cours absent, futur ou périmé à la date du rapport",
-          "Liquidité récente insuffisante pour estimer la capacité de sortie"
-        ]
+        "issues": []
       },
       "liquidity": {
         "window_sessions": 20,
@@ -11264,20 +11297,19 @@
         "median_shares": 5.0,
         "median_turnover_mad_estimated": 4575.0,
         "median_turnover_ex_top5_mad_estimated": 4560.0,
-        "capacity_shares_per_session_at_10pct": null,
-        "exit_days_at_10pct": null,
+        "capacity_shares_per_session_at_10pct": 0.5,
+        "exit_days_at_10pct": 2000,
         "scenario_shares": 1000,
-        "ready": false,
+        "ready": true,
         "post_resume_only": false
       },
       "trend": {
-        "ready": false,
-        "ma20": null,
-        "change_20_sessions_pct": null,
-        "realized_volatility_20d_pct": null
+        "ready": true,
+        "ma20": 905.58,
+        "change_20_sessions_pct": -6.06,
+        "realized_volatility_20d_pct": 34.31
       },
       "close_series_last_60": [
-        894.9,
         894.9,
         894.0,
         894.0,
@@ -11336,25 +11368,26 @@
         890.1,
         920.0,
         890.1,
-        890.1
+        890.1,
+        883.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 740,
-        "sma20": 908.42,
-        "sma50": 912.08,
-        "sma200": 906.24,
-        "rsi14": 44.59,
-        "macd": -5.62,
-        "macd_signal": -3.47,
-        "atr14": 15.04,
-        "return20_pct": -5.31,
+        "sessions": 741,
+        "sma20": 905.58,
+        "sma50": 911.89,
+        "sma200": 906.07,
+        "rsi14": 42.84,
+        "macd": -6.81,
+        "macd_signal": -4.13,
+        "atr14": 15.54,
+        "return20_pct": -6.06,
         "support20": 889.5,
         "resistance20": 940.0,
-        "volume_vs_median20": 5.0,
+        "volume_vs_median20": 4.0,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -11372,11 +11405,32 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": null,
-        "state": "NON_CALCULABLE",
+        "value": 11.88,
+        "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 0,
-        "contributors": {},
+        "coverage_pct": 80,
+        "contributors": {
+          "tendance20": {
+            "weight": 20,
+            "points": 0
+          },
+          "tendance50": {
+            "weight": 15,
+            "points": 0
+          },
+          "momentum": {
+            "weight": 15,
+            "points": 7.5
+          },
+          "activité": {
+            "weight": 10,
+            "points": 2
+          },
+          "liquidité": {
+            "weight": 20,
+            "points": 0
+          }
+        },
         "nlp_weight": 0
       }
     },
@@ -11385,16 +11439,16 @@
       "name": "Microdata",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 775.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 110807.0,
-      "day_shares": 143,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 757.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 37851.0,
+      "day_shares": 50,
       "quality": {
-        "candles_in_extract": 77,
-        "full_history_count_reported": 77,
-        "usable_close_bars": 77,
+        "candles_in_extract": 78,
+        "full_history_count_reported": 78,
+        "usable_close_bars": 78,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -11404,23 +11458,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 46.5,
-        "median_turnover_mad_estimated": 35569.0,
-        "median_turnover_ex_top5_mad_estimated": 23250.0,
-        "capacity_shares_per_session_at_10pct": 4.65,
-        "exit_days_at_10pct": 216,
+        "median_shares": 50.0,
+        "median_turnover_mad_estimated": 38025.0,
+        "median_turnover_ex_top5_mad_estimated": 29600.0,
+        "capacity_shares_per_session_at_10pct": 5.0,
+        "exit_days_at_10pct": 200,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 756.29,
-        "change_20_sessions_pct": 3.33,
-        "realized_volatility_20d_pct": 50.85
+        "ma20": 756.64,
+        "change_20_sessions_pct": 0.93,
+        "realized_volatility_20d_pct": 51.65
       },
       "close_series_last_60": [
-        760.0,
         780.0,
         780.0,
         760.0,
@@ -11479,25 +11532,26 @@
         733.1,
         768.0,
         768.0,
-        775.0
+        775.0,
+        757.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 77,
-        "sma20": 756.29,
-        "sma50": 754.34,
+        "sessions": 78,
+        "sma20": 756.64,
+        "sma50": 753.5,
         "sma200": null,
-        "rsi14": 56.65,
-        "macd": 2.42,
-        "macd_signal": 0.6,
-        "atr14": 13.98,
-        "return20_pct": 3.33,
+        "rsi14": 50.54,
+        "macd": 2.17,
+        "macd_signal": 0.92,
+        "atr14": 14.99,
+        "return20_pct": 0.93,
         "support20": 705.0,
         "resistance20": 775.0,
-        "volume_vs_median20": 3.45,
+        "volume_vs_median20": 1.08,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -11515,7 +11569,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 65.0,
+        "value": 75.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -11534,7 +11588,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -11549,16 +11603,16 @@
       "name": "Managem",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1620.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 35119437.0,
-      "day_shares": 21558,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1580.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 28131795.0,
+      "day_shares": 17813,
       "quality": {
-        "candles_in_extract": 808,
-        "full_history_count_reported": 808,
-        "usable_close_bars": 808,
+        "candles_in_extract": 809,
+        "full_history_count_reported": 809,
+        "usable_close_bars": 809,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -11568,10 +11622,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 26122.0,
-        "median_turnover_mad_estimated": 43713292.5,
-        "median_turnover_ex_top5_mad_estimated": 36362760.0,
-        "capacity_shares_per_session_at_10pct": 2612.2,
+        "median_shares": 23566.5,
+        "median_turnover_mad_estimated": 39977787.5,
+        "median_turnover_ex_top5_mad_estimated": 34923960.0,
+        "capacity_shares_per_session_at_10pct": 2356.65,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -11579,12 +11633,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 1696.55,
-        "change_20_sessions_pct": -12.9,
-        "realized_volatility_20d_pct": 37.46
+        "ma20": 1684.55,
+        "change_20_sessions_pct": -13.19,
+        "realized_volatility_20d_pct": 37.64
       },
       "close_series_last_60": [
-        1250.0,
         1278.7,
         1240.0,
         1289.9,
@@ -11643,25 +11696,26 @@
         1664.0,
         1655.0,
         1615.0,
-        1620.0
+        1620.0,
+        1580.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 808,
-        "sma20": 1696.55,
-        "sma50": 1550.8,
-        "sma200": 1145.97,
-        "rsi14": 46.72,
-        "macd": 2.7,
-        "macd_signal": 25.05,
-        "atr14": 58.93,
-        "return20_pct": -12.9,
+        "sessions": 809,
+        "sma20": 1684.55,
+        "sma50": 1555.8,
+        "sma200": 1150.84,
+        "rsi14": 42.89,
+        "macd": -3.41,
+        "macd_signal": 19.36,
+        "atr14": 62.5,
+        "return20_pct": -13.19,
         "support20": 1560.0,
-        "resistance20": 1890.0,
-        "volume_vs_median20": 0.8,
+        "resistance20": 1863.0,
+        "volume_vs_median20": 0.68,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -11692,15 +11746,15 @@
         },
         "eps_mad": 253.02,
         "book_value_per_share_mad": 967.43,
-        "pe": 6.4,
-        "pb": 1.67,
+        "pe": 6.24,
+        "pb": 1.63,
         "revenue_growth_pct": null,
         "roe_pct": 26.15,
         "dividend_yield_pct": null,
         "earnings_mmad": 3002.0
       },
       "canonical_score": {
-        "value": 80.0,
+        "value": 67.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -11715,11 +11769,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -11738,16 +11792,16 @@
       "name": "Maghreb Oxygène",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 379.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1895.0,
-      "day_shares": 5,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 378.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 3408.0,
+      "day_shares": 9,
       "quality": {
-        "candles_in_extract": 811,
-        "full_history_count_reported": 811,
-        "usable_close_bars": 811,
+        "candles_in_extract": 812,
+        "full_history_count_reported": 812,
+        "usable_close_bars": 812,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -11768,12 +11822,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 385.17,
+        "ma20": 384.52,
         "change_20_sessions_pct": -3.32,
         "realized_volatility_20d_pct": 20.13
       },
       "close_series_last_60": [
-        385.0,
         386.9,
         386.9,
         386.9,
@@ -11832,25 +11885,26 @@
         390.0,
         389.95,
         389.95,
-        379.0
+        379.0,
+        378.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 811,
-        "sma20": 385.17,
-        "sma50": 381.43,
-        "sma200": 390.58,
-        "rsi14": 43.16,
-        "macd": -0.47,
-        "macd_signal": -0.29,
-        "atr14": 4.77,
+        "sessions": 812,
+        "sma20": 384.52,
+        "sma50": 381.69,
+        "sma200": 390.54,
+        "rsi14": 42.18,
+        "macd": -0.95,
+        "macd_signal": -0.42,
+        "atr14": 4.7,
         "return20_pct": -3.32,
         "support20": 365.1,
-        "resistance20": 392.9,
-        "volume_vs_median20": 1.25,
+        "resistance20": 391.0,
+        "volume_vs_median20": 2.25,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -12048,16 +12102,16 @@
       "name": "Sodep-Marsa Maroc",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 815.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 32589381.8,
-      "day_shares": 39895,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 805.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 197150452.0,
+      "day_shares": 241272,
       "quality": {
-        "candles_in_extract": 577,
-        "full_history_count_reported": 577,
-        "usable_close_bars": 577,
+        "candles_in_extract": 578,
+        "full_history_count_reported": 578,
+        "usable_close_bars": 578,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -12078,12 +12132,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 848.48,
-        "change_20_sessions_pct": -4.28,
-        "realized_volatility_20d_pct": 16.59
+        "ma20": 846.1,
+        "change_20_sessions_pct": -5.57,
+        "realized_volatility_20d_pct": 16.91
       },
       "close_series_last_60": [
-        860.0,
         842.0,
         844.1,
         845.0,
@@ -12142,25 +12195,26 @@
         835.0,
         829.9,
         818.1,
-        815.0
+        815.0,
+        805.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 577,
-        "sma20": 848.48,
-        "sma50": 858.66,
-        "sma200": 870.58,
-        "rsi14": 33.57,
-        "macd": -11.03,
-        "macd_signal": -6.83,
-        "atr14": 12.92,
-        "return20_pct": -4.28,
+        "sessions": 578,
+        "sma20": 846.1,
+        "sma50": 857.68,
+        "sma200": 869.73,
+        "rsi14": 30.44,
+        "macd": -12.65,
+        "macd_signal": -7.99,
+        "atr14": 12.99,
+        "return20_pct": -5.57,
         "support20": 813.0,
         "resistance20": 875.0,
-        "volume_vs_median20": 2.07,
+        "volume_vs_median20": 12.49,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -12191,15 +12245,15 @@
         },
         "eps_mad": 21.65,
         "book_value_per_share_mad": 55.16,
-        "pe": 37.64,
-        "pb": 14.78,
+        "pe": 37.18,
+        "pb": 14.59,
         "revenue_growth_pct": null,
         "roe_pct": 39.25,
         "dividend_yield_pct": null,
         "earnings_mmad": 1588.764
       },
       "canonical_score": {
-        "value": 57.5,
+        "value": 49.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -12218,7 +12272,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 2
           },
           "liquidité": {
             "weight": 20,
@@ -12237,16 +12291,16 @@
       "name": "Mutandis SCA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 227.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1787507.3,
-      "day_shares": 7877,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 222.5,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 547486.15,
+      "day_shares": 2435,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -12256,23 +12310,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 1135.5,
-        "median_turnover_mad_estimated": 268007.12,
-        "median_turnover_ex_top5_mad_estimated": 209970.5,
-        "capacity_shares_per_session_at_10pct": 113.55,
-        "exit_days_at_10pct": 9,
+        "median_shares": 1407.5,
+        "median_turnover_mad_estimated": 329789.45,
+        "median_turnover_ex_top5_mad_estimated": 218924.0,
+        "capacity_shares_per_session_at_10pct": 140.75,
+        "exit_days_at_10pct": 8,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 235.69,
-        "change_20_sessions_pct": -6.58,
-        "realized_volatility_20d_pct": 44.17
+        "ma20": 234.79,
+        "change_20_sessions_pct": -7.41,
+        "realized_volatility_20d_pct": 44.49
       },
       "close_series_last_60": [
-        235.0,
         239.0,
         237.05,
         238.0,
@@ -12331,25 +12384,26 @@
         224.0,
         226.0,
         231.5,
-        227.0
+        227.0,
+        222.5
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 235.69,
-        "sma50": 234.91,
-        "sma200": 241.71,
-        "rsi14": 43.93,
-        "macd": -2.83,
-        "macd_signal": -1.51,
-        "atr14": 9.51,
-        "return20_pct": -6.58,
+        "sessions": 742,
+        "sma20": 234.79,
+        "sma50": 234.66,
+        "sma200": 241.53,
+        "rsi14": 40.86,
+        "macd": -3.32,
+        "macd_signal": -1.88,
+        "atr14": 8.52,
+        "return20_pct": -7.41,
         "support20": 221.0,
         "resistance20": 258.0,
-        "volume_vs_median20": 6.94,
+        "volume_vs_median20": 2.14,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -12371,14 +12425,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 167.78,
         "pe": null,
-        "pb": 1.35,
+        "pb": 1.33,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 21.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -12397,7 +12451,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -12556,26 +12610,23 @@
     {
       "symbol": "OUL",
       "name": "Oulmès",
-      "decision": "INDISPONIBLE",
+      "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 1160.0,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 126,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 1091.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1091.0,
+      "day_shares": 1,
       "quality": {
-        "candles_in_extract": 72,
-        "full_history_count_reported": 72,
-        "usable_close_bars": 72,
+        "candles_in_extract": 73,
+        "full_history_count_reported": 73,
+        "usable_close_bars": 73,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
-        "issues": [
-          "Cours absent, futur ou périmé à la date du rapport",
-          "Liquidité récente insuffisante pour estimer la capacité de sortie"
-        ]
+        "issues": []
       },
       "liquidity": {
         "window_sessions": 20,
@@ -12583,20 +12634,19 @@
         "median_shares": 5.0,
         "median_turnover_mad_estimated": 5790.0,
         "median_turnover_ex_top5_mad_estimated": 2332.0,
-        "capacity_shares_per_session_at_10pct": null,
-        "exit_days_at_10pct": null,
+        "capacity_shares_per_session_at_10pct": 0.5,
+        "exit_days_at_10pct": 2000,
         "scenario_shares": 1000,
-        "ready": false,
+        "ready": true,
         "post_resume_only": false
       },
       "trend": {
-        "ready": false,
-        "ma20": null,
-        "change_20_sessions_pct": null,
-        "realized_volatility_20d_pct": null
+        "ready": true,
+        "ma20": 1151.55,
+        "change_20_sessions_pct": -6.67,
+        "realized_volatility_20d_pct": 37.47
       },
       "close_series_last_60": [
-        1200.0,
         1200.0,
         1200.0,
         1200.0,
@@ -12655,25 +12705,26 @@
         1160.0,
         1160.0,
         1160.0,
-        1160.0
+        1160.0,
+        1091.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 72,
-        "sma20": 1155.45,
-        "sma50": 1156.92,
+        "sessions": 73,
+        "sma20": 1151.55,
+        "sma50": 1155.68,
         "sma200": null,
-        "rsi14": 50.51,
-        "macd": -0.44,
-        "macd_signal": -1.53,
-        "atr14": 4.07,
-        "return20_pct": -0.43,
+        "rsi14": 27.71,
+        "macd": -5.81,
+        "macd_signal": -2.39,
+        "atr14": 9.0,
+        "return20_pct": -6.67,
         "support20": 1097.0,
         "resistance20": 1169.0,
-        "volume_vs_median20": 25.2,
+        "volume_vs_median20": 0.2,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -12695,18 +12746,39 @@
         "eps_mad": null,
         "book_value_per_share_mad": 398.03,
         "pe": null,
-        "pb": 2.91,
+        "pb": 2.74,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": null,
-        "state": "NON_CALCULABLE",
+        "value": 6.25,
+        "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 0,
-        "contributors": {},
+        "coverage_pct": 80,
+        "contributors": {
+          "tendance20": {
+            "weight": 20,
+            "points": 0
+          },
+          "tendance50": {
+            "weight": 15,
+            "points": 0
+          },
+          "momentum": {
+            "weight": 15,
+            "points": 0
+          },
+          "activité": {
+            "weight": 10,
+            "points": 5
+          },
+          "liquidité": {
+            "weight": 20,
+            "points": 0
+          }
+        },
         "nlp_weight": 0
       }
     },
@@ -12861,16 +12933,16 @@
       "name": "Résidences Dar Saada",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 172.95,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1078104.6,
-      "day_shares": 6260,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 168.05,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 514174.25,
+      "day_shares": 3053,
       "quality": {
-        "candles_in_extract": 554,
-        "full_history_count_reported": 554,
-        "usable_close_bars": 554,
+        "candles_in_extract": 555,
+        "full_history_count_reported": 555,
+        "usable_close_bars": 555,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -12880,10 +12952,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 17587.5,
-        "median_turnover_mad_estimated": 3026944.0,
-        "median_turnover_ex_top5_mad_estimated": 1651020.1,
-        "capacity_shares_per_session_at_10pct": 1758.75,
+        "median_shares": 14233.0,
+        "median_turnover_mad_estimated": 2453696.2,
+        "median_turnover_ex_top5_mad_estimated": 1504853.0,
+        "capacity_shares_per_session_at_10pct": 1423.3,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -12891,12 +12963,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 176.78,
-        "change_20_sessions_pct": -7.51,
-        "realized_volatility_20d_pct": 19.56
+        "ma20": 175.76,
+        "change_20_sessions_pct": -10.85,
+        "realized_volatility_20d_pct": 20.86
       },
       "close_series_last_60": [
-        176.5,
         172.15,
         175.0,
         174.0,
@@ -12955,25 +13026,26 @@
         174.0,
         172.0,
         172.0,
-        172.95
+        172.95,
+        168.05
       ],
       "legacy_comparison": {
         "sig": "ÉVITER",
         "sigBvc": "EVITER"
       },
       "technical": {
-        "sessions": 554,
-        "sma20": 176.78,
-        "sma50": 174.2,
-        "sma200": 166.82,
-        "rsi14": 46.22,
-        "macd": -1.18,
-        "macd_signal": -0.44,
-        "atr14": 3.34,
-        "return20_pct": -7.51,
+        "sessions": 555,
+        "sma20": 175.76,
+        "sma50": 174.16,
+        "sma200": 166.76,
+        "rsi14": 38.66,
+        "macd": -1.54,
+        "macd_signal": -0.66,
+        "atr14": 3.55,
+        "return20_pct": -10.85,
         "support20": 167.8,
-        "resistance20": 190.0,
-        "volume_vs_median20": 0.31,
+        "resistance20": 188.5,
+        "volume_vs_median20": 0.17,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -12995,14 +13067,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 142.68,
         "pe": null,
-        "pb": 1.21,
+        "pb": 1.18,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 37.5,
+        "value": 28.12,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -13017,7 +13089,7 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
@@ -13182,16 +13254,16 @@
       "name": "Risma",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 320.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 2303597.7,
-      "day_shares": 7203,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 316.1,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 315866.95,
+      "day_shares": 999,
       "quality": {
-        "candles_in_extract": 576,
-        "full_history_count_reported": 576,
-        "usable_close_bars": 576,
+        "candles_in_extract": 577,
+        "full_history_count_reported": 577,
+        "usable_close_bars": 577,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -13201,10 +13273,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 2821.0,
-        "median_turnover_mad_estimated": 903383.0,
-        "median_turnover_ex_top5_mad_estimated": 772280.65,
-        "capacity_shares_per_session_at_10pct": 282.1,
+        "median_shares": 2623.5,
+        "median_turnover_mad_estimated": 836951.2,
+        "median_turnover_ex_top5_mad_estimated": 766720.0,
+        "capacity_shares_per_session_at_10pct": 262.35,
         "exit_days_at_10pct": 4,
         "scenario_shares": 1000,
         "ready": true,
@@ -13212,12 +13284,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 320.57,
-        "change_20_sessions_pct": -2.14,
-        "realized_volatility_20d_pct": 13.02
+        "ma20": 320.13,
+        "change_20_sessions_pct": -2.74,
+        "realized_volatility_20d_pct": 13.5
       },
       "close_series_last_60": [
-        333.0,
         332.5,
         334.9,
         336.9,
@@ -13276,25 +13347,26 @@
         325.0,
         322.2,
         320.0,
-        320.0
+        320.0,
+        316.1
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 576,
-        "sma20": 320.57,
-        "sma50": 321.59,
-        "sma200": 343.89,
-        "rsi14": 46.7,
-        "macd": -0.77,
-        "macd_signal": -0.85,
-        "atr14": 5.0,
-        "return20_pct": -2.14,
+        "sessions": 577,
+        "sma20": 320.13,
+        "sma50": 321.39,
+        "sma200": 343.55,
+        "rsi14": 41.21,
+        "macd": -1.11,
+        "macd_signal": -0.9,
+        "atr14": 5.18,
+        "return20_pct": -2.74,
         "support20": 315.2,
-        "resistance20": 330.0,
-        "volume_vs_median20": 2.55,
+        "resistance20": 326.1,
+        "volume_vs_median20": 0.35,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -13323,7 +13395,7 @@
         "earnings_mmad": 269.622
       },
       "canonical_score": {
-        "value": 45.0,
+        "value": 32.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -13338,11 +13410,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -13361,16 +13433,16 @@
       "name": "S2M",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 517.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 549528.1,
-      "day_shares": 1090,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 515.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 704569.6,
+      "day_shares": 1365,
       "quality": {
-        "candles_in_extract": 76,
-        "full_history_count_reported": 76,
-        "usable_close_bars": 76,
+        "candles_in_extract": 77,
+        "full_history_count_reported": 77,
+        "usable_close_bars": 77,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -13391,12 +13463,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 522.36,
-        "change_20_sessions_pct": 0.39,
-        "realized_volatility_20d_pct": 37.64
+        "ma20": 522.8,
+        "change_20_sessions_pct": 1.74,
+        "realized_volatility_20d_pct": 37.11
       },
       "close_series_last_60": [
-        510.0,
         500.0,
         510.0,
         500.0,
@@ -13455,25 +13526,26 @@
         519.0,
         518.0,
         515.0,
-        517.0
+        517.0,
+        515.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 76,
-        "sma20": 522.36,
-        "sma50": 501.38,
+        "sessions": 77,
+        "sma20": 522.8,
+        "sma50": 501.8,
         "sma200": null,
-        "rsi14": 50.45,
-        "macd": 2.13,
-        "macd_signal": 4.34,
-        "atr14": 15.62,
-        "return20_pct": 0.39,
-        "support20": 500.0,
+        "rsi14": 49.35,
+        "macd": 1.72,
+        "macd_signal": 3.81,
+        "atr14": 15.51,
+        "return20_pct": 1.74,
+        "support20": 493.1,
         "resistance20": 542.7,
-        "volume_vs_median20": 2.0,
+        "volume_vs_median20": 2.5,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -13525,30 +13597,30 @@
       "name": "Sanlam Maroc",
       "decision": "LIMITÉ",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 2999.0,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 24,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 17994.0,
+      "day_shares": 6,
       "quality": {
-        "candles_in_extract": 5,
-        "full_history_count_reported": 5,
-        "usable_close_bars": 5,
+        "candles_in_extract": 6,
+        "full_history_count_reported": 6,
+        "usable_close_bars": 6,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
         "issues": [
-          "Historique limité à 5 séances dans l'extrait",
+          "Historique limité à 6 séances dans l'extrait",
           "Liquidité récente insuffisante pour estimer la capacité de sortie"
         ]
       },
       "liquidity": {
-        "window_sessions": 5,
-        "active_sessions": 5,
-        "median_shares": 24.0,
-        "median_turnover_mad_estimated": 71976.0,
+        "window_sessions": 6,
+        "active_sessions": 6,
+        "median_shares": 16.5,
+        "median_turnover_mad_estimated": 49326.0,
         "median_turnover_ex_top5_mad_estimated": null,
         "capacity_shares_per_session_at_10pct": null,
         "exit_days_at_10pct": null,
@@ -13567,6 +13639,7 @@
         2964.0,
         2999.0,
         2999.0,
+        2999.0,
         2999.0
       ],
       "legacy_comparison": {
@@ -13574,7 +13647,7 @@
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 5,
+        "sessions": 6,
         "sma20": null,
         "sma50": null,
         "sma200": null,
@@ -13616,16 +13689,16 @@
       "name": "Société des Boissons du Maroc",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 2096.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 8384.0,
-      "day_shares": 4,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 2000.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 214188.0,
+      "day_shares": 107,
       "quality": {
-        "candles_in_extract": 75,
-        "full_history_count_reported": 75,
-        "usable_close_bars": 75,
+        "candles_in_extract": 76,
+        "full_history_count_reported": 76,
+        "usable_close_bars": 76,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -13646,12 +13719,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 2085.85,
-        "change_20_sessions_pct": 0.29,
-        "realized_volatility_20d_pct": 38.3
+        "ma20": 2081.35,
+        "change_20_sessions_pct": -4.31,
+        "realized_volatility_20d_pct": 41.67
       },
       "close_series_last_60": [
-        2199.0,
         2140.0,
         2175.0,
         2175.0,
@@ -13710,25 +13782,26 @@
         2020.0,
         2017.0,
         2015.0,
-        2096.0
+        2096.0,
+        2000.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 75,
-        "sma20": 2085.85,
-        "sma50": 2112.18,
+        "sessions": 76,
+        "sma20": 2081.35,
+        "sma50": 2109.38,
         "sma200": null,
-        "rsi14": 50.42,
-        "macd": -19.65,
-        "macd_signal": -17.5,
-        "atr14": 77.0,
-        "return20_pct": 0.29,
+        "rsi14": 41.08,
+        "macd": -23.9,
+        "macd_signal": -18.78,
+        "atr14": 78.86,
+        "return20_pct": -4.31,
         "support20": 1965.0,
         "resistance20": 2139.0,
-        "volume_vs_median20": 0.26,
+        "volume_vs_median20": 8.92,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -13746,14 +13819,14 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 50.0,
+        "value": 11.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
         "contributors": {
           "tendance20": {
             "weight": 20,
-            "points": 20
+            "points": 0
           },
           "tendance50": {
             "weight": 15,
@@ -13761,11 +13834,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 5
+            "points": 2
           },
           "liquidité": {
             "weight": 20,
@@ -13780,16 +13853,16 @@
       "name": "SGTM SA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 620.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 9054045.7,
-      "day_shares": 14555,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 607.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 6086008.3,
+      "day_shares": 9972,
       "quality": {
-        "candles_in_extract": 166,
-        "full_history_count_reported": 166,
-        "usable_close_bars": 166,
+        "candles_in_extract": 167,
+        "full_history_count_reported": 167,
+        "usable_close_bars": 167,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -13810,12 +13883,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 632.01,
-        "change_20_sessions_pct": -12.37,
-        "realized_volatility_20d_pct": 41.87
+        "ma20": 627.35,
+        "change_20_sessions_pct": -13.32,
+        "realized_volatility_20d_pct": 42.18
       },
       "close_series_last_60": [
-        717.0,
         710.0,
         716.1,
         710.0,
@@ -13874,25 +13946,26 @@
         620.0,
         639.9,
         620.0,
-        620.0
+        620.0,
+        607.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 166,
-        "sma20": 632.01,
-        "sma50": 670.9,
+        "sessions": 167,
+        "sma20": 627.35,
+        "sma50": 668.95,
         "sma200": null,
-        "rsi14": 42.59,
-        "macd": -18.63,
-        "macd_signal": -20.58,
-        "atr14": 20.58,
-        "return20_pct": -12.37,
+        "rsi14": 39.32,
+        "macd": -18.55,
+        "macd_signal": -20.17,
+        "atr14": 21.36,
+        "return20_pct": -13.32,
         "support20": 570.0,
-        "resistance20": 707.5,
-        "volume_vs_median20": 0.94,
+        "resistance20": 705.1,
+        "volume_vs_median20": 0.63,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -13914,14 +13987,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 59.17,
         "pe": null,
-        "pb": 10.48,
+        "pb": 10.26,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 46.88,
+        "value": 40.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -13940,7 +14013,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -13955,30 +14028,30 @@
       "name": "Salafin",
       "decision": "LIMITÉ",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 425.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 31075.0,
-      "day_shares": 73,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 13600.0,
+      "day_shares": 32,
       "quality": {
-        "candles_in_extract": 6,
-        "full_history_count_reported": 6,
-        "usable_close_bars": 6,
+        "candles_in_extract": 7,
+        "full_history_count_reported": 7,
+        "usable_close_bars": 7,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
         "issues": [
-          "Historique limité à 6 séances dans l'extrait",
+          "Historique limité à 7 séances dans l'extrait",
           "Liquidité récente insuffisante pour estimer la capacité de sortie"
         ]
       },
       "liquidity": {
-        "window_sessions": 6,
-        "active_sessions": 6,
-        "median_shares": 258.5,
-        "median_turnover_mad_estimated": 109537.5,
+        "window_sessions": 7,
+        "active_sessions": 7,
+        "median_shares": 130.0,
+        "median_turnover_mad_estimated": 54600.0,
         "median_turnover_ex_top5_mad_estimated": null,
         "capacity_shares_per_session_at_10pct": null,
         "exit_days_at_10pct": null,
@@ -13998,6 +14071,7 @@
         425.0,
         425.0,
         429.0,
+        425.0,
         425.0
       ],
       "legacy_comparison": {
@@ -14005,7 +14079,7 @@
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 6,
+        "sessions": 7,
         "sma20": null,
         "sma50": null,
         "sma200": null,
@@ -14047,16 +14121,16 @@
       "name": "Société Métallurgique d'Imiter",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 6550.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 3890461.0,
-      "day_shares": 588,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 6300.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 3119701.0,
+      "day_shares": 492,
       "quality": {
-        "candles_in_extract": 577,
-        "full_history_count_reported": 577,
-        "usable_close_bars": 577,
+        "candles_in_extract": 578,
+        "full_history_count_reported": 578,
+        "usable_close_bars": 578,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -14066,23 +14140,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 605.0,
-        "median_turnover_mad_estimated": 3978300.0,
-        "median_turnover_ex_top5_mad_estimated": 3203226.0,
-        "capacity_shares_per_session_at_10pct": 60.5,
-        "exit_days_at_10pct": 17,
+        "median_shares": 540.0,
+        "median_turnover_mad_estimated": 3536569.0,
+        "median_turnover_ex_top5_mad_estimated": 3099600.0,
+        "capacity_shares_per_session_at_10pct": 54.0,
+        "exit_days_at_10pct": 19,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 6661.05,
-        "change_20_sessions_pct": -7.75,
-        "realized_volatility_20d_pct": 29.48
+        "ma20": 6631.05,
+        "change_20_sessions_pct": -8.7,
+        "realized_volatility_20d_pct": 30.76
       },
       "close_series_last_60": [
-        5900.0,
         5950.0,
         5801.0,
         6000.0,
@@ -14141,25 +14214,26 @@
         6698.0,
         6688.0,
         6644.0,
-        6550.0
+        6550.0,
+        6300.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 577,
-        "sma20": 6661.05,
-        "sma50": 6471.18,
-        "sma200": 6461.99,
-        "rsi14": 46.82,
-        "macd": -4.66,
-        "macd_signal": 5.88,
-        "atr14": 139.14,
-        "return20_pct": -7.75,
+        "sessions": 578,
+        "sma20": 6631.05,
+        "sma50": 6476.96,
+        "sma200": 6480.41,
+        "rsi14": 39.44,
+        "macd": -30.62,
+        "macd_signal": -1.42,
+        "atr14": 148.43,
+        "return20_pct": -8.7,
         "support20": 6381.0,
         "resistance20": 7276.0,
-        "volume_vs_median20": 0.88,
+        "volume_vs_median20": 0.81,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -14177,7 +14251,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 62.5,
+        "value": 34.38,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -14188,11 +14262,11 @@
           },
           "tendance50": {
             "weight": 15,
-            "points": 15
+            "points": 0
           },
           "momentum": {
             "weight": 15,
-            "points": 15
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
@@ -14386,16 +14460,16 @@
       "name": "SNEP",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 300.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 1571519.55,
-      "day_shares": 5234,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 309.9,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 54605.1,
+      "day_shares": 176,
       "quality": {
-        "candles_in_extract": 76,
-        "full_history_count_reported": 76,
-        "usable_close_bars": 76,
+        "candles_in_extract": 77,
+        "full_history_count_reported": 77,
+        "usable_close_bars": 77,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -14416,12 +14490,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 333.52,
-        "change_20_sessions_pct": -16.67,
-        "realized_volatility_20d_pct": 28.52
+        "ma20": 331.16,
+        "change_20_sessions_pct": -13.19,
+        "realized_volatility_20d_pct": 32.17
       },
       "close_series_last_60": [
-        369.0,
         369.0,
         370.0,
         348.0,
@@ -14480,25 +14553,26 @@
         316.0,
         305.0,
         305.0,
-        300.0
+        300.0,
+        309.9
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 76,
-        "sma20": 333.52,
-        "sma50": 335.09,
+        "sessions": 77,
+        "sma20": 331.16,
+        "sma50": 334.79,
         "sma200": null,
-        "rsi14": 26.91,
-        "macd": -11.61,
-        "macd_signal": -7.25,
-        "atr14": 10.25,
-        "return20_pct": -16.67,
-        "support20": 303.2,
+        "rsi14": 36.15,
+        "macd": -11.52,
+        "macd_signal": -8.1,
+        "atr14": 11.38,
+        "return20_pct": -13.19,
+        "support20": 300.0,
         "resistance20": 365.0,
-        "volume_vs_median20": 12.94,
+        "volume_vs_median20": 0.32,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -14520,14 +14594,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 202.94,
         "pe": null,
-        "pb": 1.48,
+        "pb": 1.53,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 2.5,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -14542,11 +14616,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 0
+            "points": 7.5
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -14561,16 +14635,16 @@
       "name": "Sothema",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 340.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 5945576.9,
-      "day_shares": 17476,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 33600.2,
+      "day_shares": 98,
       "quality": {
-        "candles_in_extract": 551,
-        "full_history_count_reported": 551,
-        "usable_close_bars": 551,
+        "candles_in_extract": 552,
+        "full_history_count_reported": 552,
+        "usable_close_bars": 552,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -14591,12 +14665,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 361.14,
-        "change_20_sessions_pct": -7.48,
-        "realized_volatility_20d_pct": 48.53
+        "ma20": 359.74,
+        "change_20_sessions_pct": -7.61,
+        "realized_volatility_20d_pct": 48.51
       },
       "close_series_last_60": [
-        380.0,
         379.95,
         379.95,
         379.95,
@@ -14655,6 +14728,7 @@
         360.0,
         360.0,
         355.0,
+        340.0,
         340.0
       ],
       "legacy_comparison": {
@@ -14662,18 +14736,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 551,
-        "sma20": 361.14,
-        "sma50": 363.79,
-        "sma200": 355.44,
+        "sessions": 552,
+        "sma20": 359.74,
+        "sma50": 363.37,
+        "sma200": 355.42,
         "rsi14": 35.72,
-        "macd": -3.0,
-        "macd_signal": -1.34,
-        "atr14": 12.4,
-        "return20_pct": -7.48,
+        "macd": -4.21,
+        "macd_signal": -1.91,
+        "atr14": 13.22,
+        "return20_pct": -7.61,
         "support20": 340.0,
         "resistance20": 379.5,
-        "volume_vs_median20": 31.72,
+        "volume_vs_median20": 0.17,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -14707,7 +14781,7 @@
         "earnings_mmad": 386.0
       },
       "canonical_score": {
-        "value": 29.5,
+        "value": 32.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -14726,7 +14800,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -14743,47 +14817,43 @@
     {
       "symbol": "SRM",
       "name": "Société de Réalisations Mécaniques",
-      "decision": "INDISPONIBLE",
+      "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 461.0,
-      "price_source": "bmce",
-      "day_turnover_mad_actual": null,
-      "day_shares": 12,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 2305.0,
+      "day_shares": 5,
       "quality": {
-        "candles_in_extract": 566,
-        "full_history_count_reported": 566,
-        "usable_close_bars": 566,
+        "candles_in_extract": 567,
+        "full_history_count_reported": 567,
+        "usable_close_bars": 567,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
-        "issues": [
-          "Cours absent, futur ou périmé à la date du rapport",
-          "Liquidité récente insuffisante pour estimer la capacité de sortie"
-        ]
+        "issues": []
       },
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 16,
-        "median_shares": 26.0,
-        "median_turnover_mad_estimated": 11921.5,
-        "median_turnover_ex_top5_mad_estimated": 5568.0,
-        "capacity_shares_per_session_at_10pct": null,
-        "exit_days_at_10pct": null,
+        "median_shares": 24.5,
+        "median_turnover_mad_estimated": 11387.5,
+        "median_turnover_ex_top5_mad_estimated": 5532.0,
+        "capacity_shares_per_session_at_10pct": 2.45,
+        "exit_days_at_10pct": 409,
         "scenario_shares": 1000,
-        "ready": false,
+        "ready": true,
         "post_resume_only": false
       },
       "trend": {
-        "ready": false,
-        "ma20": null,
-        "change_20_sessions_pct": null,
-        "realized_volatility_20d_pct": null
+        "ready": true,
+        "ma20": 464.98,
+        "change_20_sessions_pct": 2.22,
+        "realized_volatility_20d_pct": 15.57
       },
       "close_series_last_60": [
-        469.85,
         476.0,
         476.0,
         476.0,
@@ -14842,6 +14912,7 @@
         463.5,
         462.5,
         461.0,
+        461.0,
         461.0
       ],
       "legacy_comparison": {
@@ -14849,18 +14920,18 @@
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 566,
-        "sma20": 464.48,
-        "sma50": 462.06,
-        "sma200": 478.49,
+        "sessions": 567,
+        "sma20": 464.98,
+        "sma50": 461.99,
+        "sma200": 478.15,
         "rsi14": 45.47,
-        "macd": -0.03,
-        "macd_signal": 0.37,
-        "atr14": 0.5,
-        "return20_pct": 2.44,
-        "support20": 450.0,
+        "macd": -0.19,
+        "macd_signal": 0.26,
+        "atr14": 0.29,
+        "return20_pct": 2.22,
+        "support20": 451.0,
         "resistance20": 470.0,
-        "volume_vs_median20": 0.89,
+        "volume_vs_median20": 0.37,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -14878,11 +14949,32 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": null,
-        "state": "NON_CALCULABLE",
+        "value": 25.0,
+        "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 0,
-        "contributors": {},
+        "coverage_pct": 80,
+        "contributors": {
+          "tendance20": {
+            "weight": 20,
+            "points": 0
+          },
+          "tendance50": {
+            "weight": 15,
+            "points": 0
+          },
+          "momentum": {
+            "weight": 15,
+            "points": 15
+          },
+          "activité": {
+            "weight": 10,
+            "points": 5
+          },
+          "liquidité": {
+            "weight": 20,
+            "points": 0
+          }
+        },
         "nlp_weight": 0
       }
     },
@@ -14891,16 +14983,16 @@
       "name": "Stokvis Nord Afrique",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 64.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 72217.18,
-      "day_shares": 1126,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 63.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 263162.93,
+      "day_shares": 4168,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -14910,23 +15002,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 5046.5,
-        "median_turnover_mad_estimated": 332506.7,
-        "median_turnover_ex_top5_mad_estimated": 285365.86,
-        "capacity_shares_per_session_at_10pct": 504.65,
-        "exit_days_at_10pct": 2,
+        "median_shares": 4735.5,
+        "median_turnover_mad_estimated": 308194.2,
+        "median_turnover_ex_top5_mad_estimated": 283150.68,
+        "capacity_shares_per_session_at_10pct": 473.55,
+        "exit_days_at_10pct": 3,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 66.55,
-        "change_20_sessions_pct": -10.6,
-        "realized_volatility_20d_pct": 20.87
+        "ma20": 66.19,
+        "change_20_sessions_pct": -10.17,
+        "realized_volatility_20d_pct": 20.48
       },
       "close_series_last_60": [
-        73.99,
         73.01,
         73.95,
         73.0,
@@ -14985,25 +15076,26 @@
         64.7,
         64.15,
         64.07,
-        64.0
+        64.0,
+        63.0
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 66.55,
-        "sma50": 68.51,
-        "sma200": 81.92,
-        "rsi14": 34.82,
-        "macd": -1.66,
-        "macd_signal": -1.46,
-        "atr14": 1.3,
-        "return20_pct": -10.6,
+        "sessions": 742,
+        "sma20": 66.19,
+        "sma50": 68.35,
+        "sma200": 81.66,
+        "rsi14": 31.59,
+        "macd": -1.72,
+        "macd_signal": -1.51,
+        "atr14": 1.38,
+        "return20_pct": -10.17,
         "support20": 63.26,
-        "resistance20": 73.89,
-        "volume_vs_median20": 0.22,
+        "resistance20": 72.98,
+        "volume_vs_median20": 0.83,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15032,7 +15124,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 15.62,
+        "value": 21.88,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -15051,7 +15143,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 5
+            "points": 10
           },
           "liquidité": {
             "weight": 20,
@@ -15066,16 +15158,16 @@
       "name": "Stroc Industrie",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 175.35,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 59833.2,
-      "day_shares": 359,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 171.7,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 32928.7,
+      "day_shares": 192,
       "quality": {
-        "candles_in_extract": 68,
-        "full_history_count_reported": 68,
-        "usable_close_bars": 68,
+        "candles_in_extract": 69,
+        "full_history_count_reported": 69,
+        "usable_close_bars": 69,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -15085,23 +15177,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 737.5,
-        "median_turnover_mad_estimated": 128903.0,
-        "median_turnover_ex_top5_mad_estimated": 101816.0,
-        "capacity_shares_per_session_at_10pct": 73.75,
-        "exit_days_at_10pct": 14,
+        "median_shares": 648.5,
+        "median_turnover_mad_estimated": 112532.65,
+        "median_turnover_ex_top5_mad_estimated": 95521.9,
+        "capacity_shares_per_session_at_10pct": 64.85,
+        "exit_days_at_10pct": 16,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 179.45,
-        "change_20_sessions_pct": -13.34,
-        "realized_volatility_20d_pct": 43.63
+        "ma20": 177.79,
+        "change_20_sessions_pct": -16.24,
+        "realized_volatility_20d_pct": 43.24
       },
       "close_series_last_60": [
-        189.95,
         187.9,
         187.0,
         186.75,
@@ -15160,25 +15251,26 @@
         177.0,
         175.0,
         174.9,
-        175.35
+        175.35,
+        171.7
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 68,
-        "sma20": 179.45,
-        "sma50": 181.18,
+        "sessions": 69,
+        "sma20": 177.79,
+        "sma50": 180.75,
         "sma200": null,
-        "rsi14": 44.38,
-        "macd": -2.95,
-        "macd_signal": -2.69,
-        "atr14": 5.5,
-        "return20_pct": -13.34,
-        "support20": 168.0,
+        "rsi14": 40.66,
+        "macd": -3.13,
+        "macd_signal": -2.78,
+        "atr14": 5.36,
+        "return20_pct": -16.24,
+        "support20": 166.5,
         "resistance20": 214.0,
-        "volume_vs_median20": 0.45,
+        "volume_vs_median20": 0.26,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15230,31 +15322,31 @@
       "name": "T2S Group Holding",
       "decision": "LIMITÉ",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 218.15,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 2373430.2,
-      "day_shares": 10880,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 215.2,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1718182.95,
+      "day_shares": 7924,
       "quality": {
-        "candles_in_extract": 38,
-        "full_history_count_reported": 38,
-        "usable_close_bars": 38,
+        "candles_in_extract": 39,
+        "full_history_count_reported": 39,
+        "usable_close_bars": 39,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
         "invalid_open_examples": [],
         "issues": [
-          "Historique limité à 38 séances dans l'extrait"
+          "Historique limité à 39 séances dans l'extrait"
         ]
       },
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 19600.0,
-        "median_turnover_mad_estimated": 4457010.6,
-        "median_turnover_ex_top5_mad_estimated": 3705226.3,
-        "capacity_shares_per_session_at_10pct": 1960.0,
+        "median_shares": 18998.0,
+        "median_turnover_mad_estimated": 4371505.6,
+        "median_turnover_ex_top5_mad_estimated": 3418329.0,
+        "capacity_shares_per_session_at_10pct": 1899.8,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -15262,9 +15354,9 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 227.21,
-        "change_20_sessions_pct": -8.72,
-        "realized_volatility_20d_pct": 19.07
+        "ma20": 226.04,
+        "change_20_sessions_pct": -9.77,
+        "realized_volatility_20d_pct": 19.31
       },
       "close_series_last_60": [
         267.55,
@@ -15304,25 +15396,26 @@
         222.6,
         223.0,
         222.7,
-        218.15
+        218.15,
+        215.2
       ],
       "legacy_comparison": {
         "sig": "ATTENDRE",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 38,
-        "sma20": 227.21,
+        "sessions": 39,
+        "sma20": 226.04,
         "sma50": null,
         "sma200": null,
-        "rsi14": 26.57,
-        "macd": -5.48,
-        "macd_signal": -5.38,
-        "atr14": 4.64,
-        "return20_pct": -8.72,
+        "rsi14": 24.3,
+        "macd": -5.73,
+        "macd_signal": -5.45,
+        "atr14": 4.55,
+        "return20_pct": -9.77,
         "support20": 215.0,
-        "resistance20": 240.0,
-        "volume_vs_median20": 0.53,
+        "resistance20": 239.5,
+        "volume_vs_median20": 0.4,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15370,16 +15463,16 @@
       "name": "TGCC SA",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 665.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 87850746.0,
-      "day_shares": 132097,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 660.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 3209444.4,
+      "day_shares": 4829,
       "quality": {
-        "candles_in_extract": 1184,
-        "full_history_count_reported": 1184,
-        "usable_close_bars": 1184,
+        "candles_in_extract": 1185,
+        "full_history_count_reported": 1185,
+        "usable_close_bars": 1185,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -15400,12 +15493,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 713.23,
-        "change_20_sessions_pct": -14.74,
-        "realized_volatility_20d_pct": 25.08
+        "ma20": 707.23,
+        "change_20_sessions_pct": -15.37,
+        "realized_volatility_20d_pct": 24.91
       },
       "close_series_last_60": [
-        770.0,
         768.0,
         769.0,
         762.0,
@@ -15464,25 +15556,26 @@
         674.0,
         675.0,
         665.0,
-        665.0
+        665.0,
+        660.0
       ],
       "legacy_comparison": {
         "sig": "ACHETER ★★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 1184,
-        "sma20": 713.23,
-        "sma50": 739.42,
-        "sma200": 795.75,
-        "rsi14": 24.65,
-        "macd": -23.84,
-        "macd_signal": -18.91,
-        "atr14": 13.76,
-        "return20_pct": -14.74,
-        "support20": 665.0,
-        "resistance20": 785.0,
-        "volume_vs_median20": 9.76,
+        "sessions": 1185,
+        "sma20": 707.23,
+        "sma50": 737.54,
+        "sma200": 794.4,
+        "rsi14": 23.45,
+        "macd": -24.44,
+        "macd_signal": -20.01,
+        "atr14": 14.47,
+        "return20_pct": -15.37,
+        "support20": 664.0,
+        "resistance20": 782.0,
+        "volume_vs_median20": 0.33,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15504,14 +15597,14 @@
         "eps_mad": null,
         "book_value_per_share_mad": 131.05,
         "pe": null,
-        "pb": 5.07,
+        "pb": 5.04,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 27.5,
+        "value": 31.25,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -15530,7 +15623,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -15545,16 +15638,16 @@
       "name": "TotalEnergies Marketing Maroc",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 1400.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 3493037.0,
-      "day_shares": 2492,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 529453.0,
+      "day_shares": 375,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -15575,12 +15668,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 1475.45,
-        "change_20_sessions_pct": -10.71,
-        "realized_volatility_20d_pct": 47.68
+        "ma20": 1467.95,
+        "change_20_sessions_pct": -9.68,
+        "realized_volatility_20d_pct": 47.66
       },
       "close_series_last_60": [
-        1501.0,
         1500.0,
         1510.0,
         1490.0,
@@ -15639,6 +15731,7 @@
         1403.0,
         1450.0,
         1420.0,
+        1400.0,
         1400.0
       ],
       "legacy_comparison": {
@@ -15646,18 +15739,18 @@
         "sigBvc": "SURVEILLER"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 1475.45,
-        "sma50": 1498.48,
-        "sma200": 1579.85,
+        "sessions": 742,
+        "sma20": 1467.95,
+        "sma50": 1496.64,
+        "sma200": 1577.85,
         "rsi14": 38.81,
-        "macd": -28.54,
-        "macd_signal": -19.4,
-        "atr14": 43.5,
-        "return20_pct": -10.71,
+        "macd": -30.12,
+        "macd_signal": -21.55,
+        "atr14": 44.21,
+        "return20_pct": -9.68,
         "support20": 1400.0,
         "resistance20": 1580.0,
-        "volume_vs_median20": 5.23,
+        "volume_vs_median20": 0.79,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15686,7 +15779,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 11.88,
+        "value": 15.62,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -15705,7 +15798,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -15720,16 +15813,16 @@
       "name": "Taqa Morocco",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
       "price": 1685.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 7236543.0,
-      "day_shares": 4288,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 527544.0,
+      "day_shares": 311,
       "quality": {
-        "candles_in_extract": 741,
-        "full_history_count_reported": 741,
-        "usable_close_bars": 741,
+        "candles_in_extract": 742,
+        "full_history_count_reported": 742,
+        "usable_close_bars": 742,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -15739,23 +15832,22 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 987.5,
-        "median_turnover_mad_estimated": 1779652.5,
-        "median_turnover_ex_top5_mad_estimated": 589180.0,
-        "capacity_shares_per_session_at_10pct": 98.75,
-        "exit_days_at_10pct": 11,
+        "median_shares": 862.5,
+        "median_turnover_mad_estimated": 1526385.0,
+        "median_turnover_ex_top5_mad_estimated": 524035.0,
+        "capacity_shares_per_session_at_10pct": 86.25,
+        "exit_days_at_10pct": 12,
         "scenario_shares": 1000,
         "ready": true,
         "post_resume_only": false
       },
       "trend": {
         "ready": true,
-        "ma20": 1762.45,
-        "change_20_sessions_pct": -6.13,
-        "realized_volatility_20d_pct": 19.3
+        "ma20": 1755.95,
+        "change_20_sessions_pct": -7.16,
+        "realized_volatility_20d_pct": 18.61
       },
       "close_series_last_60": [
-        1765.0,
         1788.0,
         1779.0,
         1750.0,
@@ -15814,6 +15906,7 @@
         1760.0,
         1700.0,
         1700.0,
+        1685.0,
         1685.0
       ],
       "legacy_comparison": {
@@ -15821,18 +15914,18 @@
         "sigBvc": "ACHETER"
       },
       "technical": {
-        "sessions": 741,
-        "sma20": 1762.45,
-        "sma50": 1770.66,
-        "sma200": 1896.24,
+        "sessions": 742,
+        "sma20": 1755.95,
+        "sma50": 1769.36,
+        "sma200": 1893.28,
         "rsi14": 33.72,
-        "macd": -21.94,
-        "macd_signal": -12.21,
-        "atr14": 36.5,
-        "return20_pct": -6.13,
-        "support20": 1700.0,
+        "macd": -24.5,
+        "macd_signal": -14.67,
+        "atr14": 40.07,
+        "return20_pct": -7.16,
+        "support20": 1685.0,
         "resistance20": 1829.0,
-        "volume_vs_median20": 7.34,
+        "volume_vs_median20": 0.31,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -15866,7 +15959,7 @@
         "earnings_mmad": 980.722
       },
       "canonical_score": {
-        "value": 39.5,
+        "value": 42.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 100,
@@ -15885,7 +15978,7 @@
           },
           "activité": {
             "weight": 10,
-            "points": 2
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -16050,16 +16143,16 @@
       "name": "Vicenne",
       "decision": "OBSERVABLE",
       "decision_type": "data_readiness_only",
-      "asof": "2026-09-25",
-      "age_calendar_days": 3,
-      "price": 320.0,
-      "price_source": "cdg",
-      "day_turnover_mad_actual": 4345386.7,
-      "day_shares": 13538,
+      "asof": "2026-09-28",
+      "age_calendar_days": 0,
+      "price": 312.0,
+      "price_source": "CDG Capital Bourse",
+      "day_turnover_mad_actual": 1435282.9,
+      "day_shares": 4549,
       "quality": {
-        "candles_in_extract": 270,
-        "full_history_count_reported": 270,
-        "usable_close_bars": 270,
+        "candles_in_extract": 271,
+        "full_history_count_reported": 271,
+        "usable_close_bars": 271,
         "invalid_open_count": 0,
         "invalid_close_count": 0,
         "rejected_bars": 0,
@@ -16069,10 +16162,10 @@
       "liquidity": {
         "window_sessions": 20,
         "active_sessions": 20,
-        "median_shares": 10739.0,
-        "median_turnover_mad_estimated": 3584743.5,
-        "median_turnover_ex_top5_mad_estimated": 3128450.0,
-        "capacity_shares_per_session_at_10pct": 1073.9,
+        "median_shares": 10009.5,
+        "median_turnover_mad_estimated": 3274696.0,
+        "median_turnover_ex_top5_mad_estimated": 2246380.4,
+        "capacity_shares_per_session_at_10pct": 1000.95,
         "exit_days_at_10pct": 1,
         "scenario_shares": 1000,
         "ready": true,
@@ -16080,12 +16173,11 @@
       },
       "trend": {
         "ready": true,
-        "ma20": 336.25,
-        "change_20_sessions_pct": -7.78,
-        "realized_volatility_20d_pct": 24.47
+        "ma20": 334.7,
+        "change_20_sessions_pct": -9.05,
+        "realized_volatility_20d_pct": 25.48
       },
       "close_series_last_60": [
-        372.0,
         371.0,
         375.0,
         372.9,
@@ -16144,25 +16236,26 @@
         335.0,
         332.6,
         324.9,
-        320.0
+        320.0,
+        312.0
       ],
       "legacy_comparison": {
         "sig": "SURVEILLER ★",
         "sigBvc": "ATTENDRE"
       },
       "technical": {
-        "sessions": 270,
-        "sma20": 336.25,
-        "sma50": 342.92,
-        "sma200": 412.46,
-        "rsi14": 33.67,
-        "macd": -6.36,
-        "macd_signal": -5.27,
-        "atr14": 8.65,
-        "return20_pct": -7.78,
-        "support20": 322.2,
+        "sessions": 271,
+        "sma20": 334.7,
+        "sma50": 342.25,
+        "sma200": 411.4,
+        "rsi14": 29.34,
+        "macd": -7.4,
+        "macd_signal": -5.69,
+        "atr14": 9.02,
+        "return20_pct": -9.05,
+        "support20": 320.0,
         "resistance20": 353.9,
-        "volume_vs_median20": 1.35,
+        "volume_vs_median20": 0.42,
         "limited_by_resumption": false
       },
       "fundamental": {
@@ -16180,7 +16273,7 @@
         "earnings_mmad": null
       },
       "canonical_score": {
-        "value": 34.38,
+        "value": 18.75,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
         "coverage_pct": 80,
@@ -16195,11 +16288,11 @@
           },
           "momentum": {
             "weight": 15,
-            "points": 7.5
+            "points": 0
           },
           "activité": {
             "weight": 10,
-            "points": 10
+            "points": 5
           },
           "liquidité": {
             "weight": 20,
@@ -16550,10 +16643,18 @@
     }
   ],
   "health": {
-    "checked_at": "2026-09-28T15:23:26.667585+00:00",
+    "checked_at": "2026-09-28T22:37:41.421828+00:00",
     "source": "CDG Capital Bourse",
-    "result": "error",
-    "last_session": null,
-    "message": "Collecte refusée : Séance du jour inachevée avant 16h00 Casablanca"
+    "result": "updated",
+    "last_session": "2026-09-28",
+    "message": "63 bougies validées ; 0 conflit(s) conservés",
+    "details": {
+      "session": "2026-09-28",
+      "active_quotes": 63,
+      "new_bars": 63,
+      "source": "https://www.cdgcapitalbourse.ma/api/",
+      "ignored_old_quotes": 0,
+      "conflicts": []
+    }
   }
 }
