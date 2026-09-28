@@ -20,7 +20,8 @@ class VisibleMarketSite(unittest.TestCase):
         cls.output = Path(cls.temporary.name)
         cls.asof = max(date.today().isoformat(), *(r.get("price_asof") or ""
                       for r in cls.fixture["records"].values()))
-        cls.report = build_report(cls.fixture, cls.asof)
+        facts = json.loads((ROOT / "data/facts_reference.json").read_text()).get("records", {})
+        cls.report = build_report(cls.fixture, cls.asof, facts=facts)
         build_site(cls.fixture, cls.report, cls.output)
 
     @classmethod
@@ -53,9 +54,36 @@ class VisibleMarketSite(unittest.TestCase):
         page = (self.output / "titres/ADI.html").read_text()
         static = re.sub(r"<script\b[^>]*>.*?</script>", "", page, flags=re.DOTALL)
         self.assertIn('<polyline points="', static)
+        self.assertIn('data-indicator="sma20"', static)
+        self.assertIn('data-indicator="bands"', static)
+        self.assertIn('data-indicator="rsi"', static)
+        self.assertIn('data-indicator="macd"', static)
+        self.assertIn('data-chart-type="candles"', static)
         self.assertIn("Dernières 40 séances", static)
         self.assertIn(self.fixture["records"]["ADI"]["candles"][-1]["d"], static)
         self.assertIn('href="../historique/ADI.csv"', static)
+
+    def test_interactive_chart_carries_real_ohlcv_and_resumption_boundary(self):
+        page = (self.output / "titres/ADI.html").read_text()
+        payload = re.search(r'<script type="application/json" id="history-data">(.*?)</script>', page)
+        self.assertIsNotNone(payload)
+        bars = json.loads(payload.group(1))
+        latest = self.fixture["records"]["ADI"]["candles"][-1]
+        self.assertEqual(bars[-1], [latest[k] for k in ('d','o','h','l','c','v')])
+        self.assertLessEqual(len(bars), len(self.fixture["records"]["ADI"]["candles"]))
+        cmt = self.fixture["records"]["CMT"]
+        recent = cmt["candles"][-cmt["sessions_since_resume"]]["d"]
+        self.assertIn(f'data-indicator-since="{recent}"',
+                      (self.output / "titres/CMT.html").read_text())
+        self.assertNotIn('data-indicator="rsi"',
+                         (self.output / "titres/DIS.html").read_text())
+
+    def test_fundamental_colors_explain_sign_and_source_age(self):
+        page = (self.output / "titres/ADI.html").read_text()
+        self.assertIn('tone-neutral', page)
+        self.assertIn('source-age', page)
+        self.assertIn('Couleurs : proportion de points obtenus', page)
+        self.assertIn('PER et P/B restent neutres', page)
 
     def test_csv_matches_snapshot_and_published_quality_counts(self):
         """The audit counters and each warning must describe exported rows."""

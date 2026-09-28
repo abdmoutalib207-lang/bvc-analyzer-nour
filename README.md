@@ -4,7 +4,7 @@ Moteur d'analyse indépendant de `-bvc-analyzer` : 80 fiches, graphiques histori
 
 ## Utilisation
 
-- Site : ouvrir `web/index.html`, puis choisir un titre, filtrer l'univers ou ouvrir **Briefing** / **Actualités**. Les graphiques SVG et les liens restent lisibles sans JavaScript ; les périodes, la recherche et le tri ajoutent de l'interactivité.
+- Site : ouvrir `web/index.html`, puis choisir un titre, filtrer l'univers ou ouvrir **Briefing** / **Actualités**. Le graphique garde une courbe SVG lisible sans JavaScript ; avec JavaScript, le pointeur et les flèches du clavier lisent les données OHLCV d'une séance, les boutons changent la période, parcourent l'historique, passent de la courbe aux bougies et affichent MM20, MM50, Bollinger, RSI, MACD ou volumes. Les indicateurs visuels ne contribuent pas au score.
 - Recalcul local : `python run.py --asof 2026-09-27`.
 - Serveur local : `python run.py --serve` puis http://127.0.0.1:8765/.
 - Import de séance : `python tools/update_market.py`. Une réponse CDG invalide ne remplace pas l'instantané précédent et écrit `data/health.json`.

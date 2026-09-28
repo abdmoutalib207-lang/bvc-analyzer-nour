@@ -2,6 +2,7 @@
 import csv
 import html
 import json
+import math
 import re
 from pathlib import Path
 
@@ -72,16 +73,36 @@ def header(back, snapshot):
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
-def graph(bars, label="1A"):
+def graph(bars, label="1A", indicator_since=None):
     data = chart_data(bars)
     default = data[-252:]
     if not data:
         return '<div id="plot" class="chart">' + svg_chart(default) + '</div>'
     controls = ''.join(f'<button type="button" data-period="{p}" aria-pressed="{str(p=="252").lower()}">{txt}</button>' for p, txt in [('21', '1M'), ('63', '3M'), ('252', label), ('all', 'Tout')])
-    json_data = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
-    return (f'<div class="periods" role="group" aria-label="Période du graphique">{controls}</div><div class="chart" id="plot">{svg_chart(default)}</div>'
-            f'<div id="chart-info" class="chart-info">{esc(default[0][0])} → {esc(default[-1][0])} · {len(default)} séances · {number(min(float(x[1]) for x in default))} à {number(max(float(x[1]) for x in default))} MAD</div>'
-            f'<script type="application/json" id="history-data">{json_data}</script>')
+    # Only trustworthy complete OHLCV bars are exposed to interactive candles
+    # and indicators. The pre-rendered close/volume SVG remains the fallback.
+    valid = [b for b in bars if quality(b) == "" and all(
+        isinstance(b.get(k), (int, float)) and math.isfinite(b[k])
+        for k in ('o', 'h', 'l', 'c', 'v')) and b['l'] > 0 and b['v'] >= 0]
+    json_data = json.dumps([[b[k] for k in ('d', 'o', 'h', 'l', 'c', 'v')] for b in valid],
+                           ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+    indicators = ''.join(f'<button type="button" data-indicator="{key}" aria-pressed="{str(key=="volume").lower()}">{text}</button>'
+                         for key, text in [('sma20','MM20'),('sma50','MM50'),('bands','Bollinger'),
+                                           ('rsi','RSI 14'),('macd','MACD'),('volume','Volumes')])
+    mode = ''.join(f'<button type="button" data-chart-type="{key}" aria-pressed="{str(key=="line").lower()}">{text}</button>'
+                   for key, text in [('line','Courbe'),('candles','Bougies')])
+    notice = (f'{len(bars)-len(valid)} séance(s) OHLCV incohérente(s) écartée(s) du graphique interactif. '
+              if len(valid) != len(bars) else '')
+    return (f'<div class="chart-root" data-chart-root data-indicator-since="{esc(indicator_since or "")}" data-invalid-count="{len(bars)-len(valid)}">'
+            f'<div class="chart-toolbar"><div class="periods" role="group" aria-label="Période du graphique">{controls}</div>'
+            f'<div class="chart-mode" role="group" aria-label="Type de graphique">{mode}</div></div>'
+            f'<div class="chart-toolbar"><div class="indicators" role="group" aria-label="Afficher les indicateurs techniques">{indicators}</div>'
+            '<div class="chart-navigation" role="group" aria-label="Parcourir le graphique"><button type="button" data-chart-nav="older" aria-label="Séances précédentes">←</button><button type="button" data-chart-nav="newer" aria-label="Séances suivantes">→</button><button type="button" data-chart-nav="zoom-in" aria-label="Zoom avant">＋</button><button type="button" data-chart-nav="zoom-out" aria-label="Zoom arrière">−</button></div></div>'
+            f'<div class="chart" id="plot">{svg_chart(default)}</div>'
+            f'<div class="chart-readout" data-chart-readout role="status" aria-live="off">Survolez ou touchez le graphique pour lire la séance ; les flèches du clavier déplacent le curseur.</div>'
+            f'<div id="chart-info" class="chart-info">{esc(notice)}{esc(default[0][0])} → {esc(default[-1][0])} · {len(default)} séances</div>'
+            '<p class="fineprint">Indicateurs calculés depuis les séances OHLCV valides ; ils ne modifient ni le score ni les données publiées. Les séries reprennent à zéro après une suspension signalée.</p>'
+            f'<script type="application/json" id="history-data">{json_data}</script></div>')
 
 
 def info_card(title, value, suffix=""):
@@ -128,11 +149,25 @@ def detail_page(item, record, fixture, style, script):
                            info_card('Support 20 séances',number(technical.get('support20')),'MAD'),
                            info_card('Résistance 20 séances',number(technical.get('resistance20')),'MAD'),
                            info_card('Volume / médiane 20 séances',number(technical.get('volume_vs_median20')),'×')))
-    fundamental_cards=''.join((info_card('Bénéfice par action',number(calculated.get('eps_mad')),'MAD'),
-                               info_card('PER recalculé',number(calculated.get('pe'))),
-                               info_card('P/B recalculé',number(calculated.get('pb'))),
-                               info_card('ROE',number(calculated.get('roe_pct'))+' %' if calculated.get('roe_pct') is not None else '—'),
-                               info_card('Croissance du CA',number(calculated.get('revenue_growth_pct'))+' %' if calculated.get('revenue_growth_pct') is not None else '—')))
+    def fundamental_card(title, value, unit='', directional=False):
+        tone = ('missing' if value is None else 'positive' if directional and value > 0
+                else 'negative' if directional and value < 0 else 'neutral')
+        display = number(value) if value is not None else '—'
+        return (f'<article class="kpi fundamental-card tone-{tone}"><span>{esc(title)}</span>'
+                f'<strong>{display}</strong>{f" <small>{esc(unit)}</small>" if unit else ""}'
+                f'<em>{"Non documenté" if value is None else "Valeur négative" if tone=="negative" else "Valeur positive" if tone=="positive" else "Ratio descriptif"}</em></article>')
+    fundamental_cards=''.join((fundamental_card('Bénéfice par action',calculated.get('eps_mad'),'MAD'),
+                               fundamental_card('PER recalculé',calculated.get('pe')),
+                               fundamental_card('P/B recalculé',calculated.get('pb')),
+                               fundamental_card('ROE',calculated.get('roe_pct'),'%',True),
+                               fundamental_card('Croissance du CA',calculated.get('revenue_growth_pct'),'%',True)))
+    contributors = score.get('contributors') or {}
+    score_factors = ''.join(
+        f'<div class="score-factor"><div class="score-factor-heading"><span>{esc(key)}</span><strong>{number(value["points"],0)} / {number(value["weight"],0)}</strong></div>'
+        f'<div class="factor-track"><span class="factor-fill {"factor-high" if value["points"] / value["weight"] >= .7 else "factor-mid" if value["points"] / value["weight"] >= .35 else "factor-low"}" style="width:{max(0,min(100,100*value["points"]/value["weight"])):.0f}%"></span></div></div>'
+        for key,value in contributors.items() if value.get('weight',0)>0)
+    fundamental_status=('Exercice historique · à actualiser' if calculated.get('exercise') else 'Aucun exercice documenté')
+    fundamental_age = f'{fundamental_status} · {calculated["exercise"]}' if calculated.get('exercise') else fundamental_status
     evidence=calculated.get('evidence') or {}
     doc=calculated.get('document_url')
     evidence_html=(f'<a href="{esc(doc)}" rel="noopener noreferrer" target="_blank">Rapport référencé · exercice {esc(calculated.get("exercise"))}</a> · '
@@ -143,11 +178,11 @@ def detail_page(item, record, fixture, style, script):
             + f'<div class="eyebrow" style="margin-top:20px">{esc(record.get("sector") or "Action cotée")} · {esc(symbol)}</div><h1>{esc(record["name"])}</h1>'
             + f'<p>Dernier cours disponible : <strong>{number(item["price"])} MAD</strong> au {esc(item["asof"])}. Source prix : {esc(item["price_source"])}. <span class="status {esc(item["decision"])}">{esc(item["decision"])}</span></p>'
             + f'<div class="stamp">Historique {esc(first)} → {esc(last)} · {len(bars)} séances · mis à jour après collecte validée</div></div>'
-            + f'<section class="panel"><span class="eyebrow">Historique graphique</span><h2>{esc(symbol)} · clôtures et volumes</h2><p class="panel-sub">Courbe de clôture et volumes de titres. La plage « Tout » couvre exactement les séances disponibles ci-dessous.</p>{graph(bars)}</section>'
+            + f'<section class="panel"><span class="eyebrow">Historique graphique</span><h2>{esc(symbol)} · prix et volumes</h2><p class="panel-sub">Pointez une séance pour ses données OHLCV ; activez les indicateurs ci-dessous. La plage « Tout » couvre les séances valides disponibles.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
             + f'<section class="panel"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
-            + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><p class="fineprint">'+esc(' · '.join(f'{k} {v["points"]}/{v["weight"]}' for k,v in score.get('contributors',{}).items()) or 'Aucun facteur admissible')+'</p></section>'
-            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p><p class="fineprint">Les chiffres source sont extraits de rapports référencés de l’ancien projet. Les ratios sont recalculés par Nour, sous réserve de recoupement des pages indiquées. Le cours est celui daté en haut de cette fiche.</p></section>'
+            + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
+            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p><p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Données vérifiables</span><h2>Dernières {min(40,len(bars))} séances</h2></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>Télécharger tout l’historique CSV</a></div>{recent_table(bars)}<p class="fineprint">Le CSV reprend {len(bars)} séances. Une ouverture hors de la fourchette haut/bas est signalée ; les volumes sont exprimés en nombre de titres. Cette série n’est pas une preuve de données intrajournalières ni de carnet.</p></section>'
             + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
@@ -229,7 +264,7 @@ def build_site(fixture, report, output, briefing=None):
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
     style = (assets / "nour.css").read_text(encoding="utf-8")
-    script = (assets / "nour.js").read_text(encoding="utf-8")
+    script = (assets / "nour.js").read_text(encoding="utf-8") + "\n" + (assets / "chart.js").read_text(encoding="utf-8")
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     if briefing is not None:

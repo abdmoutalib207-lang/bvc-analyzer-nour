@@ -1,6 +1,17 @@
 name: Nour market, news and public site
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'nour/**'
+      - 'tools/**'
+      - 'tests/**'
+      - 'run.py'
+      - 'web/nour.js'
+      - 'web/chart.js'
+      - 'web/nour.css'
+      - '.github/workflows/nour_daily.yml'
   schedule:
     - cron: '11 7 * * 1-5'
     - cron: '41 17 * * 1-5'
@@ -34,7 +45,10 @@ jobs:
       - name: Build dashboard and briefing
         run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)"
       - name: Verify the generated output
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m unittest discover -s tests -v
+          node --check web/nour.js
+          node --check web/chart.js
       - name: Save validated snapshots and pages
         run: |
           git config user.name 'bvc-nour-bot'
