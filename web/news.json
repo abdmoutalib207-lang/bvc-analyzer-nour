@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-29T14:02:18.124144+00:00",
+  "updated_at": "2026-09-29T21:31:30.294663+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -9,6 +9,50 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Holcim_Maroc_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-29T20:20:53+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "003317db892d42efaf",
+      "title": "CMGP Group - CP relatif aux résultats du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_CMGP_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T16:25:28+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "c41da114fc47a72934",
+      "title": "ADM - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/ADM_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T16:24:34+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "52711eaaa4c58880d8",
+      "title": "Salafin - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Salafin_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T16:01:07+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "d4b69735e584207096",
+      "title": "CDG Capital - CP relatif aux résultats du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_CDG_Capital_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T14:10:34+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
@@ -3470,56 +3514,6 @@
       "publisher": "AMMC",
       "published_at": "2026-09-15T18:54:29+00:00",
       "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "3221ff42b160636c1c",
-      "title": "Crédit Agricole du Maroc - Avis de 2ème convocation à l'AG des obligataires du 29 septembre 2026 (EO décembre 2025)",
-      "url": "https://www.ammc.ma/sites/default/files/Avis_CAM_2e_convocation_AG_obligataires_29_09_26_EO_decembre_25.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-15T18:50:48+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "958c336ba0c3b1a929",
-      "title": "Immorente Invest - CP relatif au paiement du 3e rendement trimestriel de l'année 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Immorente_paiement_3e_rendement_trimestriel_2026.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-15T07:42:10+00:00",
-      "tickers": [
-        "IMI"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "59d0636a5a0e693fa1",
-      "title": "Taqa Morocco - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-14T09:50:45+00:00",
-      "tickers": [
-        "TQA"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "71d384f3a9ea6281b6",
-      "title": "Eqdom – CP suite à la mise à jour annuelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Eqdom_MAJ_BSF_0.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-11T16:05:33+00:00",
-      "tickers": [
-        "EQD"
-      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false
