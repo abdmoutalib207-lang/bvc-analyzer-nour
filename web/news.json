@@ -1,8 +1,118 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T22:37:43.508972+00:00",
+  "updated_at": "2026-09-29T14:02:18.124144+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "f874b3e973a51c8bef",
+      "title": "Holcim Maroc - CP relatif aux résultats du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Holcim_Maroc_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T20:20:53+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "c6921d4c88597136da",
+      "title": "Maghreb Oxygène - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/MOX_S1_2026.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T12:05:19+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "653d81f170459b81cb",
+      "title": "Afriquia Gaz - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/AFG_S1_2026.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T12:03:15+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "5ed2e15e0b8c5f01c6",
+      "title": "OCP - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/OCP_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T11:15:56+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "f6ac577ce7681af545",
+      "title": "Sothema - CP relatif aux résultats du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Sothema_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T10:51:09+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "1a49db490bc889d5b4",
+      "title": "Crédit Agricole du Maroc -  Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CAM_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T10:47:09+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "fd8841883b1cac6d7f",
+      "title": "Saham Bank - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Saham_Bank_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T10:46:08+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "1093f3946f12e2c232",
+      "title": "Marsa Maroc - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Marsa_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T10:45:17+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "43d78c6affcb3a7a65",
+      "title": "TMPA - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/TMPA_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-29T10:44:13+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "58a1b6bc548d330243",
+      "title": "Wafasalaf - CP suite à la mise à jour annuelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Wafasalaf_MAJ_BSF_1.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-28T22:17:46+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "629b2cb4d0118fd6fc",
       "title": "Sofac - CP suite à la mise à jour annuelle et occasionnelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
@@ -3409,132 +3519,6 @@
       "published_at": "2026-09-11T16:05:33+00:00",
       "tickers": [
         "EQD"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "a7a4ed9dd8a14449ca",
-      "title": "RCI Finance Maroc – CP suite à la mise à jour annuelle et occasionnelle du dossier d’information relatif au programme d'émission de Bons de Sociétés de Financement",
-      "url": "https://www.ammc.ma/sites/default/files/CP_RCI_Finance_Maroc_MAJ_BSF_4.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-10T16:17:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "faf304c9204490bfef",
-      "title": "Auto Nejma - Avis de convocation à l'AG des obligataires du 28 septembre 2026 (EO juin 2025)",
-      "url": "https://www.ammc.ma/sites/default/files/Avis_Auto_Nejma_AG_obligataires_28_09_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-10T10:18:36+00:00",
-      "tickers": [
-        "NEJ"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "a689928f666f53a604",
-      "title": "BCP - Avis de convocation à l'AG des obligataires du 28 septembre 2026 (EO décembre 2025)",
-      "url": "https://www.ammc.ma/sites/default/files/Avis_BCP_AG_obligataires_28_09_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-10T10:16:49+00:00",
-      "tickers": [
-        "BCP"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "8238a3494b72e0adbc",
-      "title": "Mutandis - RFS juin 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFS_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-07T14:23:42+00:00",
-      "tickers": [
-        "MUT"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "72d731965920cabd4d",
-      "title": "Mutandis - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Mutandis_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-07T09:24:12+00:00",
-      "tickers": [
-        "MUT"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "9c7005cc0e860d3c29",
-      "title": "Mutandis - CP relatif à la signature d'une lettre d'intention prévoyant l'acquisition d'une participation majoritaire dans le capital d'Enosis et de ses filiales",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Mutandis_lettre_intention_acquisition_Enosis.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-07T09:12:17+00:00",
-      "tickers": [
-        "MUT"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "e61d65fc70beefed7e",
-      "title": "Auto Hall - CP relatif aux résultats de l'augmentation de capital",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Auto_Hall_rsultats_augmentation_capital.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-04T09:47:25+00:00",
-      "tickers": [
-        "HAL"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "3c0fe80c34086c0984",
-      "title": "CDG Capital - CP relatif aux indicateurs du 2ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_CDG_Capital_T2_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-02T09:38:47+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "8657be940f0e66a7f2",
-      "title": "CTM - CP relatif aux indicateurs du 2ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_CTM_T2_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-01T10:28:42+00:00",
-      "tickers": [
-        "CTM"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "de6008ad189a5c269c",
-      "title": "CMT - CP relatif aux indicateurs du 2ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_CMT_T2_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-08-31T21:24:25+00:00",
-      "tickers": [
-        "CMT"
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
