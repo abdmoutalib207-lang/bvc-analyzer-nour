@@ -1,8 +1,118 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-29T21:31:30.294663+00:00",
+  "updated_at": "2026-09-30T13:39:05.688216+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "7bf91c257cd135f324",
+      "title": "Sanlam Maroc - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T13:15:47+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "1c288abed3a50ea285",
+      "title": "Microdata - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Microdata_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T13:09:42+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "6cc2f5aee380c0cc12",
+      "title": "Risma - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Risma_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:57:19+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "2a639e305cb2cd960e",
+      "title": "Aluminium du Maroc - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/ALM_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:53:58+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "9bbb0afe205fc525f5",
+      "title": "Wafasalaf - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Wafasalaf_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:53:01+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "168061f9a50a1e4491",
+      "title": "Cosumar - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Cosumar_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:50:33+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "cd2b2be2730a0b66b6",
+      "title": "Auto Hall - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:49:24+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "c45e3f8b15bad01fca",
+      "title": "Holcim Maroc -  Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Holcim_Maroc_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:40:20+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "56b8db84f115167bbe",
+      "title": "Sofac - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Sofac_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:36:51+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "9336386869126846cf",
+      "title": "Akdital - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Akdital_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:32:06+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "f874b3e973a51c8bef",
       "title": "Holcim Maroc - CP relatif aux résultats du 1er semestre 2026",
@@ -3388,134 +3498,6 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "1f3ed08a8fc5a63bd8",
-      "title": "Thomas Vigneron nommé Directeur général de TotalEnergies Marketing Maroc",
-      "url": "https://www.challenge.ma/thomas-vigneron-nomme-directeur-general-de-totalenergies-marketing-maroc-324509/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-20T11:05:32+00:00",
-      "tickers": [
-        "TMA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "35d6dc25d24ca9d690",
-      "title": "SGTM - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_SGTM_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-18T18:10:57+00:00",
-      "tickers": [
-        "SGTM"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "8894be7adfe66118b9",
-      "title": "Delta Holding - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/DHO_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-18T15:59:03+00:00",
-      "tickers": [
-        "DHO"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "6cc3245ddb0eb9734e",
-      "title": "Sonasid - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Sonasid_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-18T15:56:48+00:00",
-      "tickers": [
-        "SNA"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "8c5a1a7c587c9be4ba",
-      "title": "Wafa Assurance - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Wafa_Assurance_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-18T13:51:06+00:00",
-      "tickers": [
-        "WAF"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "8b7d6cf2d3efe692b5",
-      "title": "CIH Bank - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_CIH_Bank_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-17T18:35:51+00:00",
-      "tickers": [
-        "CIH"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "5f1f97f1bd0f4cc927",
-      "title": "Risma - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Risma_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-16T20:54:10+00:00",
-      "tickers": [
-        "RIS"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "1a616ce17398384498",
-      "title": "CFG Bank - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CFG_Bank_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-16T18:52:07+00:00",
-      "tickers": [
-        "CFGB"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "58d933a8957a7bb55e",
-      "title": "Oulmes - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Oulmes_S1_26_0.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-16T13:54:55+00:00",
-      "tickers": [
-        "OUL"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "387fd0b928a6654fba",
-      "title": "Crédit Agricole du Maroc - Avis de 2ème convocation à l'AG des obligataires du 29 septembre 2026 (EO juin 2025)",
-      "url": "https://www.ammc.ma/sites/default/files/Avis_CAM_2e_convocation_AG_obligataires_29_09_26_EO_juin_25.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-15T18:54:29+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
       "usable_for_score": false
     }
   ]
