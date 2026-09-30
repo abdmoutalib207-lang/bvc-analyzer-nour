@@ -1,8 +1,118 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T13:39:05.688216+00:00",
+  "updated_at": "2026-09-30T21:31:47.779944+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "803d52455121a9d3eb",
+      "title": "Auto Nejma - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:17:29+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "7423cc17c1c09c902c",
+      "title": "M2M Group - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:12:08+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "926390f3930525ac1f",
+      "title": "Stokvis Nord Afrique - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:58:49+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "ff908d72d2f0d1073c",
+      "title": "BCP - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/BCP_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:49:16+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "def39c4cdef6e6abae",
+      "title": "Dari Couspate - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Dari_Couspate_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:43:16+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "bdd1450d2d7b114aea",
+      "title": "Holding Al Omrane - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Al_Omrane_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:39:29+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "6e326b9ba63246dc36",
+      "title": "Oulmes - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Oulmes_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:38:35+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "8f84b3de3e79b792ad",
+      "title": "Agma - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Agma_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:37:43+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "19452f07025869ed38",
+      "title": "Wafa Assurance - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:31:07+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "1d9f8b15f8c24eb2f1",
+      "title": "Jet Contractors - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T17:30:08+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "7bf91c257cd135f324",
       "title": "Sanlam Maroc - Résultats financiers du 1er semestre 2026",
@@ -3376,126 +3486,6 @@
       "publisher": "Aujourd'hui le Maroc",
       "published_at": "2026-09-21T10:16:30+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "2b143dd708ea0241df",
-      "title": "Hausse du salaire minimum, soutien direct, insertion économique… Le RNI table sur la poursuite de l’amélioration du pouvoir d’achat",
-      "url": "https://aujourdhui.ma/actualite/hausse-du-salaire-minimum-soutien-direct-insertion-economique-le-rni-table-sur-la-poursuite-de-lamelioration-du-pouvoir-dachat",
-      "publisher": "Aujourd'hui le Maroc",
-      "published_at": "2026-09-21T10:05:49+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "405e68a409023c5268",
-      "title": "Économie marocaine : entre solidité financière et pressions commerciales",
-      "url": "https://ecoactu.ma/economie-maroc-solidite-financiere-pression-commerciale/",
-      "publisher": "EcoActu",
-      "published_at": "2026-09-21T09:30:10+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "6456cc7e2b1b294398",
-      "title": "AKDITAL à La Mecque : le géant de la santé finalise son premier ancrage saoudien",
-      "url": "https://ecoactu.ma/akdital-a-la-mecque-le-geant-de-la-sante-finalise-son-premier-ancrage-saoudien/",
-      "publisher": "EcoActu",
-      "published_at": "2026-09-21T09:00:59+00:00",
-      "tickers": [
-        "AKD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "0c8c71b3631d1e5a39",
-      "title": "Réforme : Le quinquennat de la mise en œuvre",
-      "url": "https://www.lavieeco.com/argent/reforme-le-quinquennat-de-la-mise-en-oeuvre/",
-      "publisher": "La Vie Éco",
-      "published_at": "2026-09-21T08:15:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "d852a5acb786729285",
-      "title": "Akdital finalise l’acquisition de l’hôpital Al Bishri à La Mecque",
-      "url": "https://www.lavieeco.com/affaires/akdital-finalise-lacquisition-de-lhopital-al-bishri-a-la-mecque/",
-      "publisher": "La Vie Éco",
-      "published_at": "2026-09-21T08:13:33+00:00",
-      "tickers": [
-        "AKD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "d9177b52682917b993",
-      "title": "AKDITAL finalise l’acquisition de l’Hôpital Al Bishri à La Mecque",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdjQtRG5zZlBrLTNkTkFPZmhmMUl0NVBvYU5CWnZmc3JJODA0eWNGWURfeGU2ZHNvbmR3eVBzS0FybncycUgwLW1rdTdOVlQ1WDdWQWs5c1liaWFqbTJOT3hnbjdySVY2Sk55Z2RReEJWbVdlb0gtRDR5b1VYQ3FxemJQV1NwZFdmcmZiYkFR?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-21T07:01:39+00:00",
-      "tickers": [
-        "AKD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "273d3d61da77656af7",
-      "title": "Malgré la hausse continue des taux d'intérêt par la Fed, les cours mondiaux de l'or restent stables autour de 4 300 dollars l'once.",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORUlrTFNjZXpZWjBNSEEzcmxRVmlwaU1rbGctTGswa2tRQjhPeG0ybWZ2UVFWcjZLNFJMUTRUSzhQc1NkSk1UXzA1TEQ1amY0WUNXMkZ1dm1pSkExemZqUGFhb21RREpURUUyQzV2VzZYc09KSDIxSGVpLW5jYzNXXzJQcEtyZEI1NXVPQlRkM0w4c1ByTnVneXl6UXlyNWFpc002NmxLZ0F0UjAwWTJ3SUFvSQ?oc=5",
-      "publisher": "Kitco Métaux",
-      "published_at": "2026-09-21T02:06:25+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "21ec213825e0609c53",
-      "title": "Attacks on mining operations on the rise in Pakistan: report",
-      "url": "https://www.mining.com/attacks-on-mining-operations-on-the-rise-in-pakistan-report/",
-      "publisher": "Mining.com",
-      "published_at": "2026-09-20T19:39:06.682105+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "983036496dada68807",
-      "title": "Mutandis a mandaté Akin Gump à Washington face à des surtaxes frappant ses conserves",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVlV4ZEtaUjJIYkVFVnoyN3BjaVMwTVhCRERFOFBWSDBJeTFYZGk2V3JwZWZhYkR1UTFPTS1zNmdlVHBFMnlYcmd3R18tSFpsTkhCZjAzNWVuWXhLT3VOekpkZFZ1VnhWakIwb3RuNHhydjNoOHh6cHV0ZGY2TnlhODVHQl8wYjBwYXR6YXlZYnF4ZjhmblhpTlJFQUtYdjhDeHdoMnUwdHBabDlld0Z6RWNERQ?oc=5",
-      "publisher": "Le Desk",
-      "published_at": "2026-09-20T14:11:00+00:00",
-      "tickers": [
-        "MUT"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "1c9849dcec95842ed8",
-      "title": "Mutandis a mandaté Akin Gump à Washington face à des surtaxes frappant ses conserves",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaENOZWlVMlBOUlJZMDFJMzNNT1lmQktIN2I4RU95RXpXVVc2cGVuYzNTb1V3Z19ELVMwTkZhSHZUSUZmeFJJem1veXd5ejR5akI3MXctTmlnMmctRHJWaTFBbngwQTJGbERjdG9JWWdEU2dabkg1VHRnNDNPUXZxeVE3aFkxTDZRZnRneVV1Ni1TOHZLWG9hMVRuWFd0bU1fMVU1bmx6bmFpcDlUNWRIbFdZY3Y?oc=5",
-      "publisher": "Le Desk",
-      "published_at": "2026-09-20T14:11:00+00:00",
-      "tickers": [
-        "MUT"
-      ],
       "tier": "S2",
       "status": "alerte non vérifiée",
       "usable_for_score": false
