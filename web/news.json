@@ -1,14 +1,36 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-01T14:26:11.367578+00:00",
+  "updated_at": "2026-10-01T21:58:54.790652+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
+      "id": "3fab485ff380ecf3da",
+      "title": "Jaida - CP relatif à l'évolution de l'actionnariat",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Jaida_evolution_actionnariat.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-10-01T15:16:24+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
       "id": "4d64f70cf937bf5779",
-      "title": "Attijariwafa Bank - CP suite à la signature d'un accord relatif à l'acquisition d'une participation de 60,22%du capital de Société Générale Ghana",
+      "title": "Attijariwafa Bank - CP suite à la signature d'un accord relatif à l'acquisition d'une participation de 60,22% du capital de Société Générale Ghana",
       "url": "https://www.ammc.ma/sites/default/files/CP_Attijariwafa_Bank_accord_acquisition_participation_SG_Ghana.pdf",
       "publisher": "AMMC",
       "published_at": "2026-10-01T11:27:05+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "f1ee6c44fb65512be7",
+      "title": "T2S Group - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/T2S_Group_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T22:40:47+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
@@ -20,6 +42,28 @@
       "url": "https://www.ammc.ma/sites/default/files/CTM_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T21:37:46+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "55c32307797bd9c5e3",
+      "title": "CDG Capital - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CDG_Capital_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:38:07+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "37269794473f5b94f2",
+      "title": "Alliances Darna -Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Al_Darna_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:33:59+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
@@ -42,6 +86,28 @@
       "url": "https://www.ammc.ma/sites/default/files/Addoha_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:31:51+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "7a6444cc722102d80a",
+      "title": "Lesieur Cristal - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:28:38+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "fc5f3cb785507bcbb3",
+      "title": "CMGP - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CMGP_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:25:02+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
@@ -3395,84 +3461,6 @@
       "published_at": "2026-09-21T16:03:00+00:00",
       "tickers": [
         "TMA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "5005d434aae8014fc5",
-      "title": "Afric Industries - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Afric_Industries_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-21T15:37:01+00:00",
-      "tickers": [
-        "AFI"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "d256a435ad9ae43688",
-      "title": "Vicenne : Rapport financier semestriel 2026",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOc1FKbDF2bDZmZUN1M04zYUYwdG9FLWhjd2tIQUJ4MHB5b3V0N3ZlVldMSzVVQWFBUVhWcDdaUFB4Mlk2bDY0V0lYcV9iMndZNzluNkhENTBFamM5TGtVdWlfSW1pMFBCMUl1Yk95OUJxVmRxQTBHZGlGb1QyNzQ1dWlTeG8waUxqWEtnZWpETFh4QQ?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-21T15:21:00+00:00",
-      "tickers": [
-        "VCNE"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "d301b67fa63ceb099d",
-      "title": "AFRIC INDUSTRIES : Résultats Semestriels 2026",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTWk1TUp6RVdud2FHaDZFRUdVcUs5dkhXcE9vU2lrSHZ0MUU1ZkdSR1R3OFJCak9nc2QwRGxueVpWYm12UEZVaVhtdGwyTl9wRzUzWEdPS2VGOG4tcmpuSGNqd0hsMDVNLUVzaGNJOE5EWEpXOEt2MGZJbGRMVjQ2MHJFRDZkclVyUk5JaWNOd2U4dlZYc0NZ?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-21T14:53:59+00:00",
-      "tickers": [
-        "AFI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "d66faaa9f933c82b61",
-      "title": "Afric Industries améliore son bénéfice de 25% au premier semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNVy1RTDdhNm5jS2t5M05PU084bTd0TmlnaHRlTHRBcHRTNTduOHNCbGEtWG1fMW9NQUh2LWRlMFhial9Ha2RMbkR6dG9ibDVpWDNjampDUlhsWHE0aTVjaE1ZcXVfdzA2V1dZQW5odGNRZDd3OUc0QXNCZkxZbXItY1hwQzhKXy13aVdvTGRJN1c3SDBza255SHM3WDh2Uk9FbldVdDZPVjk5bDR2WUdGaVd0YXM2OTBlV3RvYTRjQV9hOTdXMGlJWXFoVFFzZkFm?oc=5",
-      "publisher": "Alpha Bourse",
-      "published_at": "2026-09-21T13:07:00+00:00",
-      "tickers": [
-        "AFI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "ae45b241c1b51660db",
-      "title": "Santé en bourse : Promopharm surprend, T2S s’enfonce",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYlVuc2w3QXU1bnNlYWRMY1Fya2FyUE5YN2twNTQxNTJJeXRZU1RkRW94OF9CN0pNWTdTcjJMRjFJeWhkMUt5SXgxQk5zQi00anQ3Z3BRQmlGUFphZW10VFMzaGdNbHpwUXRHT3ljZlpZMWo0NTNLUUZVUGpmQWM5ZlBQWUpRSTk4TGpwcmJFeWRIcmdSWmQ1eA?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-21T12:42:05+00:00",
-      "tickers": [
-        "PPM"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "9cbbb43b04f522a990",
-      "title": "Akdital finalise l’acquisition de l’Hôpital Al Bishri à La Mecque",
-      "url": "https://leseco.ma/business/akdital-finalise-lacquisition-de-lhopital-al-bishri-a-la-mecque.html",
-      "publisher": "Les Inspirations Éco",
-      "published_at": "2026-09-21T12:35:36+00:00",
-      "tickers": [
-        "AKD"
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
