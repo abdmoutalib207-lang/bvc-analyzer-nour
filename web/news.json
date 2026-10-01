@@ -1,14 +1,102 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T21:31:47.779944+00:00",
+  "updated_at": "2026-10-01T14:26:11.367578+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "4d64f70cf937bf5779",
+      "title": "Attijariwafa Bank - CP suite à la signature d'un accord relatif à l'acquisition d'une participation de 60,22%du capital de Société Générale Ghana",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Attijariwafa_Bank_accord_acquisition_participation_SG_Ghana.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-10-01T11:27:05+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "291e51811bf8270c88",
+      "title": "CTM - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CTM_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T21:37:46+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "81228905bdd60475bf",
+      "title": "Sonasid - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Sonasid_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:32:52+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "38006032d6e5e74266",
+      "title": "Addoha - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Addoha_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T19:31:51+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "4a93aadba2e2fa2b7c",
+      "title": "TGCC - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/TGCC_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:38:06+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "78109817f1b2239a5b",
+      "title": "ADI - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:29:05+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "d4d867da4badecdd6c",
+      "title": "Promopharm - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Promopharm_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:20:19+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "803d52455121a9d3eb",
       "title": "Auto Nejma - Résultats financiers du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:17:29+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
+      "id": "ca46607b6259d0e74b",
+      "title": "Sothema - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Sothema_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T18:15:58+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
@@ -3386,106 +3474,6 @@
       "tickers": [
         "AKD"
       ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "367cb83f6fc4131f29",
-      "title": "Le groupe marocain Akdital finalise l’acquisition d’un hôpital à La Mecque",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPei1nVExBOGJNZ3c5MXpsT3ZLZG03VzJXbGVRZWRPUTBvQVJRSHIwdHZYLW42YVhaaFRDM1FudzJZS2xPNlVwTENieGlRbmwtSTV0X1d6S0QxQ21Uenpza09sUG5NNl9ZSFQ1eDQzUjBCVFB5NEd1U0I3SHBmbFI3SmVEd1Y3a2swRUdtQndBaThlV2t6MDdnQWtHb2RsbkFQYmIxTTFqbHoxWmtjeGVyRA?oc=5",
-      "publisher": "Ilboursa",
-      "published_at": "2026-09-21T12:08:53+00:00",
-      "tickers": [
-        "AKD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "11c9e108cfced156cb",
-      "title": "Akdital finalise l’acquisition de l’Hôpital Al Bishri à La Mecque",
-      "url": "https://www.lebrief.ma/akdital-finalise-lacquisition-de-lhopital-al-bishri-a-la-mecque-100166468/",
-      "publisher": "LeBrief",
-      "published_at": "2026-09-21T11:48:07+00:00",
-      "tickers": [
-        "AKD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "7f75f7e3b02d1e9e2f",
-      "title": "TotalEnergies Marketing Maroc - CP relatif à la nomination du Directeur Général",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Total_Maroc_nomination_DG_0.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-21T11:38:34+00:00",
-      "tickers": [
-        "TMA"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "182e41409e69af9123",
-      "title": "L’enseigne turque BIM dépasse la barre de 1.000 magasins au Maroc",
-      "url": "https://www.challenge.ma/lenseigne-turque-bim-depasse-la-barre-de-1-000-magasins-au-maroc-324542/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-21T11:26:13+00:00",
-      "tickers": [
-        "MNG"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "511eeb2aeee4f5972b",
-      "title": "OCP - CP relatif à la levée de 149 millions de dollars via un tap issue sur l'emission obligataire hybride d'avril 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_OCP_EO_avril_26_Tap_Issue_149%2C9_millions_USD.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-21T11:22:28+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "bcb4f5c6e857100083",
-      "title": "BCP - CP relatif aux résultats du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_BCP_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-21T11:12:39+00:00",
-      "tickers": [
-        "BCP"
-      ],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "cd05188cd3ea4c469f",
-      "title": "Sonasid : hausse de 72% du RNPG au premier semestre",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOUZ6S0RzcWxGbFExcGYxYWx5MkktRml5SUdiamtMNHBObHZGVTZJa2IwcVVTbVQzTXJXNVgzdnVlR1N5enV1bHUxc0Z0MWc3M20tcTQya3Y5NFNic2RpckJmSzJ1eExxbFdLVFBjRG9XMTBBMUpfYXpUc3lBVnNJVlRIa0E1WUVDYmI4MHItTUM4NUwyTzd3YVl2cmZmdw?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-21T11:11:56+00:00",
-      "tickers": [
-        "SNA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "4aa471c475ed44f3a5",
-      "title": "Marché à terme : Bank Al-Maghrib et l’AMMC consolident le dispositif",
-      "url": "https://aujourdhui.ma/economie/marche-a-terme-bank-al-maghrib-et-lammc-consolident-le-dispositif",
-      "publisher": "Aujourd'hui le Maroc",
-      "published_at": "2026-09-21T10:16:30+00:00",
-      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
       "usable_for_score": false

@@ -1,1 +1,1 @@
-{"checked_at":"2026-09-30T21:31:44.957075+00:00","source":"CDG Capital Bourse","result":"updated","last_session":"2026-09-30","message":"64 bougies validées ; 0 conflit(s) conservés","details":{"session":"2026-09-30","active_quotes":64,"new_bars":64,"source":"https://www.cdgcapitalbourse.ma/api/","ignored_old_quotes":0,"conflicts":[]}}
+{"checked_at":"2026-10-01T14:26:07.157713+00:00","source":"CDG Capital Bourse","result":"error","last_session":null,"message":"Collecte refusée : Séance du jour inachevée avant 16h00 Casablanca"}
