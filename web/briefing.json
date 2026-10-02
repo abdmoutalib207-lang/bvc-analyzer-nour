@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_for": "2026-10-01",
+  "generated_for": "2026-10-02",
   "market_session": "2026-10-01",
   "snapshot_updated": "2026-10-01T21:58:49.864929+00:00",
   "market_status": "CLOSED",
@@ -154,6 +154,17 @@
   ],
   "news": [
     {
+      "id": "179a97b51d602141ae",
+      "title": "Ennakl Automobiles - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-10-02T11:51:54+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
+    {
       "id": "3fab485ff380ecf3da",
       "title": "Jaida - CP relatif à l'évolution de l'actionnariat",
       "url": "https://www.ammc.ma/sites/default/files/CP_Jaida_evolution_actionnariat.pdf",
@@ -269,17 +280,6 @@
       "url": "https://www.ammc.ma/sites/default/files/TGCC_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:38:06+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "78109817f1b2239a5b",
-      "title": "ADI - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-30T18:29:05+00:00",
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",

@@ -1,8 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-01T21:58:54.790652+00:00",
+  "updated_at": "2026-10-02T13:49:39.926968+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "179a97b51d602141ae",
+      "title": "Ennakl Automobiles - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-10-02T11:51:54+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "3fab485ff380ecf3da",
       "title": "Jaida - CP relatif à l'évolution de l'actionnariat",
@@ -3448,19 +3459,6 @@
       "published_at": "2026-09-21T17:37:23+00:00",
       "tickers": [
         "VCNE"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "ecffbd5fc72f71adb0",
-      "title": "TotalEnergies Marketing Maroc : Thomas Vigneron succède à Abdesslam Rhnimi",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOLXVTa2VWRGY1WkotWlZDT3hTZHpqVXdkM0Y5RDg5NDYtWm1kWXZBeUZ6d2kzb202ZHZ6TWFwbThkWWhHMkVzcGF1RTVwMnFNZzRaSV9vc2dzeWZKOFhWOUQzd2hMOW9weklDdU5lbGxJWDZOb1JKX1hob1FTNDFpYVk0OUJsRmhfbWZlbkFlbFdBcGt2U29UTkhKYXhCRXJHeEs3alBKT2FSNDhGaHlVcVE1bw?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-21T16:03:00+00:00",
-      "tickers": [
-        "TMA"
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
