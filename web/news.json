@@ -1,8 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-02T13:49:39.926968+00:00",
+  "updated_at": "2026-10-02T21:26:11.132357+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "ac48eaf934470f9f4d",
+      "title": "Disty Technologies - CP relatif au changement de composition du conseil d'administration",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_changement_CA.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-10-02T16:10:27+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false
+    },
     {
       "id": "179a97b51d602141ae",
       "title": "Ennakl Automobiles - Résultats financiers du 1er semestre 2026",
@@ -3447,19 +3458,6 @@
       "publisher": "Kitco Métaux",
       "published_at": "2026-09-22T03:23:43+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false
-    },
-    {
-      "id": "0ff249290b9b1aaf0b",
-      "title": "Vicenne: les bénéfices progressent de 14% au premier semestre",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQkVCRWlNdnJLdXlqN0RZLTdDbUExWUpNcUh2TUZCalNfdlNKUzBGZ3lLeVFYNTJGdjZ4VVhyc1F4ZnBkVkFHRkR0VkliSE43R3BDSjd5eUp4TFNndTZoaDJPSUdHM1NtUjRmeXZCaDlXNWZxR3N1SFFvVnZ1WnFfNWl4TENFZzV1Nk1aNk1VNA?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-21T17:37:23+00:00",
-      "tickers": [
-        "VCNE"
-      ],
       "tier": "S2",
       "status": "alerte non vérifiée",
       "usable_for_score": false
