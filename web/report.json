@@ -16864,7 +16864,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-02",
-    "observed_at": "2026-10-03T15:17:25.290466+00:00",
+    "observed_at": "2026-10-03T15:23:56.975432+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -17001,8 +17001,8 @@
       "flat": 4,
       "quoted": 68
     },
-    "turnover_mad": 256146092.89,
-    "shares": 849871.0,
+    "turnover_mad": 258466497.74,
+    "shares": 859537.0,
     "transactions": 5487.0
   },
   "masi_history": {
@@ -17206,128 +17206,22 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-03T15:17:25.290466+00:00",
+    "checked_at": "2026-10-03T15:23:56.975432+00:00",
     "asof": "2026-10-02"
   },
   "health": {
-    "checked_at": "2026-10-03T15:17:22.995695+00:00",
+    "checked_at": "2026-10-03T15:23:53.708786+00:00",
     "source": "CDG Capital Bourse",
-    "result": "conflict",
+    "result": "unchanged",
     "last_session": "2026-10-02",
-    "message": "15 bougie(s) divergente(s) non remplacée(s)",
+    "message": "Aucune nouvelle séance vérifiée",
     "details": {
       "session": "2026-10-02",
       "active_quotes": 67,
       "new_bars": 0,
       "source": "https://www.cdgcapitalbourse.ma/api/",
       "ignored_old_quotes": 0,
-      "conflicts": [
-        {
-          "symbol": "ADH",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "AKD",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "ATL",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "BCP",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "CASH",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "CMGP",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "DTT",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "JET",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "MNG",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "ENK",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "STK",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "T2S",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "TGCC",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "TQA",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "VCNE",
-          "session": "2026-10-02",
-          "fields": [
-            "v"
-          ]
-        }
-      ]
+      "conflicts": []
     }
   },
   "runtime": {
@@ -17340,13 +17234,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-03",
-    "started_at": "2026-10-03T15:17:21+00:00",
-    "built_at": "2026-10-03T15:17:29.119650+00:00",
+    "started_at": "2026-10-03T15:23:53+00:00",
+    "built_at": "2026-10-03T15:24:00.942900+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37132708193",
-    "commit": "6dbd3476f323292605d401ef65bd4a746da7230c",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37132708193"
+    "run_id": "37133086874",
+    "commit": "13290afc748b1c87ac301e1a876554b3e08ad905",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37133086874"
   },
   "intraday": {
     "status": "unavailable",
