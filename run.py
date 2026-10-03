@@ -11,6 +11,7 @@ from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
 from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday
+from nour.market_view import closing_summary
 
 ROOT = Path(__file__).resolve().parent
 
@@ -26,6 +27,13 @@ def main():
     facts=json.loads((ROOT/"data/facts_reference.json").read_text(encoding="utf-8")).get("records",{})
     news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
+    overview_path = ROOT/'data/market_overview.json'
+    overview = json.loads(overview_path.read_text()) if overview_path.exists() else {}
+    report['market_overview'] = overview.get('current', {})
+    history_path = ROOT/'data/masi_history.json'
+    report['masi_history'] = json.loads(history_path.read_text()).get('seances', {}) if history_path.exists() else {}
+    overview_health = ROOT/'data/overview_health.json'
+    report['overview_health'] = json.loads(overview_health.read_text()) if overview_health.exists() else {}
     health_file=ROOT/"data/health.json"
     report["health"] = json.loads(health_file.read_text()) if health_file.exists() else {
         "result":"not_configured","message":"Collecte automatique non encore exécutée"}
@@ -67,7 +75,20 @@ def main():
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT/"web/news.json").write_text(json.dumps(news,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (ROOT/"web/briefing.json").write_text(json.dumps(briefing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    build_site(fixture, report, ROOT / "web", briefing=briefing, editions=editions)
+    # Reproducible latest closing digest, separate from the scheduled editions.
+    # Never label an intraday observation or today's preparation as a new close.
+    closed = overview.get('last_closed', {})
+    closing = create_briefing(report)
+    closing.update(title='Briefing de clôture', runtime={}, intraday={},
+                   market_session=closed.get('asof'), index=closed.get('masi'),
+                   market_summary=closing_summary(closed), market_status='closed' if closed else 'unavailable',
+                   edition_notice='Synthèse préparée à partir de la dernière clôture datée disponible ; les fiches techniques conservent leur propre date.',
+                   edition_status='closed' if closed else 'unavailable')
+    closing['focus'] = [f for f in closing['focus'] if f['asof'] == closed.get('asof')]
+    for f in closing['focus']:
+        f.pop('intraday_quote', None)
+    atomic_json(ROOT/'web/cloture.json', closing)
+    build_site(fixture, report, ROOT / 'web', briefing=briefing, editions=editions, closing=closing)
     print(f"Site Nour : {len(report['results'])} titres, date {args.asof} → {ROOT / 'web/index.html'}")
     if args.serve:
         class LocalHandler(SimpleHTTPRequestHandler):

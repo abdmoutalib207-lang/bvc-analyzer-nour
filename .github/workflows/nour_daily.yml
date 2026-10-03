@@ -16,6 +16,7 @@ on:
       - 'run.py'
       - 'web/nour.js'
       - 'web/chart.js'
+      - 'web/market.js'
       - 'web/nour.css'
       - '.github/workflows/nour_daily.yml'
   schedule:
@@ -58,6 +59,10 @@ jobs:
         id: news
         continue-on-error: true
         run: python tools/update_news.py
+      - name: Refresh MASI and market overview directly from CDG
+        id: overview
+        continue-on-error: true
+        run: python tools/update_overview.py
       - name: Build dashboard and briefing
         env:
           NOUR_SCHEDULE: ${{ github.event.schedule }}
@@ -68,6 +73,7 @@ jobs:
           python -m unittest discover -s tests -v
           node --check web/nour.js
           node --check web/chart.js
+          node --check web/market.js
       - name: Save validated snapshots and pages
         run: |
           git config user.name 'bvc-nour-bot'
@@ -88,3 +94,4 @@ jobs:
         run: |
           echo 'Market: ${{ steps.market.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'News: ${{ steps.news.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'MASI: ${{ steps.overview.outcome }}' >> "$GITHUB_STEP_SUMMARY"

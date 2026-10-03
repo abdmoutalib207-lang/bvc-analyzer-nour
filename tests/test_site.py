@@ -22,6 +22,8 @@ class VisibleMarketSite(unittest.TestCase):
                       for r in cls.fixture["records"].values()))
         facts = json.loads((ROOT / "data/facts_reference.json").read_text()).get("records", {})
         cls.report = build_report(cls.fixture, cls.asof, facts=facts)
+        cls.report['market_overview'] = json.loads((ROOT/'data/market_overview.json').read_text())['current']
+        cls.report['masi_history'] = json.loads((ROOT/'data/masi_history.json').read_text())['seances']
         build_site(cls.fixture, cls.report, cls.output)
 
     @classmethod
@@ -50,7 +52,7 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertEqual(len(rows) - 1, len(candles))
         self.assertEqual(rows[-1][0], candles[-1]["d"])
 
-    def test_static_detail_chart_and_recent_session_table(self):
+    def test_detail_keeps_chart_and_csv_without_expanded_history_table(self):
         page = (self.output / "titres/ADI.html").read_text()
         static = re.sub(r"<script\b[^>]*>.*?</script>", "", page, flags=re.DOTALL)
         self.assertIn('<polyline points="', static)
@@ -59,7 +61,9 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn('data-indicator="rsi"', static)
         self.assertIn('data-indicator="macd"', static)
         self.assertIn('data-chart-type="candles"', static)
-        self.assertIn("Dernières 40 séances", static)
+        self.assertNotIn("Dernières 40 séances", static)
+        self.assertNotIn('<th>Ouverture</th>', static)
+        self.assertIn('Historique à la demande', static)
         self.assertIn(self.fixture["records"]["ADI"]["candles"][-1]["d"], static)
         self.assertIn('href="../historique/ADI.csv"', static)
 

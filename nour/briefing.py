@@ -36,7 +36,8 @@ def level_scenario(price, support, resistance, resumed=False):
 
 def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI","T2S","CMT")):
     market = report.get("market", {})
-    masi = market.get("masi") or {}
+    overview = report.get('market_overview') or {}
+    masi = overview.get('masi') or market.get("masi") or {}
     asof = report["analysis_date"]
     latest_dates = [r["asof"] for r in report["results"] if r["asof"]]
     session = max(latest_dates) if latest_dates else None
@@ -62,6 +63,7 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
                       "issues":r["quality"]["issues"][:2]})
         focus[-1]["intraday_quote"] = r.get("intraday_quote")
     index_current = masi.get("asof") == session and session is not None
+    from .market_view import closing_summary
     runtime = report.get("runtime") or {}
     closing_pending = runtime.get("slot") == "closing" and session != asof
     return {"schema_version":1,"generated_for":asof,"market_session":session,
@@ -74,6 +76,7 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
             "coverage": {"titles":len(report["results"]), "quoted_session":len(active),
                          "observable":sum(x["decision"]=="OBSERVABLE" for x in active)},
             "index":masi if index_current else None,
+            "market_summary":closing_summary(overview) if index_current and overview else None,
             "index_notice":None if index_current else "MASI non confirmé à la date de la dernière séance : valeur archivée écartée du briefing.",
             "focus":focus,"news":news,"news_role":"veille uniquement",
             "limitations":"Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."}
