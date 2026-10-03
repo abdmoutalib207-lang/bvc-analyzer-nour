@@ -116,6 +116,7 @@ def analyze(record, asof, quantity=1000):
             "realized_volatility_20d_pct": _round(stdev(last20) * sqrt(252) * 100 if trend_ready and len(last20) == 20 else None),
         },
         "close_series_last_60": closes[-60:],
+        "close_dates_last_60": [bar["d"] for bar in valid[-60:]],
         "legacy_comparison": {"sig": record.get("legacy_sig"), "sigBvc": record.get("legacy_sig_bvc")},
     }
 

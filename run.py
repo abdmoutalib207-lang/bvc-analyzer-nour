@@ -12,6 +12,7 @@ from nour.briefing import create_briefing
 from nour.market import atomic_json
 from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday
 from nour.market_view import closing_summary
+from nour.briefing_view import briefing_text
 
 ROOT = Path(__file__).resolve().parent
 
@@ -64,8 +65,13 @@ def main():
     links = [{"label": b["title"], "date": b["runtime"]["edition_for"],
               "url": f"briefing-{EDITIONS[key]}.html"} for key,b in editions.items()]
     briefing["edition_links"] = links
+    briefing['text_url'] = 'briefing.txt'
+    (ROOT/'web/briefing.txt').write_text(briefing_text(briefing),encoding='utf-8')
     for key,b in editions.items():
         b["edition_links"] = links
+        if b.get('editorial_version'):
+            b['text_url'] = f'briefing-{EDITIONS[key]}.txt'
+            (ROOT/'web'/b['text_url']).write_text(briefing_text(b),encoding='utf-8')
         atomic_json(ROOT/f"web/briefing-{EDITIONS[key]}.json", b)
     atomic_json(ROOT/"web/runtime.json", {**report["runtime"], "market":report["health"],
                 "last_closed_session":briefing["market_session"],
@@ -78,7 +84,8 @@ def main():
     # Reproducible latest closing digest, separate from the scheduled editions.
     # Never label an intraday observation or today's preparation as a new close.
     closed = overview.get('last_closed', {})
-    closing = create_briefing(report)
+    closing_report = {**report, 'market_overview': closed, 'runtime': {}, 'intraday': {}}
+    closing = create_briefing(closing_report, closing_only=True)
     closing.update(title='Briefing de clôture', runtime={}, intraday={},
                    market_session=closed.get('asof'), index=closed.get('masi'),
                    market_summary=closing_summary(closed), market_status='closed' if closed else 'unavailable',
@@ -87,6 +94,8 @@ def main():
     closing['focus'] = [f for f in closing['focus'] if f['asof'] == closed.get('asof')]
     for f in closing['focus']:
         f.pop('intraday_quote', None)
+    closing['text_url'] = 'cloture.txt'
+    (ROOT/'web/cloture.txt').write_text(briefing_text(closing),encoding='utf-8')
     atomic_json(ROOT/'web/cloture.json', closing)
     build_site(fixture, report, ROOT / 'web', briefing=briefing, editions=editions, closing=closing)
     print(f"Site Nour : {len(report['results'])} titres, date {args.asof} → {ROOT / 'web/index.html'}")

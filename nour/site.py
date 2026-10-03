@@ -267,6 +267,21 @@ def news_page(fixture, report, style, script):
 
 
 def briefing_page(fixture, briefing, style, script):
+    if briefing.get('editorial_version'):
+        from .briefing_view import render_editorial
+        cov=briefing['coverage']
+        notice=f'<div class="banner">{esc(briefing["edition_notice"])}</div>' if briefing.get('edition_notice') else ''
+        links=''.join(f'<a class="btnlink outline" href="{esc(x["url"])}">{esc(x["label"])} · {esc(x["date"])}</a>' for x in briefing.get('edition_links',[]))
+        txt=briefing.get('text_url')
+        if txt: links+=f'<a class="btnlink outline" href="{esc(txt)}" download>Version texte avec sources</a>'
+        toc=''.join(f'<a href="#{anchor}">{label}</a>' for anchor,label in [('essentiel','L’essentiel'),('secteurs','Secteurs'),('flux','Liquidité'),('valeurs','Valeurs'),('fondamentaux','Fondamentaux'),('macro','Macro'),('scenarios','Scénarios'),('vigilance','Vigilance')])
+        body=(header('index.html',briefing['snapshot_updated'])
+              +f'<main class="editorial-briefing"><div class="hero"><span class="eyebrow">Analyse de marché · {esc(briefing["editorial_version"])}</span><h1>{esc(briefing.get("title","Point de séance"))}</h1><p>Séance {esc(briefing["market_session"])} · préparé le {esc(briefing["generated_for"])}.</p><div class="stamp">{cov["quoted_session"]}/{cov["titles"]} valeurs à cette date · {cov["observable"]} observables</div><div class="primary-actions">{links}</div></div>{notice}'
+              +f'<nav class="brief-toc" aria-label="Rubriques du briefing">{toc}</nav>'
+              +render_editorial(briefing,lambda item: intraday_line(item.get('intraday_quote'),briefing.get('intraday',{}).get('observed_at')))
+              +runtime_panel(briefing.get('runtime'),briefing.get('intraday'))
+              +f'<div class="banner">{esc(briefing["limitations"])} Les actualités ne contribuent jamais aux scores.</div></main><footer>BVC Analyzer Nour · faits datés, lectures conditionnelles et sources consultables.</footer>')
+        return shell('Briefing',body,style,script)
     focus = []
     for item in briefing['focus']:
         focus.append(f'<article class="brief-item"><div class="focus-header"><h3><a href="titres/{esc(item["symbol"])}.html">{esc(item["symbol"])} · {esc(item["name"])}</a></h3><strong>{number(item["price"])} MAD</strong></div><p>Clôture {esc(item["asof"])} · Score {number(item["score"],0) if item["score"] is not None else "non calculable"} · données {esc(item["data_status"])}</p><p>Support {number(item["support"])} · résistance {number(item["resistance"])} MAD · RSI {number(item["rsi"])} · activité {number(item["activity"])} ×</p><p>{esc(item["scenario"])}.</p></article>')
