@@ -119,6 +119,7 @@ def runtime_panel(runtime, intraday=None):
     live = intraday or {}
     return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
             '<p>Créneaux lundi–vendredi : 09:45 · 11:46 · 13:45 · 15:45 · 18:00. GitHub peut retarder ou manquer un déclenchement.</p>'
+            f'<p>Créneau attendu : {esc(runtime.get("scheduled_at") or "déclenchement à la demande")}.</p>'
             f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
             f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
             '<p class="fineprint">Les scores et graphiques restent calculés sur les clôtures historiques. Les points provisoires sont séparés. Cette page est mise à jour à chaque publication réussie, sans streaming.</p></section>')
@@ -279,7 +280,7 @@ def briefing_page(fixture, briefing, style, script):
     cov=briefing['coverage']
     links = ''.join(f'<a class="btnlink outline" href="{esc(link["url"])}">{esc(link["label"])} · {esc(link["date"])}</a>' for link in briefing.get('edition_links',[]))
     notice = f'<div class="banner">{esc(briefing["edition_notice"])}</div>' if briefing.get('edition_notice') else ''
-    body = (header('index.html', fixture['snapshot_updated'])
+    body = (header('index.html', briefing['snapshot_updated'])
             + f'<main><div class="hero"><span class="eyebrow">Briefing de marché</span><h1>{esc(briefing.get("title", "Point de séance"))}</h1><p>Préparé le {esc(briefing["generated_for"])} à partir des données datées disponibles.</p><div class="stamp">Dernière séance clôturée repérée : {esc(briefing["market_session"])} · {cov["quoted_session"]}/{cov["titles"]} valeurs cotées à cette date · {cov["observable"]} observables</div><div class="primary-actions">{links}</div></div>{notice}'
             + runtime_panel(briefing.get('runtime'), briefing.get('intraday'))
             + f'<section class="panel"><h2>État du marché</h2><p>{index_line}</p><p>Statut de la source : {esc(briefing.get("market_status"))}. Le calcul conserve les dates par valeur ; il ne prolonge pas un cours absent sur une séance récente.</p></section>'

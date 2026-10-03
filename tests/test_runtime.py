@@ -7,7 +7,7 @@ import shutil
 import tempfile
 import unittest
 from contextlib import redirect_stdout
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -42,11 +42,14 @@ class RuntimeContracts(unittest.TestCase):
             ctx = run_context(datetime(2026,10,5,h,m,tzinfo=ZONE), cron, 'schedule')
             self.assertEqual(ctx['slot'], slot)
             self.assertEqual(ctx['delay_minutes'], 0)
-        # Casablanca observes UTC+0 during part of Ramadan and UTC+1 otherwise.
-        for month, day, offset in [(2,20,0),(10,5,1)]:
-            ctx = run_context(datetime(2026,month,day,9,45,tzinfo=ZONE), '45 9 * * 1-5','schedule')
+        # Follow the installed IANA database, not a presumed UTC offset. Morocco
+        # can change its clock policy; runners need not share a tzdata release.
+        for month, day in [(2,20),(10,5)]:
+            local = datetime(2026,month,day,9,45,tzinfo=ZONE)
+            ctx = run_context(local, '45 9 * * 1-5','schedule')
             self.assertEqual(datetime.fromisoformat(ctx['scheduled_at']).hour,9)
-            self.assertEqual(datetime.fromisoformat(ctx['scheduled_at']).utcoffset().total_seconds()/3600,offset)
+            expected = local.astimezone(timezone.utc)
+            self.assertEqual(datetime.fromisoformat(ctx['scheduled_at']).astimezone(timezone.utc),expected)
 
     def test_late_run_keeps_original_slot_and_actual_time(self):
         ctx = run_context(datetime(2026,10,5,14,0,tzinfo=ZONE), '45 9 * * 1-5','schedule')
