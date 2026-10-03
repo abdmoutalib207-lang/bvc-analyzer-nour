@@ -1,6 +1,8 @@
 """Market-first HTML. Index history contains closes, not fabricated OHLCV."""
 import html
 import json
+from datetime import date
+from calendar import monthrange
 
 
 def fmt(v, digits=2):
@@ -33,7 +35,15 @@ def market_panel(report):
     index = overview.get('masi') or {}
     points = sorted((report.get('masi_history') or {}).items())
     points = [(d,v) for d,v in points if d <= overview.get('asof', report['analysis_date'])]
-    last = points[-63:]
+    if points:
+        end = date.fromisoformat(points[-1][0])
+        month_number = end.year*12 + end.month-1-3
+        year, month = divmod(month_number,12)
+        month += 1
+        cutoff = date(year,month,min(end.day,monthrange(year,month)[1])).isoformat()
+        last = [(d,v) for d,v in points if d >= cutoff]
+    else:
+        last = []
     change = index.get('change_pct')
     tone = 'gain' if change is not None and change > 0 else 'loss' if change is not None and change < 0 else 'muted'
     provisional = overview.get('status') == 'intraday'

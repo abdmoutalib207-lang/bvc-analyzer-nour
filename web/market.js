@@ -7,7 +7,17 @@
   const readout = root.querySelector('.chart-readout');
   const format = value => new Intl.NumberFormat('fr-MA', {maximumFractionDigits: 2, minimumFractionDigits: 2}).format(value);
   const ns = 'http://www.w3.org/2000/svg';
-  let series = all.slice(-63), selected = series.length - 1, cross, dot, svg;
+  function period(n) {
+    if (!n || !all.length) return all;
+    const end = new Date(all.at(-1)[0] + 'T00:00:00Z');
+    const months = n === 21 ? 1 : n === 63 ? 3 : 12;
+    const start = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth()-months, 1));
+    const lastDay = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth()+1, 0)).getUTCDate();
+    start.setUTCDate(Math.min(end.getUTCDate(), lastDay));
+    const cutoff = start.toISOString().slice(0,10);
+    return all.filter(p=>p[0]>=cutoff);
+  }
+  let series = period(63), selected = series.length - 1, cross, dot, svg;
   let low, high;
   function element(tag, attrs, text) {
     const e = document.createElementNS(ns, tag);
@@ -60,7 +70,7 @@
     chart.replaceChildren(svg); select(series.length-1);
   }
   root.querySelectorAll('[data-masi-period]').forEach(button=>button.addEventListener('click',()=>{
-    const n=Number(button.dataset.masiPeriod); series=n?all.slice(-n):all;
+    const n=Number(button.dataset.masiPeriod); series=period(n);
     root.querySelectorAll('[data-masi-period]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     render();
   }));
