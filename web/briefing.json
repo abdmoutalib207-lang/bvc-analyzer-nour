@@ -1,7 +1,33 @@
 {
   "schema_version": 1,
-  "generated_for": "2026-10-02",
+  "generated_for": "2026-10-03",
   "market_session": "2026-10-02",
+  "runtime": {
+    "timezone": "Africa/Casablanca",
+    "event": "push",
+    "slot": "adhoc",
+    "label": "Point de marché à la demande",
+    "target_time": null,
+    "schedule": null,
+    "scheduled_at": null,
+    "scheduled_at_basis": null,
+    "edition_for": "2026-10-03",
+    "started_at": "2026-10-03T04:14:28+00:00",
+    "built_at": "2026-10-03T04:14:37.211057+00:00",
+    "delay_minutes": null,
+    "late": false,
+    "run_id": "37095868328",
+    "commit": "b13ab5de28f93e6086c4744af02354fbd5e9c9a7",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37095868328"
+  },
+  "title": "Point de marché à la demande",
+  "intraday": {
+    "status": "unavailable",
+    "quotes": {},
+    "notice": "Aucun point de séance collecté."
+  },
+  "edition_status": "published",
+  "edition_notice": null,
   "snapshot_updated": "2026-10-02T21:26:04.011162+00:00",
   "market_status": "CLOSED",
   "coverage": {
@@ -25,7 +51,8 @@
       "rsi": 33.09,
       "activity": 4.11,
       "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "RDS",
@@ -40,7 +67,8 @@
       "rsi": 37.22,
       "activity": 1.93,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "TGCC",
@@ -55,7 +83,8 @@
       "rsi": 22.94,
       "activity": 1.74,
       "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "SGTM",
@@ -70,7 +99,8 @@
       "rsi": 37.64,
       "activity": 1.11,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "CMGP",
@@ -85,7 +115,8 @@
       "rsi": 34.25,
       "activity": 2.34,
       "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "MSA",
@@ -100,7 +131,8 @@
       "rsi": 21.43,
       "activity": 1.79,
       "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "SMI",
@@ -115,7 +147,8 @@
       "rsi": 36.75,
       "activity": 1.82,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
-      "issues": []
+      "issues": [],
+      "intraday_quote": null
     },
     {
       "symbol": "T2S",
@@ -132,7 +165,8 @@
       "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
       "issues": [
         "Historique limité à 43 séances dans l'extrait"
-      ]
+      ],
+      "intraday_quote": null
     },
     {
       "symbol": "CMT",
@@ -149,7 +183,8 @@
       "scenario": "Attendre des séances comparables après la reprise",
       "issues": [
         "Reprise récente : 12 séances ; tendance antérieure non comparable"
-      ]
+      ],
+      "intraday_quote": null
     }
   ],
   "news": [
@@ -287,5 +322,6 @@
     }
   ],
   "news_role": "veille uniquement",
-  "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."
+  "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
+  "edition_links": []
 }
