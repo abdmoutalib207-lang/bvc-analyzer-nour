@@ -9,7 +9,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 
-from nour.market import atomic_json, fetch_cdg, import_session
+from nour.market import CANCELLED_SESSIONS, atomic_json, capture_intraday, fetch_cdg, import_session
 
 
 def main():
@@ -24,6 +24,17 @@ def main():
         fixture=json.loads((data/"market_snapshot.json").read_text())
         mapping=json.loads((data/"source_codes.json").read_text())
         raw=json.loads(args.input.read_text()) if args.input else fetch_cdg()
+        if now.weekday() < 5 and now.hour < 16 and now.date().isoformat() not in CANCELLED_SESSIONS:
+            point = capture_intraday(fixture, raw, mapping, now=now)
+            atomic_json(data/"intraday.json", point)
+            count = len(point["quotes"])
+            status.update(result="intraday" if count else "awaiting_quotes",
+                          last_session=fixture["market"].get("last_session"),
+                          message=f"{count} observations provisoires ; clôtures et scores historiques inchangés",
+                          intraday_session=point["session"], rejected=point["rejected"])
+            atomic_json(data/"health.json", status)
+            print(json.dumps(status,ensure_ascii=False))
+            return
         candidate,details=import_session(fixture,raw,mapping,now=now)
         status.update(last_session=details["session"],details=details)
         conflicting = len(details["conflicts"])

@@ -60,8 +60,16 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
                       "scenario": level_scenario(r["price"], t["support20"],
                                                   t["resistance20"], t["limited_by_resumption"]),
                       "issues":r["quality"]["issues"][:2]})
+        focus[-1]["intraday_quote"] = r.get("intraday_quote")
     index_current = masi.get("asof") == session and session is not None
+    runtime = report.get("runtime") or {}
+    closing_pending = runtime.get("slot") == "closing" and session != asof
     return {"schema_version":1,"generated_for":asof,"market_session":session,
+            "runtime":runtime, "title":runtime.get("label", "Point de séance"),
+            "intraday":report.get("intraday") or {},
+            "edition_status":"closing_pending" if closing_pending else "published",
+            "edition_notice":("Clôture du jour non confirmée par la collecte : dernières données datées conservées."
+                              if closing_pending else None),
             "snapshot_updated":report["snapshot_updated"],"market_status":market.get("status"),
             "coverage": {"titles":len(report["results"]), "quoted_session":len(active),
                          "observable":sum(x["decision"]=="OBSERVABLE" for x in active)},

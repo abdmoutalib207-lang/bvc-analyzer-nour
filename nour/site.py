@@ -109,6 +109,30 @@ def info_card(title, value, suffix=""):
     return f'<article class="kpi"><span>{esc(title)}</span><strong>{esc(value)}</strong>{(" <small>"+esc(suffix)+"</small>") if suffix else ""}</article>'
 
 
+def runtime_panel(runtime, intraday=None):
+    if not runtime:
+        return ''
+    late = (f' · retard estimé {number(runtime.get("delay_minutes"),0)} min'
+            if runtime.get("delay_minutes") is not None else '')
+    warning = '<p class="banner">Créneau exécuté en retard. Les données reflètent l’heure réelle de collecte, pas l’heure prévue.</p>' if runtime.get('late') else ''
+    link = f'<a href="{esc(runtime["run_url"])}" target="_blank" rel="noopener noreferrer">Voir le run GitHub ↗</a>' if runtime.get('run_url') else ''
+    live = intraday or {}
+    return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
+            '<p>Créneaux lundi–vendredi : 09:45 · 11:46 · 13:45 · 15:45 · 18:00. GitHub peut retarder ou manquer un déclenchement.</p>'
+            f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
+            f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
+            '<p class="fineprint">Les scores et graphiques restent calculés sur les clôtures historiques. Les points provisoires sont séparés. Cette page est mise à jour à chaque publication réussie, sans streaming.</p></section>')
+
+
+def intraday_line(quote, observed=None):
+    if not quote:
+        return ''
+    return (f'<p class="source-age">Point de séance provisoire : <strong>{number(quote["price"])} MAD</strong>'
+            f' · {esc(quote["asof"])}{ " · observé " + esc(observed) if observed else ""}'
+            f' · {number(quote["shares"],0)} titres · {number(quote["turnover_mad"],0)} MAD échangés.'
+            ' Ne remplace pas la clôture ni le score.</p>')
+
+
 def recent_table(bars, count=40):
     rows = []
     for b in reversed(bars[-count:]):
@@ -178,6 +202,7 @@ def detail_page(item, record, fixture, style, script):
             + f'<div class="eyebrow" style="margin-top:20px">{esc(record.get("sector") or "Action cotée")} · {esc(symbol)}</div><h1>{esc(record["name"])}</h1>'
             + f'<p>Dernier cours disponible : <strong>{number(item["price"])} MAD</strong> au {esc(item["asof"])}. Source prix : {esc(item["price_source"])}. <span class="status {esc(item["decision"])}">{esc(item["decision"])}</span></p>'
             + f'<div class="stamp">Historique {esc(first)} → {esc(last)} · {len(bars)} séances · mis à jour après collecte validée</div></div>'
+            + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
             + f'<section class="panel"><span class="eyebrow">Historique graphique</span><h2>{esc(symbol)} · prix et volumes</h2><p class="panel-sub">Pointez une séance pour ses données OHLCV ; activez les indicateurs ci-dessous. La plage « Tout » couvre les séances valides disponibles.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
             + f'<section class="panel"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
@@ -203,7 +228,9 @@ def home_page(fixture, report, style, script):
         search = ''.join(c for c in __import__('unicodedata').normalize('NFD', search) if __import__('unicodedata').category(c) != 'Mn')
         score=r.get('canonical_score',{})
         score_text = number(score.get('value'), 0) if score.get('value') is not None else '—'
-        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="nowrap">{esc(r["asof"])}</td><td>{len(record["candles"])}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span></td></tr>')
+        quote = r.get('intraday_quote')
+        live_price = f'{number(quote["price"])} MAD · provisoire' if quote else '—'
+        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{len(record["candles"])}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span></td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
     health=report.get('health') or {}
@@ -211,10 +238,11 @@ def home_page(fixture, report, style, script):
             + '<main><div class="hero"><span class="eyebrow">Nour / moteur de recherche de marché</span><h1>80 valeurs. <em>Un calcul traçable.</em></h1><p>Cours, historique, fondamentaux documentés, indicateurs et score canonique calculés dans Nour. Les actualités servent uniquement à la veille.</p>'
             + f'<div class="stamp">Données du {esc(fixture["snapshot_updated"][:10])} · rapport du {esc(report["analysis_date"])} · état collecte {esc(health.get("result") or "non configuré")} · {esc(health.get("message") or "")}</div><div class="primary-actions"><a class="btnlink" href="briefing.html">Lire le briefing de marché</a><a class="btnlink outline" href="actualites.html">Voir les actualités</a></div></div>'
             + f'<p class="panel-sub">MASI archivé : {number(masi.get("value"))} points · variation {number(masi.get("change_pct"))} % · état de marché {esc(fixture.get("market", {}).get("status"))}.</p>'
+            + runtime_panel(report.get('runtime'), report.get('intraday'))
             + f'<div class="kpis">{cards}</div><section class="panel"><div class="focus-header"><div><span class="eyebrow">Valeur en vue · ADI</span><h2>Alliances Développement</h2><span class="status {esc(adir["decision"])}">{esc(adir["decision"])}</span></div><div class="price">{number(adir["price"])}<small>MAD</small></div></div>'
             + f'<p class="panel-sub">{len(fixture["records"]["ADI"]["candles"])} séances historiques ; clôture du {esc(adir["asof"])}. <a href="titres/ADI.html">Voir l’historique d’ADI →</a></p>{graph(fixture["records"]["ADI"]["candles"])}</section>'
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
-            + f'<div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernier cours</th><th>Date</th><th>Séances</th><th>Score</th><th>État des données</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
+            + f'<div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernière clôture</th><th>Date clôture</th><th>Point de séance</th><th>Séances</th><th>Score</th><th>État des données</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
             + '<p class="fineprint">Les états décrivent la disponibilité des données, jamais une recommandation. Un historique peut rester indisponible tant qu’aucune séance validée n’a été importée.</p></section>'
             + f'<div class="banner">Les calculs restent datés de leur dernière séance validée. Le score est descriptif et peut être non calculable. Source initiale : {esc(fixture["source_commit"])}.</div></main>'
             + '<footer>BVC Analyzer Nour · moteur indépendant · aucune écriture vers le moteur principal.</footer>')
@@ -244,12 +272,16 @@ def briefing_page(fixture, briefing, style, script):
     focus = []
     for item in briefing['focus']:
         focus.append(f'<article class="brief-item"><div class="focus-header"><h3><a href="titres/{esc(item["symbol"])}.html">{esc(item["symbol"])} · {esc(item["name"])}</a></h3><strong>{number(item["price"])} MAD</strong></div><p>Clôture {esc(item["asof"])} · Score {number(item["score"],0) if item["score"] is not None else "non calculable"} · données {esc(item["data_status"])}</p><p>Support {number(item["support"])} · résistance {number(item["resistance"])} MAD · RSI {number(item["rsi"])} · activité {number(item["activity"])} ×</p><p>{esc(item["scenario"])}.</p></article>')
+        focus[-1] = focus[-1].replace('</article>', intraday_line(item.get('intraday_quote'), briefing.get('intraday',{}).get('observed_at')) + '</article>')
     headlines = ''.join(f'<li><a href="{esc(a["url"])}" target="_blank" rel="noopener noreferrer">{esc(a["title"])} ↗</a> <span class="muted">{esc(a["publisher"])} · {esc(a["published_at"][:10])}</span></li>' for a in briefing.get('news', []))
     index = briefing.get('index') or {}
     index_line = (f'MASI {number(index.get("value"))} · variation {number(index.get("change_pct"))} %.' if index else esc(briefing.get('index_notice')))
     cov=briefing['coverage']
+    links = ''.join(f'<a class="btnlink outline" href="{esc(link["url"])}">{esc(link["label"])} · {esc(link["date"])}</a>' for link in briefing.get('edition_links',[]))
+    notice = f'<div class="banner">{esc(briefing["edition_notice"])}</div>' if briefing.get('edition_notice') else ''
     body = (header('index.html', fixture['snapshot_updated'])
-            + f'<main><div class="hero"><span class="eyebrow">Briefing de marché</span><h1>Point de séance</h1><p>Préparé pour le {esc(briefing["generated_for"])} à partir des dernières données validées. Une nouvelle publication de données régénère ce briefing.</p><div class="stamp">Dernière séance repérée : {esc(briefing["market_session"])} · {cov["quoted_session"]}/{cov["titles"]} valeurs cotées à cette date · {cov["observable"]} observables</div></div>'
+            + f'<main><div class="hero"><span class="eyebrow">Briefing de marché</span><h1>{esc(briefing.get("title", "Point de séance"))}</h1><p>Préparé le {esc(briefing["generated_for"])} à partir des données datées disponibles.</p><div class="stamp">Dernière séance clôturée repérée : {esc(briefing["market_session"])} · {cov["quoted_session"]}/{cov["titles"]} valeurs cotées à cette date · {cov["observable"]} observables</div><div class="primary-actions">{links}</div></div>{notice}'
+            + runtime_panel(briefing.get('runtime'), briefing.get('intraday'))
             + f'<section class="panel"><h2>État du marché</h2><p>{index_line}</p><p>Statut de la source : {esc(briefing.get("market_status"))}. Le calcul conserve les dates par valeur ; il ne prolonge pas un cours absent sur une séance récente.</p></section>'
             + '<section class="panel"><h2>Valeurs à examiner</h2><p class="panel-sub">Niveaux techniques descriptifs établis sur les séances disponibles ; ils ne prédisent aucune trajectoire.</p><div class="brief-grid">'+''.join(focus)+'</div></section>'
             + '<section class="panel"><h2>Publications récentes</h2><ul class="headlines">'+(headlines or '<li>Aucune publication récente dans le flux indexé.</li>')+'</ul><a class="btnlink" href="actualites.html">Ouvrir tout le radar</a></section>'
@@ -257,7 +289,7 @@ def briefing_page(fixture, briefing, style, script):
     return shell('Briefing', body, style, script)
 
 
-def build_site(fixture, report, output, briefing=None):
+def build_site(fixture, report, output, briefing=None, editions=None):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     (output / "titres").mkdir(exist_ok=True)
@@ -269,6 +301,9 @@ def build_site(fixture, report, output, briefing=None):
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     if briefing is not None:
         (output / "briefing.html").write_text(briefing_page(fixture, briefing, style, script), encoding="utf-8")
+    from .runtime import EDITIONS
+    for key, edition in (editions or {}).items():
+        (output / f"briefing-{EDITIONS[key]}.html").write_text(briefing_page(fixture, edition, style, script), encoding="utf-8")
     by_symbol = {r["symbol"]: r for r in report["results"]}
     for symbol in fixture["symbols"]:
         if not re.fullmatch(r"[A-Z0-9]{2,5}", symbol):

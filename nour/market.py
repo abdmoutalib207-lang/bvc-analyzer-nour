@@ -153,6 +153,44 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
                      "conflicts": conflicts}
 
 
+def capture_intraday(fixture, lines, code_map, now=None):
+    """Capture today's exchanges separately; do not mutate records or candles."""
+    now = (now or datetime.now(CASABLANCA)).astimezone(CASABLANCA)
+    today = now.date().isoformat()
+    if len(set(code_map.values())) != len(code_map):
+        raise ValueError("Codes officiels en collision")
+    if now.weekday() >= 5 or today in CANCELLED_SESSIONS or now.hour >= 16:
+        raise ValueError("Collecte intrajournalière hors fenêtre autorisée")
+    inverse = {code: ticker for ticker, code in code_map.items()}
+    quotes, rejected, seen = {}, [], set()
+    for line in lines:
+        ticker = inverse.get(str(line.get("Symbol") or "").strip().upper())
+        if ticker not in fixture["records"]:
+            continue
+        if ticker in seen:
+            raise ValueError(f"{ticker}: collision de lignes CDG")
+        seen.add(ticker)
+        day = session_date(line.get("DateDernierCours"))
+        if day and day > today:
+            raise ValueError("Cotation future refusée")
+        if day != today:
+            continue
+        try:
+            quote = normalized_quote(line, ticker)
+        except ValueError as exc:
+            rejected.append({"symbol": ticker, "reason": str(exc)})
+            continue
+        if quote:
+            bar = quote["bar"]
+            quotes[ticker] = {"price": bar["c"], "asof": bar["d"], "open": bar["o"],
+                              "high": bar["h"], "low": bar["l"], "shares": bar["v"],
+                              "turnover_mad": bar["turnover_mad"], "provisional": True,
+                              "source": SOURCE_URL}
+    return {"schema_version": 1, "session": today, "observed_at": now.isoformat(),
+            "source": SOURCE_URL, "quotes": quotes, "rejected": rejected,
+            "timestamp_kind": "collector_observation_not_exchange_timestamp"}
+
+
 def atomic_json(path, data):
     path = Path(path)
     temp = path.with_suffix(path.suffix + ".tmp")
