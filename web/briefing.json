@@ -12,13 +12,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-03",
-    "started_at": "2026-10-03T04:14:28+00:00",
-    "built_at": "2026-10-03T04:14:37.211057+00:00",
+    "started_at": "2026-10-03T15:17:21+00:00",
+    "built_at": "2026-10-03T15:17:29.119650+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37095868328",
-    "commit": "b13ab5de28f93e6086c4744af02354fbd5e9c9a7",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37095868328"
+    "run_id": "37132708193",
+    "commit": "6dbd3476f323292605d401ef65bd4a746da7230c",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37132708193"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -35,8 +35,16 @@
     "quoted_session": 67,
     "observable": 62
   },
-  "index": null,
-  "index_notice": "MASI non confirmé à la date de la dernière séance : valeur archivée écartée du briefing.",
+  "index": {
+    "value": 17303.6852,
+    "asof": "2026-10-02",
+    "veille": 17579.1708,
+    "change_pct": -1.57,
+    "variation_points": -275.49,
+    "ytd_pct": -8.19
+  },
+  "market_summary": "Le MASI clôture à 17 303,69 points (-1,57 %), soit -275,49 points par rapport à la clôture précédente. Fourchette de séance : 17 295,18 à 17 698,72 points. 54 valeurs en baisse, 10 en hausse et 4 inchangées parmi les 68 valeurs échangées recensées par CDG. Volume échangé : 256,15 MDH.",
+  "index_notice": null,
   "focus": [
     {
       "symbol": "ADI",
