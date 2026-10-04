@@ -540,7 +540,7 @@ summary{cursor:pointer;font-size:15px;font-weight:650;color:#d5e7dd}summary:focu
   const chart=root.querySelector('.masi-chart'),readout=root.querySelector('.chart-readout');
   const format=v=>new Intl.NumberFormat('fr-FR',{maximumFractionDigits:2}).format(v);
   const tickDate=(date,width)=>width<450?`${date.slice(8)}/${date.slice(5,7)}/${date.slice(2,4)}`:date;
-  const state=Object.assign(new window.NourCharts.Viewport(all.length,Math.min(63,all.length)),{selected:null,period:'63'});
+  const state=Object.assign(new window.NourCharts.Viewport(all.length,all.length),{selected:null,period:'0'});
   let explorer,selectPoint=()=>{};
   function render() {
     const series=all.slice(state.start,state.end),W=Math.max(240,Math.round(chart.clientWidth||900));
@@ -575,7 +575,7 @@ summary{cursor:pointer;font-size:15px;font-weight:650;color:#d5e7dd}summary:focu
     const count=Number(b.dataset.masiPeriod)||all.length;
     state.set(count,all.length-count);state.period=b.dataset.masiPeriod;explorer.resetCursor();render();
   }));
-  explorer=window.NourCharts.mount({root,chart,state,points:all,defaultCount:Math.min(63,all.length),onChange:render,onRead:(i,a)=>selectPoint(i,a)});
+  explorer=window.NourCharts.mount({root,chart,state,points:all,defaultCount:all.length,onChange:render,onRead:(i,a)=>selectPoint(i,a)});
   render();
 })();
 </script></body></html>

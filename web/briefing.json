@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T21:22:28+00:00",
-    "built_at": "2026-10-04T21:22:36.126431+00:00",
+    "started_at": "2026-10-04T22:36:51+00:00",
+    "built_at": "2026-10-04T22:37:00.214090+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37235822879",
-    "commit": "085ca3a63cbc3fece1c4046f1fb3d72223999b45",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37235822879"
+    "run_id": "37240670598",
+    "commit": "535aecf22a70043ac09b94221a7d52e6eab68274",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37240670598"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -44,7 +44,7 @@
     "variation_points": -275.49,
     "ytd_pct": -8.19
   },
-  "market_summary": "Le MASI clôture à 17 303,69 points (-1,57 %), soit -275,49 points par rapport à la clôture précédente. Fourchette de séance : 17 295,18 à 17 698,72 points. 54 valeurs en baisse, 10 en hausse et 4 inchangées parmi les 68 valeurs échangées recensées par CDG. Volume échangé : 258,47 MDH.",
+  "market_summary": "Le MASI clôture à 17 303,69 points (-1,57 %), soit -275,49 points par rapport à la clôture précédente. Fourchette de séance : 17 295,18 à 17 698,72 points. 54 valeurs en baisse, 10 en hausse et 4 inchangées parmi les 68 valeurs échangées recensées par CDG. Volume échangé : 256,15 MDH.",
   "index_notice": null,
   "focus": [
     {
@@ -2087,7 +2087,7 @@
       "Le MASI termine à 17 303,69 points (-1,57 %). La direction de cette séance est baissière.",
       "54 valeurs baissent, 10 progressent et 4 sont inchangées sur 68 traitées. Les baisses représentent 79,41 % de cette couverture. La faiblesse est largement partagée ; elle ne se limite pas à quelques grandes capitalisations.",
       "L’indice se situe à 2,11 % de l’amplitude au-dessus du plus bas (17 295,18), pour un plus haut de 17 698,72 points. Une clôture proche du bas de séance traduit une pression persistante jusqu’à la fin des échanges.",
-      "Le relevé de marché totalise 258,47 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
+      "Le relevé de marché totalise 256,15 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
       "L’indice passe sous le plus bas des 20 clôtures précédentes, 17 579,17 points. Cette référence devient une zone à reconquérir. Il ne s’agit pas d’un support intrajournalier."
     ],
     "levels": {
@@ -2318,7 +2318,7 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T21:22:32.179643+00:00"
+    "observed_at": "2026-10-04T22:36:55.937531+00:00"
   },
   "context_news": [],
   "fundamental_coverage": {
