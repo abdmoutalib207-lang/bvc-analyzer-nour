@@ -73,7 +73,7 @@ def main():
         # Preserve semester evidence and its independent source provenance.
         if previous.get('latest_report'):
             annual['latest_report'] = previous['latest_report']
-            annual['latest_report']['provenance'] = previous.get('provenance', {})
+            annual['latest_report'].setdefault('provenance', previous.get('provenance', {}))
         data['records'][ticker] = annual
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
 
