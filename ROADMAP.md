@@ -10,11 +10,13 @@
 
 - Complément MGL/MRL/MDP/CASH publié après contrôles : 70 références annuelles, 68 semestrielles. [Pages, unités, dénominateurs et anomalies](docs/batches/2026-10-04-MGL-MRL-MDP-CASH.md). Fonds propres CASH et opérations de capital à rapprocher ; ratios concernés indisponibles.
 
+- Complément CIH/CDM : 72 références annuelles, 69 semestrielles après ajout du S1 2026 CIH. [Preuves et changements de capital](docs/batches/2026-10-04-CIH-CDM.md). Capital juillet 2026 recoupé pour les deux banques ; ajustements comparatifs et moyenne pondérée encore à vérifier, ratios par action bloqués.
+
 ## Contrôles d'exploitation à achever sur de nouvelles séances
 
 1. Observer plusieurs exécutions programmées : collecte → commit → Pages → fichier effectivement servi. Comparer les cours de clôture et le nombre de cotations au bulletin primaire.
 2. Tester le fournisseur lorsque le flux CDG présente des titres sans OHLC, une suspension ou un changement de structure : journaliser les valeurs exclues sans corrompre la séance publiée.
-3. Compléter les 2 historiques manquants sans fabriquer de séances. Achever les 10 références annuelles et 12 semestrielles absentes ; recouper les PDF importés et les nombres d'actions, rapprocher les fonds propres Eqdom et le nombre de titres AGMA. Faire les imports suivants dans Nour uniquement, sans dépendance d'exécution au dépôt principal.
+3. Compléter les 2 historiques manquants sans fabriquer de séances. Achever les 8 références annuelles et 11 semestrielles absentes ; recouper les PDF importés et les nombres d'actions, rapprocher les fonds propres Eqdom et le nombre de titres AGMA. Faire les imports suivants dans Nour uniquement, sans dépendance d'exécution au dépôt principal.
 4. Valider la stabilité des statistiques hors échantillon et par régime, avec MASI, coûts, dividendes, liquidité et incertitudes. Construire une base point-in-time avant tout test de facteurs fondamentaux. Le but est l'aide à l'analyse statistique, pas la prédiction du marché.
 5. Ajouter éventuellement fixing et carnet seulement après l'obtention de données licites et réellement horodatées ; ne jamais déduire les flux des seules clôtures.
 6. Vérifier l'exactitude et les droits de réutilisation des sources de marché et presse, ainsi que l'accessibilité sur téléphone et clavier.

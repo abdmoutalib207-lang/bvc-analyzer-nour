@@ -98,9 +98,9 @@ def additions():
     return records
 
 
-def merge(data):
+def merge(data, annual_records=None):
     result = copy.deepcopy(data)
-    for symbol, annual in additions().items():
+    for symbol, annual in (additions() if annual_records is None else copy.deepcopy(annual_records)).items():
         previous = result['records'].get(symbol, {})
         if previous.get('latest_report'):
             annual['latest_report'] = copy.deepcopy(previous['latest_report'])
