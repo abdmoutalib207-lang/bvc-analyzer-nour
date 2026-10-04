@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T17:20:34+00:00",
-    "built_at": "2026-10-04T17:20:42.417242+00:00",
+    "started_at": "2026-10-04T18:14:13+00:00",
+    "built_at": "2026-10-04T18:14:20.442184+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37220132908",
-    "commit": "eac9a16461db294f3d6d8732346b0bb8ca37f9f8",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37220132908"
+    "run_id": "37223627312",
+    "commit": "bc9d93088c35c219c5fa590ff0fc3c61b100abf4",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37223627312"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -218,6 +218,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -395,6 +396,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -557,6 +559,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -735,6 +738,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -897,6 +901,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -1099,6 +1104,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -1298,6 +1304,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -1478,6 +1485,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -1682,6 +1690,7 @@
             "validation_status": "referenced_import_not_independent_audit",
             "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
           },
+          "semester_activity_label": "CA",
           "period_end": "2025-12-31",
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
@@ -2309,11 +2318,11 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T17:20:38.311865+00:00"
+    "observed_at": "2026-10-04T18:14:16.452033+00:00"
   },
   "context_news": [],
   "fundamental_coverage": {
-    "referenced": 66,
+    "referenced": 70,
     "titles": 80
   },
   "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",

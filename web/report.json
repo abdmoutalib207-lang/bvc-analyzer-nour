@@ -103,7 +103,7 @@
       "ytd_pct": -8.19
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T17:20:38.311865+00:00",
+    "observed_at": "2026-10-04T18:14:16.452033+00:00",
     "turnover_mad": 258466497.74,
     "breadth": {
       "up": 10,
@@ -4502,6 +4502,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "moyenne pondérée publiée",
         "book_denominator": "nombre de titres référencé",
@@ -4920,6 +4921,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -5314,6 +5316,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -5658,6 +5661,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -6036,6 +6040,7 @@
             "validation_status": "referenced_import_not_independent_audit"
           }
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -6399,6 +6404,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -6756,6 +6762,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -7129,6 +7136,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -7471,6 +7479,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -7787,7 +7796,8 @@
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+        },
+        "semester_activity_label": "CA"
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -8162,6 +8172,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -8480,7 +8491,8 @@
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+        },
+        "semester_activity_label": "CA"
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -8787,7 +8799,8 @@
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+        },
+        "semester_activity_label": "CA"
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -9084,7 +9097,8 @@
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+        },
+        "semester_activity_label": "CA"
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -9434,6 +9448,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2026-03-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -9698,10 +9713,71 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_part_groupe": {
+            "value": 242.296,
+            "page": 66,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+            "note": "242 296 KMAD / 1 000 ; page imprimée 130, recoupé au bilan p.65 et note BPA p.78.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 863.267,
+            "page": 66,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+            "note": "863 267 KMAD / 1 000 ; pas marge sur commissions ni total commissions.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 759.84,
+            "page": 66,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+            "note": "759 840 KMAD / 1 000 ; même ligne et périmètre.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_part_groupe_a_rapprocher": {
+            "value": 790.351,
+            "page": 68,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+            "note": "790 351 KMAD / 1 000 ; page imprimée 134-135. Valeur d’audit, non utilisée dans les ratios.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_existant_a_rapprocher": {
+            "value": 24553090,
+            "page": 76,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+            "note": "Nombre publié au 31/12/2025, nominal 10 MAD ; identique dans la note 25 p.78. Conservé sans calcul tant que les opérations de capital ne sont pas rapprochées.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
         "eps_mad": null,
         "book_value_per_share_mad": null,
         "pe": null,
@@ -9709,24 +9785,31 @@
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 242.296,
+        "warnings": [
+          "Résultat net part du groupe 242,296 MMAD, distinct du total consolidé 241,283 MMAD (minoritaires négatifs).",
+          "Fonds propres groupe à rapprocher : total publié p.68 de 790,351 MMAD contre somme des lignes part groupe du bilan p.65 de 790,776 MMAD (écart 0,425 MMAD). P/B et ROE restent indisponibles.",
+          "La note 16 p.76 publie 24 553 090 actions de clôture et un passage du nominal de 100 à 10 MAD. Les lignes intermédiaires attribuent 22 297 781 actions à l’IPO de 20 000 KMAD et 1 712 809 actions à 171 281 KMAD : rapprochement des subdivisions/augmentations requis ; aucune moyenne pondérée n’est vérifiée.",
+          "BPA/PER retenus indisponibles malgré le BPA publié 9,87 MAD p.78. Le nombre de clôture et le résultat sont conservés pour audit sans débloquer un ratio ambigu.",
+          "PNB distinct du CA ; aucun ratio de dette industrielle. Semestre 2026 conservé sans annualisation.",
+          "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles."
+        ],
+        "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "pnb_mmad": null,
-        "pnb_growth_pct": null,
-        "validation_status": "missing",
+        "pnb_mmad": 863.27,
+        "pnb_growth_pct": 13.61,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+          "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -9740,8 +9823,27 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "semester_activity_label": "PNB",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 0,
+        "missing_metrics": [
+          "eps_mad",
+          "pb",
+          "roe_pct",
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -10043,7 +10145,8 @@
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+        },
+        "semester_activity_label": "CA"
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -10376,6 +10479,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -11037,6 +11141,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -11407,6 +11512,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -11809,6 +11915,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -12170,6 +12277,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -12562,6 +12670,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -12945,6 +13054,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -13328,6 +13438,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -13670,6 +13781,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -14307,6 +14419,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -14692,6 +14805,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -14994,6 +15108,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31"
       },
       "historical_statistics": {
@@ -15311,6 +15426,18 @@
             "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
             "printed_page": null,
             "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_part_groupe_a_rapprocher": {
+            "value": 1485.722,
+            "page": 63,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+            "note": "Valeur publiée dans le tableau de variation p. imprimée 124-125 ; conservée pour audit seulement, non utilisée dans les ratios.",
+            "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
           }
         },
         "eps_mad": 59.01,
@@ -15364,6 +15491,7 @@
             "validation_status": "referenced_import_not_independent_audit"
           }
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -15734,6 +15862,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -16118,6 +16247,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -16527,6 +16657,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "titres existants référencés",
@@ -16921,6 +17052,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -17289,6 +17421,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -17913,6 +18046,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -18294,6 +18428,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -18666,6 +18801,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -19032,6 +19168,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -19415,6 +19552,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -19769,6 +19907,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -20135,6 +20274,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -20314,21 +20454,86 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
-        "eps_mad": null,
-        "book_value_per_share_mad": null,
-        "pe": null,
-        "pb": null,
-        "revenue_growth_pct": null,
-        "roe_pct": null,
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_social": {
+            "value": 6.7131055,
+            "page": 40,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+            "note": "Total exercice 6 713 105,50 MAD / 1 000 000 ; pas 9 666 867,24 avant imputation des opérations d’exercices précédents. Recoupé p.38.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": "MAD",
+            "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_sociaux": {
+            "value": 41.14596811,
+            "page": 38,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+            "note": "Total A 41 145 968,11 MAD / 1 000 000 ; pas le total du financement permanent.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": "MAD",
+            "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_au_rapport": {
+            "value": 4783823,
+            "page": 1,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_Med_Paper_T4_2025.pdf",
+            "note": "En-tête du communiqué T4 au 31/12/2025 : 4 783 823 actions au nominal de 10 MAD ; concorde avec capital exact 47 838 230 MAD du bilan annuel. Le total incomplet de l’ETIC p.80 n’est pas utilisé.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:9df850466cc4cf09a561028309ddf3226c8eeb0b3beaa35f6a7ab043c0235f44",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "chiffre_affaires": {
+            "value": 88.40888533,
+            "page": 39,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+            "note": "88 408 885,33 MAD / 1 000 000 ; chiffre d’affaires, pas total produits d’exploitation.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": "MAD",
+            "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "chiffre_affaires_2024": {
+            "value": 105.56386554,
+            "page": 39,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+            "note": "105 563 865,54 MAD / 1 000 000 ; même ligne, colonne précédent.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": "MAD",
+            "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
+        "eps_mad": 1.4,
+        "book_value_per_share_mad": 8.6,
+        "pe": 17.09,
+        "pb": 2.79,
+        "revenue_growth_pct": -16.25,
+        "roe_pct": 16.32,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 6.7131055,
+        "warnings": [
+          "Résultat net positif de 6,7131055 MMAD avec perte d’exploitation de 10,35552586 MMAD et résultat non courant positif de 22,12620377 MMAD ; le ROE ne mesure pas une rentabilité récurrente.",
+          "Le tableau du capital p.80 totalise 4 714 199 titres, incompatible avec le capital 47 838 230 MAD au nominal 10 MAD. Le communiqué primaire T4 2025 confirme explicitement 4 783 823 actions : ce dénominateur recoupé est retenu.",
+          "BPA indicatif sur les titres de clôture ; ni prévision 2026 ni colonnes « opérations propres à l’exercice » substituées aux totaux annuels."
+        ],
+        "accounting_basis": "Social, CGNC, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
@@ -20336,9 +20541,22 @@
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
         "pnb_mmad": null,
         "pnb_growth_pct": null,
-        "validation_status": "missing",
-        "provenance": {},
-        "latest_report": null
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+          "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        },
+        "latest_report": null,
+        "semester_activity_label": "CA",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+        "coverage_pct": 100,
+        "missing_metrics": []
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -20376,11 +20594,15 @@
         "value": null,
         "state": "PARTIEL",
         "version": "nour-quant-v1",
-        "coverage_pct": 20,
+        "coverage_pct": 40,
         "contributors": {
           "liquidité": {
             "weight": 20,
             "points": 0
+          },
+          "rentabilité": {
+            "weight": 20,
+            "points": 20
           }
         },
         "nlp_weight": 0
@@ -20571,35 +20793,100 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
-        "eps_mad": null,
-        "book_value_per_share_mad": null,
-        "pe": null,
-        "pb": null,
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_social": {
+            "value": 148.199,
+            "page": 46,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+            "note": "148 199 KMAD / 1 000 ; recoupé au bilan p.44.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_sociaux": {
+            "value": 1228.22,
+            "page": 57,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+            "note": "Total 1 228 220 KMAD / 1 000 ; même somme au passif p.44 : 415 158 + 138 418 + 526 445 + 148 199. Hors provisions et dettes.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_au_rapport": {
+            "value": 1384182,
+            "page": 67,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+            "note": "Total capital publié, identique en 2024 et 2025 ; 138 418 200 MAD / nominal 100 MAD.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 438.374,
+            "page": 46,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+            "note": "Ligne III « Produit net », 438 374 KMAD / 1 000 ; pas les produits d’exploitation 4 601 755 KMAD.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 377.618,
+            "page": 46,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+            "note": "377 618 KMAD / 1 000 ; même tableau, même périmètre.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
+        "eps_mad": 107.07,
+        "book_value_per_share_mad": 887.33,
+        "pe": 8.54,
+        "pb": 1.03,
         "revenue_growth_pct": null,
-        "roe_pct": null,
+        "roe_pct": 12.07,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 148.199,
+        "warnings": [
+          "Le graphique p.6 affiche 1 155 MMAD de fonds propres ; le bilan p.44 et le total du tableau p.57 concordent à 1 228,220 MMAD. Les tableaux détaillés sont retenus et cet écart reste signalé.",
+          "BPA indicatif sur les 1 384 182 titres de clôture ; pas une moyenne pondérée auditée.",
+          "Produit net financier distinct du CA. Le dividende distribué en 2025 concerne le résultat 2024 : il ne sert pas de dividende de l’exercice 2025."
+        ],
+        "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "pnb_mmad": null,
-        "pnb_growth_pct": null,
-        "validation_status": "missing",
+        "pnb_mmad": 438.37,
+        "pnb_growth_pct": 16.09,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+          "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -20613,8 +20900,24 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "semester_activity_label": "CA",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 75,
+        "missing_metrics": [
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -20664,10 +20967,10 @@
         "note": "Fréquences historiques inconditionnelles sur fenêtres non chevauchantes, sans dividendes ni frais. Intervalle de Wilson indicatif : dépendance temporelle et changements de régime non corrigés. Ni prévision, ni probabilité de la prochaine séance."
       },
       "canonical_score": {
-        "value": 65.0,
+        "value": 72.0,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 80,
+        "coverage_pct": 100,
         "contributors": {
           "tendance20": {
             "weight": 20,
@@ -20688,6 +20991,10 @@
           "liquidité": {
             "weight": 20,
             "points": 0
+          },
+          "rentabilité": {
+            "weight": 20,
+            "points": 20
           }
         },
         "nlp_weight": 0
@@ -21000,6 +21307,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -21397,6 +21705,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -21791,6 +22100,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -22069,35 +22379,100 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
-        "eps_mad": null,
-        "book_value_per_share_mad": null,
-        "pe": null,
-        "pb": null,
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_social": {
+            "value": 107.295,
+            "page": 40,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+            "note": "107 295 KMAD / 1 000 ; recoupé au passif p.38.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_sociaux": {
+            "value": 1227.913,
+            "page": 55,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+            "note": "Total 1 227 913 KMAD / 1 000 ; somme des lignes 11, 12, 14, 16 du passif p.38. Dette subordonnée exclue.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_au_rapport": {
+            "value": 2776768,
+            "page": 4,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+            "note": "Calcul : capital exact 277 676 800 MAD / nominal 100 MAD (https://www.ammc.ma/fr/instruments-financiers/actions/action-maroc-leasing-sa), recoupé avec https://www.casablanca-bourse.com/en/live-market/emetteurs/MLE270297 ; pas une déduction à partir d’un capital arrondi au KMAD.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 387.199,
+            "page": 40,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+            "note": "387 199 KMAD / 1 000 ; PNB, pas produits d’exploitation bancaire.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 379.187,
+            "page": 40,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+            "note": "379 187 KMAD / 1 000 ; colonne 2024 du CPC.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
+        "eps_mad": 38.64,
+        "book_value_per_share_mad": 442.21,
+        "pe": 9.78,
+        "pb": 0.85,
         "revenue_growth_pct": null,
-        "roe_pct": null,
+        "roe_pct": 8.74,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 107.295,
+        "warnings": [
+          "Fonds propres stricts 1 227,913 MMAD : hors dette subordonnée de 120,109 MMAD. Le total propres et assimilés ne sert pas de valeur comptable.",
+          "PNB 2024 du CPC p.40 retenu à 379,187 MMAD ; le résumé p.14 indique 379,186 MMAD, écart de 1 KMAD conservé.",
+          "Nombre de titres calculé à partir du capital exact p.4 et du nominal AMMC 100 MAD ; recoupé avec la fiche émetteur BVC 2025. BPA indicatif sur les titres de clôture."
+        ],
+        "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "pnb_mmad": null,
-        "pnb_growth_pct": null,
-        "validation_status": "missing",
+        "pnb_mmad": 387.2,
+        "pnb_growth_pct": 2.11,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+          "document_hash": "sha256:c2e2497885b96a859ccbcdd7a01dc61be13d0bf7017403f6ff79517dfad09aa5",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -22111,8 +22486,24 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "semester_activity_label": "PNB",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 75,
+        "missing_metrics": [
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -22484,6 +22875,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -22874,6 +23266,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -23257,6 +23650,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -23628,6 +24022,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -23989,6 +24384,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -24335,6 +24731,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -24689,6 +25086,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -25085,6 +25483,7 @@
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
           "reported_net_including_exceptionals_millions": 313
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "moyenne pondérée publiée",
         "book_denominator": "titres existants référencés",
@@ -25460,6 +25859,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -25973,6 +26373,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -26341,6 +26742,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -26629,6 +27031,7 @@
             "validation_status": "referenced_import_not_independent_audit"
           }
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -27017,6 +27420,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -27390,6 +27794,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -27756,6 +28161,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -28139,6 +28545,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -28493,6 +28900,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -28860,6 +29268,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -29214,6 +29623,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -29571,6 +29981,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -29939,6 +30350,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -30268,6 +30680,7 @@
           "validation_status": "referenced_import_not_independent_audit"
         },
         "latest_report": null,
+        "semester_activity_label": "CA",
         "period_end": "2024-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -30660,6 +31073,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -31060,6 +31474,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -31381,6 +31796,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -31719,6 +32135,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -32097,6 +32514,7 @@
           "validation_status": "referenced_import_not_independent_audit",
           "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
         },
+        "semester_activity_label": "CA",
         "period_end": "2025-12-31",
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
@@ -32182,25 +32600,21 @@
   ],
   "fundamental_coverage": {
     "universe": 80,
-    "referenced": 66,
-    "with_eps": 35,
-    "with_pb": 46,
-    "with_roe": 33,
+    "referenced": 70,
+    "with_eps": 38,
+    "with_pb": 49,
+    "with_roe": 36,
     "with_recent_report": 68,
     "missing_documents": [
       "ATW",
       "BCP",
       "BMC",
       "BOA",
-      "CASH",
       "CDM",
       "CIH",
       "DIS",
       "DLM",
       "IBM",
-      "MDP",
-      "MGL",
-      "MRL",
       "SAF"
     ],
     "interpretation": "Couverture de relevés sourcés ; pas une certification ni une probabilité de rendement."
@@ -32208,7 +32622,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-02",
-    "observed_at": "2026-10-04T17:20:38.311865+00:00",
+    "observed_at": "2026-10-04T18:14:16.452033+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -32573,17 +32987,17 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-04T17:20:38.311865+00:00",
+    "checked_at": "2026-10-04T18:14:16.452033+00:00",
     "asof": "2026-10-02"
   },
   "news_health": {
-    "checked_at": "2026-10-04T17:20:38.085203+00:00",
+    "checked_at": "2026-10-04T18:14:16.211180+00:00",
     "status": "ok",
     "fetched_items": 10,
     "errors": []
   },
   "health": {
-    "checked_at": "2026-10-04T17:20:35.054589+00:00",
+    "checked_at": "2026-10-04T18:14:13.871784+00:00",
     "source": "CDG Capital Bourse",
     "result": "unchanged",
     "last_session": "2026-10-02",
@@ -32607,13 +33021,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T17:20:34+00:00",
-    "built_at": "2026-10-04T17:20:42.417242+00:00",
+    "started_at": "2026-10-04T18:14:13+00:00",
+    "built_at": "2026-10-04T18:14:20.442184+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37220132908",
-    "commit": "eac9a16461db294f3d6d8732346b0bb8ca37f9f8",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37220132908"
+    "run_id": "37223627312",
+    "commit": "bc9d93088c35c219c5fa590ff0fc3c61b100abf4",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37223627312"
   },
   "intraday": {
     "status": "unavailable",
