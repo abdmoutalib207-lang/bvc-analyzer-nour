@@ -15,6 +15,7 @@ def calculate(record, facts):
                validation_status='missing', provenance={}, latest_report=None)
     if isinstance(facts, dict):
         out.update(latest_report=facts.get('latest_report'), provenance=facts.get('provenance',{}))
+        out['semester_activity_label'] = facts.get('semester_activity_label', 'CA')
     if not isinstance(facts, dict) or urlparse(str(facts.get('url') or '')).scheme != 'https':
         return out
     out.update(source='relevé documentaire référencé, non certifié par cet import',
@@ -83,6 +84,10 @@ def calculate(record, facts):
     pnb, pnb_previous = fact('produit_net_bancaire'), fact(f"produit_net_bancaire_{(facts.get('exercice') or 0)-1}")
     out['pnb_mmad'] = rnd(pnb)
     out['pnb_growth_pct'] = rnd((pnb/pnb_previous-1)*100) if pnb is not None and pnb_previous and pnb_previous>0 else None
+    # Keep unresolved inputs visible for audit without using them as denominators.
+    for key in data:
+        if key.endswith('_a_rapprocher'):
+            fact(key)
     debt, cash, ebitda = fact('dettes_financieres'), fact('tresorerie_actif'), fact('excedent_brut_exploitation')
     strict = debt-cash if debt is not None and cash is not None else None
     out['net_debt_strict_mmad'] = rnd(strict)

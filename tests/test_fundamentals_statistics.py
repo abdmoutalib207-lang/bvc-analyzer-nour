@@ -87,7 +87,7 @@ class NewContracts(unittest.TestCase):
 
     def test_pinned_import_and_explicit_pending_coverage(self):
         f=json.loads((ROOT/'data/facts_reference.json').read_text())['records']
-        self.assertEqual(sum(bool(r.get('url')) for r in f.values()),66)
+        self.assertEqual(sum(bool(r.get('url')) for r in f.values()),70)
         self.assertEqual(sum(bool(r.get('latest_report')) for r in f.values()),68)
         self.assertTrue(all(r['provenance'].get('repository')=='abdmoutalib207-lang/-bvc-analyzer'
                             or r['provenance'].get('source_type')=='regulator_pdf' for r in f.values()))

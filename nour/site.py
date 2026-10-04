@@ -204,7 +204,7 @@ def detail_page(item, record, fixture, style, script):
     recent = calculated.get('latest_report') or {}
     if str(recent.get('document_url','')).startswith('https://'):
         financial_details += (f'<section class="panel"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
-            f'<p>CA : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
+            f'<p>{esc(calculated.get("semester_activity_label", "CA"))} : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
             f'résultat selon le périmètre du document : {number(recent.get("reported_net_millions"))} millions.</p>'
             f'<p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
             f'{esc(recent.get("note") or "")}</p>'
