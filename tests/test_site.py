@@ -89,6 +89,22 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn('Couleurs : proportion de points obtenus', page)
         self.assertIn('PER et P/B restent neutres', page)
 
+    def test_both_explorers_bootstrap_and_preserve_index_observations(self):
+        detail = (self.output / 'titres/ADI.html').read_text()
+        market = (self.output / 'index.html').read_text()
+        for page in (detail, market):
+            self.assertLess(page.index('window.NourCharts={Viewport,mount}'),
+                            page.index('new window.NourCharts.Viewport'))
+        payload = re.search(r'<script type="application/json" id="masi-data">(.*?)</script>', market)
+        self.assertIsNotNone(payload)
+        expected = [[d, v] for d, v in sorted(self.report['masi_history'].items())
+                    if d <= self.report['market_overview']['asof']]
+        self.assertEqual(json.loads(payload.group(1)), expected)
+        static = re.sub(r'<script\b[^>]*>.*?</script>', '', market, flags=re.DOTALL)
+        self.assertIn('data-masi-chart', static)
+        self.assertNotIn('data-chart-root', static)
+        self.assertNotIn('data-chart-type="candles"', static)
+
     def test_csv_matches_snapshot_and_published_quality_counts(self):
         """The audit counters and each warning must describe exported rows."""
         self.assertEqual(len(self.fixture["symbols"]), 80)

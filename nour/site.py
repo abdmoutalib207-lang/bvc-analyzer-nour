@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
+from .chart_view import navigation, explorer_footer
 
 
 def esc(value):
@@ -98,10 +99,11 @@ def graph(bars, label="1A", indicator_since=None):
             f'<div class="chart-toolbar"><div class="periods" role="group" aria-label="Période du graphique">{controls}</div>'
             f'<div class="chart-mode" role="group" aria-label="Type de graphique">{mode}</div></div>'
             f'<div class="chart-toolbar"><div class="indicators" role="group" aria-label="Afficher les indicateurs techniques">{indicators}</div>'
-            '<div class="chart-navigation" role="group" aria-label="Parcourir le graphique"><button type="button" data-chart-nav="older" aria-label="Séances précédentes">←</button><button type="button" data-chart-nav="newer" aria-label="Séances suivantes">→</button><button type="button" data-chart-nav="zoom-in" aria-label="Zoom avant">＋</button><button type="button" data-chart-nav="zoom-out" aria-label="Zoom arrière">−</button></div></div>'
-            f'<div class="chart" id="plot">{svg_chart(default)}</div>'
-            f'<div class="chart-readout" data-chart-readout role="status" aria-live="off">Survolez ou touchez le graphique pour lire la séance ; les flèches du clavier déplacent le curseur.</div>'
+            + navigation() + '</div>'
+            f'<div class="chart" id="plot" tabindex="0" aria-label="Graphique de cours, navigation au clavier disponible">{svg_chart(default)}</div>'
+            f'<div class="chart-readout" data-chart-readout role="status" aria-live="off">Survolez ou touchez le graphique pour lire la séance.</div>'
             f'<div id="chart-info" class="chart-info">{esc(notice)}{esc(default[0][0])} → {esc(default[-1][0])} · {len(default)} séances</div>'
+            + explorer_footer() +
             '<p class="fineprint">Indicateurs calculés depuis les séances OHLCV valides ; ils ne modifient ni le score ni les données publiées. Les séries reprennent à zéro après une suspension signalée.</p>'
             f'<script type="application/json" id="history-data">{json_data}</script></div>')
 
@@ -364,7 +366,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
     style = (assets / "nour.css").read_text(encoding="utf-8")
-    script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart.js', 'market.js'))
+    script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     if briefing is not None:

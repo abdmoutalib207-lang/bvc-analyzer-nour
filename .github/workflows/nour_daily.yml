@@ -16,6 +16,7 @@ on:
       - 'run.py'
       - 'web/nour.js'
       - 'web/chart.js'
+      - 'web/chart-controls.js'
       - 'web/market.js'
       - 'web/nour.css'
       - '.github/workflows/nour_daily.yml'
@@ -73,7 +74,9 @@ jobs:
           python -m unittest discover -s tests -v
           node --check web/nour.js
           node --check web/chart.js
+          node --check web/chart-controls.js
           node --check web/market.js
+          node tools/test_chart_controls.cjs
       - name: Save validated snapshots and pages
         run: |
           git config user.name 'bvc-nour-bot'

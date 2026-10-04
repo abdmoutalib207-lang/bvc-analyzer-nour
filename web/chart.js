@@ -8,6 +8,7 @@
   const info = root.querySelector('#chart-info');
   const fmt = value => new Intl.NumberFormat('fr-FR', {maximumFractionDigits: 2}).format(value);
   const safe = value => Number.isFinite(value) ? value.toFixed(2) : '—';
+  const tickDate = (date,width) => width<450 ? `${date.slice(8)}/${date.slice(5,7)}/${date.slice(2,4)}` : date;
   let raw;
   try { raw = JSON.parse(root.querySelector('#history-data').textContent); } catch { return; }
   const bars = raw.filter(b => Array.isArray(b) && /^\d{4}-\d{2}-\d{2}$/.test(b[0]) &&
@@ -59,8 +60,9 @@
       avgLoss === 0 ? 100 : 100 - 100 / (1 + avgGain / avgLoss);
   });
 
-  const state = {count: Math.min(252, bars.length), end: bars.length, type: 'line',
-    period: '252', indicators: new Set(['volume']), selected: null};
+  const state = Object.assign(new window.NourCharts.Viewport(bars.length, Math.min(252,bars.length)),
+    {type:'line', period:'252', indicators:new Set(['volume']), selected:null});
+  let explorer, selectBar = () => {};
   const periodButtons = [...root.querySelectorAll('[data-period]')];
   const toggleButtons = [...root.querySelectorAll('[data-indicator]')];
   const modeButtons = [...root.querySelectorAll('[data-chart-type]')];
@@ -86,7 +88,9 @@
     const visible = bars.slice(start, state.end);
     const derived = series.slice(start, state.end);
     if (!visible.length) return;
-    const L = 57, R = 856, plotW = R - L, top = 27, priceH = 228;
+    const W = Math.max(240,Math.round(holder.clientWidth || 900));
+    const L = 57, R = W-65, plotW = R - L, top = 27, priceH = W>600 ? 290 : 228;
+    holder.dataset.plotLeft=L; holder.dataset.plotRight=R;
     const volumeOn = state.indicators.has('volume');
     const volumeY = top + priceH + 20;
     const rsiY = volumeY + (volumeOn ? 65 : 5);
@@ -144,43 +148,40 @@
         `<path d="${path(derived.map(d=>d.macd),x,ym)}" fill="none" stroke="#83d6e5" stroke-width="1.8"/>` +
         `<path d="${path(derived.map(d=>d.signal),x,ym)}" fill="none" stroke="#f3ce77" stroke-width="1.5"/>`;
     }
-    holder.innerHTML = `<svg viewBox="0 0 900 ${height}" tabindex="0" role="img" aria-label="Graphique interactif OHLCV de ${visible.length} séances ; flèches gauche et droite pour lire les séances">${axes}${price}${indicators}<line class="chart-cross" x1="0" x2="0" y1="${top}" y2="${height-22}" visibility="hidden"/><circle class="chart-point" cx="0" cy="0" r="4" visibility="hidden"/><text x="${L}" y="${height-5}">${visible[0][0]}</text><text x="${R-73}" y="${height-5}">${visible.at(-1)[0]}</text></svg>`;
+    const comparison=explorer?.selection();
+    const range = comparison ? comparison.map(i=>clamp(i-start,0,visible.length-1)).sort((a,b)=>a-b) : null;
+    const highlight=range ? `<rect x="${x(range[0])}" y="${top}" width="${x(range[1])-x(range[0])}" height="${priceH}" fill="#f3ce77" opacity=".1"/>` : '';
+    holder.innerHTML = `<svg viewBox="0 0 ${W} ${height}" role="img" aria-label="Graphique OHLCV de ${visible.length} séances">${axes}${highlight}${price}${indicators}<line class="chart-cross" x1="0" x2="0" y1="${top}" y2="${height-22}" visibility="hidden"/><line class="chart-cross-price" x1="${L}" x2="${R}" y1="0" y2="0" visibility="hidden"/><circle class="chart-point" cx="0" cy="0" r="4" visibility="hidden"/><g class="chart-price-tag" visibility="hidden"><rect x="${R+3}" y="0" width="60" height="20" rx="3"/><text x="${R+6}" y="0"></text></g><text x="${L}" y="${height-5}">${visible[0][0]}</text><text text-anchor="end" x="${R}" y="${height-5}">${visible.at(-1)[0]}</text></svg>`;
     info.textContent = `${visible[0][0]} → ${visible.at(-1)[0]} · ${visible.length} séances · ${fmt(lo+pad)} à ${fmt(hi-pad)} MAD` +
       (Number(root.dataset.invalidCount) ? ` · ${root.dataset.invalidCount} séance(s) OHLCV écartée(s)` : '');
     const svg = holder.querySelector('svg'), cross = svg.querySelector('.chart-cross'), dot = svg.querySelector('.chart-point');
+    const priceCross=svg.querySelector('.chart-cross-price'), tag=svg.querySelector('.chart-price-tag');
     function select(j, announce=false) {
       j = clamp(j,0,visible.length-1);
       state.selected = start+j;
       const b=visible[j], d=derived[j], xx=x(j);
       cross.setAttribute('x1',xx); cross.setAttribute('x2',xx); cross.setAttribute('visibility','visible');
       dot.setAttribute('cx',xx); dot.setAttribute('cy',yp(b[4])); dot.setAttribute('visibility','visible');
+      priceCross.setAttribute('y1',yp(b[4]));priceCross.setAttribute('y2',yp(b[4]));priceCross.setAttribute('visibility','visible');
+      tag.setAttribute('visibility','visible');tag.querySelector('rect').setAttribute('y',yp(b[4])-10);
+      tag.querySelector('text').setAttribute('y',yp(b[4])+4);tag.querySelector('text').textContent=fmt(b[4]);
       const extra = [state.indicators.has('sma20') && d.sma20!==null ? `MM20 ${safe(d.sma20)}` : '',
         state.indicators.has('sma50') && d.sma50!==null ? `MM50 ${safe(d.sma50)}` : '',
         state.indicators.has('rsi') && d.rsi!==null ? `RSI ${safe(d.rsi)}` : '',
         state.indicators.has('macd') && d.macd!==null ? `MACD ${safe(d.macd)}` : ''].filter(Boolean).join(' · ');
-      readout.textContent = `${b[0]} · O ${fmt(b[1])} · H ${fmt(b[2])} · B ${fmt(b[3])} · C ${fmt(b[4])} MAD · ${fmt(b[5])} titres` + (extra ? ` · ${extra}` : '');
+      const previous=bars[start+j-1]?.[4], delta=previous>0?(b[4]/previous-1)*100:null;
+      readout.innerHTML = `<strong>${b[0]}</strong><span>Ouverture <b>${fmt(b[1])}</b></span><span>Haut <b>${fmt(b[2])}</b></span><span>Bas <b>${fmt(b[3])}</b></span><span>Clôture <b>${fmt(b[4])} MAD</b></span><span>Volume <b>${fmt(b[5])} titres</b></span>` +
+        (delta===null?'':`<span class="${delta>=0?'gain':'loss'}">${delta>=0?'+':''}${fmt(delta)} % depuis la précédente séance disponible</span>`) +
+        (extra?`<span class="chart-extra">${extra}</span>`:'');
       readout.setAttribute('aria-live', announce ? 'polite' : 'off');
     }
-    svg.addEventListener('pointermove', e => {
-      const rect=svg.getBoundingClientRect();
-      const px=(e.clientX-rect.left)*900/rect.width;
-      select(Math.floor((px-L)*visible.length/plotW));
-    });
-    svg.addEventListener('pointerleave', () => {
-      cross.setAttribute('visibility','hidden'); dot.setAttribute('visibility','hidden');
-    });
-    svg.addEventListener('focus', () => select(state.selected === null ? visible.length-1 : clamp(state.selected-start,0,visible.length-1),true));
-    svg.addEventListener('keydown', e => {
-      if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
-      e.preventDefault();
-      const current=state.selected === null ? visible.length-1 : clamp(state.selected-start,0,visible.length-1);
-      select(e.key==='Home'?0:e.key==='End'?visible.length-1:current+(e.key==='ArrowRight'?1:-1),true);
-    });
-    if (state.selected !== null && state.selected >= start && state.selected < state.end) select(state.selected-start);
+    selectBar=(index,announce=false)=>select(index-start,announce);
+    select(state.selected !== null && state.selected >= start && state.selected < state.end ? state.selected-start : visible.length-1);
+    explorer?.sync();
   }
   periodButtons.forEach(b => b.addEventListener('click', () => {
-    state.count=b.dataset.period==='all'?bars.length:Math.min(Number(b.dataset.period),bars.length);
-    state.end=bars.length; state.selected=null; state.period=b.dataset.period; render();
+    const count=b.dataset.period==='all'?bars.length:Math.min(Number(b.dataset.period),bars.length);
+    state.set(count,bars.length-count);state.period=b.dataset.period;explorer.resetCursor();render();
   }));
   toggleButtons.forEach(b => b.addEventListener('click', () => {
     const key=b.dataset.indicator;
@@ -188,13 +189,7 @@
     render();
   }));
   modeButtons.forEach(b => b.addEventListener('click', () => {state.type=b.dataset.chartType;render();}));
-  root.querySelectorAll('[data-chart-nav]').forEach(b => b.addEventListener('click', () => {
-    const cmd=b.dataset.chartNav;
-    if (cmd==='older') state.end=clamp(state.end-Math.max(1,Math.floor(state.count*.65)),state.count,bars.length);
-    if (cmd==='newer') state.end=clamp(state.end+Math.max(1,Math.floor(state.count*.65)),state.count,bars.length);
-    if (cmd==='zoom-in') state.count=Math.min(bars.length,Math.max(10,Math.floor(state.count*.65)));
-    if (cmd==='zoom-out') state.count=Math.min(bars.length,Math.ceil(state.count/ .65));
-    state.end=Math.max(state.end,state.count);state.period=null;state.selected=null;render();
-  }));
+  explorer=window.NourCharts.mount({root,chart:holder,state,points:bars.map(b=>[b[0],b[4]]),
+    defaultCount:Math.min(252,bars.length),onChange:render,onRead:(i,a)=>selectBar(i,a)});
   render();
 })();

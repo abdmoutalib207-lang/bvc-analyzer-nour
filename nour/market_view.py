@@ -3,6 +3,7 @@ import html
 import json
 from datetime import date
 from calendar import monthrange
+from .chart_view import navigation, explorer_footer
 
 
 def fmt(v, digits=2):
@@ -56,13 +57,13 @@ def market_panel(report):
                f'<div><span>Depuis le début de l’année</span><strong>{fmt(index.get("ytd_pct"))} %</strong></div>'
                f'<div><span>Plus haut de séance</span><strong>{fmt(overview.get("high"))}</strong></div>'
                f'<div><span>Plus bas de séance</span><strong>{fmt(overview.get("low"))}</strong></div></div>'
-               '<div data-masi-chart><div class="chart-toolbar"><div class="periods" aria-label="Période MASI">'
+               '<div class="chart-root" data-masi-chart><div class="chart-toolbar"><div class="periods" aria-label="Période MASI">'
                + ''.join(f'<button type="button" data-masi-period="{n}" aria-pressed="{str(n==63).lower()}">{title}</button>'
                          for n,title in ((21,'1M'),(63,'3M'),(252,'1A'),(0,'Tout')))
-               + '</div><span class="panel-sub">Historique des clôtures · survolez ou touchez le graphique</span></div>'
-               f'<div class="chart masi-chart">{masi_svg(last)}</div><div class="chart-readout" aria-live="polite">'
+               + '</div></div><div class="chart-toolbar">' + navigation() + '</div>'
+               f'<div class="chart masi-chart" tabindex="0" aria-label="Graphique MASI, navigation au clavier disponible">{masi_svg(last)}</div><div class="chart-readout" aria-live="off">'
                + (f'{esc(last[-1][0])} · MASI {fmt(last[-1][1])} points' if last else 'Aucune série disponible')
-               + '</div><script type="application/json" id="masi-data">'
+               + '</div>' + explorer_footer() + '<script type="application/json" id="masi-data">'
                + json.dumps(points).replace('<','\\u003c') + '</script></div>'
                '<p class="fineprint">Le graphique représente les clôtures quotidiennes, pas la trajectoire intrajournalière. Les séances manquantes restent absentes. Historique initial repris de l’archive du moteur principal, dont certaines périodes viennent d’Investing.com ; nouvelles observations collectées directement par Nour auprès de CDG.</p></section>')
     breadth = overview.get('breadth') or {}
