@@ -1701,14 +1701,15 @@
         "document_url": "https://www.ammc.ma/sites/default/files/CP_Risma_S1_26.pdf",
         "accounting_basis": "résultat net part du groupe HORS éléments exceptionnels",
         "pages": "p.1 (CA, RNPG publié) ; p.2 (RNPG hors éléments exceptionnels)",
-        "reported_net_millions": 313,
-        "reported_net_previous_millions": 135,
+        "reported_net_millions": 144,
+        "reported_net_previous_millions": 118,
         "revenue_millions": 863,
         "revenue_previous_millions": 754,
         "currency": "MAD",
         "note": "Le RNPG publié (313) contient +169 MDH de plus-values de cession, non récurrentes. Les retenir diviserait le PER par près de deux sur la foi d'une vente d'actifs : on retient la base hors éléments exceptionnels, publiée par l'émetteur lui-même.",
         "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "reported_net_including_exceptionals_millions": 313
       }
     },
     "SNA": {

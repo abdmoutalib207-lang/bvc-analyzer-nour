@@ -92,6 +92,9 @@ class NewContracts(unittest.TestCase):
         self.assertTrue(all(r['provenance']['repository']=='abdmoutalib207-lang/-bvc-analyzer' for r in f.values()))
         self.assertIsNone(calculate({'price':48.65},f['ENK'])['eps_mad'])
         self.assertIsNone(calculate({'price':220},f['T2S'])['pe'])
+        self.assertEqual(calculate({'price':6591},f['SMI'])['eps_mad'],241.39)
+        self.assertEqual(f['RIS']['latest_report']['reported_net_millions'],144)
+        self.assertEqual(f['RIS']['latest_report']['reported_net_including_exceptionals_millions'],313)
 
 
 if __name__=='__main__': unittest.main()
