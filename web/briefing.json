@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-03",
+  "generated_for": "2026-10-04",
   "market_session": "2026-10-02",
   "runtime": {
     "timezone": "Africa/Casablanca",
@@ -12,14 +12,14 @@
     "schedule": null,
     "scheduled_at": null,
     "scheduled_at_basis": null,
-    "edition_for": "2026-10-03",
-    "started_at": "2026-10-03T16:01:09+00:00",
-    "built_at": "2026-10-03T16:01:16.987810+00:00",
+    "edition_for": "2026-10-04",
+    "started_at": "2026-10-04T16:02:42+00:00",
+    "built_at": "2026-10-04T16:02:49.088942+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37135299450",
-    "commit": "8d6fae1fc9780d44843ea73cf88d991e875fceda",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37135299450"
+    "run_id": "37215247645",
+    "commit": "f631bc4a6a4bc82f120981e4cb3e9b96d2e5f373",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37215247645"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -30,7 +30,7 @@
   "edition_status": "published",
   "edition_notice": null,
   "snapshot_updated": "2026-10-02T21:26:04.011162+00:00",
-  "market_status": "CLOSED",
+  "market_status": "closed",
   "coverage": {
     "titles": 80,
     "quoted_session": 67,
@@ -75,34 +75,105 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,24 MDH, contre 2,42 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions": {
-              "value": 22078588,
-              "page": 50,
-              "unit": "actions"
-            },
             "resultat_net_part_groupe": {
               "value": 407.601,
               "page": 21,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "supérieur au consolidé : les minoritaires sont en perte",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "capitaux_propres_part_groupe": {
               "value": 3993.181,
               "page": 21,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "« Capitaux propres du Groupe 5.2.11 3.993.181 3.668.286 » ; en-tête « Etats Financiers Consolidés Au 31 Décembre 2025 » et « (EN MILLIERS DE DIRHAMS : KMAD) ». Le 5.2.11 est un renvoi de note, pas un montant. Capital 2.207.859 KMAD = 22 078 588 titres de nominale 100. L'ensemble consolidé vaut 4.084.918, minoritaires inclus.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions": {
+              "value": 22078588,
+              "page": 50,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "valeur nominale 100 MAD",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "chiffre_affaires": {
-              "value": 2432.0,
+              "value": 2432,
               "page": 17,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "consolidé, 31/12/2025",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "chiffre_affaires_2024": {
-              "value": 2363.0,
+              "value": 2363,
               "page": 17,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 2114.079,
+              "page": 21,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "dettes de financement (emprunts obligataires 1.774.188, crédit-bail 60.916, établissements de crédit 109.793, autres emprunts 35.822 — note 5.2.12, p.27) + trésorerie-passif. ⚠️ Le rapport publie un « ENDETTEMENT NET » de 1.303 MMAD (p.17) sans en donner la définition ; notre formule donne 1 361,5. Écart de 58,5 non expliqué : nous publions la formule, et le disons.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 752.59,
+              "page": 21,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "disponibilités + titres et valeurs de placement. Recoupement : 328.174 + 424.416 − 133.361 = 619.229, contre « Trésorerie nette de clôture 619.372 » au tableau des flux (p.23) — 0,14 MMAD d'écart.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 603,
+              "page": 14,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "EBE 2024 : 568",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": 18.46,
@@ -112,7 +183,45 @@
           "revenue_growth_pct": 2.92,
           "roe_pct": 10.21,
           "dividend_yield_pct": null,
-          "earnings_mmad": 407.601
+          "earnings_mmad": 407.601,
+          "warnings": [
+            "Le résultat financier existant (−45,0, p.17) est l'arrondi de −44.808 (p.22) : le contrôle REX + RF + RNC = RAI tolère donc 0,3 MMAD."
+          ],
+          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 1361.49,
+          "net_debt_ebitda": 2.26,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé (normes nationales) — ensemble 229,621 dont minoritaires 0,022. ⚠️ Conclusion des CAC (Fidaroc Grant Thornton) « sous réserve » sur les comptes sociaux ET consolidés : liquidation d'EMT et EMT Bâtiment toujours en cours, impact « ne pouvant être prononcé » — réserve NON chiffrée (p.4-5, images, lues par OCR)",
+            "pages": "p.3 en milliers de dirhams, compte de produits et charges consolidé, colonnes « juin-26 juin-25 » : « - Part du groupe 229.599 210.272 », « Chiffre d'affaires 1.418.702 1.333.468 ». Communiqué p.1 : « chiffre d'affaires de 1,418 milliard », « résultat net de 229 millions », « +6,5% »",
+            "reported_net_millions": 229.599,
+            "reported_net_previous_millions": 210.272,
+            "revenue_millions": 1418.702,
+            "revenue_previous_millions": 1333.468,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 100,
+          "missing_metrics": []
         },
         "checkpoint": "Préventes, livraisons, stocks, dette et conversion du résultat en trésorerie.",
         "source": "CDG Capital Bourse",
@@ -130,7 +239,38 @@
         },
         "turnover_mad": 8023502.7
       },
-      "publications": []
+      "publications": [
+        {
+          "id": "37269794473f5b94f2",
+          "title": "Alliances Darna -Résultats financiers du 1er semestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/Al_Darna_S1_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-09-30T19:33:59+00:00",
+          "tickers": [
+            "ADI"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED"
+        },
+        {
+          "id": "78109817f1b2239a5b",
+          "title": "ADI - Résultats financiers du 1er semestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-09-30T18:29:05+00:00",
+          "tickers": [
+            "ADI"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED"
+        }
+      ]
     },
     {
       "symbol": "RDS",
@@ -160,19 +300,57 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,37 MDH, contre 1,99 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 26208860,
-              "page": 26,
-              "unit": "actions"
-            },
             "capitaux_propres_part_groupe": {
               "value": 3739.48,
               "page": 26,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "« CAPITAUX PROPRES PART GROUPE 3.739.480 3.735.121 » ; en-tête « En milliers de dirhams 31/12/2025 31/12/2024 ». Capital 1.310.443 KMAD = 26 208 860 titres de nominale 50. Minoritaires 98 KMAD, d'où un total de 3.739.578.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 26208860,
+              "page": 26,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "capital 1.310.443 KMAD ÷ nominale 50. Le marché en implique 26 209 302 (écart 0,002 %).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 2116.222,
+              "page": 26,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "« Total Dettes Financières 616.489 1.499.734 2.116.222 2.013.150 » ; note « Dettes financières » : colonnes « A moins d'un an / A plus d'un an / Total 2025 / 2024 » — total 2025, troisième colonne. Établissements de crédit 1 445 990 + dettes diverses 312 583 + location 16 184 + concours bancaires 341 465. Recoupé au bilan : 1 499 261 + 474 + 275 024 + 341 465 = 2 116 224.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 249.215,
+              "page": 24,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "« Trésorerie et équivalence de trésorerie 249.215 356.260 »",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": null,
@@ -182,7 +360,47 @@
           "revenue_growth_pct": null,
           "roe_pct": null,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": null,
+          "warnings": [],
+          "accounting_basis": "consolidé IFRS, 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 1867.01,
+          "net_debt_ebitda": null,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/RDS_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé (IFRS) — observation des CAC (sans réserve) sur la titrisation FT Olympe",
+            "pages": "p.5, état du résultat global, colonnes « 30/06/2026 30/06/2025 » : « RESULTAT NET PART DU GROUPE 19.747 6.465 », « Chiffres d'affaires 208.787 162.088 ». ⚠️ Tableaux titrés « EN MDH » mais en KMAD, le point séparant les milliers : l'attestation écrit « un bénéfice net consolidé de 19.746 milliers de dirhams », le communiqué p.1 « 209 MDH » de chiffre d'affaires et « 20 MDH » de résultat. Social : perte de 10 566 KMAD (attestation p.4)",
+            "reported_net_millions": 19.747,
+            "reported_net_previous_millions": 6.465,
+            "revenue_millions": 208.787,
+            "revenue_previous_millions": 162.088,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 25,
+          "missing_metrics": [
+            "eps_mad",
+            "roe_pct",
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Backlog sécurisé, reconnaissance du chiffre d’affaires, livraisons et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -230,19 +448,69 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 8,65 MDH, contre 13,68 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 34674300,
-              "page": 96,
-              "unit": "actions"
-            },
             "capitaux_propres_part_groupe": {
               "value": 4544.126,
               "page": 96,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "« Capitaux Propres Part Groupe 4 544 126 1 761 218 » ; en-tête « (En milliers de dirhams) 31/12/2025 31/12/2024 ». Capital social 346 743 KMAD = 34 674 300 titres de nominale 10. Le quasi-triplement vient de l'augmentation de capital : les primes passent de 481 717 à 2 651 372 KMAD.",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 34674300,
+              "page": 96,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "capital social 346 743 KMAD ÷ nominale 10. Le marché en implique 34 673 913 (écart 0,001 %).",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 2708.541,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "« Dettes et emprunts » (hors provisions durables 2 154) + trésorerie-passif.",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 1925.788,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "« TRÉSORERIE 1 925 788 621 723 » ; trésorerie-actif SEULE. ⚠️ Les « Titres de placement 229 519 » sont classés par la société dans l'ACTIF D'EXPLOITATION, pas en trésorerie : non comptés (les inclure abaisserait la dette nette à 553,2). ⚠️ La « TRÉSORERIE À LA CLÔTURE DE L'EXERCICE 2 015 875 » du tableau des flux (p.98) ne se rapproche d'aucune combinaison des lignes du bilan : non utilisée.",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 2638.919,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "« RÉSULTAT OPERATIONNEL AVANT AMORTISSEMENT 2 638 919 1 192 794 » ; ligne du compte consolidé, avant « Dotation d'exploitation (hors écarts d'acquisition) 379 628 ».",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": null,
@@ -252,7 +520,47 @@
           "revenue_growth_pct": null,
           "roe_pct": null,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": null,
+          "warnings": [],
+          "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 782.75,
+          "net_debt_ebitda": 0.3,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_TGCC_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé, en M MAD",
+            "pages": "tableau du communiqué (« Résultat net part du Groupe 435 416 19 +4,5 % », « Produit d'exploitation 5 477 5 605 ») ; carnet de commandes 28 360 M MAD (+48,5 %)",
+            "reported_net_millions": 435,
+            "reported_net_previous_millions": 416,
+            "revenue_millions": 5477,
+            "revenue_previous_millions": 5605,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 25,
+          "missing_metrics": [
+            "eps_mad",
+            "roe_pct",
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Carnet de commandes, marges, BFR et conversion en cash.",
         "source": "CDG Capital Bourse",
@@ -270,7 +578,23 @@
         },
         "turnover_mad": 16649472.4
       },
-      "publications": []
+      "publications": [
+        {
+          "id": "4a93aadba2e2fa2b7c",
+          "title": "TGCC - Résultats financiers du 1er semestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/TGCC_S1_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-09-30T18:38:06+00:00",
+          "tickers": [
+            "TGCC"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED"
+        }
+      ]
     },
     {
       "symbol": "SGTM",
@@ -300,19 +624,69 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 7,54 MDH, contre 8,84 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 60000000,
-              "page": 87,
-              "unit": "actions"
-            },
             "capitaux_propres_part_groupe": {
               "value": 3550.399,
               "page": 87,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "« Dont : Capitaux propres part du groupe 3 550 399 2 619 799 » ; en-tête « (En Milliers de dirhams) Note 31/12/2025 31/12/2024 ». La part du groupe égale l'ensemble consolidé en 2025 parce que les intérêts minoritaires y sont nuls ; en 2024 ils valaient -1 934, d'où 2 617 864 + 1 934 = 2 619 799. L'arithmétique ferme.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 60000000,
+              "page": 87,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "capital 1 200 000 KMAD ÷ nominale 20. ⚠️ La nominale de 20 ne figure pas parmi les six usuelles ; c'est le marché qui tranche, et il donne exactement 60 000 000 titres — 1 200 000 000 ÷ 60 000 000 = 20 au dirham près. Le capital est passé de 300 000 à 1 200 000 KMAD sur l'exercice.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 2171.841,
+              "page": 87,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "dettes de financement + trésorerie-passif.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 2256.346,
+              "page": 87,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "trésorerie-actif + valeurs mobilières de placement : le tableau des flux (p.88) arrête « Trésorerie de clôture 1 204 150 » = 1 898 533 + 357 813 − 1 052 196.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 2489,
+              "page": 36,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "« 2 489 » ; graphique « EBITDA* » (* M MAD), valeur 2025 ; confirmé p.6 : « EBITDA … 2,5 Md MAD … +31,7% vs. 2024 » (2 489 ÷ 1 890 = +31,7 %). Recoupé : résultat d'exploitation 1 951 593 + « Dotations d'exploitation, nettes des reprises et transferts de charges (537 175) » = 2 488 768 KMAD.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "MMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": null,
@@ -322,7 +696,47 @@
           "revenue_growth_pct": null,
           "roe_pct": null,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": null,
+          "warnings": [],
+          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": -84.51,
+          "net_debt_ebitda": -0.03,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_SGTM_S1_26.pdf",
+            "accounting_basis": "⚠ résultat net consolidé (le communiqué ne donne pas la part du groupe)",
+            "pages": "p.1",
+            "reported_net_millions": 793,
+            "reported_net_previous_millions": 739,
+            "revenue_millions": 6601,
+            "revenue_previous_millions": 7117,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 25,
+          "missing_metrics": [
+            "eps_mad",
+            "roe_pct",
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Carnet de commandes, prises de commandes, BFR et dette nette.",
         "source": "CDG Capital Bourse",
@@ -370,19 +784,69 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,77 MDH, contre 2,02 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 17000900,
-              "page": 68,
-              "unit": "actions"
-            },
             "capitaux_propres_part_groupe": {
               "value": 2788.340389,
               "page": 68,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "« TOTAL CAPITAUX PROPRES PART GROUPE 2 788 340 389 2 634 396 857 » ; en-tête « (en MAD) Note 31/12/2025 31/12/2024 ». Capital social 1 700 090 000 MAD sur la même page = 17 000 900 titres de nominale 100.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 17000900,
+              "page": 68,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "capital 1 700 090 000 MAD ÷ nominale 100. Le marché en implique 17 000 000 (écart 0,005 %).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 1029.820216,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "dettes financières non courantes + courantes + concours bancaires.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 975.732912,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "« Trésorerie et équivalent de trésorerie N.31 975 732 912 399 663 415 » ; recoupé : « TRÉSORERIE DE CLÔTURE (A + B + C + D) 961 298 883 » (p.70) = 975 732 912 − 14 434 029.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 469.98402,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "« EBITDA 469 984 020 374 606 106 » ; ligne « EBITDA » de l'état du résultat consolidé, avant « Dotations d'exploitation N.11.1 - 102 845 813 ».",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": null,
@@ -392,7 +856,47 @@
           "revenue_growth_pct": null,
           "roe_pct": null,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": null,
+          "warnings": [],
+          "accounting_basis": "consolidé IFRS, 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 54.09,
+          "net_debt_ebitda": 0.12,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_CMGP_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé",
+            "pages": "p.1",
+            "reported_net_millions": 130,
+            "reported_net_previous_millions": 97,
+            "revenue_millions": 1588,
+            "revenue_previous_millions": 1121,
+            "currency": "MAD",
+            "note": "⚠ PÉRIMÈTRE ÉLARGI : CPCM, Agrosem et Sodipire intégrés depuis 2025. À périmètre comparable (proforma), le CA progresse de 8,7 % et non de 41,7 % ; la croissance retenue est celle publiée, elle inclut les acquisitions.",
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 25,
+          "missing_metrics": [
+            "eps_mad",
+            "roe_pct",
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Mix d’activité, marge, BFR et financement de la croissance.",
         "source": "CDG Capital Bourse",
@@ -410,7 +914,23 @@
         },
         "turnover_mad": 4236012.2
       },
-      "publications": []
+      "publications": [
+        {
+          "id": "fc5f3cb785507bcbb3",
+          "title": "CMGP - Résultats financiers du 1er semestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/CMGP_S1_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-09-30T19:25:02+00:00",
+          "tickers": [
+            "CMGP"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED"
+        }
+      ]
     },
     {
       "symbol": "MSA",
@@ -440,39 +960,141 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 14,08 MDH, contre 16,27 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 73395600,
-              "page": 136,
-              "unit": "actions"
-            },
             "resultat_net_part_groupe": {
               "value": 1588.764,
               "page": 121,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "1 266,978 en 2024",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "capitaux_propres_part_groupe": {
               "value": 4048.148,
               "page": 124,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "« Capitaux propres au 31/12/2025 733 956 - 1 725 428 1 588 764 551 099 4 599 247 » dans le TABLEAU DE VARIATIONS DES CAPITAUX PROPRES, « (En milliers de Dirhams) ». ⚠️ La part du groupe n'y a pas de colonne propre : elle se lit comme le total moins les intérêts minoritaires, 4 599 247 - 551 099 = 4 048 148, ce que confirme la somme des colonnes du groupe, 733 956 + 1 725 428 + 1 588 764. Capital 733 956 KMAD = 73 395 600 titres de nominale 10.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 73395600,
+              "page": 136,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "« Nombre d'actions (milliers) 73 396 » p.131 ; capital 733 956 000 ÷ 10 de nominale = 73 395 600. La résolution d'AG le confirme par une troisième voie : 807 351 600 DH distribués ÷ 11 DH = 73 395 600.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "chiffre_affaires": {
               "value": 5784.894,
               "page": 122,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "5 008,150 en 2024",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 1367.295,
+              "page": 121,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "dettes de financement ; trésorerie-passif nulle.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 2119.924,
+              "page": 121,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "disponibilités + titres et valeurs de placement : le tableau des flux (p.123) arrête « Trésorerie nette clôture (y compris placements) 2.119.923 ». Dette nette 1 367 295 − 2 119 924 = −752 629, contre « Endettement net - 752 628 » publié en note 12 (p.129) : concordance au millier près.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 3192,
+              "page": 95,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "« 3 192 millions 3 millions 181 milliers » ; « Excédent Brut d'Exploitation … 3 192 millions de Dirhams +22% » (rapport de gestion, groupe). Recoupé : résultat d'exploitation 2 562 327 + dotations d'exploitation 661 787 − reprises 31 698 = 3 192 416 KMAD.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "MMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": 21.65,
           "book_value_per_share_mad": 55.16,
-          "pe": 35.57,
+          "pe": 35.58,
           "pb": 13.96,
           "revenue_growth_pct": null,
           "roe_pct": 39.25,
           "dividend_yield_pct": null,
-          "earnings_mmad": 1588.764
+          "earnings_mmad": 1588.764,
+          "warnings": [],
+          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": -752.63,
+          "net_debt_ebitda": -0.24,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/Marsa_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé",
+            "pages": "p.4 (comptes consolidés)",
+            "reported_net_millions": 869.475,
+            "reported_net_previous_millions": 773.12,
+            "revenue_millions": 3214.272,
+            "revenue_previous_millions": 2842.363,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 75,
+          "missing_metrics": [
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Trafic portuaire, concessions, capacité, investissements et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -498,7 +1120,7 @@
       "price": 6200.0,
       "asof": "2026-10-02",
       "data_status": "OBSERVABLE",
-      "score": 34.38,
+      "score": 47.5,
       "score_state": "CALCULABLE",
       "support": 6160.0,
       "resistance": 6870.0,
@@ -520,18 +1142,154 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 2,76 MDH, contre 3,21 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "absent",
-          "exercise": null,
-          "document_url": null,
-          "evidence": {},
-          "eps_mad": null,
-          "book_value_per_share_mad": null,
-          "pe": null,
-          "pb": null,
-          "revenue_growth_pct": null,
-          "roe_pct": null,
+          "source": "relevé documentaire référencé, non certifié par cet import",
+          "exercise": 2025,
+          "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+          "evidence": {
+            "resultat_net_social": {
+              "value": 397.10859401,
+              "page": 44,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "Recoupé directement sur le rendu du RFA 2025 le 04/10/2026. Page PDF physique ; pagination imprimée 86.",
+              "accounting_basis": "SOCIAL, 31/12/2025",
+              "original_unit": null,
+              "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
+              "printed_page": "86",
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "capitaux_propres_sociaux": {
+              "value": 1660.22315808,
+              "page": 43,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "Recoupé directement sur le rendu du RFA 2025 le 04/10/2026. Page PDF physique ; pagination imprimée 85.",
+              "accounting_basis": "SOCIAL, 31/12/2025",
+              "original_unit": null,
+              "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
+              "printed_page": "85",
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 1645090,
+              "page": 55,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "Recoupé directement sur le rendu du RFA 2025 le 04/10/2026. Page PDF physique ; pagination imprimée 108.",
+              "accounting_basis": "SOCIAL, 31/12/2025",
+              "original_unit": null,
+              "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
+              "printed_page": "108",
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "chiffre_affaires": {
+              "value": 1566.03353459,
+              "page": 44,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "Recoupé directement sur le rendu du RFA 2025 le 04/10/2026. Page PDF physique ; pagination imprimée 86.",
+              "accounting_basis": "SOCIAL, 31/12/2025",
+              "original_unit": null,
+              "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
+              "printed_page": "86",
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "chiffre_affaires_2024": {
+              "value": 1052.71264187,
+              "page": 44,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "Recoupé directement sur le rendu du RFA 2025 le 04/10/2026. Page PDF physique ; pagination imprimée 86.",
+              "accounting_basis": "SOCIAL, 31/12/2025",
+              "original_unit": null,
+              "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
+              "printed_page": "86",
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "dettes_financieres": {
+              "value": 34.880608,
+              "page": 43,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": ". dettes de financement 34 684 488,29 + trésorerie-passif 196 119,86. ⚠️ Les 563,7 MMAD de « Comptes d'associés » à l'actif (compte courant sur le groupe Managem) ne sont PAS de la trésorerie ici : la société, elle, les intègre dans son « Endettement financier −539.8 » (p.41, note (*) « +/- comptes courants d'associés »)",
+              "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 10.957381,
+              "page": 43,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "« Trésorerie-Actif 10 957 381,08 10 957 381,08 11 232 214,68 »",
+              "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 864.051358,
+              "page": 45,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "« 864 051 357,75 455 201 720,20 ». ligne « EXCÉDENT BRUT D'EXPLOITATION (EBE) » de l'état des soldes de gestion SOCIAL ; p.41 : « Excédent Brut d'exploitation 864.1 455.2 »",
+              "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            }
+          },
+          "eps_mad": 241.39,
+          "book_value_per_share_mad": 1009.2,
+          "pe": 25.68,
+          "pb": 6.14,
+          "revenue_growth_pct": 48.76,
+          "roe_pct": 23.92,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": 397.10859401,
+          "warnings": [
+            "BASE SOCIALE : SMI (filiale de Managem) ne publie pas de comptes consolidés ; tous les termes sont sociaux, y compris les capitaux propres.",
+            "Dette nette = dettes de financement + trésorerie-passif − trésorerie-actif = 23,9 MMAD. La société publie un « endettement financier » de −539,8 MMAD parce qu'elle y retranche son compte courant d'associés (563,7 MMAD sur Managem) : deux définitions, le contrôle les recolle, celle de la formule du module est retenue."
+          ],
+          "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 23.92,
+          "net_debt_ebitda": 0.03,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_SMI_S1_26.pdf",
+            "accounting_basis": "résultat net (le communiqué ne distingue pas la part du groupe)",
+            "pages": "p.1",
+            "reported_net_millions": 243,
+            "reported_net_previous_millions": 108,
+            "revenue_millions": 852,
+            "revenue_previous_millions": 628,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 100,
+          "missing_metrics": []
         },
         "checkpoint": "Production, prix de l’argent, coûts, investissements et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -581,18 +1339,139 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 2,37 MDH, contre 3,25 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "absent",
-          "exercise": null,
-          "document_url": null,
-          "evidence": {},
+          "source": "relevé documentaire référencé, non certifié par cet import",
+          "exercise": 2025,
+          "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+          "evidence": {
+            "resultat_net_part_groupe": {
+              "value": 204.576,
+              "page": 219,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "« dont Résultat net (part du groupe) 74 937 | 67 311 | 204 576 » et « dont Intérêts minoritaires 4 999 | 10 282 | 6 693 » : 204 576 + 6 693 = 211 269 ; bilan p.221 « Résultat consolidé 74 937 | 67 311 | 204 576 ». Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "capitaux_propres_part_groupe": {
+              "value": 1410.404,
+              "page": 221,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "⚠️ exercice 2025 en troisième colonne (le plus récent À DROITE) : « Capitaux propres part du groupe 1 138 458 | 1 200 019 | 1 410 404 » (2023 | 2024 | 2025 ; barres = séparation des colonnes du tableau). Capital 927 027 + prime 7 352 + réserves consolidées 271 450 + résultat 204 576 = 1 410 405 (arrondi 1). Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:de6a0f8919f0fd2903caab99aa5cc2e07adb2451812aade8025d831c8631eda8",
+              "printed_page": null,
+              "validation_status": "pdf_page_visually_checked_2026-10-04"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 21785174,
+              "page": 21,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "⚠️ NOMBRE D'ACTIONS ACTUEL (introduction en bourse en cours de période) : le dépôt donne 10 107 834 actions de 100 DH au 30/06/2026 (p.21), division du nominal 100 → 50 à la date de première cotation (p.21, AG du 26/06/2026), soit 20 215 668 ; + 1 569 506 actions nouvelles de l'IPO (CP_T2S_resultats_IPO.pdf p.1) = 21 785 174 ; le référentiel de l'opérateur (capitalisation 4 794 916 797,40 ÷ cours 220,1) donne 21 785 174 : accord exact. C'est le nombre sur lequel le marché cote et sur lequel le BPA S1 est calculé. Le nombre À LA DATE DES COMPTES 2025 est différent : voir `nombre_actions_31_12_2025`.",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "actions",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 695.783,
+              "page": 239,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "Dettes de financement 481 452 (à plus d'un an ; plus rien à court terme en 2025) + dettes de crédit-bail 57 511 + trésorerie-passif 156 820 = 695 783 ; le groupe publie « Endettement brut (2) 736 787 793 566 695 784 » (arrondi 1). ⚠️ Les 57 511 de « crédit-bail » regroupent, de l'aveu de la note (1) p.239, « les engagements relatifs aux locations de longue et courte durée » (loyers IFRS 16) en plus des crédits-bails : bilan p.221 « Autres passifs non courants 40 430 » + « Dettes de financement à moins d'un an 17 081 ». Retenues comme dette financière parce que la définition de l'ENDETTEMENT du groupe les compte (et que l'EBE est avant ces loyers). Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 359.641,
+              "page": 221,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "« Trésorerie actif 189 933 | 240 368 | 359 641 ». Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "excedent_brut_exploitation": {
+              "value": 388.402,
+              "page": 220,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "« Excèdent Brut d'Exploitation (EBE) 245 850 | 275 748 | 388 402 » = marge brute 683 145 − charges d'exploitation 294 743 ; le groupe l'emploie comme EBITDA (note (8) p.239 : « Adjusted Leverage = Endettement net / EBITDA », calculé sur cet EBE : 0,6x). Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            }
+          },
           "eps_mad": null,
           "book_value_per_share_mad": null,
           "pe": null,
           "pb": null,
           "revenue_growth_pct": null,
-          "roe_pct": null,
+          "roe_pct": 14.5,
           "dividend_yield_pct": null,
-          "earnings_mmad": null
+          "earnings_mmad": 204.576,
+          "warnings": [
+            "PÉRIMÈTRE DU DÉPÔT : document de référence d'introduction en bourse (275 p.), états consolidés IFRS présentés sous forme de TABLEAUX D'ANALYSE (p.220-241) attestés par les CAC (p.185) ; les états de synthèse eux-mêmes (bilan, CPC, notes) ne sont pas reproduits page à page. Colonnes 2023 | 2024 | 2025 : l'exercice clos est à DROITE.",
+            "INTRODUCTION EN BOURSE EN COURS DE PÉRIODE : conversion des actions de priorité (08/06/2026), division du nominal 100 → 50, augmentation de capital de l'IPO (+1 569 506 titres). BPA 2025 : 22,07 sur 9 270 270 (date des comptes), 10,12 sur 20 215 668 (avant IPO), 9,39 sur 21 785 174 (actuel) ; le S1 2026 de resultats_s1_2026.json utilise 21 785 174. À trancher en revue.",
+            "Résultat d'exploitation 315 934 (EBIT) hors 65 278 de produit non récurrent (cession de l'activité Varian à Siemens Healthineers) alors que le résultat avant impôt (337 371) et le résultat net (211 269) l'incluent : le taux d'impôt effectif (37,4 %) et le ROIC en sont légèrement faussés (le ROIC rapporte un résultat hors Varian à des capitaux propres qui en contiennent l'effet). Résultat net 2025 non comparable à 2024.",
+            "Capitaux employés : 1 051 MMAD d'écart d'acquisition sur 3 271 d'actif ; capitaux propres (1 442) + dette nette (222) = 1 665.",
+            "Dette incluant 57,5 MMAD de loyers (IFRS 16) ; sans eux la dette nette serait de 164,8. Conversion en trésorerie 150,7 % portée par une libération de BFR de 83,1 (stocks +210 mais fournisseurs +253).",
+            "T2S n'a pas de fiche dans fondamentaux.json : ratios non publiés (R8, aucune fiche créée).",
+            "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles."
+          ],
+          "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 336.14,
+          "net_debt_ebitda": 0.87,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_T2S_group_S1_26.pdf",
+            "accounting_basis": "résultat net part du Groupe, consolidé (comptes arrêtés par le conseil du 28/09/2026). ⚠️ Dépôt = communiqué d'une page, montants ARRONDIS AU MDH, sans état de synthèse ni attestation des CAC (±0,5 MDH sur 186,6, soit ±0,3 %). Le S1 2025 (109) contient le produit exceptionnel de la cession de l'activité Varian à Siemens Healthineers (RNPG ajusté S1 2025 : 55, d'où le +65 % publié) ; le douze mois retire le S1 2025 en entier, donc cette plus-value n'y figure plus. ⚠️ Introduction en bourse en juillet 2026 : le BPA est calculé sur les 21 785 174 actions ACTUELLES (20 215 668 avant l'augmentation de capital de 1 569 506 titres) ; sur 20 215 668 il vaudrait 9,23 au lieu de 8,56 — à trancher en revue",
+            "pages": "p.1, tableau « En MDH S1 2026 S1 2025 Var. % » : « Résultat net part du Groupe 91 109 -17% », « Chiffre d'affaires consolidé 978 773 26% », « Résultat net part du Groupe ajusté 91 55* 65% » (* retraité de la cession Varian) ; texte : « Résultat net part du Groupe de 91 MDH, en progression de 65 % retraité de l'opération Varian »",
+            "reported_net_millions": 91,
+            "reported_net_previous_millions": 109,
+            "revenue_millions": 978,
+            "revenue_previous_millions": 773,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 25,
+          "missing_metrics": [
+            "eps_mad",
+            "pb",
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Mix équipements/services, marge, créances clients et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -610,7 +1489,23 @@
         },
         "turnover_mad": 4443977.6
       },
-      "publications": []
+      "publications": [
+        {
+          "id": "f1ee6c44fb65512be7",
+          "title": "T2S Group - Résultats financiers du 1er semestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/T2S_Group_S1_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-09-30T22:40:47+00:00",
+          "tickers": [
+            "T2S"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED"
+        }
+      ]
     },
     {
       "symbol": "CMT",
@@ -639,34 +1534,93 @@
           "Liquidité robuste estimée hors cinq plus fortes séances : 0,02 MDH, contre 0,16 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
-          "source": "rapport annuel référencé (chiffres à recouper)",
+          "source": "relevé documentaire référencé, non certifié par cet import",
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
           "evidence": {
-            "nombre_actions_au_rapport": {
-              "value": 1681233,
-              "page": 54,
-              "unit": "actions"
-            },
             "resultat_net_part_groupe": {
               "value": 196.465,
               "page": 57,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "au passif du bilan consolidé ; recoupé p58 (flux de trésorerie) et p59 (variation des capitaux propres). Supérieur au consolidé de 6 120 DH : les minoritaires sont en perte. 2024 était une PERTE de 12,126.",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "capitaux_propres_part_groupe": {
               "value": 901.142608,
               "page": 57,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "« Capitaux propres (Part du groupe) 901 142 608 722 030 805 » ; en-tête « (En dirhams) 31/12/2025 31/12/2024 ». Capital 168 123 300 MAD = 1 681 233 titres de nominale 100. Le Résultat Net Part Groupe de la même page, 196 465 103 MAD, est celui déjà relevé.",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "nombre_actions_au_rapport": {
+              "value": 1681233,
+              "page": 54,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "ÉCRIT, pas déduit — tableau du capital social. Recoupé p79 (« Nombre d'actions 1 681 233 »). Trois identités arithmétiques indépendantes le confirment : capital 168 123 300 ÷ 100 de nominale ; capitalisation 7 313 MMAD ÷ 4 350 DH = 1 681 149 (écart 0,005 %) ; et bénéfices distribués 100 873 980 ÷ 60,00 DH par action (p54) = 1 681 233 au dirham près.",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "chiffre_affaires": {
               "value": 690.452,
               "page": 58,
-              "unit": "MMAD"
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "consolidé — 586,364 en 2024, soit +17,8 %",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             },
             "dividende_par_action": {
-              "value": 0.0,
+              "value": 0,
               "page": 79,
-              "unit": "DH"
+              "unit": "DH",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "AUCUN dividende au titre de 2025, ni de 2024. Le bénéfice est intégralement porté en report à nouveau (487,8 MMAD). Le terminal publiait 224,00 DH et un rendement de 5,15 %.",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "dettes_financieres": {
+              "value": 171.581683,
+              "page": 57,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "« Dettes financières 171 581 683 337 854 921 » ; seule ligne de dettes financières du bilan consolidé. La trésorerie de clôture du tableau des flux (p.58, « Trésorerie : clôture 5 549 847 ») implique 23,2 MMAD de concours bancaires ; le bilan ne les isole pas — nous supposons qu'ils sont dans cette ligne, sans pouvoir le vérifier.",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
+            },
+            "tresorerie_actif": {
+              "value": 28.713549,
+              "page": 57,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "« Disponibilités 28 713 549 32 358 332 »",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import"
             }
           },
           "eps_mad": 116.86,
@@ -676,7 +1630,48 @@
           "revenue_growth_pct": null,
           "roe_pct": 21.8,
           "dividend_yield_pct": 0.0,
-          "earnings_mmad": 196.465
+          "earnings_mmad": 196.465,
+          "warnings": [
+            "EBITDA NON calculé : la ligne « Résultat d'exploitation avant dotations aux amort. et dép. EA 387 847 981 » (p.58) porte le MÊME montant que le résultat après dotations — erreur de mise en page du rapport (le recalcul par les composantes donne 387,848 après dotations). Et la seule dotation publiée, « Dotations aux amortissements, dépréciations et provisions (38 412 256) », inclut des provisions : l'ajouter au résultat d'exploitation ne donnerait pas un EBITDA au sens demandé.",
+            "Titre suspendu du 17/07 au 16/09/2026 (OPA obligatoire) : les ratios décrivent l'exercice 2025, pas l'actionnariat actuel."
+          ],
+          "accounting_basis": "consolidé, 31/12/2025",
+          "currency": "MAD",
+          "net_debt_strict_mmad": 142.87,
+          "net_debt_ebitda": null,
+          "calculation_version": "nour-fundamentals-v2",
+          "point_in_time_ready": false,
+          "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+          "validation_status": "referenced_import",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "pipeline/faits_financiers.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          },
+          "latest_report": {
+            "period_end": "2026-06-30",
+            "document_url": "https://www.ammc.ma/sites/default/files/CMT_S1_26.pdf",
+            "accounting_basis": "résultat net part du groupe, consolidé",
+            "pages": "p.3 (compte de résultat consolidé)",
+            "reported_net_millions": 187.165227,
+            "reported_net_previous_millions": 74.751639,
+            "revenue_millions": 596.032868,
+            "revenue_previous_millions": 342.308108,
+            "currency": "MAD",
+            "note": null,
+            "validation_status": "referenced_import_not_independent_audit",
+            "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          },
+          "period_end": "2025-12-31",
+          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "book_denominator": "nombre de titres référencé",
+          "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+          "coverage_pct": 75,
+          "missing_metrics": [
+            "revenue_growth_pct"
+          ]
         },
         "checkpoint": "Production, prix des métaux, coûts et événements liés à la reprise.",
         "source": "CDG Capital Bourse",
@@ -704,32 +1699,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_changement_CA.pdf",
       "publisher": "AMMC",
       "published_at": "2026-10-02T16:10:27+00:00",
-      "tickers": [],
+      "tickers": [
+        "DTT"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "179a97b51d602141ae",
-      "title": "Ennakl Automobiles - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-10-02T11:51:54+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "3fab485ff380ecf3da",
-      "title": "Jaida - CP relatif à l'évolution de l'actionnariat",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Jaida_evolution_actionnariat.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-10-01T15:16:24+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4d64f70cf937bf5779",
@@ -737,10 +1714,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Attijariwafa_Bank_accord_acquisition_participation_SG_Ghana.pdf",
       "publisher": "AMMC",
       "published_at": "2026-10-01T11:27:05+00:00",
-      "tickers": [],
+      "tickers": [
+        "ATW"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f1ee6c44fb65512be7",
@@ -748,10 +1729,14 @@
       "url": "https://www.ammc.ma/sites/default/files/T2S_Group_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T22:40:47+00:00",
-      "tickers": [],
+      "tickers": [
+        "T2S"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "291e51811bf8270c88",
@@ -759,21 +1744,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CTM_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T21:37:46+00:00",
-      "tickers": [],
+      "tickers": [
+        "CTM"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "55c32307797bd9c5e3",
-      "title": "CDG Capital - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CDG_Capital_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-30T19:38:07+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "37269794473f5b94f2",
@@ -781,10 +1759,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Al_Darna_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:33:59+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "81228905bdd60475bf",
@@ -792,10 +1774,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Sonasid_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:32:52+00:00",
-      "tickers": [],
+      "tickers": [
+        "SNA"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "38006032d6e5e74266",
@@ -803,10 +1789,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Addoha_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:31:51+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADH"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "7a6444cc722102d80a",
@@ -814,10 +1804,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:28:38+00:00",
-      "tickers": [],
+      "tickers": [
+        "LES"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "fc5f3cb785507bcbb3",
@@ -825,10 +1819,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CMGP_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:25:02+00:00",
-      "tickers": [],
+      "tickers": [
+        "CMGP"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4a93aadba2e2fa2b7c",
@@ -836,10 +1834,14 @@
       "url": "https://www.ammc.ma/sites/default/files/TGCC_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:38:06+00:00",
-      "tickers": [],
+      "tickers": [
+        "TGCC"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "78109817f1b2239a5b",
@@ -847,21 +1849,14 @@
       "url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:29:05+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "d4d867da4badecdd6c",
-      "title": "Promopharm - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Promopharm_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-30T18:20:19+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "803d52455121a9d3eb",
@@ -869,21 +1864,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:17:29+00:00",
-      "tickers": [],
+      "tickers": [
+        "NEJ"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
-    },
-    {
-      "id": "ca46607b6259d0e74b",
-      "title": "Sothema - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Sothema_S1_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-09-30T18:15:58+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "7423cc17c1c09c902c",
@@ -891,10 +1879,14 @@
       "url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:12:08+00:00",
-      "tickers": [],
+      "tickers": [
+        "M2M"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "926390f3930525ac1f",
@@ -902,10 +1894,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:58:49+00:00",
-      "tickers": [],
+      "tickers": [
+        "STK"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "ff908d72d2f0d1073c",
@@ -913,10 +1909,14 @@
       "url": "https://www.ammc.ma/sites/default/files/BCP_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:49:16+00:00",
-      "tickers": [],
+      "tickers": [
+        "BCP"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "def39c4cdef6e6abae",
@@ -924,43 +1924,134 @@
       "url": "https://www.ammc.ma/sites/default/files/Dari_Couspate_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:43:16+00:00",
-      "tickers": [],
+      "tickers": [
+        "DAR"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
-      "id": "bdd1450d2d7b114aea",
-      "title": "Holding Al Omrane - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Al_Omrane_S1_26.pdf",
+      "id": "19452f07025869ed38",
+      "title": "Wafa Assurance - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_S1_26.pdf",
       "publisher": "AMMC",
-      "published_at": "2026-09-30T17:39:29+00:00",
-      "tickers": [],
+      "published_at": "2026-09-30T17:31:07+00:00",
+      "tickers": [
+        "WAF"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
-      "id": "6e326b9ba63246dc36",
-      "title": "Oulmes - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Oulmes_S1_26.pdf",
+      "id": "1d9f8b15f8c24eb2f1",
+      "title": "Jet Contractors - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
       "publisher": "AMMC",
-      "published_at": "2026-09-30T17:38:35+00:00",
-      "tickers": [],
+      "published_at": "2026-09-30T17:30:08+00:00",
+      "tickers": [
+        "JET"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
-      "id": "8f84b3de3e79b792ad",
-      "title": "Agma - Résultats financiers du 1er semestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Agma_S1_26.pdf",
+      "id": "7bf91c257cd135f324",
+      "title": "Sanlam Maroc - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
       "publisher": "AMMC",
-      "published_at": "2026-09-30T17:37:43+00:00",
-      "tickers": [],
+      "published_at": "2026-09-30T13:15:47+00:00",
+      "tickers": [
+        "SAF"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
+    },
+    {
+      "id": "6cc2f5aee380c0cc12",
+      "title": "Risma - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Risma_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:57:19+00:00",
+      "tickers": [
+        "RIS"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
+    },
+    {
+      "id": "2a639e305cb2cd960e",
+      "title": "Aluminium du Maroc - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/ALM_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:53:58+00:00",
+      "tickers": [
+        "ALU"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
+    },
+    {
+      "id": "168061f9a50a1e4491",
+      "title": "Cosumar - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Cosumar_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:50:33+00:00",
+      "tickers": [
+        "CSR"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
+    },
+    {
+      "id": "cd2b2be2730a0b66b6",
+      "title": "Auto Hall - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:49:24+00:00",
+      "tickers": [
+        "HAL"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
+    },
+    {
+      "id": "9336386869126846cf",
+      "title": "Akdital - Résultats financiers du 1er semestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/Akdital_S1_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-09-30T12:32:06+00:00",
+      "tickers": [
+        "AKD"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     }
   ],
   "news_role": "veille uniquement",
@@ -1200,11 +2291,11 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-03T16:01:13.338635+00:00"
+    "observed_at": "2026-10-04T16:02:45.186843+00:00"
   },
   "context_news": [],
   "fundamental_coverage": {
-    "referenced": 31,
+    "referenced": 63,
     "titles": 80
   },
   "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",

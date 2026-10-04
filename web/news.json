@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-02T21:26:11.132357+00:00",
+  "updated_at": "2026-10-04T16:02:45.103293+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -9,10 +9,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_changement_CA.pdf",
       "publisher": "AMMC",
       "published_at": "2026-10-02T16:10:27+00:00",
-      "tickers": [],
+      "tickers": [
+        "DTT"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "179a97b51d602141ae",
@@ -23,7 +27,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "3fab485ff380ecf3da",
@@ -34,7 +40,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4d64f70cf937bf5779",
@@ -42,10 +50,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Attijariwafa_Bank_accord_acquisition_participation_SG_Ghana.pdf",
       "publisher": "AMMC",
       "published_at": "2026-10-01T11:27:05+00:00",
-      "tickers": [],
+      "tickers": [
+        "ATW"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f1ee6c44fb65512be7",
@@ -53,10 +65,14 @@
       "url": "https://www.ammc.ma/sites/default/files/T2S_Group_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T22:40:47+00:00",
-      "tickers": [],
+      "tickers": [
+        "T2S"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "291e51811bf8270c88",
@@ -64,10 +80,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CTM_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T21:37:46+00:00",
-      "tickers": [],
+      "tickers": [
+        "CTM"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "55c32307797bd9c5e3",
@@ -78,7 +98,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "37269794473f5b94f2",
@@ -86,10 +108,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Al_Darna_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:33:59+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "81228905bdd60475bf",
@@ -97,10 +123,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Sonasid_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:32:52+00:00",
-      "tickers": [],
+      "tickers": [
+        "SNA"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "38006032d6e5e74266",
@@ -108,10 +138,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Addoha_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:31:51+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADH"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "7a6444cc722102d80a",
@@ -119,10 +153,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:28:38+00:00",
-      "tickers": [],
+      "tickers": [
+        "LES"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "fc5f3cb785507bcbb3",
@@ -130,10 +168,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CMGP_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T19:25:02+00:00",
-      "tickers": [],
+      "tickers": [
+        "CMGP"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4a93aadba2e2fa2b7c",
@@ -141,10 +183,14 @@
       "url": "https://www.ammc.ma/sites/default/files/TGCC_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:38:06+00:00",
-      "tickers": [],
+      "tickers": [
+        "TGCC"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "78109817f1b2239a5b",
@@ -152,10 +198,14 @@
       "url": "https://www.ammc.ma/sites/default/files/ADI_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:29:05+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "d4d867da4badecdd6c",
@@ -166,7 +216,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "803d52455121a9d3eb",
@@ -174,10 +226,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:17:29+00:00",
-      "tickers": [],
+      "tickers": [
+        "NEJ"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "ca46607b6259d0e74b",
@@ -188,7 +244,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "7423cc17c1c09c902c",
@@ -196,10 +254,14 @@
       "url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T18:12:08+00:00",
-      "tickers": [],
+      "tickers": [
+        "M2M"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "926390f3930525ac1f",
@@ -207,10 +269,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:58:49+00:00",
-      "tickers": [],
+      "tickers": [
+        "STK"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "ff908d72d2f0d1073c",
@@ -218,10 +284,14 @@
       "url": "https://www.ammc.ma/sites/default/files/BCP_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:49:16+00:00",
-      "tickers": [],
+      "tickers": [
+        "BCP"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "def39c4cdef6e6abae",
@@ -229,10 +299,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Dari_Couspate_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:43:16+00:00",
-      "tickers": [],
+      "tickers": [
+        "DAR"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "bdd1450d2d7b114aea",
@@ -243,7 +317,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "6e326b9ba63246dc36",
@@ -254,7 +330,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "8f84b3de3e79b792ad",
@@ -265,7 +343,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "19452f07025869ed38",
@@ -273,10 +353,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:31:07+00:00",
-      "tickers": [],
+      "tickers": [
+        "WAF"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "1d9f8b15f8c24eb2f1",
@@ -284,10 +368,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T17:30:08+00:00",
-      "tickers": [],
+      "tickers": [
+        "JET"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "7bf91c257cd135f324",
@@ -295,10 +383,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T13:15:47+00:00",
-      "tickers": [],
+      "tickers": [
+        "SAF"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "1c288abed3a50ea285",
@@ -309,7 +401,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "6cc2f5aee380c0cc12",
@@ -317,10 +411,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Risma_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T12:57:19+00:00",
-      "tickers": [],
+      "tickers": [
+        "RIS"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "2a639e305cb2cd960e",
@@ -328,10 +426,14 @@
       "url": "https://www.ammc.ma/sites/default/files/ALM_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T12:53:58+00:00",
-      "tickers": [],
+      "tickers": [
+        "ALU"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "9bbb0afe205fc525f5",
@@ -342,7 +444,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "168061f9a50a1e4491",
@@ -350,10 +454,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Cosumar_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T12:50:33+00:00",
-      "tickers": [],
+      "tickers": [
+        "CSR"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "cd2b2be2730a0b66b6",
@@ -361,10 +469,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T12:49:24+00:00",
-      "tickers": [],
+      "tickers": [
+        "HAL"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "c45e3f8b15bad01fca",
@@ -375,7 +487,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "56b8db84f115167bbe",
@@ -386,7 +500,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "9336386869126846cf",
@@ -394,10 +510,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Akdital_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-30T12:32:06+00:00",
-      "tickers": [],
+      "tickers": [
+        "AKD"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f874b3e973a51c8bef",
@@ -408,7 +528,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "003317db892d42efaf",
@@ -416,10 +538,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_CMGP_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-29T16:25:28+00:00",
-      "tickers": [],
+      "tickers": [
+        "CMGP"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "c41da114fc47a72934",
@@ -430,7 +556,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "52711eaaa4c58880d8",
@@ -441,7 +569,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "d4b69735e584207096",
@@ -452,7 +582,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "c6921d4c88597136da",
@@ -460,10 +592,14 @@
       "url": "https://www.ammc.ma/sites/default/files/MOX_S1_2026.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-29T12:05:19+00:00",
-      "tickers": [],
+      "tickers": [
+        "MOX"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "653d81f170459b81cb",
@@ -471,10 +607,14 @@
       "url": "https://www.ammc.ma/sites/default/files/AFG_S1_2026.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-29T12:03:15+00:00",
-      "tickers": [],
+      "tickers": [
+        "GAZ"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "5ed2e15e0b8c5f01c6",
@@ -485,7 +625,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f6ac577ce7681af545",
@@ -496,7 +638,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "1a49db490bc889d5b4",
@@ -507,7 +651,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "fd8841883b1cac6d7f",
@@ -518,7 +664,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "1093f3946f12e2c232",
@@ -526,10 +674,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Marsa_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-29T10:45:17+00:00",
-      "tickers": [],
+      "tickers": [
+        "MSA"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "43d78c6affcb3a7a65",
@@ -540,7 +692,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "58a1b6bc548d330243",
@@ -551,7 +705,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "629b2cb4d0118fd6fc",
@@ -562,7 +718,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "a7041de4611d263429",
@@ -570,10 +728,14 @@
       "url": "https://www.ammc.ma/sites/default/files/HPS_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-28T12:14:56+00:00",
-      "tickers": [],
+      "tickers": [
+        "HPS"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "2931a263f45ea75f02",
@@ -581,10 +743,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-28T11:46:46+00:00",
-      "tickers": [],
+      "tickers": [
+        "IMI"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "60a2569f22c9ed18a5",
@@ -595,7 +761,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "99b8d23a128f0f26c4",
@@ -606,7 +774,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4c4d3a09c058fdadcf",
@@ -617,7 +787,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "8263b0cfa166116169",
@@ -625,10 +797,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-27T18:17:42+00:00",
-      "tickers": [],
+      "tickers": [
+        "DTT"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "8ae55ed06ba89483e6",
@@ -639,7 +815,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "6bf35ed527f77878a2",
@@ -650,7 +828,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "35b2d11880453e9d75",
@@ -661,7 +841,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cd3963c7a2293ba62d",
@@ -672,7 +854,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7188f8cc82a547fa87",
@@ -683,7 +867,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "1eadd5dedfd3ebdb86",
@@ -694,7 +880,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "4e6cb7c97083681e1d",
@@ -705,7 +893,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "aad8d30040eca670d2",
@@ -716,7 +906,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "0d8c149922ca97bcb6",
@@ -729,7 +921,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "65eeef02b7576e4442",
@@ -742,7 +936,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "28d4d744eeb78f91f4",
@@ -753,7 +949,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ca1d71d8c71fc50ba9",
@@ -764,7 +962,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "1ca316fdac9802fd82",
@@ -772,10 +972,14 @@
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNanc0cTdfR1RJellWc3hvMmdqSk1uaTljcEUya2RyMG1VSGUwUHVWZmN2YXFFeTJSUkJaUDVNdzlpYXlvdWtFaWkyelpMa2tMbGthRDJMaHRJUXRQV1NFcE4wazRpLTViZ2tvbXlCQjYtNUloR3c0T2JUQ2EtQnViVUZrNFpxMlg2SnViNWRFTk9ZTEdOcDY0alpwazljaWU1ZFI0LVBfQjJrOXpKenNWZ1YzcnRDUl81aGV4V203dG1FcnVuWVVnY1ZJV2NlWW9DTEp0UFRaT2cwQQ?oc=5",
       "publisher": "BVC Sociétés",
       "published_at": "2026-09-25T21:13:02+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ee0b36b8321345e766",
@@ -786,7 +990,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d410e08d0f244ab87a",
@@ -794,12 +1000,12 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxORnktZkVha0RicHBFekI3RU95Z1hhcG1fdlVlRkNVXzF0RUNTd3YxNU03MEVHNWJqcHlkVTNEUC1pNGw1MFpRTVlvb1RvNVI5MzYwZkV2MzYyMXpid3NJY2JqaUVELXpxLUJ2dHV2Um50R0M0X2R0SUZNS3AtNGw4bTBzOGUyYTVkN1VGMVgwZ2t6ZFRxaEE?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-25T21:04:14+00:00",
-      "tickers": [
-        "PPM"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3b007cf5aa52dc03d6",
@@ -810,7 +1016,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "15ed86207a5aa61ef3",
@@ -821,7 +1029,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "610b5936db0f1bba2b",
@@ -832,7 +1042,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "4fad17b412a4bf012d",
@@ -843,7 +1055,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c0e28aac967f5707d8",
@@ -856,7 +1070,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a36d0ce23ccc81c54a",
@@ -867,7 +1083,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3be07306345208e646",
@@ -878,7 +1096,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "471298b6596129990d",
@@ -889,7 +1109,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cea563118d9944d1d5",
@@ -900,7 +1122,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "89ad6bd1235746a3a5",
@@ -911,7 +1135,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "1d37f6f377e65ed1ed",
@@ -922,7 +1148,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c7484468121073858d",
@@ -933,7 +1161,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "52ee60e117b32fa7a4",
@@ -946,7 +1176,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ad9ffe1a4e2cbc07d9",
@@ -954,12 +1186,12 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWGlVbUEwVFpLM0ZNVXdoLThEZWNYYWRGYjBpRDJmYWlCMlBGRHBFTXNLUnlQR01pQjEwOXpaZC1vMkFiVzhOTHdJR2pHTFpRR1FtWTEtNzRuaFF2OEhneTNNSzM0eXgzLXBCdnlGakdnZzhuTWhrZGRtNkZRbGtZTl9zaXg0QmdNYkpyX3p1ek5nYkZ4ZWtsbGc3clo2YkM0OVBTOW1WNjlkNC1sSUFuQ0M4VkVmTFFj?oc=5",
       "publisher": "Medias24",
       "published_at": "2026-09-25T18:00:00+00:00",
-      "tickers": [
-        "PPM"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "10c6a617d524223d4e",
@@ -970,7 +1202,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e071ef3689a847dccc",
@@ -981,7 +1215,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "bb0388520b6548be7e",
@@ -992,7 +1228,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9b1c58e05b18a6a065",
@@ -1005,7 +1243,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f85119406f217ec7a2",
@@ -1013,10 +1253,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CIH_Bank_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T17:22:01+00:00",
-      "tickers": [],
+      "tickers": [
+        "CIH"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "8984ec40970935e194",
@@ -1027,7 +1271,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "64ad2259f31ca6b110",
@@ -1038,7 +1284,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "8516b8942d199c0695",
@@ -1049,7 +1297,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "18c793e461d4206448",
@@ -1060,7 +1310,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a4a9f533ca02df95df",
@@ -1068,12 +1320,12 @@
       "url": "https://leseco.ma/communication-financiere/unimer-group-resultats-semestriels-2026.html",
       "publisher": "Les Inspirations Éco",
       "published_at": "2026-09-25T16:53:48+00:00",
-      "tickers": [
-        "UNI"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f48c8f0e89ac2c05bd",
@@ -1086,7 +1338,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "fa85c7170fbf5692b8",
@@ -1097,7 +1351,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d56682b4e5afc11a1f",
@@ -1108,7 +1364,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3de4dcf43d0911a050",
@@ -1119,7 +1377,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "167fbd80edda869c2b",
@@ -1130,7 +1390,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7ed8cf2e59ddb6cd23",
@@ -1143,7 +1405,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f4121ab85b9d1acebb",
@@ -1156,7 +1420,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cec45916f9b82e0940",
@@ -1167,7 +1433,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d8593f71f535f92964",
@@ -1178,7 +1446,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "4c8395ae8fdfc0ebed",
@@ -1191,7 +1461,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c4e7d05c5c0b847d22",
@@ -1202,7 +1474,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "66fd5384ac40651336",
@@ -1213,7 +1487,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ad3409249328873d83",
@@ -1224,7 +1500,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "27e403b2ac42424073",
@@ -1237,7 +1515,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b40ab5e367118bcfdf",
@@ -1248,7 +1528,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a10e35389468a70089",
@@ -1259,7 +1541,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cd9fee37072af64695",
@@ -1270,7 +1554,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "fe52bc25c47d14bb0f",
@@ -1281,7 +1567,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "6061a35b167d6e830b",
@@ -1292,7 +1580,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f7770a8da2624caebd",
@@ -1300,10 +1590,14 @@
       "url": "https://www.ammc.ma/sites/default/files/MLE_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:32:37+00:00",
-      "tickers": [],
+      "tickers": [
+        "MRL"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "58a35c24eb95f3df5f",
@@ -1314,7 +1608,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "a85b6dd1c8a5c6b531",
@@ -1325,7 +1621,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "1c288f5c86bedf6408",
@@ -1336,7 +1634,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "32cb8597480d6c9a99",
@@ -1344,10 +1644,14 @@
       "url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:18:10+00:00",
-      "tickers": [],
+      "tickers": [
+        "ARD"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "43d11edc86f25e656f",
@@ -1358,7 +1662,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "1153cfcae0615d304e",
@@ -1369,7 +1675,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "973cdee832599b82dd",
@@ -1380,7 +1688,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "590f34f92bb965cdd5",
@@ -1388,10 +1698,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Cimar_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:09:42+00:00",
-      "tickers": [],
+      "tickers": [
+        "CIM"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "a4af732b410cb1f029",
@@ -1399,10 +1713,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Fenie_Brossette_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:08:33+00:00",
-      "tickers": [],
+      "tickers": [
+        "FNB"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "d8d0aadadaf7c63b04",
@@ -1413,7 +1731,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f637aa5f0b4a89f65a",
@@ -1421,10 +1741,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Managem_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:01:22+00:00",
-      "tickers": [],
+      "tickers": [
+        "MNG"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "e65804dff95b98c829",
@@ -1432,10 +1756,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Auto_Hall_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T14:00:31+00:00",
-      "tickers": [],
+      "tickers": [
+        "HAL"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "cecde06e7e940baf55",
@@ -1446,7 +1774,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "62555a340194e3c61c",
@@ -1457,7 +1787,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ea25145e67f2cf7a58",
@@ -1468,7 +1800,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b085c690323e9a7896",
@@ -1476,12 +1810,12 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_SMI_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-25T13:44:35+00:00",
-      "tickers": [
-        "SMI"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "6c827c0918b0683377",
@@ -1492,7 +1826,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "02c58f6885f9849c47",
@@ -1505,7 +1841,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "0d0902fce52f63dd21",
@@ -1516,7 +1854,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "52d50b32ae5989e296",
@@ -1527,7 +1867,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "8b7f28cfada2e3664c",
@@ -1540,7 +1882,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e12173e6099d944bae",
@@ -1551,7 +1895,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "db050001e9db7db0c2",
@@ -1562,7 +1908,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "4d80d3acc9716111e0",
@@ -1573,7 +1921,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cca6a6f6ad9583be1f",
@@ -1584,7 +1934,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cbb6028084fc43df6c",
@@ -1595,7 +1947,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9cb83f835a74036e17",
@@ -1608,7 +1962,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "8031a6fd7a38991de9",
@@ -1621,7 +1977,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "27f3394d0843ddcee4",
@@ -1634,7 +1992,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "62ce20b0571ece8a07",
@@ -1645,7 +2005,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "93f0d0d83220c479ac",
@@ -1656,7 +2018,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "eeca6ccbe31bd860a9",
@@ -1664,12 +2028,12 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBtTExIVUlJaTg5SlFaVkdncjBxdUd5WGRvODF4MUJRWDBCcDB0aWdhU2RKVEJhS19uSW9pZFA5cmUyd0VnaWF3R2ZhaGN3aEY4cy1NamJfeThEdzhBOUtyaUVHcENkbEFSc0pz?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-25T12:18:06+00:00",
-      "tickers": [
-        "SBS"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "185a53558f9aa931f9",
@@ -1682,7 +2046,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "266b85301e7b31831e",
@@ -1693,7 +2059,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d131ca1b293610eb2e",
@@ -1706,7 +2074,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "19d62682858a31c37d",
@@ -1719,7 +2089,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e7b91a713497e72eb0",
@@ -1732,7 +2104,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a33271829740472f22",
@@ -1745,7 +2119,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3cdb59ba534a055300",
@@ -1756,7 +2132,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a03193e11747e7432f",
@@ -1769,7 +2147,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "09aebdfee4f727751f",
@@ -1780,7 +2160,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "6810d7f3e4ced328a8",
@@ -1793,7 +2175,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "87ef9ebad14e707804",
@@ -1804,7 +2188,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9b7dbca7c9bd6423ce",
@@ -1815,7 +2201,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a0f804dcd62875e0bb",
@@ -1828,7 +2216,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "23f89f2d246a14aa96",
@@ -1841,7 +2231,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e181413504287c7765",
@@ -1852,7 +2244,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "82a83542f06153a9cc",
@@ -1863,7 +2257,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f2d20f99cc1db2da72",
@@ -1874,7 +2270,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9c0f35d936645e45a8",
@@ -1885,7 +2283,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d1261516cd105c272f",
@@ -1893,12 +2293,12 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtNC1mNHhnRTZtOHJIVEtYWnhBSWtBb1oyaUtUcXVpZG5hNnJfLUpySmtrSEZfU1pRZ243UVd2UUxDejVLZ2ppNDNVcTJ3NFNXcVpEYmFRZTRTS25kVnVEMWdmX3U1SmttWVVB?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-25T11:07:14+00:00",
-      "tickers": [
-        "SMI"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cc1d0f842ae754f1d4",
@@ -1909,7 +2309,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "57d7de1c61eba3f462",
@@ -1920,7 +2322,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3f5673537635d197a4",
@@ -1931,7 +2335,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "304f0f4101abcc6a7f",
@@ -1942,7 +2348,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f336cb916be9fa59a3",
@@ -1953,7 +2361,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f1b57631dcee9cde6b",
@@ -1964,7 +2374,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "46843f1bafc37824c1",
@@ -1975,7 +2387,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "50522971fe51ea7476",
@@ -1986,7 +2400,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "50998bdf461c2b3646",
@@ -1997,7 +2413,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c8511b2d8d94937567",
@@ -2008,7 +2426,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c9fc056da391ffba18",
@@ -2019,7 +2439,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a3bbb5c7f1533e415f",
@@ -2030,7 +2452,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "fa4eee48573a6b4c65",
@@ -2038,12 +2462,12 @@
       "url": "https://www.financialafrik.com/2026/09/25/banques-hausse-de-175-du-produit-net-bancaire-de-la-boa-mali-au-premier-semestre-2026/",
       "publisher": "Financial Afrik",
       "published_at": "2026-09-25T09:27:48+00:00",
-      "tickers": [
-        "BOA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "fcab800fca0a9f6403",
@@ -2056,7 +2480,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b93214cef5e898844c",
@@ -2064,12 +2490,12 @@
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAwcDNIUHFiRjJsQnNFZXlrYmRpODNKMXpaZ0NBREZQRC1jVDA5QmhDQm5rNExfLU40MnU3NXlYeWtmckc4cVpETlZDM3VYX3ZWOG5LeUNxODlWSlMybVpmZHA0M0pfb0poQ1FRakVsWXB1UQ?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-25T09:05:39+00:00",
-      "tickers": [
-        "COL"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "41731005c693f4c58a",
@@ -2080,7 +2506,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "cb2c9651ceb5532f61",
@@ -2091,7 +2519,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3cd15fb1caeee7b647",
@@ -2102,7 +2532,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "59c5679b56d4640e46",
@@ -2113,7 +2545,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "147d7454641afc5b88",
@@ -2124,7 +2558,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7d5ce797af2b417da3",
@@ -2135,7 +2571,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "06774a1b131006699b",
@@ -2146,7 +2584,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7aaed45852172f5bd2",
@@ -2157,7 +2597,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "5dbad5e343d57ec82c",
@@ -2168,7 +2610,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "98f18e02aafd2b2f8e",
@@ -2179,7 +2623,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b5a24d4c39b4220b90",
@@ -2190,7 +2636,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "87ac5c1c9101d42334",
@@ -2201,7 +2649,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b2b2e13b8c94bccd25",
@@ -2214,7 +2664,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ffbfca6c896ef88221",
@@ -2225,7 +2677,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "38dbafc112833b3013",
@@ -2236,7 +2690,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "16e003df840f77a5be",
@@ -2247,7 +2703,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "57755979da92ee0963",
@@ -2258,7 +2716,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "83c21de3eebbbc5e74",
@@ -2269,7 +2729,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "246bcdda5271e052ae",
@@ -2280,7 +2742,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a7092c789748b5cda3",
@@ -2291,7 +2755,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "28d2f3a07097b34b3f",
@@ -2302,7 +2768,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "4263369d10efc46d82",
@@ -2313,7 +2781,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "2f79ddb3ac3f381da1",
@@ -2321,12 +2791,12 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNY3B3ZktVdkRXSHJ6Tjh4WWlKZTRSUjc0bHVmbXlpTVZ4d2pfbzVJT1ZDdXAxQldLZlRZNHpSUHNqR2dHZnVNRGNPa0t4RnI5S2dmdUg1UFo0SVhmbHNVN0c0WmhTbGJvQ2preTFkeDJMSzlyVzRBSThnMFQ2ZnctdkRKNW9Cd1IxTHY1NnpOZURiODREVXBaUUlDTXY1NGVZOWNXSWp4TFVYNHRWcEZseDZqRlN5Z3J6akViM0R0aFZsSW04ZktHZWRxZTJfX2RuSkJnSDc1anhZcUlNWXV6bA?oc=5",
       "publisher": "Africa Intelligence",
       "published_at": "2026-09-25T02:40:00+00:00",
-      "tickers": [
-        "BOA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "17955407d4abc6f8ad",
@@ -2337,7 +2807,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ebadadb3c4ec5863f7",
@@ -2348,7 +2820,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "6541be0cc4807d520e",
@@ -2359,7 +2833,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f90994a6908a7774a2",
@@ -2372,7 +2848,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "878740a53ace757423",
@@ -2383,7 +2861,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "35ff06f21a8f7012d6",
@@ -2394,7 +2874,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "aa4fd9a5c3b2a30e07",
@@ -2402,12 +2884,12 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcVZKaHFMUDd4WlAzYjJ3V19hVEhiZ2VneTRUdEZPT2VudW1zQ3J4UEFrMjhETFFoNWZrZ19DZklwNHFzUGpROUQ2eGt0aGk2cElVSlEyLUVxcHJha0txUmw4bDBTWXR0X2ZZUFhCYVJac19KVXlMc29Yb090NlRJZUlMYVpwajNPR0JUQk9veGZDVzFsaVgzd1lJY1E?oc=5",
       "publisher": "L'Économiste",
       "published_at": "2026-09-24T18:48:46+00:00",
-      "tickers": [
-        "LBV"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a7a47c0e321f850f61",
@@ -2418,7 +2900,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "2a834eeec7366b25c6",
@@ -2426,10 +2910,14 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_T2S_group_augmentation_capital_reservee_dirigeant.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-24T18:44:57+00:00",
-      "tickers": [],
+      "tickers": [
+        "T2S"
+      ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f152b48cc630db9d88",
@@ -2442,7 +2930,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d8e8f2aa0b3db3e0e2",
@@ -2453,7 +2943,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f692a5881c19b401a8",
@@ -2464,7 +2956,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "16d775b176c97551dd",
@@ -2472,10 +2966,14 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONHlfQ0xZNzYxUUNONXBqTHJocDZjWGl2MTQtYkx6QkZ2X0JEc0pUYVNWLWpMaWdPRnJNWHBSSnNOZEM2NVQ2amZmbGRxd3FOVGdTTVNfRWFMMENSOU12VU8zcW1oVndXZTBLc0lpYzZGVklRYm9ub3hTTGphMFlyejZIbWNpRFRKMnBVOXVwRDJtc1pOa3fSAZsBQVVfeXFMTThDRS1JX1BpRmdRdWtxZFVWLUJWeGx4LXdZb2U4MkNDNUhuNzA4Zm4wYzliSm1xVHdRQVctUnpwTW9iMGtSSXVKNzFMaWtEWG81TTZLTjBWUXgzZmgtZG5XWlBiZG1SSjFfT2ViYUoyX25tRGJwNFIxQ2FTY1FpQWxqYTFhOG1xMFUzM2Zrb1VkSlN4Vi1KTDNqVzQ?oc=5",
       "publisher": "Le Matin",
       "published_at": "2026-09-24T17:21:00+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "8c10a87e283f2c6219",
@@ -2483,12 +2981,12 @@
       "url": "https://www.infomediaire.net/bourse-de-casablanca-le-masi-recule-de-095-miniere-touissit-senvole/",
       "publisher": "Infomediaire",
       "published_at": "2026-09-24T17:05:24+00:00",
-      "tickers": [
-        "CMT"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "01e3e87d964c089b05",
@@ -2499,7 +2997,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "2e277de53556a069d0",
@@ -2510,7 +3010,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "735234c4e49a025256",
@@ -2521,7 +3023,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3c1ebe8f340f95af65",
@@ -2532,7 +3036,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "557bb753ddd3c54825",
@@ -2543,7 +3049,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "2338b02386651c8d71",
@@ -2554,7 +3062,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "37afa5d7c0c3674242",
@@ -2565,7 +3075,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "466f2f43c60333dfc0",
@@ -2578,7 +3090,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "2e8dceaf57ba5f2c0d",
@@ -2591,7 +3105,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7c4e4632d911960535",
@@ -2602,7 +3118,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "ac8ef861614e627f6f",
@@ -2613,7 +3131,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9ad1f051e7ced5e0cb",
@@ -2624,7 +3144,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a5c445754d15678c6e",
@@ -2635,7 +3157,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "261462fa01341898ab",
@@ -2646,7 +3170,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "42f53f4d550a44808a",
@@ -2657,7 +3183,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d90cae1fb3168c2050",
@@ -2668,7 +3196,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a937b5f5a1f0c7c1d7",
@@ -2679,7 +3209,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "64d79c0ddfdad3231d",
@@ -2690,7 +3222,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "1327c565d5d083810c",
@@ -2701,7 +3235,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "64d6168c45b330616d",
@@ -2712,7 +3248,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7c86b6d26f944c1e02",
@@ -2723,7 +3261,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "24d3a452d0d609013c",
@@ -2734,7 +3274,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f3e7fd090812de0f36",
@@ -2745,7 +3287,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "eb69d59de26a08c911",
@@ -2753,10 +3297,14 @@
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR2xtNzFQeERoSFNKZkNmZDVWcjhGd0lYT2Z2TVJOamdFekF0SWNIUEpHMlkzSDYycWNReTQ5ald2T09HOEtzSFNZd0JXNHFURVFiS2laVzRxcnZ5UUhISGZza3VXZHV6TnNqUWQ3YmVHOUNSZVdXclczTUwwNkUwUUItcWVGTmFpQkFYQ3RBczA0TXZEM0llSVVMc2Rwd2VQRUHSAacBQVVfeXFMT19aTDhPQi1pM0JjaU9PdHQ1Smh3QkxtWFpQSnByYUlQNkhYRHVkODBPNHlxTmw4ZG1kdVNtS2VzLVVlOXJvdGZFb0Y4bXhqZHQ5djAwLVRJbGlFMmwyYkN3T2ZOX25vbGlHOGxDVlZLSVZTbjNZSy1INlVWYk1ZZ2JKMm14djI2Rk5SZl8wckFPRi1mdXhuWWl3M0c2N3UzVWY2YTd5eG8?oc=5",
       "publisher": "Le Matin",
       "published_at": "2026-09-24T14:19:00+00:00",
-      "tickers": [],
+      "tickers": [
+        "ADI"
+      ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "32662b825bcf7885ca",
@@ -2764,12 +3312,12 @@
       "url": "https://www.challenge.ma/la-bcp-et-reseau-entreprendre-maroc-scellent-un-partenariat-en-faveur-de-lemploi-324682/",
       "publisher": "Challenge Maroc",
       "published_at": "2026-09-24T14:17:28+00:00",
-      "tickers": [
-        "BCP"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "885b88071f565b664e",
@@ -2780,7 +3328,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "5796c803ffb608c660",
@@ -2791,7 +3341,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "87c19ff3c023968928",
@@ -2802,7 +3354,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3ed411e4e1f8cccddd",
@@ -2813,7 +3367,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b5b5d03a2baf4a03e0",
@@ -2824,7 +3380,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d026b45ea130f9c74e",
@@ -2835,7 +3393,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "bdae656c489d2a8cc0",
@@ -2846,7 +3406,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "725dbc54c53fd63d01",
@@ -2857,7 +3419,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "dd959b32cd11218156",
@@ -2868,7 +3432,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e0de3dffe76e9012b0",
@@ -2879,7 +3445,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "486e1bf8e123698191",
@@ -2890,7 +3458,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "c103f4c291c8570821",
@@ -2903,7 +3473,9 @@
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "48331161326c9bb361",
@@ -2911,12 +3483,12 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORHNSeFc3TU1pZTBaRUdDeVhmSUVNeFdYN3daRTBrS25pNlRSdDQ3LXo2NXVoTjJhaUFRU0c4OFdvSS1EeVVkWU8yNm5QR210djVYQXlNaFJwYXppMVhuMUZja1R0dDRfdVB6aDdFRy1QSzJ5eUo5ZFpSSldnenhzSEVSU1hMemgwNWg3aXg1aGRzenJ6WFlsaHF0YlpCNU1Ma21Ud2psQ0R5bTdwWmFFZF9walU5bU53RmpZ?oc=5",
       "publisher": "Finances News",
       "published_at": "2026-09-24T11:37:07+00:00",
-      "tickers": [
-        "BCP"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "243036e9948b41a6cd",
@@ -2927,7 +3499,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "14a1504b35ffb6339b",
@@ -2935,12 +3509,12 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcEc5eXg4VDAzNk84NVZTR0pYSUFvaktLVmdTWGNQSVU4VDFTaHdLMUtjR3h0bHBvXzZxRm9SZy03VmpEb1JTWmZDU1pnNTUwc0dPMmswRVR4ZDJZc3BVejdCUldUQlFvdlRzbTB0dll0TGVLTjBOZHpLNE5pdFloWW0yY0hIeGFkMzR0dWpPeDNCMHgzZEdNUmtsemlySE1hMEpCNDlvOURETk9PUERYZlc3LV84cjBqV3R2ZFlIOEJmVlNiSGgzU2x1UDZydms?oc=5",
       "publisher": "Agence Ecofin Maroc",
       "published_at": "2026-09-24T10:17:00+00:00",
-      "tickers": [
-        "TMA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c0b14eaf7533680468",
@@ -2948,12 +3522,12 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc2liVW1jUkRwa2NSNEg4VnM1V1drRHNhTUxYZGdOZEx5bERlRkY3R2ZFZlo5TlZzSkNpNnl1Um9xQmFlZTBGbE9DcHFnaTV0THB3ZlJOMVpGQm9acjlRd0llbVhRM2syX2xfWkVOc2tqZ2ZwaWEzZndlSldnNzVlTlUzTU5ieFk?oc=5",
       "publisher": "L'Économiste",
       "published_at": "2026-09-24T10:07:00+00:00",
-      "tickers": [
-        "MIC"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9bfc96badd6233fe9c",
@@ -2966,7 +3540,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9971f7f8dc8f0475af",
@@ -2977,7 +3553,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "442cd808f67b6c06cc",
@@ -2990,7 +3568,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "7997804a2ea6165d9d",
@@ -3001,7 +3581,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c3fe4ea1ef8bc451f6",
@@ -3012,7 +3594,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "36bc1e695f0dde3b32",
@@ -3020,12 +3604,12 @@
       "url": "https://www.ammc.ma/sites/default/files/LabelVie_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-23T20:42:50+00:00",
-      "tickers": [
-        "LBV"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f0a8949d709889efc4",
@@ -3038,7 +3622,9 @@
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f6b873e3cebd7ac391",
@@ -3051,7 +3637,9 @@
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "33a8d179b8e5d4be55",
@@ -3064,7 +3652,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d4e4b8fdc3f7353d5f",
@@ -3072,12 +3662,12 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR2lYa3N6N2hERkQtTnBGRk9ybEtNY0taT2lXalI3UlpHX0ludXVBRnFIVVpBRDdpTTdxalNzU3JyWDN3REpYNjlXU3dXeFI0dko4NnVRVzNKaHcxUnNjV01ZaHk5TEdfQXR1VzZRQUNQaXBoamhpOTNBems4bTlaMHBZaWVrYVNGOXI0MUJ3VERwQWw4b24tVEMxRGM?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-23T18:07:02+00:00",
-      "tickers": [
-        "LBV"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b8cb81015ffbecae14",
@@ -3091,7 +3681,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "f97f2cb46b3f00ae75",
@@ -3099,12 +3691,12 @@
       "url": "https://www.jeuneafrique.com/1845684/economie-entreprises/nigeria-totalenergies-mise-800-millions-de-dollars-sur-le-champ-gazier-dima/",
       "publisher": "Jeune Afrique",
       "published_at": "2026-09-23T16:07:44+00:00",
-      "tickers": [
-        "TMA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "32547d70b165d511ab",
@@ -3115,7 +3707,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "da9a64f281809cfcd4",
@@ -3123,12 +3717,12 @@
       "url": "https://leseco.ma/maroc/eau-potable-la-srm-casablanca-settat-accelere-les-projets-en-milieu-rural.html",
       "publisher": "Les Inspirations Éco",
       "published_at": "2026-09-23T14:06:16+00:00",
-      "tickers": [
-        "SRM"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "6826eb3c789b385025",
@@ -3136,12 +3730,12 @@
       "url": "https://www.challenge.ma/atlantasanad-annonce-une-croissance-soutenue-au-s1-2026-324651/",
       "publisher": "Challenge Maroc",
       "published_at": "2026-09-23T13:30:00+00:00",
-      "tickers": [
-        "ATL"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "233765bbe869ae7e78",
@@ -3152,7 +3746,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "dc0a0c72dfec19f8fc",
@@ -3160,12 +3756,12 @@
       "url": "https://www.financialafrik.com/2026/09/23/nigeria-totalenergies-et-amni-valident-le-developpement-du-champ-gazier-dima/",
       "publisher": "Financial Afrik",
       "published_at": "2026-09-23T11:00:36+00:00",
-      "tickers": [
-        "TMA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "e71261c8ce86ab653c",
@@ -3173,12 +3769,12 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_Microdata_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-23T09:22:39+00:00",
-      "tickers": [
-        "MIC"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "65de9221df720d2347",
@@ -3186,12 +3782,12 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaFVzYzRZMmVxZXVadlZFMElBWWVjVS1QTTJkaEFvcFA4dVVjajFOVzdiLWxXSFJ5dW5jWDFibmt1VHI1TUJJcU9fVWFaRWJTT2lvcHJQX1dPWnBHY01IZGgycnZZYURkZDNrRzV6Y1VxNU1LZ3RYYlc5OG5uWGVJT0VRODZ1blNFWjJ5RmtRSDBZR2NyQVlQdQ?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-23T08:20:00+00:00",
-      "tickers": [
-        "MIC"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "aa8b87c5b6d330742b",
@@ -3199,12 +3795,12 @@
       "url": "https://oilprice.com/Latest-Energy-News/World-News/TotalEnergies-to-Develop-Offshore-Gas-Field-to-Boost-Nigeria-LNG-Supply.html",
       "publisher": "OilPrice",
       "published_at": "2026-09-23T08:00:00-05:00",
-      "tickers": [
-        "TMA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "0a156d9e39cea7e2d6",
@@ -3212,12 +3808,12 @@
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMjVXLXVCVjdIejZlbmdyQVAtakxmd1gzNFBfSnJTdnl5RHM3TGNERW1RdTROaUxJTmtyVEtBUVhobWV5MGZDbTNqX0VScnhtT1hwXzVCNmhRTGxpaUFDOG1hcGF0OUVJTThpYm1YakFsUE9LWGwwN2kwU1Q4MkItMkxpbDdxaU9EenNyZGU1bUFWeUQ3SWJTWHNfWnNnaldicl8xdmpFUFFPTDR6b1JQZDdETDBISF83VUtUMHFNWHFQRVJYUU95Sk9ZZXlPNjFr?oc=5",
       "publisher": "Alpha Bourse",
       "published_at": "2026-09-23T06:12:00+00:00",
-      "tickers": [
-        "MIC"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "bdb9de959efed22b03",
@@ -3225,12 +3821,12 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWEpsQmFsVm5jSi1iY1h2bTlsQ1pmUHp5dTllUmZXYUNQTDN0Nl81bm5JSWVvVjRpWE53YzZfRFdGNzNXMFF1aVR0WmREVW9Na1dVZlpQU2xDbFZ2cC1zMVFHWVJZc2Q3RlBkTVBzZUVYbklxUXBST0RRdDFBZE5WMVRTR1AxdzQ3V2ZsVlBqYXhkT1hIYmxRaE1KVnVFZEE?oc=5",
       "publisher": "Medias24",
       "published_at": "2026-09-23T06:02:00+00:00",
-      "tickers": [
-        "MIC"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b732c7134d9ca6e6dd",
@@ -3243,7 +3839,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3a3155b7e4f3f937e7",
@@ -3251,12 +3849,12 @@
       "url": "https://www.ammc.ma/sites/default/files/CP_AtlantaSanad_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-22T16:30:37+00:00",
-      "tickers": [
-        "ATL"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "f0f42e80a71a1c814f",
@@ -3264,12 +3862,12 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUGJGQnotWV82dF9pZkpzQ3QtT0czd0drbjVGS05YaUpUQUhBM1Boc1JEckRHX2VxbTlfZHJEeWZtRmE1aGJHWVVIQ0h3QUxQeEthbUtVNzNWS3NZdzVfcjJvYnViTlNWaWNWcEpXVm9raVlTQlFQLTFwcHg0cHFtS3lvZkpiYW84UWhwZTl3R3JiRGpyOGV0dFduWDFBZm4tODB2YlI3M0wwdw?oc=5",
       "publisher": "BourseNews",
       "published_at": "2026-09-22T16:23:45+00:00",
-      "tickers": [
-        "ATL"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c948260f62e2d81e4b",
@@ -3277,12 +3875,12 @@
       "url": "https://www.ammc.ma/sites/default/files/Vicenne_RFS_S1_26.pdf",
       "publisher": "AMMC",
       "published_at": "2026-09-22T16:05:11+00:00",
-      "tickers": [
-        "VCNE"
-      ],
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "38179bb09a21e8c5b8",
@@ -3290,12 +3888,12 @@
       "url": "https://www.infomediaire.net/ia-au-travail-60-des-salaries-craignent-une-erosion-de-leurs-competences/",
       "publisher": "Infomediaire",
       "published_at": "2026-09-22T14:20:48+00:00",
-      "tickers": [
-        "IBM"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "c16ba17893489baa30",
@@ -3303,12 +3901,12 @@
       "url": "https://www.infomediaire.net/3508-mdh-pour-renforcer-lacces-a-leau-potable-a-casablanca-settat/",
       "publisher": "Infomediaire",
       "published_at": "2026-09-22T14:12:39+00:00",
-      "tickers": [
-        "SRM"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "3ef04bf4a6ae9216ab",
@@ -3316,12 +3914,12 @@
       "url": "https://www.financialafrik.com/2026/09/22/banques-hausse-de-725-du-produit-net-bancaire-de-la-boa-senegal-au-premier-semestre-2026/",
       "publisher": "Financial Afrik",
       "published_at": "2026-09-22T13:37:35+00:00",
-      "tickers": [
-        "BOA"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "696c6292d1e8271179",
@@ -3329,12 +3927,12 @@
       "url": "https://www.challenge.ma/groupe-bcp-le-resultat-net-consolide-sameliore-de-87-a-fin-juin-324602/",
       "publisher": "Challenge Maroc",
       "published_at": "2026-09-22T12:14:26+00:00",
-      "tickers": [
-        "BCP"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "b8c0a6be7275ddf87f",
@@ -3347,7 +3945,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "aee0f6de461cd425ad",
@@ -3360,7 +3960,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "d3f10717b647815d67",
@@ -3371,7 +3973,9 @@
       "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "0ad1bdaf3aa19a2f15",
@@ -3384,7 +3988,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "a1e10a13ec28c6a56f",
@@ -3397,7 +4003,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "93bfc1336ceb715a94",
@@ -3410,7 +4018,9 @@
       ],
       "tier": "S1",
       "status": "index officiel, document non analysé",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED"
     },
     {
       "id": "417edde37fa5ca5854",
@@ -3418,12 +4028,12 @@
       "url": "https://leseco.ma/maroc/narsa-renforce-son-dispositif-de-management-de-la-qualite.html",
       "publisher": "Les Inspirations Éco",
       "published_at": "2026-09-22T09:11:54+00:00",
-      "tickers": [
-        "MNG"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "9ccece608e575aa26f",
@@ -3431,12 +4041,12 @@
       "url": "https://www.financialafrik.com/2026/09/22/maroc-hausse-de-9-du-chiffre-daffaires-consolide-du-groupe-les-eaux-minerales-doulmes-au-premier-semestre-2026/",
       "publisher": "Financial Afrik",
       "published_at": "2026-09-22T08:49:31+00:00",
-      "tickers": [
-        "OUL"
-      ],
+      "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "61b6671ec9bc43b6b6",
@@ -3449,7 +4059,9 @@
       ],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT"
     },
     {
       "id": "69613e753183255bbf",
@@ -3460,7 +4072,9 @@
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
-      "usable_for_score": false
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT"
     }
   ]
 }
