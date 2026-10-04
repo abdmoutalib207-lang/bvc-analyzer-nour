@@ -13,6 +13,7 @@ from nour.market import atomic_json
 from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday
 from nour.market_view import closing_summary
 from nour.briefing_view import briefing_text
+from nour.report_contracts import synchronize_market
 
 ROOT = Path(__file__).resolve().parent
 
@@ -30,11 +31,13 @@ def main():
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
     overview_path = ROOT/'data/market_overview.json'
     overview = json.loads(overview_path.read_text()) if overview_path.exists() else {}
-    report['market_overview'] = overview.get('current', {})
+    synchronize_market(report, overview.get('current', {}))
     history_path = ROOT/'data/masi_history.json'
     report['masi_history'] = json.loads(history_path.read_text()).get('seances', {}) if history_path.exists() else {}
     overview_health = ROOT/'data/overview_health.json'
     report['overview_health'] = json.loads(overview_health.read_text()) if overview_health.exists() else {}
+    news_health = ROOT/'data/news_health.json'
+    report['news_health'] = json.loads(news_health.read_text()) if news_health.exists() else {'status':'not_observed'}
     health_file=ROOT/"data/health.json"
     report["health"] = json.loads(health_file.read_text()) if health_file.exists() else {
         "result":"not_configured","message":"Collecte automatique non encore exécutée"}
@@ -84,7 +87,7 @@ def main():
     # Reproducible latest closing digest, separate from the scheduled editions.
     # Never label an intraday observation or today's preparation as a new close.
     closed = overview.get('last_closed', {})
-    closing_report = {**report, 'market_overview': closed, 'runtime': {}, 'intraday': {}}
+    closing_report = synchronize_market({**report, 'runtime': {}, 'intraday': {}}, closed)
     closing = create_briefing(closing_report, closing_only=True)
     closing.update(title='Briefing de clôture', runtime={}, intraday={},
                    market_session=closed.get('asof'), index=closed.get('masi'),

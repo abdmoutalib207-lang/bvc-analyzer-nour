@@ -72,45 +72,9 @@ def technical(record):
 
 
 def fundamentals(record, facts):
-    """Recalculate from attributed annual-report facts; retain the page of each input."""
-    out = {"source": "absent", "exercise": None, "document_url": None,
-           "evidence": {}, "eps_mad": None, "book_value_per_share_mad": None,
-           "pe": None, "pb": None, "revenue_growth_pct": None,
-           "roe_pct": None, "dividend_yield_pct": None, "earnings_mmad": None}
-    if not isinstance(facts, dict) or not str(facts.get("url") or "").startswith("https://"):
-        return out
-    data = facts.get("faits") or {}
-    def fact(key):
-        f = data.get(key) or {}
-        v = f.get("valeur")
-        if not isinstance(v,(int,float)) or not isinstance(f.get("page"),int):
-            return None
-        out["evidence"][key] = {"value": v, "page": f["page"], "unit": f.get("unite", "MMAD")}
-        return float(v)
-    out.update(source="rapport annuel référencé (chiffres à recouper)",
-               exercise=facts.get("exercice"), document_url=facts["url"])
-    shares = fact("nombre_actions") or fact("nombre_actions_au_rapport")
-    net = fact("resultat_net_part_groupe")
-    equity = fact("capitaux_propres_part_groupe")
-    revenue = fact("chiffre_affaires")
-    prior_revenue = fact("chiffre_affaires_2024")
-    dividend = fact("dividende_par_action")
-    price = record.get("price")
-    if shares and shares > 0:
-        out["eps_mad"] = _round(net*1e6/shares if net is not None else None)
-        out["book_value_per_share_mad"] = _round(equity*1e6/shares if equity is not None else None)
-    if price and out["eps_mad"] and out["eps_mad"] > 0:
-        out["pe"] = _round(price/out["eps_mad"])
-    if price and out["book_value_per_share_mad"] and out["book_value_per_share_mad"] > 0:
-        out["pb"] = _round(price/out["book_value_per_share_mad"])
-    if prior_revenue and revenue is not None:
-        out["revenue_growth_pct"] = _round((revenue/prior_revenue - 1)*100)
-    if equity and equity > 0 and net is not None:
-        out["roe_pct"] = _round(net/equity*100)
-    if dividend is not None and price and price > 0:
-        out["dividend_yield_pct"] = _round(dividend/price*100)
-    out["earnings_mmad"] = net
-    return out
+    """Single implementation shared by every consumer."""
+    from .fundamentals import calculate
+    return calculate(record, facts)
 
 
 def canonical_score(quality, tech, fundamental):

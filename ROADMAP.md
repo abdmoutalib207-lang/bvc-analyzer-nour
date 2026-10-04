@@ -5,13 +5,14 @@
 - Dépôt isolé, 80 titres, historique disponible, graphiques SVG et périodes interactives, recherches et filtres.
 - Score unique `nour-quant-v1` sans NLP ; états de qualité, technique, liquidité, fondamentaux documentés, briefing de séance et radar AMMC / presse.
 - Import CDG indépendant avec vraie séance, mappage BVC vérifié, OHLC et montant MAD, copie atomique, état de collecte. Workflow autonome sans écriture dans l'ancien dépôt.
+- Lot du 04/10 : 63 références annuelles, 68 semestrielles, compteur public des métriques réellement disponibles ; semestre séparé, devise et capital protégés. Statistiques historiques non chevauchantes, sans prédiction ; vue MASI unifiée et rattachement prudent des actualités.
 
 ## Contrôles d'exploitation à achever sur de nouvelles séances
 
 1. Observer plusieurs exécutions programmées : collecte → commit → Pages → fichier effectivement servi. Comparer les cours de clôture et le nombre de cotations au bulletin primaire.
 2. Tester le fournisseur lorsque le flux CDG présente des titres sans OHLC, une suspension ou un changement de structure : journaliser les valeurs exclues sans corrompre la séance publiée.
-3. Compléter les 2 historiques manquants et rattacher les rapports 2026 à l'ensemble des 80 émetteurs. Recouper les 31 rapports déjà référencés, vérifier la nature de chaque résultat et de chaque nombre d'actions.
-4. Construire un backtest hors échantillon avec MASI, coûts, liquidité, glissement, turnover, drawdown et incertitudes avant toute interprétation prédictive du score.
+3. Compléter les 2 historiques manquants sans fabriquer de séances. Achever les 17 références annuelles et 12 semestrielles absentes ; recouper les PDF importés et les nombres d'actions. Faire les imports suivants dans Nour uniquement, sans dépendance d'exécution au dépôt principal.
+4. Valider la stabilité des statistiques hors échantillon et par régime, avec MASI, coûts, dividendes, liquidité et incertitudes. Construire une base point-in-time avant tout test de facteurs fondamentaux. Le but est l'aide à l'analyse statistique, pas la prédiction du marché.
 5. Ajouter éventuellement fixing et carnet seulement après l'obtention de données licites et réellement horodatées ; ne jamais déduire les flux des seules clôtures.
 6. Vérifier l'exactitude et les droits de réutilisation des sources de marché et presse, ainsi que l'accessibilité sur téléphone et clavier.
 

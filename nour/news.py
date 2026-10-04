@@ -5,6 +5,7 @@ import hashlib
 import html
 import json
 import re
+import unicodedata
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
@@ -14,7 +15,42 @@ AMMC_INDEX = "https://www.ammc.ma/fr/communiques-presse-emetteurs"
 LE_MATIN_RSS = "https://lematin.ma/rss"
 
 
-def normalize(article, symbols):
+ALIASES = {
+    'ADI':['alliances','alliances developpement immobilier'], 'ADH':['addoha','douja promotion'],
+    'MNG':['managem'], 'SMI':["societe metallurgique d imiter"], 'T2S':['t2s group','t2s group holding'],
+    'SNA':['sonasid'], 'STK':['stokvis'], 'MSA':['marsa maroc'], 'IBM':['ib maroc','ibmaroc'],
+    'SRM':['realisations mecaniques'], 'TGCC':['tgcc'], 'BCP':['banque centrale populaire'],
+    'ATW':['attijariwafa bank'], 'BOA':['bank of africa maroc'], 'IAM':['maroc telecom'],
+    'CMT':['compagnie miniere de touissit'], 'CSR':['cosumar'], 'HPS':['hightech payment systems','hps'],
+    'LHM':['lafargeholcim maroc','lafarge holcim maroc'], 'CIM':['ciments du maroc'],
+    'AKD':['akdital'], 'RIS':['risma'], 'RDS':['residences dar saada'], 'TQA':['taqa morocco'],
+}
+AMBIGUOUS = {'IBM','SRM','BOA','SMI','CMT','SNA','STK'}
+
+
+def _words(value):
+    plain = ''.join(c for c in unicodedata.normalize('NFKD',value.lower()) if not unicodedata.combining(c))
+    return ' '.join(re.findall(r'[a-z0-9]+',plain))
+
+
+def associate(title, url, symbols, official, issuer_names=None):
+    """Full-name matching; legacy ticker guesses are never blindly preserved."""
+    title_words = ' '+_words(title)+' '
+    filename = ' '+_words(urlparse(url).path.rsplit('/',1)[-1])+' '
+    found=[]
+    for symbol in symbols:
+        aliases = list(ALIASES.get(symbol,[]))
+        name=(issuer_names or {}).get(symbol,'')
+        if symbol not in AMBIGUOUS and len(_words(name).split())>=2:
+            aliases.append(name)
+        if any(' '+_words(a)+' ' in title_words for a in aliases):
+            found.append(symbol)
+        elif official and symbol not in AMBIGUOUS and ' '+symbol.lower()+' ' in filename:
+            found.append(symbol)
+    return sorted(set(found))
+
+
+def normalize(article, symbols, issuer_names=None):
     url = str(article.get("primary_url") or article.get("url") or "")
     parsed = urlparse(url)
     if parsed.scheme != "https" or not parsed.hostname:
@@ -32,18 +68,20 @@ def normalize(article, symbols):
     title = html.unescape(re.sub(r"<[^>]+>", "", str(article.get("title") or ""))).strip()[:220]
     if not title:
         return None
-    tickers = sorted(set(article.get("tickers") or []) & set(symbols))
+    tickers = associate(title,url,symbols,official,issuer_names)
     return {"id": hashlib.sha256(url.encode()).hexdigest()[:18], "title": title,
             "url": url, "publisher": "AMMC" if official else str(article.get("publisher") or article.get("source") or parsed.hostname)[:80],
             "published_at": published.isoformat(), "tickers": tickers,
             "tier": "S1" if official else "S2", "status": "index officiel, document non analysé" if official else "alerte non vérifiée",
-            "usable_for_score": False}
+            "usable_for_score": False,
+            "ticker_matching": "issuer_name_or_official_filename" if tickers else "unmatched",
+            "classification": "DOCUMENT_LISTED" if official else "UNVERIFIED_ALERT"}
 
 
-def merge_news(existing, fresh, symbols, limit=300):
+def merge_news(existing, fresh, symbols, limit=300, issuer_names=None):
     combined = {}
     for article in [*existing, *fresh]:
-        normalized = normalize(article, symbols)
+        normalized = normalize(article, symbols, issuer_names)
         if normalized:
             combined[normalized["id"]] = normalized
     # Never treat multiple press reports about the same event as multiple scores.

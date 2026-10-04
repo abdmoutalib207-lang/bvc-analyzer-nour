@@ -186,7 +186,39 @@ def detail_page(item, record, fixture, style, script):
                                fundamental_card('PER recalculé',calculated.get('pe')),
                                fundamental_card('P/B recalculé',calculated.get('pb')),
                                fundamental_card('ROE',calculated.get('roe_pct'),'%',True),
-                               fundamental_card('Croissance du CA',calculated.get('revenue_growth_pct'),'%',True)))
+                               fundamental_card('Croissance du CA',calculated.get('revenue_growth_pct'),'%',True),
+                               fundamental_card('Dette nette stricte',calculated.get('net_debt_strict_mmad'),'MMAD'),
+                               fundamental_card('Dette nette stricte / EBE',calculated.get('net_debt_ebitda'),'×')))
+    financial_details = (f'<p class="fineprint">Périmètre : {esc(calculated.get("accounting_basis"))}. '
+                         f'Devise : {esc(calculated.get("currency"))}. Fin de période : {esc(calculated.get("period_end"))}.</p>'
+                         f'<p class="fineprint">{esc(calculated.get("roe_method"))}. '
+                         f'BPA : {esc(calculated.get("eps_denominator"))}. '
+                         f'P/B : {esc(calculated.get("book_denominator"))}.</p>'
+                         f'<p class="fineprint">{esc(calculated.get("net_debt_method"))}</p>')
+    if calculated.get('warnings'):
+        financial_details += '<details><summary>Réserves sur les fondamentaux</summary><ul>'+''.join(
+            f'<li>{esc(w)}</li>' for w in calculated['warnings'])+'</ul></details>'
+    recent = calculated.get('latest_report') or {}
+    if str(recent.get('document_url','')).startswith('https://'):
+        financial_details += (f'<section class="panel"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
+            f'<p>CA : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
+            f'résultat selon le périmètre du document : {number(recent.get("reported_net_millions"))} millions.</p>'
+            f'<p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
+            f'{esc(recent.get("note") or "")}</p>'
+            f'<a href="{esc(recent["document_url"])}" target="_blank" rel="noopener noreferrer">Document semestriel référencé</a>'
+            '<p class="fineprint">Relevé importé, non recertifié. Présenté séparément des ratios annuels : aucun doublement du semestre, aucun mélange des périmètres.</p></section>')
+    statistics = item.get('historical_statistics') or {}
+    statistic_rows = ''.join(
+        f'<tr><td>{h["horizon_sessions"]} séances</td><td>{h["observations"]}</td>'
+        f'<td>{number(h.get("positive_frequency_pct"))} %</td><td>{number(h.get("median_return_pct"))} %</td>'
+        f'<td>{number(h.get("p10_return_pct"))} / {number(h.get("p90_return_pct"))} %</td>'
+        f'<td>{" / ".join(number(x) for x in h["wilson95_pct"])+" %" if h.get("wilson95_pct") else "Échantillon insuffisant (< 30)"}</td></tr>'
+        for h in statistics.get('horizons',[]))
+    statistics_html = ('<section class="panel"><span class="eyebrow">Statistiques, pas prédiction</span><h2>Distribution des rendements historiques</h2>'
+        f'<p class="panel-sub">{esc(statistics.get("first_session"))} → {esc(statistics.get("last_session"))}. '
+        'Fenêtres non chevauchantes ; la fréquence positive n’est pas une probabilité de hausse demain.</p>'
+        '<div class="tablewrap"><table><thead><tr><th>Horizon</th><th>Observations</th><th>Fréquence positive</th><th>Rendement médian</th><th>Percentiles 10 / 90</th><th>Intervalle Wilson 95 %</th></tr></thead>'
+        f'<tbody>{statistic_rows}</tbody></table></div><p class="fineprint">{esc(statistics.get("note"))}</p></section>')
     contributors = score.get('contributors') or {}
     score_factors = ''.join(
         f'<div class="score-factor"><div class="score-factor-heading"><span>{esc(key)}</span><strong>{number(value["points"],0)} / {number(value["weight"],0)}</strong></div>'
@@ -199,6 +231,12 @@ def detail_page(item, record, fixture, style, script):
     evidence_html=(f'<a href="{esc(doc)}" rel="noopener noreferrer" target="_blank">Rapport référencé · exercice {esc(calculated.get("exercise"))}</a> · '
                    + esc(', '.join(f'{k} p.{v["page"]}' for k,v in evidence.items()) or 'Aucun chiffre exploitable')
                    if doc else 'Aucun rapport sourcé disponible dans cette archive.')
+    if evidence:
+        financial_details += ('<details><summary>Chiffres d’entrée et pages sources</summary><ul>' + ''.join(
+            f'<li>{esc(k)} : {number(v["value"],6)} {esc(v["unit"])} · '
+            f'<a href="{esc(v.get("document_url") or doc)}#page={v["page"]}" rel="noopener noreferrer" target="_blank">page PDF {v["page"]}</a>'
+            f' · {esc(v.get("validation_status"))}<br>{esc(v.get("note"))}</li>'
+            for k,v in evidence.items())+'</ul></details>')
     body = (header('../index.html', fixture["snapshot_updated"])
             + '<main><div class="hero"><a href="../index.html" class="muted">← Retour aux 80 valeurs</a>'
             + f'<div class="eyebrow" style="margin-top:20px">{esc(record.get("sector") or "Action cotée")} · {esc(symbol)}</div><h1>{esc(record["name"])}</h1>'
@@ -209,7 +247,8 @@ def detail_page(item, record, fixture, style, script):
             + f'<div class="detail-grid">{cards}</div>{caveat}'
             + f'<section class="panel"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
             + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
-            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p><p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
+            + statistics_html
+            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
             + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
@@ -218,6 +257,14 @@ def detail_page(item, record, fixture, style, script):
 
 def home_page(fixture, report, style, script):
     items = {r["symbol"]: r for r in report["results"]}
+    coverage = report.get('fundamental_coverage') or {}
+    fundamental_summary = ('<details class="panel"><summary>Couverture des fondamentaux et limites</summary>'
+        f'<p>{coverage.get("referenced",0)} / {len(items)} rapports annuels référencés ; '
+        f'{coverage.get("with_recent_report",0)} publications semestrielles. '
+        f'BPA calculable : {coverage.get("with_eps",0)} ; P/B : {coverage.get("with_pb",0)} ; ROE : {coverage.get("with_roe",0)}.</p>'
+        f'<p class="fineprint">Sans rapport annuel dans cette archive : {esc(", ".join(coverage.get("missing_documents",[])))}. '
+        'Une référence n’est pas une certification. Le semestre reste séparé des ratios annuels. '
+        'Le score décrit des facteurs observés, pas une probabilité de gain.</p></details>')
     rows = []
     for symbol in fixture["symbols"]:
         r, record = items[symbol], fixture["records"][symbol]
@@ -239,6 +286,7 @@ def home_page(fixture, report, style, script):
             + '<main><div class="hero market-hero"><span class="eyebrow">Bourse de Casablanca</span><h1>Marché <em>& séance.</em></h1><p>Le MASI et le bilan du marché, puis les valeurs à explorer.</p>'
             + '<div class="primary-actions"><a class="btnlink" href="cloture.html">Dernier briefing de clôture</a><a class="btnlink outline" href="briefing.html">Point de marché</a><a class="btnlink outline" href="actualites.html">Actualités</a></div></div>'
             + market_panel(report)
+            + fundamental_summary
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
             + f'<p class="panel-sub">{len(items)} valeurs suivies · cliquez sur le code pour le graphique et les indicateurs, sur CSV pour l’historique. La variation compare les deux dernières clôtures disponibles de chaque titre.</p><div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernière clôture</th><th>Variation</th><th>Date clôture</th><th>Point de séance</th><th>Score</th><th>État des données</th><th>Historique</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
             + '<p class="fineprint">Les états décrivent la disponibilité des données, jamais une recommandation. Un historique peut rester indisponible tant qu’aucune séance validée n’a été importée.</p></section>'
@@ -248,6 +296,9 @@ def home_page(fixture, report, style, script):
 
 
 def news_page(fixture, report, style, script):
+    health=report.get('news_health') or {}
+    health_line=(f'<p class="source-age">Dernière tentative de collecte : {esc(health.get("checked_at"))} · '
+                 f'état {esc(health.get("status","non renseigné"))}. Sans succès récent, les liens conservés ne sont pas présentés comme une nouvelle collecte.</p>')
     # Preserve every archived alert for search, but present official documents
     # and market-relevant items first. A secondary headline is not proof.
     articles = sorted(report.get('news', []),
@@ -261,6 +312,7 @@ def news_page(fixture, report, style, script):
         rows.append(f'<article class="news-item" data-news-row data-search="{esc(searchable)}" data-tier="{esc(a.get("tier"))}"><span class="eyebrow">{esc(a.get("publisher"))} · {esc(a.get("published_at","")[:10])} · {esc(a.get("tier"))}</span><h2><a href="{url}" target="_blank" rel="noopener noreferrer">{title} ↗</a></h2><p>{esc(a.get("status"))} · Titres associés : {esc(tickers or "non établis")}</p></article>')
     body = (header('index.html', fixture['snapshot_updated'])
             + '<main><div class="hero"><span class="eyebrow">Radar documentaire</span><h1>Publications et alertes à vérifier</h1><p>Documents officiels d’abord, puis alertes de marché, puis autres éléments de veille. Le rattachement au titre et la source sont visibles ; aucun article ne contribue au score.</p></div>'
+            + health_line
             + '<section class="panel"><div class="filters"><input class="search" id="news-search" type="search" placeholder="Rechercher un titre ou une source" aria-label="Rechercher dans les actualités"><select id="news-tier" aria-label="Filtrer par niveau de source"><option value="">Toutes les sources</option><option value="S1">Index officiel AMMC</option><option value="S2">Veille secondaire</option></select></div><p class="fineprint">Une ligne S1 atteste la présence d’un document sur l’index AMMC ; son contenu financier n’est pas analysé automatiquement. Les autres lignes attendent une validation primaire.</p>'
             + '<div class="news-list">' + (''.join(rows) or '<p>Aucune actualité disponible.</p>') + '</div></section></main><footer>BVC Analyzer Nour · actualités réservées à la veille · NLP 0 %.</footer>')
     return shell('Actualités', body, style, script)

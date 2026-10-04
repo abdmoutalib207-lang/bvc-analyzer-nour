@@ -3,6 +3,8 @@ from datetime import date
 from math import ceil, sqrt
 from statistics import median, stdev
 from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
+from .fundamentals import coverage
+from .statistics import describe
 
 
 def _mean(items):
@@ -130,6 +132,7 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         item = analyze(rec, asof, quantity)
         item["technical"] = technical(rec)
         item["fundamental"] = fundamentals(rec, facts.get(symbol))
+        item["historical_statistics"] = describe(rec)
         item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
         results.append(item)
     return {
@@ -139,4 +142,5 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         "score_version": SCORE_VERSION, "news_role": "veille uniquement", "nlp_weight": 0,
         "method": "Score descriptif plafonné par la qualité et la couverture; jamais un ordre. MAD historiques estimés = cours × quantité sauf champ réel explicite; 10% de participation est un scénario.",
         "market": fixture.get("market", {}), "news": news or [], "results": results,
+        "fundamental_coverage": coverage(results),
     }
