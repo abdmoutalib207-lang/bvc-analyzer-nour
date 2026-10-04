@@ -22,3 +22,5 @@
 6. Vérifier l'exactitude et les droits de réutilisation des sources de marché et presse, ainsi que l'accessibilité sur téléphone et clavier.
 
 Tant que 1, 3 et 4 restent ouverts, Nour est un terminal analytique consultable et audit-able ; ce n'est ni du temps réel garanti ni une stratégie d'investissement validée.
+
+- Complément disponible terminé : 77/80 annuels et 76/80 semestriels. [Preuves et références restantes](docs/batches/2026-10-04-remaining.md). Annuel manquant : DIS/Diac Salaf, DLM, IBM ; semestre : mêmes titres et CAR à clôture décalée. [Rapprochement principal/Nour](docs/comparisons/2026-10-04-principal.md) : cinq BPA annuels concordent, divergences de période/capital/fonds propres documentées. Ratios sans dénominateur vérifié toujours bloqués.

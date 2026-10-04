@@ -5441,7 +5441,28 @@
         "Le bénéfice 2025 est soutenu par un produit d'impôt différé de 7,8 (impôts différés actifs 54,4 sur 98,7 d'immobilisé) et un résultat non courant de 11,8 : le résultat avant impôt (18,6) est lui-même inférieur à la réserve chiffrée.",
         "Pas de tableau des flux de trésorerie consolidé dans le dépôt (les CAC en citent un) ; pas d'EBE ni de dotations aux amortissements isolées (« Dotations d'exploitation » 6,4 mêle provisions ; 74,0 en 2024).",
         "Dette nette 191,7 MMAD (stricte 193,9) pour des capitaux propres négatifs ; « Autres dettes et comptes de régularisation » 257,0 non analysées, hors dette financière."
-      ]
+      ],
+      "semester_activity_label": "CA",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
+        "accounting_basis": "Consolidé, normes nationales CNC, résultat part du groupe",
+        "pages": "PDF p.3, CPC consolidé en KMAD",
+        "reported_net_millions": -7.089,
+        "reported_net_previous_millions": -0.323,
+        "revenue_millions": 112.708,
+        "revenue_previous_millions": 107.617,
+        "currency": "MAD",
+        "note": "RNPG -7 089 et -323 KMAD ; totaux -7 090 et -325 exclus. Comptes sociaux p.2 distincts. L’attestation p.3 contient des réserves sur les filiales et une incertitude sur la continuité d’exploitation.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
+          "document_hash": "sha256:686668d07b1e9773d964fab67f26bad4c1114c3eb9a6c4f4719bcaef73060a92",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        }
+      }
     },
     "TMA": {
       "societe": "TotalEnergies Marketing Maroc",
@@ -5475,7 +5496,29 @@
         "validation_status": "referenced_import_not_independent_audit"
       },
       "accounting_basis": "Part du groupe lorsque explicitement publiée",
-      "reservations": []
+      "reservations": [],
+      "semester_activity_label": "CA",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://evp-totalenergies-dam-prod-secured-cdn.wedia-group.com/medias/20260930-1750-43d7d49c-d0ca-41b4-a29c-835ff809b15f/compressed-pdf_output.pdf",
+        "accounting_basis": "Consolidé IFRS, résultat part du groupe",
+        "pages": "PDF p.11, compte de résultat consolidé en milliers de MAD",
+        "reported_net_millions": 284.955,
+        "reported_net_previous_millions": 324.273,
+        "revenue_millions": 8627.94,
+        "revenue_previous_millions": 7543.58,
+        "currency": "MAD",
+        "note": "Rapport S1 2026 publié sur le site officiel TotalEnergies Marketing Maroc le 30/09/2026. RNPG explicitement isolé, égal au total. BPA semestriel arrondi publié 32 MAD non annualisé ; ratios annuels conservés.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "issuer_pdf",
+          "source_url": "https://evp-totalenergies-dam-prod-secured-cdn.wedia-group.com/medias/20260930-1750-43d7d49c-d0ca-41b4-a29c-835ff809b15f/compressed-pdf_output.pdf",
+          "source_index": "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees",
+          "document_hash": "sha256:dd3c7c6a7dab6030032bc25d60e59db2a9c35b45730031232b8c75665c3f2271",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_page_visually_checked_not_whole_report_certified"
+        }
+      }
     },
     "DHO": {
       "societe": "Delta Holding",
@@ -7878,7 +7921,28 @@
         "Les états consolidés de l'exercice 2025 sont cohérents entre eux (huit identités ci-dessus). Aucune contradiction n'a été trouvée sur 2025, à la différence du CPC consolidé du S1 2026 (lot 12) : deux états qui divergeraient n'ont pas été constatés ici.",
         "Dépôt AMMC = extrait de 3 pages ; le rapport financier annuel complet est annoncé sur jet-contractors.com (p.3), non déposé au catalogue AMMC (rapports_annuels vide) : pas de tableau des flux consolidé, pas d'annexe, pas d'EBE dans les états.",
         "EBITDA : valeur publiée au communiqué, arrondie au million et lue sur un graphique (voir le fait)."
-      ]
+      ],
+      "semester_activity_label": "CA",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
+        "accounting_basis": "Consolidé, résultat part groupe non réconcilié",
+        "pages": "PDF p.3, CPC consolidé en MAD ; synthèse p.1",
+        "reported_net_millions": null,
+        "reported_net_previous_millions": null,
+        "revenue_millions": 1772.53032745,
+        "revenue_previous_millions": 1460.30771735,
+        "currency": "MAD",
+        "note": "Résultat inutilisable : p.3 affiche 12 087 648,54 MAD au total XIII, 103 597 191,06 au total XVI (recoupé par CAC et synthèse), 107 525 818,90 en part groupe et 91 509 542,52 en minoritaires. Ces lignes ne se réconcilient pas. Aucun résultat total substitué au groupe ; aucun BPA/PER semestriel dérivé.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
+          "document_hash": "sha256:e16321b5b72c3e91a11a6d54c7efee721ab2d35ec8bbef1146fe171ebf16c989",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        }
+      }
     },
     "HAL": {
       "societe": "HAL",
@@ -9010,7 +9074,28 @@
         "validation_status": "referenced_import_not_independent_audit"
       },
       "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-      "reservations": []
+      "reservations": [],
+      "semester_activity_label": "CA",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
+        "accounting_basis": "Consolidé, résultat total publié, part du groupe non isolée",
+        "pages": "PDF p.1, synthèse consolidée en MAD",
+        "reported_net_millions": 8.780283,
+        "reported_net_previous_millions": 0.032371,
+        "revenue_millions": 82.914072,
+        "revenue_previous_millions": 60.739514,
+        "currency": "MAD",
+        "note": "Résultat net consolidé total de la synthèse, pas un RNPG validé. Le BPA comparatif publié -0,70 MAD ne concorde pas avec un quotient du total positif 32 371 MAD ; part groupe et dénominateurs non rapprochés, aucun ratio par action dérivé.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
+          "document_hash": "sha256:f0d8aac22e85e906c99eba64a681f717b528c2f61b0c46b1290b74712058328a",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        }
+      }
     },
     "S2M": {
       "societe": "S2M (SOCIETE MAGHREBINE DE MONETIQUE)",
@@ -12159,7 +12244,28 @@
         "Le texte du rapport est superposé (couche texte doublée « NNoottee AA--55 ») sur les notes ; les états consolidés p.76-79 sont propres.",
         "Produits des placements 10,4 MTND (ligne A-19) sans actif de placement isolé au bilan consolidé ; titres de participation non consolidés 60,1 MTND (12 % du total) et liquidités 33,9. Pas d'EBE publié.",
         "Opinion des CAC sur les comptes consolidés (p.70) sans réserve. L'exercice est comparé à 2024 retraité en proforma (*, note 3.1-C)."
-      ]
+      ],
+      "semester_activity_label": "Produits issus des contrats avec les clients",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
+        "accounting_basis": "Consolidé IFRS, résultat part groupe ; comparatif 2025 retraité pro forma",
+        "pages": "PDF p.2, états consolidés IFRS en dinars tunisiens entiers",
+        "reported_net_millions": 29.973162,
+        "reported_net_previous_millions": 37.140122,
+        "revenue_millions": 368.370286,
+        "revenue_previous_millions": 352.11884,
+        "currency": "TND",
+        "note": "Millions TND, aucune conversion en MAD. RNPG explicitement publié 29 973 162 TND ; total 29 973 577, minoritaires 416 (écart d’arrondi 1 TND). Le semestre IFRS et son comparatif pro forma ne sont pas mélangés à l’annuel SCE 2025. Aucun ratio au cours MAD.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
+          "document_hash": "sha256:65b123df7247ccea02328f87c04320f39053c2c7287fc10a70ed98b854ee3a14",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        }
+      }
     },
     "MRL": {
       "societe": "Maroc Leasing",
@@ -12269,14 +12375,88 @@
       }
     },
     "BOA": {
-      "societe": "BOA",
-      "faits": {},
+      "societe": "Bank of Africa",
+      "exercice": 2025,
+      "exercice_clos": "2025-12-31",
+      "document": "Rapport financier annuel 2025 : pages sélectionnées",
+      "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+      "pages_document": 177,
+      "devise": "MAD",
+      "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+      "financial_business": true,
+      "capital_change_unresolved": true,
+      "semester_activity_label": "PNB",
+      "reservations": [
+        "Capital modifié en 2025 : 215 786 333 à 220 281 881 titres. La note p.135 affiche un BPA 17,31 MAD sur le nombre publié mais ne fournit pas une moyenne pondérée explicitement réconciliée. Les opérations 2026 et les ajustements comparatifs restent à contrôler ; BPA/PER/P/B indisponibles."
+      ],
+      "faits": {
+        "resultat_net_part_groupe": {
+          "valeur": 3813.552,
+          "page": 120,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "RNPG 3 813 552 KMAD, hors minoritaires.",
+          "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 31794.36,
+          "page": 121,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Colonne explicite groupe 31 794 360 KMAD ; somme du bilan p.120 concordante. Total 40 426 438 exclu.",
+          "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire": {
+          "valeur": 20338.747,
+          "page": 120,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "PNB consolidé IFRS.",
+          "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire_2024": {
+          "valeur": 18716.574,
+          "page": 120,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Comparatif du même CPC.",
+          "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_existant_a_rapprocher": {
+          "valeur": 220281881,
+          "page": 135,
+          "unite": "actions",
+          "devise": "MAD",
+          "unite_au_rapport": "actions",
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Capital exact 2 202 818 810 MAD / 10 MAD ; 2024 : 215 786 333 titres. Clôture, sans moyenne pondérée validée.",
+          "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        }
+      },
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "datasets/resultats_s1_2026.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+        "document_hash": "sha256:efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+        "reviewed_at": "2026-10-04",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
         "period_end": "2026-06-30",
@@ -12290,18 +12470,100 @@
         "currency": "MAD",
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "datasets/resultats_s1_2026.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        }
       }
     },
     "BMC": {
-      "societe": "BMC",
-      "faits": {},
+      "societe": "BMCI",
+      "exercice": 2025,
+      "exercice_clos": "2025-12-31",
+      "document": "Rapport financier annuel 2025 : pages sélectionnées",
+      "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+      "pages_document": 357,
+      "devise": "MAD",
+      "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+      "financial_business": true,
+      "capital_change_unresolved": false,
+      "semester_activity_label": "PNB",
+      "reservations": [
+        "BPA indicatif de clôture 32,74 MAD ; le rapport arrondit le résultat par action à 33 MAD. RNPG supérieur au total du fait des pertes minoritaires, sans substitution.",
+        "Les tableaux consolidés sont accompagnés d’une attestation d’examen limité p.19 ; les pages sélectionnées ne valent pas certification du rapport par Nour."
+      ],
+      "faits": {
+        "resultat_net_part_groupe": {
+          "valeur": 434.829,
+          "page": 15,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "RNPG 434 829 KMAD ; RN consolidé total 420 182, avec minoritaires négatifs, exclu.",
+          "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 7572.464,
+          "page": 15,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Ligne explicite Part du groupe 7 572 464 KMAD, recoupée au tableau p.16 ; total 7 583 624 exclu.",
+          "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire": {
+          "valeur": 3943.792,
+          "page": 15,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "PNB du CPC consolidé IFRS.",
+          "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire_2024": {
+          "valeur": 3788.722,
+          "page": 15,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Comparatif du même CPC.",
+          "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_au_rapport": {
+          "valeur": 13279286,
+          "page": 19,
+          "unite": "actions",
+          "devise": "MAD",
+          "unite_au_rapport": "actions",
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Nombre explicite 13 279 286, identique 2024/2025, capital exact 1 327 928 600 MAD.",
+          "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        }
+      },
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "datasets/resultats_s1_2026.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+        "document_hash": "sha256:03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+        "reviewed_at": "2026-10-04",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
         "period_end": "2026-06-30",
@@ -12315,18 +12577,100 @@
         "currency": "MAD",
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "datasets/resultats_s1_2026.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        }
       }
     },
     "BCP": {
-      "societe": "BCP",
-      "faits": {},
+      "societe": "Banque Centrale Populaire",
+      "exercice": 2025,
+      "exercice_clos": "2025-12-31",
+      "document": "Rapport financier annuel 2025 : pages sélectionnées",
+      "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+      "pages_document": 144,
+      "devise": "MAD",
+      "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+      "financial_business": true,
+      "capital_change_unresolved": false,
+      "semester_activity_label": "PNB",
+      "reservations": [
+        "ROE sur RNPG et fonds propres groupe de clôture IFRS hors fonds spéciaux de garantie ; ne représente pas le ROE de gestion sur fonds propres moyens ou intégrant ces fonds.",
+        "BPA indicatif sur les titres de clôture ; quotient 22,15 MAD, cohérent avec le CPC, sans moyenne pondérée certifiée par Nour."
+      ],
+      "faits": {
+        "resultat_net_part_groupe": {
+          "valeur": 4503.361,
+          "page": 31,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "RNPG 4 503 361 KMAD ; total 5 621 085 exclu.",
+          "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 36974.989,
+          "page": 30,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "31 203 153 + 2 228 023 - 959 548 + 4 503 361 = 36 974 989 KMAD. Hors minoritaires 20 981 040 ; FSG 4 477 044 séparés au passif et non ajoutés.",
+          "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire": {
+          "valeur": 26985.158,
+          "page": 31,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "PNB IFRS du Groupe BCP ; pas le CA social de la seule BCP p.66.",
+          "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire_2024": {
+          "valeur": 25601.207,
+          "page": 31,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Comparatif IFRS du même CPC.",
+          "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_au_rapport": {
+          "valeur": 203312473,
+          "page": 66,
+          "unite": "actions",
+          "devise": "MAD",
+          "unite_au_rapport": "actions",
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Total explicite de répartition du capital : 203 312 473, identique 2024/2025.",
+          "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        }
+      },
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "datasets/resultats_s1_2026.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+        "document_hash": "sha256:f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+        "reviewed_at": "2026-10-04",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
         "period_end": "2026-06-30",
@@ -12340,7 +12684,14 @@
         "currency": "MAD",
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "datasets/resultats_s1_2026.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        }
       }
     },
     "CASH": {
@@ -12454,14 +12805,89 @@
       }
     },
     "ATW": {
-      "societe": "ATW",
-      "faits": {},
+      "societe": "Attijariwafa bank",
+      "exercice": 2025,
+      "exercice_clos": "2025-12-31",
+      "document": "Rapport financier annuel 2025 : pages sélectionnées",
+      "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+      "pages_document": 156,
+      "devise": "MAD",
+      "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+      "financial_business": true,
+      "capital_change_unresolved": false,
+      "semester_activity_label": "PNB",
+      "reservations": [
+        "BPA indicatif sur les titres ordinaires de clôture ; une moyenne pondérée hors autocontrôle n’est pas identifiée. La note p.110 signale 13 602 015 actions détenues par le groupe, déduites des fonds propres pour 2 600 MMAD. Le quotient de clôture concorde avec le BPA publié 49,48 MAD, sans certifier sa méthode.",
+        "PNB 2024 du CPC IFRS retenu à 34 507,117 MMAD ; les comparatifs d’autres résumés ne sont pas substitués à cette base."
+      ],
+      "faits": {
+        "resultat_net_part_groupe": {
+          "valeur": 10644.852,
+          "page": 96,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "RNPG 10 644 852 KMAD ; total avec minoritaires 12 368 271 exclu.",
+          "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 69431.269,
+          "page": 95,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Somme des lignes groupe : 14 655 001 + 43 422 960 + 708 456 + 10 644 852 = 69 431 269 KMAD. Total 80 490 370 hors minoritaires 11 059 101.",
+          "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire": {
+          "valeur": 34921.384,
+          "page": 96,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "PNB IFRS, distinct du CA et des produits bancaires bruts.",
+          "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "produit_net_bancaire_2024": {
+          "valeur": 34507.117,
+          "page": 96,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Comparatif du même CPC IFRS ; pas un résumé sur un autre référentiel.",
+          "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_au_rapport": {
+          "valeur": 215140839,
+          "page": 110,
+          "unite": "actions",
+          "devise": "MAD",
+          "unite_au_rapport": "actions",
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "215 140 839 actions ordinaires, nominal 10 MAD, capital exact 2 151 408 390 MAD.",
+          "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        }
+      },
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "datasets/resultats_s1_2026.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+        "document_hash": "sha256:766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+        "reviewed_at": "2026-10-04",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
         "period_end": "2026-06-30",
@@ -12475,7 +12901,14 @@
         "currency": "MAD",
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "datasets/resultats_s1_2026.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        }
       }
     },
     "CDM": {
@@ -13078,6 +13511,27 @@
         "document_hash": "sha256:1c38089c7767c9d8d14d2f040bf10b7abd5ba07a97b431ff1e10c044e560e6b7",
         "reviewed_at": "2026-10-04",
         "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+      },
+      "semester_activity_label": "CA",
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_S1_26.pdf",
+        "accounting_basis": "Social, CGNC",
+        "pages": "PDF p.1, synthèse comparative en KDH, recoupée au CPC p.2",
+        "reported_net_millions": 0.95,
+        "reported_net_previous_millions": 1.535,
+        "revenue_millions": 39.015,
+        "revenue_previous_millions": 42.42,
+        "currency": "MAD",
+        "note": "Synthèse arrondie au KDH ; le CPC p.2 donne le total 2026 exact 949 967,74 MAD, pas 1 081 197,74 avant opérations précédentes. La colonne précédente du CPC porte l’annuel 2025 : le comparatif S1 provient exclusivement de la synthèse p.1.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Med_Paper_S1_26.pdf",
+          "document_hash": "sha256:920bc778f0e04539db63e3f63e7f28429eba3a9ca15fa2a230d1fb8d6b9e8d01",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        }
       }
     },
     "CIH": {
@@ -13196,6 +13650,89 @@
           "document_hash": "sha256:4938f7b50e5bd89a851aee1120a4aa8a7ba27df6090e7f355e52ca99e531ccc5",
           "reviewed_at": "2026-10-04",
           "validation_status": "selected_page_visually_checked_not_whole_report_certified"
+        }
+      }
+    },
+    "SAF": {
+      "societe": "Sanlam Maroc",
+      "exercice": 2025,
+      "exercice_clos": "2025-12-31",
+      "document": "Rapport financier annuel 2025 : pages sélectionnées",
+      "url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+      "pages_document": 82,
+      "devise": "MAD",
+      "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+      "financial_business": true,
+      "capital_change_unresolved": true,
+      "semester_activity_label": "Produits d’assurance IFRS 17",
+      "reservations": [
+        "ROE annuel historique sur le groupe Sanlam au 31/12/2025, avant fusion Allianz en 2026. Ne représente pas le groupe après fusion.",
+        "Fusion et augmentation de capital 2026 : titres et périmètres entre périodes à rapprocher ; BPA/PER/P/B indisponibles. Aucun dividende ancien ramené à un nombre de titres nouveau.",
+        "Produits des activités d’assurance IFRS 17 distincts des primes émises. Aucun PNB bancaire, CA générique ni ratio de dette industrielle dérivé de ces lignes."
+      ],
+      "faits": {
+        "resultat_net_part_groupe": {
+          "valeur": 676.523,
+          "page": 9,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "RNPG consolidé IFRS 676 523 KMAD ; résultat social 451,62989795 MMAD distinct et non substitué.",
+          "document_hash": "sha256:77cd2b4d50e2094e4f9a7f55a4a383f48ec6d05b64583a9016855a39767fd327",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 6062.749,
+          "page": 9,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "unite_au_rapport": "KMAD",
+          "url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Groupe 6 062 749 KMAD, recoupé p.55 ; total 6 062 792 incluant 43 KMAD minoritaires exclu.",
+          "document_hash": "sha256:77cd2b4d50e2094e4f9a7f55a4a383f48ec6d05b64583a9016855a39767fd327",
+          "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_post_fusion_2026_a_rapprocher": {
+          "valeur": 5341874,
+          "page": 1,
+          "unite": "actions",
+          "unite_au_rapport": "actions",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/CP_Sanlam_Maroc_post_AGE_02_07_26.pdf",
+          "document_hash": "sha256:43ae7b52a6a452a178ac7ca8ab7bf3ce510d9390ebdf593cf261046d51e77f34",
+          "validation_status": "pdf_page_visually_checked_2026-10-04",
+          "base": "Capital post fusion 2026, distinct du groupe annuel 2025",
+          "note": "Capital 411 687 400 à 534 187 400 MAD / nominal 100 ; émission 1 225 000 titres. Admission annoncée 08/07/2026, effet comptable rétroactif 01/01/2026. Le nombre actuel ne divise pas le RN ou les fonds propres historiques sans rapprochement du nouveau périmètre."
+        }
+      },
+      "provenance": {
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+        "document_hash": "sha256:77cd2b4d50e2094e4f9a7f55a4a383f48ec6d05b64583a9016855a39767fd327",
+        "reviewed_at": "2026-10-04",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+      },
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
+        "accounting_basis": "Consolidé IFRS, résultat part groupe, Sanlam avant fusion Allianz",
+        "pages": "PDF p.4, CPC consolidé IFRS en KMAD ; périmètre p.1",
+        "reported_net_millions": -88.608,
+        "reported_net_previous_millions": 1177.155,
+        "revenue_millions": 3687.11,
+        "revenue_previous_millions": 3019.42,
+        "currency": "MAD",
+        "note": "P.1 précise que tous les indicateurs concernent Sanlam avant fusion actée le 02/07/2026. Produits d’assurance IFRS 17, pas primes émises ni PNB. Perte RNPG -88 608 KMAD, comparative 1 177 155 ; aucune extrapolation ou donnée du groupe fusionné.",
+        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
+          "document_hash": "sha256:ef54e441e352f84bddc666d0236f314a48da3da2a3d1500451af33e21a87e6b9",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         }
       }
     }

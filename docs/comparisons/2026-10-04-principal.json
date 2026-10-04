@@ -1,0 +1,118 @@
+{
+  "principal_repository": "abdmoutalib207-lang/-bvc-analyzer",
+  "principal_commit": "5108beff13424b9bb8079dc86e0d59eaa6dcdb64",
+  "reviewed_at": "2026-10-04",
+  "scope": "Annual 2025 vs annual 2025; TTM shown separately; repository inputs, not a claim about the principal live UI",
+  "records": {
+    "MGL": {
+      "principal_eps_annual_mad": 107.07,
+      "principal_eps_ttm_mad": 115.03,
+      "principal_roe_annual_pct": 12.1,
+      "principal_roe_formula": "148.199 ÷ 1228.220 (MMAD)",
+      "nour_eps_annual_mad": 107.07,
+      "nour_roe_annual_pct": 12.07,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "MRL": {
+      "principal_eps_annual_mad": 38.64,
+      "principal_eps_ttm_mad": 39.6,
+      "principal_roe_annual_pct": 8.7,
+      "principal_roe_formula": "107.295 ÷ 1227.913 (MMAD)",
+      "nour_eps_annual_mad": 38.64,
+      "nour_roe_annual_pct": 8.74,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "MDP": {
+      "principal_eps_annual_mad": null,
+      "principal_eps_ttm_mad": null,
+      "principal_roe_annual_pct": null,
+      "principal_roe_formula": null,
+      "nour_eps_annual_mad": 1.4,
+      "nour_roe_annual_pct": 16.32,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "CASH": {
+      "principal_eps_annual_mad": 9.87,
+      "principal_eps_ttm_mad": 10.83,
+      "principal_roe_annual_pct": 30.7,
+      "principal_roe_formula": "242.296 ÷ 790.351 (MMAD)",
+      "nour_eps_annual_mad": null,
+      "nour_roe_annual_pct": null,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": true
+    },
+    "CIH": {
+      "principal_eps_annual_mad": null,
+      "principal_eps_ttm_mad": null,
+      "principal_roe_annual_pct": 11.1,
+      "principal_roe_formula": "1089.362 ÷ 9817.628 (MMAD)",
+      "nour_eps_annual_mad": null,
+      "nour_roe_annual_pct": 11.15,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": true
+    },
+    "CDM": {
+      "principal_eps_annual_mad": 74.27,
+      "principal_eps_ttm_mad": 81.72,
+      "principal_roe_annual_pct": 10.5,
+      "principal_roe_formula": "863.551 ÷ 8203.01 (MMAD)",
+      "nour_eps_annual_mad": null,
+      "nour_roe_annual_pct": 10.53,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": true
+    },
+    "ATW": {
+      "principal_eps_annual_mad": 49.48,
+      "principal_eps_ttm_mad": 49.78,
+      "principal_roe_annual_pct": 15.3,
+      "principal_roe_formula": "10644.852 ÷ 69431.269 (MMAD)",
+      "nour_eps_annual_mad": 49.48,
+      "nour_roe_annual_pct": 15.33,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "BCP": {
+      "principal_eps_annual_mad": 22.15,
+      "principal_eps_ttm_mad": 23.64,
+      "principal_roe_annual_pct": 12.2,
+      "principal_roe_formula": "4503.361 ÷ 36974.989 (MMAD)",
+      "nour_eps_annual_mad": 22.15,
+      "nour_roe_annual_pct": 12.18,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "BMC": {
+      "principal_eps_annual_mad": 32.74,
+      "principal_eps_ttm_mad": 42.52,
+      "principal_roe_annual_pct": 5.7,
+      "principal_roe_formula": "434.829 ÷ 7572.464 (MMAD)",
+      "nour_eps_annual_mad": 32.74,
+      "nour_roe_annual_pct": 5.74,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": false
+    },
+    "BOA": {
+      "principal_eps_annual_mad": 17.31,
+      "principal_eps_ttm_mad": 18.36,
+      "principal_roe_annual_pct": 12.0,
+      "principal_roe_formula": "3813.552 ÷ 31794.36 (MMAD)",
+      "nour_eps_annual_mad": null,
+      "nour_roe_annual_pct": 11.99,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": true
+    },
+    "SAF": {
+      "principal_eps_annual_mad": null,
+      "principal_eps_ttm_mad": null,
+      "principal_roe_annual_pct": null,
+      "principal_roe_formula": null,
+      "nour_eps_annual_mad": null,
+      "nour_roe_annual_pct": 11.16,
+      "nour_eps_denominator": "nombre de titres référencé ; BPA indicatif",
+      "nour_capital_change_unresolved": true
+    }
+  }
+}
