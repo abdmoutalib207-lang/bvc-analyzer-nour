@@ -187,6 +187,9 @@ def detail_page(item, record, fixture, style, script):
                                fundamental_card('P/B recalculé',calculated.get('pb')),
                                fundamental_card('ROE',calculated.get('roe_pct'),'%',True),
                                fundamental_card('Croissance du CA',calculated.get('revenue_growth_pct'),'%',True),
+                               *([fundamental_card('Produit net bancaire',calculated.get('pnb_mmad'),'MMAD'),
+                                  fundamental_card('Croissance du PNB',calculated.get('pnb_growth_pct'),'%',True)]
+                                 if calculated.get('pnb_mmad') is not None else []),
                                fundamental_card('Dette nette stricte',calculated.get('net_debt_strict_mmad'),'MMAD'),
                                fundamental_card('Dette nette stricte / EBE',calculated.get('net_debt_ebitda'),'×')))
     financial_details = (f'<p class="fineprint">Périmètre : {esc(calculated.get("accounting_basis"))}. '

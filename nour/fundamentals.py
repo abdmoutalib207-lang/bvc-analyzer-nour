@@ -11,6 +11,7 @@ def calculate(record, facts):
                currency=None, net_debt_strict_mmad=None, net_debt_ebitda=None,
                calculation_version='nour-fundamentals-v2', point_in_time_ready=False,
                roe_method='Résultat annuel / capitaux propres de clôture, non moyens',
+               pnb_mmad=None, pnb_growth_pct=None,
                validation_status='missing', provenance={}, latest_report=None)
     if isinstance(facts, dict):
         out.update(latest_report=facts.get('latest_report'), provenance=facts.get('provenance',{}))
@@ -23,6 +24,9 @@ def calculate(record, facts):
                validation_status='referenced_import', latest_report=facts.get('latest_report'),
                period_end=facts.get('exercice_clos') or f"{facts.get('exercice')}-12-31")
     out['warnings'].extend(facts.get('reservations') or [])
+    if facts.get('provenance', {}).get('source_type') == 'regulator_pdf':
+        out['source'] = 'Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour'
+        out['validation_status'] = facts['provenance'].get('validation_status')
     data = facts.get('faits') or {}
     def fact(key):
         f = data.get(key) or {}
@@ -76,11 +80,17 @@ def calculate(record, facts):
                roe_pct=rnd(net/equity*100) if net is not None and equity and equity>0 else None,
                revenue_growth_pct=rnd((revenue/previous-1)*100) if revenue is not None and previous and previous>0 else None,
                dividend_yield_pct=rnd(dividend/price*100) if dividend is not None and price else None)
+    pnb, pnb_previous = fact('produit_net_bancaire'), fact(f"produit_net_bancaire_{(facts.get('exercice') or 0)-1}")
+    out['pnb_mmad'] = rnd(pnb)
+    out['pnb_growth_pct'] = rnd((pnb/pnb_previous-1)*100) if pnb is not None and pnb_previous and pnb_previous>0 else None
     debt, cash, ebitda = fact('dettes_financieres'), fact('tresorerie_actif'), fact('excedent_brut_exploitation')
     strict = debt-cash if debt is not None and cash is not None else None
     out['net_debt_strict_mmad'] = rnd(strict)
     out['net_debt_ebitda'] = rnd(strict/ebitda) if strict is not None and ebitda and ebitda>0 else None
     out['net_debt_method'] = 'Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.'
+    if facts.get('financial_business'):
+        out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
+        out['net_debt_method'] = 'Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.'
     metrics = ('eps_mad','pb','roe_pct','revenue_growth_pct')
     out['coverage_pct'] = 25*sum(out[k] is not None for k in metrics)
     out['missing_metrics'] = [k for k in metrics if out[k] is None]

@@ -87,14 +87,34 @@ class NewContracts(unittest.TestCase):
 
     def test_pinned_import_and_explicit_pending_coverage(self):
         f=json.loads((ROOT/'data/facts_reference.json').read_text())['records']
-        self.assertEqual(sum(bool(r.get('url')) for r in f.values()),63)
+        self.assertEqual(sum(bool(r.get('url')) for r in f.values()),66)
         self.assertEqual(sum(bool(r.get('latest_report')) for r in f.values()),68)
-        self.assertTrue(all(r['provenance']['repository']=='abdmoutalib207-lang/-bvc-analyzer' for r in f.values()))
+        self.assertTrue(all(r['provenance'].get('repository')=='abdmoutalib207-lang/-bvc-analyzer'
+                            or r['provenance'].get('source_type')=='regulator_pdf' for r in f.values()))
         self.assertIsNone(calculate({'price':48.65},f['ENK'])['eps_mad'])
         self.assertIsNone(calculate({'price':220},f['T2S'])['pe'])
         self.assertEqual(calculate({'price':6591},f['SMI'])['eps_mad'],241.39)
         self.assertEqual(f['RIS']['latest_report']['reported_net_millions'],144)
         self.assertEqual(f['RIS']['latest_report']['reported_net_including_exceptionals_millions'],313)
+
+    def test_primary_annual_additions_and_financial_sector_separation(self):
+        f=json.loads((ROOT/'data/facts_reference.json').read_text())['records']
+        agm=calculate({'price':6000},f['AGM'])
+        self.assertEqual(agm['roe_pct'],46.24)
+        self.assertIsNone(agm['eps_mad'])
+        slm=calculate({'price':500},f['SLM'])
+        self.assertEqual(slm['eps_mad'],30.77)
+        self.assertEqual(slm['book_value_per_share_mad'],round(870.833e6/3124119,2))
+        self.assertEqual(slm['pnb_growth_pct'],1.42)
+        self.assertIsNone(slm['revenue_growth_pct'])
+        self.assertIsNone(slm['net_debt_ebitda'])
+        eqd=calculate({'price':1000},f['EQD'])
+        self.assertEqual(eqd['eps_mad'],59.01)
+        self.assertIsNone(eqd['pb']);self.assertIsNone(eqd['roe_pct'])
+        self.assertEqual(eqd['pnb_growth_pct'],9.41)
+        self.assertEqual(eqd['evidence']['resultat_net_part_groupe']['page'],59)
+        self.assertTrue(all(x['latest_report']['provenance']['repository']=='abdmoutalib207-lang/-bvc-analyzer'
+                            for x in (f['AGM'],f['SLM'],f['EQD'])))
 
 
 if __name__=='__main__': unittest.main()
