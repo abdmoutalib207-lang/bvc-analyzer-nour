@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T20:51:15+00:00",
-    "built_at": "2026-10-04T20:51:20.175810+00:00",
+    "started_at": "2026-10-04T21:22:28+00:00",
+    "built_at": "2026-10-04T21:22:36.126431+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37233682771",
-    "commit": "76471cc732b6eeffca848589eb1e8298098ce146",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37233682771"
+    "run_id": "37235822879",
+    "commit": "085ca3a63cbc3fece1c4046f1fb3d72223999b45",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37235822879"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -2318,7 +2318,7 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T20:51:17.702276+00:00"
+    "observed_at": "2026-10-04T21:22:32.179643+00:00"
   },
   "context_news": [],
   "fundamental_coverage": {
