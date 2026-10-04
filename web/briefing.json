@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T18:31:00+00:00",
-    "built_at": "2026-10-04T18:31:06.012293+00:00",
+    "started_at": "2026-10-04T20:51:15+00:00",
+    "built_at": "2026-10-04T20:51:20.175810+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37224730163",
-    "commit": "aaf0c68c6b18a2ec6ca5c666d311b36cc67ef98c",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37224730163"
+    "run_id": "37233682771",
+    "commit": "76471cc732b6eeffca848589eb1e8298098ce146",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37233682771"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -2318,11 +2318,11 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T18:31:03.456462+00:00"
+    "observed_at": "2026-10-04T20:51:17.702276+00:00"
   },
   "context_news": [],
   "fundamental_coverage": {
-    "referenced": 72,
+    "referenced": 77,
     "titles": 80
   },
   "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
