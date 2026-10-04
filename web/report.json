@@ -103,7 +103,7 @@
       "ytd_pct": -8.19
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T18:14:16.452033+00:00",
+    "observed_at": "2026-10-04T18:31:03.456462+00:00",
     "turnover_mad": 258466497.74,
     "breadth": {
       "up": 10,
@@ -10102,35 +10102,113 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_part_groupe": {
+            "value": 863.551,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+            "note": "863 551 KMAD / 1 000 ; résultat net part groupe du CPC, page imprimée 14.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_part_groupe": {
+            "value": 8203.01,
+            "page": 14,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+            "note": "Colonne explicite part Groupe : 8 203 010 KMAD / 1 000 ; intérêts minoritaires nuls, page imprimée 15.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 3568.401,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+            "note": "3 568 401 KMAD / 1 000 ; PNB distinct du CA.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 3303.182,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+            "note": "3 303 182 KMAD / 1 000 ; même ligne et périmètre.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_existant_a_rapprocher": {
+            "value": 10881214,
+            "page": 24,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+            "note": "Total du capital 2025 : 5 941 968 + 1 201 744 + 1 168 523 + 2 568 979 = 10 881 214 ; nominal 100 MAD, page imprimée 25. Ne représente pas les actions après augmentation 2026.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_post_augmentation_2026_a_rapprocher": {
+            "value": 11626499,
+            "page": 1,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_CDM_cloture_augmentation_capital.pdf",
+            "note": "Capital après opération constatée le 23/07/2026 : 10 881 214 + 745 285 = 11 626 499 ; capital publié 1 162 649 900 MAD / nominal 100 MAD. Ne remplace pas les titres 2025 sans ajustement comparatif explicite.",
+            "accounting_basis": "Capital après augmentation juillet 2026, distinct du périmètre annuel 2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:347e452f5d148ced071a0941f720e8d68c01d549b4bff0df81cb45c43c57bd5f",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
         "eps_mad": null,
         "book_value_per_share_mad": null,
         "pe": null,
         "pb": null,
         "revenue_growth_pct": null,
-        "roe_pct": null,
+        "roe_pct": 10.53,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 863.551,
+        "warnings": [
+          "Le résumé affiche un RNPG par action de 79,44 DH, contre 79,36 au CPC. Le quotient des entrées annuelles exactes donne 79,36 ; ce rapprochement historique ne valide pas le nombre actuel de titres.",
+          "Le communiqué du 28/07/2026 confirme l’émission de 745 285 actions : 10 881 214 + 745 285 = 11 626 499 titres, cohérents avec le nouveau capital 1 162 649 900 MAD / nominal 100 MAD. Le nombre actuel est recoupé ; les ajustements comparatifs par action et la comparabilité au cours actuel restent à valider. BPA/PER/P/B indisponibles.",
+          "Le semestre 2026 importé reste conservé avec sa provenance et son statut de référence non auditée indépendamment. PNB distinct du CA ; aucune annualisation du semestre.",
+          "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles."
+        ],
+        "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "pnb_mmad": null,
-        "pnb_growth_pct": null,
-        "validation_status": "missing",
+        "pnb_mmad": 3568.4,
+        "pnb_growth_pct": 8.03,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+          "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -10144,9 +10222,26 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
         },
-        "semester_activity_label": "CA"
+        "semester_activity_label": "PNB",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 25,
+        "missing_metrics": [
+          "eps_mad",
+          "pb",
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -10196,10 +10291,10 @@
         "note": "Fréquences historiques inconditionnelles sur fenêtres non chevauchantes, sans dividendes ni frais. Intervalle de Wilson indicatif : dépendance temporelle et changements de régime non corrigés. Ni prévision, ni probabilité de la prochaine séance."
       },
       "canonical_score": {
-        "value": 34.38,
+        "value": 37.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 80,
+        "coverage_pct": 100,
         "contributors": {
           "tendance20": {
             "weight": 20,
@@ -10218,6 +10313,10 @@
             "points": 10
           },
           "liquidité": {
+            "weight": 20,
+            "points": 10
+          },
+          "rentabilité": {
             "weight": 20,
             "points": 10
           }
@@ -10748,31 +10847,145 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_part_groupe": {
+            "value": 1089.362,
+            "page": 25,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+            "note": "1 089 362 KMAD / 1 000 ; hors minoritaires, résultat total 1 220 478 KMAD.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_part_groupe": {
+            "value": 9768.468,
+            "page": 26,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+            "note": "Part groupe corrigée : 9 817 628 - 49 160 = 9 768 468 KMAD ; recoupée avec les lignes groupe du bilan p.24. Hors total consolidé 10 731 487 KMAD.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 5422.526,
+            "page": 25,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+            "note": "5 422 526 KMAD / 1 000 ; PNB consolidé IFRS.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 4739.507,
+            "page": 25,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+            "note": "4 739 507 KMAD / 1 000 ; même tableau et périmètre.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_existant_a_rapprocher": {
+            "value": 35605624,
+            "page": 52,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+            "note": "Nombre à la clôture 2025, capital exact 3 560 562 400 MAD / nominal 100 MAD. Conservé pour audit, sans dénominateur pondéré vérifié.",
+            "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_post_augmentation_2026_a_rapprocher": {
+            "value": 38641338,
+            "page": 1,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/CP_CIH_Bank_resultats_augmentation_capital_numeraire.pdf",
+            "note": "Capital après les deux opérations constatées le 28/07/2026 : 35 605 624 + 2 142 857 + 892 857 = 38 641 338. Recoupé avec le communiqué personnel ; ce nombre actuel ne sert pas de moyenne pondérée 2025 ni de dénominateur sur les anciens fonds propres.",
+            "accounting_basis": "Capital après augmentation juillet 2026, distinct du périmètre annuel 2025",
+            "original_unit": "actions",
+            "document_hash": "sha256:47a9dce09225426479bb48ae2e5a335ce015fd52ee222418f6adb4aa0ceb7bce",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
         "eps_mad": null,
         "book_value_per_share_mad": null,
         "pe": null,
         "pb": null,
         "revenue_growth_pct": null,
-        "roe_pct": null,
+        "roe_pct": 11.15,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 1089.362,
+        "warnings": [
+          "Les fonds propres part groupe corrigés p.26 sont retenus ; ni le total avec minoritaires ni la ligne avant correction.",
+          "Le nombre de titres passe de 31 497 283 à 35 605 624 en 2025 (tableau BPA p.36). Une moyenne pondérée n’est pas vérifiée. Le BPA publié 30,6 et le BPA dilué 3,7 p.25 ne débloquent aucun ratio.",
+          "Les deux communiqués AMMC du 04/08/2026 confirment 38 641 338 titres après émission de 2 142 857 et 892 857 actions. Le capital actuel est recoupé, mais la moyenne pondérée 2025 et les ajustements par action entre périodes ne sont pas validés. BPA/PER/P/B bloqués ; ROE annuel historique conservé.",
+          "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles."
+        ],
+        "accounting_basis": "Consolidé IFRS, part du groupe, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "pnb_mmad": null,
-        "pnb_growth_pct": null,
-        "validation_status": "missing",
-        "provenance": {},
-        "latest_report": null
+        "pnb_mmad": 5422.53,
+        "pnb_growth_pct": 14.41,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
+        "provenance": {
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+          "document_hash": "sha256:fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        },
+        "latest_report": {
+          "period_end": "2026-06-30",
+          "document_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_S1_26.pdf",
+          "accounting_basis": "Résultat net part du groupe, consolidé IFRS",
+          "pages": "PDF p.10, tableaux IFRS, milliers MAD",
+          "reported_net_millions": 616.987,
+          "reported_net_previous_millions": 615.437,
+          "revenue_millions": 2825.752,
+          "revenue_previous_millions": 2748.136,
+          "currency": "MAD",
+          "note": "PNB, pas CA. RNPG distinct du total 695,404 MMAD. Colonne juin 2025 comparable ; semestre non annualisé.",
+          "validation_status": "pdf_page_visually_checked_2026-10-04",
+          "provenance": {
+            "source_type": "regulator_pdf",
+            "source_url": "https://www.ammc.ma/sites/default/files/CIH_Bank_S1_26.pdf",
+            "document_hash": "sha256:4938f7b50e5bd89a851aee1120a4aa8a7ba27df6090e7f355e52ca99e531ccc5",
+            "reviewed_at": "2026-10-04",
+            "validation_status": "selected_page_visually_checked_not_whole_report_certified"
+          }
+        },
+        "semester_activity_label": "PNB",
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 25,
+        "missing_metrics": [
+          "eps_mad",
+          "pb",
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -10822,10 +11035,10 @@
         "note": "Fréquences historiques inconditionnelles sur fenêtres non chevauchantes, sans dividendes ni frais. Intervalle de Wilson indicatif : dépendance temporelle et changements de régime non corrigés. Ni prévision, ni probabilité de la prochaine séance."
       },
       "canonical_score": {
-        "value": 24.38,
+        "value": 29.5,
         "state": "CALCULABLE",
         "version": "nour-quant-v1",
-        "coverage_pct": 80,
+        "coverage_pct": 100,
         "contributors": {
           "tendance20": {
             "weight": 20,
@@ -10844,6 +11057,10 @@
             "points": 2
           },
           "liquidité": {
+            "weight": 20,
+            "points": 10
+          },
+          "rentabilité": {
             "weight": 20,
             "points": 10
           }
@@ -32600,18 +32817,16 @@
   ],
   "fundamental_coverage": {
     "universe": 80,
-    "referenced": 70,
+    "referenced": 72,
     "with_eps": 38,
     "with_pb": 49,
-    "with_roe": 36,
-    "with_recent_report": 68,
+    "with_roe": 38,
+    "with_recent_report": 69,
     "missing_documents": [
       "ATW",
       "BCP",
       "BMC",
       "BOA",
-      "CDM",
-      "CIH",
       "DIS",
       "DLM",
       "IBM",
@@ -32622,7 +32837,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-02",
-    "observed_at": "2026-10-04T18:14:16.452033+00:00",
+    "observed_at": "2026-10-04T18:31:03.456462+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -32987,17 +33202,17 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-04T18:14:16.452033+00:00",
+    "checked_at": "2026-10-04T18:31:03.456462+00:00",
     "asof": "2026-10-02"
   },
   "news_health": {
-    "checked_at": "2026-10-04T18:14:16.211180+00:00",
+    "checked_at": "2026-10-04T18:31:03.315910+00:00",
     "status": "ok",
     "fetched_items": 10,
     "errors": []
   },
   "health": {
-    "checked_at": "2026-10-04T18:14:13.871784+00:00",
+    "checked_at": "2026-10-04T18:31:00.952996+00:00",
     "source": "CDG Capital Bourse",
     "result": "unchanged",
     "last_session": "2026-10-02",
@@ -33021,13 +33236,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T18:14:13+00:00",
-    "built_at": "2026-10-04T18:14:20.442184+00:00",
+    "started_at": "2026-10-04T18:31:00+00:00",
+    "built_at": "2026-10-04T18:31:06.012293+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37223627312",
-    "commit": "bc9d93088c35c219c5fa590ff0fc3c61b100abf4",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37223627312"
+    "run_id": "37224730163",
+    "commit": "aaf0c68c6b18a2ec6ca5c666d311b36cc67ef98c",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37224730163"
   },
   "intraday": {
     "status": "unavailable",
