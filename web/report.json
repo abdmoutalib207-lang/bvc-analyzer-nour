@@ -103,8 +103,8 @@
       "ytd_pct": -8.19
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T16:05:34.943002+00:00",
-    "turnover_mad": 258466497.74,
+    "observed_at": "2026-10-04T17:18:30.601086+00:00",
+    "turnover_mad": 256146092.89,
     "breadth": {
       "up": 10,
       "down": 54,
@@ -4478,6 +4478,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -4894,6 +4896,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -5286,6 +5290,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -5628,6 +5634,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -5925,33 +5933,87 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_social": {
+            "value": 71.02753751,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+            "note": "71 027 537,51 MAD / 1 000 000 ; CPC, colonne exercice 2025.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_sociaux": {
+            "value": 153.61203091,
+            "page": 15,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+            "note": "153 612 030,91 MAD / 1 000 000 ; total des capitaux propres A, hors assimilés et provisions.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "chiffre_affaires": {
+            "value": 186.60788522,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+            "note": "186 607 885,22 MAD / 1 000 000 ; ventes de biens et services produits.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "chiffre_affaires_2024": {
+            "value": 172.24939318,
+            "page": 13,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+            "note": "172 249 393,18 MAD / 1 000 000 ; même tableau, exercice précédent.",
+            "accounting_basis": "Social, CGNC, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
         "eps_mad": null,
         "book_value_per_share_mad": null,
         "pe": null,
         "pb": null,
-        "revenue_growth_pct": null,
-        "roe_pct": null,
+        "revenue_growth_pct": 8.34,
+        "roe_pct": 46.24,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 71.02753751,
+        "warnings": [
+          "Le rapport annuel retenu présente les comptes sociaux ; le semestre disponible est consolidé IFRS. Ne pas les mélanger en TTM.",
+          "Nombre d’actions non relevé dans ces pages : BPA, PER et P/B indisponibles ; aucune déduction à partir de la capitalisation."
+        ],
+        "accounting_basis": "Social, CGNC, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "validation_status": "missing",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+          "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -5965,8 +6027,24 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.",
+        "coverage_pct": 50,
+        "missing_metrics": [
+          "eps_mad",
+          "pb"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -6019,7 +6097,7 @@
         "value": null,
         "state": "PARTIEL",
         "version": "nour-quant-v1",
-        "coverage_pct": 50,
+        "coverage_pct": 70,
         "contributors": {
           "tendance20": {
             "weight": 20,
@@ -6032,6 +6110,10 @@
           "momentum": {
             "weight": 15,
             "points": 15
+          },
+          "rentabilité": {
+            "weight": 20,
+            "points": 20
           }
         },
         "nlp_weight": 0
@@ -6293,6 +6375,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -6648,6 +6732,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -7019,6 +7105,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -7359,6 +7447,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -7674,6 +7764,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -8046,6 +8138,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -8363,6 +8457,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -8668,6 +8764,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -8963,6 +9061,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -9323,6 +9423,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -9616,6 +9718,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -9916,6 +10020,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -10246,6 +10352,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -10556,6 +10664,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -10903,6 +11013,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -11271,6 +11383,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -11671,6 +11785,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -12030,6 +12146,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -12420,6 +12538,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -12801,6 +12921,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -13182,6 +13304,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -13522,6 +13646,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -13721,6 +13847,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -13854,6 +13982,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -14153,6 +14283,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -14536,6 +14668,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -14849,6 +14983,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -15124,33 +15260,88 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
-        "eps_mad": null,
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_part_groupe": {
+            "value": 98.561,
+            "page": 59,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+            "note": "98 561 milliers de DH / 1 000, ligne 33 part du groupe, page imprimée 117 ; pas résultat total 99 261.",
+            "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_au_rapport": {
+            "value": 1670250,
+            "page": 55,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+            "note": "Total publié de la répartition du capital ; capital 167 025 000 MAD / nominal 100 MAD ; page imprimée 108.",
+            "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 601.924,
+            "page": 59,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+            "note": "601 924 milliers de DH / 1 000, consolidé, page imprimée 117.",
+            "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 550.137,
+            "page": 59,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+            "note": "550 137 milliers de DH / 1 000 ; même tableau, 2024.",
+            "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
+        "eps_mad": 59.01,
         "book_value_per_share_mad": null,
-        "pe": null,
+        "pe": 25.42,
         "pb": null,
         "revenue_growth_pct": null,
         "roe_pct": null,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 98.561,
+        "warnings": [
+          "Capitaux propres groupe non utilisés : tableau de variation p.63 (1 485,722 MMAD) et somme des lignes du bilan p.58 (1 485,740 MMAD) diffèrent de 0,018 MMAD. Rapprochement requis ; P/B et ROE indisponibles.",
+          "PNB distinct du chiffre d’affaires ; dette nette / EBE industriel non pertinent ici.",
+          "BPA calculé sur les titres de clôture publiés, non sur une moyenne pondérée auditée."
+        ],
+        "accounting_basis": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "validation_status": "missing",
+        "pnb_mmad": 601.92,
+        "pnb_growth_pct": 9.41,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+          "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -15164,8 +15355,25 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 25,
+        "missing_metrics": [
+          "pb",
+          "roe_pct",
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -15502,6 +15710,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -15884,6 +16094,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -16291,6 +16503,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -16683,6 +16897,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -17049,6 +17265,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -17365,6 +17583,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -17669,6 +17889,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -18048,6 +18270,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -18431,6 +18655,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -18782,6 +19008,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -19163,6 +19391,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -19515,6 +19745,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -19892,6 +20124,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -20100,6 +20334,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -20355,6 +20591,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -20738,6 +20976,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -21133,6 +21373,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -21525,6 +21767,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -21845,6 +22089,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -22214,6 +22460,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -22602,6 +22850,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -22983,6 +23233,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -23352,6 +23604,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -23711,6 +23965,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -24055,6 +24311,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -24407,6 +24665,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -24800,6 +25060,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -25174,6 +25436,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -25380,6 +25644,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "missing",
         "provenance": {},
         "latest_report": null
@@ -25683,6 +25949,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -26049,6 +26317,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -26243,33 +26513,100 @@
         "limited_by_resumption": false
       },
       "fundamental": {
-        "source": "absent",
-        "exercise": null,
-        "document_url": null,
-        "evidence": {},
-        "eps_mad": null,
-        "book_value_per_share_mad": null,
-        "pe": null,
-        "pb": null,
+        "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
+        "exercise": 2025,
+        "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+        "evidence": {
+          "resultat_net_social": {
+            "value": 96.117,
+            "page": 69,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+            "note": "96 117 milliers de DH / 1 000 ; comptes sociaux.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "capitaux_propres_sociaux": {
+            "value": 870.833,
+            "page": 68,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+            "note": "(462 304 réserves et primes + 312 412 capital + 96 117 résultat) milliers de DH / 1 000 ; autres lignes de fonds propres nulles. Somme calculée, valeurs arrondies au KMAD.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "nombre_actions_au_rapport": {
+            "value": 3124119,
+            "page": 57,
+            "unit": "actions",
+            "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+            "note": "Nombre d’actions explicitement publié ; recoupé avec capital 312 411 900 MAD / nominal 100 MAD, page 89.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire": {
+            "value": 384.035,
+            "page": 69,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+            "note": "384 035 milliers de DH / 1 000 ; PNB, pas CA.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          },
+          "produit_net_bancaire_2024": {
+            "value": 378.646,
+            "page": 69,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+            "note": "378 646 milliers de DH / 1 000 ; PNB 2024, même tableau.",
+            "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+            "original_unit": null,
+            "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+            "printed_page": null,
+            "validation_status": "pdf_page_visually_checked_2026-10-04"
+          }
+        },
+        "eps_mad": 30.77,
+        "book_value_per_share_mad": 278.75,
+        "pe": 13.85,
+        "pb": 1.53,
         "revenue_growth_pct": null,
-        "roe_pct": null,
+        "roe_pct": 11.04,
         "dividend_yield_pct": null,
-        "earnings_mmad": null,
-        "warnings": [],
-        "accounting_basis": null,
-        "currency": null,
+        "earnings_mmad": 96.117,
+        "warnings": [
+          "Capitaux propres calculés par addition des lignes du passif, hors 17,673 MMAD de provisions réglementées. Le total « propres et assimilés » ne sert pas au P/B.",
+          "PNB distinct du chiffre d’affaires ; dette nette / EBE industriel non pertinent ici.",
+          "Le dividende de 30 MAD figurant dans le projet d’affectation n’est pas traité comme approuvé."
+        ],
+        "accounting_basis": "Social, plan comptable des établissements de crédit, 31/12/2025",
+        "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
-        "validation_status": "missing",
+        "pnb_mmad": 384.04,
+        "pnb_growth_pct": 1.42,
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
         "provenance": {
-          "repository": "abdmoutalib207-lang/-bvc-analyzer",
-          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-          "path": "datasets/resultats_s1_2026.json",
-          "imported_at": "2026-10-04",
-          "validation_status": "referenced_import_not_independent_audit"
+          "source_type": "regulator_pdf",
+          "source_url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+          "document_hash": "sha256:0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+          "reviewed_at": "2026-10-04",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
         },
         "latest_report": {
           "period_end": "2026-06-30",
@@ -26283,8 +26620,23 @@
           "currency": "MAD",
           "note": null,
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-        }
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "provenance": {
+            "repository": "abdmoutalib207-lang/-bvc-analyzer",
+            "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+            "path": "datasets/resultats_s1_2026.json",
+            "imported_at": "2026-10-04",
+            "validation_status": "referenced_import_not_independent_audit"
+          }
+        },
+        "period_end": "2025-12-31",
+        "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+        "book_denominator": "nombre de titres référencé",
+        "net_debt_method": "Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.",
+        "coverage_pct": 75,
+        "missing_metrics": [
+          "revenue_growth_pct"
+        ]
       },
       "historical_statistics": {
         "method": "non_overlapping_returns_v1",
@@ -26322,11 +26674,15 @@
         "value": null,
         "state": "PARTIEL",
         "version": "nour-quant-v1",
-        "coverage_pct": 20,
+        "coverage_pct": 40,
         "contributors": {
           "liquidité": {
             "weight": 20,
             "points": 0
+          },
+          "rentabilité": {
+            "weight": 20,
+            "points": 10
           }
         },
         "nlp_weight": 0
@@ -26637,6 +26993,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -27008,6 +27366,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -27372,6 +27732,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -27753,6 +28115,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -28105,6 +28469,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -28483,6 +28849,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -28822,6 +29190,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -29177,6 +29547,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -29543,6 +29915,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -29883,6 +30257,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -30260,6 +30636,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -30658,6 +31036,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -30977,6 +31357,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -31313,6 +31695,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -31689,6 +32073,8 @@
         "calculation_version": "nour-fundamentals-v2",
         "point_in_time_ready": false,
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
+        "pnb_mmad": null,
+        "pnb_growth_pct": null,
         "validation_status": "referenced_import",
         "provenance": {
           "repository": "abdmoutalib207-lang/-bvc-analyzer",
@@ -31796,13 +32182,12 @@
   ],
   "fundamental_coverage": {
     "universe": 80,
-    "referenced": 63,
-    "with_eps": 33,
-    "with_pb": 45,
-    "with_roe": 31,
+    "referenced": 66,
+    "with_eps": 35,
+    "with_pb": 46,
+    "with_roe": 33,
     "with_recent_report": 68,
     "missing_documents": [
-      "AGM",
       "ATW",
       "BCP",
       "BMC",
@@ -31812,20 +32197,18 @@
       "CIH",
       "DIS",
       "DLM",
-      "EQD",
       "IBM",
       "MDP",
       "MGL",
       "MRL",
-      "SAF",
-      "SLM"
+      "SAF"
     ],
     "interpretation": "Couverture de relevés sourcés ; pas une certification ni une probabilité de rendement."
   },
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-02",
-    "observed_at": "2026-10-04T16:05:34.943002+00:00",
+    "observed_at": "2026-10-04T17:18:30.601086+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -31962,8 +32345,8 @@
       "flat": 4,
       "quoted": 68
     },
-    "turnover_mad": 258466497.74,
-    "shares": 859537.0,
+    "turnover_mad": 256146092.89,
+    "shares": 849871.0,
     "transactions": 5487.0
   },
   "market_archive": {
@@ -32190,28 +32573,134 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-04T16:05:34.943002+00:00",
+    "checked_at": "2026-10-04T17:18:30.601086+00:00",
     "asof": "2026-10-02"
   },
   "news_health": {
-    "checked_at": "2026-10-04T16:05:34.804519+00:00",
+    "checked_at": "2026-10-04T17:18:30.374171+00:00",
     "status": "ok",
     "fetched_items": 10,
     "errors": []
   },
   "health": {
-    "checked_at": "2026-10-04T16:05:32.218567+00:00",
+    "checked_at": "2026-10-04T17:18:28.149509+00:00",
     "source": "CDG Capital Bourse",
-    "result": "unchanged",
+    "result": "conflict",
     "last_session": "2026-10-02",
-    "message": "Aucune nouvelle séance vérifiée",
+    "message": "15 bougie(s) divergente(s) non remplacée(s)",
     "details": {
       "session": "2026-10-02",
       "active_quotes": 67,
       "new_bars": 0,
       "source": "https://www.cdgcapitalbourse.ma/api/",
       "ignored_old_quotes": 0,
-      "conflicts": []
+      "conflicts": [
+        {
+          "symbol": "ADH",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "AKD",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "ATL",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "BCP",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "CASH",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "MNG",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "ENK",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "T2S",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "TQA",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        },
+        {
+          "symbol": "VCNE",
+          "session": "2026-10-02",
+          "fields": [
+            "v"
+          ]
+        }
+      ]
     }
   },
   "runtime": {
@@ -32224,13 +32713,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T16:05:31+00:00",
-    "built_at": "2026-10-04T16:05:37.142508+00:00",
+    "started_at": "2026-10-04T17:18:27+00:00",
+    "built_at": "2026-10-04T17:18:34.427981+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37215466945",
-    "commit": "9364d935fab32b28e131e850bc699319bf2544f8",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37215466945"
+    "run_id": "37219997217",
+    "commit": "9e131b0a55032652e12aa28f344a2526d6612926",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37219997217"
   },
   "intraday": {
     "status": "unavailable",
