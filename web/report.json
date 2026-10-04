@@ -103,7 +103,7 @@
       "ytd_pct": -8.19
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-04T16:02:45.186843+00:00",
+    "observed_at": "2026-10-04T16:05:34.943002+00:00",
     "turnover_mad": 258466497.74,
     "breadth": {
       "up": 10,
@@ -24813,14 +24813,15 @@
           "document_url": "https://www.ammc.ma/sites/default/files/CP_Risma_S1_26.pdf",
           "accounting_basis": "résultat net part du groupe HORS éléments exceptionnels",
           "pages": "p.1 (CA, RNPG publié) ; p.2 (RNPG hors éléments exceptionnels)",
-          "reported_net_millions": 313,
-          "reported_net_previous_millions": 135,
+          "reported_net_millions": 144,
+          "reported_net_previous_millions": 118,
           "revenue_millions": 863,
           "revenue_previous_millions": 754,
           "currency": "MAD",
           "note": "Le RNPG publié (313) contient +169 MDH de plus-values de cession, non récurrentes. Les retenir diviserait le PER par près de deux sur la foi d'une vente d'actifs : on retient la base hors éléments exceptionnels, publiée par l'émetteur lui-même.",
           "validation_status": "referenced_import_not_independent_audit",
-          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+          "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "reported_net_including_exceptionals_millions": 313
         },
         "period_end": "2025-12-31",
         "eps_denominator": "moyenne pondérée publiée",
@@ -31824,7 +31825,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-02",
-    "observed_at": "2026-10-04T16:02:45.186843+00:00",
+    "observed_at": "2026-10-04T16:05:34.943002+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -32189,17 +32190,17 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-04T16:02:45.186843+00:00",
+    "checked_at": "2026-10-04T16:05:34.943002+00:00",
     "asof": "2026-10-02"
   },
   "news_health": {
-    "checked_at": "2026-10-04T16:02:44.957836+00:00",
+    "checked_at": "2026-10-04T16:05:34.804519+00:00",
     "status": "ok",
     "fetched_items": 10,
     "errors": []
   },
   "health": {
-    "checked_at": "2026-10-04T16:02:42.849420+00:00",
+    "checked_at": "2026-10-04T16:05:32.218567+00:00",
     "source": "CDG Capital Bourse",
     "result": "unchanged",
     "last_session": "2026-10-02",
@@ -32223,13 +32224,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-04",
-    "started_at": "2026-10-04T16:02:42+00:00",
-    "built_at": "2026-10-04T16:02:49.088942+00:00",
+    "started_at": "2026-10-04T16:05:31+00:00",
+    "built_at": "2026-10-04T16:05:37.142508+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "37215247645",
-    "commit": "f631bc4a6a4bc82f120981e4cb3e9b96d2e5f373",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37215247645"
+    "run_id": "37215466945",
+    "commit": "9364d935fab32b28e131e850bc699319bf2544f8",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37215466945"
   },
   "intraday": {
     "status": "unavailable",
