@@ -105,6 +105,17 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertNotIn('data-chart-root', static)
         self.assertNotIn('data-chart-type="candles"', static)
 
+    def test_masi_default_chart_displays_the_entire_available_history(self):
+        page = (self.output / 'index.html').read_text()
+        static = re.sub(r'<script\b[^>]*>.*?</script>', '', page, flags=re.DOTALL)
+        start = min(self.report['masi_history'])
+        self.assertIn(f'Historique disponible : {start}', static)
+        self.assertRegex(static, r'data-masi-period="0"[^>]*aria-pressed="true"')
+        self.assertIn('data-masi-period="756"', static)
+        polyline = re.search(r'<polyline points="([^"]+)"', static)
+        count = sum(d <= self.report['market_overview']['asof'] for d in self.report['masi_history'])
+        self.assertEqual(len(polyline.group(1).split()), count)
+
     def test_csv_matches_snapshot_and_published_quality_counts(self):
         """The audit counters and each warning must describe exported rows."""
         self.assertEqual(len(self.fixture["symbols"]), 80)

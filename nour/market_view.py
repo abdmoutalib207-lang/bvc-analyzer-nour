@@ -1,8 +1,6 @@
 """Market-first HTML. Index history contains closes, not fabricated OHLCV."""
 import html
 import json
-from datetime import date
-from calendar import monthrange
 from .chart_view import navigation, explorer_footer
 
 
@@ -36,15 +34,9 @@ def market_panel(report):
     index = overview.get('masi') or {}
     points = sorted((report.get('masi_history') or {}).items())
     points = [(d,v) for d,v in points if d <= overview.get('asof', report['analysis_date'])]
-    if points:
-        end = date.fromisoformat(points[-1][0])
-        month_number = end.year*12 + end.month-1-3
-        year, month = divmod(month_number,12)
-        month += 1
-        cutoff = date(year,month,min(end.day,monthrange(year,month)[1])).isoformat()
-        last = [(d,v) for d,v in points if d >= cutoff]
-    else:
-        last = []
+    last = points
+    coverage = (f'Historique disponible : {esc(points[0][0])} → {esc(points[-1][0])}'
+                f' · {len(points)} séances' if points else 'Historique MASI indisponible')
     change = index.get('change_pct')
     tone = 'gain' if change is not None and change > 0 else 'loss' if change is not None and change < 0 else 'muted'
     provisional = overview.get('status') == 'intraday'
@@ -57,9 +49,11 @@ def market_panel(report):
                f'<div><span>Depuis le début de l’année</span><strong>{fmt(index.get("ytd_pct"))} %</strong></div>'
                f'<div><span>Plus haut de séance</span><strong>{fmt(overview.get("high"))}</strong></div>'
                f'<div><span>Plus bas de séance</span><strong>{fmt(overview.get("low"))}</strong></div></div>'
-               '<div class="chart-root" data-masi-chart><div class="chart-toolbar"><div class="periods" aria-label="Période MASI">'
-               + ''.join(f'<button type="button" data-masi-period="{n}" aria-pressed="{str(n==63).lower()}">{title}</button>'
-                         for n,title in ((21,'1M'),(63,'3M'),(252,'1A'),(0,'Tout')))
+               '<div class="chart-root" data-masi-chart>'
+               f'<p class="panel-sub" data-masi-coverage>{coverage}</p>'
+               '<div class="chart-toolbar"><div class="periods" aria-label="Période MASI">'
+               + ''.join(f'<button type="button" data-masi-period="{n}" title="{str(n) + " séances disponibles" if n else "Tout l’historique disponible"}" aria-pressed="{str(n==0).lower()}">{title}</button>'
+                         for n,title in ((21,'1M'),(63,'3M'),(252,'1A'),(756,'3A'),(0,'Tout')))
                + '</div></div><div class="chart-toolbar">' + navigation() + '</div>'
                f'<div class="chart masi-chart" tabindex="0" aria-label="Graphique MASI, navigation au clavier disponible">{masi_svg(last)}</div><div class="chart-readout" aria-live="off">'
                + (f'{esc(last[-1][0])} · MASI {fmt(last[-1][1])} points' if last else 'Aucune série disponible')
