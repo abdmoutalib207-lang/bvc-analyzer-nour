@@ -205,9 +205,19 @@ def detail_page(item, record, fixture, style, script):
             f'<li>{esc(w)}</li>' for w in calculated['warnings'])+'</ul></details>'
     recent = calculated.get('latest_report') or {}
     if str(recent.get('document_url','')).startswith('https://'):
+        comparison = ''
+        current_net, previous_net = recent.get('reported_net_millions'), recent.get('reported_net_previous_millions')
+        if (recent.get('reported_net_label') and recent.get('reported_net_previous_period_end')
+                and isinstance(current_net, (int, float)) and not isinstance(current_net, bool)
+                and isinstance(previous_net, (int, float)) and not isinstance(previous_net, bool)
+                and math.isfinite(current_net) and math.isfinite(previous_net) and previous_net > 0):
+            comparison = (f'<p>Même semestre au {esc(recent["reported_net_previous_period_end"])} : '
+                f'{number(previous_net)} millions de {esc(recent.get("currency"))} ; '
+                f'variation du résultat part du groupe : {number((current_net / previous_net - 1) * 100)} %.</p>')
         financial_details += (f'<section class="panel"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
             f'<p>{esc(calculated.get("semester_activity_label", "CA"))} : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
-            f'résultat selon le périmètre du document : {number(recent.get("reported_net_millions"))} millions.</p>'
+            f'{esc(recent.get("reported_net_label", "résultat selon le périmètre du document"))} : {number(recent.get("reported_net_millions"))} millions.</p>'
+            f'{comparison}'
             f'<p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
             f'{esc(recent.get("note") or "")}</p>'
             f'<a href="{esc(recent["document_url"])}" target="_blank" rel="noopener noreferrer">Document semestriel référencé</a>'

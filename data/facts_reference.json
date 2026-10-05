@@ -7925,22 +7925,43 @@
       "semester_activity_label": "CA",
       "latest_report": {
         "period_end": "2026-06-30",
-        "document_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
-        "accounting_basis": "Consolidé, résultat part groupe non réconcilié",
-        "pages": "PDF p.3, CPC consolidé en MAD ; synthèse p.1",
-        "reported_net_millions": null,
-        "reported_net_previous_millions": null,
+        "document_url": "https://jet-contractors.com/documents/Rapport_Financier_s1_2026.pdf",
+        "accounting_basis": "Consolidé, normes marocaines CNC, résultat net part du groupe",
+        "pages": "PDF p.12, bilan passif et CPC en MAD ; p.15, commentaire du RNPG et du CA",
+        "reported_net_label": "Résultat net part du groupe",
+        "reported_net_millions": 91.50954252,
+        "reported_net_previous_millions": 126.04480895,
+        "reported_net_previous_period_end": "2025-06-30",
+        "reported_total_net_millions": 103.59719106,
+        "reported_minority_net_millions": 12.08764854,
         "revenue_millions": 1772.53032745,
         "revenue_previous_millions": 1460.30771735,
         "currency": "MAD",
-        "note": "Résultat inutilisable : p.3 affiche 12 087 648,54 MAD au total XIII, 103 597 191,06 au total XVI (recoupé par CAC et synthèse), 107 525 818,90 en part groupe et 91 509 542,52 en minoritaires. Ces lignes ne se réconcilient pas. Aucun résultat total substitué au groupe ; aucun BPA/PER semestriel dérivé.",
-        "validation_status": "pdf_page_visually_checked_2026-10-04",
+        "note": "RNPG retenu au bilan p.12 : 91 509 542,52 MAD, confirmé à 91,51 MDH dans le commentaire p.15. Minoritaires 12 087 648,54 MAD ; somme 103 597 191,06 MAD, égale au total XVI et au résultat recalculé après impôt. Comparatif S1 2025 : RNPG 126 044 808,95 MAD au CPC p.12. Réserve : le CPC reprend les lignes erronées du communiqué (total XIII 12,09 MDH, minoritaires 91,51 MDH, part groupe 107,53 MDH) ; le commentaire p.15 comporte aussi une coquille sur l’année. Ces valeurs contradictoires ne sont pas utilisées. Le CA est distinct de la production. Aucun BPA/PER semestriel ni résultat annualisé dérivé.",
+        "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05",
         "provenance": {
-          "source_type": "regulator_pdf",
-          "source_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
-          "document_hash": "sha256:e16321b5b72c3e91a11a6d54c7efee721ab2d35ec8bbef1146fe171ebf16c989",
-          "reviewed_at": "2026-10-04",
-          "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+          "source_type": "issuer_pdf",
+          "source_url": "https://jet-contractors.com/documents/Rapport_Financier_s1_2026.pdf",
+          "document_hash": "sha256:2e9545f2565811407ed0d2fe27bf20dcb770916eb0d23d249594c52568f4cf9d",
+          "reviewed_at": "2026-10-05",
+          "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
+          "corroborating_documents": [
+            {
+              "source_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
+              "pages": "PDF p.1 et p.3",
+              "document_hash": "sha256:e16321b5b72c3e91a11a6d54c7efee721ab2d35ec8bbef1146fe171ebf16c989"
+            }
+          ],
+          "reconciliation_mad": {
+            "group_net": 91509542.52,
+            "minority_net": 12087648.54,
+            "total_net": 103597191.06,
+            "previous_group_net": 126044808.95,
+            "result_before_tax": 167659709.31,
+            "equity_accounted_income": 87852.29,
+            "goodwill_amortization": 4766396.54,
+            "income_tax": 59383974
+          }
         }
       }
     },
