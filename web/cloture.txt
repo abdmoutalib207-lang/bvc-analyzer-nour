@@ -13,7 +13,7 @@ Le relevé de marché totalise 126,46 MDH. Aucune comparaison avec le volume de 
 
 L’indice passe sous le plus bas des 20 clôtures précédentes, 17 303,69 points. Cette référence devient une zone à reconquérir. Il ne s’agit pas d’un support intrajournalier.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-05T21:40:54.169953+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-05T23:01:37.893929+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -367,7 +367,7 @@ AMMC · 2026-10-01 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-05T21:40:55.178946+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-05T23:01:38.821035+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
@@ -399,15 +399,15 @@ Risque et devises
 
 USD/MAD
 
-9,9850MAD / USD · 0,48 %
+9,9854MAD / USD · 0,03 %
 
-Dernière observation source2026-10-05T21:40:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-05T23:01:22+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,1980MAD / EUR · 0,21 %
+11,1960MAD / EUR · 0,01 %
 
-Dernière observation source2026-10-05T21:29:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-05T22:59:51+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -417,39 +417,55 @@ Dernière observation source2026-10-05T20:14:16+00:00Différé source : 15 min �
 
 Indice dollar
 
-102,12points · 0,20 %
+102,10points · 0,17 %
 
-Dernière observation source2026-10-05T21:35:50+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-05T22:04:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 156,80USD / once troy · -0,13 %
+4 168,80USD / once troy · 0,29 %
 
-Dernière observation source2026-10-05T21:00:00+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-05T23:01:26+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 100,32USD / baril · -1,89 %
 
-Dernière observation source2026-10-05T21:33:54+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-05T22:38:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,64USD / livre · 1,40 %
+6,64USD / livre · 0,02 %
 
-Dernière observation source2026-10-05T20:59:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-05T23:01:15+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
 143,85USD / tonne · 0,49 %
 
-Dernière observation source2026-10-05T15:10:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Dernière observation source2026-10-05T22:38:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Natural-Gas/Europe-Weighs-Methane-Rule-Delay-as-Energy-Supply-Risks-Mount.html] Europe Weighs Methane Rule Delay as Energy Supply Risks Mount ↗
+
+OilPrice · 2026-10-05T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20261005-le-commerce-cameroun-nigeria-profite-d-une-s%C3%A9curit%C3%A9-am%C3%A9lior%C3%A9e] Le commerce Cameroun-Nigeria profite d'une sécurité améliorée ↗
+
+RFI · économie · 2026-10-05T22:00:36+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261005-apr%C3%A8s-l-extraction-l-afrique-de-l-ouest-mise-sur-le-raffinage-de-l-or] Après l’extraction, l’Afrique de l’Ouest mise sur le raffinage de l’or ↗
+
+RFI · économie · 2026-10-05T22:00:21+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/G7-Oil-Stocks-Release-Is-A-Band-Aid-Fix-in-Broken-Fuel-Market.html] G7 Oil Stocks Release Is A Band-Aid Fix in Broken Fuel Market ↗
+
+OilPrice · 2026-10-05T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261005-les-exportations-de-p%C3%A9trole-brut-revenues-%C3%A0-leur-niveau-d-avant-guerre] Les exportations de pétrole brut revenues à leur niveau d'avant-guerre ↗
 
@@ -466,22 +482,6 @@ OilPrice · 2026-10-05T20:00:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/Southeast-Asias-Oil-and-Gas-MA-Market-Is-Heating-Up.html] Southeast Asia’s Oil and Gas M&A Market Is Heating Up ↗
 
 OilPrice · 2026-10-05T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Freeport-LNG-Ramps-Up-Gas-Intake-After-Train-2-Shutdown.html] Freeport LNG Ramps Up Gas Intake After Train 2 Shutdown ↗
-
-OilPrice · 2026-10-05T18:45:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/benin-france-recu-par-macron-wadagni-obtient-pres-de-100-millions-deuros-de-financements/] Bénin-France : reçu par Macron, Wadagni obtient près de 100 millions d’euros de financements ↗
-
-Financial Afrik · 2026-10-05T18:41:44+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/96-Billion-in-Southeast-Asian-Upstream-Assets-Are-for-Sale-Through-2027.html] $9.6 Billion in Southeast Asian Upstream Assets Are for Sale Through 2027 ↗
-
-OilPrice · 2026-10-05T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Irans-Oil-Minister-Resigns-as-US-Blockade-Chokes-Crude-Exports.html] Iran’s Oil Minister Resigns as U.S. Blockade Chokes Crude Exports ↗
-
-OilPrice · 2026-10-05T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -533,6 +533,22 @@ Comparer les confirmations de cours, la largeur de marché et la liquidité. Une
 
 Radar de presse — alertes à recouper
 
+ [https://oilprice.com/Energy/Natural-Gas/Europe-Weighs-Methane-Rule-Delay-as-Energy-Supply-Risks-Mount.html] Europe Weighs Methane Rule Delay as Energy Supply Risks Mount ↗
+
+OilPrice · 2026-10-05T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20261005-le-commerce-cameroun-nigeria-profite-d-une-s%C3%A9curit%C3%A9-am%C3%A9lior%C3%A9e] Le commerce Cameroun-Nigeria profite d'une sécurité améliorée ↗
+
+RFI · économie · 2026-10-05T22:00:36+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261005-apr%C3%A8s-l-extraction-l-afrique-de-l-ouest-mise-sur-le-raffinage-de-l-or] Après l’extraction, l’Afrique de l’Ouest mise sur le raffinage de l’or ↗
+
+RFI · économie · 2026-10-05T22:00:21+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/G7-Oil-Stocks-Release-Is-A-Band-Aid-Fix-in-Broken-Fuel-Market.html] G7 Oil Stocks Release Is A Band-Aid Fix in Broken Fuel Market ↗
+
+OilPrice · 2026-10-05T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261005-les-exportations-de-p%C3%A9trole-brut-revenues-%C3%A0-leur-niveau-d-avant-guerre] Les exportations de pétrole brut revenues à leur niveau d'avant-guerre ↗
 
 France 24 · économie · 2026-10-05T21:01:29+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -540,20 +556,4 @@ France 24 · économie · 2026-10-05T21:01:29+00:00 · International · Économi
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/Singapore-Eyes-Nuclear-Power-as-Iran-War-Exposes-Its-Import-Problem.html] Singapore Eyes Nuclear Power as Iran War Exposes Its Import Problem ↗
 
 OilPrice · 2026-10-05T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Germany-Is-Spending-2-Billion-to-Discover-the-Real-Price-of-Clean-Jet-Fuel.html] Germany Is Spending €2 Billion to Discover the Real Price of Clean Jet Fuel ↗
-
-OilPrice · 2026-10-05T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Southeast-Asias-Oil-and-Gas-MA-Market-Is-Heating-Up.html] Southeast Asia’s Oil and Gas M&A Market Is Heating Up ↗
-
-OilPrice · 2026-10-05T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Freeport-LNG-Ramps-Up-Gas-Intake-After-Train-2-Shutdown.html] Freeport LNG Ramps Up Gas Intake After Train 2 Shutdown ↗
-
-OilPrice · 2026-10-05T18:45:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/benin-france-recu-par-macron-wadagni-obtient-pres-de-100-millions-deuros-de-financements/] Bénin-France : reçu par Macron, Wadagni obtient près de 100 millions d’euros de financements ↗
-
-Financial Afrik · 2026-10-05T18:41:44+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
