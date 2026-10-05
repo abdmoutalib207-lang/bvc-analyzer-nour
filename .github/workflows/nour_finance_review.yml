@@ -1,0 +1,30 @@
+name: Nour selected primary document review
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/nour_finance_review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nour-financial-evidence
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF inspection tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Collect fixed public primary sources without changing financial facts
+        run: python tools/review_primary_oct05.py
+      - name: Preserve evidence artifact without writing to the repository
+        uses: actions/upload-artifact@v4
+        with:
+          name: selected-primary-review-2026-10-05
+          path: docs/reviews/2026-10-05
+          retention-days: 30
