@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T19:29:25.836861+00:00",
+  "updated_at": "2026-10-05T20:57:30.823119+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "9b4ecabc5e7466ac41",
+      "title": "Germany Is Spending €2 Billion to Discover the Real Price of Clean Jet Fuel",
+      "url": "https://oilprice.com/Energy/Energy-General/Germany-Is-Spending-2-Billion-to-Discover-the-Real-Price-of-Clean-Jet-Fuel.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T20:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "a6222b32eb621b8176",
       "title": "Southeast Asia’s Oil and Gas M&A Market Is Heating Up",
@@ -2088,7 +2105,7 @@
     },
     {
       "id": "03dafe6937509fc21b",
-      "title": "Maroc-Espagne : les échanges au beau fixe - LesEco.ma",
+      "title": "Maroc-Espagne : les échanges au beau fixe - leseco.ma",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB4aWNWV1lGY0VNTVRXNnQ5Q3FtZk04YmhBOE5kRWtPbzd6dTF3WWFLQXdPckk0TkZNMmk1TnN6SXFnN3A2dThpMFNNOTBJZE9uY1NrbnFoSk1qcnB1bkFzamNZdEw1c2RPWDM4bUM4a0ZwTTBKR3k1YVp3?oc=5",
       "publisher": "Europe / partenaires du Maroc",
       "published_at": "2026-09-29T10:14:58+00:00",
@@ -2122,7 +2139,7 @@
     },
     {
       "id": "4a9473d3a97a36b987",
-      "title": "Calendrier économique octobre 2026 : notre analyse des annonces clés - Café du Trading",
+      "title": "Calendrier économique octobre 2026 : notre analyse des annonces clés - cafedutrading.com",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBBaVNDX1JiWm1kQS1HMlByZHlBRnJyanpZUHdzd0wwUkFuMkYxUDZwWXA3aWYyNHRnSmpTLU5lVFB3Q1M3R09vc2t0SVNoMnNtcGhTbGFjeEE4N2JyNzVLOHY4bE1sdFRMRzFXWmlvZlZlU2M?oc=5",
       "publisher": "Inflation US / zone euro · presse",
       "published_at": "2026-09-29T07:00:00+00:00",
@@ -4499,21 +4516,6 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZlhBV1ZGcGRxYlpLdWpCWUVoX1N2LWNvN0RkZHVMZlM0QVRES0dWRzkwa3lObUxfZWxMdlpacS1waHlIN08tR1pVbmRsay1HSTdYSV9abXZVanB2TXg0eWF5c2RVNnFfem1hZjZ6VThDbUxLcnljUkhRYmpGdmRCaVo4V1hxR0lUNTJwUTVpUUJCZ1JMYnhpQVlma3FjRC0yeTBRaDdRRW9JSnFCbmc?oc=5",
       "publisher": "Ilboursa",
       "published_at": "2026-09-25T05:56:21+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
-      "id": "a7092c789748b5cda3",
-      "title": "Pétrole : après Sèmè au Bénin, ces gisements africains qui attendent leur heure",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQ2VnbzNzbG1oeHJPWjN2WjV2SG1lSHRGc0JWbHlaTlV2MWtUaFRSdkJndU5WbU1EVzduQngyYmVWLTVxazZMemlpb3JkRW5CR0RpUl93SnU3eS0xZjkwRzlSTGVlN3BzWEpfbHFnSjJzaFVGYy1ybzhoaGhMc1ZMNTVkb0N2RDBURjREelVnNjN0Y0VsSjktR2ZIT01lcE42dFZnaUd4OV8xcDZpdk51V3NwVHF2U25nQnROSEZXWDFud1lRUjFz?oc=5",
-      "publisher": "Agence Ecofin Maroc",
-      "published_at": "2026-09-25T05:39:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
