@@ -13,7 +13,7 @@ Le relevé de marché totalise 126,46 MDH. Aucune comparaison avec le volume de 
 
 L’indice passe sous le plus bas des 20 clôtures précédentes, 17 303,69 points. Cette référence devient une zone à reconquérir. Il ne s’agit pas d’un support intrajournalier.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-05T18:41:39.402078+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-05T19:29:25.920610+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -367,21 +367,21 @@ AMMC · 2026-10-01 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-05T18:41:40.343738+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-05T19:29:27.049357+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 780,12points · 0,74 %
+7 794,28points · 0,93 %
 
-Dernière observation source2026-10-05T18:41:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-05T19:29:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 330,34points · 0,30 %
+51 401,18points · 0,44 %
 
-Dernière observation source2026-10-05T18:41:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-05T19:29:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -399,47 +399,47 @@ Risque et devises
 
 USD/MAD
 
-9,9868MAD / USD · 0,50 %
+9,9836MAD / USD · 0,47 %
 
-Dernière observation source2026-10-05T18:41:30+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-05T19:29:16+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,1930MAD / EUR · 0,17 %
+11,1950MAD / EUR · 0,19 %
 
-Dernière observation source2026-10-05T18:39:51+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-05T19:19:47+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-15,60points · 1,89 %
+15,62points · 2,02 %
 
-Dernière observation source2026-10-05T18:40:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-05T19:28:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,19points · 0,26 %
+102,14points · 0,21 %
 
-Dernière observation source2026-10-05T18:41:23+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-05T19:29:19+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 166,70USD / once troy · 0,11 %
+4 168,30USD / once troy · 0,14 %
 
-Dernière observation source2026-10-05T18:41:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-05T19:29:18+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-100,35USD / baril · -1,86 %
+100,32USD / baril · -1,89 %
 
-Dernière observation source2026-10-05T18:41:30+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-05T19:29:19+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,64USD / livre · 1,40 %
+6,64USD / livre · 1,44 %
 
-Dernière observation source2026-10-05T18:41:18+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-05T19:28:42+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -450,6 +450,18 @@ Dernière observation source2026-10-05T15:10:17+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Southeast-Asias-Oil-and-Gas-MA-Market-Is-Heating-Up.html] Southeast Asia’s Oil and Gas M&A Market Is Heating Up ↗
+
+OilPrice · 2026-10-05T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Freeport-LNG-Ramps-Up-Gas-Intake-After-Train-2-Shutdown.html] Freeport LNG Ramps Up Gas Intake After Train 2 Shutdown ↗
+
+OilPrice · 2026-10-05T18:45:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/05/benin-france-recu-par-macron-wadagni-obtient-pres-de-100-millions-deuros-de-financements/] Bénin-France : reçu par Macron, Wadagni obtient près de 100 millions d’euros de financements ↗
+
+Financial Afrik · 2026-10-05T18:41:44+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Energy-General/96-Billion-in-Southeast-Asian-Upstream-Assets-Are-for-Sale-Through-2027.html] $9.6 Billion in Southeast Asian Upstream Assets Are for Sale Through 2027 ↗
 
@@ -470,18 +482,6 @@ OilPrice · 2026-10-05T17:00:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/05/centrafrique-royal-onyx-insurance-ouvre-une-succursale-a-bangui/] Centrafrique : Royal Onyx Insurance ouvre une succursale à Bangui ↗
 
 Financial Afrik · 2026-10-05T17:00:00+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/maroc-dislog-group-affine-son-perimetre-avant-son-entree-en-bourse/] Maroc : Dislog Group affine son périmètre avant son entrée en Bourse ↗
-
-Financial Afrik · 2026-10-05T16:51:55+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/senegal-nsia-banque-benin-fait-condamner-africa-business-services-a-111-millions-fcfa/] Sénégal : NSIA Banque Bénin fait condamner Africa Business Services à 111 millions FCFA ↗
-
-Financial Afrik · 2026-10-05T16:32:57+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Indian-State-Firm-BPCL-Readies-3-Billion-Bond-to-Fund-Brazil-oil-Project.html] Indian State Firm BPCL Readies $3-Billion Bond to Fund Brazil oil Project ↗
-
-OilPrice · 2026-10-05T16:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -533,6 +533,18 @@ Comparer les confirmations de cours, la largeur de marché et la liquidité. Une
 
 Radar de presse — alertes à recouper
 
+ [https://oilprice.com/Energy/Energy-General/Southeast-Asias-Oil-and-Gas-MA-Market-Is-Heating-Up.html] Southeast Asia’s Oil and Gas M&A Market Is Heating Up ↗
+
+OilPrice · 2026-10-05T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Freeport-LNG-Ramps-Up-Gas-Intake-After-Train-2-Shutdown.html] Freeport LNG Ramps Up Gas Intake After Train 2 Shutdown ↗
+
+OilPrice · 2026-10-05T18:45:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/05/benin-france-recu-par-macron-wadagni-obtient-pres-de-100-millions-deuros-de-financements/] Bénin-France : reçu par Macron, Wadagni obtient près de 100 millions d’euros de financements ↗
+
+Financial Afrik · 2026-10-05T18:41:44+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Energy-General/96-Billion-in-Southeast-Asian-Upstream-Assets-Are-for-Sale-Through-2027.html] $9.6 Billion in Southeast Asian Upstream Assets Are for Sale Through 2027 ↗
 
 OilPrice · 2026-10-05T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -544,16 +556,4 @@ OilPrice · 2026-10-05T17:30:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/05/les-banques-centrales-marocaines-et-emiratie-renforcent-leur-cooperation-financiere/] Les banques centrales marocaine et émiratie renforcent leur coopération financière ↗
 
 Financial Afrik · 2026-10-05T17:02:53+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Crude-Oil/Heres-How-Trumps-Using-The-Graham-Act-To-Trap-Russia-And-Crush-Iran.html] Here’s How Trump’s Using The Graham Act To Trap Russia And Crush Iran ↗
-
-OilPrice · 2026-10-05T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/centrafrique-royal-onyx-insurance-ouvre-une-succursale-a-bangui/] Centrafrique : Royal Onyx Insurance ouvre une succursale à Bangui ↗
-
-Financial Afrik · 2026-10-05T17:00:00+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/05/maroc-dislog-group-affine-son-perimetre-avant-son-entree-en-bourse/] Maroc : Dislog Group affine son périmètre avant son entrée en Bourse ↗
-
-Financial Afrik · 2026-10-05T16:51:55+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
