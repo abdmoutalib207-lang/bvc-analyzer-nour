@@ -104,6 +104,10 @@ class RuntimeContracts(unittest.TestCase):
 
     def test_missing_closing_and_delays_are_visible_not_success_claims(self):
         report = build_report(self.fixture,'2026-10-05')
+        # The production snapshot advances on every market update. This test
+        # must explicitly simulate an absent closing, not depend on its age.
+        for item in report['results']:
+            item['asof'] = '2026-10-02'
         report['runtime'] = run_context(datetime(2026,10,5,19,0,tzinfo=ZONE), '0 18 * * 1-5','schedule')
         brief = create_briefing(report)
         self.assertEqual(brief['edition_status'],'closing_pending')
@@ -112,6 +116,8 @@ class RuntimeContracts(unittest.TestCase):
         self.assertIn('Créneau exécuté en retard',page)
         self.assertIn('09:45 · 11:46 · 13:45 · 15:45 · 18:00',page)
         self.assertIn('Dernière clôture',home_page(self.fixture,report,'',''))
+        report['results'][0]['asof'] = '2026-10-05'
+        self.assertEqual(create_briefing(report)['edition_status'], 'published')
 
     def test_archive_preserves_editions_across_intermediate_and_push_builds(self):
         with tempfile.TemporaryDirectory() as temporary:

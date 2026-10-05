@@ -184,7 +184,8 @@ def detail_page(item, record, fixture, style, script):
         return (f'<article class="kpi fundamental-card tone-{tone}"><span>{esc(title)}</span>'
                 f'<strong>{display}</strong>{f" <small>{esc(unit)}</small>" if unit else ""}'
                 f'<em>{"Non documenté" if value is None else "Valeur négative" if tone=="negative" else "Valeur positive" if tone=="positive" else "Ratio descriptif"}</em></article>')
-    fundamental_cards=''.join((fundamental_card('Bénéfice par action',calculated.get('eps_mad'),'MAD'),
+    eps_title = (f'BPA historique {calculated.get("exercise")}' if calculated.get('historical_per_share_only') else 'Bénéfice par action')
+    fundamental_cards=''.join((fundamental_card(eps_title,calculated.get('eps_mad'),'MAD'),
                                fundamental_card('PER recalculé',calculated.get('pe')),
                                fundamental_card('P/B recalculé',calculated.get('pb')),
                                fundamental_card('ROE',calculated.get('roe_pct'),'%',True),
@@ -203,6 +204,11 @@ def detail_page(item, record, fixture, style, script):
     if calculated.get('warnings'):
         financial_details += '<details><summary>Réserves sur les fondamentaux</summary><ul>'+''.join(
             f'<li>{esc(w)}</li>' for w in calculated['warnings'])+'</ul></details>'
+    review = calculated.get('financial_review') or {}
+    if review:
+        financial_details += (f'<section class="panel"><h3>Rapprochement documentaire · {esc(review.get("reviewed_at"))}</h3>'
+            f'<p>{esc(review.get("conclusion"))}</p><p class="fineprint">{esc(review.get("method"))}</p>'
+            '<p class="fineprint">Contrôle de pages sélectionnées, pas certification du rapport complet.</p></section>')
     recent = calculated.get('latest_report') or {}
     if str(recent.get('document_url','')).startswith('https://'):
         comparison = ''

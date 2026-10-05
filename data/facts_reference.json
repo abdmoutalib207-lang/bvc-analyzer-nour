@@ -7969,7 +7969,7 @@
       "societe": "HAL",
       "exercice": 2025,
       "document": "Rapport Financier Annuel 2025",
-      "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf",
+      "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
       "depose_aupres_de": "AMMC",
       "releve_le": "2026-10-02",
       "faits": {
@@ -7981,7 +7981,8 @@
           "page": 58,
           "note": "« TOTAL ACTIF 6 484 075 069,34 6 313 507 887,33 ». en-tête « ACTIF (En dirhams) 31 décembre 2025 31 décembre 2024 » (p.58 = page imprimée 115) ; texte p.6 : « 6 484 MMAD Total bilan ». Pages = rang dans le fichier PDF ; états consolidés en DIRHAMS (« En dirhams »), tableau des flux et tableau de synthèse en KILO-dirhams.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "total_passif": {
           "valeur": 6484.075069,
@@ -7991,17 +7992,19 @@
           "page": 58,
           "note": "« TOTAL PASSIF 6 484 075 069,34 6 313 507 887,33 ». colonne 31 décembre 2025.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "capitaux_propres_part_groupe": {
-          "valeur": 1445.975818,
-          "valeur_au_rapport": 1445975818.36,
-          "unite_au_rapport": "MAD",
-          "colonne_exercice_clos": 1,
-          "page": 58,
-          "note": "« Capitaux propres part groupe 1 445 975 818 ». (centimes « ,36 » omis de la citation, trop longue pour le contrôle automatique) capital 502 945 280 + prime 251 021 566,80 + réserves consolidées 592 176 594,77 + résultat 99 832 376,79 = 1 445 975 818,36. ⚠️ Le texte p.6 annonce « Fonds propres 1 429 MMAD -1,2 % vs. 2024 », qui ne se recolle ni au bilan (1 445,976, soit −0,9 %) ni au tableau de variation p.59 : coquille de présentation, l'état comptable prime.",
+          "valeur": 1445.97581836,
+          "page": 5,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+          "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "note": "502945280 + 251021566.80 + 592176594.77 + 99832376.79 = 1445975818.36 MAD.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         },
         "interets_minoritaires": {
           "valeur": 0,
@@ -8011,7 +8014,8 @@
           "page": 58,
           "note": "« Intérêts minoritaires Capitaux propres 1 445 975 818,36 1 458 514 079,09 ». la ligne « Intérêts minoritaires » est vide : « Capitaux propres » = « Capitaux propres part groupe » ; tableau de variation p.59 : colonne « intérêt minoritaire » vide.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "capitaux_propres_consolides": {
           "valeur": 1445.975818,
@@ -8021,39 +8025,30 @@
           "page": 58,
           "note": "« Capitaux propres 1 445 975 818,36 1 458 514 079,09 ». ensemble consolidé = part du groupe (aucun minoritaire).",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "dettes_financieres": {
-          "valeur": 3520.227584,
-          "valeur_au_rapport": 3520227584.09,
-          "unite_au_rapport": "MAD",
-          "colonne_exercice_clos": 1,
-          "page": 58,
-          "composantes": [
-            {
-              "page": 58,
-              "citation": "Autres passifs non courants 1 399 132 266,83 1 232 996 841,81",
-              "valeur_au_rapport": 1399132266.83
-            },
-            {
-              "page": 58,
-              "citation": "Autres passifs financiers à court terme 2 121 095 317,26 2 271 593 275,70",
-              "valeur_au_rapport": 2121095317.26
-            }
-          ],
-          "note": ". « Autres passifs non courants » 1 399 132 266,83 + « Autres passifs financiers à court terme » 2 121 095 317,26 = 3 520 227 584,09 MAD. ⚠️ Le dépôt ne contient AUCUNE note : la composition de ces deux agrégats n'est pas détaillée. Retenus parce que la société définit son « Endettement » (p.42, 3 122 429 KMAD en 2025 ; 2 927 090 en 2024) exactement comme leur somme moins la trésorerie : 3 520 227 584 − 397 798 873 = 3 122 428 711 (2025) et 1 232 996 842 + 2 271 593 276 − 577 499 912 = 2 927 090 206 (2024). Le tableau des flux (p.59) place les « autres passifs financiers à court terme » dans la trésorerie : trésorerie de clôture −1 723 296 = 397 799 − 2 121 095.",
+          "valeur": 3504.407,
+          "page": 236,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/d3b0c03d293c6f9e64acc788a5343f55d799a9a1.pdf",
+          "document_hash": "sha256:4857168c7bda54d12ed8eeffeeda0fa62e7bbfd191cbc6e29db4783eac0655a2",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "note": "KMAD arrondis : financement 1069960 + crédit-bail 313352 + trésorerie-passif 2121095 = 3504407. Exclut les obligations de personnel de 15820 KMAD détaillées p.226-227.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         },
         "tresorerie_actif": {
-          "valeur": 397.798873,
-          "valeur_au_rapport": 397798873.12,
-          "unite_au_rapport": "MAD",
-          "colonne_exercice_clos": 1,
-          "page": 58,
-          "note": "« Trésorerie et équivalents de trésorerie 397 798 873,12 577 499 912,02 ». pas de titres de placement séparés ; « Autres instruments financiers » (884,9 MMAD, actif non courant) non comptés. Dette nette = 3 520,228 − 397,799 = 3 122,429 MMAD = « Endettement » publié p.42.",
+          "valeur": 397.799,
+          "page": 236,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/d3b0c03d293c6f9e64acc788a5343f55d799a9a1.pdf",
+          "document_hash": "sha256:4857168c7bda54d12ed8eeffeeda0fa62e7bbfd191cbc6e29db4783eac0655a2",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "note": "397799 KMAD arrondis ; dette nette 3504407 - 397799 = 3106608 KMAD, égale au tableau publié. Précision au KMAD, non au dirham.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         },
         "endettement_net": {
           "valeur": 3122.429,
@@ -8063,7 +8058,8 @@
           "page": 42,
           "note": "« Endettement 2 927 090 3 122 429 7% ». endettement de la société (tableau « Les éléments du bilan de l'année 2025 », en kdhs, colonnes 2024 puis 2025 — ordre INVERSE du bilan) ; recoupé au bilan à 1 KMAD près. Non utilisé pour le calcul (celui-ci repart des lignes du bilan).",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "resultat_exploitation": {
           "valeur": 301.944179,
@@ -8073,7 +8069,8 @@
           "page": 58,
           "note": "« RÉSULTAT OPÉRATIONNEL 301 944 178,52 210 024 147,33 ». ⚠️ Le tableau « RÉSULTATS CONSOLIDÉS PROVISOIRES » du rapport de gestion (p.42) donne « Résultat Opérationnel 140 723 273 212 94% », qui ne se recolle pas aux états (301 944 / 210 024) : consigné, l'état comptable prime.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "resultat_financier": {
           "valeur": -108.46947,
@@ -8083,7 +8080,8 @@
           "page": 58,
           "note": "« RÉSULTAT FINANCIER -108 469 469,64 -129 248 454,44 ». 301 944 178,52 − 108 469 469,64 = 193 474 708,88.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "resultat_avant_impot": {
           "valeur": 193.474709,
@@ -8093,7 +8091,8 @@
           "page": 58,
           "note": "« RÉSULTAT CONSOLIDÉ AVANT IMPÔT 193 474 708,88 80 775 692,89 ». p.42 : « Résultat avant impôt 80 776 193 475 » : concorde.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "impot_resultat": {
           "valeur": 93.642332,
@@ -8103,7 +8102,8 @@
           "page": 58,
           "note": "« Charges d'impôt 93 642 332,09 63 683 655,61 ». impôt exigible 86 023 698,13 + impôt différé 7 618 633,96 ; taux effectif 48,4 %.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "resultat_net_consolide": {
           "valeur": 99.832377,
@@ -8113,17 +8113,19 @@
           "page": 58,
           "note": "« RÉSULTAT NET CONSOLIDÉ 99 832 376,79 17 092 037,28 ». 193 474 708,88 − 93 642 332,09 ; tableau des flux p.59 : « Résultat net consolidé 99 832 » KMAD. ⚠️ Le tableau PROVISOIRE p.42 donne « Résultat net 17 092 104 436 511% » : 104 436 est le bénéfice SOCIAL (« Bénéfice net de l'exercice Dhs 104 436 346,20 », même page), pas le consolidé ; consigné.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "resultat_net_part_groupe": {
-          "valeur": 99.832377,
-          "valeur_au_rapport": 99832376.79,
-          "unite_au_rapport": "MAD",
-          "colonne_exercice_clos": 1,
-          "page": 58,
-          "note": "« Résultats consolidés de l'exercice 99 832 376,79 17 092 037,28 ». aucun minoritaire : part du groupe = résultat de l'ensemble ; tableau de variation p.59 « Résultat net de l'exercice 99 832 99 832 99 832 ».",
+          "valeur": 99.83237679,
+          "page": 6,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+          "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "note": "193474708.88 - 93642332.09 = 99832376.79 MAD ; bilan p.5, résultat global p.7 et opinion p.2 recoupent le RN consolidé sans minoritaires.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         },
         "flux_tresorerie_exploitation": {
           "valeur": 442.585,
@@ -8133,7 +8135,8 @@
           "page": 59,
           "note": "« Flux de trésorerie d'exploitation 442 585 805 812 ». « TABLEAU DE FLUX DE TRÉSORERIE (En milliers de dirhams) 31 décembre 2025 31 décembre 2024 ». Recoupé par addition : 99 832 + 220 338 + 7 619 − 103 210 + 71 047 − 28 834 + 15 901 + 159 892 = 442 585 (2024 : 805 812 idem). ⚠️ Le flux est AVANT frais financiers (« Coût de l'endettement 159 892 » est réintégré et ressort en financement) : il surestime la conversion par rapport à une définition après intérêts.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "dotations_amortissements_exploitation": {
           "valeur": 220.338,
@@ -8143,23 +8146,26 @@
           "page": 59,
           "note": "« Dotations aux amortissements 220 338 236 450 ». dotations aux AMORTISSEMENTS seuls, issues du tableau des flux (le CPC p.58 donne « Dotations d'exploitations 270 256 405,39 » et « Reprises d'exploitations 31 133 946,46 » qui mêlent provisions). Non utilisée tant qu'un EBITDA est publié : REX 301,944 + 220,338 = 522,282.",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "releve_le": "2026-10-02",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "excedent_brut_exploitation": {
-          "valeur": 541.067,
-          "valeur_au_rapport": 541067,
-          "unite_au_rapport": "KMAD",
-          "colonne_exercice_clos": 2,
-          "page": 42,
-          "note": "« EBITDA 440 860 541 067 23% ». tableau « En Kdhs 2024 2025 Var 25/24 » : l'exercice 2025 est en SECONDE colonne (colonne_exercice_clos = 2). Se reconstruit à 1 KMAD près avec les états : REX 301 944 + dotations d'exploitation 270 256 − reprises 31 134 = 541 066 ; (2024 : 210 024 + 246 536 − 15 701 = 440 859). ⚠️ Mais le tableau où il figure est intitulé « RÉSULTATS CONSOLIDÉS PROVISOIRES » et ses lignes « Résultat Opérationnel » et « Résultat net » ne se recollent pas aux états : retenu parce que publié ET reconstruit depuis les états, réserve consignée. Alternative strictement amortissements : 301,944 + 220,338 = 522,282.",
+          "valeur": 525.676,
+          "page": 200,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/d3b0c03d293c6f9e64acc788a5343f55d799a9a1.pdf",
+          "document_hash": "sha256:4857168c7bda54d12ed8eeffeeda0fa62e7bbfd191cbc6e29db4783eac0655a2",
           "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-02"
+          "note": "EBE publié 525676 KMAD, distinct de l’EBITDA provisoire 541067. Recoupé au CPC : CA - achats - externes - personnel - impôts/taxes = 525676025.20 MAD, arrondi au KMAD.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         },
         "nombre_actions_au_rapport": {
           "valeur": 50294528,
           "page": 42,
           "unite": "actions",
-          "note": "« il sera attribué un dividende de 2 dirhams à chacune des 50 294 528 actions formant le capital social » (p.42) ; capital 502 945 280 DH (p.58) ÷ nominal 10 = 50 294 528. ⚠️ R11 : le référentiel de l'opérateur (16/09/2026) implique 54 140 578 (3 519 137 570 ÷ 65) ; l'écart, 3 846 050 actions, est exactement l'augmentation de capital réalisée le 02/09/2026 (CP AMMC du 04/09/2026 « Résultat de l'augmentation de capital » : 3 846 050 actions attribuées à 65 DH, nominal 10 ; 50 294 528 + 3 846 050 = 54 140 578). Le résultat 2025 se rapporte à 50 294 528 actions, pas 54 140 578."
+          "note": "« il sera attribué un dividende de 2 dirhams à chacune des 50 294 528 actions formant le capital social » (p.42) ; capital 502 945 280 DH (p.58) ÷ nominal 10 = 50 294 528. ⚠️ R11 : le référentiel de l'opérateur (16/09/2026) implique 54 140 578 (3 519 137 570 ÷ 65) ; l'écart, 3 846 050 actions, est exactement l'augmentation de capital réalisée le 02/09/2026 (CP AMMC du 04/09/2026 « Résultat de l'augmentation de capital » : 3 846 050 actions attribuées à 65 DH, nominal 10 ; 50 294 528 + 3 846 050 = 54 140 578). Le résultat 2025 se rapporte à 50 294 528 actions, pas 54 140 578.",
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf"
         },
         "nombre_actions_existant": {
           "valeur": 54140578,
@@ -8169,24 +8175,67 @@
           "page": 1,
           "citation": "3 846 050 actions nouvelles d'une valeur nominale de 10 dirhams par action",
           "note": "50 294 528 actions au rapport 2025 (p.42) + 3 846 050 actions nouvelles de l'augmentation de capital de septembre 2026 (avis d'émission AMMC) = 54 140 578 ; égal au nombre implicite de la capitalisation de l'opérateur. Sert à la capitalisation au cours du jour ; les ratios par action 2025 restent sur 50 294 528 (relevé le 02/10/2026)"
+        },
+        "chiffre_affaires": {
+          "valeur": 5911.76959127,
+          "page": 6,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+          "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
+          "base": "consolidé IFRS, 31/12/2025",
+          "note": "CA consolidé 5911769591.27 MAD, distinct des autres produits.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
+        },
+        "chiffre_affaires_2024": {
+          "valeur": 5022.14114061,
+          "page": 6,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+          "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
+          "base": "consolidé IFRS, 31/12/2025",
+          "note": "Comparatif même CPC et périmètre consolidé.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
+        },
+        "nombre_actions_annuel_verifie": {
+          "valeur": 50294528,
+          "page": 5,
+          "unite": "actions",
+          "devise": "MAD",
+          "url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+          "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
+          "base": "consolidé IFRS, 31/12/2025",
+          "note": "Capital de clôture 502945280 MAD / nominal 10 ; CP septembre 2026 +3846050 => 54140578 titres actuels.",
+          "validation_status": "historical_closing_shares_visually_checked",
+          "period_end": "2025-12-31"
         }
       },
-      "pages_document": 64,
+      "pages_document": 36,
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "pipeline/faits_financiers.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "issuer_pdf",
+        "source_url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
+        "document_hash": "sha256:8eb890bbc68015f0629b94c6bf23bbee95e308b7dd2916dbdd6ec2e4bb1dc1ca",
+        "reviewed_at": "2026-10-05",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
+        "corroborating_documents": [
+          {
+            "source_url": "https://www.autohall.ma/uploads/investisseurs/fichiers/d3b0c03d293c6f9e64acc788a5343f55d799a9a1.pdf",
+            "document_hash": "sha256:4857168c7bda54d12ed8eeffeeda0fa62e7bbfd191cbc6e29db4783eac0655a2",
+            "pages": "PDF p.200, 226-227, 236"
+          },
+          {
+            "source_url": "https://www.autohall.ma/uploads/investisseurs/fichiers/89f147c64fb3e8e4739930c633beb6d69167dfe2.pdf",
+            "document_hash": "sha256:975b364d767856bce72467d91351178d812e739287e3e286828b5bde76acc62a",
+            "pages": "PDF p.1"
+          }
+        ]
       },
       "accounting_basis": "consolidé IFRS, 31/12/2025",
       "reservations": [
-        "DEUX PRÉSENTATIONS QUI SE CONTREDISENT dans le même rapport : le tableau « RÉSULTATS CONSOLIDÉS PROVISOIRES » du rapport de gestion (p.42 : résultat opérationnel 273 212, résultat net 104 436) et les états consolidés (p.58 : 301 944 et 99 832). Les états comptables sont retenus ; le tableau provisoire n'est cité que pour l'EBITDA, qui se reconstruit depuis les états.",
-        "Texte p.6 « Fonds propres 1 429 MMAD » contre bilan 1 445,976 MMAD : coquille, le bilan prime.",
-        "Le dépôt consolidé n'a PAS de notes : la composition des « autres passifs non courants » (1 399,1 MMAD) n'est pas détaillée ; elle est traitée en dette parce que la société l'inclut dans son « Endettement ». Si elle contenait des éléments non financiers, la dette nette serait surévaluée.",
-        "Conversion en trésorerie : le flux d'exploitation (442,6) est avant coût de l'endettement (159,9 réintégré) ; 442,6 ÷ 99,8 = 443 % est arithmétiquement exacte mais gonflée par ce choix de présentation et par la base minuscule du résultat.",
-        "Taux d'impôt effectif 48,4 % (93,6 ÷ 193,5) : impôt différé et exigible sans rapprochement dans le dépôt.",
-        "R11 : nombre d'actions du référentiel (54 140 578) ≠ rapport (50 294 528) à cause de l'augmentation de capital du 02/09/2026 ; BPA 2025 à calculer sur 50 294 528."
+        "RNPG comptable 99,83237679 MMAD confirmé par les comptes consolidés complets ; bénéfice social/provisoire 104,436 non utilisé.",
+        "EBE 525,676 MMAD, distinct de l’EBITDA 541,067. Dette financière 3504,407 et trésorerie 397,799 MMAD, arrondies au KMAD dans le document de référence ; obligations de personnel exclues. Dette nette 3106,608 MMAD.",
+        "BPA historique indicatif sur 50 294 528 titres 2025 ; capital augmenté en septembre 2026 à 54 140 578. PER, P/B et rendement au cours actuel indisponibles sans ajustement comparable."
       ],
       "latest_report": {
         "period_end": "2026-06-30",
@@ -8201,6 +8250,231 @@
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
         "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+      },
+      "reconciliation_prior_annual": {
+        "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf",
+        "faits": {
+          "total_actif": {
+            "valeur": 6484.075069,
+            "valeur_au_rapport": 6484075069.34,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« TOTAL ACTIF 6 484 075 069,34 6 313 507 887,33 ». en-tête « ACTIF (En dirhams) 31 décembre 2025 31 décembre 2024 » (p.58 = page imprimée 115) ; texte p.6 : « 6 484 MMAD Total bilan ». Pages = rang dans le fichier PDF ; états consolidés en DIRHAMS (« En dirhams »), tableau des flux et tableau de synthèse en KILO-dirhams.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "total_passif": {
+            "valeur": 6484.075069,
+            "valeur_au_rapport": 6484075069.34,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« TOTAL PASSIF 6 484 075 069,34 6 313 507 887,33 ». colonne 31 décembre 2025.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "capitaux_propres_part_groupe": {
+            "valeur": 1445.975818,
+            "valeur_au_rapport": 1445975818.36,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Capitaux propres part groupe 1 445 975 818 ». (centimes « ,36 » omis de la citation, trop longue pour le contrôle automatique) capital 502 945 280 + prime 251 021 566,80 + réserves consolidées 592 176 594,77 + résultat 99 832 376,79 = 1 445 975 818,36. ⚠️ Le texte p.6 annonce « Fonds propres 1 429 MMAD -1,2 % vs. 2024 », qui ne se recolle ni au bilan (1 445,976, soit −0,9 %) ni au tableau de variation p.59 : coquille de présentation, l'état comptable prime.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "interets_minoritaires": {
+            "valeur": 0,
+            "valeur_au_rapport": 0,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Intérêts minoritaires Capitaux propres 1 445 975 818,36 1 458 514 079,09 ». la ligne « Intérêts minoritaires » est vide : « Capitaux propres » = « Capitaux propres part groupe » ; tableau de variation p.59 : colonne « intérêt minoritaire » vide.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "capitaux_propres_consolides": {
+            "valeur": 1445.975818,
+            "valeur_au_rapport": 1445975818.36,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Capitaux propres 1 445 975 818,36 1 458 514 079,09 ». ensemble consolidé = part du groupe (aucun minoritaire).",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "dettes_financieres": {
+            "valeur": 3520.227584,
+            "valeur_au_rapport": 3520227584.09,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "composantes": [
+              {
+                "page": 58,
+                "citation": "Autres passifs non courants 1 399 132 266,83 1 232 996 841,81",
+                "valeur_au_rapport": 1399132266.83
+              },
+              {
+                "page": 58,
+                "citation": "Autres passifs financiers à court terme 2 121 095 317,26 2 271 593 275,70",
+                "valeur_au_rapport": 2121095317.26
+              }
+            ],
+            "note": ". « Autres passifs non courants » 1 399 132 266,83 + « Autres passifs financiers à court terme » 2 121 095 317,26 = 3 520 227 584,09 MAD. ⚠️ Le dépôt ne contient AUCUNE note : la composition de ces deux agrégats n'est pas détaillée. Retenus parce que la société définit son « Endettement » (p.42, 3 122 429 KMAD en 2025 ; 2 927 090 en 2024) exactement comme leur somme moins la trésorerie : 3 520 227 584 − 397 798 873 = 3 122 428 711 (2025) et 1 232 996 842 + 2 271 593 276 − 577 499 912 = 2 927 090 206 (2024). Le tableau des flux (p.59) place les « autres passifs financiers à court terme » dans la trésorerie : trésorerie de clôture −1 723 296 = 397 799 − 2 121 095.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "tresorerie_actif": {
+            "valeur": 397.798873,
+            "valeur_au_rapport": 397798873.12,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Trésorerie et équivalents de trésorerie 397 798 873,12 577 499 912,02 ». pas de titres de placement séparés ; « Autres instruments financiers » (884,9 MMAD, actif non courant) non comptés. Dette nette = 3 520,228 − 397,799 = 3 122,429 MMAD = « Endettement » publié p.42.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "endettement_net": {
+            "valeur": 3122.429,
+            "valeur_au_rapport": 3122429,
+            "unite_au_rapport": "KMAD",
+            "colonne_exercice_clos": 1,
+            "page": 42,
+            "note": "« Endettement 2 927 090 3 122 429 7% ». endettement de la société (tableau « Les éléments du bilan de l'année 2025 », en kdhs, colonnes 2024 puis 2025 — ordre INVERSE du bilan) ; recoupé au bilan à 1 KMAD près. Non utilisé pour le calcul (celui-ci repart des lignes du bilan).",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "resultat_exploitation": {
+            "valeur": 301.944179,
+            "valeur_au_rapport": 301944178.52,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« RÉSULTAT OPÉRATIONNEL 301 944 178,52 210 024 147,33 ». ⚠️ Le tableau « RÉSULTATS CONSOLIDÉS PROVISOIRES » du rapport de gestion (p.42) donne « Résultat Opérationnel 140 723 273 212 94% », qui ne se recolle pas aux états (301 944 / 210 024) : consigné, l'état comptable prime.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "resultat_financier": {
+            "valeur": -108.46947,
+            "valeur_au_rapport": -108469469.64,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« RÉSULTAT FINANCIER -108 469 469,64 -129 248 454,44 ». 301 944 178,52 − 108 469 469,64 = 193 474 708,88.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "resultat_avant_impot": {
+            "valeur": 193.474709,
+            "valeur_au_rapport": 193474708.88,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« RÉSULTAT CONSOLIDÉ AVANT IMPÔT 193 474 708,88 80 775 692,89 ». p.42 : « Résultat avant impôt 80 776 193 475 » : concorde.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "impot_resultat": {
+            "valeur": 93.642332,
+            "valeur_au_rapport": 93642332.09,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Charges d'impôt 93 642 332,09 63 683 655,61 ». impôt exigible 86 023 698,13 + impôt différé 7 618 633,96 ; taux effectif 48,4 %.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "resultat_net_consolide": {
+            "valeur": 99.832377,
+            "valeur_au_rapport": 99832376.79,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« RÉSULTAT NET CONSOLIDÉ 99 832 376,79 17 092 037,28 ». 193 474 708,88 − 93 642 332,09 ; tableau des flux p.59 : « Résultat net consolidé 99 832 » KMAD. ⚠️ Le tableau PROVISOIRE p.42 donne « Résultat net 17 092 104 436 511% » : 104 436 est le bénéfice SOCIAL (« Bénéfice net de l'exercice Dhs 104 436 346,20 », même page), pas le consolidé ; consigné.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "resultat_net_part_groupe": {
+            "valeur": 99.832377,
+            "valeur_au_rapport": 99832376.79,
+            "unite_au_rapport": "MAD",
+            "colonne_exercice_clos": 1,
+            "page": 58,
+            "note": "« Résultats consolidés de l'exercice 99 832 376,79 17 092 037,28 ». aucun minoritaire : part du groupe = résultat de l'ensemble ; tableau de variation p.59 « Résultat net de l'exercice 99 832 99 832 99 832 ».",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "flux_tresorerie_exploitation": {
+            "valeur": 442.585,
+            "valeur_au_rapport": 442585,
+            "unite_au_rapport": "KMAD",
+            "colonne_exercice_clos": 1,
+            "page": 59,
+            "note": "« Flux de trésorerie d'exploitation 442 585 805 812 ». « TABLEAU DE FLUX DE TRÉSORERIE (En milliers de dirhams) 31 décembre 2025 31 décembre 2024 ». Recoupé par addition : 99 832 + 220 338 + 7 619 − 103 210 + 71 047 − 28 834 + 15 901 + 159 892 = 442 585 (2024 : 805 812 idem). ⚠️ Le flux est AVANT frais financiers (« Coût de l'endettement 159 892 » est réintégré et ressort en financement) : il surestime la conversion par rapport à une définition après intérêts.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "dotations_amortissements_exploitation": {
+            "valeur": 220.338,
+            "valeur_au_rapport": 220338,
+            "unite_au_rapport": "KMAD",
+            "colonne_exercice_clos": 1,
+            "page": 59,
+            "note": "« Dotations aux amortissements 220 338 236 450 ». dotations aux AMORTISSEMENTS seuls, issues du tableau des flux (le CPC p.58 donne « Dotations d'exploitations 270 256 405,39 » et « Reprises d'exploitations 31 133 946,46 » qui mêlent provisions). Non utilisée tant qu'un EBITDA est publié : REX 301,944 + 220,338 = 522,282.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "excedent_brut_exploitation": {
+            "valeur": 541.067,
+            "valeur_au_rapport": 541067,
+            "unite_au_rapport": "KMAD",
+            "colonne_exercice_clos": 2,
+            "page": 42,
+            "note": "« EBITDA 440 860 541 067 23% ». tableau « En Kdhs 2024 2025 Var 25/24 » : l'exercice 2025 est en SECONDE colonne (colonne_exercice_clos = 2). Se reconstruit à 1 KMAD près avec les états : REX 301 944 + dotations d'exploitation 270 256 − reprises 31 134 = 541 066 ; (2024 : 210 024 + 246 536 − 15 701 = 440 859). ⚠️ Mais le tableau où il figure est intitulé « RÉSULTATS CONSOLIDÉS PROVISOIRES » et ses lignes « Résultat Opérationnel » et « Résultat net » ne se recollent pas aux états : retenu parce que publié ET reconstruit depuis les états, réserve consignée. Alternative strictement amortissements : 301,944 + 220,338 = 522,282.",
+            "base": "consolidé IFRS, 31/12/2025",
+            "releve_le": "2026-10-02"
+          },
+          "nombre_actions_au_rapport": {
+            "valeur": 50294528,
+            "page": 42,
+            "unite": "actions",
+            "note": "« il sera attribué un dividende de 2 dirhams à chacune des 50 294 528 actions formant le capital social » (p.42) ; capital 502 945 280 DH (p.58) ÷ nominal 10 = 50 294 528. ⚠️ R11 : le référentiel de l'opérateur (16/09/2026) implique 54 140 578 (3 519 137 570 ÷ 65) ; l'écart, 3 846 050 actions, est exactement l'augmentation de capital réalisée le 02/09/2026 (CP AMMC du 04/09/2026 « Résultat de l'augmentation de capital » : 3 846 050 actions attribuées à 65 DH, nominal 10 ; 50 294 528 + 3 846 050 = 54 140 578). Le résultat 2025 se rapporte à 50 294 528 actions, pas 54 140 578."
+          },
+          "nombre_actions_existant": {
+            "valeur": 54140578,
+            "unite": "actions",
+            "date": "2026-09",
+            "url": "https://www.ammc.ma/sites/default/files/CP_AutoHall_Avis_emission_actions.pdf",
+            "page": 1,
+            "citation": "3 846 050 actions nouvelles d'une valeur nominale de 10 dirhams par action",
+            "note": "50 294 528 actions au rapport 2025 (p.42) + 3 846 050 actions nouvelles de l'augmentation de capital de septembre 2026 (avis d'émission AMMC) = 54 140 578 ; égal au nombre implicite de la capitalisation de l'opérateur. Sert à la capitalisation au cours du jour ; les ratios par action 2025 restent sur 50 294 528 (relevé le 02/10/2026)"
+          }
+        },
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "pipeline/faits_financiers.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        },
+        "reservations": [
+          "DEUX PRÉSENTATIONS QUI SE CONTREDISENT dans le même rapport : le tableau « RÉSULTATS CONSOLIDÉS PROVISOIRES » du rapport de gestion (p.42 : résultat opérationnel 273 212, résultat net 104 436) et les états consolidés (p.58 : 301 944 et 99 832). Les états comptables sont retenus ; le tableau provisoire n'est cité que pour l'EBITDA, qui se reconstruit depuis les états.",
+          "Texte p.6 « Fonds propres 1 429 MMAD » contre bilan 1 445,976 MMAD : coquille, le bilan prime.",
+          "Le dépôt consolidé n'a PAS de notes : la composition des « autres passifs non courants » (1 399,1 MMAD) n'est pas détaillée ; elle est traitée en dette parce que la société l'inclut dans son « Endettement ». Si elle contenait des éléments non financiers, la dette nette serait surévaluée.",
+          "Conversion en trésorerie : le flux d'exploitation (442,6) est avant coût de l'endettement (159,9 réintégré) ; 442,6 ÷ 99,8 = 443 % est arithmétiquement exacte mais gonflée par ce choix de présentation et par la base minuscule du résultat.",
+          "Taux d'impôt effectif 48,4 % (93,6 ÷ 193,5) : impôt différé et exigible sans rapprochement dans le dépôt.",
+          "R11 : nombre d'actions du référentiel (54 140 578) ≠ rapport (50 294 528) à cause de l'augmentation de capital du 02/09/2026 ; BPA 2025 à calculer sur 50 294 528."
+        ]
+      },
+      "exercice_clos": "2025-12-31",
+      "devise": "MAD",
+      "capital_change_unresolved": true,
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "Résultat annuel confirmé ; EBE et dette nette rectifiés : 525,676 et 3 106,608 MMAD. BPA historique conservé, PER/P/B actuels bloqués.",
+        "method": "Comptes complets p.2, 5-7 ; document de référence p.200 et 236. Dette nette / EBE = 5,91, cohérent avec le 5,9 publié. Capital 2025 séparé de l’émission de septembre 2026. Ancien relevé archivé pour audit."
       }
     },
     "SBS": {
@@ -9095,7 +9369,9 @@
         "validation_status": "referenced_import_not_independent_audit"
       },
       "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-      "reservations": [],
+      "reservations": [
+        "La trésorerie annuelle importée inclut 144,0852 MMAD de valeurs mobilières de placement ; dette nette stricte suspendue tant que leur classification et les fonds de tiers ne sont pas rapprochés."
+      ],
       "semester_activity_label": "CA",
       "latest_report": {
         "period_end": "2026-06-30",
@@ -9107,7 +9383,7 @@
         "revenue_millions": 82.914072,
         "revenue_previous_millions": 60.739514,
         "currency": "MAD",
-        "note": "Résultat net consolidé total de la synthèse, pas un RNPG validé. Le BPA comparatif publié -0,70 MAD ne concorde pas avec un quotient du total positif 32 371 MAD ; part groupe et dénominateurs non rapprochés, aucun ratio par action dérivé.",
+        "note": "Synthèse p.1 : total consolidé, pas un RNPG isolé. Un BPA groupe négatif peut coexister avec un total positif si les minoritaires diffèrent : aucune contradiction prouvée. Aucun RNPG exact reconstruit à partir du BPA arrondi, aucun ratio semestriel dérivé.",
         "validation_status": "pdf_page_visually_checked_2026-10-04",
         "provenance": {
           "source_type": "regulator_pdf",
@@ -9115,7 +9391,15 @@
           "document_hash": "sha256:f0d8aac22e85e906c99eba64a681f717b528c2f61b0c46b1290b74712058328a",
           "reviewed_at": "2026-10-04",
           "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
-        }
+        },
+        "reported_net_label": "Résultat net consolidé total (minoritaires compris)",
+        "reported_total_net_millions": 8.780283
+      },
+      "strict_cash_unresolved": true,
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "Présentation semestrielle corrigée : 8,780283 MMAD est le total consolidé, pas la part du groupe. RNPG S1 2026 non vérifié.",
+        "method": "Communiqué AMMC p.1 : total 8,780283 ; comparatif total 0,032371 ; BPA publié 10,64 et -0,70. Ces chiffres de périmètres différents ne prouvent pas une contradiction. Rapport complet requis pour isoler le RNPG ; ratios annuels non remplacés par le semestre."
       }
     },
     "S2M": {
@@ -12784,24 +13068,63 @@
           "note": "Nombre publié au 31/12/2025, nominal 10 MAD ; identique dans la note 25 p.78. Conservé sans calcul tant que les opérations de capital ne sont pas rapprochées.",
           "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
           "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 790.776,
+          "page": 65,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+          "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "KMAD : 245531 + 385425 - 82476 + 242296 = 790776 ; recoupé p.68 : 781393 - (-8370 - 1013) = 790776. Sous-total groupe 790351 p.68 non utilisé.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
+        },
+        "nombre_actions_au_rapport": {
+          "valeur": 24553090,
+          "page": 76,
+          "unite": "actions",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+          "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Clôture 2025 : capital 245530900 MAD / nominal 10 MAD ; recoupé note BPA p.78 et prospectus IPO p.39 après subdivision.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
+        },
+        "nombre_actions_existant": {
+          "valeur": 24553090,
+          "page": 76,
+          "unite": "actions",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+          "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Clôture 2025 : capital 245530900 MAD / nominal 10 MAD ; recoupé note BPA p.78 et prospectus IPO p.39 après subdivision.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         }
       },
       "financial_business": true,
       "reservations": [
-        "Résultat net part du groupe 242,296 MMAD, distinct du total consolidé 241,283 MMAD (minoritaires négatifs).",
-        "Fonds propres groupe à rapprocher : total publié p.68 de 790,351 MMAD contre somme des lignes part groupe du bilan p.65 de 790,776 MMAD (écart 0,425 MMAD). P/B et ROE restent indisponibles.",
-        "La note 16 p.76 publie 24 553 090 actions de clôture et un passage du nominal de 100 à 10 MAD. Les lignes intermédiaires attribuent 22 297 781 actions à l’IPO de 20 000 KMAD et 1 712 809 actions à 171 281 KMAD : rapprochement des subdivisions/augmentations requis ; aucune moyenne pondérée n’est vérifiée.",
-        "BPA/PER retenus indisponibles malgré le BPA publié 9,87 MAD p.78. Le nombre de clôture et le résultat sont conservés pour audit sans débloquer un ratio ambigu.",
-        "PNB distinct du CA ; aucun ratio de dette industrielle. Semestre 2026 conservé sans annualisation."
+        "RNPG 242,296 MMAD, distinct du total 241,283 MMAD. Fonds propres groupe retenus 790,776 MMAD, rapprochés bilan et total moins minoritaires ; sous-total p.68 de 790,351 conservé pour audit, non utilisé.",
+        "24 553 090 titres de clôture recoupés au capital, à la note BPA et au prospectus IPO p.39. Les lignes intermédiaires de la note 16 ne sont pas utilisées ; aucune moyenne pondérée auditée n’est déduite.",
+        "BPA/PER indicatifs sur les titres de clôture, pas BPA pondéré IAS 33. Comparatif 2024 non ajusté à la subdivision : aucune croissance de BPA calculée.",
+        "PNB distinct du CA ; aucun ratio de dette industrielle. Semestre conservé sans annualisation."
       ],
       "provenance": {
         "source_type": "regulator_pdf",
         "source_url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
         "document_hash": "sha256:e4a200dc1e2048a14280f411adeff0163090e697d7f743562e50a397ead4f090",
-        "reviewed_at": "2026-10-04",
-        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
+        "reviewed_at": "2026-10-05",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified",
+        "corroborating_documents": [
+          {
+            "source_url": "https://www.ammc.ma/sites/default/files/NO_CASHPLUS_036_2025.pdf",
+            "document_hash": "sha256:0f85a59b615b94b857d155145a24901f51f35e9befa525c9737983695aa36103",
+            "pages": "PDF p.39"
+          }
+        ]
       },
-      "capital_change_unresolved": true,
+      "capital_change_unresolved": false,
       "semester_activity_label": "PNB",
       "latest_report": {
         "period_end": "2026-06-30",
@@ -12823,6 +13146,11 @@
           "imported_at": "2026-10-04",
           "validation_status": "referenced_import_not_independent_audit"
         }
+      },
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "Fonds propres groupe rapprochés : 790,776 MMAD ; capital de clôture recoupé : 24 553 090 actions.",
+        "method": "Bilan p.65 et total consolidé moins minoritaires p.68 donnent la même valeur. Note 16 p.76, note 25 p.78 et prospectus IPO p.39 recoupent les titres de clôture. BPA indicatif uniquement."
       }
     },
     "ATW": {
@@ -13013,21 +13341,33 @@
           "note": "Capital après opération constatée le 23/07/2026 : 10 881 214 + 745 285 = 11 626 499 ; capital publié 1 162 649 900 MAD / nominal 100 MAD. Ne remplace pas les titres 2025 sans ajustement comparatif explicite.",
           "document_hash": "sha256:347e452f5d148ced071a0941f720e8d68c01d549b4bff0df81cb45c43c57bd5f",
           "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "nombre_actions_annuel_verifie": {
+          "valeur": 10881214,
+          "page": 24,
+          "unite": "actions",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+          "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+          "base": "Consolidé IFRS, part du groupe, 31/12/2025",
+          "note": "Capital annuel 1088121400 MAD / nominal 100 ; somme de la répartition 10881214. Quotient RNPG annuel 863551000 / 10881214 = 79,36 MAD, cohérent CPC p.13.",
+          "validation_status": "historical_closing_shares_visually_checked",
+          "period_end": "2025-12-31"
         }
       },
       "financial_business": true,
       "capital_change_unresolved": true,
       "semester_activity_label": "PNB",
       "reservations": [
-        "Le résumé affiche un RNPG par action de 79,44 DH, contre 79,36 au CPC. Le quotient des entrées annuelles exactes donne 79,36 ; ce rapprochement historique ne valide pas le nombre actuel de titres.",
-        "Le communiqué du 28/07/2026 confirme l’émission de 745 285 actions : 10 881 214 + 745 285 = 11 626 499 titres, cohérents avec le nouveau capital 1 162 649 900 MAD / nominal 100 MAD. Le nombre actuel est recoupé ; les ajustements comparatifs par action et la comparabilité au cours actuel restent à valider. BPA/PER/P/B indisponibles.",
-        "Le semestre 2026 importé reste conservé avec sa provenance et son statut de référence non auditée indépendamment. PNB distinct du CA ; aucune annualisation du semestre."
+        "BPA historique 2025 de 79,36 MAD, recoupé au CPC p.13 ; résumé de 79,44 non retenu.",
+        "Capital porté à 11 626 499 titres en juillet 2026 : 10 881 214 + 745 285. PER, P/B et rendement au cours actuel non comparables sans ajustement documenté ; restent indisponibles.",
+        "PNB distinct du CA. Semestre conservé sans annualisation."
       ],
       "provenance": {
         "source_type": "regulator_pdf",
         "source_url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
         "document_hash": "sha256:11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
-        "reviewed_at": "2026-10-04",
+        "reviewed_at": "2026-10-05",
         "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
@@ -13050,6 +13390,11 @@
           "imported_at": "2026-10-04",
           "validation_status": "referenced_import_not_independent_audit"
         }
+      },
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "BPA historique 2025 rétabli à 79,36 MAD ; PER et P/B au cours actuel restent indisponibles.",
+        "method": "CPC p.13 et capital annuel p.24 : 863551000 / 10881214. Communiqué du 28/07/2026 : +745285 titres, nouveau capital 1162649900 MAD / 100. Aucun mélange avec les comptes 2025."
       }
     },
     "EQD": {
@@ -13116,19 +13461,30 @@
           "note": "Valeur publiée dans le tableau de variation p. imprimée 124-125 ; conservée pour audit seulement, non utilisée dans les ratios.",
           "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
           "validation_status": "pdf_page_visually_checked_2026-10-04"
+        },
+        "capitaux_propres_part_groupe": {
+          "valeur": 1485.722,
+          "page": 63,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+          "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+          "base": "Consolidé, comptes des établissements de crédit, part du groupe, 31/12/2025",
+          "note": "Tableau de variation : groupe 1485722 + minoritaires 717 = total 1486439 KMAD. Bilan : total des composantes 1486440, moins minoritaires 18+699 = 1485723, écart résiduel 1 KMAD compatible avec les arrondis. La ligne réserves groupe du bilan répète le total 1136829 malgré minoritaires 18 ; ne pas additionner comme groupe.",
+          "validation_status": "selected_pages_reconciled_with_reservations_2026-10-05"
         }
       },
       "financial_business": true,
       "reservations": [
-        "Capitaux propres groupe non utilisés : tableau de variation p.63 (1 485,722 MMAD) et somme des lignes du bilan p.58 (1 485,740 MMAD) diffèrent de 0,018 MMAD. Rapprochement requis ; P/B et ROE indisponibles.",
-        "PNB distinct du chiffre d’affaires ; dette nette / EBE industriel non pertinent ici.",
-        "BPA calculé sur les titres de clôture publiés, non sur une moyenne pondérée auditée."
+        "Fonds propres groupe retenus 1 485,722 MMAD, tableau de variation p.63. Le bilan p.58 répète le total des réserves en part groupe malgré 18 KMAD minoritaires ; total moins minoritaires recoupe à 1 KMAD près. Réserve d’arrondi conservée, pas rectification du PDF par Nour.",
+        "PNB distinct du CA ; dette nette / EBE industriel non pertinente.",
+        "BPA indicatif sur titres de clôture, pas moyenne pondérée auditée."
       ],
       "provenance": {
         "source_type": "regulator_pdf",
         "source_url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
         "document_hash": "sha256:a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
-        "reviewed_at": "2026-10-04",
+        "reviewed_at": "2026-10-05",
         "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
@@ -13151,6 +13507,11 @@
           "imported_at": "2026-10-04",
           "validation_status": "referenced_import_not_independent_audit"
         }
+      },
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "Fonds propres groupe rapprochés : 1 485,722 MMAD ; écart résiduel de 0,001 MMAD sur le contrôle total moins minoritaires.",
+        "method": "Tableau p.63 : 1485722 + 717 = 1486439 KMAD. Bilan p.58 : 1486440 - (18 + 699) = 1485723 KMAD. L’écart initial de 18 KMAD correspond aux réserves minoritaires affichées ; valeur publiée du tableau retenue avec réserve d’arrondi."
       }
     },
     "SLM": {
@@ -13424,7 +13785,7 @@
         "source_type": "regulator_pdf",
         "source_url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
         "document_hash": "sha256:b42dcbe782557763fa221dc7e0a1d8b27d89389694609a8d384e04bfb56f5d5b",
-        "reviewed_at": "2026-10-04",
+        "reviewed_at": "2026-10-05",
         "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
       "latest_report": {
@@ -13447,6 +13808,11 @@
           "imported_at": "2026-10-04",
           "validation_status": "referenced_import_not_independent_audit"
         }
+      },
+      "financial_review": {
+        "reviewed_at": "2026-10-05",
+        "conclusion": "Fonds propres sociaux confirmés : 1 228,220 MMAD ; le graphique à 1 155 MMAD n’est pas utilisé.",
+        "method": "Bilan p.44 : 415158 + 138418 + 526445 + 148199 = 1228220 KMAD. Variation p.57 : 1153383 + 148199 - 73362 = 1228220 KMAD. Aucun changement des montants annuels déjà corrects."
       }
     },
     "MDP": {

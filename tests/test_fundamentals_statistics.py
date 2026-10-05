@@ -90,7 +90,7 @@ class NewContracts(unittest.TestCase):
         self.assertEqual(sum(bool(r.get('url')) for r in f.values()),77)
         self.assertEqual(sum(bool(r.get('latest_report')) for r in f.values()),76)
         self.assertTrue(all(r['provenance'].get('repository')=='abdmoutalib207-lang/-bvc-analyzer'
-                            or r['provenance'].get('source_type')=='regulator_pdf' for r in f.values()))
+                            or r['provenance'].get('source_type') in ('regulator_pdf','issuer_pdf') for r in f.values()))
         self.assertIsNone(calculate({'price':48.65},f['ENK'])['eps_mad'])
         self.assertIsNone(calculate({'price':220},f['T2S'])['pe'])
         self.assertEqual(calculate({'price':6591},f['SMI'])['eps_mad'],241.39)
@@ -110,7 +110,7 @@ class NewContracts(unittest.TestCase):
         self.assertIsNone(slm['net_debt_ebitda'])
         eqd=calculate({'price':1000},f['EQD'])
         self.assertEqual(eqd['eps_mad'],59.01)
-        self.assertIsNone(eqd['pb']);self.assertIsNone(eqd['roe_pct'])
+        self.assertEqual(eqd['pb'],1.12);self.assertEqual(eqd['roe_pct'],6.63)
         self.assertEqual(eqd['pnb_growth_pct'],9.41)
         self.assertEqual(eqd['evidence']['resultat_net_part_groupe']['page'],59)
         self.assertTrue(all(x['latest_report']['provenance']['repository']=='abdmoutalib207-lang/-bvc-analyzer'

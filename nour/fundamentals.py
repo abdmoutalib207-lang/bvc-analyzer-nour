@@ -1,5 +1,6 @@
 """Attributed annual facts: currency, denominator and period are explicit contracts."""
 import math
+import re
 from urllib.parse import urlparse
 
 
@@ -9,7 +10,7 @@ def calculate(record, facts):
                revenue_growth_pct=None, roe_pct=None, dividend_yield_pct=None,
                earnings_mmad=None, warnings=[], accounting_basis=None,
                currency=None, net_debt_strict_mmad=None, net_debt_ebitda=None,
-               calculation_version='nour-fundamentals-v2', point_in_time_ready=False,
+               calculation_version='nour-fundamentals-v3', point_in_time_ready=False,
                roe_method='Résultat annuel / capitaux propres de clôture, non moyens',
                pnb_mmad=None, pnb_growth_pct=None,
                validation_status='missing', provenance={}, latest_report=None)
@@ -25,7 +26,8 @@ def calculate(record, facts):
                validation_status='referenced_import', latest_report=facts.get('latest_report'),
                period_end=facts.get('exercice_clos') or f"{facts.get('exercice')}-12-31")
     out['warnings'].extend(facts.get('reservations') or [])
-    if facts.get('provenance', {}).get('source_type') == 'regulator_pdf':
+    out['financial_review'] = facts.get('financial_review')
+    if facts.get('provenance', {}).get('source_type') in ('regulator_pdf', 'issuer_pdf'):
         out['source'] = 'Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour'
         out['validation_status'] = facts['provenance'].get('validation_status')
     data = facts.get('faits') or {}
@@ -67,6 +69,20 @@ def calculate(record, facts):
     if facts.get('capital_change_unresolved'):
         eps_shares = book_shares = None
         out['warnings'].append('Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles.')
+        historical = data.get('nombre_actions_annuel_verifie') or {}
+        period = facts.get('exercice_clos') or f"{facts.get('exercice')}-12-31"
+        if (historical.get('period_end') == period
+                and historical.get('unite') == 'actions'
+                and historical.get('validation_status') == 'historical_closing_shares_visually_checked'
+                and urlparse(str(historical.get('url', ''))).scheme == 'https'
+                and re.fullmatch(r'sha256:[0-9a-f]{64}', str(historical.get('document_hash', '')))):
+            annual_shares = fact('nombre_actions_annuel_verifie')
+            if annual_shares is not None and annual_shares > 0 and annual_shares.is_integer():
+                eps_shares = book_shares = annual_shares
+                out['eps_denominator'] = 'titres de clôture annuels vérifiés ; BPA historique indicatif, pas ajusté au capital actuel'
+                out['book_denominator'] = 'titres de clôture annuels vérifiés ; valeur comptable historique'
+                out['historical_per_share_only'] = True
+                out['warnings'][-1] = 'Capital augmenté après la clôture : BPA historique disponible ; PER, P/B et rendement au cours actuel indisponibles sans rapprochement comparable.'
     revenue = fact('chiffre_affaires')
     previous = fact(f"chiffre_affaires_{(facts.get('exercice') or 0)-1}")
     dividend = fact('dividende_par_action')
@@ -81,6 +97,8 @@ def calculate(record, facts):
                roe_pct=rnd(net/equity*100) if net is not None and equity and equity>0 else None,
                revenue_growth_pct=rnd((revenue/previous-1)*100) if revenue is not None and previous and previous>0 else None,
                dividend_yield_pct=rnd(dividend/price*100) if dividend is not None and price else None)
+    if facts.get('capital_change_unresolved'):
+        out['pe'] = out['pb'] = out['dividend_yield_pct'] = None
     pnb, pnb_previous = fact('produit_net_bancaire'), fact(f"produit_net_bancaire_{(facts.get('exercice') or 0)-1}")
     out['pnb_mmad'] = rnd(pnb)
     out['pnb_growth_pct'] = rnd((pnb/pnb_previous-1)*100) if pnb is not None and pnb_previous and pnb_previous>0 else None
@@ -93,6 +111,9 @@ def calculate(record, facts):
     out['net_debt_strict_mmad'] = rnd(strict)
     out['net_debt_ebitda'] = rnd(strict/ebitda) if strict is not None and ebitda and ebitda>0 else None
     out['net_debt_method'] = 'Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.'
+    if facts.get('strict_cash_unresolved'):
+        out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
+        out['net_debt_method'] = 'Trésorerie incluant des placements ou fonds de tiers non rapprochés : dette nette stricte indisponible.'
     if facts.get('financial_business'):
         out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
         out['net_debt_method'] = 'Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.'
