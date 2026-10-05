@@ -1,8 +1,569 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-04T16:02:45.103293+00:00",
+  "updated_at": "2026-10-05T18:41:39.305562+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "5ad05a733fd0812256",
+      "title": "$9.6 Billion in Southeast Asian Upstream Assets Are for Sale Through 2027",
+      "url": "https://oilprice.com/Energy/Energy-General/96-Billion-in-Southeast-Asian-Upstream-Assets-Are-for-Sale-Through-2027.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "f925f7fa409641734c",
+      "title": "Iran’s Oil Minister Resigns as U.S. Blockade Chokes Crude Exports",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Irans-Oil-Minister-Resigns-as-US-Blockade-Chokes-Crude-Exports.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T17:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "90838a0bc12628eefe",
+      "title": "Les banques centrales marocaine et émiratie renforcent leur coopération financière",
+      "url": "https://www.financialafrik.com/2026/10/05/les-banques-centrales-marocaines-et-emiratie-renforcent-leur-cooperation-financiere/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T17:02:53+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "599b744e882f6884f7",
+      "title": "Here’s How Trump’s Using The Graham Act To Trap Russia And Crush Iran",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Heres-How-Trumps-Using-The-Graham-Act-To-Trap-Russia-And-Crush-Iran.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "58c45e1c35b34c8912",
+      "title": "Centrafrique : Royal Onyx Insurance ouvre une succursale à Bangui",
+      "url": "https://www.financialafrik.com/2026/10/05/centrafrique-royal-onyx-insurance-ouvre-une-succursale-a-bangui/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "fa498a8849aa9bce5b",
+      "title": "Maroc : Dislog Group affine son périmètre avant son entrée en Bourse",
+      "url": "https://www.financialafrik.com/2026/10/05/maroc-dislog-group-affine-son-perimetre-avant-son-entree-en-bourse/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T16:51:55+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "ecb2018162c24fdc61",
+      "title": "Sénégal : NSIA Banque Bénin fait condamner Africa Business Services à 111 millions FCFA",
+      "url": "https://www.financialafrik.com/2026/10/05/senegal-nsia-banque-benin-fait-condamner-africa-business-services-a-111-millions-fcfa/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T16:32:57+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "5b9ada211e544419ce",
+      "title": "Indian State Firm BPCL Readies $3-Billion Bond to Fund Brazil oil Project",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Indian-State-Firm-BPCL-Readies-3-Billion-Bond-to-Fund-Brazil-oil-Project.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T16:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "260cda37655b84b621",
+      "title": "Madagascar : de la large couverture réseau à un internet mobile véritablement accessible, les réformes clés",
+      "url": "https://www.financialafrik.com/2026/10/05/madagascar-de-la-large-couverture-reseau-a-un-internet-mobile-veritablement-accessible-les-reformes-cles/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T16:28:11+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "e9830ba80cb9862ff7",
+      "title": "Possible Fire Reported at Saudi Refinery as Attack Claims Circulate",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Possible-Fire-Reported-at-Saudi-Refinery-as-Attack-Claims-Circulate.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T15:31:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "317500fb627b7ae8c6",
+      "title": "EU Electric Vehicle Sales Hit Record as Fuel Prices Surge",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/EU-Electric-Vehicle-Sales-Hit-Record-as-Fuel-Prices-Surge.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T15:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "a304fdc602b2195f4b",
+      "title": "Supreme Court Takes Up Boulder Climate Suit Against Exxon and Suncor",
+      "url": "https://oilprice.com/Energy/Energy-General/Supreme-Court-Takes-Up-Boulder-Climate-Suit-Against-Exxon-and-Suncor.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T15:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "c046c66e4ff064d724",
+      "title": "Aramco CEO Warns Oil Inventories Are ‘Scarily Thin’",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Aramco-CEO-Warns-Oil-Inventories-Are-Scarily-Thin.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T14:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "4ddc8c6d9c02949a37",
+      "title": "Burundi : le FMI pousse la BRB à renforcer ses statistiques bancaires",
+      "url": "https://www.financialafrik.com/2026/10/05/burundi-le-fmi-pousse-la-brb-a-renforcer-ses-statistiques-bancaires/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T14:00:32+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "b1750cb24443fa5ceb",
+      "title": "Rubio Opens 4-Day NATO Tour in Iceland to Discuss Arctic Security",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Rubio-Opens-4-Day-NATO-Tour-in-Iceland-to-Discuss-Arctic-Security.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T14:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "984e737c0a5209c415",
+      "title": "Cameroun : Paul Biya autorise près de 560 millions d’euros de prêts et brave le risque de change",
+      "url": "https://www.financialafrik.com/2026/10/05/cameroun-paul-biya-autorise-pres-de-560-millions-deuros-de-prets-et-brave-le-risque-de-change/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T13:48:17+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "2ef1c3ab10519fd9ad",
+      "title": "Gabon : un nouvel Eurobond d’environ 580 millions USD en préparation",
+      "url": "https://www.financialafrik.com/2026/10/05/gabon-un-nouvel-eurobond-denviron-580-millions-usd-en-preparation/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T13:31:21+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "4d528d04bf496bf770",
+      "title": "Houthis Claim Strike on Aramco Facility in Riyadh as Yemen Fighting Escalates",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Houthis-Claim-Strike-on-Aramco-Facility-in-Riyadh-as-Yemen-Fighting-Escalates.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T13:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "947ca2fa8159489d4e",
+      "title": "CEMAC : le crédit aux particuliers reste plus cher que celui accordé aux entreprises",
+      "url": "https://www.financialafrik.com/2026/10/05/cemac-le-credit-aux-particuliers-reste-plus-cher-que-celui-accorde-aux-entreprises/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T13:17:58+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "e1dca7d78afb11cbd6",
+      "title": "Anne Juuko prend la tête de la Banque de développement d’Afrique de l’Est (EADB)",
+      "url": "https://www.financialafrik.com/2026/10/05/anne-juuko-prend-la-tete-de-la-banque-de-developpement-dafrique-de-lest-eadb/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T13:14:26+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "b33de1ed9b7ba09d7d",
+      "title": "RDC : la TVA rapporte environ 142 millions USD par mois, un niveau record",
+      "url": "https://www.financialafrik.com/2026/10/05/rdc-la-tva-rapporte-environ-142-millions-usd-par-mois-un-niveau-record/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T13:08:31+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3af6a9a81bc6faf2f9",
+      "title": "South Korea Plans to Triple Canadian Crude Imports as Saudi Share Slips",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/South-Korea-Plans-to-Triple-Canadian-Crude-Imports-as-Saudi-Share-Slips.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T12:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "d7d69d8ea976cb5eb1",
+      "title": "Égypte : le régulateur renforce les règles de souscription et de tarification de l’assurance-crédit",
+      "url": "https://www.financialafrik.com/2026/10/05/egypte-le-regulateur-renforce-les-regles-de-souscription-et-de-tarification-de-lassurance-credit/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T12:16:59+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "6f9ee48fa24138f967",
+      "title": "Japan Rules Out More Reserve Releases After G7 Pledges 100 Million Barrels",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Japan-Rules-Out-More-Reserve-Releases-After-G7-Pledges-100-Million-Barrels.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-05T11:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "e03e4566511e712b6b",
+      "title": "Pétrole : les exportations du Moyen-Orient repassent au-dessus de leur niveau d’avant-guerre",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261005-p%C3%A9trole-les-exportations-du-moyen-orient-repassent-au-dessus-de-leur-niveau-d-avant-guerre",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-05T09:35:43+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "f4c67ec69a48b6b67d",
+      "title": "Philip R. Lane: Diagnostic Challenges for ECB Monetary Policy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261005~1d8d998ef4.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-05T08:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "bb9f95ea40ad2a76c4",
+      "title": "Shein: pourquoi la rentabilité du géant de la fast fashion s’effondre",
+      "url": "https://www.rfi.fr/fr/podcasts/aujourd-hui-l-%C3%A9conomie/20261005-shein-modele-economique-fast-fashion-rentabilite",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-05T07:58:39+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "a41468ae190a8e8275",
+      "title": "Les indices du commerce extérieur (ICE) au Maroc, deuxième trimestre 2026",
+      "url": "https://www.hcp.ma/Les-indices-du-commerce-exterieur-ICE-au-Maroc-deuxieme-trimestre-2026_a4352.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-10-05T07:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
+    },
+    {
+      "id": "0604fbad78761b9dcf",
+      "title": "Tchad-France: l'économie pour relancer une relation refroidie",
+      "url": "https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20261004-tchad-france-l-%C3%A9conomie-pour-relancer-une-relation-refroidie",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-04T22:02:21+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "984da40d2b933cd047",
+      "title": "La surproduction mondiale d'acier pèse sur l'Europe et le Brésil",
+      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261004-la-surproduction-mondiale-d-acier-p%C3%A8se-sur-l-europe-et-le-br%C3%A9sil",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-04T22:01:21+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "977b6c6e92c133ebf9",
+      "title": "Chine et États-Unis : rivaux ou partenaires ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/la-semaine-de-l-%C3%A9co/20261002-chine-et-%C3%A9tats-unis-rivaux-ou-partenaires",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-02T16:56:25+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "0c86155aacaaa9b401",
+      "title": "Détroit d'Ormuz : pourquoi le grand retour du pétrole ne suffit pas à faire baisser les prix",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261002-d%C3%A9troit-ormuz-pourquoi-grand-retour-p%C3%A9trole-baisse-prix",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-02T16:55:23+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "b9a8bdffc91757cf9d",
+      "title": "Intelligence artificielle : un affolement \"calculé\" ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/le-monde-dans-tous-ses-%C3%A9tats/20261002-intelligence-artificielle-un-affolement-calcul%C3%A9",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-02T16:51:56+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
     {
       "id": "ac48eaf934470f9f4d",
       "title": "Disty Technologies - CP relatif au changement de composition du conseil d'administration",
@@ -16,7 +577,77 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "a46257879579123272",
+      "title": "RDC, Ukraine, Sénégal, France : trois regards sur des économies sous tension",
+      "url": "https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261002-rdc-ukraine-s%C3%A9n%C3%A9gal-france-trois-regards-sur-des-%C3%A9conomies-sous-tension",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-02T15:26:04+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "69b5cf20b492d188d8",
+      "title": "Chez Castel, la fille du fondateur du géant des boissons en Afrique remporte une première bataille juridique",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261002-la-justice-donne-raison-%C3%A0-romy-castel-dans-la-bataille-de-pouvoir-au-sein-de-castel-g%C3%A9ant-des-boissons-en-afrique",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-02T15:01:46+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "98cd3daef22becd391",
+      "title": "IA : cette solution qui veut sauver l'homme et éviter l'apocalypse",
+      "url": "https://www.france24.com/fr/%C3%A9missions/tech-24/20261002-ia-cette-solution-qui-veut-sauver-l-homme-et-%C3%A9viter-l-apocalypse",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-02T13:27:28+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "2837bd77bb1bb24927",
+      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+      "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261002~54c6b5672b.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-02T13:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "179a97b51d602141ae",
@@ -29,7 +660,230 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "17fa26efe52cb0c248",
+      "title": "Boris Vujčić: Resilience, integration and competitiveness: building the future of European banking",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261002_1~419efe18e0.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-02T11:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "42d1be96fedba085b3",
+      "title": "Les actions européennes rebondissent après la chute des obligations ; l'inflation alimente les craintes concer - Boursorama",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOU0RENUowY1JjaG1VOVhNNnk0cUNJT3BEcTN5N1BDd1BrN0JTUm92UlJ6aUt5dDJQZnQ5VE9iTElqeGVGek9YUDhkdGtSM2R1ZS1wNC1PQjBvdUktcEpOeC1YWGllV2E0TzQ2WXJkR2dVbmZGSm15cUlhaTdtNU1uRzJVbzN3emUyUC1SaFRHT2g1SjhxS3ZwTUs1UjF2M1E1andmejRHQnlzVVVnTERnaDRmeTJINEJXYXlkM1B1R2VIWHF0YU5VMUpYdUVncGVVczUtR3piTmNWUTJqcDdsUUp2R1ZvX0JFX3J4VW83VzYwMF9sdTBfNURqdUdsRXVGVm85bWFTazB5cFlESWh6WEpGZENrdXZJbEk0d08wT3EyVXRTZnBjMHFhTTl0aVZhVkxZTHFtNnlRMGllZjdwUjhtbEp6d9IBywJBVV95cUxPNVplWWRCTnpPWEhtOTA3clNuSGlMTHRkcUNYQnJVbG1VYlpORzJEa0pyLVVZLTVLRFhEN2kzemZrZHZVZ0RWaUZvQXhjSkNCRHRGLXlhVmN1cGd2YWNkQ25zdnlrcnpnRm1qdzh4RVdCdFJxZTExS2Fvb25pamE0bGpXZldvMlY0UzhYN2drZlBVUS16YUxkNER3LVZ2UHcwcWJYcU9WNDNWTnE4ci11MkhGb2hUVUlxcHdzM19ETEpZd3hxbTlDZ3cwU3FsV2ZibFB4cnVYVjhKNEVWUl80VFZCSUdyX21sMUNyUnRJYkxSeG9CajgxV29SOWFzWUtELS03dGVQZ2tOWmp2aEdnMXFtZGhVT09adEhUYnJocURzRThWTjlsU2ZES2JxYXZSZ3NySXJOazRYZlIzUHh5NTdPWjBGR2dEbVBz?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-02T09:01:01+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "5ffd44544e0607c895",
+      "title": "Les actions européennes rebondissent avant les chiffres de l’inflation en zone euro et le rapport sur l’emploi aux États-Unis - zonebourse.com",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPVGE1MER0WndXM3VtSXFHYkl3dVJmeTZWaTk3a3FVZGF1dG5SdFlsSnNFdUdYQlVoMi1wenVNS1JmMkFWb3o0T3QwVFNkbGlkNXRScGI1UmQwVUJuLU5JRnc0OTVJZzBEdTVfa3owN3hIUkc2eHFEbjJFZWtBVThLVVdHcHhHN042Ry1vYVlPODVEeHotcnBOUWRUV0Vaa2Z0d2dFaTFUUzRKMThnWWoxY3BmQkw4OFZvTy1SMHJyQmo3TkxHLW9hV0hNRFUwTHA0UDN4MVJyNk96Vlh4NlM2TkhKNDZEYkJjYllGMmdiZjk?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-02T09:00:32+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "1b06f2490501e22bac",
+      "title": "La confiance prévaut en Europe avant deux rendez-vous majeurs - Boursorama",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYnpiQXd0Q2F6Umw3ZjNrWWtkU3J3M2FlQlk4eDdUUjhNS1NzMl9JdHRWYXpRa1N1UWozRmJaTml5RU9ieUVMZGNXZ1lhTl9aR0lwNDByV0FEVVZOZHdubHVGQlpEQ3prU2dBMExaUmp1VXVscE5hak5GemJZV0x5XzZvSm5fc2FxeThlci0tUkdzZWN3ZGxud1VaRUFVV2ExX25IY2xPam9GLUtEMEhtNlVpOURmY1JoZDRidlFVMnFPTkdISDlMbjY4bXlTcHphZUhjdzYtQ2NFSlnSAdsBQVVfeXFMTWJ6YkF3dENhelJsN2Yza1lrZFNydzNhZUJZOHg3VFI4TUtTczJfSXR0VmF6UWtTdVFqM0ZiWk5peUVPYnlFTGRjV2dZYU5fWkdJcDQwcldBRFVWTmR3bmx1RkJaREN6a1NnQTBMWlJqdVV1bHBOYWpORnpiWVdMeV82b0puX3NhcXk4ZXItLVJHc2Vjd2RsbndVWkVBVVdhMV9uSGNsT2pvRi1LRDBIbTZVaTlEZmNSaGQ0YnZRVTJxT05HSEg5TG42OG15U3B6YWVIY3c2LUNjRUpZ?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-02T08:22:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "2a5a3a180569cb9d19",
+      "title": "L'Europe ouvre en légère hausse avec l'accalmie sur l'obligataire - Boursorama",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNOXFleGNqa1BmZE1feEZiTVI0blZFbGh0andmTC1hSE9NWmxMMlFyRkRsN1FJUXBMeS1WX3ZDZy0xS1lpNXpva0pyVDVLaExiQzN4RnVTVFBJSjE1akNjYmlNWlB5RmhiZWdqMGt2TkJVOGFfdC1aM2pVQ2phQm1KZU1hOXRrd2E0b2xmelljbGtOanVHTDhTTTF1VGJwMGlJT1hmS0pIeFJRVzZwMmJfMzNlcmRoVUg1QllOdEd1aGpVZGlJOEhOTlk3Q3VqOFA2eHp2OEZ0cFlVa1lTY1NFbtIB4AFBVV95cUxNOXFleGNqa1BmZE1feEZiTVI0blZFbGh0andmTC1hSE9NWmxMMlFyRkRsN1FJUXBMeS1WX3ZDZy0xS1lpNXpva0pyVDVLaExiQzN4RnVTVFBJSjE1akNjYmlNWlB5RmhiZWdqMGt2TkJVOGFfdC1aM2pVQ2phQm1KZU1hOXRrd2E0b2xmelljbGtOanVHTDhTTTF1VGJwMGlJT1hmS0pIeFJRVzZwMmJfMzNlcmRoVUg1QllOdEd1aGpVZGlJOEhOTlk3Q3VqOFA2eHp2OEZ0cFlVa1lTY1NFbg?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-02T07:54:54+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "47b9136c3db3637951",
+      "title": "Présidentielle au Brésil: une économie sous tension à l’approche de l’élection",
+      "url": "https://www.rfi.fr/fr/podcasts/aujourd-hui-l-%C3%A9conomie/20261002-bresil-economie-election-presidentielle-dette-taux-interet",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-02T07:25:47+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "adce1f911acc3197e5",
+      "title": "Inflation en zone euro et emploi américain: les deux chiffres clés attendus vendredi - L'Echo",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOSHZIeXpseHptT19FRnY0T0tDTDdnUkotd0VHeWxjYU1aTEhST1RHc0dyS2pITWxNOXVWQ3VnaFJQcVFLVlR3OVVRS3JEMnVFcGRxcVBkZlhqX1Y0WnVmNTY4UzMzWTA0RkI1TWtYaGtJXy15eHlWZ3d2V2V6NzNKREpnc1htRVRwbVN0OGpDdE9KU1NFQkNZMFFPRTZmRE9FNTBISVBkQmh6Y1kwN0JUQW1IYzBGQXZlYlhxV1pkdXQ1em9qMV91SWU2LUN5R21icWdVbF9sQ2ZlcjQ?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-02T03:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "a063f451a6ad2ccdc3",
+      "title": "Le G20 de Milwaukee prend fin sans avancée sur les déséquilibres commerciaux",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261002-g20-commerce-milwaukee-fin-sans-avancee-desequilibres-commerciaux-etats-unis-chine",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-02T00:25:35+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "1baab73fa360afade6",
+      "title": "Kenya: lancement du chantier pour la construction d'une méga-raffinerie à Lamu",
+      "url": "https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20261001-kenya-lancement-du-chantier-pour-la-construction-d-une-m%C3%A9ga-raffinerie-%C3%A0-lamu",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T22:52:33+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "70361b84d1ec834ca0",
+      "title": "La banane, une success story mondiale menacée?",
+      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261001-la-banane-une-success-story-mondiale-menac%C3%A9e",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T22:47:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "620cab3ccb59bd7bdc",
+      "title": "Hausse des prix du diesel : Washington presse les Européens de puiser dans leurs réserves",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261001-hausse-prix-diesel-washington-presse-europeens-puiser-reserves",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-01T21:49:27+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "948cfbf9a1dd6ccaf1",
+      "title": "La dette des États flambe sur fond de crise énergétique et d'inflation",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261001-la-dette-des-%C3%A9tats-flambe-sur-fond-de-crise-%C3%A9nerg%C3%A9tique-et-d-inflation",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T15:45:44+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "948785e80d375de044",
+      "title": "Isabel Schnabel: Central banks on-chain",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001_1~a0be67193b.en.pdf",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-01T15:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "3fab485ff380ecf3da",
@@ -42,7 +896,77 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "727ab514c3c0db11de",
+      "title": "Agenda mensuel économique international du vendredi 2 octobre 2026 au dimanche 1er novembre 2026 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1YQ3JuZE95WXpCa0FVSlN1RzdBY3lDS0hCN05CRzhSTWxoSU1XT1FDUWNpa2huU1NyT0lJZjRzYmtkaGpQTXdSaFFNUGU0TjdHSmJNd01tUzRmbmpLN2dKRjhn?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-01T14:27:01+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "5e5374509b0d7c5b2b",
+      "title": "Emploi aux Etats-Unis, inflation en zone euro, un vendredi à risque pour la Bourse - Investir Les Echos",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWmticnJSSWJsYTYtM2k1UmpCUER0TnpkWEx6VkdoQU5yaExSNF9Lak1qaVoxZl9qNU9mNGl2cjNqS193VlBQN3JBT0piZHR5TVdQanpMdEExRjF6X19yTUtuUGpZTl96MnZlb3g0d1ljRGxyUlRXVTJuYmVLSVdOUEZnRDd6SThpeUVlS1pRMlBPWVJYeEVFYlRmYlA1UUQ5TEdzbTFrQkR0a3ozNjlMMG8wSnFwY0EtdkVkUG5sM0NIb0xOT2dpQlJrMmI0UkdIdGJ0VHRaUnlKLXJRbVpwN0tKWmIwQQ?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-01T13:55:34+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "1a51741a0c7f69915f",
+      "title": "Christine Lagarde: Where AI risks meet",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-01T13:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "4d803b3bc771fc4569",
+      "title": "Tenir le déficit, faire des économies... l'équation difficile du budget 2027 de la France",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261001-tenir-le-d%C3%A9ficit-faire-des-%C3%A9conomies-l-%C3%A9quation-difficile-du-budget-2027-de-la-france",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T12:30:28+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
     },
     {
       "id": "4d64f70cf937bf5779",
@@ -57,7 +981,60 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "cccda209cee4a8ffc2",
+      "title": "Outre-mer: quels sont les atouts économiques des territoires ultramarins",
+      "url": "https://www.rfi.fr/fr/podcasts/aujourd-hui-l-%C3%A9conomie/20261001-france-outre-mer-investissements-economie",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T09:23:26+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "2d57ced9072cd11901",
+      "title": "Budget 2027 : le gouvernement face à l’équation des 54 milliards",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261001-budget-2027-le-gouvernement-face-%C3%A0-l-%C3%A9quation-des-54-milliards",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-01T09:12:41+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "f020a965d7ca104db2",
+      "title": "Détroit d'Ormuz: malgré la reprise importante du flux de pétrole, les prix devraient rester élevés",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261001-d%C3%A9troit-d-ormuz-malgr%C3%A9-la-reprise-importante-du-flux-de-p%C3%A9trole-les-prix-devraient-rester-%C3%A9lev%C3%A9s",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-01T04:42:43+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
     },
     {
       "id": "f1ee6c44fb65512be7",
@@ -72,7 +1049,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "cdce66c34714fb6326",
+      "title": "Rachat de Warner Bros : l'accord entre Paramount et 12 États américains validé par une juge",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20260930-rachat-warner-bros-accord-entre-paramount-12-etats-americains-valide-par-juge-cinema-television-etats-unis-streaming-californienne",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-09-30T22:00:07+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "291e51811bf8270c88",
@@ -87,7 +1083,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "242827ad6218c40e82",
+      "title": "Un nouveau \"miracle espagnol\" ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260930-un-nouveau-miracle-espagnol",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-09-30T20:42:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "55c32307797bd9c5e3",
@@ -100,7 +1115,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "37269794473f5b94f2",
@@ -115,7 +1132,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "81228905bdd60475bf",
@@ -130,7 +1149,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "38006032d6e5e74266",
@@ -145,7 +1166,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "7a6444cc722102d80a",
@@ -160,7 +1183,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "fc5f3cb785507bcbb3",
@@ -175,7 +1200,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "4a93aadba2e2fa2b7c",
@@ -190,7 +1217,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "78109817f1b2239a5b",
@@ -205,7 +1234,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "d4d867da4badecdd6c",
@@ -218,7 +1249,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "803d52455121a9d3eb",
@@ -233,7 +1266,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "ca46607b6259d0e74b",
@@ -246,7 +1281,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "7423cc17c1c09c902c",
@@ -261,7 +1298,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "926390f3930525ac1f",
@@ -276,7 +1315,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "ff908d72d2f0d1073c",
@@ -291,7 +1332,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "def39c4cdef6e6abae",
@@ -306,7 +1349,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "bdd1450d2d7b114aea",
@@ -319,7 +1364,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "6e326b9ba63246dc36",
@@ -332,7 +1379,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "8f84b3de3e79b792ad",
@@ -345,7 +1394,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "19452f07025869ed38",
@@ -360,7 +1411,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "1d9f8b15f8c24eb2f1",
@@ -375,7 +1428,77 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "c4fef6aa5954e2ec89",
+      "title": "Christine Lagarde: Interview with La Croix",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260930~10084a5f3d.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-30T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "769e7ce5f60e12b6aa",
+      "title": "Isabel Schnabel: Monetary policy in a world of overlapping shocks",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260930_1~7c6c120482.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-30T15:45:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "d564ad9a14d60fd18e",
+      "title": "Agenda hebdomadaire économique International du jeudi 1 octobre 2026 au jeudi 8 octobre 2026 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5rdllKbldEclFqVE9tbXNoQng1UUVPTjJqMVhrN2loSlJiQkZNSEVUZzVUMUp5SVBKY0NYbkJuQTlpLWZvNVBRVmRxV3VMU2NFaU54OXNoeDlrUUtqYnVpMnJB?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-09-30T14:41:24+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "5cebcaf6121416bed2",
+      "title": "Le miracle espagnol : comment expliquer la bonne santé économique ? - France 24",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPN2Q3TmlaYkdZR1BUU0VMQkg0eTdpbDhVSWJhMTJvT2pfSXdQWmJtVms0dEF2eWZSZFRRUERBSGdJUTBfQS00SUN6WUhKSENZR3B3a1RBRmNKZmkzaGVTUXZJUS1hWnBzS2I0dVQ5X2FvbnVEcl9PQWx5WUF4QVp0eHVqSjFtTGJfUnRTNzVYS2s3ajZtS3QxdWdMbkNTOWlROF9aWE9jYkJ3a0Y3UVc1U012UmZacmlpYzFkNGp3?oc=5",
+      "publisher": "Europe / partenaires du Maroc",
+      "published_at": "2026-09-30T14:13:38+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "partenaires",
+      "feed_url": "https://news.google.com/rss/search?q=%C3%A9conomie%20Espagne%20France%20croissance%20%C3%A9changes%20Maroc&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "7bf91c257cd135f324",
@@ -390,7 +1513,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "1c288abed3a50ea285",
@@ -403,7 +1528,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "6cc2f5aee380c0cc12",
@@ -418,7 +1545,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "2a639e305cb2cd960e",
@@ -433,7 +1562,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "9bbb0afe205fc525f5",
@@ -446,7 +1577,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "168061f9a50a1e4491",
@@ -461,7 +1594,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "cd2b2be2730a0b66b6",
@@ -476,7 +1611,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "c45e3f8b15bad01fca",
@@ -489,7 +1626,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "56b8db84f115167bbe",
@@ -502,7 +1641,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "9336386869126846cf",
@@ -517,7 +1658,145 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "c24f8458251d1e30df",
+      "title": "La stratégie touristique des monarchies du Golfe : du pétrole aux hôtels de luxe",
+      "url": "https://www.france24.com/fr/%C3%A9missions/aux-avant-postes/20260930-la-strat%C3%A9gie-touristique-des-monarchies-du-golfe-du-p%C3%A9trole-aux-h%C3%B4tel-de-luxe",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-09-30T12:10:36+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "05f87a2acbc79a8746",
+      "title": "Galerie vidéo - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOHoydENwcUp2bDdocW11dmJpREJPN0gwSFZZbUIzNEhVZk50TVg4b0J3bW9JaW5LWGc0Y0p4YVR2dTF1ckhSMi1xNTcyMGZSdjA0azNjd0ZZc0w5Rlc4dXV3QzZnVVJMMVBMbENDRkdkUnFrOWlqRS1JUkVfaHF4ajZ4OWpnMXNTMUJQYS1lOC1VNllHQ2hWT0hTTGU?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-09-30T10:50:11+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "1bbbb6f320ccda8cf1",
+      "title": "L’indice des prix à la production industrielle, énergétique et minière (IPPI) du mois d'Août 2026",
+      "url": "https://www.hcp.ma/L-indice-des-prix-a-la-production-industrielle-energetique-et-miniere-IPPI-du-mois-d-Aout-2026_a4351.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-09-30T10:16:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
+    },
+    {
+      "id": "6a9281d707adadde72",
+      "title": "Maroc-France : vers une nouvelle architecture des échanges économiques bilatéraux - Maroc Diplomatique",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUWQ1ckdHLWI1UXZrcUx5Y0UyWUdJRlZXR3pTcDBSUjVqbEVMSXdMblZpSzNxNHZ3QkVNMm8wOVg5RE1YU2lEZ3VFR2xJOE9hQVRpSUtVR3E3S1lpaUw4WllMRFVLSm5oUjEwZFJHNnJIUm1KRGc0MnBqaHk1emhqUmlUbm1yVmZsWG9wQ25fTkl6NmlWQW9nbjZudHk3QjNGUlZmWXJjTmh0aDV5d0R4ZQ?oc=5",
+      "publisher": "Europe / partenaires du Maroc",
+      "published_at": "2026-09-30T09:50:17+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "partenaires",
+      "feed_url": "https://news.google.com/rss/search?q=%C3%A9conomie%20Espagne%20France%20croissance%20%C3%A9changes%20Maroc&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "2e9855918d09896155",
+      "title": "Javier Milei en opération séduction à Paris",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260930-javier-milei-en-op%C3%A9ration-s%C3%A9duction-%C3%A0-paris",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-09-30T08:26:54+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "46d958575980d208c3",
+      "title": "Situation économique nationale au deuxième trimestre 2026",
+      "url": "https://www.hcp.ma/Situation-economique-nationale-au-deuxieme-trimestre-2026_a4350.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-09-30T07:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
+    },
+    {
+      "id": "7460efb74f082e554b",
+      "title": "Frank Elderson: Supervisory risk appetite, efficiency and effectiveness",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260930~d495288355.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-30T02:20:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "cfb038f0587a83e602",
+      "title": "Atelier technique : Résultats de l’enquête sur le Budget Ouvert 2025 - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85NEI3Y3RiU2VuMWQ3dWpTNzM4U09rMUJpRjNONFNidGRoQkJMOGVzQjVQTmZROUZBVGlqLVdqTUhHb0w4YmpWR1lTeXE2OGtNOUJSWE9jMjBYOFV6MXJ5ODhIa19YSDBqN3ZSajhETmo1QlRQMzI4?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-09-29T21:43:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "f874b3e973a51c8bef",
@@ -530,7 +1809,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "003317db892d42efaf",
@@ -545,7 +1826,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "c41da114fc47a72934",
@@ -558,7 +1841,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "52711eaaa4c58880d8",
@@ -571,7 +1856,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "d4b69735e584207096",
@@ -584,7 +1871,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "c6921d4c88597136da",
@@ -599,7 +1888,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "653d81f170459b81cb",
@@ -614,7 +1905,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "5ed2e15e0b8c5f01c6",
@@ -627,7 +1920,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "f6ac577ce7681af545",
@@ -640,7 +1935,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "1a49db490bc889d5b4",
@@ -653,7 +1950,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "fd8841883b1cac6d7f",
@@ -666,7 +1965,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "1093f3946f12e2c232",
@@ -681,7 +1982,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "43d78c6affcb3a7a65",
@@ -694,7 +1997,60 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "03dafe6937509fc21b",
+      "title": "Maroc-Espagne : les échanges au beau fixe - LesEco.ma",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB4aWNWV1lGY0VNTVRXNnQ5Q3FtZk04YmhBOE5kRWtPbzd6dTF3WWFLQXdPckk0TkZNMmk1TnN6SXFnN3A2dThpMFNNOTBJZE9uY1NrbnFoSk1qcnB1bkFzamNZdEw1c2RPWDM4bUM4a0ZwTTBKR3k1YVp3?oc=5",
+      "publisher": "Europe / partenaires du Maroc",
+      "published_at": "2026-09-29T10:14:58+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "partenaires",
+      "feed_url": "https://news.google.com/rss/search?q=%C3%A9conomie%20Espagne%20France%20croissance%20%C3%A9changes%20Maroc&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "8a4638ed9ab3637df4",
+      "title": "ECB amends monetary policy implementation guidelines as part of regular review",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260929~050089e922.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-29T08:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "4a9473d3a97a36b987",
+      "title": "Calendrier économique octobre 2026 : notre analyse des annonces clés - Café du Trading",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBBaVNDX1JiWm1kQS1HMlByZHlBRnJyanpZUHdzd0wwUkFuMkYxUDZwWXA3aWYyNHRnSmpTLU5lVFB3Q1M3R09vc2t0SVNoMnNtcGhTbGFjeEE4N2JyNzVLOHY4bE1sdFRMRzFXWmlvZlZlU2M?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-09-29T07:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "58a1b6bc548d330243",
@@ -707,7 +2063,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "629b2cb4d0118fd6fc",
@@ -720,7 +2078,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "dec770ac92ea5f0cb3",
+      "title": "Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260928~a875675544.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-28T13:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "a7041de4611d263429",
@@ -735,7 +2112,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "2931a263f45ea75f02",
@@ -750,7 +2129,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "60a2569f22c9ed18a5",
@@ -763,7 +2144,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "99b8d23a128f0f26c4",
@@ -776,7 +2159,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "4c4d3a09c058fdadcf",
@@ -789,7 +2174,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "8263b0cfa166116169",
@@ -804,7 +2191,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "8ae55ed06ba89483e6",
@@ -817,7 +2206,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "6bf35ed527f77878a2",
@@ -830,7 +2221,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "35b2d11880453e9d75",
@@ -843,7 +2236,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "cd3963c7a2293ba62d",
@@ -856,7 +2251,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "7188f8cc82a547fa87",
@@ -869,7 +2266,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "1eadd5dedfd3ebdb86",
@@ -882,7 +2281,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "4e6cb7c97083681e1d",
@@ -895,7 +2296,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "aad8d30040eca670d2",
@@ -908,7 +2311,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "0d8c149922ca97bcb6",
@@ -923,7 +2328,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "65eeef02b7576e4442",
@@ -938,7 +2345,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "28d4d744eeb78f91f4",
@@ -951,7 +2360,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "ca1d71d8c71fc50ba9",
@@ -964,7 +2375,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "1ca316fdac9802fd82",
@@ -979,7 +2392,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "ee0b36b8321345e766",
@@ -992,7 +2407,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "d410e08d0f244ab87a",
@@ -1005,7 +2422,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "3b007cf5aa52dc03d6",
@@ -1018,7 +2437,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "15ed86207a5aa61ef3",
@@ -1031,7 +2452,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "610b5936db0f1bba2b",
@@ -1044,7 +2467,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "4fad17b412a4bf012d",
@@ -1057,7 +2482,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "c0e28aac967f5707d8",
@@ -1072,7 +2499,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "a36d0ce23ccc81c54a",
@@ -1085,7 +2514,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "3be07306345208e646",
@@ -1098,7 +2529,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "471298b6596129990d",
@@ -1111,7 +2544,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "cea563118d9944d1d5",
@@ -1124,7 +2559,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "89ad6bd1235746a3a5",
@@ -1137,7 +2574,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "1d37f6f377e65ed1ed",
@@ -1150,7 +2589,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "c7484468121073858d",
@@ -1163,7 +2604,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "52ee60e117b32fa7a4",
@@ -1178,7 +2621,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "ad9ffe1a4e2cbc07d9",
@@ -1191,7 +2636,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "10c6a617d524223d4e",
@@ -1204,7 +2651,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "e071ef3689a847dccc",
@@ -1217,7 +2666,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "bb0388520b6548be7e",
@@ -1230,7 +2681,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "9b1c58e05b18a6a065",
@@ -1245,7 +2698,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "f85119406f217ec7a2",
@@ -1260,7 +2715,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "8984ec40970935e194",
@@ -1273,7 +2730,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "64ad2259f31ca6b110",
@@ -1286,7 +2745,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "8516b8942d199c0695",
@@ -1299,7 +2760,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "18c793e461d4206448",
@@ -1312,7 +2775,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "a4a9f533ca02df95df",
@@ -1325,7 +2790,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f48c8f0e89ac2c05bd",
@@ -1340,7 +2807,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "fa85c7170fbf5692b8",
@@ -1353,7 +2822,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "d56682b4e5afc11a1f",
@@ -1366,7 +2837,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "3de4dcf43d0911a050",
@@ -1379,7 +2852,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "167fbd80edda869c2b",
@@ -1392,7 +2867,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "7ed8cf2e59ddb6cd23",
@@ -1407,7 +2884,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "f4121ab85b9d1acebb",
@@ -1422,7 +2901,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "cec45916f9b82e0940",
@@ -1435,7 +2916,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "d8593f71f535f92964",
@@ -1448,7 +2931,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "4c8395ae8fdfc0ebed",
@@ -1463,7 +2948,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "c4e7d05c5c0b847d22",
@@ -1476,7 +2963,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "66fd5384ac40651336",
@@ -1489,7 +2978,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "ad3409249328873d83",
@@ -1502,7 +2993,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "27e403b2ac42424073",
@@ -1517,7 +3010,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "b40ab5e367118bcfdf",
@@ -1530,7 +3025,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "a10e35389468a70089",
@@ -1543,7 +3040,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "cd9fee37072af64695",
@@ -1556,7 +3055,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "fe52bc25c47d14bb0f",
@@ -1569,7 +3070,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "6061a35b167d6e830b",
@@ -1582,7 +3085,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f7770a8da2624caebd",
@@ -1597,7 +3102,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "58a35c24eb95f3df5f",
@@ -1610,7 +3117,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "a85b6dd1c8a5c6b531",
@@ -1623,7 +3132,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "1c288f5c86bedf6408",
@@ -1636,7 +3147,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "32cb8597480d6c9a99",
@@ -1651,7 +3164,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "43d11edc86f25e656f",
@@ -1664,7 +3179,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "1153cfcae0615d304e",
@@ -1677,7 +3194,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "973cdee832599b82dd",
@@ -1690,7 +3209,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "590f34f92bb965cdd5",
@@ -1705,7 +3226,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "a4af732b410cb1f029",
@@ -1720,7 +3243,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "d8d0aadadaf7c63b04",
@@ -1733,7 +3258,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f637aa5f0b4a89f65a",
@@ -1748,7 +3275,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "e65804dff95b98c829",
@@ -1763,7 +3292,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "cecde06e7e940baf55",
@@ -1776,7 +3307,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "62555a340194e3c61c",
@@ -1789,7 +3322,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "ea25145e67f2cf7a58",
@@ -1802,7 +3337,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "b085c690323e9a7896",
@@ -1815,7 +3352,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "6c827c0918b0683377",
@@ -1828,7 +3367,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "02c58f6885f9849c47",
@@ -1843,7 +3384,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "0d0902fce52f63dd21",
@@ -1856,7 +3399,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "52d50b32ae5989e296",
@@ -1869,7 +3414,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "8b7f28cfada2e3664c",
@@ -1884,7 +3431,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "e12173e6099d944bae",
@@ -1897,7 +3446,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "db050001e9db7db0c2",
@@ -1910,7 +3461,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "4d80d3acc9716111e0",
@@ -1923,7 +3476,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "cca6a6f6ad9583be1f",
@@ -1936,7 +3491,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "cbb6028084fc43df6c",
@@ -1949,7 +3506,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "9cb83f835a74036e17",
@@ -1964,7 +3523,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "8031a6fd7a38991de9",
@@ -1979,7 +3540,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "27f3394d0843ddcee4",
@@ -1994,7 +3557,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "62ce20b0571ece8a07",
@@ -2007,7 +3572,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "93f0d0d83220c479ac",
@@ -2020,7 +3587,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "eeca6ccbe31bd860a9",
@@ -2033,7 +3602,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "185a53558f9aa931f9",
@@ -2048,7 +3619,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "266b85301e7b31831e",
@@ -2061,7 +3634,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "d131ca1b293610eb2e",
@@ -2076,7 +3651,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "19d62682858a31c37d",
@@ -2091,7 +3668,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "e7b91a713497e72eb0",
@@ -2106,7 +3685,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "a33271829740472f22",
@@ -2121,7 +3702,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "3cdb59ba534a055300",
@@ -2134,7 +3717,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "a03193e11747e7432f",
@@ -2149,7 +3734,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "09aebdfee4f727751f",
@@ -2162,7 +3749,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "6810d7f3e4ced328a8",
@@ -2177,7 +3766,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "87ef9ebad14e707804",
@@ -2190,7 +3781,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "9b7dbca7c9bd6423ce",
@@ -2203,7 +3796,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "a0f804dcd62875e0bb",
@@ -2218,7 +3813,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "23f89f2d246a14aa96",
@@ -2233,7 +3830,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "e181413504287c7765",
@@ -2246,7 +3845,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "82a83542f06153a9cc",
@@ -2259,7 +3860,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f2d20f99cc1db2da72",
@@ -2272,7 +3875,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "9c0f35d936645e45a8",
@@ -2285,7 +3890,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "d1261516cd105c272f",
@@ -2298,7 +3905,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "cc1d0f842ae754f1d4",
@@ -2311,7 +3920,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "57d7de1c61eba3f462",
@@ -2324,7 +3935,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "3f5673537635d197a4",
@@ -2337,7 +3950,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "304f0f4101abcc6a7f",
@@ -2350,7 +3965,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f336cb916be9fa59a3",
@@ -2363,7 +3980,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "f1b57631dcee9cde6b",
@@ -2376,7 +3995,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "46843f1bafc37824c1",
@@ -2389,7 +4010,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "50522971fe51ea7476",
@@ -2402,7 +4025,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "50998bdf461c2b3646",
@@ -2415,7 +4040,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "c8511b2d8d94937567",
@@ -2428,7 +4055,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "c9fc056da391ffba18",
@@ -2441,7 +4070,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "a3bbb5c7f1533e415f",
@@ -2454,7 +4085,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "fa4eee48573a6b4c65",
@@ -2467,7 +4100,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "fcab800fca0a9f6403",
@@ -2482,7 +4117,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "b93214cef5e898844c",
@@ -2495,7 +4132,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "41731005c693f4c58a",
@@ -2508,7 +4147,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "cb2c9651ceb5532f61",
@@ -2521,7 +4162,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "3cd15fb1caeee7b647",
@@ -2534,7 +4177,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "59c5679b56d4640e46",
@@ -2547,7 +4192,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "147d7454641afc5b88",
@@ -2560,7 +4207,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "7d5ce797af2b417da3",
@@ -2573,7 +4222,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "06774a1b131006699b",
@@ -2586,7 +4237,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "7aaed45852172f5bd2",
@@ -2599,7 +4252,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "5dbad5e343d57ec82c",
@@ -2612,7 +4267,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "98f18e02aafd2b2f8e",
@@ -2625,7 +4282,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "b5a24d4c39b4220b90",
@@ -2638,7 +4297,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "87ac5c1c9101d42334",
@@ -2651,7 +4312,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "b2b2e13b8c94bccd25",
@@ -2666,7 +4329,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "ffbfca6c896ef88221",
@@ -2679,7 +4344,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "38dbafc112833b3013",
@@ -2692,7 +4359,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "16e003df840f77a5be",
@@ -2705,7 +4374,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "57755979da92ee0963",
@@ -2718,7 +4389,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "83c21de3eebbbc5e74",
@@ -2731,7 +4404,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "246bcdda5271e052ae",
@@ -2744,7 +4419,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "a7092c789748b5cda3",
@@ -2757,7 +4434,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "28d2f3a07097b34b3f",
@@ -2770,7 +4449,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "4263369d10efc46d82",
@@ -2783,7 +4464,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "2f79ddb3ac3f381da1",
@@ -2796,7 +4479,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "17955407d4abc6f8ad",
@@ -2809,7 +4494,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "MAROC"
     },
     {
       "id": "ebadadb3c4ec5863f7",
@@ -2822,87 +4509,9 @@
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "6541be0cc4807d520e",
-      "title": "L'administration Trump souhaite interdire les exportations de diesel pendant 90 jours",
-      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20260924-l-administration-trump-souhaite-interdire-les-exportations-de-diesel-pendant-90-jours",
-      "publisher": "RFI Économie",
-      "published_at": "2026-09-24T22:04:27+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "f90994a6908a7774a2",
-      "title": "Aradei Capital améliore ses résultats semestriels grâce à la contribution du résidentiel",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdW1KN3MzQnJOM2xtTDZ1ZV9UYXhIQ1R2VWxDRDVEa3pGa3ZMNkxiSG1KTWRCTDhJRHFmUUFTcnZzTFp2djhTckxNNW5rbmpSYXhFc2hQbHZOUlVBQ1hiTW5raEhHUlRWR2dsSjIxOElETjFWbUZPRjluN2piSkVHTWNhWmtvOG85eXctNERUTQ?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-24T21:16:40+00:00",
-      "tickers": [
-        "ARD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "878740a53ace757423",
-      "title": "Galerie vidéo",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOLVZXZVE2RlRPeGxIVXd4alNJUzlwMFNvbzdCb1pJSExHODNBeEt2NGhGbDVNTTEtUm9JOEpjNlRvQ05ETTdrTmdPLTFoaF91OHZaUTV1NlUwM3M2dWdPOFFCa2ZQLVB1eEJnNGZUaXdhSzZVOTZ1Y051ZEZiN0NYd3J1VG95OWQ5MFZUb3VIRWl1bkdKYktUVFhaa2M?oc=5",
-      "publisher": "MEF",
-      "published_at": "2026-09-24T21:15:38+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "35ff06f21a8f7012d6",
-      "title": "Élections : les résultats des ministres sortants au lendemain du scrutin",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObUtaWlpncnN4eTNXY2VrbDlVS1VFMmRwZ1dPemRkRHp0ajdudTgxUWY3SXBHTE1CUUdKcmpRUFJ3S21XZjlISTZ6cllKa3p0dkswZVBNS0FtaE1yVmJxVFBJeENfRElmN1J1eWQ2VXN4azRBV0NnV0hFeHZ3UnU1V3ZKOWJsSU5RaHhkb3hid0phM0JhZWQ5UGhOVlpiMkI2dFJXazhjZXpqTXZxY3Q0LUhvVHc3OFM4T0NMdVBrNjZzYk9SZDkzNHZENnJhZE1qNks4?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T20:08:53+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "aa4fd9a5c3b2a30e07",
-      "title": "Résultats LabelVie: Le CA semestriel dépasse 10 milliards de dirhams",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcVZKaHFMUDd4WlAzYjJ3V19hVEhiZ2VneTRUdEZPT2VudW1zQ3J4UEFrMjhETFFoNWZrZ19DZklwNHFzUGpROUQ2eGt0aGk2cElVSlEyLUVxcHJha0txUmw4bDBTWXR0X2ZZUFhCYVJac19KVXlMc29Yb090NlRJZUlMYVpwajNPR0JUQk9veGZDVzFsaVgzd1lJY1E?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-24T18:48:46+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "a7a47c0e321f850f61",
-      "title": "Elections 2026 : Mohamed Adnane Debbagh invité de « L’Info en Face »",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVmdIT0NhOGhrM1QwbFZpUkx5YjJrTkFCdUp0bWdLNWh6a0h6aVlQOVV0TUZ5cUlRa2NNbzE1Z2F4UEoyVXhTZ2NLbFloeC1MeERiLUo4OVVUVVhlVGcxa3VJbnAxdTZDTG9ma1JGYjF3Z3lOV19hVTBXUV9NOG5xX294RFl0Q2JiRVJDMENDN1lSd1Y2ZmI5UjhR0gGfAUFVX3lxTE0tcks3eks5eU5OV2pQRVhqaUtmMEhBOVNzMDRQcUQ0aldnSWFxUTFRQlg1bTdlSmUwNTJXdUQwTmZ5cXZqU2VoLU42ejhIUE5OSzFxek9tZWRJZm9Yc3dkRUZSb1dSckRZcVY4SjVkZUhYbDcwN3RpR3VudW5CS3dGU254VXNZSzJ6MFlkM1ZMRnhCZk9BWGxwWWNqUmg1cw?oc=5",
-      "publisher": "Le Matin",
-      "published_at": "2026-09-24T18:45:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "UNVERIFIED_ALERT",
+      "category": "autre",
+      "scope": "UNKNOWN"
     },
     {
       "id": "2a834eeec7366b25c6",
@@ -2917,524 +4526,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
-    },
-    {
-      "id": "f152b48cc630db9d88",
-      "title": "Ciments du Maroc : Bénéfices en baisse au premier semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUUpKMFlNLXZGLUszVEVGclZ2VmthbW5TUmo0VEVNUl83R0szRHFXNTBSUURfcVZ5b2ZUQjdQQkJ0OTE4VUpMSFBGNzJFQ2J3YnpUZ2U4RGlQUHM3ZFNJdTZ4UzNjU3dBVjd1dTlYVGVJcHl5TmpZVmZ0LWtOczRWQlB4TXh5T2J6d0pjUVJrc1ZLdUFXaVlpR3RoMUhTLWZWV1lMZWdpcDRCTjJYT2lIUXg0bGR5MXdNZlZXaUhmUnRPQzJ3T1E?oc=5",
-      "publisher": "Alpha Bourse",
-      "published_at": "2026-09-24T18:26:00+00:00",
-      "tickers": [
-        "CIM"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "d8e8f2aa0b3db3e0e2",
-      "title": "Reportage au Burkina Faso : quand la violence jihadiste détruit la Grande Muraille verte",
-      "url": "https://www.jeuneafrique.com/1845416/societe/reportage-au-burkina-faso-quand-la-violence-jihadiste-detruit-la-grande-muraille-verte/",
-      "publisher": "Jeune Afrique",
-      "published_at": "2026-09-24T18:00:36+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "f692a5881c19b401a8",
-      "title": "Benabdallah : \"les résultats du PPS sont en deçà des aspirations\"",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQUXVVcEQ5Q0JyNkRGUkVweG0yYy0yamNjSEdURkJ4eG1ianROeEdIT2JiQl8wRWF3djBqbGhKRVVXdGdEazRkRTVEQ3J1UnBIdmg5LVpLTXpSVWpSUjE1UGx6RmZyVE5FdUNleE9vSzJOaHRSSUp0MVNNUTA2Ny1WWTFsUW9rYWxwR0FMR1dxQUlaRDBZX1R4bXJjcjBZV1BKS2wzaVBsdHFJSDViRF9tQmJfek1jSTlpNjducnZERzhySWp1d2pRaXlkUW12VXhBMkEyLXdOVW54LVdnLWJhbTZpQXk?oc=5",
-      "publisher": "L'Opinion Maroc",
-      "published_at": "2026-09-24T17:33:49+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "16d775b176c97551dd",
-      "title": "Elections 2026 : les scénarios d'alliances les plus probables",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONHlfQ0xZNzYxUUNONXBqTHJocDZjWGl2MTQtYkx6QkZ2X0JEc0pUYVNWLWpMaWdPRnJNWHBSSnNOZEM2NVQ2amZmbGRxd3FOVGdTTVNfRWFMMENSOU12VU8zcW1oVndXZTBLc0lpYzZGVklRYm9ub3hTTGphMFlyejZIbWNpRFRKMnBVOXVwRDJtc1pOa3fSAZsBQVVfeXFMTThDRS1JX1BpRmdRdWtxZFVWLUJWeGx4LXdZb2U4MkNDNUhuNzA4Zm4wYzliSm1xVHdRQVctUnpwTW9iMGtSSXVKNzFMaWtEWG81TTZLTjBWUXgzZmgtZG5XWlBiZG1SSjFfT2ViYUoyX25tRGJwNFIxQ2FTY1FpQWxqYTFhOG1xMFUzM2Zrb1VkSlN4Vi1KTDNqVzQ?oc=5",
-      "publisher": "Le Matin",
-      "published_at": "2026-09-24T17:21:00+00:00",
-      "tickers": [
-        "ADI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "8c10a87e283f2c6219",
-      "title": "Bourse de Casablanca : le MASI recule de 0,95%, Minière Touissit s’envole",
-      "url": "https://www.infomediaire.net/bourse-de-casablanca-le-masi-recule-de-095-miniere-touissit-senvole/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-24T17:05:24+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "01e3e87d964c089b05",
-      "title": "La Bourse de Tunis rebondit jeudi et met fin à sept séances de baisse",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONk5zaW11ZF96N25LT0d3LXA4d1ota0gwejhLUm93MFZma2oyM3Nzb2h5V0R4RDBkT2IzaXVrTWFXVUlEcGFPbjBpUU5KbndONUxnOVpzMWJLSVVDVHJ1UXdLWms3RXB3VDFwUS1nMjhidHQxbjlINWlMUWU1LWE5RWNjZkgtMUhyU3RUcTBwajc3bFBrYkhEX0kySzFyZjlwNDFIcW16LTk3M211?oc=5",
-      "publisher": "Ilboursa",
-      "published_at": "2026-09-24T16:55:58+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "2e277de53556a069d0",
-      "title": "Législatives 2026 : le marché reste prudent, loin de l’euphorie de 2021",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOc0I2ZnFhTmZNdW1qUXN4TW1OUTlGVmEzWEdVY1d5bUdleDJtYkFhUWgzOUc0YnlraUpUbkVEQU0ya2tIUjctY2Zvd0lsMllUcnAzdWsxWmRmbjJsWlRWUEhfUGsySlZYMllldFFrOGJLVGZYSHc5ZnhoZXpNM0tWTjBFZ003eWJyT2xTTzl0Vm5mQ1NnQ1JjeVVSa2VTS0RPQjJQd21wOEc?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-24T16:42:59+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "735234c4e49a025256",
-      "title": "Législatives 2026 : le marché reste prudent, loin de l’euphorie de 2021",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWDZMblBKblZLWF84ck1HdmpxcV9VNGZicW9SWE1xTklnMkRiWHJYd0ViQVBNbVhtbDlPREg2MUVsQzhYNGtNTHFjZUkyMHVtWXBrSS11ZzRSeG9LQ2NkMVlpSExKeS1WNWd1bHR6eHRqTE9HOXN4OGR6SWJDaURWQUVhc01fSUtuQTZqZTQ5VTJOWWpNMlBhS0ZPajI2VjVKV3BzM2ozNThhR3BXcnpjZkl3?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-24T16:42:59+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "3c1ebe8f340f95af65",
-      "title": "Élections : les résultats des ministres sortants au lendemain du scrutin",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZXZaRnNLWV9PVW1oUGctMEZ0MHh2bmVCd1BIbmZKd2JfMEppdURueGlqLTRka1NaZ2pGREtqWTFHZUVzemZqRnZGZWFvUngwV25qcXJSN016WFB4VnlpSGNUY3RBTE82WjBDZVFmYW02NFc2RG5Ydk0xNlhJLXpxU3k1dXBnR2xKUTF3em51WVlEbFUzRnJxSU1DY1FLQWcxRTg2dDVrVXdpMlpoUW9MRA?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T16:37:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "557bb753ddd3c54825",
-      "title": "La Bourse de Casablanca clôture dans le rouge",
-      "url": "https://fr.hespress.com/489842-la-bourse-de-casablanca-cloture-dans-le-rouge-137.html",
-      "publisher": "Hespress Éco",
-      "published_at": "2026-09-24T16:24:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "2338b02386651c8d71",
-      "title": "IA et sécurité nationale : l'Australie aujourd'hui, demain le reste du monde ?",
-      "url": "https://www.france24.com/fr/%C3%A9co-tech/20260924-ia-openai-piratage-s%C3%A9curit%C3%A9-nationale-australie-aujourd-hui-demain-le-reste-du-monde",
-      "publisher": "France24 Éco",
-      "published_at": "2026-09-24T15:57:18+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "37afa5d7c0c3674242",
-      "title": "Après l’allègement fiscal, le Ghana appelle les compagnies aériennes à réduire les tarifs",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOckdnUmtuTEtWRURuU01lVzNaMGpranBmdGJhSmJVZVQ2ZmJjQmh6LWwwZE1GX2FZUlo5dW9xNHVmb0xhYlNkQTRUSnA2VDdEdllodEo1ekR1amZHbF9iSWdCNkxhd1l3WG51VjAtZWkySHBCNHljaWtWeFF4T0t0cWh4eGJGbTVuZU8waU1fY0loQjlJbUhJbFFpZUIwd0hEX2VsV2pqM1pfWWVxQmdvMlcxY0s5OEgtRl96MEZUbVpqZDhJM2VYZzlVSldrYlhrVEpFbUtOX3UxajB4cmw3VFJLNVI3dw?oc=5",
-      "publisher": "Agence Ecofin Maroc",
-      "published_at": "2026-09-24T15:44:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "466f2f43c60333dfc0",
-      "title": "Alliances PAM : El Mansouri affiche une ouverture sans exclusion",
-      "url": "https://www.lebrief.ma/alliances-pam-el-mansouri-affiche-une-ouverture-sans-exclusion-100167205/",
-      "publisher": "LeBrief",
-      "published_at": "2026-09-24T15:39:17+00:00",
-      "tickers": [
-        "ADI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "2e8dceaf57ba5f2c0d",
-      "title": "Aradei Capital relève à 750 MDH le plafond de son programme de billets de trésorerie",
-      "url": "https://www.infomediaire.net/aradei-capital-billets-tresorerie-750-mdh-ammc/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-24T15:35:39+00:00",
-      "tickers": [
-        "ARD"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "7c4e4632d911960535",
-      "title": "Législatives 2026 : le PAM en tête, le PJD de retour… ce que disent vraiment les résultats",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVXF0Z0VoSWlPVXdpUnA1Y2lOMTM2Q0pUaTBmaTMtenNkSzJJbUFHQzVreFJuQjNNWnhXU0pPVXZMYmI2eXNkMHpKNEhLZER4R2V2T3l3Sl9xRmgzNUgyVlF5TVhORklQVlNiWXZXZWhkcmMtNFhIejIwVlBZeks3a000aExYWjZHYVRKeGpQcjVxVjE1?oc=5",
-      "publisher": "Finances News",
-      "published_at": "2026-09-24T15:35:29+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "ac8ef861614e627f6f",
-      "title": "Santé des femmes : les investissements progressent, le Maroc renforce le dépistage",
-      "url": "https://www.infomediaire.net/sante-des-femmes-les-investissements-progressent-le-maroc-renforce-le-depistage/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-24T15:32:58+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "9ad1f051e7ced5e0cb",
-      "title": "Benkirane révèle les détails de son échange avec Laftit après l’annonce des résultats",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQTVJfQUFpVzJVN1BPcUtCaXVtQ2ZOLXp6d0dyd0dFMVF4QV9UaGp3azB4UUh4bW5OTUk5Skg0bm1ldVlmU1pTdzZGaEdYY0dLWldwREhKdGp2eUlfQzVKWlE4dlpRNnZvNHEzMW5ycE1qY0xER2JlN05hUDFpbXNSQmd6aWVBLWxtM0FRdUpIYXJzYktoR1NleUt5Yy1XaVdqSlBUYmg4aVREdEVpZDVXUUtVYWpyNF82ZndINE5Db05FMnkzSlUxenlQRTdKUTQzSUp5emhkMA?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-24T15:28:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "a5c445754d15678c6e",
-      "title": "Élections 2026 : Ce qu’il faut retenir des résultats provisoires",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN3ZwLXA5RzdyeWlibnZ4LVNNbzQ4N1RQeWpiZHBHek5kRnBhUVExemx5SjZReEtkRU4yWmdYbjBDcjl5LWFoakgwczNPNlBuenVZQ2FmOU84WDRQNG5qb0tKMi10S1ZFNmNqZEI2UExzcTNGLUUtM21WQWhkc2FUaDZ4RnNOV0ZLOXk0R2J2bTJyUFRGRk9ibFZR0gGfAUFVX3lxTE1IQTdZRTNkRmpkdlhSS0pETlpma3FvSGRIOXdVcGxWSHBsZUpTQktmQVJHdUxMMklJZUlyam1SQkF2cDZzdDhoUEt3QTd6RlZ2eTVFY2ItS3ZXU0pmNHg1aUFnYU9oREdvSE5LNGJwMXdqTG1JNWJwMUliaTJGQnRNcExPX2RHVm84YjhfZ3hrSFgtV3pKZ3FpeXdmcEJDSQ?oc=5",
-      "publisher": "Le Matin",
-      "published_at": "2026-09-24T15:22:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "261462fa01341898ab",
-      "title": "La Bourse de Paris en baisse face aux taux d'emprunt et au pétrole",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQenJodWI0cUE4QzNvT2hxV1k2UDVaWWg4UGdFOHVab0RFbzZCZHBrZC0zd1N4Z1B1R2lIQ0VCZEd3bEtlYkdta2UzYjZNZE0tNWNtemhDZGFEamcxUXo0Ukp6VUdZbERyNXlQM2Zzc3dyNF9mNjFPdE5uNE5KeUo4cGI4cy1rR1hxeXg4YjhVdVNfa2otb3hRU3gwX1BPRUllV3pV?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T15:10:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "42f53f4d550a44808a",
-      "title": "Bourse de Casablanca. Le MASI finit en baisse après une ouverture dans le vert",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQWdPZEpWVjg3cVEyRk94ME40SC1tX1A4SlRVdnRXUzUxeFhhZEtTaTg5WHRZckRWbEZISG1yVXVlWTNQTDNXdDlNT2pLdWJKSzFDR0hDcmlkZTN6WDNRTUx1OXZNWDY1d3ZSZEsteVIxRjVTVlNRTnhYMGoyNGI5N0JkS0xwa1RLNVFnODBRcE9NSGEtYjNZMll2OUhqdk02Y3UwcGZNSDJuM3ZhNUdJMUpGandySXU5Q2c?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T15:05:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "d90cae1fb3168c2050",
-      "title": "AMMC : alerte sur des plateformes d’investissement frauduleuses",
-      "url": "https://www.lebrief.ma/ammc-alerte-sur-des-plateformes-dinvestissement-frauduleuses-100167160/",
-      "publisher": "LeBrief",
-      "published_at": "2026-09-24T15:04:34+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "a937b5f5a1f0c7c1d7",
-      "title": "Garantie des résultats solaires : Citech veut introduire la procédure au Maroc",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbnVySDFOQ2dqVjN2TVkxNzl5TzZNQjFqUkxxTjhRNnAwcmJ4MHRDNWJva1ZxcXRPbVJLV3NXcHZrQ1pmdWxrc0labmZLcUdpakNVSHh4OUc3UC1jNTMyR0w4ZFlGRDA2VGh6RnhRaEVWZG9zVVdLOFVyRFRTNkk0UE1JQ19NdmlNR1VDNkt0d1pyUTV1R1BhWFZsVGtDenB1Y2l3eU1rZDE?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-24T14:46:44+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "64d79c0ddfdad3231d",
-      "title": "Cours Bitcoin : Les risques liés à la Fed bousculent les marchés",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVy12d1VHNkhhdjBHdmxMVGlCcldFNEZaYlhENGdweEk3aE5JNTBkdUNfVmxlZEZ0cll3VzlFOGNwWENKQVYzSWhnZ2V1dG9qUkN1Rlp5em10TVRKNV9jdlYyOGItQ0x3X0w4OHRNOWxZUWdjSXY0MUdLT2NzTk0yWGk4MjEwUi13Y2lPdGVEN0FhRk9QRjFHNW9BQzBaczNEMDdVMA?oc=5",
-      "publisher": "Fed / Taux US",
-      "published_at": "2026-09-24T14:40:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "1327c565d5d083810c",
-      "title": "Le Brent bondit de 3% à 106 dollars sur fond de tensions au Moyen-Orient",
-      "url": "https://www.infomediaire.net/le-brent-bondit-de-3-a-106-dollars-sur-fond-de-tensions-au-moyen-orient/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-24T14:35:43+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "64d6168c45b330616d",
-      "title": "Suivez le dépouillement des votes et les résultats",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1WaUQ0Znd3SWJwUW1wSzRtbElCVVlmMGQ2bkJ6ckxhckJZUzZCbTVkUkxyb2tUclptS19Xek1iaWREamFKangxc0hHQjJ2cHB1VVl2SVdwNHYzYS1jcWs0SzUtMVdsMFlCUlE?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T14:32:27+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "7c86b6d26f944c1e02",
-      "title": "Agenda mensuel économique international du vendredi 25 septembre 2026 au samedi 24 octobre 2026",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE90V1JhWFhodXVETlAzWm1nNUMwYU92R0Y3aENxMFBJYXN0R2xLMi1vMC1CX1Z0NDJweHVVTzFmbWNXM1AxTWpvVFlCZVBRbnJfYUJLa000SmlPTVZmellURFRB?oc=5",
-      "publisher": "Inflation US-EU",
-      "published_at": "2026-09-24T14:28:44+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "24d3a452d0d609013c",
-      "title": "Forum de discussion Général, Landor objectif CT",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBkWl8xOGZ3MnpFVUQ2RTZCaHZSREhQS01Hd3dyRGhSXzZOSXJxczFXb0VJTjd0b1YtY2ZXTzFOWVlPQW9KWHhqeUVuQ0J4XzZOc2s3Z21aLVBYUnd1dWUwd1RFSG9kNmZr?oc=5",
-      "publisher": "Ilboursa",
-      "published_at": "2026-09-24T14:27:20+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "f3e7fd090812de0f36",
-      "title": "[Tribune] Facturation électronique, IA, data : les entreprises marocaines sont-elles vraiment prêtes",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMmdPUktzVVNyMEJrYUM0UWlySThLQUJnWGZQanRYNnRiQ1JSRmFvZzA2RE9hU19LVDhpc2RPbUliU0FOTzhjb1Ntak1Ga0llLXNKTnFjaWZFZFNWdTFaTVZtb1JOT0N3eVZGMFdrX2NfMjhiaGh2cEJPdWZZZWdaX290MVZZVkhNbWlJU0JhZW9ISElyWEFzcmExTEN6dkJXaVR3c3FoTFRuN1RxYVpuaWE4a3VCYl83NEx3OU5KUWJUcDJYaE1GY1dLdzcwRFRPUlVuTXBWdjFncFFoSWkwWGtMMEI?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-24T14:20:29+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "eb69d59de26a08c911",
-      "title": "Elections 2026 : arrivé en tête, le PAM ne pose aucune « ligne rouge » pour les alliances",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR2xtNzFQeERoSFNKZkNmZDVWcjhGd0lYT2Z2TVJOamdFekF0SWNIUEpHMlkzSDYycWNReTQ5ald2T09HOEtzSFNZd0JXNHFURVFiS2laVzRxcnZ5UUhISGZza3VXZHV6TnNqUWQ3YmVHOUNSZVdXclczTUwwNkUwUUItcWVGTmFpQkFYQ3RBczA0TXZEM0llSVVMc2Rwd2VQRUHSAacBQVVfeXFMT19aTDhPQi1pM0JjaU9PdHQ1Smh3QkxtWFpQSnByYUlQNkhYRHVkODBPNHlxTmw4ZG1kdVNtS2VzLVVlOXJvdGZFb0Y4bXhqZHQ5djAwLVRJbGlFMmwyYkN3T2ZOX25vbGlHOGxDVlZLSVZTbjNZSy1INlVWYk1ZZ2JKMm14djI2Rk5SZl8wckFPRi1mdXhuWWl3M0c2N3UzVWY2YTd5eG8?oc=5",
-      "publisher": "Le Matin",
-      "published_at": "2026-09-24T14:19:00+00:00",
-      "tickers": [
-        "ADI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "32662b825bcf7885ca",
-      "title": "La BCP et Réseau Entreprendre Maroc scellent un partenariat en faveur de l’emploi",
-      "url": "https://www.challenge.ma/la-bcp-et-reseau-entreprendre-maroc-scellent-un-partenariat-en-faveur-de-lemploi-324682/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-24T14:17:28+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "885b88071f565b664e",
-      "title": "Algérie : Djezzy se positionne sur le marché des paiements électroniques",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOOUlzeTJVMWo2UFE1alRqM2gwNlpNa1RVLTIwNmUxeW1FMXIxekJpSVIzWHJ2cGtrSnR3MFdadkJZWjdDMWZ5M1VlSThWN0FuamhHU1lGQ2UwS09RbXdBTkZkTlRhVmp2RUtNV01yN2lmMUZzUmtDMDc0NWk1VVJ1MkJKa19GVnJYRDVhVU1RNmVqRjJtc2d4Q2dvczJzcFhHSW9iQW9VdVhWQWJzNV83LVNWM3JrcnIyVno1UHdDaFNwcnBRbHRUVUxKbnI?oc=5",
-      "publisher": "Agence Ecofin Maroc",
-      "published_at": "2026-09-24T14:13:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "5796c803ffb608c660",
-      "title": "Airtel Money à Londres : ce qu’il faut savoir de l’entrée en Bourse du champion africain de la fintech",
-      "url": "https://www.jeuneafrique.com/1845718/economie-entreprises/airtel-money-a-londres-ce-quil-faut-savoir-de-lentree-en-bourse-du-champion-africain-de-la-fintech/",
-      "publisher": "Jeune Afrique",
-      "published_at": "2026-09-24T14:04:07+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "87c19ff3c023968928",
-      "title": "Matières premières : le pétrole sous pression",
-      "url": "https://leseco.ma/business/matieres-premieres-le-petrole-sous-pression.html",
-      "publisher": "Les Inspirations Éco",
-      "published_at": "2026-09-24T13:45:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "3ed411e4e1f8cccddd",
-      "title": "Transparence immobilière : La Tunisie classée 74e sur 88 dans le classement mondial",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaUoyOXhDMDVQa09XeTh1T3VqczFBTkJIT2dXVzVKN0gzVmlNTnY3V0hxMzZObzVGNGJxTGFUb1BaaUFhcnFaWGZWYkRNVlhrbko4OG5PdlV0LTJIVkpTMWZXRUxnNUtGU0pTS2dJMDQ2MXFmSndYd194ajIwV1pYRG1Ud3BZSDBwdjlUcDQ0ckhISEJUZGhCSjFGZ2xZaEV4MDlxQXY0MmdsNVB3Tk9PYmhSbi1CVjQtalVuMg?oc=5",
-      "publisher": "Ilboursa",
-      "published_at": "2026-09-24T13:44:05+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "b5b5d03a2baf4a03e0",
-      "title": "Budget, croissance, dette : le prochain gouvernement face à l’épreuve des promesses",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONXE5ei1leHowNDhVeVhlOGx3NGZJT1piNUphMm55OUFrRnlrRUwyTnE2cUZ3QjE3Qm9zQnhIVk9tbGZYSEFHUGFtSEM3Y0FzZENSclZFRG5tTVQyLUZrZDhUbU5MOFFfc2xjaGVDakJyc3lPazVfdlZWWmhWRlJpZkFvRUhhRlBucFk2MDB6YUIwM0xGa19tUF9xUE96OVFNWUM1anNacE9VMEh2X0tIZjZKdEw4Tlk?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-24T13:42:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "d026b45ea130f9c74e",
-      "title": "Budgets ministériels et documents d’accompagnement",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdTZTTDJIR3A5Yk5DcEg4dGl2bU5PODRfUTRLNGFmNHZER19jZzdCMThiSXhTNHg2YzNVc3JfMkNKRnM4MXBPR2N5eldsYXNEcWRzZV96SHRhTGpwaTdvLU5aWnN3U09tTW8yMXFrOFpvaFVXbUhJVEdlV0h0cm9CeEFlVDZKVmV0M2MyM3BzNHJDNmpHZTJPR1V0RE9oV1k0cG1HWFdoRm1LRE85eDNvM2lVMEdLZ1h4QnMyTDRQdUpsUQ?oc=5",
-      "publisher": "MEF",
-      "published_at": "2026-09-24T13:42:10+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "bdae656c489d2a8cc0",
-      "title": "Législatives 2026 : Benabdellah juge les résultats du PPS",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWDFnR1NUcms0VUJSckRiWVF4LWFJRFU2ekdxdTRjbkpQRW1wUzVrZmFjYzNlVE85Ui1PMFQzeHE2Sm5RVFdPa3YtYUtUVEtUWFd5eC1zNThLX0xaY2ZfWDlJR25SdE5HV0U5VVdJXzM5VG5waWtPZVZIRGpIeGVyQWs3b1BBZTBoX1RoMHFsVk5rWWNlR0RYS3NRMnU?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-24T13:26:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "725dbc54c53fd63d01",
-      "title": "Législatives : Benabdellah juge les résultats du PPS",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVU1XY1haY3owaTRlR3lsQmlaU2dSc3pzajlveWwzU1NyU2cxb09oMG1SS2JNRGlHVEZlQWVLOElNd2VROXBvdlJuOV9xMGpxMHo2bVJibXNqNXQ1dlFmaC1pSnFoYUxUOGRPcG93UHVNSzl1b1lwNmdxbGNseld4QlZEUUlqWXVuaEQtNFdOWnpLcUt2WXc?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-24T13:26:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "dd959b32cd11218156",
-      "title": "Réussite scolaire : Ce que révèle une étude sur les adolescents marocains",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbjNnRGR0b21RX0ljMS1KSzNsdlR3bmxaUEdWcjZEaUI2Y01vWllJb3p3Z3JQa2ZGSklXNzcwNElSUjlESG5MZW9IR2w5Vnk3TUhhTDdCV3dvUTFNZFNSRUlDSW1nX0tXSktfU19oS2dvc1BJRmEta0QwNnhLQW5MWWVSTHFqeThZU1lGRmpERkh0cE9heTFMbVNyYXdrcDRtYVY3dm9RNNIBrAFBVV95cUxPcEpSbElaSU1WU2FmREJLaVR2N2loemNrNjdSRF9NT2tzU0xaMi10Y3NXWDFHVm1jSFZlM0VqVEFUZFBkWUVDNDVzRG9kd3g3eDExWHNVLU9xMjFWOTNocE1Md25YZmU3TUpBdE5YWTMySENXT0FISzMwRl9HekdWYmgyakRpZnpvV1hjNWxIdUJWNXkxMjI1THFUeDFIZ2d0eE5RM09RbFN6U253?oc=5",
-      "publisher": "Le Matin",
-      "published_at": "2026-09-24T12:56:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "e0de3dffe76e9012b0",
@@ -3447,7 +4541,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "486e1bf8e123698191",
@@ -3460,7 +4556,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "84ed44c515adc73b97",
+      "title": "ECB Executive Board member Isabel Schnabel to resign to take senior role at IMF",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260924~bea1dd9824.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-24T12:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "c103f4c291c8570821",
@@ -3475,128 +4590,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
-      "id": "48331161326c9bb361",
-      "title": "BCP et Réseau Entreprendre Maroc renforcent leur partenariat en faveur des jeunes entrepreneurs",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORHNSeFc3TU1pZTBaRUdDeVhmSUVNeFdYN3daRTBrS25pNlRSdDQ3LXo2NXVoTjJhaUFRU0c4OFdvSS1EeVVkWU8yNm5QR210djVYQXlNaFJwYXppMVhuMUZja1R0dDRfdVB6aDdFRy1QSzJ5eUo5ZFpSSldnenhzSEVSU1hMemgwNWg3aXg1aGRzenJ6WFlsaHF0YlpCNU1Ma21Ud2psQ0R5bTdwWmFFZF9walU5bU53RmpZ?oc=5",
-      "publisher": "Finances News",
-      "published_at": "2026-09-24T11:37:07+00:00",
+      "id": "059a1723ec41ace80f",
+      "title": "Philip R. Lane: The outlook for the euro area economy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260924~e0eceef02c.en.pdf",
+      "publisher": "BCE · publications",
+      "published_at": "2026-09-24T09:00:00+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "243036e9948b41a6cd",
-      "title": "AVIS DE LA CONSULTATION OUVERTE",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRW8zMkh4dGtaV19zRnZrMnlpNTl1aWdRYjVCVk1nQXduNkhxM2tXT3JON0xsUDFlNklyZ05iTUtOT3pyOERGS2hrU0pucFA1TFVsWTd5anJpX1dtWkw3M2JhVnoyV18wZ2xGRmEzSTd5anJDVXh4a0N1WTM3WkZwUWhYNXZoUXpaZlJDcWR0dVd6a1Zk?oc=5",
-      "publisher": "Maroc Telecom IR",
-      "published_at": "2026-09-24T10:48:02+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "14a1504b35ffb6339b",
-      "title": "GNL : TotalEnergies lance le projet Ima pour alimenter en gaz Nigeria LNG",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcEc5eXg4VDAzNk84NVZTR0pYSUFvaktLVmdTWGNQSVU4VDFTaHdLMUtjR3h0bHBvXzZxRm9SZy03VmpEb1JTWmZDU1pnNTUwc0dPMmswRVR4ZDJZc3BVejdCUldUQlFvdlRzbTB0dll0TGVLTjBOZHpLNE5pdFloWW0yY0hIeGFkMzR0dWpPeDNCMHgzZEdNUmtsemlySE1hMEpCNDlvOURETk9PUERYZlc3LV84cjBqV3R2ZFlIOEJmVlNiSGgzU2x1UDZydms?oc=5",
-      "publisher": "Agence Ecofin Maroc",
-      "published_at": "2026-09-24T10:17:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "c0b14eaf7533680468",
-      "title": "Microdata booste ses résultat net au S1",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc2liVW1jUkRwa2NSNEg4VnM1V1drRHNhTUxYZGdOZEx5bERlRkY3R2ZFZlo5TlZzSkNpNnl1Um9xQmFlZTBGbE9DcHFnaTV0THB3ZlJOMVpGQm9acjlRd0llbVhRM2syX2xfWkVOc2tqZ2ZwaWEzZndlSldnNzVlTlUzTU5ieFk?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-24T10:07:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "9bfc96badd6233fe9c",
-      "title": "Cosumar: le résultat recule de 14% au premier semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQmNYSjdtRFhKSXZvZENwM1ZNUHpqem5nbGVQTTltNExpMmcxR3A0M2FuMjVXMWpKcVN0T3BBRUlxNTRWS2VjUWNKUmpyZnJuczA3VDh1Mmllc3Q2SllPYWlIZ2VERzJCMEhVYWE2VmVxSWVVSnhVcWE1NlFoZnNUcDJrQWt2aWEyU0did0FScDFDMzRoNkVj?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-24T08:32:39+00:00",
-      "tickers": [
-        "CSR"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "9971f7f8dc8f0475af",
-      "title": "Xi Jinping à Washington : l’IA au menu, la rivalité sous la table",
-      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260924-xi-jinping-%C3%A0-washington-l-ia-au-menu-la-rivalit%C3%A9-sous-la-table",
-      "publisher": "France24 Éco",
-      "published_at": "2026-09-24T08:16:59+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "442cd808f67b6c06cc",
-      "title": "Alliances post-électorales : les lignes rouges des partis, exprimés avant les résultats",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQkd0aXlhYzlSdHJ1MmN0VmFmMXVCWExoVlVpOERBRF9yTUxFVWpnQkVRM2JwcGVPUmpEMXgtcUJMa2l1VG5mZW4xcXpjU25ONE9NYmpISUdrekV6bTVoYWxwMHdBUDJZM25BX1l6VHdRc1d2RnVESFphUFUxSExfaVJlZnN6a09ELUdiMmhVdDRhNTVhdXk3T3A5ZjFPcUlQbGl2TjdyYU5nMmxDclRtOGx5eFVhSjliTVBDcWRtQVBPYTQ?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-24T06:47:00+00:00",
-      "tickers": [
-        "ADI"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "7997804a2ea6165d9d",
-      "title": "Législatives 2026: Le PAM en tête avec 97 sièges, selon les résultats provisoires (Ministre de l’Intérieur)",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZ2ZLOGQwTDVYS0x4d1ZBeFJ5ZEpJMG5yeUF4RFZ4d0JHTVJzUk5FTnBmUDN3WVZVY0d3U05zYmlDSi1PdDBuZFBFc3VsSVRaamJyOTdQX2VBa0xDVWE2NFEweXZYNDdxTm9KdWNjUFpVNjB0SklhZVZ4UWpremxaemlQV2hJeW5DYW0zX3l0ZHF2R1Uyclk1eENBaGdONmlWdHdNNm1nTjJwWFFYZ2VldW02bU1QeHRWSmVBVnpURmJTQ3JzcHgwejJNdUh5X2FSR2E3cg?oc=5",
-      "publisher": "Maroc Hebdo",
-      "published_at": "2026-09-24T03:27:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "c3fe4ea1ef8bc451f6",
-      "title": "L'Événement Maroc Départs en cascade chez Groupe OCP",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMjg1SXEyX3RsekRtcDdnWUotT0haY0VVaFR0N2cxTzRrUmcyTVFNb2NRczFISXlBWTJXdDVlb25ZQm1aczE2bVIwZlhjQzhDbmRrT0tHUGhvSFNMTW1ackt0cmpncjFYOFRUVHYxbTQzckVIcDBBTHFmMTVuWkt6YmlxN1l5cGlSS2RZckNKMnVFYi04RXk3TmN3M1Y4MnJ6dFFIUXF3N0RQOU53SGc?oc=5",
-      "publisher": "Africa Intelligence",
-      "published_at": "2026-09-24T02:40:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "36bc1e695f0dde3b32",
@@ -3609,7 +4622,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "f0a8949d709889efc4",
@@ -3624,7 +4639,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "f6b873e3cebd7ac391",
@@ -3639,129 +4656,26 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
-      "id": "33a8d179b8e5d4be55",
-      "title": "Cosumar : le résultat net part du groupe recule de 14% au premier semestre",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPLW1WOHVHOGVRYmdPdmtkRFRUSWRtS012ZUo0bm0yUC1udU5aWlpXMW1NbHdueVVLc0RVdzRIQjlUUzdVSUQ1eEpWTlhEZUVydDlUTmFXRm1uZHJ2alhKM3NMSFY0RFpQeGsxYWNfMTloalpsS2RXblhPZmhiSEhvWmlGNjE4U193Vmx6OFFzX0E0LWxoQlJzbjRqc2R6R1pYTVl2aXVUQmhFQ1dNYXRPb0c2Ym43c19YUTIxNVdXSmNrM0x5R0Q4Yk5qQ2FFbWhzX3lV?oc=5",
-      "publisher": "Alpha Bourse",
-      "published_at": "2026-09-23T18:39:00+00:00",
-      "tickers": [
-        "CSR"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "d4e4b8fdc3f7353d5f",
-      "title": "LabelVie : le bénéfice semestriel bondit de 36%",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR2lYa3N6N2hERkQtTnBGRk9ybEtNY0taT2lXalI3UlpHX0ludXVBRnFIVVpBRDdpTTdxalNzU3JyWDN3REpYNjlXU3dXeFI0dko4NnVRVzNKaHcxUnNjV01ZaHk5TEdfQXR1VzZRQUNQaXBoamhpOTNBems4bTlaMHBZaWVrYVNGOXI0MUJ3VERwQWw4b24tVEMxRGM?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-23T18:07:02+00:00",
+      "id": "4144e55288cc8a2846",
+      "title": "Rapport qualité : Recensement Général de la Population et de l’Habitat 2014",
+      "url": "https://www.hcp.ma/Rapport-qualite-Recensement-General-de-la-Population-et-de-l-Habitat-2014_a4349.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-09-23T11:16:00+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "b8cb81015ffbecae14",
-      "title": "Risma : CFG Bank recommande à l’achat et mise sur un rebond de 33 % du titre",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOejhNbnhSdmsycElMcE1EZnA2X1ozZlRXTGdJX01iWXQxeG15ZHNrRG9HbmRfVktqQnBvdko0U0pLMEpub1pkZTNFdEx6dGkxVnBsQlhhYm5mYTd4MS03N1BmTGdhS1VuSjFRNmQxLUozZFBRMk1ZM2Jtc2ZFLW9wNXdDaW9oX3BYMnYzZGxpV0YzYS1vSGpuaml3VjBFT25tblF6d1pOTHVMRDlhZzlqMFlpUXpjUGVhc3pJag?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-23T17:20:44+00:00",
-      "tickers": [
-        "CFGB",
-        "RIS"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "f97f2cb46b3f00ae75",
-      "title": "Nigeria : TotalEnergies mise 800 millions de dollars sur le champ gazier d’Ima",
-      "url": "https://www.jeuneafrique.com/1845684/economie-entreprises/nigeria-totalenergies-mise-800-millions-de-dollars-sur-le-champ-gazier-dima/",
-      "publisher": "Jeune Afrique",
-      "published_at": "2026-09-23T16:07:44+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "32547d70b165d511ab",
-      "title": "Les Emirats interdisent les succursales de la banque iranienne Melli dans le pays",
-      "url": "https://www.challenge.ma/les-emirats-interdisent-les-succursales-de-la-banque-iranienne-melli-dans-le-pays-324658/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-23T15:33:19+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "da9a64f281809cfcd4",
-      "title": "Eau potable : la SRM Casablanca-Settat accélère les projets en milieu rural",
-      "url": "https://leseco.ma/maroc/eau-potable-la-srm-casablanca-settat-accelere-les-projets-en-milieu-rural.html",
-      "publisher": "Les Inspirations Éco",
-      "published_at": "2026-09-23T14:06:16+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "6826eb3c789b385025",
-      "title": "AtlantaSanad annonce une «croissance soutenue» au S1-2026",
-      "url": "https://www.challenge.ma/atlantasanad-annonce-une-croissance-soutenue-au-s1-2026-324651/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-23T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "233765bbe869ae7e78",
-      "title": "Élections 2026 : R&D Maroc plaide pour une nouvelle stratégie nationale de recherche et d’innovation",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNc252elpLX05SX2N5Tl9JdW1mdEVWM2xfdEpFelc0Q3VhamlHOTE4TjU5QjVEa3hlLU5rQ3g3ckEzaVM1cHh4cjRIT2I3YmpOeWQtVzAyTm5xZWtobEloUVBMZGc0clhGZ1pISHIxMnRmRmpySjVaQ21hSEwzY1FsS3FyY0RGYmJTaThScjdCR0dzcUhHVE5sQkxKSl9BX2s?oc=5",
-      "publisher": "La Quotidienne",
-      "published_at": "2026-09-23T11:10:13+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "dc0a0c72dfec19f8fc",
-      "title": "Nigeria : TotalEnergies et AMNI valident le développement du champ gazier d’Ima",
-      "url": "https://www.financialafrik.com/2026/09/23/nigeria-totalenergies-et-amni-valident-le-developpement-du-champ-gazier-dima/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-09-23T11:00:36+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
     },
     {
       "id": "e71261c8ce86ab653c",
@@ -3774,74 +4688,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
-    },
-    {
-      "id": "65de9221df720d2347",
-      "title": "Microdata: le bénéfice semestriel augmente de 21%",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaFVzYzRZMmVxZXVadlZFMElBWWVjVS1QTTJkaEFvcFA4dVVjajFOVzdiLWxXSFJ5dW5jWDFibmt1VHI1TUJJcU9fVWFaRWJTT2lvcHJQX1dPWnBHY01IZGgycnZZYURkZDNrRzV6Y1VxNU1LZ3RYYlc5OG5uWGVJT0VRODZ1blNFWjJ5RmtRSDBZR2NyQVlQdQ?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-23T08:20:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "aa8b87c5b6d330742b",
-      "title": "TotalEnergies to Develop Offshore Gas Field to Boost Nigeria LNG Supply",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/TotalEnergies-to-Develop-Offshore-Gas-Field-to-Boost-Nigeria-LNG-Supply.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-09-23T08:00:00-05:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "0a156d9e39cea7e2d6",
-      "title": "Microdata : le résultat net progresse de 21,22% au premier semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMjVXLXVCVjdIejZlbmdyQVAtakxmd1gzNFBfSnJTdnl5RHM3TGNERW1RdTROaUxJTmtyVEtBUVhobWV5MGZDbTNqX0VScnhtT1hwXzVCNmhRTGxpaUFDOG1hcGF0OUVJTThpYm1YakFsUE9LWGwwN2kwU1Q4MkItMkxpbDdxaU9EenNyZGU1bUFWeUQ3SWJTWHNfWnNnaldicl8xdmpFUFFPTDR6b1JQZDdETDBISF83VUtUMHFNWHFQRVJYUU95Sk9ZZXlPNjFr?oc=5",
-      "publisher": "Alpha Bourse",
-      "published_at": "2026-09-23T06:12:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "bdb9de959efed22b03",
-      "title": "MICRODATA : Résultats financiers du 1er semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWEpsQmFsVm5jSi1iY1h2bTlsQ1pmUHp5dTllUmZXYUNQTDN0Nl81bm5JSWVvVjRpWE53YzZfRFdGNzNXMFF1aVR0WmREVW9Na1dVZlpQU2xDbFZ2cC1zMVFHWVJZc2Q3RlBkTVBzZUVYbklxUXBST0RRdDFBZE5WMVRTR1AxdzQ3V2ZsVlBqYXhkT1hIYmxRaE1KVnVFZEE?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-23T06:02:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "b732c7134d9ca6e6dd",
-      "title": "Maroc  : le bénéfice de Sonasid bondit de 72 % malgré un chiffre d’affaires stable",
-      "url": "https://www.financialafrik.com/2026/09/22/maroc-le-benefice-de-sonasid-bondit-de-72-malgre-un-chiffre-daffaires-stable/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-09-22T18:57:44+00:00",
-      "tickers": [
-        "SNA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "3a3155b7e4f3f937e7",
@@ -3854,20 +4703,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
-    },
-    {
-      "id": "f0f42e80a71a1c814f",
-      "title": "AtlantaSanad : Le résultat net consolidé progresse de 4,4% au premier semestre",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUGJGQnotWV82dF9pZkpzQ3QtT0czd0drbjVGS05YaUpUQUhBM1Boc1JEckRHX2VxbTlfZHJEeWZtRmE1aGJHWVVIQ0h3QUxQeEthbUtVNzNWS3NZdzVfcjJvYnViTlNWaWNWcEpXVm9raVlTQlFQLTFwcHg0cHFtS3lvZkpiYW84UWhwZTl3R3JiRGpyOGV0dFduWDFBZm4tODB2YlI3M0wwdw?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-22T16:23:45+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "c948260f62e2d81e4b",
@@ -3880,89 +4718,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
-    },
-    {
-      "id": "38179bb09a21e8c5b8",
-      "title": "IA au travail : 60% des salariés craignent une érosion de leurs compétences",
-      "url": "https://www.infomediaire.net/ia-au-travail-60-des-salaries-craignent-une-erosion-de-leurs-competences/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-22T14:20:48+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "c16ba17893489baa30",
-      "title": "350,8 MDH pour renforcer l’accès à l’eau potable à Casablanca-Settat",
-      "url": "https://www.infomediaire.net/3508-mdh-pour-renforcer-lacces-a-leau-potable-a-casablanca-settat/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-22T14:12:39+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "3ef04bf4a6ae9216ab",
-      "title": "Banques : Hausse de 7,25% du produit net bancaire de la BOA Sénégal au premier semestre 2026",
-      "url": "https://www.financialafrik.com/2026/09/22/banques-hausse-de-725-du-produit-net-bancaire-de-la-boa-senegal-au-premier-semestre-2026/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-09-22T13:37:35+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "696c6292d1e8271179",
-      "title": "Groupe BCP: le Résultat Net Consolidé s’améliore de 8,7% à fin juin",
-      "url": "https://www.challenge.ma/groupe-bcp-le-resultat-net-consolide-sameliore-de-87-a-fin-juin-324602/",
-      "publisher": "Challenge Maroc",
-      "published_at": "2026-09-22T12:14:26+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "b8c0a6be7275ddf87f",
-      "title": "Risma en bonne voie pour dépasser les attentes en 2026, un potentiel de hausse de 33%",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMDNMRXFBVzM0dUltMWZ6SUZXZUZNbUNGTUpCeDZCemJ6V3Vqd0R6N09WLTJlWTdpU3dTeGZJQnZlaFR2RDFMUEozbTRGblozYTdXeEVobkpPVXVkMG1KTVJWYlZubUh5VHpNcFRHS0kyMVBvZ0t6cXBNQXUtZThOUExzV0l6a0dsWWZjZDdhck05VWswMXNZMVBRWkJ5cFRWMGRVV0JDbzRlWHAzTHRvRl9tSnptS25GbWxOZ1d1bjhJYmtGUlFoa0t1MA?oc=5",
-      "publisher": "Alpha Bourse",
-      "published_at": "2026-09-22T10:36:25+00:00",
-      "tickers": [
-        "RIS"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "aee0f6de461cd425ad",
-      "title": "Port de Casablanca : Marsa Maroc renforce ses terminaux avec de nouveaux portiques",
-      "url": "https://leseco.ma/maroc/port-de-casablanca-marsa-maroc-renforce-ses-terminaux-avec-de-nouveaux-portiques.html",
-      "publisher": "Les Inspirations Éco",
-      "published_at": "2026-09-22T09:45:08+00:00",
-      "tickers": [
-        "MSA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "d3f10717b647815d67",
@@ -3975,37 +4733,9 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED"
-    },
-    {
-      "id": "0ad1bdaf3aa19a2f15",
-      "title": "Taqa Morocco: Toujours à l'achat, BKGR abaisse son cours cible à 2.816 DH",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObGZWME8za1dXbDB1WUVFZ29MUC04ODRsTGZ2NHJXY2tNQjNxX1d3c253RFp4STZsMDRjU0xkQ0I0ZV95MG9OWTdVMlBxWlZ4OWQ1WGQ5UVcyRXNfVUY2RnBkQ0pmWnkzNkZMbXcwLXVpMVdRWElRZmpBM0UyZG5WbHExdnJmc19vLUNOYmJxSzNuQ256bVV2RQ?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-22T09:18:19+00:00",
-      "tickers": [
-        "TQA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "a1e10a13ec28c6a56f",
-      "title": "TAQA Morocco : Les obligataires appelés à se prononcer sur le transfert d’un emprunt de 2,7 milliards de dirhams",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWkJwWE9fREg2MWNGYzI3Y1dDaGlyczlPRFplMEdSU2FvRjRmYmVtQWtsa21YLXNlQXM0MG4xMnlGTERWU0c2eGEyeWhkZC1ScVA3WDRHZWFDcHQ1MUtKWnhzbVJxWTJHRGlkMF82dl9EdjRhZDVJdEV4SC1IaERtUjg0SFhkamFN?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-22T09:18:19+00:00",
-      "tickers": [
-        "TQA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
       "id": "93bfc1336ceb715a94",
@@ -4020,61 +4750,60 @@
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
       "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "DOCUMENT_LISTED"
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
     },
     {
-      "id": "417edde37fa5ca5854",
-      "title": "NARSA renforce son dispositif de management de la qualité",
-      "url": "https://leseco.ma/maroc/narsa-renforce-son-dispositif-de-management-de-la-qualite.html",
-      "publisher": "Les Inspirations Éco",
-      "published_at": "2026-09-22T09:11:54+00:00",
+      "id": "6d6b989a1ca340403f",
+      "title": "L'Indice des prix à la consommation (IPC) du mois d'Août 2026",
+      "url": "https://www.hcp.ma/L-Indice-des-prix-a-la-consommation-IPC-du-mois-d-Aout-2026_a4348.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-09-22T07:00:00+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
     },
     {
-      "id": "9ccece608e575aa26f",
-      "title": "Maroc : Hausse de 9% du chiffre d’affaires consolidé du groupe Les Eaux Minérales d’Oulmès au premier semestre 2026",
-      "url": "https://www.financialafrik.com/2026/09/22/maroc-hausse-de-9-du-chiffre-daffaires-consolide-du-groupe-les-eaux-minerales-doulmes-au-premier-semestre-2026/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-09-22T08:49:31+00:00",
+      "id": "da3bcbb85f4595d6b8",
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "publisher": "Fed · politique monétaire",
+      "published_at": "2026-09-16T18:00:00+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
     },
     {
-      "id": "61b6671ec9bc43b6b6",
-      "title": "TAQA Morocco : Convocation à l'assemblée générale des obligataires",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQWJleDBrZmtjbWwxNFcwckFSOGlEa3ZzNUdoTERFdFB2V2xQd3hOdDU2bU9wNWNBWnFTY1FXSTE5Z2FTNGl0U1NPVG5JYUlmYjdaVjZpNjRkTEF3bjA2N0dzcVlaYWljbmpRV3h5LVNCQ2NIWVRQMlBxeDl4cDdxSEx6OUJHSnVXOWFuNjNkbnlCUjhTd3k5UjF0UlFxUkhqMjZNYVQ4SWpPRWRNem9N?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-22T05:55:00+00:00",
-      "tickers": [
-        "TQA"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT"
-    },
-    {
-      "id": "69613e753183255bbf",
-      "title": "Les cours mondiaux de l'or baissent.",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBTMzdQUkh2OEpPSUxoeVlYNU45UV9Za2tPRXc0OHA5V0hQaEROZEpRb2xjWnNsejJZSkFWZm5LaUNZajVhOWh4SUZzaTRIVmNZTldhY1ZMNGJ4ZW50?oc=5",
-      "publisher": "Kitco Métaux",
-      "published_at": "2026-09-22T03:23:43+00:00",
+      "id": "7400cab4847e7a3384",
+      "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm",
+      "publisher": "Fed · politique monétaire",
+      "published_at": "2026-09-16T18:00:00+00:00",
       "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT"
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
     }
   ]
 }
