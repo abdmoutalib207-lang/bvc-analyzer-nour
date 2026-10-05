@@ -103,7 +103,7 @@
       "ytd_pct": -8.95
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-05T17:04:21.256731+00:00",
+    "observed_at": "2026-10-05T17:26:31.303708+00:00",
     "turnover_mad": 126462241.92,
     "breadth": {
       "up": 24,
@@ -33619,7 +33619,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-05",
-    "observed_at": "2026-10-05T17:04:21.256731+00:00",
+    "observed_at": "2026-10-05T17:26:31.303708+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -34704,25 +34704,25 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-05T17:04:21.256731+00:00",
+    "checked_at": "2026-10-05T17:26:31.303708+00:00",
     "asof": "2026-10-05"
   },
   "news_health": {
-    "checked_at": "2026-10-05T17:04:21.024080+00:00",
+    "checked_at": "2026-10-05T17:26:31.122354+00:00",
     "status": "ok",
     "fetched_items": 10,
     "errors": []
   },
   "health": {
-    "checked_at": "2026-10-05T17:04:17.941105+00:00",
+    "checked_at": "2026-10-05T17:26:27.615614+00:00",
     "source": "CDG Capital Bourse",
-    "result": "updated",
+    "result": "unchanged",
     "last_session": "2026-10-05",
-    "message": "68 bougies validées ; 0 conflit(s) conservés",
+    "message": "Aucune nouvelle séance vérifiée",
     "details": {
       "session": "2026-10-05",
       "active_quotes": 68,
-      "new_bars": 68,
+      "new_bars": 0,
       "source": "https://www.cdgcapitalbourse.ma/api/",
       "ignored_old_quotes": 0,
       "conflicts": []
@@ -34730,21 +34730,21 @@
   },
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "push",
-    "slot": "adhoc",
-    "label": "Point de marché à la demande",
-    "target_time": null,
-    "schedule": null,
-    "scheduled_at": null,
-    "scheduled_at_basis": null,
+    "event": "schedule",
+    "slot": "morning",
+    "label": "Briefing du matin",
+    "target_time": "09:45",
+    "schedule": "45 9 * * 1-5",
+    "scheduled_at": "2026-10-05T09:45:00+00:00",
+    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
     "edition_for": "2026-10-05",
-    "started_at": "2026-10-05T17:04:17+00:00",
-    "built_at": "2026-10-05T17:04:25.388404+00:00",
-    "delay_minutes": null,
-    "late": false,
-    "run_id": "37345635494",
-    "commit": "884700933272fd32ecc4aa8a0bf397938f819730",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37345635494"
+    "started_at": "2026-10-05T17:26:27+00:00",
+    "built_at": "2026-10-05T17:26:34.725702+00:00",
+    "delay_minutes": 461.4,
+    "late": true,
+    "run_id": "37348412251",
+    "commit": "8973098670710d825863e5f2a658cf1ada111b4d",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37348412251"
   },
   "intraday": {
     "schema_version": 1,
