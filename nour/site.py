@@ -9,6 +9,7 @@ from pathlib import Path
 from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
+from .macro_view import markets_html, radar_html, feed_health_html
 
 
 def esc(value):
@@ -71,7 +72,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -307,6 +308,7 @@ def home_page(fixture, report, style, script):
             + '<main><div class="hero market-hero"><span class="eyebrow">Bourse de Casablanca</span><h1>Marché <em>& séance.</em></h1><p>Le MASI et le bilan du marché, puis les valeurs à explorer.</p>'
             + '<div class="primary-actions"><a class="btnlink" href="cloture.html">Dernier briefing de clôture</a><a class="btnlink outline" href="briefing.html">Point de marché</a><a class="btnlink outline" href="actualites.html">Actualités</a></div></div>'
             + market_panel(report)
+            + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Contexte indépendant des scores</span><h2>Macro et international</h2><p>12 instruments : indices, devises, risque et matières premières. Cotations datées, alertes Maroc / international et état des sources.</p></div><a class="btnlink outline" href="macro.html">Ouvrir les marchés mondiaux</a></div></section>'
             + fundamental_summary
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
             + f'<p class="panel-sub">{len(items)} valeurs suivies · cliquez sur le code pour le graphique et les indicateurs, sur CSV pour l’historique. La variation compare les deux dernières clôtures disponibles de chaque titre.</p><div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernière clôture</th><th>Variation</th><th>Date clôture</th><th>Point de séance</th><th>Score</th><th>État des données</th><th>Historique</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
@@ -325,18 +327,25 @@ def news_page(fixture, report, style, script):
     articles = sorted(report.get('news', []),
                       key=lambda a: (a.get('tier') == 'S1', market_relevant(a),
                                      a.get('published_at') or ''), reverse=True)
-    rows = []
-    for a in articles:
-        title, url = esc(a.get('title')), esc(a.get('url'))
-        tickers = ', '.join(a.get('tickers') or [])
-        searchable = ' '.join((str(a.get('title') or ''), str(a.get('publisher') or ''), tickers)).lower()
-        rows.append(f'<article class="news-item" data-news-row data-search="{esc(searchable)}" data-tier="{esc(a.get("tier"))}"><span class="eyebrow">{esc(a.get("publisher"))} · {esc(a.get("published_at","")[:10])} · {esc(a.get("tier"))}</span><h2><a href="{url}" target="_blank" rel="noopener noreferrer">{title} ↗</a></h2><p>{esc(a.get("status"))} · Titres associés : {esc(tickers or "non établis")}</p></article>')
     body = (header('index.html', fixture['snapshot_updated'])
             + '<main><div class="hero"><span class="eyebrow">Radar documentaire</span><h1>Publications et alertes à vérifier</h1><p>Documents officiels d’abord, puis alertes de marché, puis autres éléments de veille. Le rattachement au titre et la source sont visibles ; aucun article ne contribue au score.</p></div>'
             + health_line
-            + '<section class="panel"><div class="filters"><input class="search" id="news-search" type="search" placeholder="Rechercher un titre ou une source" aria-label="Rechercher dans les actualités"><select id="news-tier" aria-label="Filtrer par niveau de source"><option value="">Toutes les sources</option><option value="S1">Index officiel AMMC</option><option value="S2">Veille secondaire</option></select></div><p class="fineprint">Une ligne S1 atteste la présence d’un document sur l’index AMMC ; son contenu financier n’est pas analysé automatiquement. Les autres lignes attendent une validation primaire.</p>'
-            + '<div class="news-list">' + (''.join(rows) or '<p>Aucune actualité disponible.</p>') + '</div></section></main><footer>BVC Analyzer Nour · actualités réservées à la veille · NLP 0 %.</footer>')
+            + radar_html(articles) + feed_health_html(health)
+            + '</main><footer>BVC Analyzer Nour · actualités réservées à la veille · NLP 0 %.</footer>')
     return shell('Actualités', body, style, script)
+
+
+def macro_page(fixture, report, style, script):
+    context = report.get('macro') or {}
+    articles = [a for a in report.get('news',[]) if a.get('feed_id')]
+    articles.sort(key=lambda a:a.get('published_at',''),reverse=True)
+    body=(header('index.html',fixture['snapshot_updated'])
+        + '<main><div class="hero"><span class="eyebrow">Contexte de marché · aucune pondération décisionnelle</span><h1>Macro &amp; international</h1><p>Les mêmes 12 instruments que le moteur principal, collectés indépendamment par Nour. Sources et dates visibles ; actualités filtrables, sans analyse de sentiment ni prévision.</p></div>'
+        + '<section class="panel">'+markets_html(context)+'</section>'
+        + '<div class="section-heading"><h2>Radar macro et international</h2><a class="btnlink outline" href="actualites.html">Tous les documents et alertes</a></div>'
+        + radar_html(articles) + feed_health_html(report.get('news_health') or {})
+        + '</main><footer>BVC Analyzer Nour · contexte daté, sans influence sur les scores.</footer>')
+    return shell('Macro et international',body,style,script)
 
 
 def briefing_page(fixture, briefing, style, script):
@@ -385,6 +394,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
+    (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     if briefing is not None:
         (output / "briefing.html").write_text(briefing_page(fixture, briefing, style, script), encoding="utf-8")
     if closing is not None:

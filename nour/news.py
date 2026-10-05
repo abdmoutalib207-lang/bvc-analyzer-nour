@@ -69,13 +69,21 @@ def normalize(article, symbols, issuer_names=None):
     if not title:
         return None
     tickers = associate(title,url,symbols,official,issuer_names)
+    from .macro_news import REGISTRY, CATEGORIES, scope_for
+    feed = REGISTRY.get(article.get('feed_id'))
+    institutional = bool(feed and feed[5] and parsed.hostname == feed[5])
+    category = feed[3] if feed else article.get('category', 'bvc' if tickers or official else 'autre')
+    if category not in CATEGORIES: category = 'autre'
+    metadata = dict(category=category, scope=scope_for(title,tickers,
+        feed[4] if feed else 'MAROC' if official or parsed.hostname in ('lematin.ma','www.lematin.ma') else article.get('scope','UNKNOWN')))
+    if feed: metadata.update(feed_id=feed[0], feed_url=feed[2])
     return {"id": hashlib.sha256(url.encode()).hexdigest()[:18], "title": title,
             "url": url, "publisher": "AMMC" if official else str(article.get("publisher") or article.get("source") or parsed.hostname)[:80],
             "published_at": published.isoformat(), "tickers": tickers,
-            "tier": "S1" if official else "S2", "status": "index officiel, document non analysé" if official else "alerte non vérifiée",
+            "tier": "S1" if official or institutional else "S2", "status": "index officiel, document non analysé" if official else "publication institutionnelle, contenu non analysé" if institutional else "alerte non vérifiée",
             "usable_for_score": False,
             "ticker_matching": "issuer_name_or_official_filename" if tickers else "unmatched",
-            "classification": "DOCUMENT_LISTED" if official else "UNVERIFIED_ALERT"}
+            "classification": "DOCUMENT_LISTED" if official else "INSTITUTIONAL_PUBLICATION" if institutional else "UNVERIFIED_ALERT", **metadata}
 
 
 def merge_news(existing, fresh, symbols, limit=300, issuer_names=None):
@@ -86,6 +94,16 @@ def merge_news(existing, fresh, symbols, limit=300, issuer_names=None):
             combined[normalized["id"]] = normalized
     # Never treat multiple press reports about the same event as multiple scores.
     ordered = sorted(combined.values(), key=lambda a: a["published_at"], reverse=True)
+    # Reserve room for both issuer evidence and macro feeds, without ranking
+    # sentiment or interpreting a headline as an investment signal.
+    if len(ordered) > limit:
+        official = [a for a in ordered if a['classification']=='DOCUMENT_LISTED'][:max(0,limit-90)]
+        radar = [a for a in ordered if a.get('feed_id')][:min(90,limit)]
+        selected = {a['id']:a for a in official+radar}
+        for article in ordered:
+            if len(selected) >= limit: break
+            selected.setdefault(article['id'],article)
+        ordered = sorted(selected.values(),key=lambda a:a['published_at'],reverse=True)
     return {"schema_version": 1, "updated_at": datetime.now(timezone.utc).isoformat(),
             "role": "veille uniquement, aucun score NLP", "articles": ordered[:limit]}
 

@@ -64,6 +64,10 @@ jobs:
         id: overview
         continue-on-error: true
         run: python tools/update_overview.py
+      - name: Refresh independent international market snapshots
+        id: macro
+        continue-on-error: true
+        run: python tools/update_macro.py
       - name: Build dashboard and briefing
         env:
           NOUR_SCHEDULE: ${{ github.event.schedule }}
@@ -77,6 +81,7 @@ jobs:
           node --check web/chart-controls.js
           node --check web/market.js
           node tools/test_chart_controls.cjs
+          node tools/test_news_filters.cjs
       - name: Save validated snapshots and pages
         run: |
           git config user.name 'bvc-nour-bot'
@@ -98,3 +103,4 @@ jobs:
           echo 'Market: ${{ steps.market.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'News: ${{ steps.news.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'MASI: ${{ steps.overview.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Macro: ${{ steps.macro.outcome }}' >> "$GITHUB_STEP_SUMMARY"

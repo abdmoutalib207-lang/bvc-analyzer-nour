@@ -19,6 +19,7 @@ MARKET_WORDS = re.compile(
 
 def market_relevant(article):
     return (article.get("tier") == "S1" or bool(article.get("tickers"))
+            or bool(article.get('feed_id'))
             or bool(MARKET_WORDS.search(article.get("title") or "")))
 
 
@@ -44,11 +45,11 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
     active = [r for r in report["results"] if r["asof"] == session and r["decision"] != "INDISPONIBLE"]
     news_cutoff = session if closing_only and session else asof
     previous = (date.fromisoformat(news_cutoff)-timedelta(days=4)).isoformat()
-    news = [a for a in report.get("news", [])
+    eligible_news = [a for a in report.get("news", [])
             if previous <= a.get("published_at", "")[:10] <= news_cutoff and market_relevant(a)]
     # Official issuer documents precede secondary alerts; within each tier,
     # retain date order. This is editorial order, never a scoring factor.
-    news = sorted(news, key=lambda a: (a.get("tier") == "S1", bool(a.get('tickers')), a.get("published_at", "")),
+    news = sorted(eligible_news, key=lambda a: (a.get("tier") == "S1", bool(a.get('tickers')), a.get("published_at", "")),
                   reverse=True)[:24]
     focus = []
     by = {r["symbol"]:r for r in report["results"]}
@@ -75,7 +76,15 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
             editorial['vigilance'].append(f'{f["symbol"]} : {f["scenario"]}' +
                 (f' (références {f["support"]} / {f["resistance"]} MAD).' if f['support'] is not None and f['resistance'] is not None else '.'))
     macro_words = re.compile(r'\b(?:brent|pétrole|inflation|bank.al.maghrib|taux.directeur|fed|trésor|dollar|change)\b', re.I)
-    context = [a for a in news if macro_words.search(a.get('title',''))]
+    context = sorted([a for a in eligible_news if a.get('feed_id') or macro_words.search(a.get('title',''))],
+                     key=lambda a:a.get('published_at',''),reverse=True)[:12]
+    from .macro import context_view, date_time
+    from .runtime import ZONE
+    # Clôture is explicitly a dated digest, not a retrospective causal model.
+    # Never import a next-day international quote into a prior-session digest.
+    cutoff=datetime.fromisoformat(news_cutoff+'T23:59:59').replace(tzinfo=ZONE)
+    cutoff=min(cutoff,date_time((report.get('runtime') or {}).get('built_at')) or datetime.now(ZONE))
+    macro=context_view(report.get('macro_source') or {},cutoff)
     fundamental_count = sum(bool(r.get('fundamental',{}).get('document_url')) for r in report['results'])
     from .market_view import closing_summary
     runtime = report.get("runtime") or {}
@@ -93,5 +102,5 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
             "market_summary":closing_summary(overview) if index_current and overview else None,
             "index_notice":None if index_current else "MASI non confirmé à la date de la dernière séance : valeur archivée écartée du briefing.",
             "focus":focus,"news":news,"news_role":"veille uniquement", "editorial":editorial,
-            "context_news":context,"fundamental_coverage":{"referenced":fundamental_count,"titles":len(report['results'])},
+            "context_news":context,"macro":macro,"fundamental_coverage":{"referenced":fundamental_count,"titles":len(report['results'])},
             "limitations":"Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."}

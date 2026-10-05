@@ -2,6 +2,7 @@
 import html
 from .market_view import fmt
 from .editorial import numeric
+from .macro_view import markets_html
 
 
 def esc(value):
@@ -13,6 +14,10 @@ def paragraphs(items):
 
 
 def publication(a):
+    if a.get('feed_id'):
+        from .macro_news import SCOPES, CATEGORIES
+        return (f'<article class="publication"><h3><a href="{esc(a.get("url"))}" target="_blank" rel="noopener noreferrer">{esc(a.get("title"))} ↗</a></h3>'
+            f'<p class="fineprint">{esc(a.get("publisher"))} · {esc(a.get("published_at"))} · {esc(SCOPES.get(a.get("scope"),"Périmètre non établi"))} · {esc(CATEGORIES.get(a.get("category"),"Autres"))} · {esc(a.get("status"))}. Contenu non analysé ; aucune conséquence boursière déduite.</p></article>')
     primary=a.get('tier')=='S1'
     title=a.get('title','');lower=title.lower()
     angle=('À vérifier dans les comptes : croissance, marge, résultat, dette et trésorerie ; le titre du document ne fournit pas ces chiffres.' if 'résultat' in lower else
@@ -71,10 +76,10 @@ def render_editorial(briefing, intraday_renderer):
     focus=''.join(focus_article(item,intraday_renderer(item)) for item in briefing.get('focus',[]))
     sections+='<section class="panel briefing-section" id="valeurs"><h2>Valeurs à surveiller</h2><p class="panel-sub">Suivi public commun à tous les lecteurs ; aucune position personnelle n’entre dans le briefing.</p><div class="editorial-focus">'+(focus or '<p>Aucune valeur du suivi n’a une clôture confirmée à cette date.</p>')+'</div></section>'
     cov=briefing.get('fundamental_coverage') or {}
-    official=[a for a in briefing.get('news',[]) if a.get('tier')=='S1']
+    official=[a for a in briefing.get('news',[]) if a.get('tier')=='S1' and not a.get('feed_id')]
     sections+=f'<section class="panel briefing-section" id="fondamentaux"><h2>Fondamentaux et catalyseurs publiés</h2><p>{esc(cov.get("referenced",0))}/{esc(cov.get("titles",0))} titres possèdent une base de faits financiers référencés. Les ratios historiques et les annonces récentes sont distingués.</p><p>Les dépôts suivants ont été repérés dans le flux officiel. Leur existence est documentée ; leur contenu chiffré n’est pas encore extrait ni validé par ce briefing. Ils ne sont donc pas présentés comme une croissance acquise ou un catalyseur haussier.</p>'+(''.join(publication(a) for a in official[:10]) or '<p>Aucun dépôt récent retenu pour cette période.</p>')+'</section>'
     context=briefing.get('context_news') or []
-    sections+='<section class="panel briefing-section" id="macro"><h2>Macroéconomie et international</h2>'+(''.join(publication(a) for a in context[:4]) if context else '<p>Aucune donnée macroéconomique ou internationale récente n’est confirmée dans le flux chargé. Le briefing n’attribue donc aucun prix au pétrole ni aucune décision à BAM ou à la Fed.</p>')+'<p><strong>Canaux à surveiller :</strong> taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.</p></section>'
+    sections+='<section class="panel briefing-section" id="macro"><h2>Macroéconomie et international</h2>'+markets_html(briefing.get('macro'))+'<p>Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.</p>'+(''.join(publication(a) for a in context[:8]) if context else '<p>Aucune publication macro récente retenue dans le flux chargé.</p>')+'<a class="btnlink outline" href="macro.html">Marchés mondiaux et radar international</a><p><strong>Canaux à surveiller :</strong> taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.</p></section>'
     scenarios=''.join(f'<article class="scenario-card"><h3>{esc(s["name"])}</h3><p><strong>Condition :</strong> {esc(s["condition"])}</p><p>{esc(s["reading"])}</p></article>' for s in e.get('scenarios',[]))
     sections+='<section class="panel briefing-section" id="scenarios"><h2>Scénarios pour la prochaine séance</h2><p class="panel-sub">Scénarios conditionnels, sans probabilités faute de modèle calibré hors échantillon. Les bornes MASI reposent sur les 20 clôtures antérieures disponibles, sans inclure la séance analysée.</p><div class="brief-grid">'+(scenarios or '<p>Clôture ou profondeur historique insuffisante pour fixer des bornes fiables.</p>')+'</div></section>'
     sections+='<section class="panel briefing-section" id="vigilance"><h2>Points de vigilance</h2><ul>'+''.join(f'<li>{esc(x)}</li>' for x in e.get('vigilance',[]))+'</ul><p>Comparer les confirmations de cours, la largeur de marché et la liquidité. Une surperformance isolée ou un RSI faible ne suffit pas à confirmer un retournement.</p></section>'

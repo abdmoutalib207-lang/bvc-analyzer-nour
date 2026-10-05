@@ -22,11 +22,24 @@
   const filterNews = () => {
     const term = (q('#news-search')?.value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
     const tier = q('#news-tier')?.value || '';
+    const scope = q('#news-scope')?.value || '';
+    const category = q('#news-category')?.value || '';
+    let visible = 0;
     document.querySelectorAll('[data-news-row]').forEach(row => {
       const normalized = row.dataset.search.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      row.hidden = !(normalized.includes(term) && (!tier || row.dataset.tier === tier));
+      row.hidden = !(normalized.includes(term) && (!tier || row.dataset.tier === tier)
+        && (!scope || row.dataset.scope === scope) && (!category || row.dataset.category === category));
+      if (!row.hidden) visible++;
     });
+    if (q('#news-count')) q('#news-count').textContent = `${visible} liens affichés`;
   };
   q('#news-search')?.addEventListener('input',filterNews);
   q('#news-tier')?.addEventListener('change',filterNews);
+  q('#news-scope')?.addEventListener('change',filterNews);
+  q('#news-category')?.addEventListener('change',filterNews);
+  q('#news-reset')?.addEventListener('click',() => {
+    ['#news-search','#news-tier','#news-scope','#news-category'].forEach(id => {if (q(id)) q(id).value='';});
+    filterNews();
+  });
+  filterNews();
 })();

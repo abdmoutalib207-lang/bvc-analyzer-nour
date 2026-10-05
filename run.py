@@ -14,6 +14,7 @@ from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday
 from nour.market_view import closing_summary
 from nour.briefing_view import briefing_text
 from nour.report_contracts import synchronize_market
+from nour.macro import context_view
 
 ROOT = Path(__file__).resolve().parent
 
@@ -42,6 +43,11 @@ def main():
     report["health"] = json.loads(health_file.read_text()) if health_file.exists() else {
         "result":"not_configured","message":"Collecte automatique non encore exécutée"}
     now = datetime.now(ZONE)
+    macro_path=ROOT/'data/macro.json'
+    report['macro_source']=json.loads(macro_path.read_text()) if macro_path.exists() else {}
+    report['macro']=context_view(report['macro_source'], min(now,
+        datetime.fromisoformat(args.asof+'T23:59:59').replace(tzinfo=ZONE)))
+    atomic_json(ROOT/'web/macro.json',report['macro'])
     report["runtime"] = run_context(now, schedule=os.environ.get("NOUR_SCHEDULE", ""),
         event=os.environ.get("GITHUB_EVENT_NAME", "local"), slot=args.slot,
         started_at=os.environ.get("NOUR_STARTED_AT"), run_id=os.environ.get("GITHUB_RUN_ID", ""),
