@@ -38,6 +38,14 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertEqual(static.count('<tr data-market-row '), 80)
         self.assertIn('href="titres/ADI.html"', static)
 
+    def test_laboratory_help_is_present_without_javascript(self):
+        page = (self.output / 'recherche.html').read_text()
+        static = re.sub(r'<script\b[^>]*>.*?</script>', '', page, flags=re.DOTALL)
+        self.assertEqual(static.count('id="lab-help"'), 1)
+        self.assertIn('aria-label="Comprendre le laboratoire"', static)
+        self.assertIn('Le laboratoire, en langage simple', static)
+        self.assertIn('Cela ne prédit pas demain', static)
+
     def test_each_ticker_has_a_real_page_and_csv_including_missing_histories(self):
         for symbol in self.fixture["symbols"]:
             detail = self.output / "titres" / f"{symbol}.html"

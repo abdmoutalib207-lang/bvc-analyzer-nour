@@ -23,6 +23,15 @@
   const doc=root.document;
   if (!doc || !doc.getElementById('research-lab')) return;
   const get=id=>doc.getElementById(id), data=JSON.parse(get('lab-data').textContent);
+  const help=get('lab-help'), helpClose=get('lab-help-close');
+  if(help && helpClose){
+    const closeHelp=()=>{help.open=false;get('lab-help-toggle').focus();};
+    helpClose.hidden=false;
+    helpClose.addEventListener('click',closeHelp);
+    help.addEventListener('keydown',event=>{
+      if(event.key==='Escape' && help.open){event.preventDefault();closeHelp();}
+    });
+  }
   const fmt=x=>finite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2,minimumFractionDigits:2}):'—';
   function element(tag, text, cls) {
     const e=doc.createElement(tag); if(text!==undefined)e.textContent=text; if(cls)e.className=cls; return e;

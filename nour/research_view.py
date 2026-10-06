@@ -13,6 +13,42 @@ def num(v, digits=2):
     return '—' if v is None else f'{v:,.{digits}f}'.replace(',', ' ').replace('.', ',')
 
 
+def help_panel():
+    """Native disclosure: the explanation also works without JavaScript."""
+    return ('<details id="lab-help" class="lab-help">'
+        '<summary id="lab-help-toggle" aria-label="Comprendre le laboratoire" aria-controls="lab-help-content">'
+        '<span class="lab-help-icon" aria-hidden="true">?</span><span>Comment ça marche ?</span></summary>'
+        '<div id="lab-help-content" class="lab-help-content">'
+        '<h2>Le laboratoire, en langage simple</h2>'
+        '<p><strong>Un banc d’essai du passé, pas un bouton « acheter ».</strong> '
+        'La fiche décrit la situation actuelle d’un titre. Ici, on regarde ce qu’une règle précise aurait donné dans le passé.</p>'
+        '<h3>Comment essayer ?</h3><ol>'
+        '<li>Choisis un titre, par exemple ADI, puis une durée : <strong>5, 20 ou 60 séances</strong> de bourse.</li>'
+        '<li>Renseigne tes frais : par exemple 1 % à l’achat et 1 % à la vente. '
+        'Le « glissement » représente un prix d’exécution moins favorable que le prix observé.</li>'
+        '<li>Lis les résultats historiques et les dates du tableau. Les filtres changent les cas étudiés, pas les cours ni les scores de Nour.</li></ol>'
+        '<h3>Quelle règle est étudiée ?</h3>'
+        '<p>À des dates espacées fixées à l’avance, le cours doit être au-dessus des moyennes des '
+        '<strong>20 et 50 dernières séances</strong>. L’achat hypothétique se fait à la <strong>clôture suivante</strong>, '
+        'puis la vente après la durée choisie. Les cas dont les données nécessaires manquent sont écartés.</p>'
+        '<h3>Que veulent dire les chiffres ?</h3><dl>'
+        '<dt>Observations</dt><dd>Le nombre de cas historiques étudiés. Avec moins de 30 cas, l’échantillon est insuffisant pour interpréter une fréquence.</dd>'
+        '<dt>Fréquence positive</dt><dd>La proportion de cas terminés en gain après les frais choisis. '
+        '<strong>Exemple fictif : 60 % = 60 cas sur 100 dans le passé. Cela ne prédit pas demain.</strong></dd>'
+        '<dt>Médiane nette</dt><dd>Le résultat du milieu après les frais choisis : la moitié des cas fait mieux, l’autre moins bien.</dd>'
+        '<dt>Percentiles 10 / 90</dt><dd>Deux repères entre lesquels se situent environ 80 % des résultats observés. Ce ne sont pas des limites de perte ou de gain garanties.</dd>'
+        '<dt>Écart au MASI</dt><dd>Le titre a-t-il fait mieux ou moins bien que l’indice sur les mêmes périodes ? '
+        'Attention : le titre est comparé après les frais choisis, le MASI sans frais.</dd></dl>'
+        '<p>Le filtre « MASI au signal » sépare les cas où l’indice était au-dessus ou sous sa moyenne des 200 dernières séances. '
+        'Plus bas, le tableau de risque montre quels titres bougent fortement et suivent le MASI.</p>'
+        '<p class="lab-help-warning"><strong>Ce qui n’est pas testé :</strong> l’achat sur des supports précis, '
+        'les dividendes, la fiscalité et une exécution réelle des ordres. '
+        'Les notes de Nour sont archivées pour être évaluées plus tard : leur efficacité n’est pas encore démontrée.</p>'
+        '<p class="fineprint">Reclique sur le « ? » pour refermer cette explication.</p>'
+        '<button type="button" id="lab-help-close" class="btnlink outline" hidden>Fermer l’explication</button>'
+        '</div></details>')
+
+
 def panels(item):
     r = item.get('market_risk', {})
     cards = ''.join(f'<div class="metric"><span>{label}</span><strong>{num(r.get(key))}{unit}</strong></div>' for key,label,unit in (
@@ -64,7 +100,8 @@ def page_body(fixture, report):
                     + ''.join(f'<td>{num(x.get("market_risk",{}).get(k))}</td>' for k in ('beta','correlation','volatility_pct','drawdown_pct'))+'</tr>'
                     for x in report['results'])
     return ('<main id="research-lab"><div class="hero research-hero"><span class="eyebrow">BVC Analyzer Nour · laboratoire historique</span>'
-        '<h1>La tendance <em>à l’épreuve des données.</em></h1><p>Comparez un titre au MASI, observez le risque et faites varier les frais. Chaque résultat renvoie aux dates et aux prix qui l’ont produit.</p>'
+        '<h1>La tendance <em>à l’épreuve des données.</em></h1>'
+        + help_panel() + '<p>Comparez un titre au MASI, observez le risque et faites varier les frais. Chaque résultat renvoie aux dates et aux prix qui l’ont produit.</p>'
         f'<div class="stamp">MASI : {esc(r.get("masi_first"))} → {esc(r.get("masi_last"))} · {r.get("masi_sessions",0)} séances · {r.get("universe_size",0)} titres</div></div>'
         '<section class="panel"><span class="eyebrow">Scénario interactif · prix seuls</span><h2>Tendances et coûts</h2>'
         '<div class="research-controls">'

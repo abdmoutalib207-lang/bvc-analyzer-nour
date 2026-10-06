@@ -50,8 +50,11 @@ class JetSemester(unittest.TestCase):
         fixture = json.loads((ROOT / 'data/market_snapshot.json').read_text())
         facts = json.loads((ROOT / 'data/facts_reference.json').read_text())
         facts['records']['JET']['latest_report'] = additions()['JET']['latest_report']
-        before = build_report(fixture, '2026-10-05', facts=facts['records'])
-        after = build_report(fixture, '2026-10-05', facts=merge(facts)['records'])
+        # Current-snapshot reconciliation, not a backdated reconstruction:
+        # the engine correctly excludes current facts before this snapshot date.
+        asof = max('2026-10-05', fixture['snapshot_updated'][:10])
+        before = build_report(fixture, asof, facts=facts['records'])
+        after = build_report(fixture, asof, facts=merge(facts)['records'])
         before_items = {r['symbol']: r for r in before['results']}
         after_items = {r['symbol']: r for r in after['results']}
         for symbol, item in before_items.items():
@@ -65,7 +68,8 @@ class JetSemester(unittest.TestCase):
     def test_page_explains_group_result_comparison_and_source_reservations(self):
         fixture = json.loads((ROOT / 'data/market_snapshot.json').read_text())
         facts = json.loads((ROOT / 'data/facts_reference.json').read_text())
-        report = build_report(fixture, '2026-10-05', facts=merge(facts)['records'])
+        asof = max('2026-10-05', fixture['snapshot_updated'][:10])
+        report = build_report(fixture, asof, facts=merge(facts)['records'])
         item = next(r for r in report['results'] if r['symbol'] == 'JET')
         record = fixture['records']['JET']
         page = detail_page(item, record, fixture, '', '')

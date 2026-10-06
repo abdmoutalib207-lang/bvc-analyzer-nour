@@ -106,7 +106,9 @@ class FinancialReconciliation(unittest.TestCase):
 
     def test_public_pages_explain_review_and_historical_perimeters(self):
         fixture = json.loads((ROOT / 'data/market_snapshot.json').read_text())
-        report = build_report(fixture, '2026-10-05', facts=self.updated['records'])
+        # Verify present-day disclosure, while preserving historical fact guards.
+        asof = max('2026-10-05', fixture['snapshot_updated'][:10])
+        report = build_report(fixture, asof, facts=self.updated['records'])
         for symbol in SYMBOLS:
             item = next(r for r in report['results'] if r['symbol'] == symbol)
             page = detail_page(item, fixture['records'][symbol], fixture, '', '')

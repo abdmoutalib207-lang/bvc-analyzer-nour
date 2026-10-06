@@ -18,6 +18,37 @@ const shots=process.env.NOUR_SCREENSHOTS;
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
       for(const route of ['index.html','titres/JET.html','recherche.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='recherche.html'){
+          await page.locator('#lab-symbol').selectOption('ADI');
+          const metrics=await page.locator('#lab-metrics').innerText();
+          const help=page.locator('#lab-help');
+          const toggle=page.locator('#lab-help-toggle');
+          assert.equal(await help.evaluate(el=>el.open),false);
+          await toggle.click();
+          assert.equal(await page.locator('#lab-help-content').isVisible(),true);
+          assert.ok((await page.locator('#lab-help-content').innerText()).includes('Cela ne prédit pas demain'));
+          const helpRect=await page.locator('#lab-help-content').boundingBox();
+          assert.ok(helpRect.x>=0&&helpRect.x+helpRect.width<=width+1);
+          const touch=await toggle.boundingBox();
+          assert.ok(touch.width>=44&&touch.height>=44);
+          if(shots){
+            fs.mkdirSync(shots,{recursive:true});
+            await page.screenshot({path:path.join(shots,`lab-help-${width}.png`)});
+          }
+          await page.locator('#lab-help-close').click();
+          assert.equal(await help.evaluate(el=>el.open),false);
+          assert.equal(await toggle.evaluate(el=>el===document.activeElement),true);
+          await page.keyboard.press('Enter');
+          assert.equal(await help.evaluate(el=>el.open),true);
+          await page.keyboard.press('Escape');
+          assert.equal(await help.evaluate(el=>el.open),false);
+          await page.keyboard.press('Space');
+          assert.equal(await help.evaluate(el=>el.open),true);
+          await toggle.click();
+          assert.equal(await help.evaluate(el=>el.open),false);
+          assert.equal(await page.locator('#lab-symbol').inputValue(),'ADI');
+          assert.equal(await page.locator('#lab-metrics').innerText(),metrics);
+        }
         await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
         await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-symbol option').count(),81);
@@ -62,7 +93,16 @@ const shots=process.env.NOUR_SCREENSHOTS;
       }
       assert.deepEqual(errors,[],'Browser/page/network errors');
       await context.close();
+      const nojs=await browser.newContext({viewport:{width,height:900},javaScriptEnabled:false});
+      const native=await nojs.newPage();
+      await native.goto(new URL('recherche.html',base).href);
+      await native.locator('#lab-help-toggle').click();
+      assert.equal(await native.locator('#lab-help-content').isVisible(),true);
+      assert.equal(await native.locator('#lab-help-close').isVisible(),false);
+      await native.locator('#lab-help-toggle').click();
+      assert.equal(await native.locator('#lab-help-content').isVisible(),false);
+      await nojs.close();
     }
-    console.log(`Browser QA: ${interactions} page/viewport journeys, dates, ratio/source parity, clear, escaping, focus and Escape passed; no LLM call.`);
+    console.log(`Browser QA: ${interactions} page/viewport journeys; laboratory help click, Enter, Space, Escape, close, focus, unchanged filters and no-JS at 3 widths; assistant checks passed; no LLM call.`);
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});
