@@ -5,61 +5,111 @@
   "score_version": "nour-quant-v1",
   "market": {
     "schema_version": 1,
-    "asof": "2026-10-05",
-    "observed_at": "2026-10-06T04:02:25.807307+00:00",
-    "status": "closed",
+    "asof": "2026-10-06",
+    "observed_at": "2026-10-06T15:29:04.162083+00:00",
+    "status": "intraday",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "masi": {
-      "value": 17159.5001,
-      "asof": "2026-10-05",
-      "veille": 17303.6852,
-      "change_pct": -0.83,
-      "variation_points": -144.19,
-      "ytd_pct": -8.95
+      "value": 16940.9421,
+      "asof": "2026-10-06",
+      "veille": 17159.5001,
+      "change_pct": -1.27,
+      "variation_points": -218.56,
+      "ytd_pct": -10.11
     },
-    "high": 17447.7504,
-    "low": 17159.5001,
+    "high": 17230.4274,
+    "low": 16640.8144,
     "sectors": [
       {
-        "code": "SP&H",
-        "libelle": "SOCIETES DE PORTEFEUILLES - HOLDINGS",
-        "variation_pct": 1.72
+        "code": "BANK",
+        "libelle": "BANQUES",
+        "variation_pct": 0.0
       },
       {
-        "code": "L&H",
-        "libelle": "LOISIRS ET HOTELS",
-        "variation_pct": 1.43
+        "code": "B&MC",
+        "libelle": "BATIMENT ET MATERIAUX DE CONSTRUCTION",
+        "variation_pct": 0.0
       },
       {
-        "code": "CHIM",
-        "libelle": "CHIMIE",
-        "variation_pct": 1.07
+        "code": "IMMOB",
+        "libelle": "PARTICIPATION ET PROMOTION IMMOBILIERES",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "SPI",
+        "libelle": "SOCIETES DE PLACEMENT IMMOBILIER",
+        "variation_pct": 0.0
       },
       {
         "code": "ASSUR",
         "libelle": "ASSURANCES",
-        "variation_pct": 0.99
+        "variation_pct": 0.0
       },
       {
-        "code": "DISTR",
-        "libelle": "DISTRIBUTEURS",
-        "variation_pct": 0.28
+        "code": "MINES",
+        "libelle": "MINES",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "TCOM",
+        "libelle": "TELECOMMUNICATIONS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "AGRO",
+        "libelle": "AGROALIMENTAIRE / PRODUCTION",
+        "variation_pct": 0.0
       },
       {
         "code": "P&G",
         "libelle": "PETROLE ET GAZ",
-        "variation_pct": 0.22
+        "variation_pct": 0.0
+      },
+      {
+        "code": "DISTR",
+        "libelle": "DISTRIBUTEURS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "L&SI",
+        "libelle": "MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "SDT",
+        "libelle": "SERVICES DE TRANSPORT",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "PHARM",
+        "libelle": "INDUSTRIE PHARMACEUTIQUE",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "I&BEI",
+        "libelle": "INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "CHIM",
+        "libelle": "CHIMIE",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "ELEC",
+        "libelle": "ELECTRICITE",
+        "variation_pct": 0.0
       },
       {
         "code": "SF&AF",
         "libelle": "SOCIETE DE FINANCEMENT ET AUTRES ACTIVITES FINANCI",
-        "variation_pct": 0.1
+        "variation_pct": 0.0
       },
       {
-        "code": "S&P",
-        "libelle": "SYLVICULTURE ET PAPIER",
-        "variation_pct": 0.04
+        "code": "SP&H",
+        "libelle": "SOCIETES DE PORTEFEUILLES - HOLDINGS",
+        "variation_pct": 0.0
       },
       {
         "code": "TRANS",
@@ -67,85 +117,35 @@
         "variation_pct": 0.0
       },
       {
-        "code": "BOISS",
-        "libelle": "BOISSONS",
-        "variation_pct": -0.04
-      },
-      {
-        "code": "B&MC",
-        "libelle": "BATIMENT ET MATERIAUX DE CONSTRUCTION",
-        "variation_pct": -0.2
-      },
-      {
-        "code": "I&BEI",
-        "libelle": "INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS",
-        "variation_pct": -0.25
-      },
-      {
-        "code": "PHARM",
-        "libelle": "INDUSTRIE PHARMACEUTIQUE",
-        "variation_pct": -0.28
-      },
-      {
-        "code": "BANK",
-        "libelle": "BANQUES",
-        "variation_pct": -0.35
-      },
-      {
-        "code": "ELEC",
-        "libelle": "ELECTRICITE",
-        "variation_pct": -0.63
-      },
-      {
-        "code": "TCOM",
-        "libelle": "TELECOMMUNICATIONS",
-        "variation_pct": -0.65
-      },
-      {
-        "code": "SDT",
-        "libelle": "SERVICES DE TRANSPORT",
-        "variation_pct": -0.79
-      },
-      {
-        "code": "AGRO",
-        "libelle": "AGROALIMENTAIRE / PRODUCTION",
-        "variation_pct": -1.11
-      },
-      {
-        "code": "L&SI",
-        "libelle": "MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES",
-        "variation_pct": -1.41
-      },
-      {
-        "code": "IMMOB",
-        "libelle": "PARTICIPATION ET PROMOTION IMMOBILIERES",
-        "variation_pct": -1.53
-      },
-      {
-        "code": "SPI",
-        "libelle": "SOCIETES DE PLACEMENT IMMOBILIER",
-        "variation_pct": -1.84
-      },
-      {
         "code": "SANTE",
         "libelle": "SANTE",
-        "variation_pct": -2.04
+        "variation_pct": 0.0
       },
       {
-        "code": "MINES",
-        "libelle": "MINES",
-        "variation_pct": -3.27
+        "code": "L&H",
+        "libelle": "LOISIRS ET HOTELS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "BOISS",
+        "libelle": "BOISSONS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "S&P",
+        "libelle": "SYLVICULTURE ET PAPIER",
+        "variation_pct": 0.0
       }
     ],
     "breadth": {
-      "up": 24,
-      "down": 39,
-      "flat": 5,
+      "up": 14,
+      "down": 47,
+      "flat": 7,
       "quoted": 68
     },
-    "turnover_mad": 126462241.92,
-    "shares": 451631.0,
-    "transactions": 3873.0
+    "turnover_mad": 241479093.71,
+    "shares": 870277.0,
+    "transactions": 9152.0
   },
   "masi_history": {
     "2023-01-02": 10709.14,
@@ -1068,8 +1068,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-06T04:02:33.683159+00:00",
-    "checked_at": "2026-10-06T04:02:26.482701+00:00",
+    "cutoff": "2026-10-06T15:29:10.879375+00:00",
+    "checked_at": "2026-10-06T15:29:05.327745+00:00",
     "status": "ok",
     "groups": [
       {
@@ -1079,68 +1079,68 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7773.95,
-            "change_pct": 0.6633673109992277,
+            "value": 7839.97,
+            "change_pct": 0.8492465220383516,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-05T20:48:30+00:00",
+            "observed_at": "2026-10-06T15:15:50+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 51267.9,
-            "change_pct": 0.17769715121805268,
+            "value": 51644.15,
+            "change_pct": 0.7338900169501773,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-05T20:48:43+00:00",
+            "observed_at": "2026-10-06T15:15:50+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
             "name": "CAC 40",
             "unit": "points",
-            "value": 7834.1,
-            "change_pct": -0.7988917577011473,
+            "value": 7867.68,
+            "change_pct": 0.4286388991715695,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-05T15:35:30+00:00",
+            "observed_at": "2026-10-06T14:56:00+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:NI225",
             "name": "Nikkei 225",
             "unit": "points",
-            "value": 70316.43,
-            "change_pct": 0.5286744295365633,
+            "value": 70683.76,
+            "change_pct": 1.0538318924254193,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T03:58:15+00:00",
+            "observed_at": "2026-10-06T06:30:01+00:00",
             "currency": "JPY",
             "mode": "streaming",
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           }
         ]
@@ -1152,68 +1152,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.9693,
-            "change_pct": -0.1352326000721114,
+            "value": 9.9563,
+            "change_pct": -0.2654565853267484,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T04:02:18+00:00",
+            "observed_at": "2026-10-06T15:28:50+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 11.195,
-            "change_pct": 0,
+            "value": 11.209,
+            "change_pct": 0.12505582849485794,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T03:59:47+00:00",
+            "observed_at": "2026-10-06T15:24:51+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 15.52,
-            "change_pct": 1.3716525146962708,
+            "value": 15.33,
+            "change_pct": -1.224226804123708,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-05T20:14:16+00:00",
+            "observed_at": "2026-10-06T14:54:16+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.14,
-            "change_pct": 0.03819747113152808,
+            "value": 101.793,
+            "change_pct": -0.3016620797053826,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T04:02:15+00:00",
+            "observed_at": "2026-10-06T15:15:48+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           }
         ]
@@ -1225,68 +1225,68 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4156.4,
-            "change_pct": -0.009622786759058546,
+            "value": 4190.9,
+            "change_pct": 0.8203425712086089,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T04:02:10+00:00",
+            "observed_at": "2026-10-06T15:28:51+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 100.74,
-            "change_pct": 0.41866028708134145,
+            "value": 98.43,
+            "change_pct": -1.8839712918660152,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T04:02:20+00:00",
+            "observed_at": "2026-10-06T15:28:53+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.6615,
-            "change_pct": 0.30868845053456084,
+            "value": 6.6495,
+            "change_pct": 0.12799277217286148,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T04:01:55+00:00",
+            "observed_at": "2026-10-06T15:28:46+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 143.85,
-            "change_pct": 0.488997555012217,
+            "value": 144.4,
+            "change_pct": 0.3823427181091494,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T00:22:35+00:00",
+            "observed_at": "2026-10-06T15:26:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-06T04:02:26.482701+00:00",
+            "collected_at": "2026-10-06T15:29:05.327745+00:00",
             "collection_state": "collected"
           }
         ]
@@ -1311,23 +1311,23 @@
   },
   "health": {
     "health": {
-      "checked_at": "2026-10-06T04:02:20.377787+00:00",
+      "checked_at": "2026-10-06T15:28:57.820512+00:00",
       "source": "CDG Capital Bourse",
-      "result": "awaiting_quotes",
+      "result": "intraday",
       "last_session": "2026-10-05",
-      "message": "0 observations provisoires ; clôtures et scores historiques inchangés",
+      "message": "68 observations provisoires ; clôtures et scores historiques inchangés",
       "intraday_session": "2026-10-06",
       "rejected": []
     },
     "overview_health": {
       "result": "updated",
-      "checked_at": "2026-10-06T04:02:25.807307+00:00",
-      "asof": "2026-10-05"
+      "checked_at": "2026-10-06T15:29:04.162083+00:00",
+      "asof": "2026-10-06"
     },
     "news_health": {
-      "checked_at": "2026-10-06T04:02:25.527569+00:00",
+      "checked_at": "2026-10-06T15:29:03.928513+00:00",
       "status": "partial",
-      "fetched_items": 93,
+      "fetched_items": 90,
       "errors": [
         "Mining.com: HTTP Error 403: Forbidden"
       ],
@@ -1355,7 +1355,7 @@
         {
           "name": "Europe / partenaires du Maroc",
           "status": "ok",
-          "items": 4
+          "items": 2
         },
         {
           "name": "Fed · politique monétaire",
@@ -1370,7 +1370,7 @@
         {
           "name": "Finances Maroc · relais presse",
           "status": "ok",
-          "items": 3
+          "items": 2
         },
         {
           "name": "Financial Afrik",
