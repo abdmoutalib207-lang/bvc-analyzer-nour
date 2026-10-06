@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06T18:21:06.468801+00:00",
+  "updated_at": "2026-10-06T19:06:51.689756+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "896468f0997ce7a909",
+      "title": "Is the West’s 100-Year Venezuela Oil Bet About To Backfire?",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Is-the-Wests-100-Year-Venezuela-Oil-Bet-About-To-Backfire.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-06T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "a16be9dcdf6f93da44",
       "title": "The World’s Gold Producers Are Starting to Hoard Their Own Gold",
@@ -4689,21 +4706,6 @@
       "classification": "UNVERIFIED_ALERT",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "09aebdfee4f727751f",
-      "title": "Taux obligataires: Pourquoi le monde emprunte plus cher",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdHhmVlYyN2hhUGxwbVFXLWYyNVdUR1pXZVhCTmI2anBGOFFYYndEb3E5WXFSNGhBaHV2Zy0ySkZSbmVEc054NmluRU1zQVBwSGttY1phY0JCZTgtVUN5NTJiRDQ2cUVkWUhEY1UxWWFDdjdFWDV0LWFFN21LODJuRlZENVFLR2g3VUdGWThUNXNZWlRidUE?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-25T11:42:38+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
     },
     {
       "id": "2a834eeec7366b25c6",
