@@ -103,7 +103,7 @@
       "ytd_pct": -10.37
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-06T21:24:46.645530+00:00",
+    "observed_at": "2026-10-06T23:50:19.020323+00:00",
     "turnover_mad": 349551480.02,
     "breadth": {
       "up": 10,
@@ -113,6 +113,57 @@
     }
   },
   "news": [
+    {
+      "id": "f42acb28a2c1521c91",
+      "title": "5 Natural Gas Stocks Profiting From the Strait of Hormuz Standoff",
+      "url": "https://oilprice.com/Energy/Natural-Gas/5-Natural-Gas-Stocks-Profiting-From-the-Strait-of-Hormuz-Standoff.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-06T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "54dd8bf877d1fa99d6",
+      "title": "Quelles perspectives de marché pour le coton produit en Afrique ?",
+      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261006-quelles-perspectives-de-march%C3%A9-pour-le-coton-produit-en-afrique",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-06T22:12:47+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "4a7bb805220673d76c",
+      "title": "G7’s 100 Million Barrel Release Is Mostly Already Priced In",
+      "url": "https://oilprice.com/Energy/Crude-Oil/G7s-100-Million-Barrel-Release-Is-Mostly-Already-Priced-In.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-06T22:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "7bbbf535937fa46b94",
       "title": "Guinée – Banque mondiale : un nouveau Cadre de partenariat pays de plus de 3 milliards de dollars pour la période 2027-2033",
@@ -571,6 +622,23 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "e466d3c6ab0bb27252",
+      "title": "La Fed hausse son taux d’intérêt directeur - Finance et Investissement",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ21hRHpVRnNrTkxHNHB3V2JTdFFLNXg4TWNpR2luWTYySG0zZ181NjRoMF83S1Zjbl85NDVGQ3JQS0dmUk1uQzNlNzlqUTNqMnB6cloxQW1oeXNGZjNoWEozN0dIRDlWNjNIZEhaTHJLbTJRTHQwaERPVGJHT2FMQlNNSW9wZkRhUFVjbkZZR25XVDBual9F?oc=5",
+      "publisher": "Fed · presse francophone",
+      "published_at": "2026-10-06T12:17:03+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed_presse",
+      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "518b9a82404dd81ea3",
@@ -2997,23 +3065,6 @@
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
-      "id": "cfb038f0587a83e602",
-      "title": "Atelier technique : Résultats de l’enquête sur le Budget Ouvert 2025 - وزارة الاقتصاد والمالية",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85NEI3Y3RiU2VuMWQ3dWpTNzM4U09rMUJpRjNONFNidGRoQkJMOGVzQjVQTmZROUZBVGlqLVdqTUhHb0w4YmpWR1lTeXE2OGtNOUJSWE9jMjBYOFV6MXJ5ODhIa19YSDBqN3ZSajhETmo1QlRQMzI4?oc=5",
-      "publisher": "Finances Maroc · relais presse",
-      "published_at": "2026-09-29T21:43:30+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "mef",
-      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
       "id": "f874b3e973a51c8bef",
       "title": "Holcim Maroc - CP relatif aux résultats du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/CP_Holcim_Maroc_S1_26.pdf",
@@ -4773,53 +4824,6 @@
       "scope": "UNKNOWN"
     },
     {
-      "id": "eeca6ccbe31bd860a9",
-      "title": "Boissons du Maroc : Le RNPG recule de 8,6% au S1 2026",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBtTExIVUlJaTg5SlFaVkdncjBxdUd5WGRvODF4MUJRWDBCcDB0aWdhU2RKVEJhS19uSW9pZFA5cmUyd0VnaWF3R2ZhaGN3aEY4cy1NamJfeThEdzhBOUtyaUVHcENkbEFSc0pz?oc=5",
-      "publisher": "BourseNews",
-      "published_at": "2026-09-25T12:18:06+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "MAROC"
-    },
-    {
-      "id": "185a53558f9aa931f9",
-      "title": "Crédit, Afrique, digital : BMCE Capital mise sur le titre Attijariwafa bank",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMFMzb1ZXMlBFaTg0OWJLOXFZZl9zWDFLWWxuUFg2anJOUC1BbEJpNkdBTTJyQVd3S3BJcjJkQmwydGFWcWNPak1nT3JmZE9LNkYzR00yOEVVYjNFMGt0ZTl5eGZWN2RsQ1BJamp1eThseXAweHBHdmN5OTRvSWNRUzIyeGNBazlUZExsc0ZINnRFem9RWFN3dTdJTHZUUzg?oc=5",
-      "publisher": "BVC Sociétés",
-      "published_at": "2026-09-25T12:16:25+00:00",
-      "tickers": [
-        "ATW"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "266b85301e7b31831e",
-      "title": "U.S. Oil, Gas Drilling Perks Up As Pressure Mounts",
-      "url": "https://oilprice.com/Energy/Crude-Oil/US-Oil-Gas-Drilling-Perks-Up-As-Pressure-Mounts.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-09-25T12:15:00-05:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
       "id": "2a834eeec7366b25c6",
       "title": "T2S Group - CP relatif à l'augmentation de capital réservée à M. Sordo en qualité de dirigeant de T2S Group",
       "url": "https://www.ammc.ma/sites/default/files/CP_T2S_group_augmentation_capital_reservee_dirigeant.pdf",
@@ -6162,7 +6166,7 @@
           "nombre_actions_au_rapport": {
             "value": 291500,
             "page": 35,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/AFI_RFA_2025.pdf",
             "note": "Tableau C1 (état de répartition du capital) : « MONTANT DU CAPITAL: 14 575 000,00 DH », valeur nominale 50,00 par action ; titres : Aluminium du Maroc 148 665 + El Alami Malika 11 + El Alami Abdeslam 11 + Koutit 10 + Vaillant 10 + flottant en bourse 142 793 = 291 500 (colonne « exercice actuel », identique à l'exercice précédent). 14 575 000 ÷ 50 = 291 500. Le référentiel de l'opérateur implique 291 500 (capitalisation 97 069 500 ÷ cours 333) : accord exact. Dividende 2025 (rapport de gestion p.10, texte) : « distribution en 2026 de dividendes 2025 (20 dh / action) = 5.830.000,00 dh » = 291 500 × 20. Page IMAGE (scan net) : chiffre lu sur le rendu pypdfium2 (échelle 2), recoupé par l'arithmétique des états.",
             "accounting_basis": "SOCIAL (normes marocaines), 31/12/2025 — Afric Industries ne publie que des comptes sociaux (aucun consolidé au dépôt ; titres de participation 21,6 MMAD : La Roseraie de l'Atlas, Balcony Residences)",
@@ -9537,7 +9541,7 @@
           "nombre_actions_au_rapport": {
             "value": 1744000,
             "page": 37,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Balima_RFA_2025_0.pdf",
             "note": "Etat C1 (répartition du capital social, p.37) : « CAPITAL SOCIAL : 34 880 000,00 », valeur nominale 20, « TOTAUX : 1 744 000 1 744 000 34 880 000,00 » (exercice précédent / actuel). 34 880 000 ÷ 20 = 1 744 000. Le référentiel de l'opérateur implique 1 744 000 (capitalisation 327 872 000 ÷ cours 188) : accord exact.",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025 — groupe Balima (Société Immobilière Balima + Société Hôtelière Balima Rabat + JR Vanlec) ; pas de minoritaires, part du groupe = ensemble",
@@ -14849,7 +14853,7 @@
           "nombre_actions_au_rapport": {
             "value": 16117611,
             "page": 33,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Colorado_RFA_2025.pdf",
             "note": "C1 Capital Social, valeur nominale 10 DH, capital 161 176 110,00 : Colbert Finances 10 950 305 (109 503 050,00) + flottant en bourse 3 805 368 + Berrada Soleimane 336 858 + Chagar Abed 320 740 + Yan SASU 644 704 + Berrada Josette 56 412 + Berrada Sophia 3 224 = 16 117 611 titres (le texte du PDF coupe le total en « 1611761 1611761 »). 161 176 110 ÷ 10 = 16 117 611 ; le référentiel de l'opérateur implique 16 117 611 (capitalisation 1 283 767 716 ÷ cours 79,65) : accord exact. Résultat par action publié p.34 : « 4,06 » (65 479 341,98 ÷ 16 117 611 = 4,0626).",
             "accounting_basis": "SOCIAL (normes marocaines), 31/12/2025 — Colorado ne publie pas de comptes consolidés (aucun titre de participation au bilan 2025)",
@@ -19042,7 +19046,7 @@
           "nombre_actions_au_rapport": {
             "value": 1438984,
             "page": 89,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Fenie_Brossette_RFA_2025.pdf",
             "note": "ETIC social, « C1. ETAT DE REPARTITION DU CAPITAL SOCIAL — MONTANT DU CAPITAL : 143 898 400,00 », colonne « Nombre de titres, ex. actuel » : Zellidja SA 821 313 + actionnaires en bourse 438 292 + Asma Invest 177 186 + Rhenalu Cegedur Pechiney 2 045 + M. Gautier Sauvagnac 107 + M. Leenhardt 38 + Somed 1 + Faouzi 1 + Chraibi 1 = « 1438984 » titres, valeur nominale 100,00 DH. Le référentiel de l'opérateur implique 1 438 984 (capitalisation 495 010 496 ÷ cours 344) : accord exact. Zellidja en détient 57,1 %. BPA consolidé 14 856 000 ÷ 1 438 984 = 10,32 DH. [lu sur rendu pivoté]",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025 — périmètre : Fenie Brossette Maroc + Côte d'Ivoire, Mauritanie, Sénégal (100 %, intégration globale, p.51)",
@@ -22030,7 +22034,7 @@
           "nombre_actions_au_rapport": {
             "value": 382716,
             "page": 57,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Involys_RFA_2025.pdf",
             "note": "« ETAT C1 : ETAT DE REPARTITION DU CAPITAL SOCIAL — CAPITAL SOCIAL : 38 271 600,00 », colonne « Nombre de titres, exercice actuel » : AM Invest Morocco 143 357 + flottant 132 993 + Mohamed Bachir Rachdi 37 468 + Omar Bennani 27 000 + héritiers El Ouarzazi 22 379 + Laraki Walid 19 519 = 382 716 titres, « valeur nominale de chaque action » 100 DH (38 271 600 ÷ 100 = 382 716). Le référentiel de l'opérateur implique 382 716 (capitalisation 49 753 080 ÷ cours 130) : accord exact. Résultat par action publié p.59 : « 0,30 » (116 178,88 ÷ 382 716 = 0,3036). [lu sur rendu pivoté]",
             "accounting_basis": "SOCIAL (normes marocaines), 31/12/2025 — Involys ne consolide pas ses comptes (CAC p.28 : filiales étrangères sans activité, états indisponibles)",
@@ -24236,7 +24240,7 @@
           "nombre_actions_au_rapport": {
             "value": 647777,
             "page": 4,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/M2M_Group_2025.pdf",
             "note": "Le dépôt (6 pages) ne donne NI le nombre d'actions NI la valeur nominale : « Capital 64 777 700 » DH (bilan consolidé et tableau de variation). Nombre retenu 647 777 = référentiel de l'opérateur (capitalisation 261 442 797,2 ÷ cours 403,6 = 647 777,0), soit un nominal de 100,00 DH ; recoupé par le dépôt : « Résultat par action 8,19 » = 5 305 374 ÷ 647 777 = 8,19 (22,62 en 2024 = 14 651 275 ÷ 647 777). CALCUL recoupé, pas une lecture.",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
@@ -26366,7 +26370,7 @@
           "nombre_actions_au_rapport": {
             "value": 812500,
             "page": 8,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/MOX_RFA_2025.pdf",
             "note": "« Capital social MAD 81 250 000 divisé en 812 500 actions de MAD 100 chacune au 31.12.2019 » ; capital 81 250 KMAD au bilan consolidé 2025 et 2024 (inchangé). Le référentiel de l'opérateur implique 812 500 (capitalisation 308 750 000 ÷ cours 380) : accord exact. BPA consolidé 15 447 ÷ 812,5 = 19,01 DH = « Résultat net par action 19,0 » publié ; social 8 493 ÷ 812,5 = 10,45 = « Bénéfice par action 10,45 » (p.169).",
             "accounting_basis": "consolidé IFRS, 31/12/2025",
@@ -28153,7 +28157,7 @@
           "nombre_actions_au_rapport": {
             "value": 1023264,
             "page": 24,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_RFA_2025.pdf",
             "note": "« soit 102 326 400 Dhs répartis en 1 023 264 actions » (p.24, tableau « TOTAL NOMBRE D'ACTIONS 1 023 264 ») ; capital 102.326 KMAD au bilan ; nominal 100 DH ; « la répartition du capital … n'a pas connu de modification par rapport à l'exercice précédent » ; p.28 : « chacune des 1 023 264 actions composant le capital social ». Le référentiel de l'opérateur implique 1 023 264 (5 751 766 944 ÷ 5 621) : accord exact. BPA consolidé 324 181 862,89 ÷ 1 023 264 = 316,81 DH ; social 300 005 997,98 ÷ 1 023 264 = 293,19 DH.",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
@@ -30700,7 +30704,7 @@
           "nombre_actions_au_rapport": {
             "value": 812070,
             "page": 23,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/S2M_RFA_2025.pdf",
             "note": "État de répartition du capital social (exercice 2025, p.23) : « Total 812070 812070 … 40 603 500,00 », valeur nominale de chaque action 50 DH (40 603 500 ÷ 50 = 812 070). Le référentiel de l'opérateur implique 812 070 (capitalisation 414 155 700 ÷ cours 510) : accord exact. BPA consolidé 32 558 354 ÷ 812 070 = 40,09 DH. [lu sur rendu]",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
@@ -35578,7 +35582,7 @@
           "nombre_actions_au_rapport": {
             "value": 21785174,
             "page": 21,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
             "note": "⚠️ NOMBRE D'ACTIONS ACTUEL (introduction en bourse en cours de période) : le dépôt donne 10 107 834 actions de 100 DH au 30/06/2026 (p.21), division du nominal 100 → 50 à la date de première cotation (p.21, AG du 26/06/2026), soit 20 215 668 ; + 1 569 506 actions nouvelles de l'IPO (CP_T2S_resultats_IPO.pdf p.1) = 21 785 174 ; le référentiel de l'opérateur (capitalisation 4 794 916 797,40 ÷ cours 220,1) donne 21 785 174 : accord exact. C'est le nombre sur lequel le marché cote et sur lequel le BPA S1 est calculé. Le nombre À LA DATE DES COMPTES 2025 est différent : voir `nombre_actions_31_12_2025`.",
             "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
@@ -37299,7 +37303,7 @@
           "nombre_actions_au_rapport": {
             "value": 11413880,
             "page": 30,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Unimer_RFA_2025.pdf",
             "note": "Etat de répartition du capital (p.30) : « Total 11 413 880 11 413 880 - 114 138 800,00 114 138 800,00 » (nominal 10,00 : Sanlam Maroc 694 127, Aljia Holding 397 023, divers porteurs 1 742 849…) ; note 4.11 p.39 : « Nombre moyen d'actions en circulation 11 413 880 ». Référentiel de l'opérateur : capitalisation 1 928 945 720 ÷ cours 169 = 11 413 880 : accord exact.",
             "accounting_basis": "consolidé (normes marocaines), 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 304 714 KMAD)",
@@ -38546,7 +38550,7 @@
           "nombre_actions_au_rapport": {
             "value": 572849,
             "page": 51,
-            "unit": "MMAD",
+            "unit": "actions",
             "document_url": "https://www.ammc.ma/sites/default/files/Zellidja_RFA_2025.pdf",
             "note": "État du capital social (comptes sociaux, rubrique C1, p.51) : « T o t a l 572849 572849 -- 57 284 900,00 57 284 900,00 57 284 900,00 », valeur nominale 100 DH par action (SOMED 398 147 ; AXA 100 704 ; Al Hoceinia 28 714 ; Rebab 26 190 ; flottant 19 094). Le référentiel de l'opérateur implique 572 849 (capitalisation 160 970 569 ÷ cours 281) : accord exact ; bilan consolidé p.9 : « Capital 57 285 » (KMAD). BPA consolidé 21 588 000 ÷ 572 849 = 37,69 DH.",
             "accounting_basis": "consolidé (normes marocaines, CNC avis n°5), 31/12/2025",
@@ -38773,7 +38777,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-06",
-    "observed_at": "2026-10-06T21:24:46.645530+00:00",
+    "observed_at": "2026-10-06T23:50:19.020323+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -38917,7 +38921,7 @@
   "market_volume_audit": {
     "status": "matched",
     "asof": "2026-10-06",
-    "observed_at": "2026-10-06T21:24:46.645530+00:00",
+    "observed_at": "2026-10-06T23:50:19.020323+00:00",
     "expected_lines": 68,
     "observed_lines": 68,
     "coverage_complete": true,
@@ -85363,11 +85367,11 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-06T21:24:46.645530+00:00",
+    "checked_at": "2026-10-06T23:50:19.020323+00:00",
     "asof": "2026-10-06"
   },
   "news_health": {
-    "checked_at": "2026-10-06T21:24:46.189477+00:00",
+    "checked_at": "2026-10-06T23:50:18.850646+00:00",
     "status": "partial",
     "fetched_items": 91,
     "errors": [
@@ -85406,13 +85410,13 @@
       },
       {
         "name": "Fed · presse francophone",
-        "status": "empty",
-        "items": 0
+        "status": "ok",
+        "items": 1
       },
       {
         "name": "Finances Maroc · relais presse",
         "status": "ok",
-        "items": 2
+        "items": 1
       },
       {
         "name": "Financial Afrik",
@@ -85462,7 +85466,7 @@
     ]
   },
   "health": {
-    "checked_at": "2026-10-06T21:24:40.393806+00:00",
+    "checked_at": "2026-10-06T23:50:14.061947+00:00",
     "source": "CDG Capital Bourse",
     "result": "unchanged",
     "last_session": "2026-10-06",
@@ -85478,7 +85482,7 @@
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-06T21:24:47.490903+00:00",
+    "checked_at": "2026-10-06T23:50:20.014594+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
@@ -85490,7 +85494,7 @@
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
@@ -85503,7 +85507,7 @@
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
@@ -85516,7 +85520,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -85529,33 +85533,33 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
         "ticker": "FX_IDC:USDMAD",
-        "value": 9.9568,
-        "change_pct": -0.260447970509274,
-        "observed_at": "2026-10-06T21:24:41+00:00",
+        "value": 9.9598,
+        "change_pct": 0.04520205317770606,
+        "observed_at": "2026-10-06T23:50:15+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
         "ticker": "FX_IDC:EURMAD",
-        "value": 11.212,
-        "change_pct": 0.15185350602947262,
-        "observed_at": "2026-10-06T21:19:48+00:00",
+        "value": 11.204,
+        "change_pct": 0.017853954650961148,
+        "observed_at": "2026-10-06T23:49:51+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
@@ -85568,86 +85572,84 @@
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
         "ticker": "TVC:DXY",
-        "value": 101.86,
-        "change_pct": -0.23604078314610008,
-        "observed_at": "2026-10-06T21:24:16+00:00",
+        "value": 101.913,
+        "change_pct": 0.06676812803770223,
+        "observed_at": "2026-10-06T23:50:14+00:00",
         "currency": "USD",
         "mode": "streaming",
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
         "ticker": "COMEX:GC1!",
-        "value": 4187.1,
-        "change_pct": 0.728926096997695,
-        "observed_at": "2026-10-06T20:59:58+00:00",
+        "value": 4194.7,
+        "change_pct": 0.18150987557019066,
+        "observed_at": "2026-10-06T23:49:19+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
         "ticker": "ICEEUR:BRN1!",
         "value": 100.58,
         "change_pct": 0.2591706539075011,
-        "observed_at": "2026-10-06T21:23:05+00:00",
+        "observed_at": "2026-10-06T23:27:07+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
         "ticker": "COMEX:HG1!",
-        "value": 6.6495,
-        "change_pct": 0.12799277217286148,
-        "observed_at": "2026-10-06T20:59:14+00:00",
+        "value": 6.6575,
+        "change_pct": 0.12030979772915268,
+        "observed_at": "2026-10-06T23:50:10+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-06T21:24:47.490903+00:00",
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
         "ticker": "ICEEUR:ATW1!",
-        "value": 144.4,
-        "change_pct": 0.3823427181091494,
-        "observed_at": "2026-10-06T15:26:27+00:00",
+        "value": 144.65,
+        "change_pct": 0.5561348627042136,
+        "observed_at": "2026-10-06T23:29:53+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "API2 Rotterdam Coal Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-        "collected_at": "2026-10-06T15:29:05.327745+00:00",
-        "collection_state": "cached"
+        "collected_at": "2026-10-06T23:50:20.014594+00:00",
+        "collection_state": "collected"
       }
     },
-    "errors": {
-      "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
-    },
-    "status": "partial",
+    "errors": {},
+    "status": "ok",
     "role": "Contexte uniquement : aucune contribution aux scores, aucune prédiction"
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-06T21:24:54.481349+00:00",
-    "checked_at": "2026-10-06T21:24:47.490903+00:00",
-    "status": "partial",
+    "cutoff": "2026-10-06T23:50:24.047689+00:00",
+    "checked_at": "2026-10-06T23:50:20.014594+00:00",
+    "status": "ok",
     "groups": [
       {
         "title": "Indices actions",
@@ -85666,7 +85668,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
@@ -85683,7 +85685,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
@@ -85700,7 +85702,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
@@ -85717,7 +85719,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           }
         ]
@@ -85729,34 +85731,34 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.9568,
-            "change_pct": -0.260447970509274,
+            "value": 9.9598,
+            "change_pct": 0.04520205317770606,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T21:24:41+00:00",
+            "observed_at": "2026-10-06T23:50:15+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 11.212,
-            "change_pct": 0.15185350602947262,
+            "value": 11.204,
+            "change_pct": 0.017853954650961148,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T21:19:48+00:00",
+            "observed_at": "2026-10-06T23:49:51+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
@@ -85773,24 +85775,24 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 101.86,
-            "change_pct": -0.23604078314610008,
+            "value": 101.913,
+            "change_pct": 0.06676812803770223,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T21:24:16+00:00",
+            "observed_at": "2026-10-06T23:50:14+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           }
         ]
@@ -85802,17 +85804,17 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4187.1,
-            "change_pct": 0.728926096997695,
+            "value": 4194.7,
+            "change_pct": 0.18150987557019066,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T20:59:58+00:00",
+            "observed_at": "2026-10-06T23:49:19+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
@@ -85823,74 +85825,72 @@
             "change_pct": 0.2591706539075011,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T21:23:05+00:00",
+            "observed_at": "2026-10-06T23:27:07+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.6495,
-            "change_pct": 0.12799277217286148,
+            "value": 6.6575,
+            "change_pct": 0.12030979772915268,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-06T20:59:14+00:00",
+            "observed_at": "2026-10-06T23:50:10+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-06T21:24:47.490903+00:00",
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 144.4,
-            "change_pct": 0.3823427181091494,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-06T15:26:27+00:00",
+            "value": 144.65,
+            "change_pct": 0.5561348627042136,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-06T23:29:53+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-06T15:29:05.327745+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-06T23:50:20.014594+00:00",
+            "collection_state": "collected"
           }
         ]
       }
     ],
-    "errors": {
-      "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
-    },
+    "errors": {},
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
   },
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "schedule",
-    "slot": "closing",
-    "label": "Briefing de fin de journée / filet de sécurité",
-    "target_time": "18:00",
-    "schedule": "0 18 * * 1-5",
-    "scheduled_at": "2026-10-06T18:00:00+00:00",
-    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
+    "event": "push",
+    "slot": "adhoc",
+    "label": "Point de marché à la demande",
+    "target_time": null,
+    "schedule": null,
+    "scheduled_at": null,
+    "scheduled_at_basis": null,
     "edition_for": "2026-10-06",
-    "started_at": "2026-10-06T21:24:37+00:00",
-    "built_at": "2026-10-06T21:24:54.481349+00:00",
-    "delay_minutes": 204.6,
-    "late": true,
-    "run_id": "37533659969",
-    "commit": "12b79250994612d09d5daa01d0497b24d8cceea4",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37533659969"
+    "started_at": "2026-10-06T23:50:13+00:00",
+    "built_at": "2026-10-06T23:50:24.047689+00:00",
+    "delay_minutes": null,
+    "late": false,
+    "run_id": "37548707562",
+    "commit": "7dd58c95e0e11a4762c5c415bb213f399f118170",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37548707562"
   },
   "score_archive": {
     "daily_snapshots": 1,
