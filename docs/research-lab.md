@@ -2,6 +2,10 @@
 
 Le laboratoire décrit les archives disponibles et les coûts hypothétiques. Il ne reconstruit pas le score canonique dans le passé, ne règle aucun coefficient sur les rendements et ne certifie aucune rentabilité.
 
+![Laboratoire publié, ATW sur 5 séances, frais achat et vente 1 %, capture du 6 octobre 2026](research-lab-preview.jpg)
+
+Version déployée et vérifiée : commit `ae23b2ab352c8a63a03a96cb83edf300efc48c4c`, workflow `37391634686` réussi. 107 tests Python, 2 400 scénarios graphiques, 108 scénarios de filtres du laboratoire et contrôles de rendu. Au 6 octobre : 917 observations MASI, 3 311 observations de tendances (titres et horizons distincts, à ne pas agréger en échantillon indépendant), risque calculable sur 72 titres, comparaison sectorielle sur 10 titres, première archive prospective quotidienne. Les scores et fondamentaux courants sont inchangés par ce lot.
+
 ## Protocole historique
 
 Le calendrier est celui du MASI daté, sans cours futurs. Chaque horizon (5, 20, 60 séances) possède une grille fixe commune aux titres : un signal tous les horizon + 1 jours, après 200 observations MASI. La règle préalable est clôture supérieure aux moyennes mobiles 20 et 50 calculées au signal, avec leurs seules observations antérieures ou courantes. L'entrée est la clôture suivante, jamais la clôture du signal. La sortie est la clôture horizon séances MASI après l'entrée. Ce sont des observations de prix, pas des ordres exécutés.
