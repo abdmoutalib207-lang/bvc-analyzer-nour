@@ -37,7 +37,7 @@ def _rsi(closes, period=14):
 def technical(record):
     bars = record.get("candles") or []
     # The first malformed bar blocks precise OHLC-derived indicators; no fabrication.
-    clean = [b for b in bars if all(isinstance(b.get(k), (int,float)) and
+    clean = [b for b in bars if all(isinstance(b.get(k), (int,float)) and not isinstance(b.get(k), bool) and
                                      math.isfinite(float(b[k])) for k in ("o","h","l","c","v"))
              and b["c"] > 0 and b["h"] >= max(b["o"], b["c"], b["l"])
              and b["l"] <= min(b["o"], b["c"]) and b["v"] >= 0]

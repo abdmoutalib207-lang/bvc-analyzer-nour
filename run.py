@@ -15,6 +15,7 @@ from nour.market_view import closing_summary
 from nour.briefing_view import briefing_text
 from nour.report_contracts import synchronize_market
 from nour.macro import context_view
+from nour.research import enrich, archive_scores
 
 ROOT = Path(__file__).resolve().parent
 
@@ -35,6 +36,8 @@ def main():
     synchronize_market(report, overview.get('current', {}))
     history_path = ROOT/'data/masi_history.json'
     report['masi_history'] = json.loads(history_path.read_text()).get('seances', {}) if history_path.exists() else {}
+    report['masi_history'] = {d: v for d,v in report['masi_history'].items() if d <= args.asof}
+    enrich(report, fixture)
     overview_health = ROOT/'data/overview_health.json'
     report['overview_health'] = json.loads(overview_health.read_text()) if overview_health.exists() else {}
     news_health = ROOT/'data/news_health.json'
@@ -52,6 +55,7 @@ def main():
         event=os.environ.get("GITHUB_EVENT_NAME", "local"), slot=args.slot,
         started_at=os.environ.get("NOUR_STARTED_AT"), run_id=os.environ.get("GITHUB_RUN_ID", ""),
         commit=os.environ.get("GITHUB_SHA", ""))
+    report['score_archive'] = archive_scores(report, ROOT/'data/score_archive', now)
     live_path = ROOT/"data/intraday.json"
     live = json.loads(live_path.read_text()) if live_path.exists() else None
     report["intraday"] = visible_intraday(live, now)

@@ -1,6 +1,6 @@
 """Transparent descriptive pilot engine. No automated buy/sell signal."""
 from datetime import date
-from math import ceil, sqrt
+from math import ceil, sqrt, isfinite
 from statistics import median, stdev
 from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
 from .fundamentals import coverage
@@ -26,8 +26,13 @@ def analyze(record, asof, quantity=1000):
     for bar in raw:
         try:
             day = date.fromisoformat(bar["d"])
+            if day.isoformat() > asof:
+                issues.append("Ligne future exclue")
+                continue
+            if any(isinstance(bar.get(k), bool) for k in ('o', 'h', 'l', 'c', 'v')):
+                raise ValueError('Boolean price')
             o, h, l, c, v = (float(bar[k]) for k in ("o", "h", "l", "c", "v"))
-            if day.isoformat() in seen or h < l or min(o, h, l, c) < 0 or v < 0:
+            if not all(isfinite(x) for x in (o,h,l,c,v)) or day.isoformat() in seen or h < l or min(o, h, l, c) <= 0 or v < 0:
                 issues.append(f"Ligne incohérente ou doublon : {bar.get('d')}")
                 continue
             seen.add(day.isoformat())
@@ -130,9 +135,16 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
     for symbol in fixture["symbols"]:
         rec = fixture["records"][symbol]
         item = analyze(rec, asof, quantity)
-        item["technical"] = technical(rec)
-        item["fundamental"] = fundamentals(rec, facts.get(symbol))
-        item["historical_statistics"] = describe(rec)
+        dated = {**rec, 'candles': [b for b in rec.get('candles', [])
+                                  if isinstance(b.get('d'), str) and b['d'] <= asof]}
+        item["technical"] = technical(dated)
+        # Imported current facts are not a point-in-time financial database.
+        # A historical build must not quietly use the current fact snapshot.
+        historical = asof < str(fixture.get('snapshot_updated', ''))[:10]
+        item["fundamental"] = fundamentals(rec, None if historical else facts.get(symbol))
+        if historical:
+            item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
+        item["historical_statistics"] = describe(dated)
         item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
         results.append(item)
     return {

@@ -10,6 +10,7 @@ from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .macro_view import markets_html, radar_html, feed_health_html
+from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 
 
 def esc(value):
@@ -72,7 +73,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -270,6 +271,7 @@ def detail_page(item, record, fixture, style, script):
             + f'<section class="panel"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
             + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
             + statistics_html
+            + research_panels(item)
             + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
             + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
@@ -308,6 +310,7 @@ def home_page(fixture, report, style, script):
             + '<main><div class="hero market-hero"><span class="eyebrow">Bourse de Casablanca</span><h1>Marché <em>& séance.</em></h1><p>Le MASI et le bilan du marché, puis les valeurs à explorer.</p>'
             + '<div class="primary-actions"><a class="btnlink" href="cloture.html">Dernier briefing de clôture</a><a class="btnlink outline" href="briefing.html">Point de marché</a><a class="btnlink outline" href="actualites.html">Actualités</a></div></div>'
             + market_panel(report)
+            + research_teaser(report)
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Contexte indépendant des scores</span><h2>Macro et international</h2><p>12 instruments : indices, devises, risque et matières premières. Cotations datées, alertes Maroc / international et état des sources.</p></div><a class="btnlink outline" href="macro.html">Ouvrir les marchés mondiaux</a></div></section>'
             + fundamental_summary
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
@@ -385,6 +388,9 @@ def briefing_page(fixture, briefing, style, script):
 
 
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
+    fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in rec.get('candles', [])
+        if isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']]}
+        for s,rec in fixture['records'].items()}}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     (output / "titres").mkdir(exist_ok=True)
@@ -395,6 +401,17 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
+    research_script = (assets/'research.js').read_text(encoding='utf-8')
+    (output/'recherche.html').write_text(shell('Laboratoire statistique',
+        header('index.html', fixture['snapshot_updated']) + research_body(fixture, report),
+        style, script + '\n' + research_script), encoding='utf-8')
+    research = report.get('research', {'rows': [], 'audit': []})
+    (output/'recherche.json').write_text(json.dumps(research, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    with (output/'recherche.csv').open('w', encoding='utf-8-sig', newline='') as out:
+        keys = ['symbol','horizon','signal_date','entry_date','exit_date','entry','exit','gross_pct','masi_pct','regime','period']
+        writer = csv.DictWriter(out, fieldnames=keys, delimiter=';')
+        writer.writeheader()
+        writer.writerows(research.get('rows', []))
     if briefing is not None:
         (output / "briefing.html").write_text(briefing_page(fixture, briefing, style, script), encoding="utf-8")
     if closing is not None:

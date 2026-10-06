@@ -18,6 +18,7 @@ on:
       - 'web/chart.js'
       - 'web/chart-controls.js'
       - 'web/market.js'
+      - 'web/research.js'
       - 'web/nour.css'
       - '.github/workflows/nour_daily.yml'
   schedule:
@@ -80,6 +81,8 @@ jobs:
           node --check web/chart.js
           node --check web/chart-controls.js
           node --check web/market.js
+          node --check web/research.js
+          node tools/test_research.cjs
           node tools/test_chart_controls.cjs
           node tools/test_news_filters.cjs
       - name: Save validated snapshots and pages

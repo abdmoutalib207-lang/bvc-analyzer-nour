@@ -4,6 +4,8 @@ from copy import deepcopy
 
 def synchronize_market(report, overview):
     current = deepcopy(overview or {})
+    if current.get('asof') and report.get('analysis_date') and current['asof'] > report['analysis_date']:
+        current = {'status': 'unavailable', 'note': 'Vue de marché future exclue à la date d’analyse.'}
     report['market_overview'] = current
     report['market_archive'] = deepcopy(report.get('market_archive') or report.get('market') or {})
     report['market'] = dict(last_session=current.get('asof'), status=current.get('status','unavailable'),
