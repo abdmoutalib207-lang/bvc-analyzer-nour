@@ -1,5 +1,7 @@
 # ECC dans Nour — 6 octobre 2026
 
+[Validation de la publication et aperçu réel](ecc-validation-2026-10-06.md).
+
 Intégration locale au dépôt, issue de [ECC](https://github.com/affaan-m/ECC),
 commit figé `ef648e01899ba3e8dc6371642deaaf64b4477775`, licence MIT conservée
 dans `vendor/ecc/LICENSE`. Le moteur principal reste exclusivement consultable.
