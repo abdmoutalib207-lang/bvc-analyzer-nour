@@ -1,8 +1,59 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-05T23:01:37.812439+00:00",
+  "updated_at": "2026-10-06T00:00:39.268154+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "862d21c5e2245db6aa",
+      "title": "Standard Chartered Says Hormuz Oil Flows Are Far From Normal",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Standard-Chartered-Says-Hormuz-Oil-Flows-Are-Far-From-Normal.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-06T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "b902a8818545849823",
+      "title": "Monétisation des contenus Meta en Côte d’Ivoire : un précédent africain en construction",
+      "url": "https://www.financialafrik.com/2026/10/06/monetisation-des-contenus-meta-en-cote-divoire-un-precedent-africain-en-construction/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T23:42:24+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "f81c39f14fc504374c",
+      "title": "À Paris, l’Africa Risk Forum dévoile son Africa Risk Index® pour reconfigurer la mesure du risque continental",
+      "url": "https://www.financialafrik.com/2026/10/06/a-paris-lafrica-risk-forum-devoile-son-africa-risk-index-pour-reconfigurer-la-mesure-du-risque-continental/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-05T23:08:24+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "c1282515cc5e7e8bf0",
       "title": "Europe Weighs Methane Rule Delay as Energy Supply Risks Mount",
@@ -887,7 +938,7 @@
     },
     {
       "id": "5ffd44544e0607c895",
-      "title": "Les actions européennes rebondissent avant les chiffres de l’inflation en zone euro et le rapport sur l’emploi aux États-Unis - Zonebourse",
+      "title": "Les actions européennes rebondissent avant les chiffres de l’inflation en zone euro et le rapport sur l’emploi aux États-Unis - zonebourse.com",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPVGE1MER0WndXM3VtSXFHYkl3dVJmeTZWaTk3a3FVZGF1dG5SdFlsSnNFdUdYQlVoMi1wenVNS1JmMkFWb3o0T3QwVFNkbGlkNXRScGI1UmQwVUJuLU5JRnc0OTVJZzBEdTVfa3owN3hIUkc2eHFEbjJFZWtBVThLVVdHcHhHN042Ry1vYVlPODVEeHotcnBOUWRUV0Vaa2Z0d2dFaTFUUzRKMThnWWoxY3BmQkw4OFZvTy1SMHJyQmo3TkxHLW9hV0hNRFUwTHA0UDN4MVJyNk96Vlh4NlM2TkhKNDZEYkJjYllGMmdiZjk?oc=5",
       "publisher": "Inflation US / zone euro · presse",
       "published_at": "2026-10-02T09:00:32+00:00",
@@ -1208,7 +1259,7 @@
     },
     {
       "id": "0c30b65bede28be644",
-      "title": "Baisse en vue en Europe avant les chiffres de l'inflation - Zonebourse",
+      "title": "Baisse en vue en Europe avant les chiffres de l'inflation - zonebourse.com",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNW5fMGpMOFEtZGhHanBvTm5kRGFhU1N2akFuZXJFS0lyVm5SWUVKaTB6eU5NN2t4Z1dHS2o3WUdZOXBVQ0tDeEJTVnFCQ3l5NGdmclB3a0xpa0w0NFFWcjRGRGNzQnZ2TG1GN25NMWZKV2U4S3c3MzdWV0FhakxVWDlqN2Zoel9xUjg1UDdISk1iU0s3RHoxRDF1R2VaQVQ0alByWDFUcGhLbHA1SGwwUkMyVkJURnBveHc?oc=5",
       "publisher": "Inflation US / zone euro · presse",
       "published_at": "2026-10-01T07:12:04+00:00",
@@ -4585,21 +4636,6 @@
       "scope": "UNKNOWN"
     },
     {
-      "id": "16e003df840f77a5be",
-      "title": "LNFP: les résultats sportifs ne garantissent pas l’accession en Botola",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNQXF5dFctODBIa0M1NVdLT1NzMnpwQ0NZVXJoRjdyXzFibGF5NTV6VjJheEItUkxWMVp2RWQxTmhvNE0wWjU0azFtLTFIdVJaRVpHT3V3Q2Y2eHdWckYxU1N4NmNzTVh5dDBSTjF6SDlYVE8zOUt5Z0Y4NzNNSmg5ZWh5MTdfdGNQZ3AxUW1HNHd6MDYwZXdMay1uUndnUFZwSmpnaVFXcm9VSDRPblNGQ0J4MnIwU2YwNUpLOTE3eVhiYnBqbnBFdGdSYkQ0bHQ2?oc=5",
-      "publisher": "Le360",
-      "published_at": "2026-09-25T06:33:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
       "id": "2a834eeec7366b25c6",
       "title": "T2S Group - CP relatif à l'augmentation de capital réservée à M. Sordo en qualité de dirigeant de T2S Group",
       "url": "https://www.ammc.ma/sites/default/files/CP_T2S_group_augmentation_capital_reservee_dirigeant.pdf",
@@ -4647,23 +4683,6 @@
       "scope": "MAROC"
     },
     {
-      "id": "84ed44c515adc73b97",
-      "title": "ECB Executive Board member Isabel Schnabel to resign to take senior role at IMF",
-      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260924~bea1dd9824.en.html",
-      "publisher": "BCE · publications",
-      "published_at": "2026-09-24T12:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
       "id": "c103f4c291c8570821",
       "title": "Sanlam Maroc - CP relatif aux résultats du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/CP_Sanlam_Maroc_S1_26.pdf",
@@ -4679,23 +4698,6 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "059a1723ec41ace80f",
-      "title": "Philip R. Lane: The outlook for the euro area economy",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260924~e0eceef02c.en.pdf",
-      "publisher": "BCE · publications",
-      "published_at": "2026-09-24T09:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "36bc1e695f0dde3b32",
