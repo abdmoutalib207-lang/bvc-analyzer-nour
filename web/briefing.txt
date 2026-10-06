@@ -1,4 +1,4 @@
-Point de marché à la demande — séance 2026-10-06
+Briefing de mi-journée — séance 2026-10-06
 Préparé le 2026-10-06
 
 Lecture de séanceL’essentiel
@@ -9,11 +9,11 @@ Le MASI termine à 16 892,55 points (-1,56 %). La direction de cette séance est
 
 L’indice se situe à 42,69 % de l’amplitude au-dessus du plus bas (16 640,81), pour un plus haut de 17 230,43 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.
 
-Le relevé de marché totalise 349,55 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
+Le relevé de marché totalise 346,38 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
 
 L’indice passe sous le plus bas des 20 clôtures précédentes, 17 159,50 points. Cette référence devient une zone à reconquérir. Il ne s’agit pas d’un support intrajournalier.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-06T18:21:06.560655+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-06T18:37:08.051936+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -355,9 +355,15 @@ AMMC · 2026-10-02 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-06T18:21:07.668698+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-06T18:37:08.946184+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
+
+SP:SPX : Régression ou contradiction au même horodatage ; archive conservée
+
+DJ:DJI : Régression ou contradiction au même horodatage ; archive conservée
+
+CBOE:VIX : Régression ou contradiction au même horodatage ; archive conservée
 
 ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
 
@@ -367,13 +373,13 @@ S&P 500
 
 7 830,40points · 0,73 %
 
-Dernière observation source2026-10-06T18:21:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Archive conservée après collecte incomplète2026-10-06T18:21:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
 51 531,36points · 0,51 %
 
-Dernière observation source2026-10-06T18:21:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Archive conservée après collecte incomplète2026-10-06T18:21:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -391,47 +397,47 @@ Risque et devises
 
 USD/MAD
 
-9,9546MAD / USD · -0,28 %
+9,9643MAD / USD · -0,19 %
 
-Dernière observation source2026-10-06T18:20:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-06T18:36:47+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,2120MAD / EUR · 0,15 %
+11,2020MAD / EUR · 0,06 %
 
-Dernière observation source2026-10-06T18:19:50+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-06T18:34:50+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
 15,03points · -3,16 %
 
-Dernière observation source2026-10-06T18:19:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Archive conservée après collecte incomplète2026-10-06T18:19:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,82points · -0,28 %
+101,86points · -0,23 %
 
-Dernière observation source2026-10-06T18:20:55+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-06T18:35:48+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 195,10USD / once troy · 0,92 %
+4 197,30USD / once troy · 0,97 %
 
-Dernière observation source2026-10-06T18:20:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-06T18:36:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-100,16USD / baril · -0,16 %
+100,52USD / baril · 0,20 %
 
-Dernière observation source2026-10-06T18:20:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-06T18:36:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,66USD / livre · 0,23 %
+6,65USD / livre · 0,20 %
 
-Dernière observation source2026-10-06T18:20:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-06T18:36:56+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
