@@ -39,7 +39,8 @@ def calculate(record, facts):
             return None
         if f.get('devise', out['currency']) != 'MAD':
             return None
-        out['evidence'][key] = dict(value=v, page=page, unit=f.get('unite','MMAD'),
+        default_unit = 'actions' if key.startswith('nombre_actions') else 'MMAD'
+        out['evidence'][key] = dict(value=v, page=page, unit=f.get('unite', default_unit),
             document_url=f.get('url') or facts['url'], note=f.get('note',''),
             accounting_basis=f.get('base') or out['accounting_basis'],
             original_unit=f.get('unite_au_rapport'),

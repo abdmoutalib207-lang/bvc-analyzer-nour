@@ -88,3 +88,27 @@ Références : [GitHub Pages](https://docs.github.com/en/pages/getting-started-w
 [clés et authentification OpenAI](https://developers.openai.com/api/reference/overview),
 [Chat Completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create),
 [compatibilité Ollama](https://docs.ollama.com/api/openai-compatibility).
+# Réponses précises — lot du 06/10/2026
+
+Le lecteur local répond désormais en priorité à la mesure demandée : PER, BPA,
+P/B, ROE, dette nette, dette/EBITDA, PNB, RSI, MM20/50/200, MACD et son signal,
+ATR (moyenne simple), support/résistance descriptifs, bêta, corrélation,
+résultat annuel ou S1 et comparatif explicitement daté, capitaux propres,
+nombre d'actions, volumes en MAD et en titres. Il compare jusqu'à deux titres,
+lit jusqu'à six dates, et conserve le dernier titre dans le sélecteur pour une
+question comme « Et son RSI ? ». Les clôtures des titres sont limitées aux
+60 dernières observations de l'export; le graphique contient davantage.
+
+Les valeurs sont copiées du rapport. Aucun score ni ratio n'est recalculé par
+l'assistant. Un RN total ne remplace jamais un RNPG demandé. Une date invalide,
+un exercice absent, un symbole inconnu ou une question non reconnue produit
+une explication explicite. Le ROIC et le PER global du MASI sont absents.
+Une demande à un seuil arbitraire ne crée pas de scénario conditionnel.
+Les observations internationales ciblées conservent leur horodatage et état
+d'archive. La dernière construction et le retard de collecte sont consultables.
+
+Le mode reste déterministe, avec un vocabulaire et des formulations reconnus;
+il ne comprend pas toute conversation libre. Les données chargées dans une
+page restent celles de son ouverture : recharger pour recevoir une collecte
+ultérieure. Le lot ajoute 29 cas de réponses précises aux 320 contrôles généraux,
+et teste MM50 puis RSI en conservant le contexte dans Chromium aux trois largeurs.

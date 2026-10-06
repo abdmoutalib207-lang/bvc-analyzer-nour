@@ -37,6 +37,12 @@ class NewContracts(unittest.TestCase):
         f=self.facts();f['faits']['resultat_net_part_groupe']['page']=0
         self.assertIsNone(calculate({'price':100},f)['eps_mad'])
 
+    def test_share_evidence_without_explicit_unit_is_not_labelled_money(self):
+        f=self.facts();del f['faits']['nombre_actions_au_rapport']['unite']
+        r=calculate({'price':100},f)
+        self.assertEqual(r['evidence']['nombre_actions_au_rapport']['unit'],'actions')
+        self.assertEqual(r['eps_mad'],12.35)
+
     def test_no_minority_or_unresolved_capital_substitution(self):
         f=self.facts();f['capital_change_unresolved']=True
         r=calculate({'price':100},f)

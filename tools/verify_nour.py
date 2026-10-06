@@ -22,6 +22,7 @@ def main():
     commands.extend(['node', f'tools/{name}.cjs'] for name in
                     ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant'))
     commands.append([sys.executable, 'tools/audit_site.py'])
+    commands.append([sys.executable, 'tools/audit_readiness.py'])
     for command in commands:
         subprocess.run(command, cwd=ROOT, check=True)
     subprocess.run(['git', 'diff', '--check'], cwd=ROOT, check=True)

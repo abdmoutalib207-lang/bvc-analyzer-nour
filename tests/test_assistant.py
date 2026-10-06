@@ -41,8 +41,12 @@ class AssistantFacts(unittest.TestCase):
             actual = data['symbols'][row['symbol']]
             self.assertEqual(actual['canonical_score'], row['canonical_score'])
             self.assertEqual(actual['historical_statistics'], row['historical_statistics'])
-            for key in ('pe','eps_mad','roe_pct','latest_report'):
+            for key in ('pe','eps_mad','roe_pct','latest_report','eps_denominator','net_debt_method'):
                 self.assertEqual(actual['fundamental'][key], row['fundamental'].get(key))
+            for key in ('day_turnover_mad_actual','day_shares','close_dates_last_60','close_series_last_60'):
+                self.assertEqual(actual[key],row.get(key))
+        self.assertEqual(data['market_volume_audit'],self.report.get('market_volume_audit'))
+        self.assertEqual(data['runtime'],self.report.get('runtime'))
         data['symbols']['JET']['canonical_score']['value'] = -99
         self.assertEqual(self.report, original)
 

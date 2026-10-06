@@ -9,11 +9,14 @@ from urllib.parse import urlsplit
 VERSION = 'nour-assistant-data-v1'
 SYMBOL_FIELDS = ('symbol', 'name', 'asof', 'price', 'price_source', 'age_calendar_days',
                  'decision', 'technical', 'canonical_score', 'historical_statistics',
-                 'market_risk', 'sector_comparison', 'quality')
+                 'market_risk', 'sector_comparison', 'quality', 'day_turnover_mad_actual',
+                 'day_shares', 'close_dates_last_60', 'close_series_last_60')
 FUNDAMENTAL_FIELDS = ('exercise', 'document_url', 'eps_mad', 'book_value_per_share_mad',
     'pe', 'pb', 'roe_pct', 'dividend_yield_pct', 'earnings_mmad', 'accounting_basis',
     'currency', 'net_debt_strict_mmad', 'net_debt_ebitda', 'pnb_mmad', 'pnb_growth_pct',
-    'validation_status', 'warnings', 'latest_report', 'evidence', 'point_in_time_ready')
+    'validation_status', 'warnings', 'latest_report', 'evidence', 'point_in_time_ready',
+    'eps_denominator', 'book_denominator', 'net_debt_method', 'revenue_growth_pct',
+    'period_end', 'historical_per_share_only')
 
 
 def clean(value):
@@ -38,6 +41,8 @@ def build_data(report):
     return clean({'schema_version': VERSION, 'analysis_date': report['analysis_date'],
         'snapshot_updated': report.get('snapshot_updated'), 'score_version': report.get('score_version'),
         'market': deepcopy(report.get('market_overview') or {}),
+        'market_volume_audit': deepcopy(report.get('market_volume_audit') or {}),
+        'runtime': deepcopy(report.get('runtime') or {}),
         'masi_history': {d: v for d, v in report.get('masi_history', {}).items()
                          if d <= report['analysis_date']},
         'macro': deepcopy(report.get('macro') or {}), 'coverage': report.get('fundamental_coverage'),
@@ -103,7 +108,8 @@ def panel(prefix=''):
         '<div class="assistant-head"><div><span class="eyebrow">Comprendre les données</span>'
         '<h2 id="assistant-title">Assistant Nour</h2><span id="assistant-mode" class="assistant-badge">Lecture des données · sans IA générative</span></div>'
         '<button type="button" id="assistant-close" aria-label="Fermer l’assistant">×</button></div>'
-        '<p class="assistant-notice">Des réponses datées et leurs sources. Aucune prévision ni ordre de bourse.</p>'
+        '<p class="assistant-notice">Demandez un cours, un ratio, un indicateur ou un volume, en précisant le titre. '
+        'Les réponses sont datées et sourcées; une mesure absente reste indisponible.</p>'
         '<div class="assistant-tools"><label for="assistant-symbol">Contexte</label><select id="assistant-symbol"><option>MASI</option></select>'
         '<button type="button" id="assistant-clear">Effacer</button></div>'
         '<div id="assistant-messages" class="assistant-messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions"></div>'
@@ -111,10 +117,12 @@ def panel(prefix=''):
         '<button type="button" data-assistant-question="Résume les données">Résumé</button>'
         '<button type="button" data-assistant-question="Quels fondamentaux sont disponibles ?">Fondamentaux</button>'
         '<button type="button" data-assistant-question="Explique les probabilités historiques">Statistiques</button>'
-        '<button type="button" data-assistant-question="Explique le score">Score</button></div>'
+        '<button type="button" data-assistant-question="Explique le score">Score</button>'
+        '<button type="button" data-assistant-question="Quel est le RSI ?">RSI du titre</button>'
+        '<button type="button" data-assistant-question="Quel est le volume global MASI ?">Volume global</button></div>'
         '<label id="assistant-ai-option" class="assistant-ai-option" hidden><input type="checkbox" id="assistant-ai">'
         '<span id="assistant-ai-label">Utiliser l’IA : envoyer la question et les données sélectionnées au fournisseur configuré.</span></label>'
         '<form id="assistant-form" class="assistant-form"><label for="assistant-question">Votre question</label>'
-        '<div><textarea id="assistant-question" rows="2" maxlength="1200" placeholder="Ex. : explique le PER de JET" required></textarea>'
+        '<div><textarea id="assistant-question" rows="2" maxlength="1200" placeholder="Ex. : PER JET, MM50 ADI, MASI le 31/03/2026" required></textarea>'
         '<button type="submit" id="assistant-send">Envoyer</button></div><p id="assistant-status" role="status">Les échanges restent dans cette fenêtre jusqu’à son rechargement.</p></form>'
         '</dialog><noscript><p class="fineprint">L’assistant nécessite JavaScript. Les données et sources restent consultables dans les fiches.</p></noscript>')

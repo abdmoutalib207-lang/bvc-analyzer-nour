@@ -1,0 +1,62 @@
+{
+  "analysis_date": "2026-10-06",
+  "universe": 80,
+  "arithmetic_checks": 412,
+  "checks_by_metric": {
+    "eps_mad": 43,
+    "book_value_per_share_mad": 56,
+    "pe": 40,
+    "pb": 53,
+    "roe_pct": 45,
+    "net_debt_strict_mmad": 55,
+    "dividend_yield_pct": 2,
+    "score": 67,
+    "net_debt_ebitda": 35,
+    "revenue_growth_pct": 5,
+    "pnb_growth_pct": 11
+  },
+  "failures": [],
+  "availability": {
+    "eps_mad": 43,
+    "pe": 40,
+    "pb": 53,
+    "roe_pct": 45,
+    "net_debt_ebitda": 35,
+    "pnb_mmad": 11
+  },
+  "annual_validation": {
+    "referenced_import": 62,
+    "selected_pages_visually_checked_not_whole_report_certified": 15,
+    "missing": 3
+  },
+  "price_ages": {
+    "0": 68,
+    "5": 2,
+    "None": 2,
+    "6": 1,
+    "7": 1,
+    "11": 2,
+    "4": 2,
+    "1": 2
+  },
+  "score_states": {
+    "CALCULABLE": 67,
+    "NON_CALCULABLE": 8,
+    "PARTIEL": 5
+  },
+  "coverage": {
+    "universe": 80,
+    "referenced": 77,
+    "with_eps": 43,
+    "with_pb": 53,
+    "with_roe": 45,
+    "with_recent_report": 76,
+    "missing_documents": [
+      "DIS",
+      "DLM",
+      "IBM"
+    ],
+    "interpretation": "Couverture de relevés sourcés ; pas une certification ni une probabilité de rendement."
+  },
+  "limitation": "Arithmetic of available exported facts only; does not independently verify all PDFs, publication dates, accounting scopes or share denominators."
+}

@@ -68,6 +68,17 @@ const shots=process.env.NOUR_SCREENSHOTS;
         assert.ok(!messages.includes('selected_pages_reconciled_'));
         const docLink=page.locator('.assistant-sources a').filter({hasText:'JET · comptes annuels'});
         assert.equal(await docLink.getAttribute('href'),jet.fundamental.document_url);
+        await page.locator('#assistant-question').fill('MM50 ADI');
+        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        const adi=report.results.find(row=>row.symbol==='ADI');
+        await page.getByText('MM50 : '+adi.technical.sma50.toLocaleString('fr-FR',{maximumFractionDigits:2}),{exact:false}).last().waitFor();
+        assert.equal(await page.locator('#assistant-symbol').inputValue(),'ADI');
+        await page.locator('#assistant-question').fill('Et son RSI ?');
+        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        await page.getByText('RSI 14 : '+adi.technical.rsi14.toLocaleString('fr-FR',{maximumFractionDigits:2}),{exact:false}).last().waitFor();
+        const last=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
+        assert.ok(last.includes('ADI · Alliances'));
+        assert.ok(!last.includes('PER :'));
         const rect=await page.locator('#assistant-dialog').boundingBox();
         assert.ok(rect.x>=0&&rect.y>=0&&rect.x+rect.width<=width+1&&rect.y+rect.height<=901);
         await page.getByRole('button',{name:'Effacer',exact:true}).click();
@@ -103,6 +114,6 @@ const shots=process.env.NOUR_SCREENSHOTS;
       assert.equal(await native.locator('#lab-help-content').isVisible(),false);
       await nojs.close();
     }
-    console.log(`Browser QA: ${interactions} page/viewport journeys; laboratory help click, Enter, Space, Escape, close, focus, unchanged filters and no-JS at 3 widths; assistant checks passed; no LLM call.`);
+    console.log(`Browser QA: ${interactions} page/viewport journeys including precise MM50 and RSI follow-up context; laboratory help click, Enter, Space, Escape, close, focus, unchanged filters and no-JS at 3 widths; assistant checks passed; no LLM call.`);
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});
