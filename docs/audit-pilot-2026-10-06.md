@@ -155,3 +155,18 @@ Le dernier workflow de publication doit être réussi avant remise au groupe.
 La couverture de code, l'audit axe complet et un véritable fournisseur LLM
 n'ont pas été mesurés. Le [relevé machine](audit-pilot-2026-10-06.json) conserve
 les compteurs et la limite du contrôle arithmétique.
+
+## Contrôle final de publication effectué
+
+Le [workflow 37548707562](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37548707562)
+a terminé avec succès le 06/10/2026 à 23:52 UTC : 129 tests Python, 29 cas
+précis assistant et 412 contrôles arithmétiques réussis. Chromium a effectué
+12 parcours avant publication et les mêmes 12 sur le site réellement servi,
+aux trois largeurs; les questions MM50 puis RSI conservent bien le contexte ADI.
+
+Le contrôle direct des ressources servies confirme le commit de construction
+`7dd58c95e0e11a4762c5c415bb213f399f118170`, l'empreinte exacte du JavaScript
+livré, les nouvelles questions dans le HTML, la parité des scores entre rapport
+et assistant et les unités « actions » corrigées. Le recalcul des 412 valeurs
+sur le JSON réellement publié ne relève aucun écart. Le verdict de pilote
+ci-dessus s'applique donc à une version publiée et contrôlée.
