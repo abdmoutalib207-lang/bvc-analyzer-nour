@@ -3,6 +3,12 @@
   'use strict';
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const fmt=(x,unit='')=>typeof x==='number'&&Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(unit?' '+unit:''):'indisponible';
+  const validationLabel=status=>{
+    if(status==='referenced_import')return 'référence documentaire importée, vérification complète non attestée';
+    if(typeof status==='string'&&status.startsWith('selected_pages_reconciled_with_reservations'))return 'pages sélectionnées rapprochées, avec réserves';
+    if(typeof status==='string'&&status.startsWith('selected_pages_visually_checked'))return 'pages sélectionnées vérifiées visuellement, rapport entier non certifié';
+    return 'niveau de vérification à consulter dans la fiche';
+  };
   const validURL=(url,prefix='')=>{
     if(typeof url!=='string')return null;
     if(/^https:\/\//i.test(url)){try{const u=new URL(url);return u.username||u.password?null:u.href;}catch{return null;}}
@@ -63,10 +69,10 @@
       const f=row.fundamental||{}, t=row.technical||{}, cs=row.canonical_score||{}, latest=f.latest_report||{};
       lines.push(`${s} · ${row.name}\nClôture : ${fmt(row.price,'MAD')} · séance ${row.asof||'non datée'} · source ${row.price_source||'non précisée'}. Statut des données : ${row.decision||'indisponible'}.`);
       if(fundamental){
-        lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · ${f.accounting_basis||'périmètre non précisé'} · statut ${f.validation_status||'non vérifié'}.\nBPA : ${fmt(f.eps_mad,'MAD')} · PER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE : ${fmt(f.roe_pct,'%')}.\nDette nette / EBITDA : ${fmt(f.net_debt_ebitda)} · PNB : ${fmt(f.pnb_mmad,'MDH')}.`);
-        if(latest.period_end)lines.push(`Dernière publication : ${latest.period_end} · ${latest.accounting_basis||'périmètre non précisé'}.\n${latest.reported_net_label||'Résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nStatut : ${latest.validation_status||'non vérifié'} · pages ${latest.pages||'non renseignées'}.`);
-        const warnings=[...(f.warnings||[]),latest.note||''].filter(Boolean);
-        if(warnings.length)lines.push('Réserves à lire :\n'+warnings.slice(0,3).join('\n'));
+        lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · ${f.accounting_basis||'périmètre non précisé'} · ${validationLabel(f.validation_status)}.\nBPA : ${fmt(f.eps_mad,'MAD')} · PER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE : ${fmt(f.roe_pct,'%')}.\nDette nette / EBITDA : ${fmt(f.net_debt_ebitda)} · PNB : ${fmt(f.pnb_mmad,'MDH')}.`);
+        if(latest.period_end)lines.push(`Dernière publication : ${latest.period_end} · ${latest.accounting_basis||'périmètre non précisé'}.\n${latest.reported_net_label||'Résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)} · pages ${latest.pages||'non renseignées'}.`);
+        const warnings=[latest.note||'',...(f.warnings||[])].filter(Boolean);
+        if(warnings.length)lines.push('Réserves à lire :\n'+warnings.join('\n'));
         lines.push('Un ratio absent reste indisponible. Le semestre n’est pas annualisé; PNB et chiffre d’affaires restent distincts.');
       }else if(probability){
         const stats=row.historical_statistics||{}, horizons=stats.horizons||[];
@@ -101,7 +107,7 @@
     if(sources.length){const links=doc.createElement('div');links.className='assistant-sources';
       const seen=new Set();for(const source of sources){const url=validURL(source.url,prefix);if(!url||seen.has(url))continue;seen.add(url);
         const a=doc.createElement('a');a.href=url;a.textContent=source.label;if(url.startsWith('https:')){a.target='_blank';a.rel='noopener noreferrer';}links.append(a);}box.append(links);}
-    el('messages').append(box);el('messages').scrollTop=el('messages').scrollHeight;
+    el('messages').append(box);box.scrollIntoView({block:'start'});
   }
   async function loadData(){
     if(data)return;

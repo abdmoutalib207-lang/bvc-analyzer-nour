@@ -33,6 +33,8 @@ const shots=process.env.NOUR_SCREENSHOTS;
         assert.ok(messages.includes(jet.fundamental.pe.toLocaleString('fr-FR',{maximumFractionDigits:2})));
         assert.ok(messages.includes('2026-06-30'));
         assert.ok(messages.includes('Réserves à lire'));
+        assert.ok(messages.includes(jet.fundamental.latest_report.note));
+        assert.ok(!messages.includes('selected_pages_reconciled_'));
         const docLink=page.locator('.assistant-sources a').filter({hasText:'JET · comptes annuels'});
         assert.equal(await docLink.getAttribute('href'),jet.fundamental.document_url);
         const rect=await page.locator('#assistant-dialog').boundingBox();

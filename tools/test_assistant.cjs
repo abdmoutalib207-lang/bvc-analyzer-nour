@@ -9,6 +9,9 @@ assert.ok(answer.text.includes(data.symbols.JET.fundamental.pe.toLocaleString('f
 assert.ok(answer.text.includes(data.symbols.JET.asof));
 assert.ok(answer.sources.some(s=>s.url===data.symbols.JET.fundamental.document_url));
 assert.ok(answer.text.includes('semestre n’est pas annualisé'));
+assert.ok(answer.text.includes(data.symbols.JET.fundamental.latest_report.note));
+assert.ok(!answer.text.includes('selected_pages_reconciled_'));
+assert.ok(answer.text.includes('pages sélectionnées rapprochées, avec réserves'));
 answer=api.localAnswer('Quelle probabilité pour ADI demain ?',data,'MASI');
 assert.ok(answer.text.includes('n’est pas une probabilité de prochaine séance'));
 assert.ok(answer.text.includes('observations'));
