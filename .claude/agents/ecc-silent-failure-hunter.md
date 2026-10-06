@@ -1,0 +1,1 @@
+../../vendor/ecc/agents/silent-failure-hunter.md

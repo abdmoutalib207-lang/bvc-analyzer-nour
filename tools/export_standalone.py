@@ -2,6 +2,7 @@
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,13 @@ def export(target):
     paths += [f'historique/{r["symbol"]}.csv' for r in report['results']]
     paths += ['report.json', 'news.json', 'briefing.json']
     files = {p: (web / p).read_text(encoding='utf-8') for p in paths}
+    # Preserve the existing offline bundle: the new online assistant assets
+    # are external files, not resources this exporter currently embeds.
+    for path in paths:
+        if path.endswith('.html'):
+            files[path] = re.sub(r'<link rel="stylesheet" href="(?:\.\./)?assistant\.css">', '', files[path])
+            files[path] = re.sub(r'<script src="(?:\.\./)?assistant\.js" defer></script>', '', files[path])
+            files[path] = re.sub(r'<button hidden type="button" id="assistant-open".*?</dialog>', '', files[path], flags=re.DOTALL)
     payload = json.dumps(files, ensure_ascii=False).replace('<', '\\u003c')
     options = ''.join(f'<option value="titres/{html.escape(r["symbol"])}.html">'
                       f'{html.escape(r["symbol"])} — {html.escape(r["name"])}</option>'

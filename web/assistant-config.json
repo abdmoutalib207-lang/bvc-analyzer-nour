@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "endpoint": null,
+  "provider_label": null,
+  "mode": "local",
+  "notice": "Lecture locale des données. Le LLM nécessite un serveur et un fournisseur explicitement configurés."
+}

@@ -11,6 +11,7 @@ from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
+from .assistant import panel as assistant_panel, export as export_assistant
 
 
 def esc(value):
@@ -66,8 +67,11 @@ def svg_chart(bars):
 
 
 def shell(title, body, style, script):
-    return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08121b"><title>{esc(title)} · BVC Analyzer Nour</title><style>{style}</style></head><body>'
-            f'{body}<script>{script}</script></body></html>')
+    prefix = '../' if 'href="../index.html"' in body else ''
+    return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08121b"><title>{esc(title)} · BVC Analyzer Nour</title><style>{style}</style>'
+            f'<link rel="stylesheet" href="{prefix}assistant.css"></head><body>'
+            f'{body}{assistant_panel(prefix)}<script>{script}</script>'
+            f'<script src="{prefix}assistant.js" defer></script></body></html>')
 
 
 def header(back, snapshot):
@@ -396,6 +400,10 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "titres").mkdir(exist_ok=True)
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
+    for asset in ('assistant.js', 'assistant.css', 'assistant-config.json'):
+        if (output / asset).resolve() != (assets / asset).resolve():
+            (output / asset).write_bytes((assets / asset).read_bytes())
+    export_assistant(report, output)
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")

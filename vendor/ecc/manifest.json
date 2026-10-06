@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/affaan-m/ECC",
+  "commit": "ef648e01899ba3e8dc6371642deaaf64b4477775",
+  "license": "MIT",
+  "skill_count": 8,
+  "agent_count": 3,
+  "mode": "repository_local_reviewed_subset",
+  "automatic_hooks": false,
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": "agents/code-reviewer.md",
+      "sha256": "9dd23be23d65f18126e10f7680fc1eb2576ec54a427d076ff2f870bd0bafd5d2"
+    },
+    {
+      "path": "agents/python-reviewer.md",
+      "sha256": "d2180b115f5840383268c13d5d075b0541fe7ef2a1ac8ecd5d835266ca1b27ce"
+    },
+    {
+      "path": "agents/silent-failure-hunter.md",
+      "sha256": "e5e2094c6f50cc515a77376331c78e4955d5ff16c7a0e5d8f6edec692b7ebd8d"
+    },
+    {
+      "path": "skills/browser-qa/SKILL.md",
+      "sha256": "6eb78a2460adcde116e6b44fcdff7ae37aeec6208241a24417cb2db4b3b254cd"
+    },
+    {
+      "path": "skills/content-hash-cache-pattern/SKILL.md",
+      "sha256": "c0242ee2fcb5c096d0625cb6957481fce2266e92985036795f5b5c13c329d802"
+    },
+    {
+      "path": "skills/make-interfaces-feel-better/SKILL.md",
+      "sha256": "aff91aef917cba9c65681ae77197cee93ce9b697ee8916ea684ef8537c99fb52"
+    },
+    {
+      "path": "skills/python-testing/SKILL.md",
+      "sha256": "b9f7a158dae3b6c06c9c75ffe84e27a1edc86092d2afdcb39e96fc2569902eb7"
+    },
+    {
+      "path": "skills/search-first/SKILL.md",
+      "sha256": "76835db48dd910061d2e4271b1151793d2fddbabeb2d2866eed068b3580c55d5"
+    },
+    {
+      "path": "skills/security-review/SKILL.md",
+      "sha256": "b9eb6416eebc8dda046674f0a2dbb3be88aff526d182b60a0f55998d3d6d0d8d"
+    },
+    {
+      "path": "skills/strategic-compact/SKILL.md",
+      "sha256": "44a71c6dcc3fdde8061b8a78296c5d37233e4accc8cf3c794e29ac5b9f2eee28"
+    },
+    {
+      "path": "skills/verification-loop/SKILL.md",
+      "sha256": "503aebee7d414f559c4874600081a40b1e7aea269b58073c5c9660c6641b00a0"
+    }
+  ]
+}

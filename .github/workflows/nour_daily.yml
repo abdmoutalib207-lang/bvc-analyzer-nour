@@ -19,7 +19,14 @@ on:
       - 'web/chart-controls.js'
       - 'web/market.js'
       - 'web/research.js'
+      - 'web/assistant.js'
+      - 'web/assistant.css'
+      - 'web/assistant-config.json'
       - 'web/nour.css'
+      - 'vendor/ecc/**'
+      - '.agents/**'
+      - '.claude/**'
+      - '.ecc/**'
       - '.github/workflows/nour_daily.yml'
   schedule:
     - cron: '45 9 * * 1-5'
@@ -75,16 +82,35 @@ jobs:
           NOUR_SLOT: ${{ inputs.slot || 'auto' }}
         run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)" --slot "$NOUR_SLOT"
       - name: Verify the generated output
+        run: python tools/verify_nour.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned browser QA runtime
         run: |
-          python -m unittest discover -s tests -v
-          node --check web/nour.js
-          node --check web/chart.js
-          node --check web/chart-controls.js
-          node --check web/market.js
-          node --check web/research.js
-          node tools/test_research.cjs
-          node tools/test_chart_controls.cjs
-          node tools/test_news_filters.cjs
+          npm install --prefix "$RUNNER_TEMP/nour-browser-qa" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          "$RUNNER_TEMP/nour-browser-qa/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Exercise generated assistant in real Chromium
+        env:
+          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
+          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/local
+        run: |
+          python tools/serve_assistant.py --port 8766 &
+          nour_server_pid=$!
+          trap 'kill "$nour_server_pid"' EXIT
+          python - <<'PY'
+          import time
+          from urllib.request import urlopen
+          for attempt in range(25):
+              try:
+                  with urlopen('http://127.0.0.1:8766/assistant-config.json', timeout=2):
+                      break
+              except OSError:
+                  if attempt == 24:
+                      raise
+                  time.sleep(.2)
+          PY
+          node tools/test_assistant_browser.cjs
       - name: Save validated snapshots and pages
         run: |
           git config user.name 'bvc-nour-bot'
@@ -100,6 +126,20 @@ jobs:
           path: web
       - uses: actions/deploy-pages@v4
         id: deployment
+      - name: Exercise the actually published Nour site
+        env:
+          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
+          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/published
+          NOUR_PUBLISHED_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node tools/test_assistant_browser.cjs "$NOUR_PUBLISHED_URL"
+      - name: Preserve browser QA screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nour-assistant-browser-qa
+          path: ${{ runner.temp }}/nour-browser-qa-shots
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Report collector outcomes
         if: always()
         run: |

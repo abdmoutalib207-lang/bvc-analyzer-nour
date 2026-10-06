@@ -101,4 +101,5 @@ def briefing_text(briefing):
             if tag in ('p','h2','h3','li','summary'):self.parts.append('\n\n')
         def handle_data(self,text):self.parts.append(text)
     p=Plain();p.feed(render_editorial(briefing,lambda item:''))
-    return f'{briefing.get("title","Briefing")} — séance {briefing.get("market_session")}\nPréparé le {briefing["generated_for"]}\n\n'+''.join(p.parts)
+    text = f'{briefing.get("title","Briefing")} — séance {briefing.get("market_session")}\nPréparé le {briefing["generated_for"]}\n\n'+''.join(p.parts)
+    return '\n'.join(line.rstrip() for line in text.split('\n'))
