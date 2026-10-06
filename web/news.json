@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06T19:06:51.689756+00:00",
+  "updated_at": "2026-10-06T19:51:52.418747+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "def9ba4ae8f02c1c68",
+      "title": "Iraq Builds 2027 Budget on $58 Oil—and a Very Large Deficit",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iraq-Builds-2027-Budget-on-58-Oiland-a-Very-Large-Deficit.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-06T19:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "896468f0997ce7a909",
       "title": "Is the West’s 100-Year Venezuela Oil Bet About To Backfire?",
@@ -4689,23 +4706,6 @@
       "classification": "UNVERIFIED_ALERT",
       "category": "autre",
       "scope": "UNKNOWN"
-    },
-    {
-      "id": "a03193e11747e7432f",
-      "title": "Attijariwafa bank : un potentiel de hausse de 34,9% selon BKGR",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUHFfbklIbzBrNXRaNVhEX1o1NXhVZ3lWUUxRTktyOGx1QXFoNUh4akg4S0kwck1EQUdMendZUGxFamJsOUZ1ZjU5cm5pWnE4MGpXbDJoX012aGpiVEJGZ3RVR1dVRmRxS01jTmtaalpkdnFQdUtEYk9ZMXZZem9iWHpfQ3lGanBjbEZVT3I4MW1UajBZcEpzc2xoMDdyOFp6?oc=5",
-      "publisher": "BVC Sociétés",
-      "published_at": "2026-09-25T11:59:00+00:00",
-      "tickers": [
-        "ATW"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "bvc",
-      "scope": "MAROC"
     },
     {
       "id": "2a834eeec7366b25c6",
