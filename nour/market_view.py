@@ -2,6 +2,7 @@
 import html
 import json
 from .chart_view import navigation, explorer_footer
+from .report_contracts import volume_reconciliation
 
 
 def fmt(v, digits=2):
@@ -74,6 +75,25 @@ def market_panel(report):
                 f'<span class="panel-sub">Séance {esc(overview.get("asof"))} · lignes échangées de la source CDG</span></div>'
                 f'<div class="breadth-bar" aria-hidden="true">{bars}</div><div class="breadth-legend"><span class="gain">{fmt(up,0)} hausses</span>'
                 f'<span>{fmt(flat,0)} inchangées</span><span class="loss">{fmt(down,0)} baisses</span></div></section>')
+    audit = volume_reconciliation(report, overview)
+    if audit['status'] == 'discrepancy':
+        summary += (f'<div class="banner" data-volume-reconciliation="discrepancy">'
+                    f'<strong>Écart de volume à vérifier · {esc(audit["asof"])}</strong> : '
+                    f'synthèse CDG {fmt(audit["cdg_turnover_mad"]/1e6)} MDH ; '
+                    f'somme des {audit["observed_lines"]} fiches de cette séance '
+                    f'{fmt(audit["lines_turnover_mad"]/1e6)} MDH ; '
+                    f'écart absolu {fmt(abs(audit["difference_mad"]))} DH. '
+                    'Les relevés peuvent provenir de versions différentes. '
+                    'Le montant CDG reste affiché ; aucune correction des fiches n’est imposée.</div>')
+    elif audit['status'] == 'matched':
+        summary += (f'<p class="fineprint" data-volume-reconciliation="matched">'
+                    f'Volume rapproché avec les {audit["observed_lines"]} fiches de la séance '
+                    f'{esc(audit["asof"])} : {fmt(audit["lines_turnover_mad"]/1e6)} MDH. '
+                    'Ce contrôle vérifie la concordance des montants, pas leur certification.</p>')
+    elif audit['status'] == 'incomplete':
+        summary += ('<p class="fineprint" data-volume-reconciliation="incomplete">'
+                    'Rapprochement du volume incomplet : les fiches disponibles pour cette séance '
+                    'ne permettent pas de valider le total CDG.</p>')
     sectors = overview.get('sectors') or []
     if sectors:
         summary += '<details class="panel"><summary>Indices sectoriels de la séance</summary><div class="sector-grid">'

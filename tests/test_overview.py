@@ -4,6 +4,7 @@ from datetime import datetime
 from nour.market import CASABLANCA
 from nour.overview import update_overview
 from nour.market_view import market_panel
+from nour.report_contracts import synchronize_market, volume_reconciliation
 
 
 class OverviewContracts(unittest.TestCase):
@@ -67,6 +68,61 @@ class OverviewContracts(unittest.TestCase):
         self.assertIn('Historique MASI indisponible',page)
         self.assertNotIn('<polyline',page)
         self.assertIn('Bilan de séance indisponible',page)
+
+
+class VolumeReconciliationContracts(unittest.TestCase):
+    def setUp(self):
+        self.overview = {'asof': '2026-10-06', 'turnover_mad': 346377516.02,
+                         'breadth': {'quoted': 2}, 'observed_at': '2026-10-06T18:37:08Z'}
+        self.report = {'analysis_date': '2026-10-06', 'results': [
+            {'symbol': 'A', 'asof': '2026-10-06', 'day_shares': 10,
+             'day_turnover_mad_actual': 300000000},
+            {'symbol': 'B', 'asof': '2026-10-06', 'day_shares': 20,
+             'day_turnover_mad_actual': 49551480.02},
+            {'symbol': 'OLD', 'asof': '2026-10-05', 'day_shares': 5,
+             'day_turnover_mad_actual': 999999}]}
+
+    def test_different_cdg_versions_are_exposed_without_overwriting_either(self):
+        before = copy.deepcopy((self.report, self.overview))
+        audit = volume_reconciliation(self.report, self.overview)
+        self.assertEqual(audit['status'], 'discrepancy')
+        self.assertEqual(audit['lines_turnover_mad'], 349551480.02)
+        self.assertEqual(audit['difference_mad'], 3173964)
+        self.assertEqual(audit['observed_lines'], 2)
+        self.assertEqual((self.report, self.overview), before)
+        synchronize_market(self.report, self.overview)
+        self.assertEqual(self.report['market']['turnover_mad'], 346377516.02)
+        self.assertEqual(self.report['market_volume_audit'], audit)
+        page = market_panel(self.report)
+        self.assertIn('data-volume-reconciliation="discrepancy"', page)
+        self.assertIn('3 173 964,00 DH', page)
+
+    def test_updated_summary_matches_only_same_session_actual_turnover(self):
+        self.overview['turnover_mad'] = 349551480.02
+        synchronize_market(self.report, self.overview)
+        self.assertEqual(self.report['market_volume_audit']['status'], 'matched')
+        self.assertIn('data-volume-reconciliation="matched"', market_panel(self.report))
+
+    def test_missing_coverage_or_invalid_amount_cannot_be_certified(self):
+        for mutation in ('subset', 'missing', 'nan', 'negative', 'duplicate', 'unknown_count'):
+            with self.subTest(mutation=mutation):
+                report, overview = copy.deepcopy((self.report, self.overview))
+                if mutation == 'subset':
+                    overview['breadth']['quoted'] = 3
+                elif mutation == 'unknown_count':
+                    overview['breadth'] = {}
+                elif mutation == 'duplicate':
+                    report['results'][1]['symbol'] = 'A'
+                else:
+                    report['results'][1]['day_turnover_mad_actual'] = {
+                        'missing': None, 'nan': float('nan'), 'negative': -1}[mutation]
+                self.assertEqual(volume_reconciliation(report, overview)['status'], 'incomplete')
+
+    def test_future_or_missing_summary_remains_unavailable(self):
+        self.report['analysis_date'] = '2026-10-05'
+        synchronize_market(self.report, self.overview)
+        self.assertEqual(self.report['market_volume_audit']['status'], 'unavailable')
+        self.assertEqual(volume_reconciliation(self.report, {})['status'], 'unavailable')
 
 
 if __name__ == '__main__':
