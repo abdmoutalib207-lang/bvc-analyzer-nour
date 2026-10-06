@@ -27,6 +27,7 @@ on:
       - '.agents/**'
       - '.claude/**'
       - '.ecc/**'
+      - '.gitattributes'
       - '.github/workflows/nour_daily.yml'
   schedule:
     - cron: '45 9 * * 1-5'

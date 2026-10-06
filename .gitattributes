@@ -1,0 +1,3 @@
+# Python's CSV writer uses standard CRLF record endings; keep other whitespace checks.
+web/historique/*.csv whitespace=cr-at-eol
+web/recherche.csv whitespace=cr-at-eol
