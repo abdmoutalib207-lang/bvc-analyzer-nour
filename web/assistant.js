@@ -32,7 +32,10 @@
     for(const s of Object.keys(data.symbols||{})){
       if(words.includes(s.toLowerCase())&&(!common.has(s.toLowerCase())||originalWords.includes(s)))found.push(s);
     }
-    return [...new Set(found.length?found:allowFallback?[fallback||'MASI']:[])];
+    const unique=[...new Set(found)];
+    const benchmark=/risque|beta|correlation|volatil|drawdown|rendement relatif|ecart.*masi/.test(normalize(question));
+    const selected=benchmark&&unique.some(s=>s!=='MASI')?unique.filter(s=>s!=='MASI'):unique;
+    return selected.length?selected:allowFallback?[fallback||'MASI']:[];
   }
   function datesIn(question){
     return [...String(question).matchAll(/\b(20\d{2}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/(?:20\d{2}|\d{2}))\b/g)].map(m=>{
@@ -42,6 +45,38 @@
     });
   }
   const dateIn=question=>datesIn(question).find(d=>d.valid)?.date||null;
+  function measureFor(question){
+    const q=normalize(question),measures=[[/\bper\b|\bpe\b/,'PER'],[/\bbpa\b/,'BPA'],[/\bpb\b|p\s*\/\s*b/,'P/B'],[/\broe\b/,'ROE'],[/minoritaires/,'résultat minoritaires'],[/resultat.*total/,'résultat total'],[/rnpg|resultat.*part.*groupe/,'RNPG'],[/resultat|benefice/,'résultat'],[/pnb|produit net bancaire/,'PNB'],[/chiffre d.affaires|\bca\b/,'CA'],[/rsi/,'RSI'],[/\b(?:mm|sma)\s*(?:20|50|200)\b/,(q.match(/\b(?:mm|sma)\s*(20|50|200)\b/)||[])[0]],[/macd/,'MACD'],[/atr/,'ATR'],[/risque/,'risques'],[/beta/,'bêta'],[/correlation/,'corrélation'],[/liquidite/,'liquidité'],[/volume|quantite/,'volume'],[/bougie|ohlc/,'bougie'],[/cours|prix|cloture/,'clôture'],[/score/,'score'],[/statist/,'statistiques']];
+    return measures.find(([p,label])=>label&&p.test(q))?.[1]||null;
+  }
+  function prepareQuestion(question,data,fallback,state={}){
+    let q=normalize(question);const explicit=symbolsFor(question,data,null,false);
+    const explain=/^(?:et )?(?:explique(?: moi)?(?: simplement)?|comment (?:ca|cela|il|elle) (?:marche|fonctionne)|ca veut dire quoi)\s*[?.!]*$/.test(q);
+    const follow=explain||/^\s*et\b/.test(q)||(!explicit.length&&/\b(?:leurs?|son|sa|ses|ces deux|meme date|meme periode)\b/.test(q));
+    const prior=(state.symbols||[]).filter(s=>s==='MASI'||data.symbols?.[s]).slice(0,2);
+    const symbols=explicit.length?explicit:follow&&prior.length?prior:[fallback||'MASI'];
+    let effective=question;
+    if(!explicit.length&&follow&&prior.length)effective+=' · '+symbols.join(' ');
+    const minimal=state.domain==='fundamentals'&&/^et\s+(?:en\s+annuel(?:le)?|(?:pour|en)\s+20\d{2})\b/.test(q)||explicit.length&&/^et\s+pour\b/.test(q)&&['fundamentals','technical','risk','liquidity','score','statistics'].includes(state.domain);
+    const domainLabels={laboratory:'laboratoire',statistics:'statistiques',risk:'risques',liquidity:'liquidité',sector:'comparables',score:'score',news:'actualités',chart:'graphique',quality:'qualité',assistant:'assistant'};
+    if(!measureFor(question)&&(minimal||explain)&&(state.measure||domainLabels[state.domain]))effective+=' '+(state.measure||domainLabels[state.domain]);
+    q=normalize(effective);
+    const financial=/fondament|\bper\b|\bpe\b|\bbpa\b|\broe\b|\bpb\b|p\s*\/\s*b|rnpg|resultat|benefice|minoritaires|pnb|chiffre d.affaires|\bca\b|dette|capitaux|fonds propres|dividende|actions|valeur comptable/.test(q);
+    const annual=/annuel|annuelle|exercice/.test(q);
+    const semester=/\bs2\b|(?:deuxieme|second) semestre/.test(q)?'S2':/semest|\bs1\b/.test(q)?'S1':null;
+    const years=[...new Set([...q.matchAll(/\b(20\d{2})\b/g)].map(m=>Number(m[1])))];
+    let period=financial||semester||annual?{semester,years}:null,inherited=false;
+    if(follow&&state.domain==='fundamentals'&&financial&&!annual){
+      const previous=state.period||{};
+      if(!semester&&previous.semester){effective+=' '+previous.semester;period.semester=previous.semester;inherited=true;}
+      if(!years.length&&(previous.years||[]).length){effective+=' '+previous.years.join(' et ');period.years=previous.years.slice();inherited=true;}
+    }
+    let dates=datesIn(question).filter(d=>d.valid).map(d=>d.date);
+    if(follow&&!dates.length&&(state.dates||[]).length&&/volume|quantite|cours|prix|cloture|bougie|ohlc|ouverture|plus haut|plus bas|rsi|\bmm\s*\d|macd|actualite|radar|publication|briefing/.test(q)){
+      dates=state.dates.slice(0,6);effective+=' le '+dates.join(' et le ');inherited=true;
+    }
+    return {question:effective,symbols,explicitSymbols:explicit,period,dates,inherited,measure:measureFor(effective)};
+  }
   function parseHistory(csv,symbol,asof){
     const lines=String(csv).replace(/^\uFEFF/,'').split(/\r?\n/),history={};
     if(lines[0]!=='Séance;Ticker;Ouverture;Plus Haut;Plus Bas;Clôture;Titres Échangés;Contrôle OHLC')throw new Error('Format de l’historique non reconnu.');
@@ -140,7 +175,7 @@
       const row=data.symbols[s];if(!row){lines.push(`Titre ${s} absent du référentiel.`);continue;}
       const f=row.fundamental||{},latest=f.latest_report||{},ev=f.evidence||{};
       lines.push(`${s} · ${row.name} · séance ${row.asof||'non datée'} · source ${row.price_source||'non précisée'}.`);
-      if(row.asof!==data.analysis_date)lines.push('Attention : dernière séance du titre différente de la date d’analyse; donnée ancienne ou indisponible.');
+      if(row.asof!==(data.market?.asof||data.analysis_date))lines.push('Attention : dernière séance du titre différente de la dernière clôture du marché; donnée ancienne ou indisponible.');
       sources.push({label:`Fiche ${s} · ${row.asof}`,url:row.url});
       if(dates.length){
         if(data.history_files?.[s])sources.push({label:`Historique OHLCV ${s}`,url:data.history_files[s].url});
@@ -284,7 +319,9 @@
     return {text:lines.join('\n\n'),sources,symbols,mode:'local'};
   }
   function localAnswer(question,data,fallback,state={}){
-    const symbols=symbolsFor(question,data,fallback),guard=preciseAnswer(question,data,symbols,true);
+    const prepared=prepareQuestion(question,data,fallback,state);
+    question=prepared.question;
+    const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
     if(guard)return guard;
     const q=normalize(question),dates=datesIn(question);
     for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes mobiles : 20, 50 et 200 séances.',sources:[],symbols,mode:'local'};}
@@ -295,21 +332,24 @@
       text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const datedHistory=dates.length&&!/briefing|publication|actualite|radar|macro|international|brent|cuivre|charbon|usd|eur|dollar|vix|nikkei|cac 40|s&p|\bfed\b|\bbce\b|\bhcp\b/.test(q);
     const namedMacro=/brent|petrole|cuivre|charbon|vix|dxy|indice dollar|usd\s*\/\s*mad|eur\s*\/\s*mad|dollar.*dirham|euro.*dirham|s&p|sp ?500|cac\s*40|dow jones|nikkei/.test(q)&&!/actualite|radar|publication|fonction|capacit/.test(q);
-    const answer=(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,state))||baseAnswer(question,data,fallback);
-    if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
+    const answer=(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
+    if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|minoritaires|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
     if(/demain|prochaine seance|va (?:monter|baisser)/.test(q)&&!answer.text.includes(data.definitions.probability))answer.text+='\n\n'+data.definitions.probability;
+    answer.context={domain:answer.domain,symbols:answer.symbols.slice(),period:answer.domain==='fundamentals'?prepared.period:null,dates:prepared.dates.slice(),labFilters:answer.labFilters,measure:prepared.measure};
+    answer.resolvedQuestion=question;
+    if(prepared.inherited)answer.text+='\n\nContexte conservé : '+[...(prepared.period?.semester?[prepared.period.semester]:[]),...(prepared.period?.years||[]),...prepared.dates].join(' · ')+'.';
     return domains?.decorate(question,data,answer)||answer;
   }
-  const api={localAnswer,symbolsFor,dateIn,datesIn,validURL,parseHistory};
+  const api={localAnswer,symbolsFor,dateIn,datesIn,validURL,parseHistory,prepareQuestion};
   if(typeof module==='object'&&module.exports)module.exports=api;
   if(!root?.document)return;
   const doc=root.document, dialog=doc.getElementById('assistant-dialog');
   if(!dialog)return;
   const el=id=>doc.getElementById('assistant-'+id), prefix=dialog.dataset.prefix||'';
   let data=null, loading=null, config={endpoint:null}, busy=false, controller=null, generation=0, conversation={};
-  async function loadHistory(question){
+  async function loadHistory(question,symbols){
     if(!datesIn(question).length||/actualite|radar|briefing|publication/.test(normalize(question)))return;
-    for(const s of symbolsFor(question,data,el('symbol').value)){
+    for(const s of symbols){
       const row=data.symbols[s],file=data.history_files?.[s];if(!row||row.history_by_date||!file)continue;
       const url=validURL(file.url,prefix);if(!url||!root.crypto?.subtle)throw new Error('Historique complet non vérifiable dans ce navigateur. Consultez le graphique ou le CSV.');
       const response=await root.fetch(url,{cache:'no-cache'});if(!response.ok)throw new Error('Historique du titre indisponible.');
@@ -358,16 +398,17 @@
     busy=true;el('send').disabled=true;el('symbol').disabled=true;el('ai').disabled=true;
     const epoch=generation;
     try{
-      await load();message('user',question);el('question').value='';
-      await loadHistory(question);
+      await load();if(epoch!==generation)return;message('user',question);el('question').value='';
+      const prepared=prepareQuestion(question,data,el('symbol').value,conversation);
+      await loadHistory(prepared.question,prepared.symbols);
       if(epoch!==generation)return;
       const answer=localAnswer(question,data,el('symbol').value,conversation);
-      conversation={domain:answer.domain||null,labFilters:answer.labFilters};
+      conversation=answer.context||{};
       if(answer.symbols.length===1&&(answer.symbols[0]==='MASI'||data.symbols[answer.symbols[0]]))el('symbol').value=answer.symbols[0];
       if(el('ai').checked&&config.endpoint){
         el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),35000);
         let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},credentials:'omit',signal:controller.signal,
-          body:JSON.stringify({question,symbols:answer.symbols,consent:true})});}finally{clearTimeout(timeout);}
+          body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true})});}finally{clearTimeout(timeout);}
         const result=await res.json();if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
         if(epoch!==generation)return;
         message('assistant',result.text,result.sources||answer.sources,'llm');
@@ -380,6 +421,7 @@
   el('open').hidden=false;
   el('open').addEventListener('click',async()=>{dialog.showModal();el('question').focus();try{await load();}catch(error){message('assistant',error.message);el('status').textContent='Chargement impossible.';}});
   el('close').addEventListener('click',()=>dialog.close());
+  el('symbol').addEventListener('change',()=>{conversation={};});
   el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
   el('form').addEventListener('submit',event=>{event.preventDefault();submit(el('question').value);});
   el('ai').addEventListener('change',()=>{el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';});

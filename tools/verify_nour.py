@@ -20,7 +20,7 @@ def main():
     commands.extend(['node', '--check', f'web/{name}.js'] for name in
                     ('nour', 'chart', 'chart-controls', 'market', 'research', 'assistant-domains', 'assistant'))
     commands.extend(['node', f'tools/{name}.cjs'] for name in
-                    ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_domains'))
+                    ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_domains', 'test_assistant_conversation'))
     commands.append([sys.executable, 'tools/audit_site.py'])
     commands.append([sys.executable, 'tools/audit_readiness.py'])
     for command in commands:

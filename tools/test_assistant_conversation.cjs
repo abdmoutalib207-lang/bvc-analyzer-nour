@@ -1,0 +1,51 @@
+/* Regression cases reproduced through the public assistant on 7 October. */
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const api=require('../web/assistant.js');
+const data=JSON.parse(fs.readFileSync('web/assistant-data.json','utf8'));
+const fmt=x=>typeof x==='number'?x.toLocaleString('fr-FR',{maximumFractionDigits:2}):'indisponible';
+let checked=0;
+function conversation(fallback='MASI',facts=data){
+  let state={};return {ask(q,predicate){
+    const before=structuredClone(state),r=api.localAnswer(q,facts,fallback,state);
+    assert.deepEqual(state,before,'Answer must not mutate conversation state');
+    assert.ok(predicate(r),q+'\n'+r.text);checked++;state=r.context||{};
+    if(r.symbols.length===1)fallback=r.symbols[0];return r;
+  },choose(s){fallback=s;state={};}};
+}
+let c=conversation();
+c.ask('Compare le PER d’ADI et RDS',r=>r.symbols.length===2);
+c.ask('Et leur BPA ?',r=>r.symbols.length===2&&['ADI','RDS'].every(s=>r.text.includes(s)&&r.text.includes('BPA : '+fmt(data.symbols[s].fundamental.eps_mad))));
+c.ask('Et pour JET ?',r=>r.symbols.length===1&&r.symbols[0]==='JET'&&r.text.includes('BPA : '+fmt(data.symbols.JET.fundamental.eps_mad)));
+c.ask('Quel est le RNPG de JET au premier semestre 2026 ?',r=>r.text.includes('période 2026-06-30')&&r.text.includes('91,51'));
+c.ask('Et le résultat total ?',r=>r.text.includes('Résultat net consolidé total : '+fmt(data.symbols.JET.fundamental.latest_report.reported_total_net_millions))&&r.text.includes('période 2026-06-30')&&r.text.includes('Contexte conservé : S1 · 2026'));
+c.ask('Et les minoritaires ?',r=>r.text.includes('Résultat des minoritaires : '+fmt(data.symbols.JET.fundamental.latest_report.reported_minority_net_millions)));
+c.ask('Et en 2025 ?',r=>r.text.includes('période 2025-06-30')&&r.text.includes('indisponible'));
+c.ask('PER ADI',r=>r.text.includes('PER : '+fmt(data.symbols.ADI.fundamental.pe))&&!r.text.includes('Contexte conservé'));
+c.ask('Quels risques pour ADI face au MASI ?',r=>assert.deepEqual(r.symbols,['ADI'])===undefined&&r.text.includes('Bêta : '+fmt(data.symbols.ADI.market_risk.beta)));
+c.ask('Que veut dire bêta ?',r=>r.symbols[0]==='ADI'&&r.text.includes(data.knowledge.definitions.beta));
+c.ask('Ça veut dire quoi RSI ?',r=>r.text.includes(data.knowledge.definitions.rsi));
+c.ask('Qu’est-ce que le PNB ?',r=>r.text.includes(data.knowledge.definitions.pnb));
+c.ask('À quoi sert le laboratoire ?',r=>r.domain==='laboratory'&&r.text.includes(data.knowledge.definitions.laboratory)&&!r.text.includes('médiane nette'));
+c.ask('Laboratoire ADI sur 20 séances achat 1 %, vente 1 %',r=>r.labFilters.horizon===20);
+c.ask('Et sur 60 séances avec glissement 0,2 % ?',r=>r.labFilters.horizon===60&&r.labFilters.buy===1&&r.labFilters.sell===1&&r.labFilters.slip===.2);
+c.ask('Explique simplement',r=>r.domain==='laboratory'&&r.text.includes(data.knowledge.definitions.laboratory)&&!r.text.includes('médiane nette'));
+c=conversation('ADI');
+c.ask('Résume le briefing de clôture',r=>r.domain==='briefing'&&data.briefings.cloture.editorial.paragraphs.every(p=>r.text.includes(p))&&!r.text.includes('Points sectoriels à examiner'));
+c.ask('Briefing ADI',r=>r.domain==='briefing'&&r.text.includes('ADI · Alliances'));
+const facts=structuredClone(data);
+facts.symbols.ADI.history_by_date=api.parseHistory(fs.readFileSync('web/historique/ADI.csv','utf8'),'ADI',facts.analysis_date);
+c=conversation('MASI',facts);
+c.ask('Bougie ADI le 05/06/2023',r=>r.text.includes('Clôture du 2023-06-05 : 72,2'));
+c.ask('Et le volume ?',r=>r.text.includes('Quantité échangée du 2023-06-05 : '+fmt(facts.symbols.ADI.history_by_date['2023-06-05'].v))&&!r.text.includes('Volume de la dernière séance'));
+c.ask('Et son RSI ?',r=>r.text.includes('n’est pas reconstruite aux dates demandées'));
+c.ask('Quel RSI ADI ?',r=>r.text.includes('RSI 14 : '+fmt(facts.symbols.ADI.technical.rsi14))&&!r.text.includes('dates demandées'));
+c.ask('RNPG JET S1 2026',r=>r.text.includes('91,51'));
+c.ask('Résultat Cash Plus SA',r=>r.symbols[0]==='CASH'&&r.text.includes('Résultat annuel retenu')&&!r.text.includes('Contexte conservé'));
+c.ask('RNPG JET S1 2026',r=>r.text.includes('91,51'));
+c.choose('ADI');
+c.ask('Et le résultat ?',r=>r.text.includes('Résultat annuel retenu')&&r.symbols[0]==='ADI'&&!r.text.includes('Contexte conservé'));
+c.ask('RSI ADI',r=>!r.text.includes('donnée ancienne ou indisponible'));
+c.ask('PER MRL',r=>r.text.includes('différente de la dernière clôture du marché'));
+c.ask('Et PER ZZZ ?',r=>r.text.includes('non reconnu')&&!r.text.includes('PER :'));
+c.ask('Je cherche mon mot de passe',r=>r.text.includes('Je ne reconnais pas assez précisément'));
+console.log(`Assistant conversations: ${checked} natural question/follow-up regressions, comparison subjects, periods, history dates, definitions, benchmark MASI and explicit context reset passed.`);

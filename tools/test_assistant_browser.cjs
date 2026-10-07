@@ -89,6 +89,29 @@ const shots=process.env.NOUR_SCREENSHOTS;
           const menu=await ask('Quelles fonctions peux-tu expliquer ?');
           const facts=await (await context.request.get(new URL('assistant-data.json',base).href)).json();
           for(const c of facts.knowledge.capabilities)assert.ok(menu.includes(c.label));
+          const risk=await ask('Quels risques pour ADI face au MASI ?');
+          assert.ok(risk.includes('Bêta : '+adi.market_risk.beta.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.equal(await page.locator('#assistant-symbol').inputValue(),'ADI');
+          const definition=await ask('Que veut dire bêta ?');
+          assert.ok(definition.includes(facts.knowledge.definitions.beta));
+          assert.ok(definition.includes('ADI · Alliances'));
+          await ask('Compare le PER d’ADI et RDS');
+          const comparison=await ask('Et leur BPA ?');
+          for(const s of ['ADI','RDS']){
+            assert.ok(comparison.includes(s+' ·'));
+            const eps=facts.symbols[s].fundamental.eps_mad;
+            assert.ok(comparison.includes('BPA : '+(eps===null?'indisponible':eps.toLocaleString('fr-FR',{maximumFractionDigits:2}))));
+          }
+          await ask('Quel est le RNPG de JET au premier semestre 2026 ?');
+          const total=await ask('Et le résultat total ?');
+          assert.ok(total.includes('Résultat net consolidé total : '+jet.fundamental.latest_report.reported_total_net_millions.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(total.includes('période 2026-06-30'));
+          const helpAnswer=await ask('À quoi sert le laboratoire ?');
+          assert.ok(helpAnswer.includes(facts.knowledge.definitions.laboratory));
+          assert.ok(!helpAnswer.includes('médiane nette'));
+          await page.locator('#assistant-symbol').selectOption('ADI');
+          const brief=await ask('Résume le briefing de clôture');
+          for(const paragraph of facts.briefings.cloture.editorial.paragraphs)assert.ok(brief.includes(paragraph));
           const lab=await ask('Laboratoire ADI sur 20 séances achat 1 %, vente 1 %');
           const expectedLab=await page.evaluate(()=>{
             const data=JSON.parse(document.getElementById('lab-data').textContent);
@@ -105,6 +128,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok(old.includes('Clôture du '+first[0]+' : '+Number(first[5]).toLocaleString('fr-FR',{maximumFractionDigits:2})));
           assert.ok(old.includes('Ouverture '+Number(first[2]).toLocaleString('fr-FR',{maximumFractionDigits:2})));
           assert.ok(await page.locator('.assistant-message').last().locator('a[href$="historique/ADI.csv"]').count()===1);
+          const oldVolume=await ask('Et le volume ?');
+          assert.ok(oldVolume.includes('Quantité échangée du '+first[0]+' : '+Number(first[6]).toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(!oldVolume.includes('Volume de la dernière séance'));
+          await page.locator('#assistant-symbol').selectOption('JET');
+          const reset=await ask('Et son BPA ?');
+          assert.ok(reset.includes('JET · Jet Contractors'));
+          assert.ok(!reset.includes('Clôture du '+first[0]));
+          assert.ok(!reset.includes('ADI · Alliances'));
         }
         const rect=await page.locator('#assistant-dialog').boundingBox();
         assert.ok(rect.x>=0&&rect.y>=0&&rect.x+rect.width<=width+1&&rect.y+rect.height<=901);
@@ -141,6 +172,6 @@ const shots=process.env.NOUR_SCREENSHOTS;
       assert.equal(await native.locator('#lab-help-content').isVisible(),false);
       await nojs.close();
     }
-    console.log(`Browser QA: ${interactions} page/viewport journeys including MM50/RSI follow-up, 16-capability guide, lab parity and cost/horizon follow-up, verified full CSV history; laboratory help and no-JS at 3 widths; assistant checks passed; no LLM call.`);
+    console.log(`Browser QA: ${interactions} page/viewport journeys; natural definitions, comparison and semester follow-ups, benchmark MASI subject, global briefing, lab parity, cost/horizon follow-up, full CSV date/volume follow-up and explicit context reset; laboratory help and no-JS at 3 widths; no LLM call.`);
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});

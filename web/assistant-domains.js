@@ -6,6 +6,7 @@
   const finite=x=>typeof x==='number'&&Number.isFinite(x);
   const fmt=(x,u='')=>finite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(u?' '+u:''):'indisponible';
   const stateLabel=s=>({available:'disponible',insufficient:'insuffisant',historical_only:'historique uniquement',closed:'clôture',published:'publié',provisional:'provisoire',stale:'archive ancienne',unavailable:'indisponible',partial:'partiel',updated:'actualisé',unchanged:'inchangé'}[s]||s||'indisponible');
+  const isMethod=question=>/explique|c.est quoi|qu.est.ce|que.*veut dire|ca veut dire|a quoi (?:sert|correspond)|signifi|definition|comment|formule|pour les nuls|difference|fonctionn/.test(normalize(question));
   const terms=[
     [/\bper\b|\bpe\b/,'per'],[/\bbpa\b/,'bpa'],[/\bp\s*\/\s*b\b|\bpb\b/,'pb'],[/\broe\b/,'roe'],[/\bpnb\b/,'pnb'],[/rnpg|part (?:du )?groupe/,'rnpg'],[/dette/,'debt'],
     [/\brsi\s*14?\b|\brsi\b/,'rsi'],[/\b(?:mm|sma)\s*\d+|moyenne mobile/,'mm'],[/macd/,'macd'],[/bollinger/,'bollinger'],[/\batr\b/,'atr'],[/support|resistan/,'levels'],[/activite/,'activity'],
@@ -14,7 +15,7 @@
   ];
   function decorate(question,data,answer){
     const q=normalize(question);
-    if(!/explique|c.est quoi|signifi|definition|comment|formule|pour les nuls|difference/.test(q))return answer;
+    if(!isMethod(question))return answer;
     const defs=data.knowledge?.definitions||{};
     const extras=terms.filter(([p,key])=>p.test(q)&&defs[key]&&!answer.text.includes(defs[key])).slice(0,5).map(([,key])=>defs[key]);
     return extras.length?{...answer,text:answer.text+'\n\n'+extras.join('\n\n')}:answer;
@@ -52,9 +53,9 @@
     const definition=key=>{if(defs[key])lines.push(defs[key]);};
     const rows=symbols.filter(s=>data.symbols?.[s]).map(s=>data.symbols[s]);
     const title=row=>{lines.push(`${row.symbol} · ${row.name} · séance ${row.asof||'non datée'} · statut ${row.decision||'indisponible'}.`);link(`Fiche ${row.symbol}`,row.url);
-      if(row.asof!==data.analysis_date)lines.push('La dernière séance du titre diffère de la date d’analyse; aucun chiffre n’est présenté comme une nouvelle séance.');};
+      if(row.asof!==(data.market?.asof||data.analysis_date))lines.push('La dernière séance du titre diffère de la dernière clôture du marché; aucun chiffre n’est présenté comme une nouvelle séance.');};
     const horizon=q.match(/\b(\d+)\s*(?:seances?|jours?)\b/);
-    const method=/explique|c.est quoi|signifi|definition|comment|formule|pour les nuls|fonctionn/.test(q);
+    const method=isMethod(question);
     const follow=/^(?:et\s+(?:sur|avec|si|pour)|avec|sur\s+\d|frais|glissement)/.test(q);
     if(/que.*(?:peux|sais|peut).*(?:repondre|demander|faire)|fonctionnalit|quels?.*(?:indicateurs|fonctions)|que fait.*nour|comment utiliser.*nour|tout.*implemente|capacites|questions possibles|aide.*assistant/.test(q)){
       lines.push('Je couvre les fonctions suivantes. Vous pouvez demander leur explication ou les données d’un titre, et comparer deux titres.');
@@ -96,7 +97,7 @@
       if(explicitDates.some(d=>d!==b.generated_for&&d!==b.market_session)){lines.push('L’édition demandée à cette date n’est pas disponible dans cet export.');return result('briefing');}
       lines.push(`${b.title||'Briefing'} · préparé pour ${b.generated_for} · séance de référence ${b.market_session||'indisponible'} · état ${b.edition_status||'indisponible'}.`);
       if(b.edition_notice)lines.push(b.edition_notice);
-      if(rows.length){for(const row of rows){const f=(b.focus||[]).find(x=>x.symbol===row.symbol);title(row);
+      if(rows.length&&state.explicitSymbols?.some(s=>s!=='MASI')){for(const row of rows){const f=(b.focus||[]).find(x=>x.symbol===row.symbol);title(row);
         if(!f){lines.push('Ce titre n’appartient pas aux valeurs commentées dans cette édition; sa fiche reste disponible.');continue;}
         lines.push(...(f.reading?.paragraphs||[f.scenario||'Lecture indisponible.']));if(f.reading?.checkpoint)lines.push('Points sectoriels à examiner : '+f.reading.checkpoint);
       }}else{lines.push(...(b.editorial?.paragraphs||[b.market_summary||b.index_notice||'Synthèse indisponible.']));
