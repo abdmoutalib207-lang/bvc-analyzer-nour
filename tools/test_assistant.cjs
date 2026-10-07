@@ -48,7 +48,9 @@ const scenarios=[
   ['MM200 JET',r=>r.text.includes('MM200 : '+f(data.symbols.JET.technical.sma200))],
   ['MACD ADI',r=>r.text.includes('Signal MACD : '+f(data.symbols.ADI.technical.macd_signal))],
   ['Compare le PER de ADI et RDS',r=>r.symbols.length===2&&r.text.includes('PER : '+f(data.symbols.ADI.fundamental.pe))&&r.text.includes('PER : '+f(data.symbols.RDS.fundamental.pe))],
-  ['Quel volume global MASI ?',r=>r.text.includes(f(data.market.turnover_mad))&&r.text.includes('titres échangés')&&r.text.includes('totaux concordants')],
+  ['Quel volume global MASI ?',r=>r.text.includes(f(data.market.turnover_mad))&&r.text.includes('titres échangés')&&r.text.includes(
+    data.market_volume_audit?.status==='matched'?'totaux concordants':
+    data.market_volume_audit?.status==='discrepancy'?'écart constaté':'couverture non confirmée')],
   ['Volume JET',r=>r.text.includes(f(data.symbols.JET.day_turnover_mad_actual))&&r.text.includes(f(data.symbols.JET.day_shares))],
   ['MASI le 11/03/26 et le 31/03/26',r=>['2026-03-11','2026-03-31'].every(d=>r.text.includes(f(data.masi_history[d])))],
   ['MASI le 31/02/26',r=>r.text.includes('Date invalide')&&!r.text.includes('Clôture du')],
@@ -73,7 +75,10 @@ const scenarios=[
   ['Capitaux propres CASH',r=>r.text.includes(f(data.symbols.CASH.fundamental.evidence.capitaux_propres_part_groupe.value))&&r.text.includes('comptes annuels')],
   ['Brent le 2025-01-02',r=>r.text.includes('pas leur historique à la date demandée')],
 ];
-for(const [question,check] of scenarios)assert.ok(check(api.localAnswer(question,data,'MASI')),question);
+for(const [question,check] of scenarios){
+  const result=api.localAnswer(question,data,'MASI');
+  assert.ok(check(result),question+'\n'+result.text);
+}
 assert.deepEqual(api.localAnswer('Et son RSI ?',data,'ADI').symbols,['ADI']);
 assert.ok(api.localAnswer('Et son RSI ?',data,'ADI').text.includes('RSI 14 : '+f(data.symbols.ADI.technical.rsi14)));
 console.log(`Assistant: 320 title/topic smoke scenarios + ${scenarios.length} precise-answer cases, follow-up context, report parity, missing values and safe links passed.`);

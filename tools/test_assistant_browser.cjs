@@ -68,6 +68,19 @@ const shots=process.env.NOUR_SCREENSHOTS;
         assert.ok(!messages.includes('selected_pages_reconciled_'));
         const docLink=page.locator('.assistant-sources a').filter({hasText:'JET · comptes annuels'});
         assert.equal(await docLink.getAttribute('href'),jet.fundamental.document_url);
+        // The current session may legitimately be incomplete or discrepant.
+        // Check the actual exported state, never assume every daily run matches.
+        const exportFacts=await (await context.request.get(new URL('assistant-data.json',base).href)).json();
+        await page.locator('#assistant-question').fill('Quel volume global MASI ?');
+        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        await page.locator('#assistant-send:not([disabled])').waitFor();
+        const volumeAnswer=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
+        const amount=exportFacts.market.turnover_mad;
+        assert.ok(volumeAnswer.includes('Volume global : '+(amount===null||amount===undefined?'indisponible':amount.toLocaleString('fr-FR',{maximumFractionDigits:2})+' MAD')));
+        const volumeState=exportFacts.market_volume_audit?.status;
+        const volumeLabel=volumeState==='matched'?'totaux concordants':volumeState==='discrepancy'?'écart constaté':'couverture non confirmée';
+        assert.ok(volumeAnswer.includes(volumeLabel),volumeAnswer);
+        assert.equal(volumeAnswer.includes('totaux concordants'),volumeState==='matched');
         await page.locator('#assistant-question').fill('MM50 ADI');
         await page.getByRole('button',{name:'Envoyer',exact:true}).click();
         const adi=report.results.find(row=>row.symbol==='ADI');

@@ -45,7 +45,7 @@ c.ask('RNPG JET S1 2026',r=>r.text.includes('91,51'));
 c.choose('ADI');
 c.ask('Et le résultat ?',r=>r.text.includes('Résultat annuel retenu')&&r.symbols[0]==='ADI'&&!r.text.includes('Contexte conservé'));
 c.ask('RSI ADI',r=>!r.text.includes('donnée ancienne ou indisponible'));
-c.ask('PER MRL',r=>r.text.includes('différente de la dernière clôture du marché'));
+c.ask('PER MRL',r=>r.text.includes('différente de la dernière clôture du marché')===(data.symbols.MRL.asof!==data.market.asof));
 c.ask('Et PER ZZZ ?',r=>r.text.includes('non reconnu')&&!r.text.includes('PER :'));
 c.ask('Je cherche mon mot de passe',r=>r.text.includes('Je ne reconnais pas assez précisément'));
 console.log(`Assistant conversations: ${checked} natural question/follow-up regressions, comparison subjects, periods, history dates, definitions, benchmark MASI and explicit context reset passed.`);

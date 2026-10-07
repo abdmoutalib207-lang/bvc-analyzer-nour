@@ -84,7 +84,9 @@ jobs:
           NOUR_SLOT: ${{ inputs.slot || 'auto' }}
         run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)" --slot "$NOUR_SLOT"
       - name: Verify the generated output
-        run: python tools/verify_nour.py
+        run: |
+          set -o pipefail
+          python tools/verify_nour.py 2>&1 | tee "$RUNNER_TEMP/nour-verification.log"
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -142,6 +144,20 @@ jobs:
           path: ${{ runner.temp }}/nour-browser-qa-shots
           if-no-files-found: ignore
           retention-days: 14
+      - name: Preserve failed verification diagnostics (not published)
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: nour-failed-verification
+          path: |
+            ${{ runner.temp }}/nour-verification.log
+            data/health.json
+            data/overview_health.json
+            web/runtime.json
+            web/assistant-data.json
+            web/report.json
+          if-no-files-found: ignore
+          retention-days: 7
       - name: Report collector outcomes
         if: always()
         run: |
