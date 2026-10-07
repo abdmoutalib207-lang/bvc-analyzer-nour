@@ -67,5 +67,42 @@ variation +0,58 %, seance du 7 octobre.
 
 La couverture de code en pourcentage, le typage, l'audit WCAG complet,
 les performances de navigation et un fournisseur LLM reel ne sont pas mesures.
-La publication et les parcours navigateur restent a confirmer dans le run
-du commit correctif ; le document ne pretend pas qu'ils ont deja reussi.
+
+## Publication effectivement verifiee
+
+Correctif : `d283e0ea51d4b1ba45e10638336cf86f6dd16a4d`.
+Instantanes recollectes et sauvegardes par le bot :
+`d3a65833d9d248ea9e32fb222a75a7ace11fe490`.
+Run `37683651954`, job `113005788993` : conclusion `success`.
+Les journaux confirment 132 tests Python, les 17 scenarios volume/date,
+411 controles arithmetiques, 12 parcours Chromium avant deploiement et
+12 parcours sur le site effectivement publie. Toutes les collectes reussissent.
+
+Le site public a ete recharge et ses reponses testees directement :
+cloture MASI du 7 octobre a 16 990,77 points, volume global, volume ADI
+et PER MRL. MRL est date du 7 octobre sans avertissement de cotation ancienne.
+`runtime.json` annonce `last_closed_session: 2026-10-07` et
+`built_at: 2026-10-07T20:39:41.218203+00:00`.
+
+### Le releve publie est distinct du PDF et du premier releve local
+
+La nouvelle collecte CDG realisee par le workflow a 20:39 UTC ne donne pas
+les memes volumes que le PDF fourni et le premier releve local ci-dessus.
+Les dates et clotures des 66 lignes restent identiques ; 10 quantites et
+montants different : ADH, ADI, AFI, CIH, HPS, MNG, MUT, RDS, SMI et STK.
+Leur somme baisse de 512 titres et 224 124,50 MAD. Le motif de ces changements
+dans les reponses CDG n'est pas etabli ; ne pas les attribuer a des annulations
+de transactions sans preuve, ni presenter le PDF comme identique au site actuel.
+
+| Mesure | Lignes du releve publie | Synthese CDG du releve publie |
+| --- | ---: | ---: |
+| Montant MAD | 243 227 914,85 | 243 227 926,40 |
+| Titres echanges | 571 725 | 571 728 |
+| Lignes | 66 | 67 |
+
+L'ecart de -11,55 MAD, les 3 titres et la ligne non identifiee restent presents.
+L'assistant public affiche le total de la synthese CDG avec
+« couverture non confirmee · 66 / 67 lignes », sans fausse concordance.
+ADI publie : 345,00 MAD, 20 952 titres, 7 223 742,80 MAD.
+Les chiffres du PDF et du premier releve local ne sont pas forces dans
+les donnees de production ; chaque comparaison est rattachee a son releve.
