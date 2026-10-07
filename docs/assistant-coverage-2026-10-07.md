@@ -69,7 +69,7 @@ Les fréquences et backtests exploratoires gardent leurs biais et limites.
 ## Vérification
 
 Vérification locale : 132 tests Python réussis ; 320 scénarios titre/thème et
-29 réponses précises conservés ; 412 réponses supplémentaires contrôlées,
+29 réponses précises conservés ; 419 réponses supplémentaires contrôlées,
 dont 108 combinaisons laboratoire/horizon/période/régime/frais. Contrôle des
 89 pages et parité exacte des données de l’assistant avec les exports sources.
 

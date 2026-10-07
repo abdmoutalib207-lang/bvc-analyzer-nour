@@ -23,6 +23,7 @@
     const filters={horizon:20,period:'all',regime:'all',buy:1,sell:1,slip:0,...previous};
     const h=q.match(/\b(\d+)\s*(?:seances?|jours?)\b/);if(h)filters.horizon=Number(h[1]);
     if(![5,20,60].includes(filters.horizon))return {error:'Le laboratoire propose 5, 20 ou 60 séances. Cet horizon n’est pas implémenté.'};
+    if(/regime|au.dessus|au.dessous|sous/.test(q)&&[...q.matchAll(/\b(?:mm|sma)\s*(\d+)\b/g)].some(m=>Number(m[1])!==200))return {error:'Le filtre de régime du laboratoire utilise uniquement le MASI face à MM200. Ce régime demandé n’est pas implémenté.'};
     if(/2023\s*(?:-|a|et)\s*2024|avant 2025/.test(q))filters.period='2023-2024';
     if(/depuis 2025|2025\s*\+/.test(q))filters.period='2025+';
     const years=[...q.matchAll(/\b20\d{2}\b/g)];
@@ -66,8 +67,8 @@
       if(a.note)lines.push(a.note);definition('archive');link('Laboratoire · suivi des scores','recherche.html');return result('score');
     }
     if(/laboratoire|backtest|replay|apres frais|tendance.*frais|regime.*mm\s*200|frais.*(?:achat|vente)|glissement/.test(q)||(state.domain==='laboratory'&&follow)){
-      if(/support|resistan|probabil.*(?:demain|prochaine)|fiscal|impot|dividende/.test(q)){
-        lines.push('Ce scénario n’est pas implémenté : le laboratoire ne teste ni un support précis ni fiscalité/dividendes et ne calcule pas de probabilité de prochaine séance.');definition('laboratory');definition('costs');link('Laboratoire','recherche.html');return result('laboratory');
+      if(/support|resistan|\brsi\b|macd|bollinger|probabil.*(?:demain|prochaine)|fiscal|impot|dividende/.test(q)){
+        lines.push('Ce scénario n’est pas implémenté : le laboratoire utilise sa règle MM20/MM50 fixe, sans stratégie RSI/MACD/Bollinger, support précis, fiscalité/dividendes ni probabilité de prochaine séance.');definition('laboratory');definition('costs');link('Laboratoire','recherche.html');return result('laboratory');
       }
       const parsed=labFilters(q,state.domain==='laboratory'?state.labFilters:{});
       if(parsed.error){lines.push(parsed.error);return result('laboratory');}
@@ -155,6 +156,7 @@
     }
     if(/risque|beta|correlation|volatil|drawdown|baisse maximale|rendement relatif|ecart.*masi/.test(q)){
       for(const row of rows){title(row);const r=row.market_risk||{};lines.push(`Risque : ${stateLabel(r.status)} · ${r.paired_returns??0} rendements appariés · minimum ${r.minimum??60} · ${r.first||'—'} → ${r.last||'—'} · fenêtre complète ${r.complete_window?'oui':'non'}.`);
+        if(horizon&&!/volatil/.test(q))lines.push('Cet horizon personnalisé n’est pas fourni pour le risque. Les valeurs ci-dessous gardent leur fenêtre publiée de 253 séances MASI.');
         const metrics=[[/beta|risque/,'Bêta','beta',''],[/correlation|risque/,'Corrélation MASI','correlation',''],[/volatil|risque/,'Volatilité annualisée titre','volatility_pct','%'],[/volatil|risque/,'Volatilité MASI appariée','masi_volatility_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale titre','drawdown_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale MASI','masi_drawdown_pct','%'],[/rendement relatif|ecart|risque/,'Écart de rendement au MASI','relative_return_pp','points']];
         for(const [p,label,k,u] of metrics)if(p.test(q))lines.push(`${label} : ${fmt(r[k],u)}.`);
         if(/volatil/.test(q)&&horizon)lines.push(Number(horizon[1])===20?`Volatilité de tendance sur 20 rendements : ${fmt(row.trend?.realized_volatility_20d_pct,'%')}.`:'La volatilité sur cet horizon précis n’est pas fournie; les valeurs ci-dessus gardent leur fenêtre publiée.');

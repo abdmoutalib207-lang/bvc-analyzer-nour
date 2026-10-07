@@ -69,6 +69,13 @@ check('Source du Brent',r=>r.text.includes('Brent')&&r.sources.some(s=>s.label.i
 check('Combien de valeurs montent et baissent ?',r=>r.text.includes('Hausses '+data.market.breadth.up),'ADI');
 check('Quelle différence entre total et part groupe ?',r=>r.text.includes('RNPG signifie')&&!r.text.includes('ne reconnais'),'ADI');
 check('Bandes Bollinger ADI',r=>r.text.includes('ne sont pas présentes dans cet export'));
+check('RNPG MGL 2025',r=>r.text.includes('Résultat annuel part du groupe demandé : indisponible'));
+check('Résultat social M2M 2025',r=>r.text.includes('Résultat annuel social demandé : indisponible'));
+check('Capitaux propres part du groupe MGL',r=>r.text.includes('part du groupe demandés : indisponible'));
+check('Capitaux propres sociaux M2M',r=>r.text.includes('sociaux demandés : indisponible'));
+check('Laboratoire ADI régime sous MM50',r=>r.text.includes('n’est pas implémenté')&&!r.labFilters);
+check('Laboratoire ADI RSI 14',r=>r.text.includes('n’est pas implémenté')&&!r.labFilters);
+check('Bêta ADI sur 20 séances',r=>r.text.includes('Cet horizon personnalisé n’est pas fourni'));
 check('Capitaux propres totaux CASH',r=>r.text.includes('totaux demandés : indisponible'));
 for(const q of ['RSI ADI le 31/03/2026','Bêta ADI face au MASI le 31/03/2026','Laboratoire MASI le 31/03/2026'])check(q,r=>r.text.includes('n’est pas reconstruite aux dates demandées')&&!r.text.includes('Bêta :'));
 check('RSI 7 ADI',r=>r.text.includes('n’est pas implémentée'));
