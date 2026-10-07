@@ -42,3 +42,36 @@ reste désactivé et le dépôt principal reste intact.
 Les formulations reconnues restent déterministes. Ces vérifications ne sont
 ni une garantie de compréhension de toute phrase libre, ni un audit complet
 d’accessibilité, ni une validation prédictive des scores.
+
+## Publication et reprise des essais sur le site public
+
+Correction publiée : `8147489f1cb9ff52512676475e450b1e37992e0e`.
+Le [workflow 37556768398](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37556768398)
+est terminé avec succès. Les journaux attestent 132 tests Python, 320 scénarios
+de base et 29 réponses précises, 419 contrôles de domaines, 30 régressions de
+conversation et 89 pages auditées. Les 12 parcours page/largeur Chromium ont
+réussi avant déploiement puis sur le site réellement publié, aux trois largeurs
+375, 768 et 1 440 pixels. La seconde vérification s’est achevée à
+2026-10-07T01:25:22Z. Les captures de CI sont conservées dans l’artefact
+`nour-assistant-browser-qa` du workflow.
+
+Après rechargement du site public, les conversations ont aussi été reprises
+manuellement par saisie dans la fenêtre, puis lecture des réponses affichées :
+
+| Question ou relance | Résultat affiché après publication |
+|---|---|
+| PER ADI/RDS → Et leur BPA ? | Les deux titres sont conservés ; BPA ADI 18,46 MAD et RDS indisponible |
+| Risques ADI face au MASI → Que veut dire bêta ? | ADI reste le sujet ; bêta 1,53 et définition fournie |
+| À quoi sert le laboratoire ? | Explication du fonctionnement, frais et limites, sans lancer un tableau de résultats |
+| RNPG JET S1 2026 → résultat total → minoritaires | 91,51 / 103,60 / 12,09 MDH, toujours à la période 2026-06-30, avec les réserves du document |
+| Bougie ADI 05/06/2023 → Et le volume ? | 2 906 650 titres au 2023-06-05 ; montant MAD historique signalé absent |
+| Briefing de clôture avec ADI sélectionné → Briefing ADI | Synthèse générale MASI puis commentaire du titre explicitement demandé |
+| Laboratoire ADI 20 séances, frais 1 % / 1 % → 60 séances, glissement 0,2 % | Frais 1 % / 1 % conservés ; nouvel horizon et glissement repris ; petits échantillons signalés |
+| Choix manuel JET → Et son BPA ? | Contexte remis à zéro : JET annuel 2025, BPA 73,39 MAD indicatif, sans héritage du laboratoire ou du semestre |
+
+La capture ci-dessous montre la relance de volume conservant la date historique.
+Les réponses financières restent longues : leur présentation peut être simplifiée
+sans supprimer les réserves. Aucun audit supplémentaire des comptes ni activation
+de modèle génératif n’est impliqué par cette correction conversationnelle.
+
+![Relance sur le volume historique ADI, site public](images/assistant-conversation-public-2026-10-07.jpg)
