@@ -6,14 +6,15 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from nour.assistant import build_data
+from nour.assistant import build_data, read_briefings, read_history_files
 
 
 def audit(web):
     web = Path(web)
     report = json.loads((web/'report.json').read_text())
     actual = json.loads((web/'assistant-data.json').read_text())
-    if actual != build_data(report):
+    if actual != build_data(report,read_briefings(web,report['analysis_date']),
+                            read_history_files(web,[r['symbol'] for r in report['results']])):
         raise ValueError('Assistant facts diverge from the published report')
     config = json.loads((web/'assistant-config.json').read_text())
     if config.get('endpoint') is not None:
@@ -23,7 +24,8 @@ def audit(web):
         text = page.read_text()
         prefix = '../' if page.parent.name == 'titres' else ''
         for needle in ('id="assistant-dialog"', f'src="{prefix}assistant.js"',
-                       f'href="{prefix}assistant.css"'):
+                       f'href="{prefix}assistant.css"',f'src="{prefix}assistant-domains.js"',
+                       f'src="{prefix}research.js"'):
             if text.count(needle) != 1:
                 raise ValueError(f'{page.name}: missing or duplicated assistant asset {needle}')
     for path in [web/'assistant.js', web/'assistant-config.json', web/'assistant-data.json']:

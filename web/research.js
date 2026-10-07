@@ -19,6 +19,7 @@
       positive:values.length ? 100*values.filter(x=>x>0).length/values.length:null, excess:quantile(excess,.5)};
   }
   const api={net, quantile, select, summary};
+  root.NourResearch=api;
   if (typeof module !== 'undefined' && module.exports) module.exports=api;
   const doc=root.document;
   if (!doc || !doc.getElementById('research-lab')) return;

@@ -9,7 +9,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from nour.assistant import build_data, context_for, panel, source_links
+from nour.assistant import build_data, context_for, panel, source_links, read_briefings, read_history_files
 from nour.assistant_server import AssistantError, Gateway, Provider, handler_for
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -89,6 +89,43 @@ class AssistantFacts(unittest.TestCase):
                        'sans IA générative','maxlength="1200"','id="assistant-ai-option"'):
             self.assertIn(needle,text)
         self.assertNotIn('type="password"',text)
+
+    def test_extended_facts_are_independent_copies_of_existing_results(self):
+        original = copy.deepcopy(self.report)
+        data = build_data(self.report)
+        for key in ('research','intraday','score_archive'):
+            self.assertEqual(data[key], self.report[key])
+        for row in self.report['results']:
+            for key in ('liquidity','trend','market_risk','sector_comparison','quality'):
+                self.assertEqual(data['symbols'][row['symbol']][key],row.get(key))
+        data['research']['rows'].clear()
+        self.assertEqual(self.report,original)
+        self.assertEqual(len(data['knowledge']['capabilities']),16)
+
+    def test_news_export_omits_private_fields_undated_and_future_items(self):
+        report=copy.deepcopy(self.report)
+        report['news']=[{'title':'visible','published_at':report['analysis_date']+'T10:00:00Z',
+                         'private_note':'must-not-escape'},
+                        {'title':'future','published_at':'2999-01-01T00:00:00Z'},
+                        {'title':'undated'}]
+        news=build_data(report)['news']
+        self.assertEqual([a['title'] for a in news],['visible'])
+        self.assertNotIn('must-not-escape',json.dumps(news))
+
+    def test_generated_briefings_and_history_manifest_are_dated_and_bounded(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            (root/'briefing.json').write_text(json.dumps({'generated_for':'2026-10-07','title':'visible','private_note':'hidden'}))
+            (root/'cloture.json').write_text(json.dumps({'generated_for':'2999-01-01','title':'future'}))
+            editions=read_briefings(root,'2026-10-07')
+            self.assertEqual(list(editions),['briefing'])
+            self.assertNotIn('private_note',editions['briefing'])
+            (root/'historique').mkdir()
+            raw='données exactes\n'.encode()
+            (root/'historique'/'ADI.csv').write_bytes(raw)
+            manifest=read_history_files(root,['ADI','../private','ZZZ'])
+            self.assertEqual(manifest,{'ADI':{'url':'historique/ADI.csv','sha256':hashlib.sha256(raw).hexdigest()}})
 
 
 class AssistantGateway(unittest.TestCase):

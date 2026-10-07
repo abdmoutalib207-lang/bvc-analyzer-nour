@@ -79,6 +79,33 @@ const shots=process.env.NOUR_SCREENSHOTS;
         const last=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
         assert.ok(last.includes('ADI · Alliances'));
         assert.ok(!last.includes('PER :'));
+        if(route==='recherche.html'){
+          async function ask(question){
+            await page.locator('#assistant-question').fill(question);
+            await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+            await page.locator('#assistant-send:not([disabled])').waitFor();
+            return page.locator('.assistant-message[data-role="assistant"]').last().innerText();
+          }
+          const menu=await ask('Quelles fonctions peux-tu expliquer ?');
+          const facts=await (await context.request.get(new URL('assistant-data.json',base).href)).json();
+          for(const c of facts.knowledge.capabilities)assert.ok(menu.includes(c.label));
+          const lab=await ask('Laboratoire ADI sur 20 séances achat 1 %, vente 1 %');
+          const expectedLab=await page.evaluate(()=>{
+            const data=JSON.parse(document.getElementById('lab-data').textContent);
+            return NourResearch.summary(NourResearch.select(data.rows,{symbol:'ADI',horizon:20,period:'all',regime:'all'}),1,1,0);
+          });
+          assert.ok(lab.includes(expectedLab.count+' observations'));
+          assert.ok(lab.includes('médiane nette '+expectedLab.median.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          const follow=await ask('Et sur 60 séances avec glissement 0,2 % ?');
+          assert.ok(follow.includes('ADI · laboratoire 60 séances'));
+          assert.ok(follow.includes('achat 1 %, vente 1 %, glissement 0,2 %'));
+          const csv=await (await context.request.get(new URL('historique/ADI.csv',base).href)).text();
+          const first=csv.split(/\r?\n/)[1].split(';');
+          const old=await ask('Bougie ADI le '+first[0]);
+          assert.ok(old.includes('Clôture du '+first[0]+' : '+Number(first[5]).toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(old.includes('Ouverture '+Number(first[2]).toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(await page.locator('.assistant-message').last().locator('a[href$="historique/ADI.csv"]').count()===1);
+        }
         const rect=await page.locator('#assistant-dialog').boundingBox();
         assert.ok(rect.x>=0&&rect.y>=0&&rect.x+rect.width<=width+1&&rect.y+rect.height<=901);
         await page.getByRole('button',{name:'Effacer',exact:true}).click();
@@ -114,6 +141,6 @@ const shots=process.env.NOUR_SCREENSHOTS;
       assert.equal(await native.locator('#lab-help-content').isVisible(),false);
       await nojs.close();
     }
-    console.log(`Browser QA: ${interactions} page/viewport journeys including precise MM50 and RSI follow-up context; laboratory help click, Enter, Space, Escape, close, focus, unchanged filters and no-JS at 3 widths; assistant checks passed; no LLM call.`);
+    console.log(`Browser QA: ${interactions} page/viewport journeys including MM50/RSI follow-up, 16-capability guide, lab parity and cost/horizon follow-up, verified full CSV history; laboratory help and no-JS at 3 widths; assistant checks passed; no LLM call.`);
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});

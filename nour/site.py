@@ -71,6 +71,8 @@ def shell(title, body, style, script):
     return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08121b"><title>{esc(title)} · BVC Analyzer Nour</title><style>{style}</style>'
             f'<link rel="stylesheet" href="{prefix}assistant.css"></head><body>'
             f'{body}{assistant_panel(prefix)}<script>{script}</script>'
+            f'<script src="{prefix}research.js" defer></script>'
+            f'<script src="{prefix}assistant-domains.js" defer></script>'
             f'<script src="{prefix}assistant.js" defer></script></body></html>')
 
 
@@ -400,19 +402,17 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "titres").mkdir(exist_ok=True)
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
-    for asset in ('assistant.js', 'assistant.css', 'assistant-config.json'):
+    for asset in ('assistant.js', 'assistant-domains.js', 'research.js', 'assistant.css', 'assistant-config.json'):
         if (output / asset).resolve() != (assets / asset).resolve():
             (output / asset).write_bytes((assets / asset).read_bytes())
-    export_assistant(report, output)
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
-    research_script = (assets/'research.js').read_text(encoding='utf-8')
     (output/'recherche.html').write_text(shell('Laboratoire statistique',
         header('index.html', fixture['snapshot_updated']) + research_body(fixture, report),
-        style, script + '\n' + research_script), encoding='utf-8')
+        style, script), encoding='utf-8')
     research = report.get('research', {'rows': [], 'audit': []})
     (output/'recherche.json').write_text(json.dumps(research, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     with (output/'recherche.csv').open('w', encoding='utf-8-sig', newline='') as out:
@@ -438,3 +438,4 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
             writer.writerow(["Séance", "Ticker", "Ouverture", "Plus Haut", "Plus Bas", "Clôture", "Titres Échangés", "Contrôle OHLC"])
             for bar in rec["candles"]:
                 writer.writerow([bar.get("d"), symbol, bar.get("o"), bar.get("h"), bar.get("l"), bar.get("c"), bar.get("v"), quality(bar)])
+    export_assistant(report, output)

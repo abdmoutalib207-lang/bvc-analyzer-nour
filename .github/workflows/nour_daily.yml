@@ -20,6 +20,7 @@ on:
       - 'web/market.js'
       - 'web/research.js'
       - 'web/assistant.js'
+      - 'web/assistant-domains.js'
       - 'web/assistant.css'
       - 'web/assistant-config.json'
       - 'web/nour.css'
