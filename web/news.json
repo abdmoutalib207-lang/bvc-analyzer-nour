@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-07T20:39:34.042768+00:00",
+  "updated_at": "2026-10-07T21:43:05.729080+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "8a9f089ecdbce606c1",
+      "title": "Iran War Pushes 25 Countries Into New Electrification Policies",
+      "url": "https://oilprice.com/Energy/Energy-General/Iran-War-Pushes-25-Countries-Into-New-Electrification-Policies.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-07T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "be417c4d7ee331f623",
       "title": "Global Diesel Crunch Fuels New Wave of Energy Nationalism",
@@ -2735,23 +2752,6 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "242827ad6218c40e82",
-      "title": "Un nouveau \"miracle espagnol\" ?",
-      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20260930-un-nouveau-miracle-espagnol",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-09-30T20:42:30+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "55c32307797bd9c5e3",
