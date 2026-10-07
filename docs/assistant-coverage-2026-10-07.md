@@ -77,3 +77,23 @@ Le parcours Chromium du workflow vérifie aussi le guide complet, la parité du
 laboratoire, les suivis de frais/horizon et une ancienne bougie lue dans le CSV
 complet, à 375, 768 et 1 440 pixels, avant et après déploiement. Le résultat de
 publication doit être contrôlé dans le workflow et sur les ressources réellement servies.
+
+
+## Publication effectivement vérifiée
+
+- Version du code : `d26d92e292321d2ed8d24b1f2bdcab9f3daf9026` (après
+  `41d03581d97247ab504febd57d8a14a6616ea2d5`).
+- Workflow [37553486744](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/37553486744)
+  terminé avec succès le 7 octobre 2026 : 132 tests Python, 320 scénarios de base,
+  29 réponses précises et 419 réponses de domaines réussis ; 89 pages auditées.
+- Chromium : 12 parcours page/largeur avant publication et 12 sur le site
+  effectivement publié, à 375, 768 et 1 440 pixels ; aide sans JavaScript vérifiée.
+  Contrôle publié terminé à 00:46:38 UTC.
+- Relecture indépendante des ressources du site publié : les trois fichiers JS
+  correspondent exactement aux fichiers validés ; l’export de l’assistant est
+  identique à la projection du rapport publié. Les cinq briefings correspondent
+  à leurs JSON sources. 16 domaines et 80 titres sont présents ; IA publique désactivée.
+- SHA-256 de `assistant.js` :
+  `2a9dbde8e9f9ebcf4b36a6b4e4611cf208566c06e3ee8044187ac5d285a8d5ad`.
+- SHA-256 de `assistant-domains.js` :
+  `606aaab1155bc15eaa04f09032f6d85cf50e611222a11ce3dde48aed974a6de2`.
