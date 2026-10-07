@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06T23:50:18.952392+00:00",
+  "updated_at": "2026-10-07T00:41:10.397647+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "73a38368906625b814",
+      "title": "Why $100 Oil Is Hard to Kill",
+      "url": "https://oilprice.com/Energy/Oil-Prices/Why-100-Oil-Is-Hard-to-Kill.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-07T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "f42acb28a2c1521c91",
       "title": "5 Natural Gas Stocks Profiting From the Strait of Hormuz Standoff",
@@ -1583,6 +1600,23 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "3829b34939169d0dbb",
+      "title": "Les actions européennes se redressent après une forte vague de ventes, dans l'attente des chiffres de l'inflation - www.saba.ye",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00dFNyQjdkaWpjdlVway1jU3lfWWVqeWpPMnB3dUdhb0dZZXFFcjd0TW1kdWpkSkI3a3V4eGI2aEJLYUtPUHNwbkJ2VTNZN0k?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-03T05:30:52+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "977b6c6e92c133ebf9",
@@ -4682,36 +4716,6 @@
       "classification": "UNVERIFIED_ALERT",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "62ce20b0571ece8a07",
-      "title": "Jeremy Awori (Ecobank) : « Là où nous sommes plus petits, une acquisition est le moyen le plus rapide de grandir »",
-      "url": "https://www.jeuneafrique.com/1846461/economie-entreprises/jeremy-awori-ecobank-la-ou-nous-sommes-plus-petits-une-acquisition-est-le-moyen-le-plus-rapide-de-grandir/",
-      "publisher": "Jeune Afrique",
-      "published_at": "2026-09-25T12:29:14+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
-      "id": "93f0d0d83220c479ac",
-      "title": "Économie & Entreprise – Page 363",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5CcUh3RVF6WlM5Ylc3Wld3MkxfVTFxcUZzVGwxaFFLQ0dNNklkMUh6LWZlMGQ2czJobHQyUDJSTm0wSEhaQ2NmVF9iMXdfMXdxT2ZsRTdiVW5QUjRsQmJyNUV5cHY0alhTMUNoNUVzYkhNcC1YX3NwaA?oc=5",
-      "publisher": "Telquel Éco",
-      "published_at": "2026-09-25T12:20:12+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
     },
     {
       "id": "2a834eeec7366b25c6",
