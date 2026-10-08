@@ -1,8 +1,42 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08T18:00:32.073585+00:00",
+  "updated_at": "2026-10-08T19:26:44.047019+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "2faf081a2a8e5016ea",
+      "title": "Saint-Louis : “The River Stones of Senegal” remporte l’International Architecture Award 2026",
+      "url": "https://www.financialafrik.com/2026/10/08/saint-louis-the-river-stones-of-senegal-remporte-linternational-architecture-award-2026/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-08T19:25:25+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "2c4ac88e3e15a7d536",
+      "title": "Virtual Power Plants: The Grid Capacity Nobody Had to Build",
+      "url": "https://oilprice.com/Energy/Energy-General/Virtual-Power-Plants-The-Grid-Capacity-Nobody-Had-to-Build.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-08T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "addeeb1e4253098283",
       "title": "Oil Prices Plunge as Trump Rules Out Iran Strikes Before Midterms",
@@ -398,7 +432,7 @@
     },
     {
       "id": "4b214d5fe1ecc11f2a",
-      "title": "En direct : amerrissage réussi, l'astronaute Sophie Adenot est de retour sur Terre",
+      "title": "Après l'amerrissage, Sophie Adenot en route pour la terme ferme",
       "url": "https://www.france24.com/fr/%C3%A9co-tech/20261008-en-direct-retour-sur-terre-sophie-adenot-nasa",
       "publisher": "France 24 · économie",
       "published_at": "2026-10-08T12:30:16+00:00",
@@ -531,6 +565,23 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "ebaf985ad5c02ff450",
+      "title": "L'astronaute Sophie Adenot de retour sur Terre",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261007-l-astronaute-sophie-adenot-de-retour-sur-terre",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-07T22:44:49+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "bd09a5a3ba7a81792c",
@@ -4545,53 +4596,6 @@
       "classification": "UNVERIFIED_ALERT",
       "category": "autre",
       "scope": "UNKNOWN"
-    },
-    {
-      "id": "52ee60e117b32fa7a4",
-      "title": "Ciments du Maroc: Heidelberg Materials Italia Cementi Spa franchit indirectement à la baisse des seuils de participation (AMMC)",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdUpETzRkZ2FZMW9MZGNMSmxnUm14SGxIWGhLMmx6UDd6Y1ZQcm1TNGt1YlJjODBXaF9PZjFLd05fZWNXQ0RGMFplTEhOTS1VRjYwVXpOeVphOThqMUdfSnI2WkxmRlhTV2pZVy0tNE4yM3FfZWxUVmJGWW8telEwTG5XcDAwWjE0ZXpJVUlvTW9hWGpkUDFWOEZpTXhjbUUyUkx2YXZIU05lN0JOSHVydHc3ZWRpa1ZHTTZDSXl2ZW83SGRlcVE1WF91cWttVEM1M0hOX3NxanlaLURaVHFoZE5MUnpMYlhMWHE0THVkRTg?oc=5",
-      "publisher": "BVC Sociétés",
-      "published_at": "2026-09-25T18:03:00+00:00",
-      "tickers": [
-        "CIM"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "ad9ffe1a4e2cbc07d9",
-      "title": "PROMOPHARM S.A : Avertissement sur les Résultats du premier semestre 2026",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWGlVbUEwVFpLM0ZNVXdoLThEZWNYYWRGYjBpRDJmYWlCMlBGRHBFTXNLUnlQR01pQjEwOXpaZC1vMkFiVzhOTHdJR2pHTFpRR1FtWTEtNzRuaFF2OEhneTNNSzM0eXgzLXBCdnlGakdnZzhuTWhrZGRtNkZRbGtZTl9zaXg0QmdNYkpyX3p1ek5nYkZ4ZWtsbGc3clo2YkM0OVBTOW1WNjlkNC1sSUFuQ0M4VkVmTFFj?oc=5",
-      "publisher": "Medias24",
-      "published_at": "2026-09-25T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
-      "id": "10c6a617d524223d4e",
-      "title": "Bourse de Casablanca : le MASI termine la semaine en baisse de 0,29%",
-      "url": "https://www.infomediaire.net/bourse-casablanca-masi-baisse-029-25-septembre-2026/",
-      "publisher": "Infomediaire",
-      "published_at": "2026-09-25T17:54:19+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "MAROC"
     },
     {
       "id": "f85119406f217ec7a2",
