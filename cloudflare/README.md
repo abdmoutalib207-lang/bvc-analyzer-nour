@@ -6,6 +6,33 @@ donnee, workflow, secret ou fichier du moteur principal.
 
 ## Installation depuis le tableau de bord, y compris sur iPhone
 
+### Methode GitHub si le collage est bloque
+
+La configuration `wrangler.jsonc` permet de connecter le Worker existant au
+code de cette branche, sans utiliser le presse-papiers de l'editeur.
+
+1. Quitter l'editeur et ouvrir le Worker `bvc-nour-assistant`.
+2. Ouvrir « Parametres / Settings » > « Builds / Compilations » > « Connecter ».
+3. Connecter GitHub en autorisant uniquement `bvc-analyzer-nour`.
+4. Choisir le depot `abdmoutalib207-lang/bvc-analyzer-nour`, la branche
+   `feat/cloudflare-private-assistant` et le repertoire racine `cloudflare`.
+5. Laisser la commande de construction vide. Commande de deploiement :
+   `npx --yes wrangler@4.148.0 deploy`. Desactiver les builds des autres branches
+   si cette option est presente. Enregistrer et lancer le build/deploiement;
+   si rien ne demarre, pousser un commit sur cette branche apres la connexion.
+6. Ajouter le secret d'execution `NOUR_ACCESS_TOKEN` dans « Parametres » >
+   « Variables et secrets », comme ci-dessous. Ce n'est pas un secret de build.
+7. Verifier `/api/assistant/status`, puis une vraie reponse dans la fenetre.
+
+La liaison `AI` est declaree dans le fichier et sera ajoutee au deploiement.
+Les secrets restent uniquement dans Cloudflare. Cette configuration ne change
+pas le forfait et ne deploie ni le moteur principal ni le site GitHub Pages.
+Les futurs commits de cette branche pourront redeployer ce Worker : conserver
+une revue avant publication. La connexion au compte et le deploiement reel
+restent a effectuer; un dry-run local ne les prouve pas.
+
+### Methode par collage
+
 1. Ouvrir `worker.js` dans ce dossier, copier tout le contenu et remplacer
    le programme Hello World dans « Modifier le code ». Appuyer sur « Deployer ».
 2. Revenir au Worker. Dans « Liaisons / Bindings », ajouter une liaison
@@ -74,3 +101,5 @@ Ne pas annoncer ce candidat comme deploye avant controle de l'adresse reelle.
 - [Modele Mistral Small 3.1](https://developers.cloudflare.com/workers-ai/models/mistral-small-3.1-24b-instruct/)
 - [Liaison Workers AI](https://developers.cloudflare.com/workers-ai/configuration/bindings/)
 - [Secrets](https://developers.cloudflare.com/workers/configuration/secrets/)
+- [Connecter un Worker existant a GitHub](https://developers.cloudflare.com/workers/ci-cd/builds/)
+- [Parametres du build](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
