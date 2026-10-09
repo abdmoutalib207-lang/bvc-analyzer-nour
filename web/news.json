@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T18:31:16.374279+00:00",
+  "updated_at": "2026-10-09T19:50:22.318255+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -3404,23 +3404,6 @@
       "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
-      "id": "709bc64ce0cb35c5b0",
-      "title": "Compte utilisateur - وزارة الاقتصاد والمالية",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5fVHVMNVpJWE5XbHNnclBIUnpEZEVvTGJYeERxUjk2Z3FJbTI5eVJHN3E0ZW9UaVpPcmhnUm1sZFRMdGhhVEtzUEFOMkp6SDQxU3h5bFVlQ2pJVzJ6QzdWUmdtWXRJYUt2ejUxRFJ4Y0NVcWlLbU5xeA?oc=5",
-      "publisher": "Finances Maroc · relais presse",
-      "published_at": "2026-10-02T18:47:18+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "mef",
-      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
       "id": "ac48eaf934470f9f4d",
       "title": "Disty Technologies - CP relatif au changement de composition du conseil d'administration",
       "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_changement_CA.pdf",
@@ -4935,6 +4918,23 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
+    },
+    {
+      "id": "4144e55288cc8a2846",
+      "title": "Rapport qualité : Recensement Général de la Population et de l’Habitat 2014",
+      "url": "https://www.hcp.ma/Rapport-qualite-Recensement-General-de-la-Population-et-de-l-Habitat-2014_a4349.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-09-23T11:16:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
     },
     {
       "id": "e71261c8ce86ab653c",
