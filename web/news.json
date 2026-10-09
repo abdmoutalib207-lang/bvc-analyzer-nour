@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T17:12:31.964846+00:00",
+  "updated_at": "2026-10-09T18:31:16.374279+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "05dcac77d5f927ac88",
+      "title": "U.S. Oil Drilling Continues to Inch Upward",
+      "url": "https://oilprice.com/Energy/Crude-Oil/US-Oil-Drilling-Continues-to-Inch-Upward.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-09T17:31:16+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "8d22c27d3caedd047a",
       "title": "Étude du budget 2027 à l'Assemblée nationale : le Premier ministre appelle au patriotisme",
@@ -3387,6 +3404,23 @@
       "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
+      "id": "709bc64ce0cb35c5b0",
+      "title": "Compte utilisateur - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5fVHVMNVpJWE5XbHNnclBIUnpEZEVvTGJYeERxUjk2Z3FJbTI5eVJHN3E0ZW9UaVpPcmhnUm1sZFRMdGhhVEtzUEFOMkp6SDQxU3h5bFVlQ2pJVzJ6QzdWUmdtWXRJYUt2ejUxRFJ4Y0NVcWlLbU5xeA?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-02T18:47:18+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
       "id": "ac48eaf934470f9f4d",
       "title": "Disty Technologies - CP relatif au changement de composition du conseil d'administration",
       "url": "https://www.ammc.ma/sites/default/files/CP_Disty_Technologies_changement_CA.pdf",
@@ -4564,36 +4598,6 @@
       "classification": "UNVERIFIED_ALERT",
       "category": "autre",
       "scope": "UNKNOWN"
-    },
-    {
-      "id": "1eadd5dedfd3ebdb86",
-      "title": "Cadeau d'entreprise: Les commandes baissent de moitié",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaXhsVUVGV0NGZG94MHlMT2dyVUZOYnNHYmJBcl9YN09wZHBlb2lTMDdFd3l1X25CRFdpMUltVXhDeEZiWGRETUR4bWVXUkk1UGRISGtWd29fOVJBWEtSR2VSUEFiOUZlZGllWk5kbm1ieVM2VmZpQkc1Qy1rT2hzYTdVZkh1eUU?oc=5",
-      "publisher": "L'Économiste",
-      "published_at": "2026-09-25T22:33:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
-      "id": "4e6cb7c97083681e1d",
-      "title": "Dawajine 2026 : le salon avicole marocain se prépare à relever les défis de 2030",
-      "url": "https://fr.hespress.com/489930-dawajine-2026-le-salon-avicole-marocain-se-prepare-a-relever-les-defis-de-2030.html",
-      "publisher": "Hespress Éco",
-      "published_at": "2026-09-25T22:10:18+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "MAROC"
     },
     {
       "id": "610b5936db0f1bba2b",
