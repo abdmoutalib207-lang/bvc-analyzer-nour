@@ -13,7 +13,7 @@ Le relevé de marché totalise 129,04 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-09T19:50:22.395776+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-09T21:25:01.160132+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -355,21 +355,21 @@ AMMC · 2026-10-07 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-09T19:50:23.142754+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-09T21:25:02.414744+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 814,81points · 0,64 %
+7 811,54points · 0,59 %
 
-Dernière observation source2026-10-09T19:20:43+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-09T20:37:40+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 733,21points · 0,98 %
+51 654,95points · 0,83 %
 
-Dernière observation source2026-10-09T19:20:43+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-09T20:37:50+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -387,47 +387,47 @@ Risque et devises
 
 USD/MAD
 
-9,7523MAD / USD · -1,59 %
+9,7351MAD / USD · -1,77 %
 
-Dernière observation source2026-10-09T19:50:11+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-09T21:01:53+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9140MAD / EUR · -1,82 %
+10,8970MAD / EUR · -1,97 %
 
-Dernière observation source2026-10-09T19:49:51+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-09T21:04:47+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
 14,84points · -3,70 %
 
-Dernière observation source2026-10-09T19:20:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-09T20:14:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,24points · 0,13 %
+102,23points · 0,12 %
 
-Dernière observation source2026-10-09T19:40:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-09T20:59:56+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 222,10USD / once troy · 1,57 %
+4 216,30USD / once troy · 1,43 %
 
-Dernière observation source2026-10-09T19:50:11+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-09T20:59:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 104,72USD / baril · 0,42 %
 
-Dernière observation source2026-10-09T19:50:07+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-09T21:22:51+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,71USD / livre · 2,16 %
+6,69USD / livre · 1,88 %
 
-Dernière observation source2026-10-09T19:50:10+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-09T20:59:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -438,6 +438,14 @@ Dernière observation source2026-10-09T13:07:18+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://www.financialafrik.com/2026/10/09/sonatel-apres-lage-du-8-octobre-sur-le-fractionnement-de-laction-voici-ce-qui-changera/] Sonatel : après l’AGE du 8 octobre sur le  fractionnement de l’action, voici ce qui changera ↗
+
+Financial Afrik · 2026-10-09T20:43:05+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/5-Stocks-Cashing-In-as-100-Oil-Pushes-Drivers-Toward-Electric.html] 5 Stocks Cashing In as $100 Oil Pushes Drivers Toward Electric ↗
+
+OilPrice · 2026-10-09T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Crude-Oil/US-Oil-Drilling-Continues-to-Inch-Upward.html] U.S. Oil Drilling Continues to Inch Upward ↗
 
@@ -462,14 +470,6 @@ OilPrice · 2026-10-09T16:35:22+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/09/uemoa-la-guerre-au-moyen-orient-rencherit-le-carburant-et-pese-sur-les-finances-publiques/] UEMOA : la guerre au Moyen-Orient renchérit le carburant et pèse sur les finances publiques ↗
 
 Financial Afrik · 2026-10-09T16:26:21+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Geopolitics/International/Pashinyans-Nuclear-U-Turn-Gives-Moscow-an-Opening-in-Armenia.html] Pashinyan’s Nuclear U-Turn Gives Moscow an Opening in Armenia ↗
-
-OilPrice · 2026-10-09T16:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261009-ia-une-course-aux-milliards-qui-paiera-la-facture] IA, une course aux milliards : qui paiera la facture ? ↗
-
-RFI · économie · 2026-10-09T15:53:10+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -525,6 +525,14 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-08T13:45:19+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://www.financialafrik.com/2026/10/09/sonatel-apres-lage-du-8-octobre-sur-le-fractionnement-de-laction-voici-ce-qui-changera/] Sonatel : après l’AGE du 8 octobre sur le  fractionnement de l’action, voici ce qui changera ↗
+
+Financial Afrik · 2026-10-09T20:43:05+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/5-Stocks-Cashing-In-as-100-Oil-Pushes-Drivers-Toward-Electric.html] 5 Stocks Cashing In as $100 Oil Pushes Drivers Toward Electric ↗
+
+OilPrice · 2026-10-09T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Crude-Oil/US-Oil-Drilling-Continues-to-Inch-Upward.html] U.S. Oil Drilling Continues to Inch Upward ↗
 
 OilPrice · 2026-10-09T17:31:16+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -536,12 +544,4 @@ France 24 · économie · 2026-10-09T17:00:42+00:00 · International · Économi
  [https://oilprice.com/Energy/Energy-General/States-Bet-on-Virtual-Power-Plants-to-Cut-Grid-Costs.html] States Bet on Virtual Power Plants to Cut Grid Costs ↗
 
 OilPrice · 2026-10-09T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/09/guinee-bissau-entre-la-junte-et-embalo-un-jeu-du-chat-et-de-la-souris-qui-bouleverse-lechiquier-politique/] Guinée-Bissau : entre la junte et Embaló, un jeu du chat et de la souris qui bouleverse l’échiquier politique ↗
-
-Financial Afrik · 2026-10-09T16:45:07+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Crude-Oil/Trump-Puts-Iran-Strikes-on-Hold-as-Hurricane-Threatens-Oil-Supply.html] Trump Puts Iran Strikes on Hold as Hurricane Threatens Oil Supply ↗
-
-OilPrice · 2026-10-09T16:35:22+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

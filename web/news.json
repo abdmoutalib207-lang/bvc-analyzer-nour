@@ -1,8 +1,42 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T19:50:22.318255+00:00",
+  "updated_at": "2026-10-09T21:25:01.095871+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "3e2e24a69abf6c57d0",
+      "title": "Sonatel : après l’AGE du 8 octobre sur le  fractionnement de l’action, voici ce qui changera",
+      "url": "https://www.financialafrik.com/2026/10/09/sonatel-apres-lage-du-8-octobre-sur-le-fractionnement-de-laction-voici-ce-qui-changera/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-09T20:43:05+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "068b55da79128d4b48",
+      "title": "5 Stocks Cashing In as $100 Oil Pushes Drivers Toward Electric",
+      "url": "https://oilprice.com/Energy/Energy-General/5-Stocks-Cashing-In-as-100-Oil-Pushes-Drivers-Toward-Electric.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-09T20:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "05dcac77d5f927ac88",
       "title": "U.S. Oil Drilling Continues to Inch Upward",
@@ -124,7 +158,7 @@
     },
     {
       "id": "154ec977a2c554d57a",
-      "title": "IA, une course aux milliards : qui paiera la facture ?",
+      "title": "IA, une course aux milliards : qui paiera la facture?",
       "url": "https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261009-ia-une-course-aux-milliards-qui-paiera-la-facture",
       "publisher": "RFI · économie",
       "published_at": "2026-10-09T15:53:10+00:00",
@@ -4568,21 +4602,6 @@
       "scope": "UNKNOWN"
     },
     {
-      "id": "7188f8cc82a547fa87",
-      "title": "Meknès: Célébration du 89ème anniversaire de la bataille des eaux de Boufekrane",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNFFtMllMVGpVUjFGTUVHUFRwVVFMWnZkYndpWGpIX0wtZDlCQjlBaVAxQ21EUVlwOUpPb1ZBN2tndUJ5Mm9ycnYxMjA3YUh0Q3dRWkY3QUJ0UXhRSFlQeTFzX0daekpncENGN2lkSXhnYlBJdkRjME8xMC12RFlvMnZrRnRybVpmV3VjaFd2Ql8xSmswcnNORnF0OVpBRUZSMEIxUUVBVW12Mmdra1kyMGpndDNOT1ViSm1fLW5MSzZkc3paVC1XV2c4Vmo2OGdLdkdnZHZoWkJBbnViZlA0eVk4NkJIZG8?oc=5",
-      "publisher": "MAP",
-      "published_at": "2026-09-25T23:26:03+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "autre",
-      "scope": "UNKNOWN"
-    },
-    {
       "id": "610b5936db0f1bba2b",
       "title": "Promopharm - CP relatif à la publication d'un profit warning sur les résultats du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/CP_Promopharm_PW_S1_26.pdf",
@@ -4918,23 +4937,6 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "4144e55288cc8a2846",
-      "title": "Rapport qualité : Recensement Général de la Population et de l’Habitat 2014",
-      "url": "https://www.hcp.ma/Rapport-qualite-Recensement-General-de-la-Population-et-de-l-Habitat-2014_a4349.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-09-23T11:16:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
     },
     {
       "id": "e71261c8ce86ab653c",
