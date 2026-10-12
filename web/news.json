@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12T22:16:12.598996+00:00",
+  "updated_at": "2026-10-12T23:24:55.120912+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "2e707314e61a2e4908",
+      "title": "Trump Curbs Farmers’ Access to Funding for Energy Projects",
+      "url": "https://oilprice.com/Energy/Energy-General/Trump-Curbs-Farmers-Access-to-Funding-for-Energy-Projects.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-12T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "cb8ce5823e39b758a2",
       "title": "Global Coal Demand Rises as LNG Shortage Deepens",
@@ -614,6 +631,23 @@
       "scope": "INTL",
       "feed_id": "inflation",
       "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
+      "id": "262c685605aad9a137",
+      "title": "Lois de Finances par année - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1pSG1XRm5PNmI1cUtZS3dfN1BhaU1EUXhWMjFid25oRGgyZ1llZWlnbWxJaVV2RGJYSEN2SThpT1d5QUx3RWRZVmVFZHdGek5Ydm9qQjJ1X2xydml4eWw5WER4clY0WGI3czA0dlFNMFltWDY2VEhEUm5USmlzdw?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-12T08:11:56+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "ef4e8363d70caf2814",
@@ -3470,40 +3504,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "f81c39f14fc504374c",
-      "title": "À Paris, l’Africa Risk Forum dévoile son Africa Risk Index® pour reconfigurer la mesure du risque continental",
-      "url": "https://www.financialafrik.com/2026/10/06/a-paris-lafrica-risk-forum-devoile-son-africa-risk-index-pour-reconfigurer-la-mesure-du-risque-continental/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-05T23:08:24+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "c1282515cc5e7e8bf0",
-      "title": "Europe Weighs Methane Rule Delay as Energy Supply Risks Mount",
-      "url": "https://oilprice.com/Energy/Natural-Gas/Europe-Weighs-Methane-Rule-Delay-as-Energy-Supply-Risks-Mount.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-05T23:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "f4c67ec69a48b6b67d",

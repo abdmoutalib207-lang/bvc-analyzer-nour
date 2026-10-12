@@ -9,11 +9,11 @@ Le MASI termine à 16 954,50 points (0,94 %). La direction de cette séance est 
 
 L’indice se situe à 73,74 % de l’amplitude au-dessus du plus bas (16 790,00), pour un plus haut de 17 013,08 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.
 
-Le relevé de marché totalise 52,94 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
+Le relevé de marché totalise 52,95 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-12T22:16:12.687657+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-12T23:24:55.701093+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -345,7 +345,7 @@ Aucun dépôt récent retenu pour cette période.
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-12T22:16:13.855032+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-12T23:24:57.372431+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
@@ -377,15 +377,15 @@ Risque et devises
 
 USD/MAD
 
-9,7189MAD / USD · -0,06 %
+9,7208MAD / USD · -0,04 %
 
-Dernière observation source2026-10-12T22:16:02+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-12T23:24:36+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,8440MAD / EUR · -0,01 %
+10,8450MAD / EUR · 0,00 %
 
-Dernière observation source2026-10-12T22:14:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-12T23:19:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -397,37 +397,41 @@ Indice dollar
 
 102,57points · 0,33 %
 
-Dernière observation source2026-10-12T22:00:57+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-12T22:04:55+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 198,30USD / once troy · 0,18 %
+4 191,80USD / once troy · 0,03 %
 
-Dernière observation source2026-10-12T22:15:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-12T23:24:43+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 106,65USD / baril · 1,84 %
 
-Dernière observation source2026-10-12T21:59:39+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-12T22:42:16+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,76USD / livre · 0,18 %
+6,75USD / livre · 0,10 %
 
-Dernière observation source2026-10-12T22:15:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-12T23:23:04+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
 144,80USD / tonne · 0,49 %
 
-Dernière observation source2026-10-12T14:32:13+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Dernière observation source2026-10-12T22:27:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Trump-Curbs-Farmers-Access-to-Funding-for-Energy-Projects.html] Trump Curbs Farmers’ Access to Funding for Energy Projects ↗
+
+OilPrice · 2026-10-12T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Natural-Gas/Global-Coal-Demand-Rises-as-LNG-Shortage-Deepens.html] Global Coal Demand Rises as LNG Shortage Deepens ↗
 
@@ -456,10 +460,6 @@ OilPrice · 2026-10-12T19:00:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/Trumps-Grid-Security-Order-Could-Backfire-on-Americas-AI-Boom.html] Trump's Grid Security Order Could Backfire on America's AI Boom ↗
 
 OilPrice · 2026-10-12T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Black-Sea-Oil-Shipping-Insurance-Costs-Surge-to-25-Million.html] Black Sea Oil Shipping Insurance Costs Surge to $2.5 Million ↗
-
-OilPrice · 2026-10-12T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -515,6 +515,10 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-08T13:45:19+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/Trump-Curbs-Farmers-Access-to-Funding-for-Energy-Projects.html] Trump Curbs Farmers’ Access to Funding for Energy Projects ↗
+
+OilPrice · 2026-10-12T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Natural-Gas/Global-Coal-Demand-Rises-as-LNG-Shortage-Deepens.html] Global Coal Demand Rises as LNG Shortage Deepens ↗
 
 OilPrice · 2026-10-12T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -530,8 +534,4 @@ France 24 · économie · 2026-10-12T20:55:09+00:00 · International · Économi
  [https://oilprice.com/Energy/Energy-General/Chinas-Auto-Exports-Explode-as-Domestic-Demand-Craters.html] China's Auto Exports Explode as Domestic Demand Craters ↗
 
 OilPrice · 2026-10-12T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/12/attaques-des-houthis-la-bourse-saoudienne-recule-riyad-sous-pression/] Attaques des Houthis : la Bourse saoudienne recule, Riyad sous pression ↗
-
-Financial Afrik · 2026-10-12T19:58:00+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
