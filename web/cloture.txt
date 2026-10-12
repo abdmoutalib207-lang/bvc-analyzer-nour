@@ -13,7 +13,7 @@ Le relevé de marché totalise 52,95 MDH. Aucune comparaison avec le volume de l
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-12T20:00:32.552017+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-12T21:24:46.460214+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -345,21 +345,21 @@ Aucun dépôt récent retenu pour cette période.
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-12T20:00:33.807137+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-12T21:24:47.514608+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 805,87points · -0,07 %
+7 807,24points · -0,06 %
 
-Dernière observation source2026-10-12T20:00:29+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-12T20:35:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 838,88points · 0,36 %
+51 850,55points · 0,38 %
 
-Dernière observation source2026-10-12T20:00:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-12T20:43:51+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -377,47 +377,47 @@ Risque et devises
 
 USD/MAD
 
-9,7231MAD / USD · -0,12 %
+9,7153MAD / USD · -0,20 %
 
-Dernière observation source2026-10-12T20:00:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-12T21:24:43+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,8380MAD / EUR · -0,54 %
+10,8430MAD / EUR · -0,50 %
 
-Dernière observation source2026-10-12T19:59:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-12T21:24:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-15,24points · 2,70 %
+15,21points · 2,49 %
 
-Dernière observation source2026-10-12T20:00:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-12T20:14:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,59points · 0,36 %
+102,58points · 0,34 %
 
-Dernière observation source2026-10-12T20:00:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-12T21:21:04+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 192,50USD / once troy · -0,56 %
+4 190,60USD / once troy · -0,61 %
 
-Dernière observation source2026-10-12T20:00:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-12T20:59:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 106,65USD / baril · 1,84 %
 
-Dernière observation source2026-10-12T20:00:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-12T21:24:10+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,76USD / livre · 0,99 %
+6,75USD / livre · 0,82 %
 
-Dernière observation source2026-10-12T20:00:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-12T20:59:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -428,6 +428,14 @@ Dernière observation source2026-10-12T14:32:13+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Heat-Pumps-Are-Coming-for-Coals-Industrial-Heat-Market.html] Heat Pumps Are Coming for Coal’s Industrial Heat Market ↗
+
+OilPrice · 2026-10-12T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261012-au-mondial-de-l-auto-de-paris-les-marques-chinoises-pr%C3%A9sentes-en-masse] Au Mondial de l'Auto de Paris, les marques chinoises présentes en masse ↗
+
+France 24 · économie · 2026-10-12T20:55:09+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Energy-General/Chinas-Auto-Exports-Explode-as-Domestic-Demand-Craters.html] China's Auto Exports Explode as Domestic Demand Craters ↗
 
@@ -452,14 +460,6 @@ OilPrice · 2026-10-12T17:30:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/12/sonatel-et-les-petits-portefeuilles/] Sonatel et les petits portefeuilles ↗
 
 Financial Afrik · 2026-10-12T17:11:32+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Natural-Gas/European-Natural-Gas-Prices-Headed-for-Multi-Year-Highs.html] European Natural Gas Prices Headed for Multi-Year Highs ↗
-
-OilPrice · 2026-10-12T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Jump-2-on-Saudi-Attacks-as-OPEC-Sees-Demand-Rebound.html] Oil Prices Jump 2% on Saudi Attacks as OPEC Sees Demand Rebound ↗
-
-OilPrice · 2026-10-12T16:50:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -515,6 +515,14 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-08T13:45:19+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/Heat-Pumps-Are-Coming-for-Coals-Industrial-Heat-Market.html] Heat Pumps Are Coming for Coal’s Industrial Heat Market ↗
+
+OilPrice · 2026-10-12T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261012-au-mondial-de-l-auto-de-paris-les-marques-chinoises-pr%C3%A9sentes-en-masse] Au Mondial de l'Auto de Paris, les marques chinoises présentes en masse ↗
+
+France 24 · économie · 2026-10-12T20:55:09+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Energy-General/Chinas-Auto-Exports-Explode-as-Domestic-Demand-Craters.html] China's Auto Exports Explode as Domestic Demand Craters ↗
 
 OilPrice · 2026-10-12T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -526,12 +534,4 @@ Financial Afrik · 2026-10-12T19:58:00+00:00 · Périmètre non établi · Écon
  [https://oilprice.com/Metals/Gold/4000-Gold-Could-Be-Wall-Streets-Next-Big-Buying-Opportunity.html] $4,000 Gold Could Be Wall Street's Next Big Buying Opportunity ↗
 
 OilPrice · 2026-10-12T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Trumps-Grid-Security-Order-Could-Backfire-on-Americas-AI-Boom.html] Trump's Grid Security Order Could Backfire on America's AI Boom ↗
-
-OilPrice · 2026-10-12T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Black-Sea-Oil-Shipping-Insurance-Costs-Surge-to-25-Million.html] Black Sea Oil Shipping Insurance Costs Surge to $2.5 Million ↗
-
-OilPrice · 2026-10-12T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
