@@ -57,8 +57,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A queued event SHA may precede a prior publication's data commit.
+          # Concurrency serializes jobs, but does not refresh that event SHA.
+          ref: main
       - name: Record actual runner start
-        run: echo "NOUR_STARTED_AT=$(date --iso-8601=seconds)" >> "$GITHUB_ENV"
+        run: |
+          echo "NOUR_STARTED_AT=$(date --iso-8601=seconds)" >> "$GITHUB_ENV"
+          echo "NOUR_CODE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'

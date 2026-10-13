@@ -13,6 +13,11 @@ SLOTS = {
 EDITIONS = {"morning": "matin", "midday": "midi", "closing": "cloture"}
 
 
+def source_commit(environment):
+    """Report checked-out code identity, not a possibly stale queued event SHA."""
+    return environment.get('NOUR_CODE_COMMIT') or environment.get('GITHUB_SHA', '')
+
+
 def run_context(now=None, schedule="", event="local", slot="auto", started_at=None,
                 run_id="", commit=""):
     now = (now or datetime.now(ZONE)).astimezone(ZONE)
