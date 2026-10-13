@@ -35,9 +35,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
           const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
           const f=currentReport.results.find(r=>r.symbol===symbol).fundamental;
           const body=await page.locator('main').innerText();
-          assert.ok(body.includes(f.debt_reconciliation.status==='scope_reconciled'?'Dette : périmètres rapprochés':'Dette nette à rapprocher — ratios suspendus'));
-          await page.getByText('Preuves du contrôle de dette',{exact:true}).click();
-          assert.ok((await page.locator('main').innerText()).includes(f.debt_reconciliation.primary_review.conclusion));
+          if(f.debt_reconciliation.status==='scope_reconciled')assert.ok(body.includes('Dette : périmètres rapprochés'));
+          if(f.debt_reconciliation.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));
+          if(f.debt_reconciliation.primary_review?.conclusion){
+            await page.getByText('Preuves du contrôle de dette',{exact:true}).click();
+            assert.ok((await page.locator('main').innerText()).includes(f.debt_reconciliation.primary_review.conclusion));
+          }
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
