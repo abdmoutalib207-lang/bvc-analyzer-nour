@@ -12,13 +12,32 @@
       "releve_le": "2026-09-07",
       "faits": {
         "chiffre_affaires": {
-          "valeur": 2432,
-          "page": 17,
-          "note": "consolidé, 31/12/2025"
+          "valeur": 2431.512,
+          "page": 22,
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD.",
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 2431512,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2025-12-31",
+          "printed_page": 22,
+          "validation_status": "selected_pages_visually_checked"
         },
         "chiffre_affaires_2024": {
-          "valeur": 2363,
-          "page": 17
+          "valeur": 2363.364,
+          "page": 22,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 2363364,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2024-12-31",
+          "printed_page": 22,
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD."
         },
         "resultat_exploitation": {
           "valeur": 586,
@@ -39,8 +58,17 @@
         },
         "resultat_net_part_groupe": {
           "valeur": 407.601,
-          "page": 21,
-          "note": "supérieur au consolidé : les minoritaires sont en perte"
+          "page": 22,
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD.",
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 407601,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2025-12-31",
+          "printed_page": 22,
+          "validation_status": "selected_pages_visually_checked"
         },
         "capitaux_propres_part_groupe": {
           "valeur": 3993.181,
@@ -48,12 +76,29 @@
           "unite_au_rapport": "KMAD",
           "colonne_exercice_clos": 1,
           "page": 21,
-          "note": "« Capitaux propres du Groupe 5.2.11 3.993.181 3.668.286 » ; en-tête « Etats Financiers Consolidés Au 31 Décembre 2025 » et « (EN MILLIERS DE DIRHAMS : KMAD) ». Le 5.2.11 est un renvoi de note, pas un montant. Capital 2.207.859 KMAD = 22 078 588 titres de nominale 100. L'ensemble consolidé vaut 4.084.918, minoritaires inclus.",
-          "relu_le": "2026-09-16"
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD.",
+          "relu_le": "2026-09-16",
+          "unite": "MMAD",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2025-12-31",
+          "printed_page": 21,
+          "validation_status": "selected_pages_visually_checked"
         },
         "capitaux_propres_consolides": {
           "valeur": 4084.918,
-          "page": 21
+          "page": 21,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 4084918,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2025-12-31",
+          "printed_page": 21,
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD."
         },
         "endettement_net": {
           "valeur": 1303,
@@ -73,7 +118,12 @@
           "valeur": 22078588,
           "page": 50,
           "unite": "actions",
-          "note": "valeur nominale 100 MAD"
+          "note": "Tableau de répartition du capital : 22 078 588 titres, total 2 207 858 800 MAD, nominal 100 MAD. Titres émis de clôture ; ne certifie ni une moyenne pondérée ni une absence d’actions propres.",
+          "printed_page": 50,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
         },
         "carnet_commandes_unites": {
           "valeur": 6205,
@@ -227,6 +277,20 @@
           "note": "« Résultat d'exploitation 586.160 445.676 » ; au compte de produits et charges consolidé ; la clé `resultat_exploitation` existante (586,0, p.17) en est l'arrondi.",
           "base": "consolidé (normes marocaines), 31/12/2025",
           "releve_le": "2026-09-30"
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "valeur": 3668.286,
+          "page": 21,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 3668286,
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "base": "consolidé (normes marocaines)",
+          "period_end": "2024-12-31",
+          "printed_page": 21,
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD."
         }
       },
       "provenance": {
@@ -253,7 +317,28 @@
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
         "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
-      }
+      },
+      "financial_review": {
+        "reviewed_at": "2026-10-11",
+        "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+        "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+        "pages": [
+          21,
+          22,
+          50
+        ],
+        "method": "Lecture visuelle de pages PDF, contrôle des colonnes et conversion KMAD / MMAD. Le semestre et les autres postes importés ne sont pas recertifiés.",
+        "conclusion": "RNPG et fonds propres groupe confirmés. CA exact retenu au lieu du résumé arrondi. Fonds propres groupe 2024 ajoutés pour un ROE moyen séparé du score. Dette nette non rapprochée : multiple suspendu."
+      },
+      "external_references": [
+        {
+          "name": "Simply Wall St · ADI",
+          "url": "https://simplywall.st/stocks/ma/real-estate-management-and-development/cbse-adi/alliances-developpement-immobilier-shares/information",
+          "role": "secondary_reference_only",
+          "reviewed_at": "2026-10-11",
+          "note": "Consultation complémentaire : dates et normalisations peuvent différer. Vérifier la période, le périmètre groupe/total et le nombre d’analystes. Aucun chiffre, objectif ou score externe ne remplace les comptes primaires Nour."
+        }
+      ]
     },
     "CMT": {
       "societe": "Compagnie Minière de Touissit",

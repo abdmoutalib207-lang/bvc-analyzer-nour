@@ -60,8 +60,14 @@ def panels(item):
     comparison = item.get('sector_comparison', {})
     names = {'pe': 'PER', 'pb': 'P/B', 'roe_pct': 'ROE (%)'}
     rows = ''.join(f'<tr><td>{names[k]}</td><td>{num(m.get("value"))}</td><td>{num(m.get("median"))}</td>'
-                  f'<td>{num(m.get("percentile"),1)}</td><td>{m.get("other_peers",0)}</td><td>{esc(", ".join(m.get("symbols",[])))}</td></tr>'
+                  f'<td>{num(m.get("difference_to_median_pct"))}</td><td>{num(m.get("percentile"),1)}</td><td>{m.get("other_peers",0)}</td>'
+                  f'<td>{esc(", ".join(m.get("symbols",[])))}</td><td>{esc(m.get("reason") or "Disponible")}</td></tr>'
                   for k,m in comparison.get('metrics', {}).items())
+    peer_details = ''.join(f'<li>{esc(names[k])} · <a href="{esc(p["symbol"])}.html">{esc(p["symbol"])}</a> : '
+                          f'{num(p["value"])} · cours au {esc(p.get("price_date"))} · comptes {esc(p.get("period_end"))}</li>'
+                          for k,m in comparison.get('metrics',{}).items() for p in m.get('peers',[]))
+    exclusions = ''.join(f'<li>{esc(p["symbol"])} : {esc(" ; ".join(p["reasons"]))}</li>'
+                         for p in comparison.get('excluded_peers',[]))
     return ('<section class="panel"><span class="eyebrow">Référence de marché</span><h2>Le risque face au MASI</h2>'
         f'<p>{r.get("paired_returns",0)} rendements quotidiens appariés sur {r.get("market_calendar_sessions",0)} séances de référence. Minimum : 60. '
         f'{esc(r.get("first"))} → {esc(r.get("last"))}.</p><div class="research-metrics">{cards}</div>'
@@ -69,8 +75,15 @@ def panels(item):
         f'{esc(r.get("note"))}</p><a href="../recherche.html">Explorer les tendances après frais →</a></section>'
         '<section class="panel"><span class="eyebrow">Comparaison comptable stricte</span><h2>Au sein du secteur</h2>'
         f'<p>{esc(comparison.get("sector"))} · exercice {esc(comparison.get("exercise"))} · {esc(comparison.get("scope"))} · {esc(comparison.get("standard"))}</p>'
-        '<div class="tablewrap"><table><thead><tr><th>Ratio</th><th>Ce titre</th><th>Médiane des autres</th><th>Percentile / 100</th><th>Autres titres admissibles</th><th>Codes</th></tr></thead>'
-        f'<tbody>{rows}</tbody></table></div><p class="fineprint">{esc(comparison.get("note"))} Une case vide reste indisponible.</p></section>')
+        f'<p><strong>Groupe de comparaison : {esc(comparison.get("group"))}</strong>. Cours au {esc(comparison.get("price_date"))} ; comptes clos au {esc(comparison.get("period_end"))}.</p>'
+        '<details><summary>Pourquoi cette comparaison est-elle disponible ou absente ?</summary><p>'
+        'Nous exigeons quatre autres ratios compatibles, soit cinq entreprises avec ce titre. La médiane est la valeur du milieu des autres titres. '
+        'Un PER ou P/B supérieur de 20 % décrit un prix relatif plus élevé ; cela ne prouve pas une surévaluation. '
+        'Les promoteurs, foncières, assureurs et courtiers sont séparés. Un groupe trop petit reste sans référence chiffrée.</p></details>'
+        '<div class="tablewrap"><table><thead><tr><th>Ratio</th><th>Ce titre</th><th>Médiane des autres</th><th>Écart à la médiane (%)</th><th>Percentile / 100</th><th>Autres titres admissibles</th><th>Codes</th><th>État / motif</th></tr></thead>'
+        f'<tbody>{rows}</tbody></table></div><details><summary>Valeurs retenues et exclusions du groupe</summary><ul>{peer_details}{exclusions}</ul>'
+        f'{"Aucun autre titre compatible dans le groupe." if not peer_details and not exclusions else ""}</details>'
+        f'<p class="fineprint">{esc(comparison.get("note"))} Une case vide reste indisponible.</p></section>')
 
 
 def teaser(report):

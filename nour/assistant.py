@@ -20,7 +20,8 @@ FUNDAMENTAL_FIELDS = ('exercise', 'document_url', 'eps_mad', 'book_value_per_sha
     'validation_status', 'warnings', 'latest_report', 'evidence', 'point_in_time_ready',
     'eps_denominator', 'book_denominator', 'net_debt_method', 'revenue_growth_pct',
     'period_end', 'historical_per_share_only', 'financial_review', 'provenance',
-    'coverage_pct', 'missing_metrics', 'roe_method', 'calculation_version', 'semester_activity_label')
+    'coverage_pct', 'missing_metrics', 'roe_method', 'calculation_version', 'semester_activity_label',
+    'roe_average_equity_pct', 'debt_reconciliation', 'external_references')
 
 NEWS_FIELDS = ('title','url','publisher','published_at','tickers','tier','status',
                'category','scope','classification','feed_id','ticker_matching')

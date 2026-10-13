@@ -4,6 +4,7 @@ from hashlib import sha256
 import json
 import math
 from statistics import median, stdev, mean
+from .peer_groups import group_for
 
 VERSION = 'nour-research-v1'
 # Conservative boundaries copied in read-only consultation of bvc_config.py,
@@ -106,26 +107,65 @@ def peers(results, records):
         f = item['fundamental']
         cohort = accounting_cohort(f)
         sector = records[item['symbol']].get('sector')
-        comparable = [r for r in results if cohort and r['symbol'] != item['symbol']
-                      and records[r['symbol']].get('sector') == sector
+        group, level = group_for(item['symbol'], records[item['symbol']])
+        dated = bool(item.get('asof') and f.get('period_end') and f.get('exercise'))
+        comparable = [r for r in results if cohort and dated and r['symbol'] != item['symbol']
+                      and group_for(r['symbol'], records[r['symbol']])[0] == group
                       and accounting_cohort(r['fundamental']) == cohort
                       and r['fundamental'].get('exercise') == f.get('exercise')
+                      and r['fundamental'].get('period_end') == f.get('period_end')
                       and r['fundamental'].get('currency') == f.get('currency') == 'MAD'
+                      and r.get('asof') == item.get('asof')
                       and r['decision'] == 'OBSERVABLE']
+        excluded = []
+        for other in results:
+            if other['symbol'] == item['symbol'] or group_for(other['symbol'], records[other['symbol']])[0] != group:
+                continue
+            of = other['fundamental']
+            reasons = []
+            if not cohort or accounting_cohort(of) != cohort:
+                reasons.append('Périmètre ou norme comptable différents / non documentés')
+            if not dated or of.get('exercise') != f.get('exercise') or of.get('period_end') != f.get('period_end'):
+                reasons.append('Période comptable différente / non documentée')
+            if of.get('currency') != f.get('currency') or f.get('currency') != 'MAD':
+                reasons.append('Devise non comparable')
+            if not item.get('asof') or other.get('asof') != item.get('asof'):
+                reasons.append('Date de cours différente / non documentée')
+            if other['decision'] != 'OBSERVABLE':
+                reasons.append('Données du pair non observables')
+            if reasons:
+                excluded.append({'symbol': other['symbol'], 'reasons': reasons})
         metrics = {}
         for key in ('pe', 'pb', 'roe_pct'):
             others = [r for r in comparable if finite(r['fundamental'].get(key))
                       and (key == 'roe_pct' or r['fundamental'][key] > 0)]
             own = f.get(key)
-            ready = len(others) >= 3 and finite(own) and item['decision'] == 'OBSERVABLE'
+            # Five companies including the subject; never fill a small family
+            # from the whole market or an undocumented foreign benchmark.
+            ready = len(others) >= 4 and finite(own) and (key == 'roe_pct' or own > 0) and item['decision'] == 'OBSERVABLE'
             values = [r['fundamental'][key] for r in others]
+            reason = ('Période, périmètre ou norme comptable insuffisamment documentés.' if not cohort or not dated else
+                      'Ratio du titre indisponible.' if not finite(own) else
+                      'Cours ou données du titre non observables.' if item['decision'] != 'OBSERVABLE' else
+                      'Moins de quatre autres ratios compatibles ; aucun repli vers la cote entière.' if len(others) < 4 else
+                      'Ratio non positif : comparaison de valorisation indisponible.' if key != 'roe_pct' and own <= 0 else None)
             metrics[key] = {'status': 'available' if ready else 'insufficient', 'value': own,
                             'other_peers': len(others), 'symbols': [r['symbol'] for r in others],
                             'median': round(median(values), 2) if ready else None,
+                            'difference_to_median_pct': round(100*(own/median(values)-1), 2) if ready and key in ('pe','pb') and median(values)>0 else None,
+                            'reason': reason,
+                            'peers': [{'symbol': r['symbol'], 'value': r['fundamental'][key],
+                                       'price_date': r.get('asof'), 'period_end': r['fundamental'].get('period_end'),
+                                       'document_url': r['fundamental'].get('document_url')} for r in others],
                             'percentile': round(100*(sum(v < own for v in values)+.5*sum(v == own for v in values))/len(values), 1) if ready else None}
         item['sector_comparison'] = {'sector': sector, 'exercise': f.get('exercise'),
+            'group': group, 'classification_level': level, 'minimum_other_peers': 4,
+            'price_date': item.get('asof'), 'period_end': f.get('period_end'),
+            'method_version': 'nour-peers-v2', 'used_for_score': False,
+            'excluded_peers': excluded,
             'scope': cohort[0] if cohort else None, 'standard': cohort[1] if cohort else None,
-            'metrics': metrics, 'note': 'Au moins trois autres titres observables, même secteur, exercice, monnaie, périmètre et norme identifiée. Percentile descriptif croissant, sans recommandation. ROE sur capitaux propres de clôture.'}
+            'metrics': metrics, 'note': 'Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. '
+                + ('Secteur large : métiers non entièrement harmonisés.' if level == 'broad_sector' else 'Famille de métier distinguée du secteur général.')}
 
 
 def net_return(entry, exit_price, buy_pct, sell_pct, slippage_pct=0):

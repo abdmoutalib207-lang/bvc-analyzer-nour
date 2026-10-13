@@ -21,6 +21,13 @@ Le workflow régénère les pages, teste les contrats, versionne uniquement Nour
 
 ## Contrats de calcul
 
+- Lot du 11/10 : [qualité comptable et comparables](docs/sector-quality-2026-10-11.md).
+  Groupes de métier distingués pour immobilier/finance/assurance, quatre autres
+  ratios compatibles requis et motifs d'exclusion visibles. Dettes ADI/MNG/MUT
+  non rapprochées suspendues ; revue primaire ADI et ROE moyen complémentaire.
+  Simply Wall St sert de référence de consultation, sans import de scores ou
+  de prévisions. Aucun changement de la formule du score Nour.
+
 - Les codes fournisseur sont traduits explicitement par `data/source_codes.json` : `SNA` est **Stokvis (STK)**, `SID` est **Sonasid (SNA)**.
 - La séance annulée du 17/09/2026 est refusée. L'OHLC doit contenir des extrêmes réels, et la quantité ne remplace pas le montant MAD. Les jours sans transaction ne créent aucune bougie. Une séance nouvelle exige au moins 20 valeurs datées pareillement et une clôture effective.
 - CMT ne mélange pas les observations de liquidité antérieures à sa reprise du 16/09/2026 avec les suivantes ; les comparaisons postérieures attendent un échantillon suffisant.

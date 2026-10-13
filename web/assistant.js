@@ -130,7 +130,8 @@
       [/\bbpa\b/,'BPA','eps_mad','MAD','fundamental'],
       [/valeur comptable.*(?:action|titre)/,'Valeur comptable par action','book_value_per_share_mad','MAD','fundamental'],
       [/\bp\s*\/\s*b\b|\bpb\b/,'P/B','pb','','fundamental'],
-      [/\broe\b/,'ROE','roe_pct','%','fundamental'],
+      [/\broe\b(?!.*moyen)/,'ROE','roe_pct','%','fundamental'],
+      [/\broe\b.*moyen/,'ROE sur fonds propres moyens','roe_average_equity_pct','%','fundamental'],
       [/rendement.*dividende/,'Rendement du dividende','dividend_yield_pct','%','fundamental'],
       [/dette nette.*(?:ebitda|ebe)/,'Dette nette / EBITDA','net_debt_ebitda','','fundamental'],
       [/dette nette(?!.*(?:ebitda|ebe))/,'Dette nette stricte','net_debt_strict_mmad','MDH','fundamental'],
@@ -204,8 +205,13 @@
         if(wrongYear&&group==='fundamental')lines.push('L’exercice demandé ne correspond pas à la référence disponible; aucun ratio historique n’est reconstruit.');
         if(key==='macd')lines.push(`Signal MACD : ${fmt(row.technical?.macd_signal,'MAD')}.`);
         if(key==='eps_mad')lines.push(`Dénominateur : ${f.eps_denominator||'non vérifié'}.`);
-        if(key==='net_debt_ebitda'||key==='net_debt_strict_mmad')lines.push(f.net_debt_method||'Périmètre de dette à consulter dans la fiche.');
+        if(key==='net_debt_ebitda'||key==='net_debt_strict_mmad'){
+          lines.push(f.net_debt_method||'Périmètre de dette à consulter dans la fiche.');
+          const d=f.debt_reconciliation||{};
+          if(!wrongYear&&!unavailableSemester&&d.status==='unresolved')lines.push(`Rapprochement en attente : calcul ${fmt(d.calculated_mmad,'MMAD')} ; chiffre publié ${fmt(d.reported_mmad,'MMAD')} ; écart ${fmt(d.difference_mmad,'MMAD')}. Ces chiffres de contrôle ne sont pas des ratios validés.`);
+        }
         if(key==='roe_pct')lines.push(data.definitions.roe);
+        if(key==='roe_average_equity_pct')lines.push('Résultat annuel / moyenne des fonds propres de début et fin d’exercice vérifiés. Mesure complémentaire, non utilisée dans le score ni substituée au ROE de clôture.');
       }
       if(earnings){
         const semi=/semest|\bs1\b|\bs2\b/.test(q);

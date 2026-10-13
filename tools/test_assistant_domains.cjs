@@ -83,8 +83,11 @@ check('PER ZZZ',r=>r.text.includes('non reconnu'));
 check('Cours ADI le 31/02/2026',r=>r.text.includes('Date invalide'));
 check('Briefing du 01/01/2023',r=>r.text.includes('n’est pas disponible'));
 check('Briefing ADI',r=>r.text.includes('ADI')&&r.sources.some(x=>x.url==='briefing.html'));
-check('Couverture des fondamentaux',r=>r.text.includes('références annuelles 77')&&r.text.includes('DIS, DLM, IBM'));
-check('Cours provisoire ADI',r=>r.text.includes('Aucune cotation provisoire fraîche'));
+check('Couverture des fondamentaux',r=>r.text.includes('références annuelles '+data.coverage.referenced)&&r.text.includes(data.coverage.missing_documents.join(', ')));
+// The publication can run during a session. A real quote must not fail a test
+// that happened to be written against an after-hours snapshot (09/10 failure).
+const currentQuote=data.intraday?.status==='provisional'?data.symbols.ADI.intraday_quote:null;
+check('Cours provisoire ADI',r=>currentQuote?r.text.includes('Cours provisoire '+fmt(currentQuote.price)+' MAD'):r.text.includes('Aucune cotation provisoire fraîche'));
 const fixture=structuredClone(data);
 fixture.news=[{title:'JET communiqué',publisher:'AMMC',published_at:'2026-10-06T10:00:00Z',tickers:['JET'],tier:'S1',url:'https://www.ammc.ma/test'},{title:'ADI presse',published_at:'2026-10-06T09:00:00Z',tickers:['ADI'],tier:'S2',url:'https://example.test/'},{title:'Fed annonce',published_at:'2026-10-05T09:00:00Z',tickers:[],tier:'S1',feed_id:'fed',url:'https://www.federalreserve.gov/'}];
 check('Actualités officielles JET le 06/10/2026',r=>r.text.includes('JET communiqué')&&!r.text.includes('ADI presse'),'MASI',{},fixture);
@@ -92,6 +95,21 @@ check('Actualités Fed',r=>r.text.includes('Fed annonce')&&!r.text.includes('JET
 check('Actualités JET le 01/01/2023',r=>r.text.includes('ne signifie pas qu’aucune publication existe'),'MASI',{},fixture);
 fixture.intraday.status='provisional';fixture.symbols.ADI.intraday_quote={price:336,shares:123,turnover_mad:41328};
 check('Cours provisoire ADI',r=>r.text.includes('Cours provisoire 336 MAD'),'MASI',{},fixture);
+for(const status of ['stale','unavailable','closed']){
+  const stale=structuredClone(fixture);stale.intraday.status=status;
+  check('Cours provisoire ADI',r=>r.text.includes('Aucune cotation provisoire fraîche')&&!r.text.includes('Cours provisoire 336 MAD'),'MASI',{},stale);
+}
+const noQuote=structuredClone(fixture);delete noQuote.symbols.ADI.intraday_quote;
+check('Cours provisoire ADI',r=>r.text.includes('Aucune cotation provisoire fraîche'),'MASI',{},noQuote);
+check('ROE ADI sur fonds propres moyens',r=>r.text.includes(fmt(data.symbols.ADI.fundamental.roe_average_equity_pct))&&r.text.includes('non utilisée dans le score'));
+for(const symbol of ['ADI','MNG','MUT']){
+  const unresolved=structuredClone(data);
+  Object.assign(unresolved.symbols[symbol].fundamental,{net_debt_strict_mmad:null,net_debt_ebitda:null,
+    debt_reconciliation:{status:'unresolved',calculated_mmad:100,reported_mmad:80,difference_mmad:20}});
+  check('Dette nette '+symbol,r=>r.text.includes('indisponible')&&r.text.includes('Rapprochement en attente')&&r.text.includes('ne sont pas des ratios validés'),'MASI',{},unresolved);
+}
+check('Compare ADI aux titres du même secteur',r=>r.text.includes('Promoteurs immobiliers')&&!r.text.includes('ARD,')&&r.text.includes('quatre autres'));
+check('Quelle différence avec Simply Wall St pour ADI ?',r=>r.text.includes('source secondaire')&&r.sources.some(x=>x.url.includes('simplywall.st')));
 fixture.intraday.status='stale';check('Cours provisoire ADI',r=>!r.text.includes('Cours provisoire 336 MAD'),'MASI',{},fixture);
 fixture.symbols.ADI.fundamental.pe=null;check('PER ADI',r=>r.text.includes('PER : indisponible'),'MASI',{},fixture);
 const csv=fs.readFileSync('web/historique/ADI.csv','utf8');

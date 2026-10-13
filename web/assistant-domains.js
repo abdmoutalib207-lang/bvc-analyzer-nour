@@ -57,6 +57,13 @@
     const horizon=q.match(/\b(\d+)\s*(?:seances?|jours?)\b/);
     const method=isMethod(question);
     const follow=/^(?:et\s+(?:sur|avec|si|pour)|avec|sur\s+\d|frais|glissement)/.test(q);
+    if(/simply\s*wall|simplywall/.test(q)){
+      lines.push('Simply Wall St est une source secondaire de comparaison. Nour conserve ses comptes primaires et ses propres calculs ; aucun score, objectif de cours ou chiffre externe n’alimente automatiquement le moteur. Les dates de cours, exercices, périmètres groupe/total et définitions de dette doivent être rapprochés avant toute comparaison.');
+      for(const row of rows){title(row);for(const ref of row.fundamental?.external_references||[]){lines.push(ref.note);link(ref.name,ref.url);}}
+      if(!rows.some(row=>(row.fundamental?.external_references||[]).length))lines.push('Aucun rapprochement Simply Wall St documenté pour les titres sélectionnés.');
+      link('Méthode publique des comparaisons sectorielles','https://github.com/SimplyWallSt/Company-Analysis-Model/blob/master/industry_averages.markdown');
+      definition('sector');return result('sector');
+    }
     if(/que.*(?:peux|sais|peut).*(?:repondre|demander|faire)|fonctionnalit|quels?.*(?:indicateurs|fonctions)|que fait.*nour|comment utiliser.*nour|tout.*implemente|capacites|questions possibles|aide.*assistant/.test(q)){
       lines.push('Je couvre les fonctions suivantes. Vous pouvez demander leur explication ou les données d’un titre, et comparer deux titres.');
       for(const c of data.knowledge?.capabilities||[])lines.push(`${c.label} : « ${c.example} »`);
@@ -144,7 +151,10 @@
     if(/comparable|\bpairs\b|mediane.*secteur|percentile.*secteur|compare.*secteur|(?:son|du|au|meme) secteur/.test(q)){
       if(!rows.length){lines.push('Sélectionnez un titre pour ses comparables comptables.');definition('sector');return result('sector');}
       for(const row of rows){title(row);const c=row.sector_comparison||{};lines.push(`Secteur ${c.sector||'indisponible'} · exercice ${c.exercise||'—'} · ${c.scope||'périmètre inconnu'} · ${c.standard||'norme inconnue'}.`);
+        lines.push(`Groupe de comparaison : ${c.group||'indisponible'} · cours au ${c.price_date||'—'} · comptes clos au ${c.period_end||'—'}.`);
         for(const [key,m] of Object.entries(c.metrics||{}))lines.push(`${key==='pe'?'PER':key==='pb'?'P/B':'ROE'} : titre ${fmt(m.value)} · médiane des autres ${fmt(m.median)} · percentile ${fmt(m.percentile,'/ 100')} · ${m.other_peers??0} autres pairs · état ${stateLabel(m.status)} · ${(m.symbols||[]).join(', ')||'aucun'}.`);
+        for(const [key,m] of Object.entries(c.metrics||{})){if(m.reason)lines.push(`${key==='pe'?'PER':key==='pb'?'P/B':'ROE'} : ${m.reason}`);if(finite(m.difference_to_median_pct))lines.push(`${key==='pe'?'PER':'P/B'} : écart relatif à la médiane ${fmt(m.difference_to_median_pct,'%')}, sans conclusion automatique de sous-évaluation ou surévaluation.`);}
+        for(const p of c.excluded_peers||[])lines.push(`${p.symbol} exclu de cette comparaison : ${(p.reasons||[]).join(' ; ')}.`);
         lines.push(c.note||defs.sector);}
       definition('sector');return result('sector');
     }

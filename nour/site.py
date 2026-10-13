@@ -189,9 +189,12 @@ def detail_page(item, record, fixture, style, script):
         tone = ('missing' if value is None else 'positive' if directional and value > 0
                 else 'negative' if directional and value < 0 else 'neutral')
         display = number(value) if value is not None else '—'
+        missing = ('Suspendu : dette à rapprocher' if title.startswith('Dette nette')
+                   and (calculated.get('debt_reconciliation') or {}).get('status') == 'unresolved'
+                   else 'Non documenté ou non applicable')
         return (f'<article class="kpi fundamental-card tone-{tone}"><span>{esc(title)}</span>'
                 f'<strong>{display}</strong>{f" <small>{esc(unit)}</small>" if unit else ""}'
-                f'<em>{"Non documenté" if value is None else "Valeur négative" if tone=="negative" else "Valeur positive" if tone=="positive" else "Ratio descriptif"}</em></article>')
+                f'<em>{missing if value is None else "Valeur négative" if tone=="negative" else "Valeur positive" if tone=="positive" else "Ratio descriptif"}</em></article>')
     eps_title = (f'BPA historique {calculated.get("exercise")}' if calculated.get('historical_per_share_only') else 'Bénéfice par action')
     fundamental_cards=''.join((fundamental_card(eps_title,calculated.get('eps_mad'),'MAD'),
                                fundamental_card('PER recalculé',calculated.get('pe')),
@@ -209,6 +212,21 @@ def detail_page(item, record, fixture, style, script):
                          f'BPA : {esc(calculated.get("eps_denominator"))}. '
                          f'P/B : {esc(calculated.get("book_denominator"))}.</p>'
                          f'<p class="fineprint">{esc(calculated.get("net_debt_method"))}</p>')
+    if calculated.get('roe_average_equity_pct') is not None:
+        financial_details += (f'<p><strong>ROE sur fonds propres moyens : {number(calculated["roe_average_equity_pct"])} %.</strong> '
+            'Résultat annuel rapporté à la moyenne des fonds propres de début et fin d’exercice contrôlés. '
+            'Mesure complémentaire ; le score et la comparaison conservent le ROE de clôture.</p>')
+    debt_check = calculated.get('debt_reconciliation') or {}
+    if debt_check.get('status') == 'unresolved':
+        financial_details += (f'<div class="banner"><strong>Dette nette à rapprocher — ratios suspendus</strong><p>'
+            f'Calcul issu du bilan : {number(debt_check.get("calculated_mmad"))} MMAD ; '
+            f'chiffre publié par la société : {number(debt_check.get("reported_mmad"))} MMAD. '
+            f'Écart : {number(debt_check.get("difference_mmad"))} MMAD. '
+            'Ces valeurs servent au contrôle et ne sont pas deux ratios validés. Un écart peut venir de périmètres différents.</p></div>')
+    for ref in calculated.get('external_references', []):
+        if str(ref.get('url', '')).startswith('https://'):
+            financial_details += (f'<details><summary>Comparer avec une source extérieure</summary><p>{esc(ref.get("note"))}</p>'
+                f'<a href="{esc(ref["url"])}" target="_blank" rel="noopener noreferrer">{esc(ref.get("name"))}</a></details>')
     if calculated.get('warnings'):
         financial_details += '<details><summary>Réserves sur les fondamentaux</summary><ul>'+''.join(
             f'<li>{esc(w)}</li>' for w in calculated['warnings'])+'</ul></details>'

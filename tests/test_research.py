@@ -90,16 +90,16 @@ class ResearchTests(unittest.TestCase):
         rec['suspended']=False;rec['resumed_recently']=True;rec['sessions_since_resume']=13
         self.assertEqual(risk(rec,history,asof)['status'],'insufficient')
 
-    def test_peer_cohorts_are_strict_and_minimum_three_others(self):
+    def test_peer_cohorts_are_strict_and_minimum_four_others(self):
         results=[];records={}
-        for i in range(5):
+        for i in range(6):
             s=str(i);records[s]={'sector':'Banque'}
-            results.append({'symbol':s,'decision':'OBSERVABLE','fundamental':{
-                'accounting_basis':'Consolidé IFRS','exercise':2025,'currency':'MAD','pe':10+i,'pb':1+i,'roe_pct':5+i}})
+            results.append({'symbol':s,'decision':'OBSERVABLE','asof':'2026-10-09','fundamental':{
+                'accounting_basis':'Consolidé IFRS','exercise':2025,'period_end':'2025-12-31','currency':'MAD','pe':10+i,'pb':1+i,'roe_pct':5+i}})
         results[-1]['fundamental']['accounting_basis']='Social CGNC'
         peers(results,records)
-        self.assertEqual(results[0]['sector_comparison']['metrics']['pe']['other_peers'],3)
-        self.assertEqual(results[0]['sector_comparison']['metrics']['pe']['median'],12)
+        self.assertEqual(results[0]['sector_comparison']['metrics']['pe']['other_peers'],4)
+        self.assertEqual(results[0]['sector_comparison']['metrics']['pe']['median'],12.5)
         self.assertEqual(results[-1]['sector_comparison']['metrics']['pe']['status'],'insufficient')
         results[1]['fundamental']['exercise']=2024
         peers(results,records)
