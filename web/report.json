@@ -103,8 +103,8 @@
       "ytd_pct": -9.57
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-13T18:56:38.956011+00:00",
-    "turnover_mad": 186101165.73,
+    "observed_at": "2026-10-13T19:32:30.361663+00:00",
+    "turnover_mad": 186113652.33,
     "breadth": {
       "up": 36,
       "down": 24,
@@ -113,6 +113,23 @@
     }
   },
   "news": [
+    {
+      "id": "c668e2e7038f8f7925",
+      "title": "Guyana Oil Exports Set to Surpass 1 Million Barrels per Day for First Time",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Guyana-Oil-Exports-Set-to-Surpass-1-Million-Barrels-per-Day-for-First-Time.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-13T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "2c9018217f53767354",
       "title": "Philip R. Lane: The AI opportunity for Europe",
@@ -488,6 +505,23 @@
       "scope": "MAROC",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "8a14c546199706928f",
+      "title": "Compte utilisateur - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBLYUs3bWdxNVNLejRzWm1FV2tmTy15RlQza3pEemItYXQyV3dOWk05MFB5dXJ2N3BBVHFENThZeTZmZE1FRWgxY2txbFNLRVhyZzNobGw0YUM4NTRxLVhnVDNybUV6UlRJQkp0WEt4akpEek9OSUpPdFVR?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-13T13:05:49+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "a4cc274742fb8b524b",
@@ -3555,40 +3589,6 @@
       "url": "https://oilprice.com/Energy/Energy-General/Halliburton-Shuns-Falklands-Oil-Project.html",
       "publisher": "OilPrice",
       "published_at": "2026-10-06T20:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "def9ba4ae8f02c1c68",
-      "title": "Iraq Builds 2027 Budget on $58 Oil—and a Very Large Deficit",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iraq-Builds-2027-Budget-on-58-Oiland-a-Very-Large-Deficit.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-06T19:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "896468f0997ce7a909",
-      "title": "Is the West’s 100-Year Venezuela Oil Bet About To Backfire?",
-      "url": "https://oilprice.com/Energy/Crude-Oil/Is-the-Wests-100-Year-Venezuela-Oil-Bet-About-To-Backfire.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-06T19:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -44295,7 +44295,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-13",
-    "observed_at": "2026-10-13T18:56:38.956011+00:00",
+    "observed_at": "2026-10-13T19:32:30.361663+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -44432,20 +44432,20 @@
       "flat": 6,
       "quoted": 66
     },
-    "turnover_mad": 186101165.73,
-    "shares": 579129.0,
+    "turnover_mad": 186113652.33,
+    "shares": 579315.0,
     "transactions": 3081.0
   },
   "market_volume_audit": {
-    "status": "discrepancy",
+    "status": "matched",
     "asof": "2026-10-13",
-    "observed_at": "2026-10-13T18:56:38.956011+00:00",
+    "observed_at": "2026-10-13T19:32:30.361663+00:00",
     "expected_lines": 66,
     "observed_lines": 66,
     "coverage_complete": true,
-    "cdg_turnover_mad": 186101165.73,
+    "cdg_turnover_mad": 186113652.33,
     "lines_turnover_mad": 186113652.33,
-    "difference_mad": 12486.6
+    "difference_mad": 0.0
   },
   "market_archive": {
     "status": "CLOSED",
@@ -90955,11 +90955,11 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-13T18:56:38.956011+00:00",
+    "checked_at": "2026-10-13T19:32:30.361663+00:00",
     "asof": "2026-10-13"
   },
   "news_health": {
-    "checked_at": "2026-10-13T18:56:38.678731+00:00",
+    "checked_at": "2026-10-13T19:32:30.081927+00:00",
     "status": "partial",
     "fetched_items": 88,
     "errors": [
@@ -91054,85 +91054,49 @@
     ]
   },
   "health": {
-    "checked_at": "2026-10-13T18:56:33.586920+00:00",
+    "checked_at": "2026-10-13T19:32:25.235283+00:00",
     "source": "CDG Capital Bourse",
-    "result": "conflict",
+    "result": "unchanged",
     "last_session": "2026-10-13",
-    "message": "5 bougie(s) divergente(s) non remplacée(s)",
+    "message": "Aucune nouvelle séance vérifiée",
     "details": {
       "session": "2026-10-13",
       "active_quotes": 66,
       "new_bars": 0,
       "source": "https://www.cdgcapitalbourse.ma/api/",
       "ignored_old_quotes": 0,
-      "conflicts": [
-        {
-          "symbol": "HAL",
-          "session": "2026-10-13",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "IAM",
-          "session": "2026-10-13",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "MNG",
-          "session": "2026-10-13",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "RDS",
-          "session": "2026-10-13",
-          "fields": [
-            "v"
-          ]
-        },
-        {
-          "symbol": "STK",
-          "session": "2026-10-13",
-          "fields": [
-            "v"
-          ]
-        }
-      ]
+      "conflicts": []
     }
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-13T18:56:40.060962+00:00",
+    "checked_at": "2026-10-13T19:32:31.351221+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
-        "value": 7804.33,
-        "change_pct": -0.03727309522955429,
-        "observed_at": "2026-10-13T18:47:53+00:00",
+        "value": 7810.17,
+        "change_pct": 0.0375292677053644,
+        "observed_at": "2026-10-13T19:22:11+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-13T18:48:06.939626+00:00",
-        "collection_state": "cached"
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
+        "collection_state": "collected"
       },
       "DJ:DJI": {
         "ticker": "DJ:DJI",
-        "value": 51721.01,
-        "change_pct": -0.249833415460397,
-        "observed_at": "2026-10-13T18:47:52+00:00",
+        "value": 51750.55,
+        "change_pct": -0.19286198507055372,
+        "observed_at": "2026-10-13T19:22:11+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-13T18:48:06.939626+00:00",
-        "collection_state": "cached"
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
+        "collection_state": "collected"
       },
       "EURONEXT:PX1": {
         "ticker": "EURONEXT:PX1",
@@ -91144,7 +91108,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -91157,98 +91121,98 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
         "ticker": "FX_IDC:USDMAD",
-        "value": 9.7933,
-        "change_pct": 0.7085270042367763,
-        "observed_at": "2026-10-13T18:56:36+00:00",
+        "value": 9.8029,
+        "change_pct": 0.8072477479330346,
+        "observed_at": "2026-10-13T19:32:19+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
         "ticker": "FX_IDC:EURMAD",
-        "value": 10.974,
-        "change_pct": 1.1894882434301481,
-        "observed_at": "2026-10-13T18:54:26+00:00",
+        "value": 10.973,
+        "change_pct": 1.1802674043337953,
+        "observed_at": "2026-10-13T19:29:26+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
         "ticker": "CBOE:VIX",
         "value": 15.43,
         "change_pct": 1.446416831032208,
-        "observed_at": "2026-10-13T18:47:46+00:00",
+        "observed_at": "2026-10-13T19:01:46+00:00",
         "currency": null,
         "mode": "delayed_streaming_900",
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-13T18:48:06.939626+00:00",
-        "collection_state": "cached"
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
+        "collection_state": "collected"
       },
       "TVC:DXY": {
         "ticker": "TVC:DXY",
-        "value": 102.175,
-        "change_pct": -0.3870451975197964,
-        "observed_at": "2026-10-13T18:47:54+00:00",
+        "value": 102.187,
+        "change_pct": -0.375346098350432,
+        "observed_at": "2026-10-13T19:22:08+00:00",
         "currency": "USD",
         "mode": "streaming",
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-13T18:48:06.939626+00:00",
-        "collection_state": "cached"
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
+        "collection_state": "collected"
       },
       "COMEX:GC1!": {
         "ticker": "COMEX:GC1!",
-        "value": 4185,
-        "change_pct": -0.13363241540591714,
-        "observed_at": "2026-10-13T18:56:34+00:00",
+        "value": 4185.5,
+        "change_pct": -0.12170094974467531,
+        "observed_at": "2026-10-13T19:32:27+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
         "ticker": "ICEEUR:BRN1!",
-        "value": 105.63,
-        "change_pct": -0.9563994374121051,
-        "observed_at": "2026-10-13T18:56:36+00:00",
+        "value": 105.69,
+        "change_pct": -0.9001406469760975,
+        "observed_at": "2026-10-13T19:32:27+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
         "ticker": "COMEX:HG1!",
-        "value": 6.7305,
-        "change_pct": -0.24455313472654125,
-        "observed_at": "2026-10-13T18:56:18+00:00",
+        "value": 6.729,
+        "change_pct": -0.2667852378835007,
+        "observed_at": "2026-10-13T19:32:27+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-13T18:56:40.060962+00:00",
+        "collected_at": "2026-10-13T19:32:31.351221+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
@@ -91266,10 +91230,6 @@
       }
     },
     "errors": {
-      "SP:SPX": "Régression ou contradiction au même horodatage ; archive conservée",
-      "DJ:DJI": "Régression ou contradiction au même horodatage ; archive conservée",
-      "CBOE:VIX": "Régression ou contradiction au même horodatage ; archive conservée",
-      "TVC:DXY": "Régression ou contradiction au même horodatage ; archive conservée",
       "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
     },
     "status": "partial",
@@ -91277,8 +91237,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-13T18:56:48.553190+00:00",
-    "checked_at": "2026-10-13T18:56:40.060962+00:00",
+    "cutoff": "2026-10-13T19:32:38.673874+00:00",
+    "checked_at": "2026-10-13T19:32:31.351221+00:00",
     "status": "partial",
     "groups": [
       {
@@ -91288,35 +91248,35 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7804.33,
-            "change_pct": -0.03727309522955429,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-13T18:47:53+00:00",
+            "value": 7810.17,
+            "change_pct": 0.0375292677053644,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-13T19:22:11+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
+            "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 51721.01,
-            "change_pct": -0.249833415460397,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-13T18:47:52+00:00",
+            "value": 51750.55,
+            "change_pct": -0.19286198507055372,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-13T19:22:11+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
+            "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
@@ -91332,7 +91292,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
@@ -91349,7 +91309,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           }
         ]
@@ -91361,34 +91321,34 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.7933,
-            "change_pct": 0.7085270042367763,
+            "value": 9.8029,
+            "change_pct": 0.8072477479330346,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:56:36+00:00",
+            "observed_at": "2026-10-13T19:32:19+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.974,
-            "change_pct": 1.1894882434301481,
+            "value": 10.973,
+            "change_pct": 1.1802674043337953,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:54:26+00:00",
+            "observed_at": "2026-10-13T19:29:26+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
@@ -91397,33 +91357,33 @@
             "unit": "points",
             "value": 15.43,
             "change_pct": 1.446416831032208,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-13T18:47:46+00:00",
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-13T19:01:46+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
+            "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.175,
-            "change_pct": -0.3870451975197964,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-13T18:47:54+00:00",
+            "value": 102.187,
+            "change_pct": -0.375346098350432,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-13T19:22:08+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
+            "collection_state": "collected"
           }
         ]
       },
@@ -91434,51 +91394,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4185,
-            "change_pct": -0.13363241540591714,
+            "value": 4185.5,
+            "change_pct": -0.12170094974467531,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:56:34+00:00",
+            "observed_at": "2026-10-13T19:32:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 105.63,
-            "change_pct": -0.9563994374121051,
+            "value": 105.69,
+            "change_pct": -0.9001406469760975,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:56:36+00:00",
+            "observed_at": "2026-10-13T19:32:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.7305,
-            "change_pct": -0.24455313472654125,
+            "value": 6.729,
+            "change_pct": -0.2667852378835007,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:56:18+00:00",
+            "observed_at": "2026-10-13T19:32:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-13T18:56:40.060962+00:00",
+            "collected_at": "2026-10-13T19:32:31.351221+00:00",
             "collection_state": "collected"
           },
           {
@@ -91502,31 +91462,27 @@
       }
     ],
     "errors": {
-      "SP:SPX": "Régression ou contradiction au même horodatage ; archive conservée",
-      "DJ:DJI": "Régression ou contradiction au même horodatage ; archive conservée",
-      "CBOE:VIX": "Régression ou contradiction au même horodatage ; archive conservée",
-      "TVC:DXY": "Régression ou contradiction au même horodatage ; archive conservée",
       "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
     },
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
   },
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "push",
-    "slot": "adhoc",
-    "label": "Point de marché à la demande",
-    "target_time": null,
-    "schedule": null,
-    "scheduled_at": null,
-    "scheduled_at_basis": null,
+    "event": "schedule",
+    "slot": "midday",
+    "label": "Briefing de mi-journée",
+    "target_time": "13:45",
+    "schedule": "45 13 * * 1-5",
+    "scheduled_at": "2026-10-13T13:45:00+00:00",
+    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
     "edition_for": "2026-10-13",
-    "started_at": "2026-10-13T18:56:33+00:00",
-    "built_at": "2026-10-13T18:56:48.553190+00:00",
-    "delay_minutes": null,
-    "late": false,
-    "run_id": "38450815424",
-    "commit": "c5d77dd2f69ea85279263944a30b296cc9272ed3",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38450815424"
+    "started_at": "2026-10-13T19:32:24+00:00",
+    "built_at": "2026-10-13T19:32:38.673874+00:00",
+    "delay_minutes": 347.4,
+    "late": true,
+    "run_id": "38455618459",
+    "commit": "d0834eeeff9525b53861747a329f4a2fb6e9c207",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38455618459"
   },
   "score_archive": {
     "daily_snapshots": 6,
