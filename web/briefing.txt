@@ -1,4 +1,4 @@
-Actualisation avant clôture — séance 2026-10-13
+Briefing de fin de journée / filet de sécurité — séance 2026-10-13
 Préparé le 2026-10-13
 
 Lecture de séanceL’essentiel
@@ -13,7 +13,7 @@ Le relevé de marché totalise 186,11 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-13T20:23:15.392656+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-13T21:41:00.942575+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -345,9 +345,11 @@ Aucun dépôt récent retenu pour cette période.
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-13T20:23:16.290011+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-13T21:41:02.012778+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
+
+CBOE:VIX : Régression ou contradiction au même horodatage ; archive conservée
 
 ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
 
@@ -357,13 +359,13 @@ S&P 500
 
 7 805,45points · -0,02 %
 
-Dernière observation source2026-10-13T20:20:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-13T20:33:03+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
 51 670,10points · -0,35 %
 
-Dernière observation source2026-10-13T20:20:01+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-13T20:41:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -381,47 +383,47 @@ Risque et devises
 
 USD/MAD
 
-9,8029MAD / USD · 0,81 %
+9,8035MAD / USD · 0,81 %
 
-Dernière observation source2026-10-13T20:22:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-13T21:40:51+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9710MAD / EUR · 1,16 %
+10,9690MAD / EUR · 1,14 %
 
-Dernière observation source2026-10-13T20:09:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-13T21:39:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
 15,26points · 0,33 %
 
-Dernière observation source2026-10-13T20:14:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Archive conservée après collecte incomplète2026-10-13T20:14:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
 102,20points · -0,36 %
 
-Dernière observation source2026-10-13T20:23:08+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-13T21:40:38+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 185,00USD / once troy · -0,13 %
+4 177,30USD / once troy · -0,32 %
 
-Dernière observation source2026-10-13T20:23:06+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-13T21:00:00+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 105,69USD / baril · -0,90 %
 
-Dernière observation source2026-10-13T20:23:06+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-13T21:39:37+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,73USD / livre · -0,27 %
+6,73USD / livre · -0,31 %
 
-Dernière observation source2026-10-13T20:22:41+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-13T21:39:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -432,6 +434,14 @@ Archive conservée après collecte incomplète2026-10-13T15:54:17+00:00Différé
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/OPEC-Sees-Oil-Demand-Growth-Surging-to-26-Million-Bpd-in-2027.html] OPEC Sees Oil Demand Growth Surging to 2.6 Million Bpd in 2027 ↗
+
+OilPrice · 2026-10-13T21:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/Five-Shale-Stocks-to-Watch-Before-Third-Quarter-Earnings.html] Five Shale Stocks to Watch Before Third-Quarter Earnings ↗
+
+OilPrice · 2026-10-13T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/Princeton-Researchers-Find-a-Lower-Energy-Route-to-Fusion-Ignition.html] Princeton Researchers Find a Lower-Energy Route to Fusion Ignition ↗
 
@@ -456,14 +466,6 @@ Fed · politique monétaire · 2026-10-13T18:00:00+00:00 · International · Mac
  [https://oilprice.com/Geopolitics/Asia/Trumps-Middle-Corridor-Plans-Face-Russian-and-Iranian-Roadblocks.html] Trump's Middle Corridor Plans Face Russian and Iranian Roadblocks ↗
 
 OilPrice · 2026-10-13T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/13/cote-divoire-bouake-nouvelle-capitale-du-karite-et-du-soja/] Côte d’Ivoire : Bouaké, nouvelle capitale du karité et du soja ↗
-
-Financial Afrik · 2026-10-13T17:51:31+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/13/moodys-evalue-a-41-milliards-deuros-la-marge-dendettement-des-fonds-de-capital-investissement-avant-un-risque-accru-sur-leurs-notes/] Moody’s évalue à 41 milliards d’euros la marge d’endettement des fonds de capital-investissement avant un risque accru sur leurs notes ↗
-
-Financial Afrik · 2026-10-13T17:33:08+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -519,6 +521,14 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-13T13:14:09+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Latest-Energy-News/World-News/OPEC-Sees-Oil-Demand-Growth-Surging-to-26-Million-Bpd-in-2027.html] OPEC Sees Oil Demand Growth Surging to 2.6 Million Bpd in 2027 ↗
+
+OilPrice · 2026-10-13T21:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/Five-Shale-Stocks-to-Watch-Before-Third-Quarter-Earnings.html] Five Shale Stocks to Watch Before Third-Quarter Earnings ↗
+
+OilPrice · 2026-10-13T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/Princeton-Researchers-Find-a-Lower-Energy-Route-to-Fusion-Ignition.html] Princeton Researchers Find a Lower-Energy Route to Fusion Ignition ↗
 
 OilPrice · 2026-10-13T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -530,12 +540,4 @@ OilPrice · 2026-10-13T19:00:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/13/botswana-bank-gaborone-nomme-tsaone-raboloko-pour-conduire-son-redressement/] Botswana : Bank Gaborone nomme Tsaone Raboloko pour conduire son redressement ↗
 
 Financial Afrik · 2026-10-13T18:00:58+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Geopolitics/Asia/Trumps-Middle-Corridor-Plans-Face-Russian-and-Iranian-Roadblocks.html] Trump's Middle Corridor Plans Face Russian and Iranian Roadblocks ↗
-
-OilPrice · 2026-10-13T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/13/cote-divoire-bouake-nouvelle-capitale-du-karite-et-du-soja/] Côte d’Ivoire : Bouaké, nouvelle capitale du karité et du soja ↗
-
-Financial Afrik · 2026-10-13T17:51:31+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
