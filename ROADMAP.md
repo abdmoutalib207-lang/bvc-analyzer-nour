@@ -29,4 +29,9 @@ Tant que 1, 3 et 4 restent ouverts, Nour est un terminal analytique consultable 
   plus fine des autres métiers, historiques de comptes disponibles à leur vraie
   date de publication, et activation/test du fournisseur IA distinct du moteur.
 
+- Lot du 13/10 : [rapprochement primaire des dettes](docs/debt-review-2026-10-13.md).
+  MNG : définitions rapprochées par MtM et CCA réellement publiés, pas solde imputé.
+  ROE moyens MNG/MUT ajoutés séparément, sans effet sur la note. Restent les
+  ponts de dette ADI/MUT, les autres dénominateurs et la couche IA.
+
 - Complément disponible terminé : 77/80 annuels et 76/80 semestriels. [Preuves et références restantes](docs/batches/2026-10-04-remaining.md). Annuel manquant : DIS/Diac Salaf, DLM, IBM ; semestre : mêmes titres et CAR à clôture décalée. [Rapprochement principal/Nour](docs/comparisons/2026-10-04-principal.md) : cinq BPA annuels concordent, divergences de période/capital/fonds propres documentées. Ratios sans dénominateur vérifié toujours bloqués.

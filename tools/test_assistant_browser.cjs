@@ -16,7 +16,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','recherche.html','macro.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='titres/ADI.html'){
           const body=await page.locator('main').innerText();
@@ -29,6 +29,20 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok((await page.locator('main').innerText()).includes('Nous exigeons quatre autres ratios compatibles'));
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`adi-quality-${width}.png`),fullPage:true});}
+        }
+        if(route==='titres/MNG.html'||route==='titres/MUT.html'){
+          const symbol=route.split('/')[1].split('.')[0];
+          const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
+          const f=currentReport.results.find(r=>r.symbol===symbol).fundamental;
+          const body=await page.locator('main').innerText();
+          if(f.debt_reconciliation.status==='scope_reconciled')assert.ok(body.includes('Dette : périmètres rapprochés'));
+          if(f.debt_reconciliation.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));
+          if(f.debt_reconciliation.primary_review?.conclusion){
+            await page.getByText('Preuves du contrôle de dette',{exact:true}).click();
+            assert.ok((await page.locator('main').innerText()).includes(f.debt_reconciliation.primary_review.conclusion));
+          }
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
         if(route==='recherche.html'){
           await page.locator('#lab-symbol').selectOption('ADI');

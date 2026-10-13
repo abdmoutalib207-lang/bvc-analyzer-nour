@@ -102,6 +102,13 @@ for(const status of ['stale','unavailable','closed']){
 const noQuote=structuredClone(fixture);delete noQuote.symbols.ADI.intraday_quote;
 check('Cours provisoire ADI',r=>r.text.includes('Aucune cotation provisoire fraîche'),'MASI',{},noQuote);
 check('ROE ADI sur fonds propres moyens',r=>r.text.includes(fmt(data.symbols.ADI.fundamental.roe_average_equity_pct))&&r.text.includes('non utilisée dans le score'));
+for(const symbol of ['MNG','MUT'])check('ROE '+symbol+' sur fonds propres moyens',r=>r.text.includes(fmt(data.symbols[symbol].fundamental.roe_average_equity_pct))&&r.text.includes('non utilisée dans le score'));
+const mngFund=data.symbols.MNG.fundamental;
+check('Dette nette MNG',r=>mngFund.debt_reconciliation?.status==='scope_reconciled'
+  ?r.text.includes('Périmètres rapprochés')&&r.text.includes('non imputé')
+  :r.text.includes('Dette nette stricte : '+fmt(mngFund.net_debt_strict_mmad)));
+check('Dette nette MNG / EBITDA',r=>r.text.includes('Dette nette / EBE')
+  &&(mngFund.debt_reconciliation?.status!=='scope_reconciled'||r.text.includes('pas un EBITDA recalculé')));
 for(const symbol of ['ADI','MNG','MUT']){
   const unresolved=structuredClone(data);
   Object.assign(unresolved.symbols[symbol].fundamental,{net_debt_strict_mmad:null,net_debt_ebitda:null,

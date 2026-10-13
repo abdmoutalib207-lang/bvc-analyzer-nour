@@ -133,7 +133,7 @@
       [/\broe\b(?!.*moyen)/,'ROE','roe_pct','%','fundamental'],
       [/\broe\b.*moyen/,'ROE sur fonds propres moyens','roe_average_equity_pct','%','fundamental'],
       [/rendement.*dividende/,'Rendement du dividende','dividend_yield_pct','%','fundamental'],
-      [/dette nette.*(?:ebitda|ebe)/,'Dette nette / EBITDA','net_debt_ebitda','','fundamental'],
+      [/dette nette.*(?:ebitda|ebe)/,'Dette nette / EBE','net_debt_ebitda','','fundamental'],
       [/dette nette(?!.*(?:ebitda|ebe))/,'Dette nette stricte','net_debt_strict_mmad','MDH','fundamental'],
       [/\bpnb\b|produit net bancaire/,'PNB','pnb_mmad','MDH','fundamental'],
       [/croissance.*(?:ca|chiffre d.affaires)/,'Croissance du CA','revenue_growth_pct','%','fundamental'],
@@ -209,6 +209,12 @@
           lines.push(f.net_debt_method||'Périmètre de dette à consulter dans la fiche.');
           const d=f.debt_reconciliation||{};
           if(!wrongYear&&!unavailableSemester&&d.status==='unresolved')lines.push(`Rapprochement en attente : calcul ${fmt(d.calculated_mmad,'MMAD')} ; chiffre publié ${fmt(d.reported_mmad,'MMAD')} ; écart ${fmt(d.difference_mmad,'MMAD')}. Ces chiffres de contrôle ne sont pas des ratios validés.`);
+          if(!wrongYear&&!unavailableSemester&&d.status==='scope_reconciled'){
+            lines.push(`Périmètres rapprochés : dette calculée ${fmt(d.calculated_mmad,'MMAD')} ; indicateur élargi société ${fmt(d.reported_mmad,'MMAD')}.`);
+            for(const c of d.bridge.components)lines.push(`${c.label||c.key} : ${fmt(c.value_mmad,'MMAD')}.`);
+            lines.push(`Pont ${fmt(d.bridge.reconstructed_reported_mmad,'MMAD')} ; résidu ${fmt(d.bridge.residual_mmad,'MMAD')} compatible avec les arrondis du document, non imputé dans une composante. Le crédit-bail déjà inclus n’est pas ajouté une deuxième fois.`);
+          }
+          if(!wrongYear&&!unavailableSemester&&d.primary_review?.conclusion)lines.push(d.primary_review.conclusion);
         }
         if(key==='roe_pct')lines.push(data.definitions.roe);
         if(key==='roe_average_equity_pct')lines.push('Résultat annuel / moyenne des fonds propres de début et fin d’exercice vérifiés. Mesure complémentaire, non utilisée dans le score ni substituée au ROE de clôture.');

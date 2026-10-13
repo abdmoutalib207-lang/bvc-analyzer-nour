@@ -53,7 +53,7 @@ class SectorQuality(unittest.TestCase):
         self.assertIsNone(calculate({'price':322}, altered)['roe_average_equity_pct'])
 
     def test_disputed_debt_is_withheld_with_visible_reconciliation(self):
-        for s, calculated, reported in [('ADI',1361.49,1303),('MNG',10933.2,12674),('MUT',989.22,828)]:
+        for s, calculated, reported in [('ADI',1361.49,1303),('MUT',989.22,828)]:
             r = calculate({'price':100}, self.facts['records'][s])
             self.assertEqual(r['debt_reconciliation']['status'], 'unresolved')
             self.assertEqual(r['debt_reconciliation']['calculated_mmad'], calculated)

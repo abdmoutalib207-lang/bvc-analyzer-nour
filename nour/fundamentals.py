@@ -10,7 +10,7 @@ def calculate(record, facts):
                revenue_growth_pct=None, roe_pct=None, dividend_yield_pct=None,
                earnings_mmad=None, warnings=[], accounting_basis=None,
                currency=None, net_debt_strict_mmad=None, net_debt_ebitda=None,
-               calculation_version='nour-fundamentals-v4', point_in_time_ready=False,
+               calculation_version='nour-fundamentals-v5', point_in_time_ready=False,
                roe_average_equity_pct=None, debt_reconciliation={},
                roe_method='Résultat annuel / capitaux propres de clôture, non moyens',
                pnb_mmad=None, pnb_growth_pct=None,
@@ -135,6 +135,7 @@ def calculate(record, facts):
         status='not_cross_checked' if strict is not None else 'missing',
         calculated_mmad=rnd(strict), reported_mmad=rnd(reported),
         difference_mmad=None, difference_pct=None,
+        primary_review=facts.get('debt_primary_review'),
         tolerance='Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre.')
     if strict is not None and reported is not None:
         gap = abs(strict-reported)
@@ -142,6 +143,42 @@ def calculate(record, facts):
         reconciliation.update(status='unresolved' if unresolved else 'within_tolerance',
             difference_mmad=rnd(strict-reported),
             difference_pct=rnd(100*gap/abs(reported)) if reported else None)
+        bridge = facts.get('debt_scope_bridge') or {}
+        keys = bridge.get('component_keys')
+        if (unresolved and bridge.get('status') == 'primary_components_checked'
+                and isinstance(bridge.get('definition'), str) and bridge['definition'].strip()
+                and bridge.get('period_end') == out['period_end']
+                and isinstance(keys, list) and 0 < len(keys) <= 8
+                and all(isinstance(k, str) for k in keys) and len(set(keys)) == len(keys)
+                and not set(keys) & {'dettes_financieres','tresorerie_actif','endettement_net'}):
+            core = ['dettes_financieres','tresorerie_actif','endettement_net']
+            inputs = [data.get(k) or {} for k in core+keys]
+            basis = inputs[0].get('base')
+            verified = bool(basis) and all(
+                x.get('validation_status') == 'selected_pages_visually_checked'
+                and x.get('unite') == 'MMAD' and x.get('period_end') == out['period_end']
+                and x.get('base') == basis and x.get('url') == out['document_url']
+                and x.get('document_hash') == inputs[0].get('document_hash')
+                and re.fullmatch(r'sha256:[0-9a-f]{64}', str(x.get('document_hash','')))
+                for x in inputs)
+            components = [(k, fact(k)) for k in keys] if verified else []
+            if components and all(v is not None for _,v in components):
+                total = strict + sum(v for _,v in components)
+                residual = total-reported
+                reconciliation['bridge'] = dict(components=[{'key':k,'label':data[k].get('label') or k,'value_mmad':rnd(v)} for k,v in components],
+                    reconstructed_reported_mmad=rnd(total), residual_mmad=rnd(residual),
+                    absolute_tolerance_mmad=1., definition=bridge.get('definition'))
+                if abs(residual) <= 1.:
+                    unresolved = False
+                    reconciliation['status'] = 'scope_reconciled'
+                    out['net_debt_method'] = ('Périmètres annuels rapprochés sur pièce. Dette financière nette calculée distincte de l’indicateur élargi publié ; '
+                        + str(bridge.get('definition') or '') + ' Le multiple utilise l’EBE annuel publié, pas un EBITDA recalculé ; aucune incidence sur le score.')
+                    ebe_record = data.get('excedent_brut_exploitation') or {}
+                    if not (ebe_record.get('validation_status') == 'selected_pages_visually_checked'
+                            and ebe_record.get('period_end') == out['period_end'] and ebe_record.get('base') == basis
+                            and ebe_record.get('unite') == 'MMAD' and ebe_record.get('url') == out['document_url']
+                            and ebe_record.get('document_hash') == inputs[0].get('document_hash')):
+                        out['net_debt_ebitda'] = None
         if unresolved:
             out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
             out['net_debt_method'] = ('Dette nette non rapprochée : calcul et chiffre publié divergent au-delà de la tolérance. '

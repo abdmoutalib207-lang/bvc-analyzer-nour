@@ -1,5 +1,7 @@
 # BVC Analyzer Nour
 
+[Dernier contrôle de dette et des périmètres comptables (13/10/2026)](docs/debt-review-2026-10-13.md).
+
 Moteur d'analyse indépendant de `-bvc-analyzer` : 80 fiches, graphiques historiques, indicateurs techniques, fondamentaux sourcés, score descriptif unique, briefing de séance et radar de publications. Aucun NLP ni texte WhatsApp n'entre dans les calculs. Le projet principal ne reçoit aucune écriture.
 
 ## Utilisation
