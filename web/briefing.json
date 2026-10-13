@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-13",
-    "started_at": "2026-10-13T18:47:59+00:00",
-    "built_at": "2026-10-13T18:48:13.500462+00:00",
+    "started_at": "2026-10-13T18:56:33+00:00",
+    "built_at": "2026-10-13T18:56:48.553190+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "38449656216",
-    "commit": "5c947979802867e290f8ee643bca791ff2d76c35",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38449656216"
+    "run_id": "38450815424",
+    "commit": "c5d77dd2f69ea85279263944a30b296cc9272ed3",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38450815424"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -50,7 +50,7 @@
     "variation_points": 87.42,
     "ytd_pct": -9.57
   },
-  "market_summary": "Le MASI clôture à 17 041,91 points (0,52 %), soit 87,42 points par rapport à la clôture précédente. Fourchette de séance : 16 951,18 à 17 176,40 points. 24 valeurs en baisse, 36 en hausse et 6 inchangées parmi les 66 valeurs échangées recensées par CDG. Volume échangé : 186,11 MDH.",
+  "market_summary": "Le MASI clôture à 17 041,91 points (0,52 %), soit 87,42 points par rapport à la clôture précédente. Fourchette de séance : 16 951,18 à 17 176,40 points. 24 valeurs en baisse, 36 en hausse et 6 inchangées parmi les 66 valeurs échangées recensées par CDG. Volume échangé : 186,10 MDH.",
   "index_notice": null,
   "focus": [
     {
@@ -2237,7 +2237,7 @@
       "Le MASI termine à 17 041,91 points (0,52 %). La direction de cette séance est haussière.",
       "24 valeurs baissent, 36 progressent et 6 sont inchangées sur 66 traitées. Les baisses représentent 36,36 % de cette couverture. La largeur de marché reste partagée.",
       "L’indice se situe à 40,29 % de l’amplitude au-dessus du plus bas (16 951,18), pour un plus haut de 17 176,40 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.",
-      "Le relevé de marché totalise 186,11 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
+      "Le relevé de marché totalise 186,10 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
       "Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours."
     ],
     "levels": {
@@ -2468,7 +2468,7 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-13T18:48:06.195323+00:00"
+    "observed_at": "2026-10-13T18:56:38.956011+00:00"
   },
   "context_news": [
     {
@@ -2678,8 +2678,8 @@
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-13T18:48:13.500462+00:00",
-    "checked_at": "2026-10-13T18:48:06.939626+00:00",
+    "cutoff": "2026-10-13T18:56:48.553190+00:00",
+    "checked_at": "2026-10-13T18:56:40.060962+00:00",
     "status": "partial",
     "groups": [
       {
@@ -2691,8 +2691,8 @@
             "unit": "points",
             "value": 7804.33,
             "change_pct": -0.03727309522955429,
-            "state": "observed",
-            "notice": "Dernière observation source",
+            "state": "cached",
+            "notice": "Archive conservée après collecte incomplète",
             "observed_at": "2026-10-13T18:47:53+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
@@ -2700,7 +2700,7 @@
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
             "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "collected"
+            "collection_state": "cached"
           },
           {
             "ticker": "DJ:DJI",
@@ -2708,8 +2708,8 @@
             "unit": "points",
             "value": 51721.01,
             "change_pct": -0.249833415460397,
-            "state": "observed",
-            "notice": "Dernière observation source",
+            "state": "cached",
+            "notice": "Archive conservée après collecte incomplète",
             "observed_at": "2026-10-13T18:47:52+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
@@ -2717,7 +2717,7 @@
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
             "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "collected"
+            "collection_state": "cached"
           },
           {
             "ticker": "EURONEXT:PX1",
@@ -2733,7 +2733,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
@@ -2750,7 +2750,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           }
         ]
@@ -2762,34 +2762,34 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8023,
-            "change_pct": 0.8010777014520323,
+            "value": 9.7933,
+            "change_pct": 0.7085270042367763,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:48:01+00:00",
+            "observed_at": "2026-10-13T18:56:36+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.973,
-            "change_pct": 1.1802674043337953,
+            "value": 10.974,
+            "change_pct": 1.1894882434301481,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:44:25+00:00",
+            "observed_at": "2026-10-13T18:54:26+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
@@ -2798,8 +2798,8 @@
             "unit": "points",
             "value": 15.43,
             "change_pct": 1.446416831032208,
-            "state": "observed",
-            "notice": "Dernière observation source",
+            "state": "cached",
+            "notice": "Archive conservée après collecte incomplète",
             "observed_at": "2026-10-13T18:47:46+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
@@ -2807,7 +2807,7 @@
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
             "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "collected"
+            "collection_state": "cached"
           },
           {
             "ticker": "TVC:DXY",
@@ -2815,8 +2815,8 @@
             "unit": "points",
             "value": 102.175,
             "change_pct": -0.3870451975197964,
-            "state": "observed",
-            "notice": "Dernière observation source",
+            "state": "cached",
+            "notice": "Archive conservée après collecte incomplète",
             "observed_at": "2026-10-13T18:47:54+00:00",
             "currency": "USD",
             "mode": "streaming",
@@ -2824,7 +2824,7 @@
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
             "collected_at": "2026-10-13T18:48:06.939626+00:00",
-            "collection_state": "collected"
+            "collection_state": "cached"
           }
         ]
       },
@@ -2835,51 +2835,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4181.5,
-            "change_pct": -0.21715267503460992,
+            "value": 4185,
+            "change_pct": -0.13363241540591714,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:48:01+00:00",
+            "observed_at": "2026-10-13T18:56:34+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 105.73,
-            "change_pct": -0.8626347866854212,
+            "value": 105.63,
+            "change_pct": -0.9563994374121051,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:47:56+00:00",
+            "observed_at": "2026-10-13T18:56:36+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.7255,
-            "change_pct": -0.3186601452497351,
+            "value": 6.7305,
+            "change_pct": -0.24455313472654125,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T18:48:01+00:00",
+            "observed_at": "2026-10-13T18:56:18+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-13T18:48:06.939626+00:00",
+            "collected_at": "2026-10-13T18:56:40.060962+00:00",
             "collection_state": "collected"
           },
           {
@@ -2903,6 +2903,10 @@
       }
     ],
     "errors": {
+      "SP:SPX": "Régression ou contradiction au même horodatage ; archive conservée",
+      "DJ:DJI": "Régression ou contradiction au même horodatage ; archive conservée",
+      "CBOE:VIX": "Régression ou contradiction au même horodatage ; archive conservée",
+      "TVC:DXY": "Régression ou contradiction au même horodatage ; archive conservée",
       "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
     },
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
