@@ -10,7 +10,7 @@ from nour.engine import build_report
 from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
-from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday
+from nour.runtime import EDITIONS, ZONE, run_context, visible_intraday, source_commit
 from nour.market_view import closing_summary
 from nour.briefing_view import briefing_text
 from nour.report_contracts import synchronize_market
@@ -54,7 +54,7 @@ def main():
     report["runtime"] = run_context(now, schedule=os.environ.get("NOUR_SCHEDULE", ""),
         event=os.environ.get("GITHUB_EVENT_NAME", "local"), slot=args.slot,
         started_at=os.environ.get("NOUR_STARTED_AT"), run_id=os.environ.get("GITHUB_RUN_ID", ""),
-        commit=os.environ.get("GITHUB_SHA", ""))
+        commit=source_commit(os.environ))
     report['score_archive'] = archive_scores(report, ROOT/'data/score_archive', now)
     live_path = ROOT/"data/intraday.json"
     live = json.loads(live_path.read_text()) if live_path.exists() else None
