@@ -229,7 +229,7 @@ def detail_page(item, record, fixture, style, script):
             f'Dette financière nette calculée : {number(debt_check["calculated_mmad"])} MMAD ; '
             f'indicateur élargi publié : {number(debt_check["reported_mmad"])} MMAD. '
             f'{esc(bridge.get("definition"))}</p><p>Composantes du pont : '
-            + ' ; '.join(f'{esc(p["key"])} : {number(p["value_mmad"])} MMAD' for p in bridge['components'])
+            + ' ; '.join(f'{esc(p.get("label") or p["key"])} : {number(p["value_mmad"])} MMAD' for p in bridge['components'])
             + f'. Total reconstitué : {number(bridge["reconstructed_reported_mmad"])} MMAD ; '
             f'résidu : {number(bridge["residual_mmad"])} MMAD (arrondis du document, tolérance absolue 1 MMAD).</p></div>')
     debt_review = debt_check.get('primary_review') or {}

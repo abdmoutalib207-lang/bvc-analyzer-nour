@@ -52,6 +52,8 @@ def merge(document):
                     ('excedent_brut_exploitation',5982,10,19)]:
                 put(key,value,page,printed,year=2024 if key.endswith('_2024') else 2025)
             record['faits']['comptes_courants_associes_hors_perimetre_dette']['note'] = 'Montant arrondi lu sur le graphique CCA 2025 ; pas déduit comme solde de la différence.'
+            record['faits']['comptes_courants_associes_hors_perimetre_dette']['label'] = 'Comptes courants d’associés hors périmètre'
+            record['faits']['instruments_derives_couverture_passif']['label'] = 'Couvertures financières (MtM)'
             record['faits']['endettement_net']['valeur_au_rapport'] = 12674.4
             record['faits']['endettement_net']['unite_au_rapport'] = 'MMAD'
             record['faits']['endettement_net']['note'] = 'Indicateur élargi de la société : inclut MtM, locations et comptes courants hors intégration globale. Corps du commentaire : 12 674,4 MMAD ; graphique arrondi : 12 674.'

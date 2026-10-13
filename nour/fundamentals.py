@@ -165,7 +165,7 @@ def calculate(record, facts):
             if components and all(v is not None for _,v in components):
                 total = strict + sum(v for _,v in components)
                 residual = total-reported
-                reconciliation['bridge'] = dict(components=[{'key':k,'value_mmad':rnd(v)} for k,v in components],
+                reconciliation['bridge'] = dict(components=[{'key':k,'label':data[k].get('label') or k,'value_mmad':rnd(v)} for k,v in components],
                     reconstructed_reported_mmad=rnd(total), residual_mmad=rnd(residual),
                     absolute_tolerance_mmad=1., definition=bridge.get('definition'))
                 if abs(residual) <= 1.:

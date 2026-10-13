@@ -821,7 +821,8 @@
           "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
           "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
           "validation_status": "selected_pages_visually_checked",
-          "note": ""
+          "note": "",
+          "label": "Couvertures financières (MtM)"
         },
         "comptes_courants_associes_hors_perimetre_dette": {
           "valeur": 33,
@@ -835,7 +836,8 @@
           "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
           "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
           "validation_status": "selected_pages_visually_checked",
-          "note": "Montant arrondi lu sur le graphique CCA 2025 ; pas déduit comme solde de la différence."
+          "note": "Montant arrondi lu sur le graphique CCA 2025 ; pas déduit comme solde de la différence.",
+          "label": "Comptes courants d’associés hors périmètre"
         },
         "capitaux_propres_part_groupe_2024": {
           "valeur": 10687.8,
