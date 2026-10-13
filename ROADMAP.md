@@ -16,11 +16,17 @@
 
 1. Observer plusieurs exécutions programmées : collecte → commit → Pages → fichier effectivement servi. Comparer les cours de clôture et le nombre de cotations au bulletin primaire.
 2. Tester le fournisseur lorsque le flux CDG présente des titres sans OHLC, une suspension ou un changement de structure : journaliser les valeurs exclues sans corrompre la séance publiée.
-3. Compléter les 2 historiques manquants sans fabriquer de séances. Achever les 8 références annuelles et 11 semestrielles absentes ; recouper les PDF importés et les nombres d'actions, rapprocher les fonds propres Eqdom et le nombre de titres AGMA. Faire les imports suivants dans Nour uniquement, sans dépendance d'exécution au dépôt principal.
+3. Compléter les historiques insuffisants sans fabriquer de séances. Références encore absentes : DIS/DLM/IBM annuels et semestriels, ainsi que CAR semestriel (clôture décalée), soit 3 annuels et 4 semestriels. Continuer la revue primaire des PDF importés et des dénominateurs. Eqdom et les compléments précédents sont documentés dans les lots ; les chiffres non rapprochés restent indisponibles. Faire les imports suivants dans Nour uniquement, sans dépendance d'exécution au dépôt principal.
 4. Valider la stabilité des statistiques hors échantillon et par régime, avec MASI, coûts, dividendes, liquidité et incertitudes. Construire une base point-in-time avant tout test de facteurs fondamentaux. Le but est l'aide à l'analyse statistique, pas la prédiction du marché.
 5. Ajouter éventuellement fixing et carnet seulement après l'obtention de données licites et réellement horodatées ; ne jamais déduire les flux des seules clôtures.
 6. Vérifier l'exactitude et les droits de réutilisation des sources de marché et presse, ainsi que l'accessibilité sur téléphone et clavier.
 
 Tant que 1, 3 et 4 restent ouverts, Nour est un terminal analytique consultable et audit-able ; ce n'est ni du temps réel garanti ni une stratégie d'investissement validée.
+
+- Lot du 11/10 : [comparables, dette et revue ADI](docs/sector-quality-2026-10-11.md).
+  Restent notamment : rapprochement sur pièce des dettes ADI/MNG/MUT,
+  élargissement des fonds propres moyens avec contrôles primaires, classification
+  plus fine des autres métiers, historiques de comptes disponibles à leur vraie
+  date de publication, et activation/test du fournisseur IA distinct du moteur.
 
 - Complément disponible terminé : 77/80 annuels et 76/80 semestriels. [Preuves et références restantes](docs/batches/2026-10-04-remaining.md). Annuel manquant : DIS/Diac Salaf, DLM, IBM ; semestre : mêmes titres et CAR à clôture décalée. [Rapprochement principal/Nour](docs/comparisons/2026-10-04-principal.md) : cinq BPA annuels concordent, divergences de période/capital/fonds propres documentées. Ratios sans dénominateur vérifié toujours bloqués.

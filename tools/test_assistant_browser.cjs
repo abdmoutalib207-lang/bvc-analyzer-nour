@@ -16,8 +16,20 @@ const shots=process.env.NOUR_SCREENSHOTS;
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
-      for(const route of ['index.html','titres/JET.html','recherche.html','macro.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','recherche.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='titres/ADI.html'){
+          const body=await page.locator('main').innerText();
+          const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
+          const currentAdi=currentReport.results.find(r=>r.symbol==='ADI').fundamental;
+          if(currentAdi.debt_reconciliation?.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));
+          if(currentAdi.roe_average_equity_pct!==null)assert.ok(body.includes('ROE sur fonds propres moyens : '+currentAdi.roe_average_equity_pct.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' %'));
+          assert.ok(body.includes('Groupe de comparaison : Promoteurs immobiliers'));
+          await page.getByText('Pourquoi cette comparaison est-elle disponible ou absente ?', {exact:true}).click();
+          assert.ok((await page.locator('main').innerText()).includes('Nous exigeons quatre autres ratios compatibles'));
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`adi-quality-${width}.png`),fullPage:true});}
+        }
         if(route==='recherche.html'){
           await page.locator('#lab-symbol').selectOption('ADI');
           const metrics=await page.locator('#lab-metrics').innerText();
@@ -53,7 +65,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-symbol option').count(),81);
         assert.equal(await page.locator('#assistant-ai-option').isVisible(),false);
-        const expected=route.startsWith('titres/')?'JET':'MASI';
+        const expected=route.startsWith('titres/')?route.split('/')[1].split('.')[0]:'MASI';
         assert.equal(await page.locator('#assistant-symbol').inputValue(),expected);
         await page.locator('#assistant-symbol').selectOption('JET');
         await page.locator('[data-assistant-question="Quels fondamentaux sont disponibles ?"]').click();

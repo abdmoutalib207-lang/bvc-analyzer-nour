@@ -10,7 +10,8 @@ def calculate(record, facts):
                revenue_growth_pct=None, roe_pct=None, dividend_yield_pct=None,
                earnings_mmad=None, warnings=[], accounting_basis=None,
                currency=None, net_debt_strict_mmad=None, net_debt_ebitda=None,
-               calculation_version='nour-fundamentals-v3', point_in_time_ready=False,
+               calculation_version='nour-fundamentals-v4', point_in_time_ready=False,
+               roe_average_equity_pct=None, debt_reconciliation={},
                roe_method='Résultat annuel / capitaux propres de clôture, non moyens',
                pnb_mmad=None, pnb_growth_pct=None,
                validation_status='missing', provenance={}, latest_report=None)
@@ -27,6 +28,7 @@ def calculate(record, facts):
                period_end=facts.get('exercice_clos') or f"{facts.get('exercice')}-12-31")
     out['warnings'].extend(facts.get('reservations') or [])
     out['financial_review'] = facts.get('financial_review')
+    out['external_references'] = facts.get('external_references') or []
     if facts.get('provenance', {}).get('source_type') in ('regulator_pdf', 'issuer_pdf'):
         out['source'] = 'Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour'
         out['validation_status'] = facts['provenance'].get('validation_status')
@@ -98,6 +100,22 @@ def calculate(record, facts):
                roe_pct=rnd(net/equity*100) if net is not None and equity and equity>0 else None,
                revenue_growth_pct=rnd((revenue/previous-1)*100) if revenue is not None and previous and previous>0 else None,
                dividend_yield_pct=rnd(dividend/price*100) if dividend is not None and price else None)
+    # A supplementary measure, never silently substituted into the score or
+    # the closing-equity peer cohort. Both endpoints must be primary-checked.
+    equity_key = 'capitaux_propres_part_groupe' if data.get('capitaux_propres_part_groupe') else 'capitaux_propres_sociaux'
+    previous_key = f"{equity_key}_{(facts.get('exercice') or 0)-1}"
+    closing, opening = data.get(equity_key) or {}, data.get(previous_key) or {}
+    net_key = 'resultat_net_part_groupe' if equity_key == 'capitaux_propres_part_groupe' else 'resultat_net_social'
+    net_record = data.get(net_key) or {}
+    if all(x.get('validation_status') == 'selected_pages_visually_checked'
+           and x.get('unite') == 'MMAD'
+           and re.fullmatch(r'sha256:[0-9a-f]{64}', str(x.get('document_hash', '')))
+           for x in (closing, opening, net_record)) and closing.get('base') and closing.get('base') == opening.get('base') == net_record.get('base') and (
+               closing.get('period_end') == net_record.get('period_end') == out['period_end']
+               and opening.get('period_end') == f"{facts['exercice']-1}{out['period_end'][4:]}"):
+        previous_equity = fact(previous_key)
+        if net is not None and net == fact(net_key) and equity == fact(equity_key) and equity and equity > 0 and previous_equity and previous_equity > 0:
+            out['roe_average_equity_pct'] = rnd(200*net/(equity+previous_equity))
     if facts.get('capital_change_unresolved'):
         out['pe'] = out['pb'] = out['dividend_yield_pct'] = None
     pnb, pnb_previous = fact('produit_net_bancaire'), fact(f"produit_net_bancaire_{(facts.get('exercice') or 0)-1}")
@@ -110,14 +128,36 @@ def calculate(record, facts):
     debt, cash, ebitda = fact('dettes_financieres'), fact('tresorerie_actif'), fact('excedent_brut_exploitation')
     strict = debt-cash if debt is not None and cash is not None else None
     out['net_debt_strict_mmad'] = rnd(strict)
-    out['net_debt_ebitda'] = rnd(strict/ebitda) if strict is not None and ebitda and ebitda>0 else None
-    out['net_debt_method'] = 'Dette financière moins trésorerie-actif ; hors placements et comptes associés. Non comparable sans périmètre identique.'
+    out['net_debt_ebitda'] = rnd(strict/ebitda) if strict is not None and strict >= 0 and ebitda and ebitda>0 else None
+    out['net_debt_method'] = 'Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.'
+    reported = fact('endettement_net')
+    reconciliation = out['debt_reconciliation'] = dict(
+        status='not_cross_checked' if strict is not None else 'missing',
+        calculated_mmad=rnd(strict), reported_mmad=rnd(reported),
+        difference_mmad=None, difference_pct=None,
+        tolerance='Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre.')
+    if strict is not None and reported is not None:
+        gap = abs(strict-reported)
+        unresolved = gap > max(1., .02*abs(reported))
+        reconciliation.update(status='unresolved' if unresolved else 'within_tolerance',
+            difference_mmad=rnd(strict-reported),
+            difference_pct=rnd(100*gap/abs(reported)) if reported else None)
+        if unresolved:
+            out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
+            out['net_debt_method'] = ('Dette nette non rapprochée : calcul et chiffre publié divergent au-delà de la tolérance. '
+                                      'Dette nette et multiple suspendus ; les deux valeurs restent visibles pour vérification du périmètre.')
+            out['warnings'].append(f'Dette nette à rapprocher : calcul {rnd(strict)} MMAD, publication {rnd(reported)} MMAD ; écart {rnd(strict-reported)} MMAD. Aucun arbitrage automatique.')
+    if strict is not None and strict < 0 and reconciliation['status'] != 'unresolved':
+        out['net_debt_method'] += ' Trésorerie nette excédentaire : montant conservé, aucun multiple négatif de dette / EBE.'
     if facts.get('strict_cash_unresolved'):
         out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
         out['net_debt_method'] = 'Trésorerie incluant des placements ou fonds de tiers non rapprochés : dette nette stricte indisponible.'
     if facts.get('financial_business'):
         out['net_debt_strict_mmad'] = out['net_debt_ebitda'] = None
         out['net_debt_method'] = 'Non calculé pour cet établissement financier : dette nette / EBE industriel non comparable.'
+        reconciliation['status'] = 'not_applicable'
+    if facts.get('strict_cash_unresolved'):
+        reconciliation['status'] = 'cash_unresolved'
     metrics = ('eps_mad','pb','roe_pct','revenue_growth_pct')
     out['coverage_pct'] = 25*sum(out[k] is not None for k in metrics)
     out['missing_metrics'] = [k for k in metrics if out[k] is None]

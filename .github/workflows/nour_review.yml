@@ -1,0 +1,56 @@
+name: Nour pull request checks
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: nour-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and verify Nour without refreshing market sources
+        run: python tools/verify_nour.py --build --asof "$(TZ=Africa/Casablanca date +%F)"
+      - name: Install pinned browser QA runtime
+        run: |
+          npm install --prefix "$RUNNER_TEMP/nour-browser-qa" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          "$RUNNER_TEMP/nour-browser-qa/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Check mobile and desktop interactions before merging
+        env:
+          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
+          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots
+        run: |
+          python tools/serve_assistant.py --port 8766 &
+          nour_server_pid=$!
+          trap 'kill "$nour_server_pid"' EXIT
+          python - <<'PY'
+          import time
+          from urllib.request import urlopen
+          for attempt in range(25):
+              try:
+                  with urlopen('http://127.0.0.1:8766/assistant-config.json', timeout=2):
+                      break
+              except OSError:
+                  if attempt == 24:
+                      raise
+                  time.sleep(.2)
+          PY
+          node tools/test_assistant_browser.cjs
+      - name: Preserve browser review evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nour-review-browser-qa
+          path: ${{ runner.temp }}/nour-browser-qa-shots
+          if-no-files-found: ignore
+          retention-days: 7
