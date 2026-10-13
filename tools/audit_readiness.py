@@ -56,6 +56,11 @@ def audit(report):
         compare(s, 'pe', f.get('pe'), quotient(price, eps))
         compare(s, 'pb', f.get('pb'), quotient(price, book))
         compare(s, 'roe_pct', f.get('roe_pct'), quotient(net * 100 if net is not None else None, equity))
+        year = f.get('exercise')
+        previous_equity = value(f'capitaux_propres_part_groupe_{year-1}', f'capitaux_propres_sociaux_{year-1}') if year else None
+        compare(s, 'roe_average_equity_pct', f.get('roe_average_equity_pct'),
+                quotient(net*200 if net is not None else None,
+                         equity+previous_equity if equity is not None and previous_equity is not None else None))
         debt, cash, ebe = value('dettes_financieres'), value('tresorerie_actif'), value('excedent_brut_exploitation')
         strict = debt - cash if debt is not None and cash is not None else None
         compare(s, 'net_debt_strict_mmad', f.get('net_debt_strict_mmad'), strict)

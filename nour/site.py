@@ -223,6 +223,20 @@ def detail_page(item, record, fixture, style, script):
             f'chiffre publié par la société : {number(debt_check.get("reported_mmad"))} MMAD. '
             f'Écart : {number(debt_check.get("difference_mmad"))} MMAD. '
             'Ces valeurs servent au contrôle et ne sont pas deux ratios validés. Un écart peut venir de périmètres différents.</p></div>')
+    if debt_check.get('status') == 'scope_reconciled':
+        bridge = debt_check['bridge']
+        financial_details += (f'<div class="banner"><strong>Dette : périmètres rapprochés</strong><p>'
+            f'Dette financière nette calculée : {number(debt_check["calculated_mmad"])} MMAD ; '
+            f'indicateur élargi publié : {number(debt_check["reported_mmad"])} MMAD. '
+            f'{esc(bridge.get("definition"))}</p><p>Composantes du pont : '
+            + ' ; '.join(f'{esc(p["key"])} : {number(p["value_mmad"])} MMAD' for p in bridge['components'])
+            + f'. Total reconstitué : {number(bridge["reconstructed_reported_mmad"])} MMAD ; '
+            f'résidu : {number(bridge["residual_mmad"])} MMAD (arrondis du document, tolérance absolue 1 MMAD).</p></div>')
+    debt_review = debt_check.get('primary_review') or {}
+    if debt_review:
+        financial_details += (f'<details><summary>Preuves du contrôle de dette</summary><p>{esc(debt_review.get("conclusion"))}</p>'
+            f'<p class="fineprint">Revue du {esc(debt_review.get("reviewed_at"))} · pages PDF {esc(debt_review.get("pages"))}. '
+            'Contrôle annuel ; ne remplace pas les comptes semestriels.</p></details>')
     for ref in calculated.get('external_references', []):
         if str(ref.get('url', '')).startswith('https://'):
             financial_details += (f'<details><summary>Comparer avec une source extérieure</summary><p>{esc(ref.get("note"))}</p>'

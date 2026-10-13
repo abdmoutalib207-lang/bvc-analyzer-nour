@@ -103,7 +103,16 @@
         "endettement_net": {
           "valeur": 1303,
           "page": 17,
-          "note": "dont emprunt obligataire de 449 MMAD émis en déc. 2025"
+          "note": "dont emprunt obligataire de 449 MMAD émis en déc. 2025",
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 1303,
+          "printed_page": 17,
+          "period_end": "2025-12-31",
+          "base": "consolidé (normes marocaines)",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "validation_status": "selected_pages_visually_checked"
         },
         "endettement_net_2024": {
           "valeur": 1136,
@@ -179,9 +188,15 @@
               "valeur_au_rapport": 133361
             }
           ],
-          "note": "dettes de financement (emprunts obligataires 1.774.188, crédit-bail 60.916, établissements de crédit 109.793, autres emprunts 35.822 — note 5.2.12, p.27) + trésorerie-passif. ⚠️ Le rapport publie un « ENDETTEMENT NET » de 1.303 MMAD (p.17) sans en donner la définition ; notre formule donne 1 361,5. Écart de 58,5 non expliqué : nous publions la formule, et le disons.",
-          "base": "consolidé (normes marocaines), 31/12/2025",
-          "releve_le": "2026-09-30"
+          "note": "Dette de financement 1 980,718 + trésorerie-passif 133,361 MMAD. Écart de 58,489 MMAD avec la publication non expliqué. Retirer le crédit-bail ne constitue pas une définition documentée ; ratios suspendus.",
+          "base": "consolidé (normes marocaines)",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 21,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "validation_status": "selected_pages_visually_checked"
         },
         "tresorerie_actif": {
           "valeur": 752.59,
@@ -202,8 +217,14 @@
             }
           ],
           "note": "disponibilités + titres et valeurs de placement. Recoupement : 328.174 + 424.416 − 133.361 = 619.229, contre « Trésorerie nette de clôture 619.372 » au tableau des flux (p.23) — 0,14 MMAD d'écart.",
-          "base": "consolidé (normes marocaines), 31/12/2025",
-          "releve_le": "2026-09-30"
+          "base": "consolidé (normes marocaines)",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 21,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "validation_status": "selected_pages_visually_checked"
         },
         "dotations_amortissements_exploitation": {
           "valeur": 13.463,
@@ -291,6 +312,20 @@
           "printed_page": 21,
           "validation_status": "selected_pages_visually_checked",
           "note": "Colonne annuelle contrôlée visuellement dans le tableau consolidé ; KMAD convertis en MMAD."
+        },
+        "dettes_contrats_credit_bail": {
+          "valeur": 60.916,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 60916,
+          "page": 27,
+          "printed_page": 27,
+          "period_end": "2025-12-31",
+          "base": "consolidé (normes marocaines)",
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Composante déjà incluse dans les dettes financières ; pas un ajustement de rapprochement vérifié."
         }
       },
       "provenance": {
@@ -338,7 +373,19 @@
           "reviewed_at": "2026-10-11",
           "note": "Consultation complémentaire : dates et normalisations peuvent différer. Vérifier la période, le périmètre groupe/total et le nombre d’analystes. Aucun chiffre, objectif ou score externe ne remplace les comptes primaires Nour."
         }
-      ]
+      ],
+      "debt_primary_review": {
+        "reviewed_at": "2026-10-13",
+        "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+        "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+        "pages": [
+          17,
+          21,
+          27
+        ],
+        "conclusion": "Écart ADI confirmé ; pas de définition publiée permettant un pont complet. Dette et multiple restent suspendus.",
+        "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
+      }
     },
     "CMT": {
       "societe": "Compagnie Minière de Touissit",
@@ -541,12 +588,31 @@
         },
         "excedent_brut_exploitation": {
           "valeur": 5982,
-          "page": 10
+          "page": 10,
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 5982,
+          "printed_page": 19,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
         },
         "resultat_net_part_groupe": {
           "valeur": 3002,
           "page": 86,
-          "note": "619,8 en 2024 — ×4,8"
+          "note": "619,8 en 2024 — ×4,8",
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 3002,
+          "printed_page": 170,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked"
         },
         "capitaux_propres_part_groupe": {
           "valeur": 11478.3,
@@ -555,16 +621,32 @@
           "colonne_exercice_clos": 1,
           "page": 86,
           "note": "« Capitaux propres attribuables aux actionnaires ordinaires de la société mère 21 11 478,3 10 687,8 » ; en-tête « PASSIF (En millions de dirhams) Note 31/12/2025 31/12/2024 ». Le 21 est le renvoi de note. Capital 1 186,5 MMAD = 11 864 676 titres de nominale 100. ⚠️ Ne pas confondre avec la ligne « Capitaux propres consolidés Part du Groupe début d'exercice 10 687,7 » de la page 102 : c'est le solde d'OUVERTURE, donc les comptes 2024.",
-          "relu_le": "2026-09-16"
+          "relu_le": "2026-09-16",
+          "unite": "MMAD",
+          "printed_page": 171,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked"
         },
         "capitaux_propres_consolides": {
           "valeur": 12529.6,
           "page": 86
         },
         "endettement_net": {
-          "valeur": 12674,
+          "valeur": 12674.4,
           "page": 68,
-          "note": "10 272 en 2024"
+          "note": "Indicateur élargi de la société : inclut MtM, locations et comptes courants hors intégration globale. Corps du commentaire : 12 674,4 MMAD ; graphique arrondi : 12 674.",
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 12674.4,
+          "printed_page": 135,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked"
         },
         "capital_social": {
           "valeur": 1186.4676,
@@ -628,9 +710,15 @@
               "valeur_au_rapport": 6487.2
             }
           ],
-          "note": "dettes financières non courantes HORS instruments dérivés de couverture (10 544,2 − 1 707,9 = 6 751,2 + 2 000,0 + 85,1) + dettes courantes envers les établissements de crédit (6 487,2, la totalité des dettes financières courantes, dérivés nuls). Les dérivés de couverture ne sont pas un emprunt. ⚠️ Le rapport publie un endettement net de 12 674 (p.68, clé `endettement_net`) ; notre formule donne 10 933,2. La société le définit p.68 : « (*) Endettement en intégrant le MtM et les contrats de location, ainsi que les comptes courants d'associés envers les sociétés non intégrées ». Avec les dérivés (MtM, 1 707,9) on obtient 12 641,1 ; les 33 restants seraient les comptes courants, non isolés au bilan. L'écart est donc de DÉFINITION, pas de chiffre.",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-09-30"
+          "note": "Emprunts et droits d’usage hors dérivés de couverture : 6 751,2 + 2 000 + 85,1 + 6 487,2 = 15 323,5 MMAD. Ne pas confondre avec la dette élargie de la société.",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 171,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked"
         },
         "tresorerie_actif": {
           "valeur": 4390.3,
@@ -639,8 +727,14 @@
           "colonne_exercice_clos": 1,
           "page": 86,
           "note": "« Trésorerie et équivalent de trésorerie 20 4 390,3 2 589,1 »",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-09-30"
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 171,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked"
         },
         "resultat_exploitation": {
           "valeur": 3992.8,
@@ -714,6 +808,48 @@
           "note": "« Flux de trésorerie liés aux activités opérationnelles 5 483 3 122 » ; publié en millions arrondis à l'unité.",
           "base": "consolidé IFRS, 31/12/2025",
           "releve_le": "2026-09-30"
+        },
+        "instruments_derives_couverture_passif": {
+          "valeur": 1707.9,
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 1707.9,
+          "page": 86,
+          "printed_page": 171,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "comptes_courants_associes_hors_perimetre_dette": {
+          "valeur": 33,
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 33,
+          "page": 68,
+          "printed_page": 134,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Montant arrondi lu sur le graphique CCA 2025 ; pas déduit comme solde de la différence."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "valeur": 10687.8,
+          "unite": "MMAD",
+          "unite_au_rapport": "MMAD",
+          "valeur_au_rapport": 10687.8,
+          "page": 86,
+          "printed_page": 171,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
         }
       },
       "provenance": {
@@ -725,7 +861,7 @@
       },
       "accounting_basis": "consolidé IFRS, 31/12/2025",
       "reservations": [
-        "EBITDA = EBE publié par la société (clé existante `excedent_brut_exploitation` 5 982, p.10). À titre de recoupement : résultat d'exploitation courant 3 997,2 + « Amortissements et provisions d'exploitation 8 -2 012,4 » = 6 009,6, mais cette ligne inclut des provisions."
+        "EBE annuel publié 5 982 MMAD (PDF p.10, imprimée p.19) : ce n’est pas un EBITDA IFRS recalculé. La dotation aux amortissements et provisions inclut des provisions."
       ],
       "latest_report": {
         "period_end": "2026-06-30",
@@ -741,7 +877,28 @@
         "validation_status": "referenced_import_not_independent_audit",
         "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
       },
-      "capital_change_unresolved": true
+      "capital_change_unresolved": true,
+      "debt_scope_bridge": {
+        "status": "primary_components_checked",
+        "period_end": "2025-12-31",
+        "component_keys": [
+          "instruments_derives_couverture_passif",
+          "comptes_courants_associes_hors_perimetre_dette"
+        ],
+        "definition": "La dette financière nette calculée exclut les couvertures. Le chiffre société les inclut, ainsi que les comptes courants hors intégration globale. Le crédit-bail est déjà dans la dette calculée : ne pas le rajouter."
+      },
+      "debt_primary_review": {
+        "reviewed_at": "2026-10-13",
+        "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+        "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+        "pages": [
+          10,
+          68,
+          86
+        ],
+        "conclusion": "Pont contrôlé : 10 933,2 + 1 707,9 + 33 = 12 674,1 MMAD, face à 12 674,4 publiés. Résidu de 0,3 MMAD compatible avec les arrondis du graphique ; définitions distinctes conservées.",
+        "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
+      }
     },
     "MSA": {
       "societe": "Sodep-Marsa Maroc",
@@ -3200,7 +3357,14 @@
           "unite_au_rapport": "KMAD",
           "colonne_exercice_clos": 2,
           "page": 54,
-          "note": "« Total Capitaux propres, part du groupe 1 562 845 1 551 387 ». ⚠️ L'en-tête est « en KMAD Actif 31/12/2024 31/12/2025 » : la colonne de GAUCHE est 2024. L'exercice clos vaut donc 1 551 387 KMAD, et prendre le premier nombre aurait publié les comptes 2024. Capital 924 674 KMAD = 9 246 740 titres de nominale 100."
+          "note": "« Total Capitaux propres, part du groupe 1 562 845 1 551 387 ». ⚠️ L'en-tête est « en KMAD Actif 31/12/2024 31/12/2025 » : la colonne de GAUCHE est 2024. L'exercice clos vaut donc 1 551 387 KMAD, et prendre le premier nombre aurait publié les comptes 2024. Capital 924 674 KMAD = 9 246 740 titres de nominale 100.",
+          "unite": "MMAD",
+          "printed_page": 106,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "nombre_actions_au_rapport": {
           "valeur": 9246740,
@@ -3262,8 +3426,14 @@
             }
           ],
           "note": ". emprunts long terme 931 815 + emprunts et crédits à moins d'un an 94 706 (dont intérêts courus 12 173) + banques créditrices 222 429 = 1 248 950 KMAD. Recoupé au tableau de variation de la dette de la note annexe (p.62) : « Emprunts et dettes financières ... 1 248 949 »",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-01"
+          "base": "consolidé IFRS",
+          "releve_le": "2026-10-01",
+          "unite": "MMAD",
+          "printed_page": 106,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "tresorerie_actif": {
           "valeur": 259.728,
@@ -3284,8 +3454,14 @@
             }
           ],
           "note": ". trésorerie 200 480 + VMP et autres placements 59 248 : le tableau des flux (p.55) les compte dans sa trésorerie, « Trésorerie de clôture 25 126 » = 200 480 + 59 248 − 222 429 − 12 173 (intérêts courus)",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-01"
+          "base": "consolidé IFRS",
+          "releve_le": "2026-10-01",
+          "unite": "MMAD",
+          "printed_page": 106,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "endettement_net": {
           "valeur": 828,
@@ -3293,9 +3469,15 @@
           "unite_au_rapport": "MMAD",
           "colonne_exercice_clos": 1,
           "page": 40,
-          "note": "« La dette nette bancaire s’établit à 828 Mdh contre 850 Mdh en 2024 ». « dette nette bancaire » PUBLIÉE par la société, sans définition de son périmètre (aussi p.17 : « Dette nette bancaire au 31 décembre 2025 : 828 Mdh »). Elle ne se recolle pas au bilan : 1 248,950 − 259,728 = 989,2 MMAD, écart de 161 MMAD non expliqué par une ligne du rapport. Non utilisée dans les ratios ; écart consigné dans _ecarts_mesures",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-01"
+          "note": "Dette nette bancaire publiée, définition détaillée non trouvée. Ne pas assimiler à une dette financière nette globale ; aucun pont complet avec le bilan.",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-10-01",
+          "unite": "MMAD",
+          "printed_page": 79,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "excedent_brut_exploitation": {
           "valeur": 315.384,
@@ -3304,8 +3486,14 @@
           "colonne_exercice_clos": 2,
           "page": 54,
           "note": "« EBE 351 077 315 384 ». EBE consolidé publié ; texte p.40 « L’EBE consolidé 2025 s’établit à 315 MDH »",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-01"
+          "base": "consolidé IFRS",
+          "releve_le": "2026-10-01",
+          "unite": "MMAD",
+          "printed_page": 107,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "resultat_exploitation": {
           "valeur": 181.834,
@@ -3364,8 +3552,14 @@
           "colonne_exercice_clos": 2,
           "page": 54,
           "note": "« Part du groupe 159 408 126 161 »",
-          "base": "consolidé IFRS, 31/12/2025",
-          "releve_le": "2026-10-01"
+          "base": "consolidé IFRS",
+          "releve_le": "2026-10-01",
+          "unite": "MMAD",
+          "printed_page": 107,
+          "period_end": "2025-12-31",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked"
         },
         "flux_tresorerie_exploitation": {
           "valeur": 262.726,
@@ -3376,6 +3570,20 @@
           "note": "« Flux de trésorerie liés aux activités opérationnelles 262 726 275 904 ». ⚠️ Ici l'en-tête est « 31/12/2025 31/12/2024 » : l'exercice clos est la colonne de GAUCHE, l'inverse du bilan. Vérifié par la trésorerie de clôture : « Trésorerie de clôture 25 126 156 300 » ; 25 126 se reconstruit avec les comptes 2025, 156 300 avec ceux de 2024",
           "base": "consolidé IFRS, 31/12/2025",
           "releve_le": "2026-10-01"
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "valeur": 1562.845,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "valeur_au_rapport": 1562845,
+          "page": 54,
+          "printed_page": 106,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
         }
       },
       "pages_document": 77,
@@ -3389,7 +3597,7 @@
       "accounting_basis": "consolidé IFRS, 31/12/2025",
       "reservations": [
         "Colonnes : bilan et compte de résultat en ordre 2024 | 2025 (exercice clos à DROITE), tableau des flux en ordre 2025 | 2024 (exercice clos à GAUCHE).",
-        "La « dette nette bancaire » de 828 MMAD publiée par la société (p.17, p.40) n'est pas définie et ne se recolle pas au bilan (989,2 MMAD par le bilan et la note de dette, p.54, p.62) : écart de 161 MMAD consigné, la valeur du bilan est publiée."
+        "La « dette nette bancaire » de 828 MMAD publiée par la société (p.17, p.40) n'est pas définie et ne se recolle pas au bilan (989,2 MMAD par le bilan et la note de dette, p.54, p.62) : écart de 161 MMAD consigné, les valeurs du bilan sont conservées pour contrôle, les ratios restent suspendus."
       ],
       "latest_report": {
         "period_end": "2026-06-30",
@@ -3404,6 +3612,18 @@
         "note": null,
         "validation_status": "referenced_import_not_independent_audit",
         "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+      },
+      "debt_primary_review": {
+        "reviewed_at": "2026-10-13",
+        "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+        "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+        "pages": [
+          40,
+          54,
+          62
+        ],
+        "conclusion": "Bilan et annexe de dette recoupés (1 KMAD d’arrondi). Le pont vers la dette nette bancaire publiée reste absent ; dette et multiple suspendus.",
+        "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
       }
     },
     "RDS": {
