@@ -43,6 +43,14 @@ class SectorQuality(unittest.TestCase):
             altered = copy.deepcopy(f)
             altered['faits']['capitaux_propres_part_groupe_2024'].update(change)
             self.assertIsNone(calculate({'price':322}, altered)['roe_average_equity_pct'])
+        altered = copy.deepcopy(f)
+        for key in ('capitaux_propres_part_groupe', 'capitaux_propres_part_groupe_2024', 'resultat_net_part_groupe'):
+            altered['faits'][key]['base'] = None
+        self.assertIsNone(calculate({'price':322}, altered)['roe_average_equity_pct'])
+        altered = copy.deepcopy(f)
+        altered['faits']['resultat_net_part_groupe']['valeur'] = None
+        altered['faits']['resultat_net_social'] = {'valeur':100, 'page':22}
+        self.assertIsNone(calculate({'price':322}, altered)['roe_average_equity_pct'])
 
     def test_disputed_debt_is_withheld_with_visible_reconciliation(self):
         for s, calculated, reported in [('ADI',1361.49,1303),('MNG',10933.2,12674),('MUT',989.22,828)]:

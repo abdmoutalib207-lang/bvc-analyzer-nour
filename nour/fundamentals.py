@@ -105,15 +105,16 @@ def calculate(record, facts):
     equity_key = 'capitaux_propres_part_groupe' if data.get('capitaux_propres_part_groupe') else 'capitaux_propres_sociaux'
     previous_key = f"{equity_key}_{(facts.get('exercice') or 0)-1}"
     closing, opening = data.get(equity_key) or {}, data.get(previous_key) or {}
-    net_record = data.get('resultat_net_part_groupe' if equity_key == 'capitaux_propres_part_groupe' else 'resultat_net_social') or {}
+    net_key = 'resultat_net_part_groupe' if equity_key == 'capitaux_propres_part_groupe' else 'resultat_net_social'
+    net_record = data.get(net_key) or {}
     if all(x.get('validation_status') == 'selected_pages_visually_checked'
            and x.get('unite') == 'MMAD'
            and re.fullmatch(r'sha256:[0-9a-f]{64}', str(x.get('document_hash', '')))
-           for x in (closing, opening, net_record)) and closing.get('base') == opening.get('base') == net_record.get('base') and (
+           for x in (closing, opening, net_record)) and closing.get('base') and closing.get('base') == opening.get('base') == net_record.get('base') and (
                closing.get('period_end') == net_record.get('period_end') == out['period_end']
                and opening.get('period_end') == f"{facts['exercice']-1}{out['period_end'][4:]}"):
         previous_equity = fact(previous_key)
-        if net is not None and equity and equity > 0 and previous_equity and previous_equity > 0:
+        if net is not None and net == fact(net_key) and equity == fact(equity_key) and equity and equity > 0 and previous_equity and previous_equity > 0:
             out['roe_average_equity_pct'] = rnd(200*net/(equity+previous_equity))
     if facts.get('capital_change_unresolved'):
         out['pe'] = out['pb'] = out['dividend_yield_pct'] = None
