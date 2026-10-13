@@ -103,7 +103,7 @@
       "ytd_pct": -9.57
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-13T17:48:02.205637+00:00",
+    "observed_at": "2026-10-13T18:48:06.195323+00:00",
     "turnover_mad": 186113652.33,
     "breadth": {
       "up": 36,
@@ -113,6 +113,91 @@
     }
   },
   "news": [
+    {
+      "id": "2c9018217f53767354",
+      "title": "Philip R. Lane: The AI opportunity for Europe",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-13T18:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "3ecaba0805ab3c7b08",
+      "title": "Botswana : Bank Gaborone nomme Tsaone Raboloko pour conduire son redressement",
+      "url": "https://www.financialafrik.com/2026/10/13/botswana-bank-gaborone-nomme-tsaone-raboloko-pour-conduire-son-redressement/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-13T18:00:58+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "ca688a27006cdc18ba",
+      "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
+      "publisher": "Fed · politique monétaire",
+      "published_at": "2026-10-13T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
+    },
+    {
+      "id": "5c592a8934a473e706",
+      "title": "Trump's Middle Corridor Plans Face Russian and Iranian Roadblocks",
+      "url": "https://oilprice.com/Geopolitics/Asia/Trumps-Middle-Corridor-Plans-Face-Russian-and-Iranian-Roadblocks.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-13T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "834f02ed2820be2c07",
+      "title": "Côte d’Ivoire : Bouaké, nouvelle capitale du karité et du soja",
+      "url": "https://www.financialafrik.com/2026/10/13/cote-divoire-bouake-nouvelle-capitale-du-karite-et-du-soja/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-13T17:51:31+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "cbba660490b3e8d760",
       "title": "Moody’s évalue à 41 milliards d’euros la marge d’endettement des fonds de capital-investissement avant un risque accru sur leurs notes",
@@ -3516,23 +3601,6 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "a16be9dcdf6f93da44",
-      "title": "The World’s Gold Producers Are Starting to Hoard Their Own Gold",
-      "url": "https://oilprice.com/Metals/Gold/The-Worlds-Gold-Producers-Are-Starting-to-Hoard-Their-Own-Gold.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-06T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
       "id": "28500ac6a43a82aa5b",
       "title": "Frank Elderson: Effective supervision through timely remediation",
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261006_1~0df91e4e44.en.html",
@@ -4291,40 +4359,6 @@
       "scope": "MAROC"
     },
     {
-      "id": "1bbbb6f320ccda8cf1",
-      "title": "L’indice des prix à la production industrielle, énergétique et minière (IPPI) du mois d'Août 2026",
-      "url": "https://www.hcp.ma/L-indice-des-prix-a-la-production-industrielle-energetique-et-miniere-IPPI-du-mois-d-Aout-2026_a4351.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-09-30T10:16:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
-    },
-    {
-      "id": "46d958575980d208c3",
-      "title": "Situation économique nationale au deuxième trimestre 2026",
-      "url": "https://www.hcp.ma/Situation-economique-nationale-au-deuxieme-trimestre-2026_a4350.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-09-30T07:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
-    },
-    {
       "id": "f874b3e973a51c8bef",
       "title": "Holcim Maroc - CP relatif aux résultats du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/CP_Holcim_Maroc_S1_26.pdf",
@@ -5021,23 +5055,6 @@
       "scope": "MAROC"
     },
     {
-      "id": "4144e55288cc8a2846",
-      "title": "Rapport qualité : Recensement Général de la Population et de l’Habitat 2014",
-      "url": "https://www.hcp.ma/Rapport-qualite-Recensement-General-de-la-Population-et-de-l-Habitat-2014_a4349.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-09-23T11:16:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
-    },
-    {
       "id": "e71261c8ce86ab653c",
       "title": "Microdata - CP relatif aux résultats du 1er semestre 2026",
       "url": "https://www.ammc.ma/sites/default/files/CP_Microdata_S1_26.pdf",
@@ -5113,23 +5130,6 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "6d6b989a1ca340403f",
-      "title": "L'Indice des prix à la consommation (IPC) du mois d'Août 2026",
-      "url": "https://www.hcp.ma/L-Indice-des-prix-a-la-consommation-IPC-du-mois-d-Aout-2026_a4348.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-09-22T07:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
     }
   ],
   "results": [
@@ -5420,7 +5420,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 4385.45,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -5429,6 +5429,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -5900,12 +5901,12 @@
             "page": 21,
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
-            "note": "dettes de financement (emprunts obligataires 1.774.188, crédit-bail 60.916, établissements de crédit 109.793, autres emprunts 35.822 — note 5.2.12, p.27) + trésorerie-passif. ⚠️ Le rapport publie un « ENDETTEMENT NET » de 1.303 MMAD (p.17) sans en donner la définition ; notre formule donne 1 361,5. Écart de 58,5 non expliqué : nous publions la formule, et le disons.",
-            "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+            "note": "Dette de financement 1 980,718 + trésorerie-passif 133,361 MMAD. Écart de 58,489 MMAD avec la publication non expliqué. Retirer le crédit-bail ne constitue pas une définition documentée ; ratios suspendus.",
+            "accounting_basis": "consolidé (normes marocaines)",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+            "printed_page": 21,
+            "validation_status": "selected_pages_visually_checked"
           },
           "tresorerie_actif": {
             "value": 752.59,
@@ -5913,11 +5914,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
             "note": "disponibilités + titres et valeurs de placement. Recoupement : 328.174 + 424.416 − 133.361 = 619.229, contre « Trésorerie nette de clôture 619.372 » au tableau des flux (p.23) — 0,14 MMAD d'écart.",
-            "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+            "accounting_basis": "consolidé (normes marocaines)",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+            "printed_page": 21,
+            "validation_status": "selected_pages_visually_checked"
           },
           "excedent_brut_exploitation": {
             "value": 603,
@@ -5937,11 +5938,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
             "note": "dont emprunt obligataire de 449 MMAD émis en déc. 2025",
-            "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-            "original_unit": null,
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "accounting_basis": "consolidé (normes marocaines)",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+            "printed_page": 17,
+            "validation_status": "selected_pages_visually_checked"
           }
         },
         "eps_mad": 18.46,
@@ -5960,7 +5961,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": 10.64,
         "debt_reconciliation": {
@@ -5969,6 +5970,18 @@
           "reported_mmad": 1303.0,
           "difference_mmad": 58.49,
           "difference_pct": 4.49,
+          "primary_review": {
+            "reviewed_at": "2026-10-13",
+            "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+            "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+            "pages": [
+              17,
+              21,
+              27
+            ],
+            "conclusion": "Écart ADI confirmé ; pas de définition publiée permettant un pont complet. Dette et multiple restent suspendus.",
+            "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
+          },
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -6466,7 +6479,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -8.18,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -6475,6 +6488,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -6926,7 +6940,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -6935,6 +6949,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -7385,7 +7400,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -7394,6 +7409,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -7842,7 +7858,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 3972.64,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -7851,6 +7867,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -8300,7 +8317,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -8309,6 +8326,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -8816,7 +8834,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 2805.22,
         "net_debt_ebitda": 5.9,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -8825,6 +8843,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -9246,7 +9265,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -9255,6 +9274,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -9722,7 +9742,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -9731,6 +9751,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -10280,7 +10301,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 8.12,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -10289,6 +10310,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -10758,7 +10780,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -10767,6 +10789,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -11313,7 +11336,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -11322,6 +11345,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -11858,7 +11882,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -11867,6 +11891,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -12422,7 +12447,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 213.65,
         "net_debt_ebitda": 22.67,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -12431,6 +12456,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -12953,7 +12979,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -12962,6 +12988,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -13455,7 +13482,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -13464,6 +13491,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -13993,7 +14021,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -14002,6 +14030,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -14500,7 +14529,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -14509,6 +14538,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -15069,7 +15099,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 894.27,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -15078,6 +15108,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -15582,7 +15613,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 54.09,
         "net_debt_ebitda": 0.12,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -15591,6 +15622,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -16107,7 +16139,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 142.87,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -16116,6 +16148,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -16555,7 +16588,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 10.98,
         "net_debt_ebitda": 0.09,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -16564,6 +16597,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -17064,7 +17098,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 281.9,
         "net_debt_ebitda": 0.17,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -17073,6 +17107,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -17601,7 +17636,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 309.49,
         "net_debt_ebitda": 1.91,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -17610,6 +17645,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -18097,7 +18133,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -43.31,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -18106,6 +18142,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -18546,7 +18583,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -341.11,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -18555,6 +18592,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -18827,7 +18865,7 @@
         "currency": null,
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {},
@@ -19043,7 +19081,7 @@
         "currency": null,
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {},
@@ -19460,7 +19498,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 237.34,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -19469,6 +19507,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -20043,7 +20082,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 86.41,
         "net_debt_ebitda": 2.27,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -20052,6 +20091,7 @@
           "reported_mmad": 86.4,
           "difference_mmad": 0.01,
           "difference_pct": 0.01,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -20507,7 +20547,7 @@
         "currency": "TND",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {},
@@ -20974,7 +21014,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -20983,6 +21023,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -21439,7 +21480,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 59.36,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -21448,6 +21489,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -21927,7 +21969,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 473.51,
         "net_debt_ebitda": 0.3,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -21936,6 +21978,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -22476,7 +22519,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 3106.61,
         "net_debt_ebitda": 5.91,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -22485,6 +22528,7 @@
           "reported_mmad": 3122.43,
           "difference_mmad": -15.82,
           "difference_pct": 0.51,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -22994,7 +23038,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 196.04,
         "net_debt_ebitda": 0.69,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -23003,6 +23047,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -23532,7 +23577,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 17637.0,
         "net_debt_ebitda": 0.95,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -23541,6 +23586,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -23930,7 +23976,7 @@
         "currency": null,
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {},
@@ -24364,7 +24410,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 345.34,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -24373,6 +24419,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -24843,7 +24890,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 16.5,
         "net_debt_ebitda": 1.2,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -24852,6 +24899,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -25377,7 +25425,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 1341.28,
         "net_debt_ebitda": 2.9,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -25386,6 +25434,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -25868,7 +25917,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 4605.56,
         "net_debt_ebitda": 2.96,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -25877,6 +25926,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -26383,7 +26433,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 4.0,
         "net_debt_ebitda": 0.01,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -26392,6 +26442,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -26907,7 +26958,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 3569.8,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -26916,6 +26967,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -27431,7 +27483,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -27440,6 +27492,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -27915,7 +27968,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -27924,6 +27977,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -28406,7 +28460,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -28415,6 +28469,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -28924,7 +28979,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 117.66,
         "net_debt_ebitda": 1.07,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -28933,6 +28988,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -29356,11 +29412,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
             "note": "619,8 en 2024 — ×4,8",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
-            "original_unit": null,
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 170,
+            "validation_status": "selected_pages_visually_checked"
           },
           "capitaux_propres_part_groupe": {
             "value": 11478.3,
@@ -29368,11 +29424,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
             "note": "« Capitaux propres attribuables aux actionnaires ordinaires de la société mère 21 11 478,3 10 687,8 » ; en-tête « PASSIF (En millions de dirhams) Note 31/12/2025 31/12/2024 ». Le 21 est le renvoi de note. Capital 1 186,5 MMAD = 11 864 676 titres de nominale 100. ⚠️ Ne pas confondre avec la ligne « Capitaux propres consolidés Part du Groupe début d'exercice 10 687,7 » de la page 102 : c'est le solde d'OUVERTURE, donc les comptes 2024.",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "MMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 171,
+            "validation_status": "selected_pages_visually_checked"
           },
           "nombre_actions_au_rapport": {
             "value": 11864676,
@@ -29398,17 +29454,29 @@
             "printed_page": null,
             "validation_status": "referenced_import"
           },
+          "capitaux_propres_part_groupe_2024": {
+            "value": 10687.8,
+            "page": 86,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+            "note": "",
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 171,
+            "validation_status": "selected_pages_visually_checked"
+          },
           "dettes_financieres": {
             "value": 15323.5,
             "page": 86,
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
-            "note": "dettes financières non courantes HORS instruments dérivés de couverture (10 544,2 − 1 707,9 = 6 751,2 + 2 000,0 + 85,1) + dettes courantes envers les établissements de crédit (6 487,2, la totalité des dettes financières courantes, dérivés nuls). Les dérivés de couverture ne sont pas un emprunt. ⚠️ Le rapport publie un endettement net de 12 674 (p.68, clé `endettement_net`) ; notre formule donne 10 933,2. La société le définit p.68 : « (*) Endettement en intégrant le MtM et les contrats de location, ainsi que les comptes courants d'associés envers les sociétés non intégrées ». Avec les dérivés (MtM, 1 707,9) on obtient 12 641,1 ; les 33 restants seraient les comptes courants, non isolés au bilan. L'écart est donc de DÉFINITION, pas de chiffre.",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "note": "Emprunts et droits d’usage hors dérivés de couverture : 6 751,2 + 2 000 + 85,1 + 6 487,2 = 15 323,5 MMAD. Ne pas confondre avec la dette élargie de la société.",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "MMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 171,
+            "validation_status": "selected_pages_visually_checked"
           },
           "tresorerie_actif": {
             "value": 4390.3,
@@ -29416,11 +29484,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
             "note": "« Trésorerie et équivalent de trésorerie 20 4 390,3 2 589,1 »",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "MMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 171,
+            "validation_status": "selected_pages_visually_checked"
           },
           "excedent_brut_exploitation": {
             "value": 5982,
@@ -29428,23 +29496,47 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
             "note": "",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
-            "original_unit": null,
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 19,
+            "validation_status": "selected_pages_visually_checked"
           },
           "endettement_net": {
-            "value": 12674,
+            "value": 12674.4,
             "page": 68,
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
-            "note": "10 272 en 2024",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
-            "original_unit": null,
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "note": "Indicateur élargi de la société : inclut MtM, locations et comptes courants hors intégration globale. Corps du commentaire : 12 674,4 MMAD ; graphique arrondi : 12 674.",
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 135,
+            "validation_status": "selected_pages_visually_checked"
+          },
+          "instruments_derives_couverture_passif": {
+            "value": 1707.9,
+            "page": 86,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+            "note": "",
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 171,
+            "validation_status": "selected_pages_visually_checked"
+          },
+          "comptes_courants_associes_hors_perimetre_dette": {
+            "value": 33,
+            "page": 68,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+            "note": "Montant arrondi lu sur le graphique CCA 2025 ; pas déduit comme solde de la différence.",
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "MMAD",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "printed_page": 134,
+            "validation_status": "selected_pages_visually_checked"
           }
         },
         "eps_mad": null,
@@ -29456,24 +29548,53 @@
         "dividend_yield_pct": null,
         "earnings_mmad": 3002.0,
         "warnings": [
-          "EBITDA = EBE publié par la société (clé existante `excedent_brut_exploitation` 5 982, p.10). À titre de recoupement : résultat d'exploitation courant 3 997,2 + « Amortissements et provisions d'exploitation 8 -2 012,4 » = 6 009,6, mais cette ligne inclut des provisions.",
-          "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles.",
-          "Dette nette à rapprocher : calcul 10933.2 MMAD, publication 12674.0 MMAD ; écart -1740.8 MMAD. Aucun arbitrage automatique."
+          "EBE annuel publié 5 982 MMAD (PDF p.10, imprimée p.19) : ce n’est pas un EBITDA IFRS recalculé. La dotation aux amortissements et provisions inclut des provisions.",
+          "Variation du capital : rapprochement des dénominateurs requis ; BPA, PER et P/B retenus indisponibles."
         ],
         "accounting_basis": "consolidé IFRS, 31/12/2025",
         "currency": "MAD",
-        "net_debt_strict_mmad": null,
-        "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "net_debt_strict_mmad": 10933.2,
+        "net_debt_ebitda": 1.83,
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
-        "roe_average_equity_pct": null,
+        "roe_average_equity_pct": 27.09,
         "debt_reconciliation": {
-          "status": "unresolved",
+          "status": "scope_reconciled",
           "calculated_mmad": 10933.2,
-          "reported_mmad": 12674.0,
-          "difference_mmad": -1740.8,
+          "reported_mmad": 12674.4,
+          "difference_mmad": -1741.2,
           "difference_pct": 13.74,
-          "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
+          "primary_review": {
+            "reviewed_at": "2026-10-13",
+            "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+            "document_hash": "sha256:c55a5149908f04488db23af43ff3e952dbeb72126a7ec00836f7b7452f648506",
+            "pages": [
+              10,
+              68,
+              86
+            ],
+            "conclusion": "Pont contrôlé : 10 933,2 + 1 707,9 + 33 = 12 674,1 MMAD, face à 12 674,4 publiés. Résidu de 0,3 MMAD compatible avec les arrondis du graphique ; définitions distinctes conservées.",
+            "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
+          },
+          "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre.",
+          "bridge": {
+            "components": [
+              {
+                "key": "instruments_derives_couverture_passif",
+                "label": "Couvertures financières (MtM)",
+                "value_mmad": 1707.9
+              },
+              {
+                "key": "comptes_courants_associes_hors_perimetre_dette",
+                "label": "Comptes courants d’associés hors périmètre",
+                "value_mmad": 33.0
+              }
+            ],
+            "reconstructed_reported_mmad": 12674.1,
+            "residual_mmad": -0.3,
+            "absolute_tolerance_mmad": 1.0,
+            "definition": "La dette financière nette calculée exclut les couvertures. Le chiffre société les inclut, ainsi que les comptes courants hors intégration globale. Le crédit-bail est déjà dans la dette calculée : ne pas le rajouter."
+          }
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
         "pnb_mmad": null,
@@ -29506,7 +29627,7 @@
         "external_references": [],
         "eps_denominator": "nombre de titres référencé ; BPA indicatif",
         "book_denominator": "nombre de titres référencé",
-        "net_debt_method": "Dette nette non rapprochée : calcul et chiffre publié divergent au-delà de la tolérance. Dette nette et multiple suspendus ; les deux valeurs restent visibles pour vérification du périmètre.",
+        "net_debt_method": "Périmètres annuels rapprochés sur pièce. Dette financière nette calculée distincte de l’indicateur élargi publié ; La dette financière nette calculée exclut les couvertures. Le chiffre société les inclut, ainsi que les comptes courants hors intégration globale. Le crédit-bail est déjà dans la dette calculée : ne pas le rajouter. Le multiple utilise l’EBE annuel publié, pas un EBITDA recalculé ; aucune incidence sur le score.",
         "coverage_pct": 25,
         "missing_metrics": [
           "eps_mad",
@@ -29952,7 +30073,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 148.62,
         "net_debt_ebitda": 3.98,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -29961,6 +30082,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -30451,7 +30573,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -30460,6 +30582,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -30984,7 +31107,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -752.63,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -30993,6 +31116,7 @@
           "reported_mmad": -752.63,
           "difference_mmad": -0.0,
           "difference_pct": 0.0,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -31381,11 +31505,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
             "note": "« Part du groupe 159 408 126 161 »",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 107,
+            "validation_status": "selected_pages_visually_checked"
           },
           "capitaux_propres_part_groupe": {
             "value": 1551.387,
@@ -31393,11 +31517,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
             "note": "« Total Capitaux propres, part du groupe 1 562 845 1 551 387 ». ⚠️ L'en-tête est « en KMAD Actif 31/12/2024 31/12/2025 » : la colonne de GAUCHE est 2024. L'exercice clos vaut donc 1 551 387 KMAD, et prendre le premier nombre aurait publié les comptes 2024. Capital 924 674 KMAD = 9 246 740 titres de nominale 100.",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 106,
+            "validation_status": "selected_pages_visually_checked"
           },
           "nombre_actions_au_rapport": {
             "value": 9246740,
@@ -31411,17 +31535,29 @@
             "printed_page": null,
             "validation_status": "referenced_import"
           },
+          "capitaux_propres_part_groupe_2024": {
+            "value": 1562.845,
+            "page": 54,
+            "unit": "MMAD",
+            "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+            "note": "",
+            "accounting_basis": "consolidé IFRS",
+            "original_unit": "KMAD",
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 106,
+            "validation_status": "selected_pages_visually_checked"
+          },
           "dettes_financieres": {
             "value": 1248.95,
             "page": 54,
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
             "note": ". emprunts long terme 931 815 + emprunts et crédits à moins d'un an 94 706 (dont intérêts courus 12 173) + banques créditrices 222 429 = 1 248 950 KMAD. Recoupé au tableau de variation de la dette de la note annexe (p.62) : « Emprunts et dettes financières ... 1 248 949 »",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 106,
+            "validation_status": "selected_pages_visually_checked"
           },
           "tresorerie_actif": {
             "value": 259.728,
@@ -31429,11 +31565,11 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
             "note": ". trésorerie 200 480 + VMP et autres placements 59 248 : le tableau des flux (p.55) les compte dans sa trésorerie, « Trésorerie de clôture 25 126 » = 200 480 + 59 248 − 222 429 − 12 173 (intérêts courus)",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 106,
+            "validation_status": "selected_pages_visually_checked"
           },
           "excedent_brut_exploitation": {
             "value": 315.384,
@@ -31441,23 +31577,23 @@
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
             "note": "« EBE 351 077 315 384 ». EBE consolidé publié ; texte p.40 « L’EBE consolidé 2025 s’établit à 315 MDH »",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "KMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 107,
+            "validation_status": "selected_pages_visually_checked"
           },
           "endettement_net": {
             "value": 828,
             "page": 40,
             "unit": "MMAD",
             "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
-            "note": "« La dette nette bancaire s’établit à 828 Mdh contre 850 Mdh en 2024 ». « dette nette bancaire » PUBLIÉE par la société, sans définition de son périmètre (aussi p.17 : « Dette nette bancaire au 31 décembre 2025 : 828 Mdh »). Elle ne se recolle pas au bilan : 1 248,950 − 259,728 = 989,2 MMAD, écart de 161 MMAD non expliqué par une ligne du rapport. Non utilisée dans les ratios ; écart consigné dans _ecarts_mesures",
-            "accounting_basis": "consolidé IFRS, 31/12/2025",
+            "note": "Dette nette bancaire publiée, définition détaillée non trouvée. Ne pas assimiler à une dette financière nette globale ; aucun pont complet avec le bilan.",
+            "accounting_basis": "consolidé IFRS",
             "original_unit": "MMAD",
-            "document_hash": null,
-            "printed_page": null,
-            "validation_status": "referenced_import"
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "printed_page": 79,
+            "validation_status": "selected_pages_visually_checked"
           }
         },
         "eps_mad": 13.64,
@@ -31470,22 +31606,34 @@
         "earnings_mmad": 126.161,
         "warnings": [
           "Colonnes : bilan et compte de résultat en ordre 2024 | 2025 (exercice clos à DROITE), tableau des flux en ordre 2025 | 2024 (exercice clos à GAUCHE).",
-          "La « dette nette bancaire » de 828 MMAD publiée par la société (p.17, p.40) n'est pas définie et ne se recolle pas au bilan (989,2 MMAD par le bilan et la note de dette, p.54, p.62) : écart de 161 MMAD consigné, la valeur du bilan est publiée.",
+          "La « dette nette bancaire » de 828 MMAD publiée par la société (p.17, p.40) n'est pas définie et ne se recolle pas au bilan (989,2 MMAD par le bilan et la note de dette, p.54, p.62) : écart de 161 MMAD consigné, les valeurs du bilan sont conservées pour contrôle, les ratios restent suspendus.",
           "Dette nette à rapprocher : calcul 989.22 MMAD, publication 828.0 MMAD ; écart 161.22 MMAD. Aucun arbitrage automatique."
         ],
         "accounting_basis": "consolidé IFRS, 31/12/2025",
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
-        "roe_average_equity_pct": null,
+        "roe_average_equity_pct": 8.1,
         "debt_reconciliation": {
           "status": "unresolved",
           "calculated_mmad": 989.22,
           "reported_mmad": 828.0,
           "difference_mmad": 161.22,
           "difference_pct": 19.47,
+          "primary_review": {
+            "reviewed_at": "2026-10-13",
+            "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+            "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+            "pages": [
+              40,
+              54,
+              62
+            ],
+            "conclusion": "Bilan et annexe de dette recoupés (1 KMAD d’arrondi). Le pont vers la dette nette bancaire publiée reste absent ; dette et multiple suspendus.",
+            "method": "Pages PDF rendues et lues ; pages imprimées conservées séparément. Contrôle annuel uniquement, aucun remplacement du S1."
+          },
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -32014,7 +32162,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 544.4,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -32023,6 +32171,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -32491,7 +32640,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 2180.19,
         "net_debt_ebitda": 3.6,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -32500,6 +32649,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -32977,7 +33127,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 51.78,
         "net_debt_ebitda": 0.43,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -32986,6 +33136,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -33432,7 +33583,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 1867.01,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -33441,6 +33592,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -33903,7 +34055,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -0.34,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -33912,6 +34064,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -34378,7 +34531,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 1968.44,
         "net_debt_ebitda": 3.12,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -34387,6 +34540,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -34834,7 +34988,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -56.55,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -34843,6 +34997,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -35261,7 +35416,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -35270,6 +35425,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -35695,7 +35851,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -593.01,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -35704,6 +35860,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -36192,7 +36349,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -84.51,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -36201,6 +36358,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -36585,7 +36743,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -36594,6 +36752,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -37073,7 +37232,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 23.92,
         "net_debt_ebitda": 0.03,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -37082,6 +37241,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -37540,7 +37700,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": -397.4,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -37549,6 +37709,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -38041,7 +38202,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 815.04,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -38050,6 +38211,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -38583,7 +38745,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 827.87,
         "net_debt_ebitda": 1.09,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -38592,6 +38754,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -39048,7 +39211,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 75.01,
         "net_debt_ebitda": 3.11,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -39057,6 +39220,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -39555,7 +39719,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 193.93,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -39564,6 +39728,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -40039,7 +40204,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 220.58,
         "net_debt_ebitda": 9.38,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -40048,6 +40213,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -40554,7 +40720,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 336.14,
         "net_debt_ebitda": 0.87,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -40563,6 +40729,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -41047,7 +41214,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 782.75,
         "net_debt_ebitda": 0.3,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -41056,6 +41223,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -41489,7 +41657,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -41498,6 +41666,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -41983,7 +42152,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 6410.01,
         "net_debt_ebitda": 2.0,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -41992,6 +42161,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -42474,7 +42644,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 758.12,
         "net_debt_ebitda": 17.05,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -42483,6 +42653,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -42949,7 +43120,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 154.97,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -42958,6 +43129,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -43398,7 +43570,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": null,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -43407,6 +43579,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -43871,7 +44044,7 @@
         "currency": "MAD",
         "net_debt_strict_mmad": 47.36,
         "net_debt_ebitda": null,
-        "calculation_version": "nour-fundamentals-v4",
+        "calculation_version": "nour-fundamentals-v5",
         "point_in_time_ready": false,
         "roe_average_equity_pct": null,
         "debt_reconciliation": {
@@ -43880,6 +44053,7 @@
           "reported_mmad": null,
           "difference_mmad": null,
           "difference_pct": null,
+          "primary_review": null,
           "tolerance": "Maximum de 1 MMAD et 2 % de la valeur publiée ; tolérance de contrôle, pas certification du périmètre."
         },
         "roe_method": "Résultat annuel / capitaux propres de clôture, non moyens",
@@ -44121,7 +44295,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-13",
-    "observed_at": "2026-10-13T17:48:02.205637+00:00",
+    "observed_at": "2026-10-13T18:48:06.195323+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -44265,7 +44439,7 @@
   "market_volume_audit": {
     "status": "matched",
     "asof": "2026-10-13",
-    "observed_at": "2026-10-13T17:48:02.205637+00:00",
+    "observed_at": "2026-10-13T18:48:06.195323+00:00",
     "expected_lines": 66,
     "observed_lines": 66,
     "coverage_complete": true,
@@ -90781,13 +90955,13 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-13T17:48:02.205637+00:00",
+    "checked_at": "2026-10-13T18:48:06.195323+00:00",
     "asof": "2026-10-13"
   },
   "news_health": {
-    "checked_at": "2026-10-13T17:48:01.963447+00:00",
+    "checked_at": "2026-10-13T18:48:05.934233+00:00",
     "status": "partial",
-    "fetched_items": 87,
+    "fetched_items": 88,
     "errors": [
       "Mining.com: HTTP Error 403: Forbidden"
     ],
@@ -90820,7 +90994,7 @@
       {
         "name": "Fed · politique monétaire",
         "status": "ok",
-        "items": 3
+        "items": 4
       },
       {
         "name": "Fed · presse francophone",
@@ -90880,7 +91054,7 @@
     ]
   },
   "health": {
-    "checked_at": "2026-10-13T17:47:55.210753+00:00",
+    "checked_at": "2026-10-13T18:47:59.898788+00:00",
     "source": "CDG Capital Bourse",
     "result": "unchanged",
     "last_session": "2026-10-13",
@@ -90896,32 +91070,32 @@
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-13T17:48:04.807365+00:00",
+    "checked_at": "2026-10-13T18:48:06.939626+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
-        "value": 7801.35,
-        "change_pct": -0.07544279412442063,
-        "observed_at": "2026-10-13T17:47:59+00:00",
+        "value": 7804.33,
+        "change_pct": -0.03727309522955429,
+        "observed_at": "2026-10-13T18:47:53+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
         "ticker": "DJ:DJI",
-        "value": 51692.58,
-        "change_pct": -0.30466407781595595,
-        "observed_at": "2026-10-13T17:48:00+00:00",
+        "value": 51721.01,
+        "change_pct": -0.249833415460397,
+        "observed_at": "2026-10-13T18:47:52+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
@@ -90934,7 +91108,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -90947,98 +91121,98 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
         "ticker": "FX_IDC:USDMAD",
-        "value": 9.8041,
-        "change_pct": 0.8195878408950761,
-        "observed_at": "2026-10-13T17:47:58+00:00",
+        "value": 9.8023,
+        "change_pct": 0.8010777014520323,
+        "observed_at": "2026-10-13T18:48:01+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
         "ticker": "FX_IDC:EURMAD",
-        "value": 10.961,
-        "change_pct": 1.0696173351774978,
-        "observed_at": "2026-10-13T17:44:29+00:00",
+        "value": 10.973,
+        "change_pct": 1.1802674043337953,
+        "observed_at": "2026-10-13T18:44:25+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
         "ticker": "CBOE:VIX",
-        "value": 15.49,
-        "change_pct": 1.840894148586452,
-        "observed_at": "2026-10-13T17:46:31+00:00",
+        "value": 15.43,
+        "change_pct": 1.446416831032208,
+        "observed_at": "2026-10-13T18:47:46+00:00",
         "currency": null,
         "mode": "delayed_streaming_900",
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
         "ticker": "TVC:DXY",
-        "value": 102.246,
-        "change_pct": -0.31782552743439496,
-        "observed_at": "2026-10-13T17:47:59+00:00",
+        "value": 102.175,
+        "change_pct": -0.3870451975197964,
+        "observed_at": "2026-10-13T18:47:54+00:00",
         "currency": "USD",
         "mode": "streaming",
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
         "ticker": "COMEX:GC1!",
-        "value": 4179.4,
-        "change_pct": -0.2672648308118343,
-        "observed_at": "2026-10-13T17:47:46+00:00",
+        "value": 4181.5,
+        "change_pct": -0.21715267503460992,
+        "observed_at": "2026-10-13T18:48:01+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
         "ticker": "ICEEUR:BRN1!",
-        "value": 105.66,
-        "change_pct": -0.9282700421941013,
-        "observed_at": "2026-10-13T17:47:57+00:00",
+        "value": 105.73,
+        "change_pct": -0.8626347866854212,
+        "observed_at": "2026-10-13T18:47:56+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
         "ticker": "COMEX:HG1!",
         "value": 6.7255,
         "change_pct": -0.3186601452497351,
-        "observed_at": "2026-10-13T17:47:58+00:00",
+        "observed_at": "2026-10-13T18:48:01+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-13T17:48:04.807365+00:00",
+        "collected_at": "2026-10-13T18:48:06.939626+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
@@ -91063,8 +91237,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-13T17:48:10.934947+00:00",
-    "checked_at": "2026-10-13T17:48:04.807365+00:00",
+    "cutoff": "2026-10-13T18:48:13.500462+00:00",
+    "checked_at": "2026-10-13T18:48:06.939626+00:00",
     "status": "partial",
     "groups": [
       {
@@ -91074,34 +91248,34 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7801.35,
-            "change_pct": -0.07544279412442063,
+            "value": 7804.33,
+            "change_pct": -0.03727309522955429,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:59+00:00",
+            "observed_at": "2026-10-13T18:47:53+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 51692.58,
-            "change_pct": -0.30466407781595595,
+            "value": 51721.01,
+            "change_pct": -0.249833415460397,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:48:00+00:00",
+            "observed_at": "2026-10-13T18:47:52+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
@@ -91118,7 +91292,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
@@ -91135,7 +91309,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           }
         ]
@@ -91147,68 +91321,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8041,
-            "change_pct": 0.8195878408950761,
+            "value": 9.8023,
+            "change_pct": 0.8010777014520323,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:58+00:00",
+            "observed_at": "2026-10-13T18:48:01+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.961,
-            "change_pct": 1.0696173351774978,
+            "value": 10.973,
+            "change_pct": 1.1802674043337953,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:44:29+00:00",
+            "observed_at": "2026-10-13T18:44:25+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 15.49,
-            "change_pct": 1.840894148586452,
+            "value": 15.43,
+            "change_pct": 1.446416831032208,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:46:31+00:00",
+            "observed_at": "2026-10-13T18:47:46+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.246,
-            "change_pct": -0.31782552743439496,
+            "value": 102.175,
+            "change_pct": -0.3870451975197964,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:59+00:00",
+            "observed_at": "2026-10-13T18:47:54+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           }
         ]
@@ -91220,34 +91394,34 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4179.4,
-            "change_pct": -0.2672648308118343,
+            "value": 4181.5,
+            "change_pct": -0.21715267503460992,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:46+00:00",
+            "observed_at": "2026-10-13T18:48:01+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 105.66,
-            "change_pct": -0.9282700421941013,
+            "value": 105.73,
+            "change_pct": -0.8626347866854212,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:57+00:00",
+            "observed_at": "2026-10-13T18:47:56+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
@@ -91258,13 +91432,13 @@
             "change_pct": -0.3186601452497351,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-13T17:47:58+00:00",
+            "observed_at": "2026-10-13T18:48:01+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-13T17:48:04.807365+00:00",
+            "collected_at": "2026-10-13T18:48:06.939626+00:00",
             "collection_state": "collected"
           },
           {
@@ -91302,13 +91476,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-13",
-    "started_at": "2026-10-13T17:47:54+00:00",
-    "built_at": "2026-10-13T17:48:10.934947+00:00",
+    "started_at": "2026-10-13T18:47:59+00:00",
+    "built_at": "2026-10-13T18:48:13.500462+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "38441523580",
-    "commit": "5d321764e2e3864c771a0b60c138c5d781bf2c59",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38441523580"
+    "run_id": "38449656216",
+    "commit": "5c947979802867e290f8ee643bca791ff2d76c35",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38449656216"
   },
   "score_archive": {
     "daily_snapshots": 6,
