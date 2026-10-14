@@ -13,7 +13,7 @@ Le relevé de marché totalise 183,74 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-14T20:23:17.131913+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-14T22:02:41.912408+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -347,7 +347,7 @@ Aucun dépôt récent retenu pour cette période.
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-14T20:23:18.135551+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-14T22:02:42.693236+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
@@ -359,13 +359,13 @@ S&P 500
 
 7 718,94points · -1,11 %
 
-Dernière observation source2026-10-14T20:01:14+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-14T20:36:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
 51 621,48points · -0,09 %
 
-Dernière observation source2026-10-14T20:01:14+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-14T20:36:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -383,47 +383,47 @@ Risque et devises
 
 USD/MAD
 
-9,8691MAD / USD · 0,71 %
+9,8716MAD / USD · -0,01 %
 
-Dernière observation source2026-10-14T20:23:17+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-14T22:01:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
 11,0030MAD / EUR · 0,30 %
 
-Dernière observation source2026-10-14T20:19:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-14T21:59:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-16,86points · 10,41 %
+16,87points · 10,48 %
 
-Dernière observation source2026-10-14T20:01:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-14T20:15:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,52points · 0,30 %
+102,53points · 0,31 %
 
-Dernière observation source2026-10-14T20:20:50+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-14T22:00:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 122,20USD / once troy · -1,32 %
+4 107,90USD / once troy · -1,66 %
 
-Dernière observation source2026-10-14T20:22:53+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-14T22:02:33+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 106,06USD / baril · 0,35 %
 
-Dernière observation source2026-10-14T20:23:05+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-14T21:59:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,61USD / livre · -1,71 %
+6,66USD / livre · -0,97 %
 
-Dernière observation source2026-10-14T20:22:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-14T22:02:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -434,6 +434,22 @@ Archive conservée après collecte incomplète2026-10-14T15:11:59+00:00Différé
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Crude-Oil/White-House-Turns-to-Korean-War-Era-Law-as-Diesel-Prices-Stay-Above-6.html] White House Turns to Korean War-Era Law as Diesel Prices Stay Above $6 ↗
+
+OilPrice · 2026-10-14T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/US-Crude-Oil-Inventories-See-Massive-Drop-Off.html] US Crude Oil Inventories See Massive Drop Off ↗
+
+OilPrice · 2026-10-14T21:43:47+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/14/hicham-al-morabet-faire-de-lafis-un-lieu-ou-lon-decide-autant-quon-debat/] Hicham Al Morabet : «Faire de l’AFIS un lieu où l’on décide autant qu’on débat» ↗
+
+Financial Afrik · 2026-10-14T21:12:09+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Natural-Gas/Trump-Announces-80-Billion-Taiwan-LNG-Deal.html] Trump Announces $80 Billion Taiwan LNG Deal ↗
+
+OilPrice · 2026-10-14T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/10/14/musique-la-diaspora-afro-francophone-cree-de-la-valeur-les-etats-ont-tout-a-y-gagner/] Musique : la diaspora afro-francophone crée de la valeur, les États ont tout à y gagner ↗
 
@@ -450,22 +466,6 @@ Financial Afrik · 2026-10-14T19:58:50+00:00 · Périmètre non établi · Écon
  [https://www.financialafrik.com/2026/10/14/le-dc-br-recrute-un-charge-de-la-securite-des-systemes-dinformation-a-abidjan/] Le DC/BR recrute un chargé de la sécurité des systèmes d’information à Abidjan ↗
 
 Financial Afrik · 2026-10-14T19:54:06+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/14/la-quotidienne-des-marches-financiers-africains-lipo-de-dangote-prolongee/] La quotidienne des marchés financiers africains : l’IPO de Dangote prolongée ↗
-
-Financial Afrik · 2026-10-14T19:18:06+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Geopolitics/Middle-East/Ship-Sinks-in-Strait-of-Hormuz-as-Iran-Escalates-Maritime-Attacks.html] Ship Sinks in Strait of Hormuz as Iran Escalates Maritime Attacks ↗
-
-OilPrice · 2026-10-14T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Geopolitics/Asia/Putin-Fights-to-Preserve-Russias-Fading-Influence-in-Central-Asia.html] Putin Fights to Preserve Russia’s Fading Influence in Central Asia ↗
-
-OilPrice · 2026-10-14T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Houthis-Vow-More-Attacks-After-Strike-on-Aramco-Headquarters.html] Houthis Vow More Attacks After Strike on Aramco Headquarters ↗
-
-OilPrice · 2026-10-14T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -521,23 +521,23 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-13T13:14:09+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Crude-Oil/White-House-Turns-to-Korean-War-Era-Law-as-Diesel-Prices-Stay-Above-6.html] White House Turns to Korean War-Era Law as Diesel Prices Stay Above $6 ↗
+
+OilPrice · 2026-10-14T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/US-Crude-Oil-Inventories-See-Massive-Drop-Off.html] US Crude Oil Inventories See Massive Drop Off ↗
+
+OilPrice · 2026-10-14T21:43:47+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/14/hicham-al-morabet-faire-de-lafis-un-lieu-ou-lon-decide-autant-quon-debat/] Hicham Al Morabet : «Faire de l’AFIS un lieu où l’on décide autant qu’on débat» ↗
+
+Financial Afrik · 2026-10-14T21:12:09+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Natural-Gas/Trump-Announces-80-Billion-Taiwan-LNG-Deal.html] Trump Announces $80 Billion Taiwan LNG Deal ↗
+
+OilPrice · 2026-10-14T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/10/14/musique-la-diaspora-afro-francophone-cree-de-la-valeur-les-etats-ont-tout-a-y-gagner/] Musique : la diaspora afro-francophone crée de la valeur, les États ont tout à y gagner ↗
 
 Financial Afrik · 2026-10-14T20:16:46+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Britains-47-Billion-North-Sea-Oil-Decision-Hangs-in-the-Balance.html] Britain's $47 Billion North Sea Oil Decision Hangs in the Balance ↗
-
-OilPrice · 2026-10-14T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/14/le-dc-br-recrute-un-gestionnaire-de-projet-a-abidjan/] Le DC/BR recrute un gestionnaire de projet à Abidjan ↗
-
-Financial Afrik · 2026-10-14T19:58:50+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/14/le-dc-br-recrute-un-charge-de-la-securite-des-systemes-dinformation-a-abidjan/] Le DC/BR recrute un chargé de la sécurité des systèmes d’information à Abidjan ↗
-
-Financial Afrik · 2026-10-14T19:54:06+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/14/la-quotidienne-des-marches-financiers-africains-lipo-de-dangote-prolongee/] La quotidienne des marchés financiers africains : l’IPO de Dangote prolongée ↗
-
-Financial Afrik · 2026-10-14T19:18:06+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
