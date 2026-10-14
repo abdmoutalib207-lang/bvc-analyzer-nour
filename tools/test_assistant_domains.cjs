@@ -82,6 +82,11 @@ for(const [s,row] of Object.entries(data.symbols)){
 }
 check('Explique la CVaR ADI pour les nuls',r=>r.domain==='risk'&&r.text.includes(data.knowledge.definitions.cvar));
 check('VaR ADI face au MASI',r=>r.domain==='risk'&&r.symbols.length===1&&r.symbols[0]==='ADI');
+check('Expected shortfall ADI face au MASI',r=>r.domain==='risk'&&r.symbols.length===1&&r.symbols[0]==='ADI');
+check('Value at risk ADI face au MASI le 31/03/2026',r=>r.text.includes('n’est pas reconstruite aux dates demandées')&&!r.text.includes('VaR historique 95 % · 1 séance :'));
+check('Expected shortfall ADI face au MASI le 31/03/2026',r=>r.text.includes('n’est pas reconstruite aux dates demandées')&&!r.text.includes('CVaR historique 95 % · 1 séance :'));
+check('VaR ADI sur 1 séance',r=>r.domain==='risk'&&!r.text.includes('Cet horizon personnalisé n’est pas fourni'));
+for(const q of ['VaR 99 % ADI','CVaR ADI à 90 %'])check(q,r=>r.text.includes('Ce niveau de confiance n’est pas fourni')&&!r.text.includes('VaR historique 95 % · 1 séance :'));
 check('VaR ADI sur 5 séances',r=>r.text.includes('une séance uniquement')&&r.text.includes('Aucun changement d’horizon'));
 check('VaR ADI demain',r=>r.text.includes(data.definitions.probability));
 check('VaR ADI le 31/03/2026',r=>r.text.includes('n’est pas reconstruite aux dates demandées')&&!r.text.includes('VaR historique 95 % · 1 séance :'));

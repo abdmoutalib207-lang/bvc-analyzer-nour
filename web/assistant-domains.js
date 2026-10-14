@@ -168,11 +168,17 @@
     }
     if(/risque|beta|correlation|volatil|drawdown|baisse maximale|rendement relatif|ecart.*masi|\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q)){
       for(const row of rows){title(row);const r=row.market_risk||{};lines.push(`Risque : ${stateLabel(r.status)} · ${r.paired_returns??0} rendements appariés · minimum ${r.minimum??60} · ${r.first||'—'} → ${r.last||'—'} · fenêtre complète ${r.complete_window?'oui':'non'}.`);
-        if(horizon&&!/volatil/.test(q))lines.push('Cet horizon personnalisé n’est pas fourni pour le risque. Les valeurs ci-dessous gardent leur fenêtre publiée de 253 séances MASI.');
+        const tailRequested=/\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q);
+        if(horizon&&!/volatil/.test(q)&&!tailRequested)lines.push('Cet horizon personnalisé n’est pas fourni pour le risque. Les valeurs ci-dessous gardent leur fenêtre publiée de 253 séances MASI.');
         const metrics=[[/beta|risque/,'Bêta','beta',''],[/correlation|risque/,'Corrélation MASI','correlation',''],[/volatil|risque/,'Volatilité annualisée titre','volatility_pct','%'],[/volatil|risque/,'Volatilité MASI appariée','masi_volatility_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale titre','drawdown_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale MASI','masi_drawdown_pct','%'],[/rendement relatif|ecart|risque/,'Écart de rendement au MASI','relative_return_pp','points']];
         for(const [p,label,k,u] of metrics)if(p.test(q))lines.push(`${label} : ${fmt(r[k],u)}.`);
         if(/risque|\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q)){
           const tail=r.tail_risk||{};
+          const confidence=q.match(/\b(\d+(?:[.,]\d+)?)\s*%/);
+          if(tailRequested&&confidence&&Number(confidence[1].replace(',','.'))!==95){
+            lines.push('Ce niveau de confiance n’est pas fourni. Seules la VaR et la CVaR historiques à 95 % sur une séance sont exportées. Aucun autre quantile n’est calculé.');
+            continue;
+          }
           lines.push(`VaR historique 95 % · 1 séance : ${fmt(tail.var95_loss_pct,'%')}. CVaR historique 95 % · 1 séance : ${fmt(tail.cvar95_loss_pct,'%')}.`);
           lines.push(`Échantillon de queue : ${tail.observations??0} rendements quotidiens · minimum ${tail.minimum??120} · ${tail.tail_observations??0} observations dans la queue · ${tail.first_session||'—'} → ${tail.last_session||'—'}. ${tail.reason||''}`);
           if(tail.note)lines.push(tail.note);

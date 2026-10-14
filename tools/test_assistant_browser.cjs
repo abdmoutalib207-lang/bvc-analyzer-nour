@@ -223,6 +223,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
       assert.equal(await native.locator('#lab-help-close').isVisible(),false);
       await native.locator('#lab-help-toggle').click();
       assert.equal(await native.locator('#lab-help-content').isVisible(),false);
+      await native.goto(new URL('titres/ADI.html',base).href);
+      const nativeRisk=native.locator('#risk-help');
+      await native.locator('#risk-help summary').click();
+      assert.equal(await nativeRisk.evaluate(el=>el.open),true);
+      assert.ok((await nativeRisk.innerText()).includes('Une perte future peut être plus forte'));
+      await native.locator('#risk-help summary').focus();
+      await native.keyboard.press('Enter');
+      assert.equal(await nativeRisk.evaluate(el=>el.open),false);
       await nojs.close();
     }
     console.log(`Browser QA: ${interactions} page/viewport journeys; natural definitions, comparison and semester follow-ups, benchmark MASI subject, global briefing, lab parity, cost/horizon follow-up, full CSV date/volume follow-up and explicit context reset; laboratory help and no-JS at 3 widths; no LLM call.`);
