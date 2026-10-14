@@ -5,6 +5,7 @@ import json
 import math
 from statistics import median, stdev, mean
 from .peer_groups import group_for
+from .risk_tail import historical_tail
 
 VERSION = 'nour-research-v1'
 # Conservative boundaries copied in read-only consultation of bvc_config.py,
@@ -63,18 +64,35 @@ def risk(record, history, asof):
     market = calendar(history, asof)
     days = list(market)[-253:]
     p = prices(record, asof)
+    # A zero quantity is not a traded close. Removing it leaves a hole, never
+    # a synthetic zero return or an interval falsely labelled "one session".
+    inactive = {b.get('d') for b in record.get('candles', [])
+                if finite(b.get('v')) and b['v'] == 0}
+    p = {d: v for d, v in p.items() if d not in inactive}
     boundary = EVENTS.get(record.get('symbol'))
     if record.get('resumed_recently'):
         n = record.get('sessions_since_resume')
         available = sorted(p)
-        p = {d: p[d] for d in available[-n:]} if isinstance(n, int) and n > 0 else {}
+        p = {d: p[d] for d in available[-n:]} if isinstance(n, int) and not isinstance(n, bool) and n > 0 else {}
     pairs = [(d, p[d] / p[a] - 1, market[d] / market[a] - 1)
              for a, d in zip(days, days[1:]) if a in p and d in p
              and not (boundary and a < boundary <= d)]
     result = {'status': 'insufficient', 'paired_returns': len(pairs), 'minimum': 60,
               'market_calendar_sessions': len(days), 'window': '253 dernières séances MASI',
-              'note': 'Cours seuls, hors dividendes. Dates adjacentes MASI appariées, aucune interpolation. Bêta et corrélation décrivent le passé.'}
+              'version': 'nour-market-risk-v2',
+              'excluded_no_exchange_sessions': sum(d in inactive for d in days),
+              'excluded_daily_intervals': max(0, len(days)-1-len(pairs)),
+              'annualization_sessions': 252,
+              'tail_risk': historical_tail([] if record.get('suspended') else [r[1] for r in pairs]),
+              'note': 'Cours seuls, hors dividendes. Clôtures échangées sur dates adjacentes MASI appariées, aucune interpolation. Les intervalles sur plusieurs séances ne sont pas transformés en rendements quotidiens. Bêta et corrélation décrivent le passé.'}
+    result['tail_risk'].update(first_session=(next((a for a,d in zip(days,days[1:]) if d == pairs[0][0]), None)
+                                              if pairs else None),
+                               last_session=pairs[-1][0] if pairs else None)
+    if record.get('suspended'):
+        result['tail_risk'].update(status='unavailable', reason='Titre suspendu : risque de marché non publié.')
+        result['reason'] = 'Titre suspendu.'
     if record.get('suspended') or len(pairs) < 60:
+        result.setdefault('reason', f'{len(pairs)} rendements appariés ; minimum 60.')
         return result
     x, y = [r[1] for r in pairs], [r[2] for r in pairs]
     sx, sy = stdev(x), stdev(y)

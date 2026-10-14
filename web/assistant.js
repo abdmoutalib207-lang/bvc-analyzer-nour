@@ -33,7 +33,7 @@
       if(words.includes(s.toLowerCase())&&(!common.has(s.toLowerCase())||originalWords.includes(s)))found.push(s);
     }
     const unique=[...new Set(found)];
-    const benchmark=/risque|beta|correlation|volatil|drawdown|rendement relatif|ecart.*masi/.test(normalize(question));
+    const benchmark=/risque|beta|correlation|volatil|drawdown|rendement relatif|ecart.*masi|\bc?var(?:95)?\b|value at risk|expected shortfall/.test(normalize(question));
     const selected=benchmark&&unique.some(s=>s!=='MASI')?unique.filter(s=>s!=='MASI'):unique;
     return selected.length?selected:allowFallback?[fallback||'MASI']:[];
   }
@@ -46,6 +46,7 @@
   }
   const dateIn=question=>datesIn(question).find(d=>d.valid)?.date||null;
   function measureFor(question){
+    if(/\bc?var(?:95)?\b|value at risk|expected shortfall/.test(normalize(question)))return /\bcvar|expected shortfall/.test(normalize(question))?'CVaR':'VaR';
     const q=normalize(question),measures=[[/\bper\b|\bpe\b/,'PER'],[/\bbpa\b/,'BPA'],[/\bpb\b|p\s*\/\s*b/,'P/B'],[/\broe\b/,'ROE'],[/minoritaires/,'résultat minoritaires'],[/resultat.*total/,'résultat total'],[/rnpg|resultat.*part.*groupe/,'RNPG'],[/resultat|benefice/,'résultat'],[/pnb|produit net bancaire/,'PNB'],[/chiffre d.affaires|\bca\b/,'CA'],[/rsi/,'RSI'],[/\b(?:mm|sma)\s*(?:20|50|200)\b/,(q.match(/\b(?:mm|sma)\s*(20|50|200)\b/)||[])[0]],[/macd/,'MACD'],[/atr/,'ATR'],[/risque/,'risques'],[/beta/,'bêta'],[/correlation/,'corrélation'],[/liquidite/,'liquidité'],[/volume|quantite/,'volume'],[/bougie|ohlc/,'bougie'],[/cours|prix|cloture/,'clôture'],[/score/,'score'],[/statist/,'statistiques']];
     return measures.find(([p,label])=>label&&p.test(q))?.[1]||null;
   }
@@ -338,7 +339,7 @@
     const q=normalize(question),dates=datesIn(question);
     for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes mobiles : 20, 50 et 200 séances.',sources:[],symbols,mode:'local'};}
     if(/\b(?:le|au|du)\s+\d{1,2}\s+[a-z]+\s+20\d{2}\b/.test(q)&&!dates.length)return {text:'Utilisez la date au format JJ/MM/AAAA ou AAAA-MM-JJ pour une lecture historique précise.',sources:[],symbols,mode:'local'};
-    if(dates.length&&/risque|beta|correlation|volatil|drawdown|score|\bper\b|\brsi\b|\b(?:mm|sma)\s*\d+|macd|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
+    if(dates.length&&/risque|beta|correlation|volatil|drawdown|\bc?var(?:95)?\b|value at risk|expected shortfall|score|\bper\b|\brsi\b|\b(?:mm|sma)\s*\d+|macd|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const normalizedDates=question.replace(/\b(20\d{2}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/(?:20\d{2}|\d{2}))\b/g,m=>dateIn(m)||m);
     if(dates.length&&!/cloture|cours|prix|masi|ohlc|ouverture|plus haut|plus bas|bougie|volume|quantite|briefing|publication|actualite|radar|macro|international|brent|cuivre|charbon|usd|eur|dollar|vix|nikkei|cac 40|s&p|\bfed\b|\bbce\b|\bhcp\b/.test(q))return {
       text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};

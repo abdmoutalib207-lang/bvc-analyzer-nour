@@ -8,6 +8,7 @@
   const stateLabel=s=>({available:'disponible',insufficient:'insuffisant',historical_only:'historique uniquement',closed:'clôture',published:'publié',provisional:'provisoire',stale:'archive ancienne',unavailable:'indisponible',partial:'partiel',updated:'actualisé',unchanged:'inchangé'}[s]||s||'indisponible');
   const isMethod=question=>/explique|c.est quoi|qu.est.ce|que.*veut dire|ca veut dire|a quoi (?:sert|correspond)|signifi|definition|comment|formule|pour les nuls|difference|fonctionn/.test(normalize(question));
   const terms=[
+    [/\bvar(?:95)?\b|value at risk/,'var'],[/\bcvar(?:95)?\b|expected shortfall/,'cvar'],
     [/\bper\b|\bpe\b/,'per'],[/\bbpa\b/,'bpa'],[/\bp\s*\/\s*b\b|\bpb\b/,'pb'],[/\broe\b/,'roe'],[/\bpnb\b/,'pnb'],[/rnpg|part (?:du )?groupe/,'rnpg'],[/dette/,'debt'],
     [/\brsi\s*14?\b|\brsi\b/,'rsi'],[/\b(?:mm|sma)\s*\d+|moyenne mobile/,'mm'],[/macd/,'macd'],[/bollinger/,'bollinger'],[/\batr\b/,'atr'],[/support|resistan/,'levels'],[/activite/,'activity'],
     [/liquidite|capacite/,'liquidity'],[/beta/,'beta'],[/correlation/,'correlation'],[/volatil/,'volatility'],[/drawdown|baisse maximale/,'drawdown'],[/statist|frequen/,'statistics'],[/wilson|intervalle.*95/,'wilson'],[/median|percentil/,'percentile'],
@@ -165,11 +166,25 @@
         const requested=q.match(/\b(\d+)\s*titres\b/);if(requested&&Number(requested[1])!==l.scenario_shares)lines.push('La quantité demandée diffère du scénario publié. Aucun nouveau délai d’exécution n’est calculé par cet assistant.');}
       if(!rows.length)lines.push('Sélectionnez un titre : la liquidité par titre ne se déduit pas du volume global MASI.');definition('liquidity');return result('liquidity');
     }
-    if(/risque|beta|correlation|volatil|drawdown|baisse maximale|rendement relatif|ecart.*masi/.test(q)){
+    if(/risque|beta|correlation|volatil|drawdown|baisse maximale|rendement relatif|ecart.*masi|\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q)){
       for(const row of rows){title(row);const r=row.market_risk||{};lines.push(`Risque : ${stateLabel(r.status)} · ${r.paired_returns??0} rendements appariés · minimum ${r.minimum??60} · ${r.first||'—'} → ${r.last||'—'} · fenêtre complète ${r.complete_window?'oui':'non'}.`);
-        if(horizon&&!/volatil/.test(q))lines.push('Cet horizon personnalisé n’est pas fourni pour le risque. Les valeurs ci-dessous gardent leur fenêtre publiée de 253 séances MASI.');
+        const tailRequested=/\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q);
+        if(horizon&&!/volatil/.test(q)&&!tailRequested)lines.push('Cet horizon personnalisé n’est pas fourni pour le risque. Les valeurs ci-dessous gardent leur fenêtre publiée de 253 séances MASI.');
         const metrics=[[/beta|risque/,'Bêta','beta',''],[/correlation|risque/,'Corrélation MASI','correlation',''],[/volatil|risque/,'Volatilité annualisée titre','volatility_pct','%'],[/volatil|risque/,'Volatilité MASI appariée','masi_volatility_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale titre','drawdown_pct','%'],[/drawdown|baisse maximale|risque/,'Baisse maximale MASI','masi_drawdown_pct','%'],[/rendement relatif|ecart|risque/,'Écart de rendement au MASI','relative_return_pp','points']];
         for(const [p,label,k,u] of metrics)if(p.test(q))lines.push(`${label} : ${fmt(r[k],u)}.`);
+        if(/risque|\bc?var(?:95)?\b|value at risk|expected shortfall/.test(q)){
+          const tail=r.tail_risk||{};
+          const confidence=q.match(/\b(\d+(?:[.,]\d+)?)\s*%/);
+          if(tailRequested&&confidence&&Number(confidence[1].replace(',','.'))!==95){
+            lines.push('Ce niveau de confiance n’est pas fourni. Seules la VaR et la CVaR historiques à 95 % sur une séance sont exportées. Aucun autre quantile n’est calculé.');
+            continue;
+          }
+          lines.push(`VaR historique 95 % · 1 séance : ${fmt(tail.var95_loss_pct,'%')}. CVaR historique 95 % · 1 séance : ${fmt(tail.cvar95_loss_pct,'%')}.`);
+          lines.push(`Échantillon de queue : ${tail.observations??0} rendements quotidiens · minimum ${tail.minimum??120} · ${tail.tail_observations??0} observations dans la queue · ${tail.first_session||'—'} → ${tail.last_session||'—'}. ${tail.reason||''}`);
+          if(tail.note)lines.push(tail.note);
+          if(horizon&&Number(horizon[1])!==1)lines.push('La VaR et la CVaR publiées portent sur une séance uniquement. Aucun changement d’horizon ni multiplication par une racine du temps n’est effectué.');
+        }
+        lines.push(`Intervalles quotidiens exclus : ${r.excluded_daily_intervals??0}. Séances à quantité nulle : ${r.excluded_no_exchange_sessions??0}.`);
         if(/volatil/.test(q)&&horizon)lines.push(Number(horizon[1])===20?`Volatilité de tendance sur 20 rendements : ${fmt(row.trend?.realized_volatility_20d_pct,'%')}.`:'La volatilité sur cet horizon précis n’est pas fournie; les valeurs ci-dessus gardent leur fenêtre publiée.');
         if(r.note)lines.push(r.note);}
       if(!rows.length)lines.push('Le risque apparié au MASI se consulte par titre; aucune statistique de risque autonome MASI n’est ajoutée à cet export.');return result('risk');
