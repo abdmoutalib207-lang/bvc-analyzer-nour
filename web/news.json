@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T17:36:53.839296+00:00",
+  "updated_at": "2026-10-14T18:57:27.832639+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "9fdb2863370071606f",
+      "title": "Putin Fights to Preserve Russia’s Fading Influence in Central Asia",
+      "url": "https://oilprice.com/Geopolitics/Asia/Putin-Fights-to-Preserve-Russias-Fading-Influence-in-Central-Asia.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-14T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "630aa580a35e54e722",
       "title": "Houthis Vow More Attacks After Strike on Aramco Headquarters",
@@ -359,6 +376,23 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "28b66fe1f2ef356d37",
+      "title": "L’euro en difficulté, les investisseurs attendant les chiffres de l’inflation américaine et les interventions de responsables de la Fed - Zonebourse",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNYmw4eXJDRS1xQzJna284OEtJb1ZIZ2hkY01uNVpCYmtOSzFpcFdZeFJUVmhNdzJPVDdNVFB2Vk5BZ2tVa1dEdl90TVJWX0t5cEtHNlFjTWtzT2JMeGJiNzJOUHJ4YXRPZFlSaTVadHlQSGxlWkRlalY3QmNqUGJoWVFOTk1KbVpvR0ZxbHJyRXZONDZJd3JBVjZmUjljdVRDTmsxQVJMMmVjNERqUUhlZzhZN2ZtYzlwNWdYWWJPT3AzN011c3JvNWdTV2phSmdhVE5mTktOSTJQNFZkdHlzZE81V3A4cVhiVk0tNmRR?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-10-14T12:16:10+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "f1b4c05da52b064df1",
@@ -3542,40 +3576,6 @@
       "scope": "INTL",
       "feed_id": "fed",
       "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
-    },
-    {
-      "id": "deb93c9831a7ce03a9",
-      "title": "U.S. Gulf Energy Hub Braces for Category 2 Hurricane",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Gulf-Energy-Hub-Braces-for-Category-2-Hurricane.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-07T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "0df491d47fc930324d",
-      "title": "Apollo Joins $11.5 Billion Race for German Gas Giant Uniper",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Apollo-Joins-115-Billion-Race-for-German-Gas-Giant-Uniper.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-07T17:45:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "ed8ab768f5abfc3ac6",

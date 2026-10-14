@@ -1,4 +1,4 @@
-Briefing de mi-journée — séance 2026-10-14
+Actualisation avant clôture — séance 2026-10-14
 Préparé le 2026-10-14
 
 Lecture de séanceL’essentiel
@@ -13,7 +13,7 @@ Le relevé de marché totalise 182,54 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 792,25 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-14T17:36:53.981549+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-14T18:57:27.936207+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -347,21 +347,25 @@ Aucun dépôt récent retenu pour cette période.
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-14T17:36:55.510073+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-14T18:57:28.792810+00:00 · état partial. Horodatages en UTC.
+
+Détails de collecte macro
+
+ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
 
 Indices actions
 
 S&P 500
 
-7 715,86points · -1,15 %
+7 703,64points · -1,30 %
 
-Dernière observation source2026-10-14T17:21:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-14T18:41:39+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 499,27points · -0,33 %
+51 454,68points · -0,42 %
 
-Dernière observation source2026-10-14T17:21:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-14T18:41:39+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -379,57 +383,61 @@ Risque et devises
 
 USD/MAD
 
-9,8829MAD / USD · 0,85 %
+9,8646MAD / USD · 0,66 %
 
-Dernière observation source2026-10-14T17:36:20+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-14T18:57:23+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,0000MAD / EUR · 0,27 %
+10,9950MAD / EUR · 0,23 %
 
-Dernière observation source2026-10-14T17:29:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-14T18:54:30+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-16,69points · 9,30 %
+17,13points · 12,18 %
 
-Dernière observation source2026-10-14T17:21:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-14T18:41:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,70points · 0,47 %
+102,56points · 0,34 %
 
-Dernière observation source2026-10-14T17:21:07+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-14T18:41:38+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 106,90USD / once troy · -1,69 %
+4 114,80USD / once troy · -1,50 %
 
-Dernière observation source2026-10-14T17:36:40+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-14T18:57:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-106,53USD / baril · 0,79 %
+106,02USD / baril · 0,31 %
 
-Dernière observation source2026-10-14T17:36:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-14T18:57:16+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,65USD / livre · -1,06 %
+6,62USD / livre · -1,63 %
 
-Dernière observation source2026-10-14T17:36:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-14T18:57:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
 144,90USD / tonne · -0,41 %
 
-Dernière observation source2026-10-14T15:11:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Archive conservée après collecte incomplète2026-10-14T15:11:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Geopolitics/Asia/Putin-Fights-to-Preserve-Russias-Fading-Influence-in-Central-Asia.html] Putin Fights to Preserve Russia’s Fading Influence in Central Asia ↗
+
+OilPrice · 2026-10-14T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Latest-Energy-News/World-News/Houthis-Vow-More-Attacks-After-Strike-on-Aramco-Headquarters.html] Houthis Vow More Attacks After Strike on Aramco Headquarters ↗
 
@@ -458,10 +466,6 @@ OilPrice · 2026-10-14T15:30:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/Power-Prices-Top-1000-on-PJM-as-Heat-Collides-With-Fall-Plant-Maintenance.html] Power Prices Top $1,000 on PJM as Heat Collides With Fall Plant Maintenance ↗
 
 OilPrice · 2026-10-14T15:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Indias-Gas-Demand-Drops-as-Iran-War-Hikes-LNG-Spot-Prices.html] India’s Gas Demand Drops as Iran War Hikes LNG Spot Prices ↗
-
-OilPrice · 2026-10-14T14:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -517,6 +521,10 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-13T13:14:09+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Geopolitics/Asia/Putin-Fights-to-Preserve-Russias-Fading-Influence-in-Central-Asia.html] Putin Fights to Preserve Russia’s Fading Influence in Central Asia ↗
+
+OilPrice · 2026-10-14T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Latest-Energy-News/World-News/Houthis-Vow-More-Attacks-After-Strike-on-Aramco-Headquarters.html] Houthis Vow More Attacks After Strike on Aramco Headquarters ↗
 
 OilPrice · 2026-10-14T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -532,8 +540,4 @@ RFI · économie · 2026-10-14T16:52:06+00:00 · International · Économie · a
  [https://oilprice.com/Latest-Energy-News/World-News/Novak-Calls-US-Diesel-Deal-a-Positive-Signal-for-Russias-Economy.html] Novak Calls U.S. Diesel Deal a 'Positive Signal' for Russia's Economy ↗
 
 OilPrice · 2026-10-14T16:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Big-Tech-Pushes-Back-Against-Paying-for-Americas-Aging-Power-Grid.html] Big Tech Pushes Back Against Paying for America's Aging Power Grid ↗
-
-OilPrice · 2026-10-14T16:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
