@@ -51,12 +51,27 @@ def help_panel():
 
 def panels(item):
     r = item.get('market_risk', {})
+    tail = r.get('tail_risk', {})
     cards = ''.join(f'<div class="metric"><span>{label}</span><strong>{num(r.get(key))}{unit}</strong></div>' for key,label,unit in (
         ('beta', 'Bêta vs MASI', ''), ('correlation', 'Corrélation vs MASI', ''),
         ('volatility_pct', 'Volatilité annualisée du titre', ' %'),
         ('masi_volatility_pct', 'Volatilité MASI appariée', ' %'),
         ('drawdown_pct', 'Baisse maximale sur la fenêtre', ' %'),
         ('relative_return_pp', 'Écart de rendement au MASI', ' points')))
+    cards += ''.join(f'<div class="metric"><span>{esc(label)}</span><strong>{num(tail.get(key))} %</strong></div>'
+                     for key,label in (('var95_loss_pct', 'VaR historique 95 % · 1 séance'),
+                                       ('cvar95_loss_pct', 'CVaR historique 95 % · 1 séance')))
+    tail_help = ('<details class="lab-help" id="risk-help"><summary aria-label="Comprendre le risque historique">'
+        '<span class="lab-help-icon" aria-hidden="true">?</span><span>Le risque, en langage simple</span></summary>'
+        '<div class="lab-help-content"><p><strong>On mesure les pertes passées, on ne prédit pas demain.</strong></p>'
+        '<p>La VaR situe un seuil parmi les journées les moins bonnes. La CVaR fait la moyenne de cette queue. '
+        'Une CVaR plus élevée signale des pertes historiques plus fortes dans les mauvaises journées.</p>'
+        '<p>Exemple fictif : VaR 3 % et CVaR 4 % ne signifient ni « perte limitée à 3 % », '
+        'ni « 95 % de chances de perdre moins demain ». Une perte future peut être plus forte.</p>'
+        '<p>Minimum : 120 rendements, soit au moins six observations dans la queue. Une séance sans échange '
+        'ou sans cours crée un trou : aucun rendement de plusieurs séances n’est présenté comme quotidien.</p>'
+        '<p>Le bêta décrit le lien historique avec le MASI ; la volatilité décrit l’amplitude des fluctuations ; '
+        'la baisse maximale mesure la pire descente du sommet au creux sur une fenêtre complète.</p></div></details>')
     comparison = item.get('sector_comparison', {})
     names = {'pe': 'PER', 'pb': 'P/B', 'roe_pct': 'ROE (%)'}
     rows = ''.join(f'<tr><td>{names[k]}</td><td>{num(m.get("value"))}</td><td>{num(m.get("median"))}</td>'
@@ -71,6 +86,12 @@ def panels(item):
     return ('<section class="panel"><span class="eyebrow">Référence de marché</span><h2>Le risque face au MASI</h2>'
         f'<p>{r.get("paired_returns",0)} rendements quotidiens appariés sur {r.get("market_calendar_sessions",0)} séances de référence. Minimum : 60. '
         f'{esc(r.get("first"))} → {esc(r.get("last"))}.</p><div class="research-metrics">{cards}</div>'
+        + tail_help + f'<p>VaR / CVaR : {tail.get("observations",0)} rendements ; '
+        f'{tail.get("tail_observations",0)} observations dans la queue. '
+        f'{esc(tail.get("first_session"))} → {esc(tail.get("last_session"))}. '
+        f'{esc(tail.get("reason") or "Échantillon disponible ; rang empirique à 5 %, arrondi vers le haut.")}</p>'
+        f'<p class="fineprint">Intervalles quotidiens exclus : {r.get("excluded_daily_intervals",0)} ; '
+        f'séances à quantité nulle : {r.get("excluded_no_exchange_sessions",0)}. {esc(tail.get("note"))}</p>'
         '<p class="fineprint">La baisse maximale et l’écart de rendement exigent une fenêtre complète. '
         f'{esc(r.get("note"))}</p><a href="../recherche.html">Explorer les tendances après frais →</a></section>'
         '<section class="panel"><span class="eyebrow">Comparaison comptable stricte</span><h2>Au sein du secteur</h2>'
@@ -110,7 +131,8 @@ def page_body(fixture, report):
     archive = report.get('score_archive', {})
     risks = ''.join(f'<tr><td><a href="titres/{esc(x["symbol"])}.html">{esc(x["symbol"])}</a></td>'
                     f'<td>{x.get("market_risk",{}).get("paired_returns",0)}</td>'
-                    + ''.join(f'<td>{num(x.get("market_risk",{}).get(k))}</td>' for k in ('beta','correlation','volatility_pct','drawdown_pct'))+'</tr>'
+                    + ''.join(f'<td>{num(x.get("market_risk",{}).get(k))}</td>' for k in ('beta','correlation','volatility_pct','drawdown_pct'))
+                    + ''.join(f'<td>{num(x.get("market_risk",{}).get("tail_risk",{}).get(k))}</td>' for k in ('var95_loss_pct','cvar95_loss_pct'))+'</tr>'
                     for x in report['results'])
     return ('<main id="research-lab"><div class="hero research-hero"><span class="eyebrow">BVC Analyzer Nour · laboratoire historique</span>'
         '<h1>La tendance <em>à l’épreuve des données.</em></h1>'
@@ -143,7 +165,7 @@ def page_body(fixture, report):
         '<p class="fineprint">Chaque archive conserve l’heure réelle, le score et sa version, les entrées comptables et techniques et leur empreinte SHA-256. '
         'Un historique de cours de trois ans n’est pas un historique de scores publiés de trois ans.</p></section>'
         '<section class="panel"><span class="eyebrow">Risque transversal · cours seuls</span><h2>Les titres face au MASI</h2>'
-        '<div class="tablewrap"><table><thead><tr><th>Code</th><th>Rendements appariés</th><th>Bêta</th><th>Corrélation</th><th>Volatilité annualisée (%)</th><th>Baisse maximale (%)</th></tr></thead>'
-        f'<tbody>{risks}</tbody></table></div><p class="fineprint">253 séances MASI maximum, au moins 60 rendements appariés. Baisse maximale uniquement si la fenêtre est complète. Aucun dividende ni interpolation.</p></section>'
+        '<div class="tablewrap"><table><thead><tr><th>Code</th><th>Rendements appariés</th><th>Bêta</th><th>Corrélation</th><th>Volatilité annualisée (%)</th><th>Baisse maximale (%)</th><th>VaR 95 % · 1 séance (%)</th><th>CVaR 95 % · 1 séance (%)</th></tr></thead>'
+        f'<tbody>{risks}</tbody></table></div><p class="fineprint">253 séances MASI maximum, au moins 60 rendements appariés pour bêta/volatilité et 120 pour VaR/CVaR. Baisse maximale uniquement si la fenêtre est complète. Aucun dividende ni interpolation. Clôtures échangées sur dates adjacentes uniquement. Seuils historiques, pas limites de perte future.</p></section>'
         f'<script type="application/json" id="lab-data">{payload}</script></main>'
         '<footer>Nour · données datées · statistiques historiques · sans NLP décisionnel ni prédiction.</footer>')
