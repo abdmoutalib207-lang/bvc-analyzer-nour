@@ -13,7 +13,7 @@ Le relevé de marché totalise 182,98 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-15T18:41:25.795244+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-15T20:08:54.963426+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -357,7 +357,7 @@ AMMC · 2026-10-15 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-15T18:41:27.312338+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-15T20:09:08.247275+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
@@ -367,15 +367,15 @@ Indices actions
 
 S&P 500
 
-7 723,65points · 0,06 %
+7 747,71points · 0,37 %
 
-Dernière observation source2026-10-15T18:20:52+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-15T19:40:52+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 109,35points · 0,95 %
+52 191,59points · 1,10 %
 
-Dernière observation source2026-10-15T18:20:52+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-15T19:40:52+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -393,47 +393,47 @@ Risque et devises
 
 USD/MAD
 
-9,7586MAD / USD · -1,15 %
+9,7577MAD / USD · -1,16 %
 
-Dernière observation source2026-10-15T18:41:11+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-15T20:08:57+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9370MAD / EUR · -0,60 %
+10,9390MAD / EUR · -0,58 %
 
-Dernière observation source2026-10-15T18:39:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-15T20:04:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-16,91points · 0,24 %
+16,43points · -2,61 %
 
-Dernière observation source2026-10-15T18:20:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-15T19:40:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,02points · -0,49 %
+102,02points · -0,50 %
 
-Dernière observation source2026-10-15T18:20:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-15T20:01:31+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 178,50USD / once troy · 1,72 %
+4 195,80USD / once troy · 2,14 %
 
-Dernière observation source2026-10-15T18:41:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-15T20:08:44+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-106,01USD / baril · -0,05 %
+105,92USD / baril · -0,13 %
 
-Dernière observation source2026-10-15T18:41:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-15T20:08:54+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,56USD / livre · -1,55 %
+6,57USD / livre · -1,43 %
 
-Dernière observation source2026-10-15T18:40:30+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-15T20:08:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -444,6 +444,22 @@ Archive conservée après collecte incomplète2026-10-15T09:08:53+00:00Différé
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Geopolitics/International/6-Countries-Pledge-Faster-Cargo-Transfers-on-Eurasia-Europe-Land-Bridge.html] 6 Countries Pledge Faster Cargo Transfers on Eurasia-Europe Land Bridge ↗
+
+OilPrice · 2026-10-15T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Ukraine-Strikes-Major-Russian-Oil-Refinery.html] Ukraine Strikes Major Russian Oil Refinery ↗
+
+OilPrice · 2026-10-15T19:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Geopolitics/Asia/US-Targets-Central-Asias-Energy-and-Critical-Minerals-in-Major-Trade-Push.html] U.S. Targets Central Asia's Energy and Critical Minerals in Major Trade Push ↗
+
+OilPrice · 2026-10-15T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/IEA-Speeds-Emergency-Oil-Release.html] IEA Speeds Emergency Oil Release ↗
+
+OilPrice · 2026-10-15T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/10/15/senegal-le-conseil-constitutionnel-censure-la-modification-de-la-loi-organique-relative-aux-lois-de-finances/] Sénégal : le Conseil constitutionnel censure la modification de la loi organique relative aux lois de finances ↗
 
@@ -460,22 +476,6 @@ Financial Afrik · 2026-10-15T17:35:03+00:00 · Périmètre non établi · Écon
  [https://www.financialafrik.com/2026/10/15/maroc-lacaps-digitalise-le-traitement-des-reclamations-des-assures-face-a-une-activite-en-forte-hausse/] Maroc : l’ACAPS digitalise le traitement des réclamations des assurés face à une activité en forte hausse ↗
 
 Financial Afrik · 2026-10-15T17:20:45+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/15/nigeria-shell-va-vendre-son-activite-de-distribution-de-gaz-a-vaaris-energy/] Nigeria : Shell va vendre son activité de distribution de gaz à Vaaris Energy ↗
-
-Financial Afrik · 2026-10-15T17:14:08+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/15/senegal-2475-millions-fcfa-en-jeu-la-boa-obtient-une-victoire-judiciaire-face-a-ganaan-pecheries/] Sénégal : 247,5 millions FCFA en jeu, la BOA obtient une victoire judiciaire face à GANAAN Pêcheries ↗
-
-Financial Afrik · 2026-10-15T17:05:56+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Crude-Oil/Venezuelas-Oil-Recovery-Gains-Momentum-as-New-Drilling-Rigs-Arrive.html] Venezuela's Oil Recovery Gains Momentum as New Drilling Rigs Arrive ↗
-
-OilPrice · 2026-10-15T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.rfi.fr/fr/%C3%A9conomie/20261015-%C3%A9tats-unis-donald-trump-emp%C3%AAtr%C3%A9-dans-une-inflation-qu-il-n-arrive-pas-%C3%A0-faire-baisser] États-Unis: Donald Trump empêtré dans une inflation qu'il n'arrive pas à faire baisser ↗
-
-RFI · économie · 2026-10-15T16:59:09+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -531,23 +531,23 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-13T13:14:09+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Geopolitics/International/6-Countries-Pledge-Faster-Cargo-Transfers-on-Eurasia-Europe-Land-Bridge.html] 6 Countries Pledge Faster Cargo Transfers on Eurasia-Europe Land Bridge ↗
+
+OilPrice · 2026-10-15T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Ukraine-Strikes-Major-Russian-Oil-Refinery.html] Ukraine Strikes Major Russian Oil Refinery ↗
+
+OilPrice · 2026-10-15T19:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Geopolitics/Asia/US-Targets-Central-Asias-Energy-and-Critical-Minerals-in-Major-Trade-Push.html] U.S. Targets Central Asia's Energy and Critical Minerals in Major Trade Push ↗
+
+OilPrice · 2026-10-15T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/IEA-Speeds-Emergency-Oil-Release.html] IEA Speeds Emergency Oil Release ↗
+
+OilPrice · 2026-10-15T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/10/15/senegal-le-conseil-constitutionnel-censure-la-modification-de-la-loi-organique-relative-aux-lois-de-finances/] Sénégal : le Conseil constitutionnel censure la modification de la loi organique relative aux lois de finances ↗
 
 Financial Afrik · 2026-10-15T18:39:57+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Britains-Biggest-Business-Lobby-Calls-for-Tax-Cuts-and-Lower-Energy-Bills.html] Britain’s Biggest Business Lobby Calls for Tax Cuts and Lower Energy Bills ↗
-
-OilPrice · 2026-10-15T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/15/afrique-du-sud-linflation-attendue-a-3-seulement-en-2028/] Afrique du Sud : l’inflation attendue à 3 % seulement en 2028 ↗
-
-Financial Afrik · 2026-10-15T17:35:03+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/15/maroc-lacaps-digitalise-le-traitement-des-reclamations-des-assures-face-a-une-activite-en-forte-hausse/] Maroc : l’ACAPS digitalise le traitement des réclamations des assurés face à une activité en forte hausse ↗
-
-Financial Afrik · 2026-10-15T17:20:45+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/15/nigeria-shell-va-vendre-son-activite-de-distribution-de-gaz-a-vaaris-energy/] Nigeria : Shell va vendre son activité de distribution de gaz à Vaaris Energy ↗
-
-Financial Afrik · 2026-10-15T17:14:08+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
