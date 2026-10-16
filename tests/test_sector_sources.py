@@ -80,8 +80,7 @@ class SectorSourceTests(unittest.TestCase):
         rendered = monitor_html(sample)
         self.assertNotIn("<script>", rendered)
         self.assertIn("Dernier succès", rendered)
-        self.assertIn("Aucune donnée", monitor_html(None) if False else
-                      "Aucune donnée")  # source absence never implies verified data
+        self.assertIn("Première collecte non exécutée", monitor_html(None))
 
 
 if __name__ == "__main__":
