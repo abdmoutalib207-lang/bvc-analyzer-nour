@@ -9,6 +9,7 @@ from copy import deepcopy
 from datetime import datetime, timezone
 import hashlib
 from html.parser import HTMLParser
+from html import escape
 import json
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -144,3 +145,34 @@ def collect(config, previous=None, *, fetcher=fetch, now=None):
 
 def read_config(path):
     return validate_config(json.loads(Path(path).read_text(encoding="utf-8")))
+
+
+def monitor_html(state):
+    """Human-readable last-success status; never displays collected links as verified numbers."""
+    if not state:
+        return '<section class="panel"><h2>Collecte sectorielle</h2><p>Première collecte non exécutée.</p></section>'
+    rows = []
+    for source_id, entry in sorted(state.get("sources", {}).items()):
+        last = entry.get("last_success_at") or "jamais"
+        checked = entry.get("checked_at") or "inconnu"
+        links = []
+        for item in entry.get("links", [])[:8]:
+            url = item.get("url")
+            if not isinstance(url, str) or urlsplit(url).scheme != "https":
+                continue
+            title = item.get("title") or item.get("type") or "Publication candidate"
+            links.append('<li><a href="' + escape(url, quote=True)
+                         + '" target="_blank" rel="noopener noreferrer">'
+                         + escape(str(title)) + '</a></li>')
+        docs = ('<ul>' + "".join(links) + '</ul>') if links else 'Aucun lien retenu'
+        rows.append('<tr><td>' + escape(source_id) + '</td><td>'
+                    + escape(entry.get("status") or "unknown") + '</td><td>'
+                    + escape(last) + '</td><td>' + escape(checked)
+                    + '</td><td>' + docs + '</td></tr>')
+    return ('<section class="panel"><h2>Collecte sectorielle automatique</h2>'
+            '<p>Liens candidats issus des pages publiques. Une collecte réussie ne '
+            'certifie aucun chiffre ni la fraîcheur des documents liés.</p>'
+            '<div style="overflow-x:auto"><table><thead><tr>'
+            '<th>Source</th><th>Dernier essai</th><th>Dernier succès</th>'
+            '<th>Vérifié à</th><th>Publications repérées</th>'
+            '</tr></thead><tbody>' + "".join(rows) + '</tbody></table></div></section>')
