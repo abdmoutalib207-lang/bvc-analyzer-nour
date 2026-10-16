@@ -5,6 +5,7 @@ from statistics import median, stdev
 from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
 from .fundamentals import coverage
 from .statistics import describe
+from .sector_methods import guidance
 
 
 def _mean(items):
@@ -146,6 +147,9 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
         item["historical_statistics"] = describe(dated)
         item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
+        # Descriptive industry-specific review prompts only; not a financial fact
+        # and not an input to the score or to the technical indicators.
+        item["sector_guidance"] = guidance(symbol, {"sector": rec.get("sector")})
         results.append(item)
     return {
         "project": fixture["project"], "schema_version": 2, "analysis_date": asof,
