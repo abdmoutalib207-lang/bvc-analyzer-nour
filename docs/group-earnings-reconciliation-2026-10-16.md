@@ -23,3 +23,19 @@ Les pages et chiffres ci-dessous proviennent de `data/facts_reference.json`, qui
 Le moteur conserve les valeurs consolidées totales comme **preuves à contrôler** sans les substituer au RNPG. La page `metiers.html` affiche la file de vérification et les pages indicatives.
 
 **Blocage actuel :** les URL AMMC ont été référencées mais leur contenu n'a pas pu être vérifié indépendamment dans cette passe. Aucun chiffre nouveau ni déblocage n'a été introduit.
+
+## Recoupement indépendant découvert le 16 octobre 2026
+
+Les fiches **officielles de la Bourse de Casablanca** publient un « Résultat net (4) » dont la note (4) précise : **résultat net part du groupe pour les comptes consolidés**. Les communiqués émetteurs de TGCC et SGTM confirment la qualification « part du groupe ».
+
+| Société | RNPG 2025 (MDH) — candidat officiel | Résultat net consolidé total relevé (MDH) | Différence total − RNPG (MDH) | Source indépendante |
+|---|---:|---:|---:|---|
+| TGCC | **952,053** | 1 161,165 | **209,112** | https://www.casablanca-bourse.com/fr/live-market/emetteurs/TGC ; https://www.ammc.ma/sites/default/files/CP_TGCC_2025.pdf |
+| SGTM | **1 341,942** | 1 341,942 | **0,000** | https://www.casablanca-bourse.com/en/live-market/emetteurs/GTM ; https://www.sgtm.ma/wp-content/uploads/2026/03/CP-resultats-annuels-2025.pdf |
+| CMGP | **244,010766** | 252,754943 | **8,744177** | https://www.casablanca-bourse.com/fr/live-market/emetteurs/CMG |
+
+**Ce sont des rapprochements candidats, pas encore des valeurs injectées dans les ratios Nour.** Les pages HTML de la Bourse fournissent des chiffres officiels, mais il reste à confirmer leur emplacement exact dans les PDF annuels, les minoritaires, la date/version du document, le SHA-256 du fichier et les dénominateurs historiques. Le résultat net consolidé total ne remplace jamais le RNPG.
+
+**Contrôle complémentaire du nombre d'actions :** Bourse de Casablanca indique **34 674 332** titres pour TGCC 2025 contre **34 674 300** déduits du capital dans le relevé Nour (écart 32 titres). Ne pas utiliser automatiquement l'un ou l'autre pour le BPA sans vérification de la moyenne pondérée et de l'augmentation de capital. SGTM : 60 000 000 titres à la clôture, avec augmentation de capital sur l'exercice ; CMGP : 17 000 900 titres. Les BPA et PER restent indisponibles dans Nour tant que les preuves exigées ne sont pas complètes.
+
+**Réserve de fusion :** ce rapprochement réduit l'incertitude sur le RNPG mais ne constitue pas une certification des comptes. Il doit être repris dans les preuves primaires avant tout déblocage.
