@@ -36,6 +36,7 @@ class SectorAuditTests(unittest.TestCase):
 
     def test_invalid_claim_of_checked_primary_page_is_not_accepted(self):
         fact = {"page": 3, "document_url": "https://example.org/a.pdf",
+                "period_end": "2025-12-31", "unit": "MMAD", "currency": "MAD",
                 "document_hash": "sha256:" + "f" * 64, "accounting_basis": "consolidé",
                 "validation_status": "selected_pages_visually_checked"}
         report = {"results": [{"symbol": "RIS", "fundamental": {
@@ -43,6 +44,9 @@ class SectorAuditTests(unittest.TestCase):
             "financial_audit": {"status": "ok"}}}]}
         self.assertEqual(audit_sector_report(report)["selected_pages_reviewed_issuers"], 1)
         report["results"][0]["fundamental"]["evidence"]["chiffre_affaires"]["document_hash"] = None
+        self.assertEqual(audit_sector_report(report)["selected_pages_reviewed_issuers"], 0)
+        fact["document_hash"] = "sha256:" + "f" * 64
+        fact["period_end"] = None
         self.assertEqual(audit_sector_report(report)["selected_pages_reviewed_issuers"], 0)
 
     def test_guidance_mismatch_is_violation(self):
