@@ -23,6 +23,7 @@ def main():
                     ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_volume', 'test_assistant_domains', 'test_assistant_conversation'))
     commands.append([sys.executable, 'tools/audit_site.py'])
     commands.append([sys.executable, 'tools/audit_readiness.py'])
+    commands.append([sys.executable, 'tools/audit_sector_readiness.py'])
     for command in commands:
         subprocess.run(command, cwd=ROOT, check=True)
     subprocess.run(['git', 'diff', '--check'], cwd=ROOT, check=True)
