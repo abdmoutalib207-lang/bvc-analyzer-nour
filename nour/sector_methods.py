@@ -8,7 +8,7 @@ from .peer_groups import group_for
 
 FAMILIES = {
     "Banque": {
-        "symbols": ("ATW", "BCP", "BOA", "BMC", "CIH", "CDM"),
+        "symbols": ("ATW", "BCP", "BOA", "BMC", "CIH", "CDM", "CFGB"),
         "metrics": ("PNB", "RNPG", "coût du risque", "créances en souffrance", "solvabilité", "ROE"),
         "exclude": ("CA industriel", "dette nette/EBITDA industriel"),
         "sources": ("rapports consolidés", "communications BAM", "AMMC"),
@@ -49,6 +49,42 @@ FAMILIES = {
         "exclude": ("carnet de commandes BTP", "PNB bancaire"),
         "sources": ("rapports émetteurs", "statistiques agricoles", "AMMC"),
     },
+    "Télécommunications": {
+        "symbols": ("IAM",),
+        "metrics": ("ARPU", "abonnés", "churn si publié", "capex réseau", "marge", "cash-flow"),
+        "exclude": ("PNB bancaire", "RevPAR hôtelier"),
+        "sources": ("rapports opérateur", "ANRT", "AMMC"),
+    },
+    "Matériaux de construction - ciment": {
+        "symbols": ("LHM", "CIM"),
+        "metrics": ("volumes ciment", "prix moyens si publiés", "énergie", "marge", "capex"),
+        "exclude": ("carnet de commandes BTP comme chiffre d’affaires du cimentier",),
+        "sources": ("rapports émetteurs", "statistiques sectorielles", "AMMC"),
+    },
+    "Distribution de carburants et gaz": {
+        "symbols": ("TMA", "GAZ"),
+        "metrics": ("volumes distribués", "marge unitaire si publiée", "stocks", "BFR", "capex"),
+        "exclude": ("production pétrolière amont supposée", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "AMMC"),
+    },
+    "Production électrique": {
+        "symbols": ("TQA",),
+        "metrics": ("disponibilité", "production MWh", "contrats d’achat", "coût combustible", "dette", "capex"),
+        "exclude": ("marge commerciale d’une station-service",),
+        "sources": ("rapports émetteurs", "AMMC"),
+    },
+    "Grande distribution": {
+        "symbols": ("LBV",),
+        "metrics": ("ventes à périmètre comparable", "marge", "rotation stocks", "BFR", "capex"),
+        "exclude": ("taux d’occupation hôtelier", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "AMMC"),
+    },
+    "Transport routier": {
+        "symbols": ("CTM",),
+        "metrics": ("voyageurs", "taux de remplissage si publié", "prix moyen", "coût carburant", "capex"),
+        "exclude": ("EVP portuaires", "RevPAR hôtelier"),
+        "sources": ("rapports émetteurs", "AMMC"),
+    },
     "Ports et logistique": {
         "symbols": ("MSA",),
         "metrics": ("tonnage", "EVP", "capacité", "utilisation", "tarifs", "capex", "cash-flow"),
@@ -56,13 +92,13 @@ FAMILIES = {
         "sources": ("rapports d'exploitation", "résultats", "AMMC"),
     },
     "Mines": {
-        "symbols": ("SMI", "MNG"),
+        "symbols": ("SMI", "MNG", "CMT"),
         "metrics": ("production", "teneur", "coût unitaire", "cours des métaux", "capex", "cash-flow"),
         "exclude": ("tonnage portuaire comme production minière", "PNB bancaire"),
         "sources": ("rapports miniers", "résultats", "AMMC"),
     },
     "Technologie et services": {
-        "symbols": ("T2S",),
+        "symbols": ("T2S", "HPS", "M2M", "S2M"),
         "metrics": ("revenus récurrents si publiés", "marge", "concentration clients", "BFR", "cash-flow"),
         "exclude": ("ARR supposé sans publication", "multiple SaaS pour activités non SaaS"),
         "sources": ("rapports émetteurs", "résultats", "AMMC"),
