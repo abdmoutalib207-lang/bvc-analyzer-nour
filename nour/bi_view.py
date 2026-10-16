@@ -31,7 +31,14 @@ def financial_dashboard(item):
                        'Finance - crédit à la consommation')
             or finite(f.get('pnb_mmad')))
     growth_key = 'pnb_growth_pct' if bank else 'revenue_growth_pct'
+    evidence = f.get('evidence') or {}
+    net_label = ('Résultat net part du groupe' if 'resultat_net_part_groupe' in evidence
+                 else 'Résultat net social' if 'resultat_net_social' in evidence
+                 else 'Résultat net attribuable non établi')
     metrics = [
+        ('earnings_mmad', net_label, 'MMAD', 'rentabilite', True,
+         'Résultat annuel attribuable au périmètre indiqué. Ne jamais remplacer le RNPG absent par le résultat consolidé total.',
+         'Montant annuel du résultat net sourcé, sans extrapolation', f.get('accounting_basis')),
         ('eps_mad', 'Bénéfice par action', 'MAD', 'valorisation', False,
          'La part du résultat annuel rapportée au nombre de titres retenu. Ce BPA peut être indicatif.',
          'Résultat annuel ÷ nombre de titres', f.get('eps_denominator')),
@@ -65,12 +72,21 @@ def financial_dashboard(item):
         known = finite(value)
         selected = key == preferred
         tone = 'missing' if not known else 'positive' if directional and value > 0 else 'negative' if directional and value < 0 else 'neutral'
+        availability = (f.get('metric_availability') or {}).get(key) or {}
+        codes = availability.get('reason_codes') or []
         missing = 'Indisponible : donnée manquante, non comparable ou indicateur non applicable. Consulter les réserves ci-dessous.'
+        if availability.get('status') == 'blocked':
+            missing = ('Bloqué par contrôle financier : ' + ', '.join(codes)
+                       + '. Consulter les réserves et les pages sources ci-dessous.')
         if key.startswith('net_debt') and (f.get('debt_reconciliation') or {}).get('status') == 'unresolved':
             missing = 'Suspendu : dette à rapprocher. L’écart documentaire reste visible sous ce tableau.'
         elif key == 'pe' and finite(f.get('earnings_mmad')) and f['earnings_mmad'] <= 0:
             missing = 'PER non pertinent : le résultat annuel est nul ou négatif. Une perte publiée n’est pas une donnée manquante.'
-        label = 'Valeur négative' if tone == 'negative' else 'Valeur positive' if tone == 'positive' else 'Indicateur descriptif' if known else 'Indisponible'
+        label = ('Valeur négative' if tone == 'negative' else
+                 'Valeur positive' if tone == 'positive' else
+                 'Indicateur descriptif' if known else
+                 'Bloqué par contrôle' if availability.get('status') == 'blocked' else
+                 'Indisponible')
         if key == 'eps_mad' and f.get('historical_per_share_only'):
             title = f'BPA historique {f.get("exercise")}'
         cards.append(f'<button type="button" class="kpi fundamental-card bi-metric tone-{tone}" '
