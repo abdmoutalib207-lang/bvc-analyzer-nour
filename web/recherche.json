@@ -2,8 +2,8 @@
   "version": "nour-research-v1",
   "asof": "2026-10-16",
   "masi_first": "2023-01-02",
-  "masi_last": "2026-10-15",
-  "masi_sessions": 925,
+  "masi_last": "2026-10-16",
+  "masi_sessions": 926,
   "universe_size": 80,
   "rows": [
     {
@@ -43119,12 +43119,12 @@
     {
       "symbol": "MASI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 67,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 53
+      "no_trend": 54
     },
     {
       "symbol": "MASI",
@@ -43149,12 +43149,12 @@
     {
       "symbol": "ADH",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 42,
       "missing": 9,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 69
+      "no_trend": 70
     },
     {
       "symbol": "ADH",
@@ -43179,12 +43179,12 @@
     {
       "symbol": "ADI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 58,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 62
+      "no_trend": 63
     },
     {
       "symbol": "ADI",
@@ -43209,9 +43209,9 @@
     {
       "symbol": "AFI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 44,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 74
@@ -43239,9 +43239,9 @@
     {
       "symbol": "AFM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 48,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 70
@@ -43269,9 +43269,9 @@
     {
       "symbol": "AGM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 58,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 60
@@ -43299,12 +43299,12 @@
     {
       "symbol": "AKD",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 52,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 63
+      "no_trend": 64
     },
     {
       "symbol": "AKD",
@@ -43329,9 +43329,9 @@
     {
       "symbol": "ALU",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -43359,12 +43359,12 @@
     {
       "symbol": "ARD",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 43,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 77
+      "no_trend": 78
     },
     {
       "symbol": "ARD",
@@ -43389,12 +43389,12 @@
     {
       "symbol": "ATL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 39,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 81
+      "no_trend": 82
     },
     {
       "symbol": "ATL",
@@ -43419,12 +43419,12 @@
     {
       "symbol": "ATW",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 62,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 58
+      "no_trend": 59
     },
     {
       "symbol": "ATW",
@@ -43449,9 +43449,9 @@
     {
       "symbol": "BAL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 55,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 63
@@ -43479,12 +43479,12 @@
     {
       "symbol": "BCP",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 79
+      "no_trend": 80
     },
     {
       "symbol": "BCP",
@@ -43509,9 +43509,9 @@
     {
       "symbol": "BMC",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 119,
+      "missing": 120,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 1
@@ -43539,12 +43539,12 @@
     {
       "symbol": "BOA",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 79
+      "no_trend": 80
     },
     {
       "symbol": "BOA",
@@ -43569,12 +43569,12 @@
     {
       "symbol": "CAR",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
       "missing": 118,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 2
+      "no_trend": 3
     },
     {
       "symbol": "CAR",
@@ -43599,12 +43599,12 @@
     {
       "symbol": "CASH",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 4,
       "missing": 109,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 7
+      "no_trend": 8
     },
     {
       "symbol": "CASH",
@@ -43629,12 +43629,12 @@
     {
       "symbol": "CDM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 51,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 69
+      "no_trend": 70
     },
     {
       "symbol": "CDM",
@@ -43659,12 +43659,12 @@
     {
       "symbol": "CFGB",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 41,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 38
+      "no_trend": 39
     },
     {
       "symbol": "CFGB",
@@ -43689,12 +43689,12 @@
     {
       "symbol": "CIH",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 79
+      "no_trend": 80
     },
     {
       "symbol": "CIH",
@@ -43719,12 +43719,12 @@
     {
       "symbol": "CIM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
       "missing": 118,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 2
+      "no_trend": 3
     },
     {
       "symbol": "CIM",
@@ -43749,12 +43749,12 @@
     {
       "symbol": "CMGP",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 15,
       "missing": 69,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 36
+      "no_trend": 37
     },
     {
       "symbol": "CMGP",
@@ -43779,10 +43779,10 @@
     {
       "symbol": "CMT",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 9,
       "missing": 88,
-      "event_boundary": 3,
+      "event_boundary": 4,
       "inactive": 0,
       "no_trend": 20
     },
@@ -43809,12 +43809,12 @@
     {
       "symbol": "COL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 49,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 71
+      "no_trend": 72
     },
     {
       "symbol": "COL",
@@ -43839,12 +43839,12 @@
     {
       "symbol": "CSR",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 28,
       "missing": 11,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 81
+      "no_trend": 82
     },
     {
       "symbol": "CSR",
@@ -43869,9 +43869,9 @@
     {
       "symbol": "CTM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 49,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 69
@@ -43899,9 +43899,9 @@
     {
       "symbol": "DAR",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 118,
+      "missing": 119,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 2
@@ -43929,12 +43929,12 @@
     {
       "symbol": "DHO",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 50,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 70
+      "no_trend": 71
     },
     {
       "symbol": "DHO",
@@ -43959,9 +43959,9 @@
     {
       "symbol": "DIS",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -43989,9 +43989,9 @@
     {
       "symbol": "DLM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -44019,12 +44019,12 @@
     {
       "symbol": "DSW",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 1,
       "missing": 118,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 1
+      "no_trend": 2
     },
     {
       "symbol": "DSW",
@@ -44049,12 +44049,12 @@
     {
       "symbol": "DTT",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 1,
       "missing": 118,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 1
+      "no_trend": 2
     },
     {
       "symbol": "DTT",
@@ -44079,12 +44079,12 @@
     {
       "symbol": "ENK",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 40,
       "missing": 6,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 74
+      "no_trend": 75
     },
     {
       "symbol": "ENK",
@@ -44109,9 +44109,9 @@
     {
       "symbol": "EQD",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 45,
-      "missing": 18,
+      "missing": 19,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 57
@@ -44139,12 +44139,12 @@
     {
       "symbol": "FNB",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 35,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 80
+      "no_trend": 81
     },
     {
       "symbol": "FNB",
@@ -44169,12 +44169,12 @@
     {
       "symbol": "GAZ",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 34,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 86
+      "no_trend": 87
     },
     {
       "symbol": "GAZ",
@@ -44199,12 +44199,12 @@
     {
       "symbol": "HAL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 37,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 78
+      "no_trend": 79
     },
     {
       "symbol": "HAL",
@@ -44229,12 +44229,12 @@
     {
       "symbol": "HPS",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 33,
       "missing": 11,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 76
+      "no_trend": 77
     },
     {
       "symbol": "HPS",
@@ -44259,12 +44259,12 @@
     {
       "symbol": "IAM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 79
+      "no_trend": 80
     },
     {
       "symbol": "IAM",
@@ -44289,9 +44289,9 @@
     {
       "symbol": "IBM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -44319,12 +44319,12 @@
     {
       "symbol": "IMI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 1,
       "missing": 118,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 1
+      "no_trend": 2
     },
     {
       "symbol": "IMI",
@@ -44349,9 +44349,9 @@
     {
       "symbol": "INV",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 32,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 86
@@ -44379,12 +44379,12 @@
     {
       "symbol": "JET",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 66,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 54
+      "no_trend": 55
     },
     {
       "symbol": "JET",
@@ -44409,12 +44409,12 @@
     {
       "symbol": "LBV",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 35,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 85
+      "no_trend": 86
     },
     {
       "symbol": "LBV",
@@ -44439,9 +44439,9 @@
     {
       "symbol": "LES",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 43,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 75
@@ -44469,12 +44469,12 @@
     {
       "symbol": "LHM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 45,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 75
+      "no_trend": 76
     },
     {
       "symbol": "LHM",
@@ -44499,9 +44499,9 @@
     {
       "symbol": "M2M",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 30,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 88
@@ -44529,9 +44529,9 @@
     {
       "symbol": "MDP",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -44559,9 +44559,9 @@
     {
       "symbol": "MGL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 45,
-      "missing": 8,
+      "missing": 9,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 67
@@ -44589,9 +44589,9 @@
     {
       "symbol": "MIC",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -44619,10 +44619,10 @@
     {
       "symbol": "MNG",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 71,
       "missing": 4,
-      "event_boundary": 7,
+      "event_boundary": 8,
       "inactive": 0,
       "no_trend": 38
     },
@@ -44649,9 +44649,9 @@
     {
       "symbol": "MOX",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 43,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 76
@@ -44679,9 +44679,9 @@
     {
       "symbol": "MRL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 45,
-      "missing": 8,
+      "missing": 9,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 67
@@ -44709,12 +44709,12 @@
     {
       "symbol": "MSA",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 51,
       "missing": 41,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 28
+      "no_trend": 29
     },
     {
       "symbol": "MSA",
@@ -44739,12 +44739,12 @@
     {
       "symbol": "MUT",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 41,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 74
+      "no_trend": 75
     },
     {
       "symbol": "MUT",
@@ -44769,9 +44769,9 @@
     {
       "symbol": "NEJ",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 34,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 84
@@ -44799,9 +44799,9 @@
     {
       "symbol": "OUL",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 119,
+      "missing": 120,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 1
@@ -44829,9 +44829,9 @@
     {
       "symbol": "PPM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 38,
-      "missing": 8,
+      "missing": 9,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 74
@@ -44859,12 +44859,12 @@
     {
       "symbol": "RDS",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 30,
       "missing": 45,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 45
+      "no_trend": 46
     },
     {
       "symbol": "RDS",
@@ -44889,9 +44889,9 @@
     {
       "symbol": "REB",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 1,
-      "missing": 118,
+      "missing": 119,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 1
@@ -44919,12 +44919,12 @@
     {
       "symbol": "RIS",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 39,
       "missing": 42,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 39
+      "no_trend": 40
     },
     {
       "symbol": "RIS",
@@ -44949,12 +44949,12 @@
     {
       "symbol": "S2M",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 1,
       "missing": 119,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 0
+      "no_trend": 1
     },
     {
       "symbol": "S2M",
@@ -44979,9 +44979,9 @@
     {
       "symbol": "SAF",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45009,9 +45009,9 @@
     {
       "symbol": "SBS",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45039,12 +45039,12 @@
     {
       "symbol": "SGTM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 2,
       "missing": 110,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 8
+      "no_trend": 9
     },
     {
       "symbol": "SGTM",
@@ -45069,9 +45069,9 @@
     {
       "symbol": "SLM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45099,12 +45099,12 @@
     {
       "symbol": "SMI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 34,
       "missing": 41,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 45
+      "no_trend": 46
     },
     {
       "symbol": "SMI",
@@ -45129,9 +45129,9 @@
     {
       "symbol": "SNA",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 52,
-      "missing": 7,
+      "missing": 8,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 61
@@ -45159,12 +45159,12 @@
     {
       "symbol": "SNP",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
       "missing": 119,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 1
+      "no_trend": 2
     },
     {
       "symbol": "SNP",
@@ -45189,9 +45189,9 @@
     {
       "symbol": "SOT",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 29,
-      "missing": 39,
+      "missing": 40,
       "event_boundary": 9,
       "inactive": 0,
       "no_trend": 43
@@ -45219,9 +45219,9 @@
     {
       "symbol": "SRM",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 26,
-      "missing": 47,
+      "missing": 48,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 47
@@ -45249,12 +45249,12 @@
     {
       "symbol": "STK",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 49,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 66
+      "no_trend": 67
     },
     {
       "symbol": "STK",
@@ -45279,9 +45279,9 @@
     {
       "symbol": "STR",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45309,9 +45309,9 @@
     {
       "symbol": "T2S",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45339,12 +45339,12 @@
     {
       "symbol": "TGCC",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 71,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 49
+      "no_trend": 50
     },
     {
       "symbol": "TGCC",
@@ -45369,12 +45369,12 @@
     {
       "symbol": "TMA",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 52,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 63
+      "no_trend": 64
     },
     {
       "symbol": "TMA",
@@ -45399,12 +45399,12 @@
     {
       "symbol": "TQA",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 42,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 73
+      "no_trend": 74
     },
     {
       "symbol": "TQA",
@@ -45429,9 +45429,9 @@
     {
       "symbol": "UNI",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -45459,12 +45459,12 @@
     {
       "symbol": "VCNE",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 7,
       "missing": 93,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "VCNE",
@@ -45489,9 +45489,9 @@
     {
       "symbol": "WAF",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 51,
-      "missing": 7,
+      "missing": 8,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 62
@@ -45519,9 +45519,9 @@
     {
       "symbol": "ZLD",
       "horizon": 5,
-      "candidates": 120,
+      "candidates": 121,
       "observed": 0,
-      "missing": 120,
+      "missing": 121,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
