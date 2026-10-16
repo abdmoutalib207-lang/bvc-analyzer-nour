@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-16",
+  "purpose": "official_economic_source_discovery_and_context_only",
+  "usable_for_score": false,
+  "usable_to_certify_issuer_financial_facts": false,
+  "reference_policy": "Registry links are discovery pointers, not validated PDF facts. Only independently checked issuer financial statements can support company accounting ratios.",
+  "institutions": [
+    {
+      "id": "AMMC",
+      "name": "Autorité marocaine du marché des capitaux",
+      "role": "issuer_document",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Comptes publiés, annexes et informations réglementées",
+      "verification_status": "project_reference",
+      "url": "https://www.ammc.ma",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": true,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "EMETTEURS",
+      "name": "Sites officiels des sociétés cotées",
+      "role": "issuer_document",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Rapports annuels, semestriels et communiqués financiers",
+      "verification_status": "project_reference",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": true,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "BOURSE",
+      "name": "Bourse de Casablanca",
+      "role": "market_prices",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Cours, volumes, opérations et avis de marché",
+      "verification_status": "project_reference",
+      "url": "https://www.casablanca-bourse.com",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "MAROCLEAR",
+      "name": "Maroclear",
+      "role": "security_reference",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "ISIN, conservation et opérations sur titres; pas de RNPG",
+      "verification_status": "project_reference",
+      "url": "https://www.maroclear.com",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "BAM",
+      "name": "Bank Al-Maghrib",
+      "role": "prudential_context",
+      "sectors": [
+        "Banque",
+        "Finance - crédit-bail",
+        "Finance - crédit à la consommation"
+      ],
+      "scope": "Statistiques monétaires, supervision bancaire et taux",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ACAPS",
+      "name": "Autorité de contrôle des assurances et de la prévoyance sociale",
+      "role": "prudential_context",
+      "sectors": [
+        "Assurance",
+        "Assurance - courtage"
+      ],
+      "scope": "Statistiques assurance et réassurance; solvabilité et primes sectorielles",
+      "verification_status": "page_confirmed",
+      "url": "https://www.acaps.ma/fr/statistiques",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "HCP",
+      "name": "Haut-Commissariat au Plan",
+      "role": "macro_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Comptes nationaux, inflation, enquêtes de conjoncture",
+      "verification_status": "page_confirmed",
+      "url": "https://www.hcp.ma/downloads/Enquete-nationale-de-conjoncture-aupres-des-menages_t22527.html",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "OFFICE_CHANGES",
+      "name": "Office des Changes",
+      "role": "sector_context",
+      "sectors": [
+        "Tourisme et hôtellerie",
+        "Agroalimentaire et boissons",
+        "Distribution automobile",
+        "Industrie - chimie et gaz"
+      ],
+      "scope": "Commerce extérieur, recettes voyages, IDE et statistiques par secteur",
+      "verification_status": "page_confirmed",
+      "url": "https://www.oc.gov.ma/fr/etudes-et-statistiques/series-statistiques",
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "MEF",
+      "name": "Ministère de l'Économie et des Finances",
+      "role": "policy_context",
+      "sectors": [
+        "BTP et ingénierie",
+        "Banque"
+      ],
+      "scope": "Budget, dette publique, politique économique",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "DEPP",
+      "name": "Direction des entreprises publiques et de la privatisation",
+      "role": "policy_context",
+      "sectors": [
+        "BTP et ingénierie",
+        "Ports et logistique"
+      ],
+      "scope": "Rapports EEP, investissements publics et périmètres",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "TGR",
+      "name": "Trésorerie générale du Royaume",
+      "role": "macro_context",
+      "sectors": [
+        "BTP et ingénierie"
+      ],
+      "scope": "Exécution budgétaire et dépenses publiques",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "DGI",
+      "name": "Direction générale des impôts",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Réglementation fiscale et référentiels",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "MIN_INDUSTRIE",
+      "name": "Ministère de l'Industrie et du Commerce",
+      "role": "sector_context",
+      "sectors": [
+        "Industrie - chimie et gaz",
+        "Agroalimentaire et boissons"
+      ],
+      "scope": "Statistiques et stratégie industrielles",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "MIN_EMPLOI",
+      "name": "Ministère chargé de l'emploi et des compétences",
+      "role": "macro_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Emploi, compétences et marché du travail",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ONDA",
+      "name": "Office national des aéroports",
+      "role": "sector_context",
+      "sectors": [
+        "Tourisme et hôtellerie"
+      ],
+      "scope": "Trafic aéroportuaire et flux passagers",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ONCF",
+      "name": "Office national des chemins de fer",
+      "role": "sector_context",
+      "sectors": [
+        "BTP et ingénierie",
+        "Ports et logistique"
+      ],
+      "scope": "Investissements ferroviaires et transport",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ANP",
+      "name": "Agence nationale des ports",
+      "role": "sector_context",
+      "sectors": [
+        "Ports et logistique"
+      ],
+      "scope": "Trafic portuaire, volumes et infrastructures",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "TANGER_MED",
+      "name": "Tanger Med",
+      "role": "sector_context",
+      "sectors": [
+        "Ports et logistique"
+      ],
+      "scope": "Trafic conteneurs et activité des terminaux",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "OCP",
+      "name": "Groupe OCP",
+      "role": "sector_context",
+      "sectors": [
+        "Agriculture et intrants",
+        "Mines"
+      ],
+      "scope": "Phosphates, engrais, prix et capacités",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ONEE",
+      "name": "Office national de l'électricité et de l'eau potable",
+      "role": "sector_context",
+      "sectors": [
+        "Énergie et distribution",
+        "BTP et ingénierie"
+      ],
+      "scope": "Énergie, eau, investissements et production",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ONHYM",
+      "name": "Office national des hydrocarbures et des mines",
+      "role": "sector_context",
+      "sectors": [
+        "Mines",
+        "Énergie et distribution"
+      ],
+      "scope": "Exploration et projets énergétiques/miniers",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "MASEN",
+      "name": "Masen",
+      "role": "sector_context",
+      "sectors": [
+        "Énergie et distribution",
+        "BTP et ingénierie"
+      ],
+      "scope": "Projets d'énergies renouvelables et capacités",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "RAM",
+      "name": "Royal Air Maroc",
+      "role": "sector_context",
+      "sectors": [
+        "Tourisme et hôtellerie"
+      ],
+      "scope": "Capacités aériennes et trafic",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "AL_OMRANE",
+      "name": "Groupe Al Omrane",
+      "role": "sector_context",
+      "sectors": [
+        "Immobilier - promotion",
+        "BTP et ingénierie"
+      ],
+      "scope": "Logement et programmes d'aménagement",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "CDG",
+      "name": "Caisse de dépôt et de gestion",
+      "role": "sector_context",
+      "sectors": [
+        "Immobilier - foncières",
+        "BTP et ingénierie"
+      ],
+      "scope": "Investissements et financement de projets",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "TAMWILCOM",
+      "name": "Tamwilcom",
+      "role": "sector_context",
+      "sectors": [
+        "Banque",
+        "Finance - crédit à la consommation"
+      ],
+      "scope": "Garanties et financement des entreprises",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "AMDIE",
+      "name": "Agence marocaine de développement des investissements et des exportations",
+      "role": "sector_context",
+      "sectors": [
+        "Industrie - chimie et gaz",
+        "Distribution automobile"
+      ],
+      "scope": "Investissements et exportations",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "OMPIC",
+      "name": "Office marocain de la propriété industrielle et commerciale",
+      "role": "sector_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Créations d'entreprises et registre commercial",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "FM6I",
+      "name": "Fonds Mohammed VI pour l'investissement",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Investissement stratégique et financement",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "ITHMAR",
+      "name": "Ithmar Capital",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Investissements souverains et partenariats",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "CGEM",
+      "name": "Confédération générale des entreprises du Maroc",
+      "role": "sector_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Enquêtes et positionnements patronaux",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "CCIS",
+      "name": "Chambres de commerce, d'industrie et de services",
+      "role": "sector_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Statistiques et activités régionales",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "CONCURRENCE",
+      "name": "Conseil de la concurrence",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Avis et décisions de concurrence",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "CESE",
+      "name": "Conseil économique, social et environnemental",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Études économiques et sociales",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "COUR_COMPTES",
+      "name": "Cour des comptes",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Rapports de contrôle et d'évaluation publics",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    },
+    {
+      "id": "INPPLC",
+      "name": "Instance nationale de la probité et de la prévention de la corruption",
+      "role": "policy_context",
+      "sectors": [
+        "Tous"
+      ],
+      "scope": "Gouvernance et intégrité",
+      "verification_status": "pending",
+      "url": null,
+      "automatic_import": false,
+      "issuer_accounting_fact_authority": false,
+      "publication_frequency": "document_dependent",
+      "rights_status": "not_assessed"
+    }
+  ]
+}
