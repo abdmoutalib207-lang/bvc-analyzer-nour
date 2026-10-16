@@ -17,6 +17,7 @@ from nour.report_contracts import synchronize_market
 from nour.macro import context_view
 from nour.research import enrich, archive_scores
 from tools.audit_readiness import publication_health
+from nour.sector_audit import audit_sector_report
 
 ROOT = Path(__file__).resolve().parent
 
@@ -104,6 +105,11 @@ def main():
         ('version', 'status', 'arithmetic_checks', 'documents_certified')
     }
     atomic_json(ROOT/'web/financial-health.json', financial_health)
+    sector_health = audit_sector_report(report)
+    if sector_health['violations']:
+        raise ValueError('Publication refusée : incompatibilité sectorielle : '
+                         + json.dumps(sector_health['violations'], ensure_ascii=False))
+    atomic_json(ROOT/'web/sector-readiness.json', sector_health)
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT/"web/news.json").write_text(json.dumps(news,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (ROOT/"web/briefing.json").write_text(json.dumps(briefing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
