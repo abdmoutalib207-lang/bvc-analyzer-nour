@@ -21,19 +21,9 @@ jobs:
           node-version: '22'
       - name: Build and verify Nour without refreshing market sources
         run: python tools/verify_nour.py --build --asof "$(TZ=Africa/Casablanca date +%F)"
-      - name: Probe public sector sources on draft PR (no publication)
-        continue-on-error: true
-        run: python tools/update_sector_sources.py
-      - name: Preserve sector source probe evidence
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: nour-sector-source-probe
-          path: |
-            data/sector_source_health.json
-            data/sector_source_candidates.json
-          if-no-files-found: ignore
-          retention-days: 7
+      # External-sector probes were validated separately. Do not let a slow
+      # institution website delay financial calculation and browser review.
+      # The daily published workflow retains its scheduled source discovery.
       - name: Install pinned browser QA runtime
         run: |
           npm install --prefix "$RUNNER_TEMP/nour-browser-qa" --ignore-scripts --no-audit --no-fund playwright@1.62.1
