@@ -16,7 +16,8 @@ class SectorMethodsTests(unittest.TestCase):
                 curated.add(ticker)
         self.assertEqual(len(curated), 78)
         self.assertEqual(symbols - curated, {"DIS", "HAL"})
-        self.assertEqual(guidance("DIS")["coverage"], "broad_only")
+        self.assertEqual(guidance("DIS")["coverage"], "partial")
+        self.assertEqual(guidance("DIS")["metrics_to_verify"], [])
         self.assertEqual(guidance("HAL")["coverage"], "broad_only")
 
     def test_curated_families_do_not_overlap(self):
