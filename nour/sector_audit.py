@@ -134,6 +134,10 @@ def audit_sector_report(report):
         audit = f.get("financial_audit") or {}
         audit_status = audit.get("status", "unavailable")
         actions = _review_actions(symbol, audit)
+        for action in actions:
+            action["document_url"] = f.get("document_url")
+            action["annual_exercise"] = f.get("exercise")
+            action["accounting_basis"] = f.get("accounting_basis")
         review_queue.extend(actions)
         if family in NON_INDUSTRIAL_DEBT_FAMILIES:
             for metric in ("net_debt_ebitda", "net_debt_strict_mmad"):
