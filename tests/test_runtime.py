@@ -32,10 +32,11 @@ class RuntimeContracts(unittest.TestCase):
                 'Ouverture': 101, 'PlusHaut': 103, 'PlusBas': 98,
                 'QteEchangee': shares, 'Volumes': shares*100}
 
-    def test_five_exact_local_slots_and_three_editions(self):
+    def test_three_exact_local_slots_and_three_editions(self):
         workflow = (ROOT/'.github/workflows/nour_daily.yml').read_text()
         pairs = re.findall(r"cron: '([^']+)'\s+timezone: '([^']+)'", workflow)
         self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in SLOTS])
+        self.assertEqual(len(pairs), 3)
         self.assertEqual(set(EDITIONS), {'morning','midday','closing'})
         for cron, (slot, clock, _) in SLOTS.items():
             h,m = map(int,clock.split(':'))
@@ -57,12 +58,14 @@ class RuntimeContracts(unittest.TestCase):
         self.assertEqual(ctx['delay_minutes'],255)
         self.assertTrue(ctx['late'])
         self.assertIn('09:45',ctx['scheduled_at'])
-        overnight = run_context(datetime(2026,10,6,1,0,tzinfo=ZONE), '0 18 * * 1-5','schedule')
+        overnight = run_context(datetime(2026,10,6,1,0,tzinfo=ZONE), '0 16 * * 1-5','schedule')
         self.assertEqual(overnight['edition_for'],'2026-10-05')
-        self.assertEqual(overnight['delay_minutes'],420)
+        self.assertEqual(overnight['delay_minutes'],540)
         with self.assertRaises(ValueError):
             run_context(schedule='unexpected',event='schedule')
         self.assertEqual(run_context(event='push')['slot'],'adhoc')
+        self.assertEqual(run_context(event='workflow_dispatch',slot='refresh')['slot'],'refresh')
+        self.assertEqual(run_context(event='workflow_dispatch',slot='preclose')['slot'],'preclose')
 
     def test_intraday_true_extremes_identity_and_no_history_mutation(self):
         original = copy.deepcopy(self.fixture)
@@ -114,7 +117,7 @@ class RuntimeContracts(unittest.TestCase):
         page = briefing_page(self.fixture,brief,'','')
         self.assertIn('Clôture du jour non confirmée',page)
         self.assertIn('Créneau exécuté en retard',page)
-        self.assertIn('09:45 · 11:46 · 13:45 · 15:45 · 18:00',page)
+        self.assertIn('09:45 · 12:45 · 16:00',page)
         self.assertIn('Dernière clôture',home_page(self.fixture,report,'',''))
         report['results'][0]['asof'] = '2026-10-05'
         self.assertEqual(create_briefing(report)['edition_status'], 'published')
