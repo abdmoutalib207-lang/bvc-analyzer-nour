@@ -242,6 +242,23 @@ def apply_financial_audit(calculated, audit):
     metrics = ('eps_mad', 'pb', 'roe_pct', 'revenue_growth_pct')
     out['coverage_pct'] = 25 * sum(out.get(k) is not None for k in metrics)
     out['missing_metrics'] = [k for k in metrics if out.get(k) is None]
+    # A blocked indicator is not equivalent to an unpublished indicator.
+    # Preserve the exact audit reason per metric, while keeping independent
+    # figures available. This metadata is presentation-only, not a score input.
+    reasons = {}
+    for check in audit.get('checks') or []:
+        if check.get('status') == 'blocked':
+            for metric in check.get('blocked_metrics') or []:
+                if metric in METRICS:
+                    reasons.setdefault(metric, []).append(check['code'])
+    out['metric_availability'] = {
+        key: {
+            'status': ('blocked' if key in audit['blocked_metrics'] else
+                       'available' if out.get(key) is not None else 'unavailable'),
+            'reason_codes': sorted(set(reasons.get(key, []))),
+        }
+        for key in METRICS
+    }
     out['financial_audit'] = deepcopy(audit)
     return out
 
