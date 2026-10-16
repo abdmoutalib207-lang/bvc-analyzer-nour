@@ -101,6 +101,24 @@ class SectorAuditTests(unittest.TestCase):
         self.assertEqual(len(row["unverified_annual_fact_groups"]), 2)
         self.assertEqual(row["status"], "primary_page_check_required")
 
+    def test_tgcc_sgtm_cmgp_consolidated_total_is_not_group_profit(self):
+        from nour.fundamentals import calculate
+        facts = json.loads((Path(__file__).resolve().parents[1] / "data/facts_reference.json").read_text())["records"]
+        for symbol in ("TGCC", "SGTM", "CMGP"):
+            with self.subTest(symbol=symbol):
+                result = calculate({"symbol": symbol, "price": 200}, facts[symbol], asof="2026-10-16")
+                self.assertIn("resultat_net_consolide", result["evidence"])
+                self.assertIsNone(result["eps_mad"])
+                self.assertIsNone(result["pe"])
+                self.assertIsNone(result["roe_pct"])
+                checks = result["financial_audit"]["checks"]
+                self.assertTrue(any(check["code"] == "group_earnings_missing_total_not_substituted"
+                                    and check["status"] == "blocked" for check in checks))
+                report = {"results": [{"symbol": symbol, "fundamental": result}]}
+                actions = audit_sector_report(report)["review_queue"]
+                self.assertTrue(any(a["code"] == "group_earnings_missing_total_not_substituted"
+                                    and a["source_pages_to_check"] for a in actions))
+
     def test_guidance_mismatch_is_violation(self):
         report = {"results": [{"symbol": "ATW", "sector_guidance": {"family": "Tourisme"},
                                "fundamental": {"document_url": None}}]}
