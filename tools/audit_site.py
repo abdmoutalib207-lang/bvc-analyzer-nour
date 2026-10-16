@@ -7,6 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nour.assistant import build_data, read_briefings, read_history_files
+from nour.sector_audit import audit_sector_report
 
 
 def audit(web):
@@ -16,6 +17,15 @@ def audit(web):
     if actual != build_data(report,read_briefings(web,report['analysis_date']),
                             read_history_files(web,[r['symbol'] for r in report['results']])):
         raise ValueError('Assistant facts diverge from the published report')
+    sector = json.loads((web/'sector-readiness.json').read_text())
+    if sector != audit_sector_report(report):
+        raise ValueError('Sector evidence JSON diverges from the published report')
+    sector_page = (web/'metiers.html').read_text()
+    for row in report['results']:
+        if f'href="titres/{row["symbol"]}.html"' not in sector_page:
+            raise ValueError(f'Missing issuer on métier review page: {row["symbol"]}')
+    if sector.get('documents_certified') is not False:
+        raise ValueError('Sector review must never claim whole-document certification')
     config = json.loads((web/'assistant-config.json').read_text())
     if config.get('endpoint') is not None:
         raise ValueError('Public LLM must not be enabled without its protected backend')
