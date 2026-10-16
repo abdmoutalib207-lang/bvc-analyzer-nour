@@ -517,11 +517,16 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
     from .economic_sources import load_catalog, catalog_page, catalog_summary
+    from .sector_sources import monitor_html, validate_state
     economic_catalog = load_catalog()
+    watch_file = Path(__file__).resolve().parents[1] / "data/sector_source_candidates.json"
+    watch_state = json.loads(watch_file.read_text(encoding="utf-8")) if watch_file.exists() else None
+    if watch_state is not None:
+        validate_state(watch_state)
     (output / "sources.html").write_text(
         shell("Sources économiques marocaines",
               header("index.html", report.get("snapshot_updated") or "")
-              + catalog_page(economic_catalog)
+              + catalog_page(economic_catalog).replace("</main>", monitor_html(watch_state) + "</main>")
               + "<footer>BVC Analyzer Nour · sources contextuelles non certifiantes.</footer>",
               style, script), encoding="utf-8")
     (output / "economic-sources-summary.json").write_text(
