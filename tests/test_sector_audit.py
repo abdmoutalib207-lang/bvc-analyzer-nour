@@ -49,6 +49,40 @@ class SectorAuditTests(unittest.TestCase):
         fact["period_end"] = None
         self.assertEqual(audit_sector_report(report)["selected_pages_reviewed_issuers"], 0)
 
+    def test_blocked_debt_reconciliation_is_a_priority_action_not_a_repair(self):
+        comparison = {"status": "unresolved", "calculated_mmad": 1361.489,
+                      "reported_mmad": 1303, "difference_mmad": 58.489,
+                      "tolerance_mmad": 26.06}
+        report = {"results": [{"symbol": "ADI", "fundamental": {
+            "document_url": "https://www.ammc.ma/ADI_RFA_2025.pdf",
+            "net_debt_strict_mmad": None, "financial_audit": {
+                "status": "blocked", "blocked_metrics": ["net_debt_strict_mmad"],
+                "debt_comparison": comparison,
+                "checks": [{"code": "debt_arithmetic_mismatch", "status": "blocked",
+                            "fields": ["dettes_financieres", "tresorerie_actif", "endettement_net"],
+                            "blocked_metrics": ["net_debt_strict_mmad"]}]}}}]}
+        before = copy.deepcopy(report)
+        result = audit_sector_report(report)
+        self.assertEqual(report, before)
+        self.assertEqual(result["blocking_issuers"], 1)
+        self.assertEqual(result["blocking_actions"], 1)
+        self.assertEqual(result["review_queue"][0]["priority"], "P1")
+        self.assertEqual(result["review_queue"][0]["debt_comparison_mmad"], comparison)
+        self.assertIsNone(report["results"][0]["fundamental"]["net_debt_strict_mmad"])
+
+    def test_checked_status_is_recognized_without_inventing_pdf_certification(self):
+        fact = {"page": 3, "document_url": "https://example.org/a.pdf",
+                "period_end": "2025-12-31", "unit": "MMAD", "currency": "MAD",
+                "document_hash": "sha256:" + "a" * 64, "accounting_basis": "consolidé",
+                "validation_status": "selected_pages_visually_checked"}
+        report = {"results": [{"symbol": "RIS", "fundamental": {
+            "document_url": "https://example.org/a.pdf",
+            "evidence": {"chiffre_affaires": fact},
+            "financial_audit": {"status": "checked", "checks": [], "blocked_metrics": []}}}]}
+        result = audit_sector_report(report)
+        self.assertEqual(result["review_states"]["selected_pages_checked"], 1)
+        self.assertFalse(result["documents_certified"])
+
     def test_guidance_mismatch_is_violation(self):
         report = {"results": [{"symbol": "ATW", "sector_guidance": {"family": "Tourisme"},
                                "fundamental": {"document_url": None}}]}
