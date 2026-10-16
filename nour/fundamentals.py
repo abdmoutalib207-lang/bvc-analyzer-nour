@@ -37,8 +37,14 @@ def _calculate(record, facts):
     def fact(key):
         f = data.get(key) or {}
         v, page = f.get('valeur'), f.get('page')
-        if (isinstance(v, bool) or not isinstance(v, (int,float)) or not math.isfinite(v)
-                or isinstance(page, bool) or not isinstance(page,int) or page < 1):
+        if isinstance(v, bool) or not isinstance(v, (int, float)):
+            return None
+        try:
+            numeric = float(v)
+        except (OverflowError, ValueError, TypeError):
+            return None
+        if (not math.isfinite(numeric) or isinstance(page, bool)
+                or not isinstance(page, int) or page < 1):
             return None
         if f.get('devise', out['currency']) != 'MAD':
             return None
@@ -50,7 +56,7 @@ def _calculate(record, facts):
             document_hash=f.get('document_hash'), printed_page=f.get('printed_page'),
             validation_status=f.get('validation_status','referenced_import'),
             period_end=f.get('period_end'), currency=f.get('devise', out['currency']))
-        return float(v)
+        return numeric
     if out['currency'] != 'MAD':
         out['warnings'].append('Devise étrangère : aucun ratio au cours MAD sans conversion documentée.')
         return out
@@ -96,7 +102,12 @@ def _calculate(record, facts):
     previous = fact(f"chiffre_affaires_{(facts.get('exercice') or 0)-1}")
     dividend = fact('dividende_par_action')
     price = record.get('price')
-    price = float(price) if isinstance(price,(int,float)) and not isinstance(price,bool) and math.isfinite(price) and price>0 else None
+    try:
+        price = float(price) if isinstance(price, (int, float)) and not isinstance(price, bool) else None
+    except (OverflowError, ValueError, TypeError):
+        price = None
+    if price is not None and (not math.isfinite(price) or price <= 0):
+        price = None
     eps = net*1e6/eps_shares if net is not None and eps_shares and eps_shares>0 else None
     book = equity*1e6/book_shares if equity is not None and book_shares and book_shares>0 else None
     rnd = lambda x: round(x,2) if x is not None and math.isfinite(x) else None
