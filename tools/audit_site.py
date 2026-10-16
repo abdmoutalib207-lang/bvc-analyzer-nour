@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nour.assistant import build_data, read_briefings, read_history_files
 from nour.sector_audit import audit_sector_report
+from nour.economic_sources import load_catalog, catalog_summary
 
 
 def audit(web):
@@ -26,6 +27,15 @@ def audit(web):
             raise ValueError(f'Missing issuer on métier review page: {row["symbol"]}')
     if sector.get('documents_certified') is not False:
         raise ValueError('Sector review must never claim whole-document certification')
+    source_summary = json.loads((web/'economic-sources-summary.json').read_text())
+    if source_summary != catalog_summary(load_catalog()):
+        raise ValueError('Economic source summary diverges from its registry')
+    source_page = (web/'sources.html').read_text()
+    for source in load_catalog()['institutions']:
+        if source['name'] not in source_page:
+            raise ValueError('Missing economic institution: ' + source['id'])
+    if source_summary['usable_for_score'] or source_summary['usable_to_certify_issuer_financial_facts']:
+        raise ValueError('Economic context cannot certify company accounts')
     config = json.loads((web/'assistant-config.json').read_text())
     if config.get('endpoint') is not None:
         raise ValueError('Public LLM must not be enabled without its protected backend')
