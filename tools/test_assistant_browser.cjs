@@ -16,7 +16,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','macro.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route.startsWith('titres/')){
           const dashboard=page.locator('[data-bi-dashboard]');
@@ -71,6 +71,18 @@ const shots=process.env.NOUR_SCREENSHOTS;
           }
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
+        }
+        if(route==='sources.html'){
+          const body=await page.locator('main').innerText();
+          for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','ACAPS','Office des Changes']){
+            assert.ok(body.includes(name),'Missing economic source '+name);
+          }
+          assert.equal(await page.locator('table tbody tr').count(),36);
+          const summary=await (await context.request.get(new URL('economic-sources-summary.json',base).href)).json();
+          assert.equal(summary.institution_count,36);
+          assert.equal(summary.auto_import_enabled,false);
+          assert.equal(summary.usable_to_certify_issuer_financial_facts,false);
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Sources page overflows '+width);
         }
         if(route==='metiers.html'){
           const body=await page.locator('main').innerText();
