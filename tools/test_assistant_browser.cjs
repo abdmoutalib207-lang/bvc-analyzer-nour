@@ -74,7 +74,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         }
         if(route==='sources.html'){
           const body=await page.locator('main').innerText();
-          for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','ACAPS','Office des Changes']){
+          for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','Autorité de contrôle des assurances','Office des Changes']){
             assert.ok(body.includes(name),'Missing economic source '+name);
           }
           assert.equal(await page.locator('table tbody tr').count(),36);
