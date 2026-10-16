@@ -1,0 +1,49 @@
+"""Sector rules are descriptive, isolated from numerical scoring."""
+import unittest
+
+from nour.sector_methods import FAMILIES, guidance
+
+
+class SectorMethodsTests(unittest.TestCase):
+    def test_curated_families_do_not_overlap(self):
+        seen = set()
+        for family, data in FAMILIES.items():
+            self.assertTrue(family)
+            self.assertTrue(data["metrics"])
+            self.assertTrue(data["exclude"])
+            for symbol in data["symbols"]:
+                self.assertNotIn(symbol, seen)
+                seen.add(symbol)
+
+    def test_sectors_require_distinct_evidence(self):
+        bank = guidance("ATW")
+        hotel = guidance("RIS")
+        btp = guidance("SGTM")
+        health = guidance("SOT")
+        self.assertIn("PNB", bank["metrics_to_verify"])
+        self.assertIn("RevPAR", hotel["metrics_to_verify"])
+        self.assertIn("carnet de commandes", btp["metrics_to_verify"])
+        self.assertIn("mix produits", health["metrics_to_verify"])
+        self.assertNotEqual(bank["family"], hotel["family"])
+        self.assertIn("PNB bancaire", hotel["invalid_shortcuts"])
+
+    def test_unknown_symbol_abstains(self):
+        result = guidance("UNKNOWN", {"sector": "Autres"})
+        self.assertEqual(result["coverage"], "broad_only")
+        self.assertEqual(result["metrics_to_verify"], [])
+        self.assertIn("non validée", result["note"])
+
+    def test_guidance_returns_independent_mutable_copy(self):
+        first = guidance("ADI")
+        first["metrics_to_verify"].append("inventé")
+        self.assertNotIn("inventé", guidance("ADI")["metrics_to_verify"])
+
+    def test_no_measured_values_or_investment_signals(self):
+        for family in FAMILIES.values():
+            self.assertNotIn("score", family)
+            self.assertNotIn("buy", family)
+            self.assertNotIn("value", family)
+
+
+if __name__ == "__main__":
+    unittest.main()
