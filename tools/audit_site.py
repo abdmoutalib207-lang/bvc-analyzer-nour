@@ -1,5 +1,6 @@
 """Audit generated assistant assets and snapshot parity; no live provider call."""
 import json
+from html import escape
 from pathlib import Path
 import re
 import sys
@@ -32,7 +33,7 @@ def audit(web):
         raise ValueError('Economic source summary diverges from its registry')
     source_page = (web/'sources.html').read_text()
     for source in load_catalog()['institutions']:
-        if source['name'] not in source_page:
+        if escape(source['name']) not in source_page:
             raise ValueError('Missing economic institution: ' + source['id'])
     if source_summary['usable_for_score'] or source_summary['usable_to_certify_issuer_financial_facts']:
         raise ValueError('Economic context cannot certify company accounts')
