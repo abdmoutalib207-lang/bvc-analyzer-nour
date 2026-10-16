@@ -79,3 +79,21 @@ les tests, la fusion et la vérification du site servi.
 - Le moteur conserve les scores, les historiques et les chiffres financiers existants ; seules des métadonnées de provenance et de présentation sont ajoutées.
 
 La revue CI doit encore valider le lot avant toute fusion. Une revue documentaire exhaustive et la qualification métier des sociétés non encore couvertes restent nécessaires.
+
+## Lot 3 — couverture des métiers et garde-fous RNPG
+
+- **78 sociétés sur 80** disposent d'une grille de lecture métier indicative ; **DIS et HAL** restent volontairement non qualifiées jusqu'à identification documentaire. Cette couverture mesure la présence d'une grille, **pas** la fiabilité de leurs résultats.
+- Les métiers hospitaliers (AKD), pharmaceutiques (SOT, PPM) et distribution médicale (VCNE) sont séparés.
+- Sont également distingués : banques, assurances, courtiers, leasing, crédit à la consommation, paiement, immobilier locatif et promotion, BTP, tourisme, agroalimentaire, agriculture, mines, métallurgie, ports, télécoms, automobile, IT, chimie, énergie, holdings et distribution.
+- La file de rapprochement identifie désormais les **faits manquants** et les **faits présents mais non vérifiés**. Elle inclut la référence du rapport et, lorsqu'elle existe, la page PDF indicative du poste à contrôler.
+- Le résultat net **consolidé total** de TGCC, SGTM et CMGP est exposé comme élément de vérification, **jamais** substitué au RNPG. BPA, PER et ROE restent indisponibles sans numérateur pertinent vérifié.
+- Dossier de travail : [Rapprochement des résultats part du groupe](group-earnings-reconciliation-2026-10-16.md).
+- Les PDF AMMC n'ont pas été vérifiés indépendamment lors de cette passe : aucune valeur n'est reclassée en « vérifiée » sur la seule foi de la référence existante.
+
+### Conditions de clôture du lot
+
+1. CI GitHub réussie sur **le dernier commit**, pas un commit antérieur.
+2. Contrôle de la page métiers sur ordinateur et mobile et de la concordance avec l'export JSON.
+3. Trois éditions locales 09:45, 12:45, 16:00, archivage et statut provisoire/confirmé contrôlés.
+4. Revue primaire des anomalies bloquantes, sans déblocage arbitraire.
+5. Décision explicite de fusion/publication ; le lot ne se déploie pas seul.
