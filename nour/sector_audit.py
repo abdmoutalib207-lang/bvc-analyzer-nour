@@ -19,6 +19,12 @@ CHECKED = frozenset({
 # This is a *review queue*, not an assertion that these KPI are always disclosed.
 DOCUMENT_CHECKLIST = {
     "Banque": (("produit_net_bancaire",), ("resultat_net_part_groupe", "resultat_net_social")),
+    "Finance - crédit-bail": (("produit_net_bancaire",), ("resultat_net_part_groupe", "resultat_net_social")),
+    "Finance - crédit à la consommation": (("produit_net_bancaire",), ("resultat_net_part_groupe", "resultat_net_social")),
+    "Finance - services de paiement": (("chiffre_affaires",),),
+    "Assurance - courtage": (("chiffre_affaires",),),
+    "Immobilier - foncières": (("chiffre_affaires",),),
+    "Holdings et participations": (("resultat_net_part_groupe", "resultat_net_social"),),
     "Assurance": (("resultat_net_part_groupe", "resultat_net_social"),),
     "Immobilier - promotion": (("chiffre_affaires",), ("resultat_net_part_groupe", "resultat_net_social")),
     "BTP et ingénierie": (("chiffre_affaires",), ("resultat_net_part_groupe", "resultat_net_social")),
@@ -32,10 +38,19 @@ DOCUMENT_CHECKLIST = {
     "Ports et logistique": (("chiffre_affaires",),),
     "Mines": (("chiffre_affaires",),),
     "Technologie et services": (("chiffre_affaires",),),
+    "Distribution automobile": (("chiffre_affaires",),),
+    "Distribution informatique": (("chiffre_affaires",),),
+    "Services informatiques et logiciels": (("chiffre_affaires",),),
+    "Industrie - papier": (("chiffre_affaires",),),
+    "Industrie - chimie et gaz": (("chiffre_affaires",),),
+    "Industrie - équipements et métallurgie": (("chiffre_affaires",),),
+    "Distribution industrielle": (("chiffre_affaires",),),
+    "Peintures et revêtements": (("chiffre_affaires",),),
 }
 # These are institution-specific accounting incompatibilities, not
 # cross-sector rankings. Other financial services need individual review.
-NON_INDUSTRIAL_DEBT_FAMILIES = frozenset(("Banque", "Assurance"))
+NON_INDUSTRIAL_DEBT_FAMILIES = frozenset(("Banque", "Assurance",
+                                          "Finance - crédit-bail", "Finance - crédit à la consommation"))
 
 
 def _primary_checked(fact):
