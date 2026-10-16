@@ -131,7 +131,7 @@ def runtime_panel(runtime, intraday=None):
     link = f'<a href="{esc(runtime["run_url"])}" target="_blank" rel="noopener noreferrer">Voir le run GitHub ↗</a>' if runtime.get('run_url') else ''
     live = intraday or {}
     return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
-            '<p>Créneaux lundi–vendredi : 09:45 · 11:46 · 13:45 · 15:45 · 18:00. GitHub peut retarder ou manquer un déclenchement.</p>'
+            '<p>Créneaux lundi–vendredi : 09:45 · 12:45 · 16:00 (Casablanca). La clôture de 16h reste non confirmée tant que la collecte ne l’a pas validée. GitHub peut retarder ou manquer un déclenchement.</p>'
             f'<p>Créneau attendu : {esc(runtime.get("scheduled_at") or "déclenchement à la demande")}.</p>'
             f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
             f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
