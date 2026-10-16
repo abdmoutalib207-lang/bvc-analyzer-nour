@@ -67,7 +67,8 @@ class SectorAuditTests(unittest.TestCase):
         self.assertEqual(result["blocking_issuers"], 1)
         self.assertEqual(result["blocking_actions"], 1)
         self.assertEqual(result["review_queue"][0]["priority"], "P1")
-        self.assertEqual(result["review_queue"][0]["debt_comparison_mmad"],\n                         {key: value for key, value in comparison.items() if key != "status"})
+        self.assertEqual(result["review_queue"][0]["debt_comparison_mmad"],
+                         {key: value for key, value in comparison.items() if key != "status"})
         self.assertIsNone(report["results"][0]["fundamental"]["net_debt_strict_mmad"])
 
     def test_checked_status_is_recognized_without_inventing_pdf_certification(self):
