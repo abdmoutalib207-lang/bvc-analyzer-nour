@@ -76,12 +76,14 @@
         "Finance - crédit à la consommation"
       ],
       "scope": "Statistiques monétaires, supervision bancaire et taux",
-      "verification_status": "pending",
-      "url": null,
+      "verification_status": "official_page_found_not_data_verified",
+      "url": "https://www.bkam.ma/Statistiques/Calendrier/Statistiques-monetaires",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "ACAPS",
@@ -97,7 +99,9 @@
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "HCP",
@@ -112,7 +116,9 @@
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "OFFICE_CHANGES",
@@ -130,7 +136,9 @@
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "MEF",
@@ -233,12 +241,14 @@
         "Tourisme et hôtellerie"
       ],
       "scope": "Trafic aéroportuaire et flux passagers",
-      "verification_status": "pending",
-      "url": null,
+      "verification_status": "official_page_found_not_data_verified",
+      "url": "https://www.onda.ma/en/Je-suis-Professionnel/Statistiques/Statistiques",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "ONCF",
@@ -264,12 +274,14 @@
         "Ports et logistique"
       ],
       "scope": "Trafic portuaire, volumes et infrastructures",
-      "verification_status": "pending",
-      "url": null,
+      "verification_status": "official_page_found_not_data_verified",
+      "url": "https://www.anp.org.ma/",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "TANGER_MED",
@@ -279,12 +291,14 @@
         "Ports et logistique"
       ],
       "scope": "Trafic conteneurs et activité des terminaux",
-      "verification_status": "pending",
-      "url": null,
+      "verification_status": "official_page_found_not_data_verified",
+      "url": "https://www.tangermedport.com/fr/media-room/telechargements/",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
-      "rights_status": "not_assessed"
+      "rights_status": "not_assessed",
+      "publication_watch_enabled": true,
+      "publication_watch_mode": "metadata_links_only"
     },
     {
       "id": "OCP",
