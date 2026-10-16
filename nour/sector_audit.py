@@ -4,6 +4,7 @@ Runs over the already-computed Nour report. Never overwrites a fundamental,
 a market price or a canonical score. No external fetch and no PDF certification.
 """
 from collections import Counter
+from datetime import date
 import re
 
 from .sector_methods import guidance
@@ -36,7 +37,13 @@ NON_INDUSTRIAL_DEBT_FAMILIES = frozenset(("Banque", "Assurance"))
 def _primary_checked(fact):
     if not isinstance(fact, dict):
         return False
-    return (fact.get("validation_status") in CHECKED
+    try:
+        date.fromisoformat(fact.get('period_end'))
+    except (TypeError, ValueError):
+        return False
+    return (fact.get('currency') == 'MAD'
+            and fact.get('unit') in ('MMAD', 'actions', 'MAD', 'DH')
+            and fact.get("validation_status") in CHECKED
             and isinstance(fact.get("page"), int) and not isinstance(fact["page"], bool)
             and fact["page"] > 0
             and isinstance(fact.get("document_url"), str)
