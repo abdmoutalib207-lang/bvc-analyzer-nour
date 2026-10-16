@@ -459,11 +459,14 @@ def sector_page(report, style, script):
         source = action.get("document_url")
         source_link = (f'<a href="{esc(source)}" target="_blank" rel="noopener noreferrer">Rapport annuel ↗</a>'
                        if isinstance(source, str) and source.startswith("https://") else "Source primaire à retrouver")
+        pages = ', '.join(f'{row["field"]} : p. {row["page_hint"]}'
+                          for row in action.get("source_pages_to_check", []))
+        page_hint = f'<p class="muted">Pages indicatives à vérifier : {esc(pages)}</p>' if pages else ''
         priority_rows.append(
             f'<tr><td>{esc(action["priority"])}</td>'
             f'<td><a href="titres/{esc(action["symbol"])}.html">{esc(action["symbol"])}</a></td>'
             f'<td>{esc(action["code"])}</td>'
-            f'<td>{esc(action["instruction"])}{debt}</td>'
+            f'<td>{esc(action["instruction"])}{debt}{page_hint}</td>'
             f'<td>{esc(action.get("annual_exercise"))} · {source_link}</td></tr>')
     priority_table = ('<section class="panel"><h2>Blocages à rapprocher</h2>'
                       + f'<p>{audit["blocking_issuers"]} sociétés avec ratios suspendus ; '
