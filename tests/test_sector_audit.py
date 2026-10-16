@@ -84,6 +84,23 @@ class SectorAuditTests(unittest.TestCase):
         self.assertEqual(result["review_states"]["selected_pages_checked"], 1)
         self.assertFalse(result["documents_certified"])
 
+    def test_present_but_unverified_fact_is_not_counted_as_primary_checked(self):
+        fact = {"page": 15, "value": 99, "unit": "MMAD",
+                "document_url": "https://example.org/bank.pdf",
+                "accounting_basis": "consolidé", "period_end": "2025-12-31",
+                "currency": "MAD", "validation_status": "referenced_import",
+                "document_hash": None}
+        report = {"results": [{"symbol": "ATW", "fundamental": {
+            "document_url": "https://example.org/bank.pdf",
+            "evidence": {"produit_net_bancaire": fact, "resultat_net_part_groupe": fact},
+            "financial_audit": {"status": "checked"}}}]}
+        result = audit_sector_report(report)
+        row = result["issuers"][0]
+        self.assertEqual(row["selected_page_evidence_count"], 0)
+        self.assertEqual(row["missing_annual_fact_groups"], [])
+        self.assertEqual(len(row["unverified_annual_fact_groups"]), 2)
+        self.assertEqual(row["status"], "primary_page_check_required")
+
     def test_guidance_mismatch_is_violation(self):
         report = {"results": [{"symbol": "ATW", "sector_guidance": {"family": "Tourisme"},
                                "fundamental": {"document_url": None}}]}
