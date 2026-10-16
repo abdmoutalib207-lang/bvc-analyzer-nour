@@ -219,10 +219,38 @@ def _calculate(record, facts):
 
 
 def calculate(record, facts, asof=None):
-    """Canonical calculation boundary: audit contracts before any score consumes it."""
+    """Canonical calculation boundary: audit contracts before any score consumes it.
+
+    Annual and semiannual facts are distinct. Never show a report whose period
+    is after the analysis date, even if it is present in the imported snapshot.
+    Never combine a future or explicitly stale price with historical EPS/equity.
+    """
     from .financial_audit import audit_financials, apply_financial_audit
     asof = asof or date.today().isoformat()
-    computed = _calculate(record, facts)
+    # audit_financials also validates this ISO date, but validate before any
+    # calculation so invalid dates cannot leak a future report into the result.
+    analysis_day = date.fromisoformat(asof)
+    visible_facts = facts
+    if isinstance(facts, dict) and isinstance(facts.get('latest_report'), dict):
+        period = facts['latest_report'].get('period_end')
+        try:
+            report_day = date.fromisoformat(period)
+        except (TypeError, ValueError):
+            report_day = None
+        if report_day is None or report_day > analysis_day:
+            visible_facts = {**facts, 'latest_report': None}
+    visible_record = record
+    quote_day = record.get('price_asof')
+    if quote_day is not None:
+        try:
+            valid_quote_day = date.fromisoformat(quote_day) <= analysis_day
+        except (TypeError, ValueError):
+            valid_quote_day = False
+        if not valid_quote_day:
+            visible_record = {**record, 'price': None}
+    if record.get('stale'):
+        visible_record = {**visible_record, 'price': None}
+    computed = _calculate(visible_record, visible_facts)
     checks = audit_financials(record, facts, asof, calculated=computed)
     return apply_financial_audit(computed, checks)
 
