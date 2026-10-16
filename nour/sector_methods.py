@@ -7,6 +7,90 @@ period and units. A missing business KPI must not be inferred from price data.
 from .peer_groups import group_for
 
 FAMILIES = {
+    "Assurance - courtage": {
+        "symbols": ("AFM", "AGM"),
+        "metrics": ("commissions", "primes intermédiées si publiées", "taux de renouvellement si publié", "marge", "cash-flow"),
+        "exclude": ("primes encaissées comme chiffre d'affaires de l'assureur", "ratio de solvabilité d'assureur"),
+        "sources": ("rapports courtiers", "résultats", "AMMC"),
+    },
+    "Finance - crédit-bail": {
+        "symbols": ("MRL", "MGL"),
+        "metrics": ("encours productifs", "PNB ou produit net de leasing", "coût du risque", "créances douteuses", "solvabilité"),
+        "exclude": ("dette nette/EBITDA industriel", "ventes d'équipements comme revenus propres"),
+        "sources": ("rapports financiers", "BAM", "AMMC"),
+    },
+    "Finance - crédit à la consommation": {
+        "symbols": ("SLM", "EQD"),
+        "metrics": ("encours de crédit", "PNB", "coût du risque", "créances en souffrance", "rentabilité des fonds propres"),
+        "exclude": ("dette nette/EBITDA industriel", "volume des crédits comme produit"),
+        "sources": ("rapports financiers", "BAM", "AMMC"),
+    },
+    "Finance - services de paiement": {
+        "symbols": ("CASH",),
+        "metrics": ("transactions", "commissions nettes", "réseau de distribution", "coût de conformité", "cash-flow"),
+        "exclude": ("montant total transféré comme chiffre d'affaires", "ratio de solvabilité bancaire sans statut bancaire"),
+        "sources": ("rapports émetteur", "BAM", "AMMC"),
+    },
+    "Immobilier - foncières": {
+        "symbols": ("ARD", "IMI", "BAL"),
+        "metrics": ("revenus locatifs", "taux d'occupation", "valeur des actifs", "rendement locatif", "dette", "cash-flow"),
+        "exclude": ("préventes immobilières comme revenu locatif", "carnet de commandes BTP"),
+        "sources": ("rapports foncières", "évaluations immobilières", "AMMC"),
+    },
+    "Holdings et participations": {
+        "symbols": ("DHO", "REB", "ZLD"),
+        "metrics": ("actif net réévalué si publié", "dette holding", "flux de dividendes", "résultats par participation"),
+        "exclude": ("addition des chiffres d'affaires sans éliminations", "PER consolidé sans examen du périmètre"),
+        "sources": ("rapports holding", "états consolidés", "AMMC"),
+    },
+    "Distribution automobile": {
+        "symbols": ("ENK", "NEJ"),
+        "metrics": ("ventes de véhicules", "mix marques", "marge", "stocks", "BFR", "après-vente"),
+        "exclude": ("production automobile propre supposée", "PNB bancaire"),
+        "sources": ("rapports distributeurs", "résultats", "AMMC"),
+    },
+    "Distribution informatique": {
+        "symbols": ("DSW", "DTT"),
+        "metrics": ("chiffre d'affaires par segment", "marge de distribution", "stocks", "créances", "BFR"),
+        "exclude": ("revenus SaaS récurrents supposés", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Services informatiques et logiciels": {
+        "symbols": ("IBM", "INV", "MIC"),
+        "metrics": ("services vs licences", "revenus récurrents si publiés", "marge", "concentration clients", "cash-flow"),
+        "exclude": ("ARR supposé sans contrats", "multiples SaaS appliqués à la revente de matériel"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Industrie - papier": {
+        "symbols": ("MDP",),
+        "metrics": ("volumes produits", "prix des intrants", "énergie", "marge", "stocks", "capex"),
+        "exclude": ("PNB bancaire", "taux d'occupation hôtelier"),
+        "sources": ("rapports émetteur", "résultats", "AMMC"),
+    },
+    "Industrie - chimie et gaz": {
+        "symbols": ("SNP", "MOX"),
+        "metrics": ("volumes industriels", "prix matières premières", "énergie", "marge", "capex", "BFR"),
+        "exclude": ("production de pétrole brut supposée", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Industrie - équipements et métallurgie": {
+        "symbols": ("AFI", "ALU", "SRM", "STR"),
+        "metrics": ("volumes", "marge industrielle", "carnet de commandes si publié", "BFR", "capex"),
+        "exclude": ("commandes assimilées à un bénéfice réalisé", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Distribution industrielle": {
+        "symbols": ("FNB", "STK"),
+        "metrics": ("mix produits", "marge commerciale", "stocks", "BFR", "créances clients"),
+        "exclude": ("production industrielle propre supposée", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Peintures et revêtements": {
+        "symbols": ("COL",),
+        "metrics": ("volumes", "prix matières premières", "marge", "stocks", "distribution", "capex"),
+        "exclude": ("PNB bancaire", "taux d'occupation hôtelier"),
+        "sources": ("rapports émetteur", "résultats", "AMMC"),
+    },
     "Banque": {
         "symbols": ("ATW", "BCP", "BOA", "BMC", "CIH", "CDM", "CFGB"),
         "metrics": ("PNB", "RNPG", "coût du risque", "créances en souffrance", "solvabilité", "ROE"),
@@ -26,7 +110,7 @@ FAMILIES = {
         "sources": ("rapports annuels", "communiqués d'activité", "AMMC"),
     },
     "BTP et ingénierie": {
-        "symbols": ("TGCC", "SGTM", "JET"),
+        "symbols": ("TGCC", "SGTM", "JET", "DLM"),
         "metrics": ("carnet de commandes", "prise de commandes", "marge chantier", "BFR", "trésorerie", "capex"),
         "exclude": ("préventes immobilières comme CA", "carnet de commandes comme bénéfice acquis"),
         "sources": ("rapports de gestion", "résultats consolidés", "AMMC"),
@@ -56,7 +140,7 @@ FAMILIES = {
         "sources": ("rapports émetteurs", "résultats", "AMMC"),
     },
     "Agroalimentaire et boissons": {
-        "symbols": ("LES", "MUT", "OUL", "UNI", "CAR", "CSR"),
+        "symbols": ("LES", "MUT", "OUL", "UNI", "CAR", "CSR", "DAR", "SBS"),
         "metrics": ("volumes", "prix/mix", "coûts des intrants", "marge", "stocks", "BFR", "capex"),
         "exclude": ("PNB bancaire", "carnet de commandes BTP"),
         "sources": ("rapports émetteurs", "résultats", "AMMC"),
