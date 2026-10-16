@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "role": "sector_publication_discovery_only",
+  "usable_for_score": false,
+  "usable_for_issuer_ratios": false,
+  "collector_frequency": "one_daily_16h_edition_after_merge",
+  "rights": "public_web_pages_only_no_paywall_no_login_no_scraping_protection_bypass",
+  "sources": [
+    {
+      "id": "BAM",
+      "url": "https://www.bkam.ma/Statistiques/Calendrier/Statistiques-monetaires",
+      "origins": [
+        "https://www.bkam.ma",
+        "https://bkam.ma"
+      ],
+      "symbols": [
+        "ATW",
+        "BCP",
+        "BOA",
+        "BMC",
+        "CIH",
+        "CDM",
+        "CFGB",
+        "MRL",
+        "MGL",
+        "EQD",
+        "SLM"
+      ],
+      "keywords": [
+        "statistique",
+        "monétaire",
+        "crédit",
+        "dépôt",
+        "taux",
+        "bancaire"
+      ]
+    },
+    {
+      "id": "ACAPS",
+      "url": "https://www.acaps.ma/fr/statistiques",
+      "origins": [
+        "https://www.acaps.ma",
+        "https://acaps.ma"
+      ],
+      "symbols": [
+        "ATL",
+        "SAF",
+        "WAF",
+        "AFM",
+        "AGM"
+      ],
+      "keywords": [
+        "assurance",
+        "statistique",
+        "rapport",
+        "prime",
+        "solvabilité",
+        "sinistr"
+      ]
+    },
+    {
+      "id": "HCP",
+      "url": "https://www.hcp.ma",
+      "origins": [
+        "https://www.hcp.ma",
+        "https://hcp.ma"
+      ],
+      "symbols": [],
+      "keywords": [
+        "indice",
+        "inflation",
+        "conjoncture",
+        "statistique",
+        "croissance",
+        "industrie"
+      ]
+    },
+    {
+      "id": "OFFICE_CHANGES",
+      "url": "https://www.oc.gov.ma",
+      "origins": [
+        "https://www.oc.gov.ma",
+        "https://oc.gov.ma"
+      ],
+      "symbols": [
+        "RIS",
+        "CSR",
+        "CMGP",
+        "TMA"
+      ],
+      "keywords": [
+        "échange",
+        "commerce",
+        "export",
+        "import",
+        "voyage",
+        "balance",
+        "statistique"
+      ]
+    },
+    {
+      "id": "ANP",
+      "url": "https://www.anp.org.ma",
+      "origins": [
+        "https://www.anp.org.ma",
+        "https://anp.org.ma"
+      ],
+      "symbols": [
+        "MSA"
+      ],
+      "keywords": [
+        "trafic",
+        "port",
+        "statistique",
+        "conteneur",
+        "tonnage",
+        "rapport"
+      ]
+    },
+    {
+      "id": "ONDA",
+      "url": "https://www.onda.ma/en/Je-suis-Professionnel/Statistiques/Statistiques",
+      "origins": [
+        "https://www.onda.ma",
+        "https://onda.ma"
+      ],
+      "symbols": [
+        "RIS"
+      ],
+      "keywords": [
+        "trafic",
+        "aérien",
+        "statistique",
+        "passager",
+        "airport",
+        "excel"
+      ]
+    },
+    {
+      "id": "TANGER_MED",
+      "url": "https://www.tangermedport.com/fr/media-room/telechargements/",
+      "origins": [
+        "https://www.tangermedport.com",
+        "https://tangermedport.com"
+      ],
+      "symbols": [
+        "MSA"
+      ],
+      "keywords": [
+        "rapport",
+        "trafic",
+        "conteneur",
+        "bilan",
+        "activité",
+        "portuaire"
+      ]
+    }
+  ]
+}
