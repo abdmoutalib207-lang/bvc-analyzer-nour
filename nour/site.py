@@ -81,7 +81,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -420,6 +420,54 @@ def briefing_page(fixture, briefing, style, script):
     return shell('Briefing', body, style, script)
 
 
+def sector_page(report, style, script):
+    """Human-readable, explicitly uncertified per-issuer source review."""
+    from .sector_audit import audit_sector_report
+    audit = audit_sector_report(report)
+    status_labels = {
+        'missing_primary_document': 'Document primaire absent',
+        'financial_audit_blocked': 'Ratios bloqués : rapprochement nécessaire',
+        'primary_page_check_required': 'Contrôle primaire à réaliser',
+        'additional_review_required': 'Contrôle complémentaire',
+        'selected_pages_checked': 'Pages sélectionnées contrôlées',
+    }
+    rows = []
+    for item in sorted(audit['issuers'], key=lambda r: (str(r['family']), r['symbol'])):
+        symbol = item['symbol']
+        source = item.get('document_url')
+        link = (f'<a href="{esc(source)}" target="_blank" rel="noopener noreferrer">Document ↗</a>'
+                if isinstance(source, str) and source.startswith('https://') else 'Document non référencé')
+        business = ', '.join(item['business_kpis_to_collect']) or 'Méthode métier à compléter'
+        missing = ', '.join(item['missing_annual_fact_groups'])
+        rows.append(
+            f'<tr><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td>'
+            f'<td>{esc(item["family"])}</td>'
+            f'<td>{esc(status_labels.get(item["status"], item["status"]))}</td>'
+            f'<td>{item["selected_page_evidence_count"]}/{item["evidence_count"]} faits documentés</td>'
+            f'<td>{esc(business)}'
+            + (f'<p class="muted">Faits annuels à retrouver : {esc(missing)}</p>' if missing else '')
+            + f'</td><td>{link}</td></tr>')
+    body = (
+        header('index.html', report.get('snapshot_updated') or '')
+        + '<main><div class="hero"><span class="eyebrow">Contrôle indépendant · Nour</span>'
+        + '<h1>Analyse par métier et fiabilité documentaire</h1>'
+        + '<p>Chaque société est examinée selon son activité, sans comparer mécaniquement banques, BTP, tourisme ou santé. '
+        + 'Les indicateurs cités sont des points à vérifier, pas des résultats observés.</p>'
+        + f'<div class="stamp">{audit["universe"]} sociétés · {audit["curated"]} avec grille métier spécifique · '
+        + f'{audit["selected_pages_reviewed_issuers"]} avec au moins un fait appuyé par une page contrôlée</div></div>'
+        + '<section class="panel"><h2>Inventaire des contrôles</h2>'
+        + '<p>Une page sélectionnée contrôlée ne certifie pas un rapport entier. '
+        + 'Une source seulement référencée doit encore être rapprochée de son PDF. '
+        + 'Les indicateurs manquants restent indisponibles.</p>'
+        + '<div style="overflow-x:auto"><table><thead><tr>'
+        + '<th>Société</th><th>Métier</th><th>État</th><th>Preuves</th>'
+        + '<th>Indicateurs à rechercher</th><th>Source</th>'
+        + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+        + '<p><a class="btnlink outline" href="sector-readiness.json">Données d’audit JSON</a></p></section>'
+        + '</main><footer>BVC Analyzer Nour · contrôle des sources, non certification comptable.</footer>')
+    return shell('Métiers et fiabilité', body, style, script)
+
+
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
     fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in rec.get('candles', [])
         if isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']]}
@@ -437,6 +485,9 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
+    (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
+    from .sector_audit import audit_sector_report
+    (output / "sector-readiness.json").write_text(json.dumps(audit_sector_report(report), ensure_ascii=False, indent=2)+"\\n", encoding="utf-8")
     (output/'recherche.html').write_text(shell('Laboratoire statistique',
         header('index.html', fixture['snapshot_updated']) + research_body(fixture, report),
         style, script), encoding='utf-8')
