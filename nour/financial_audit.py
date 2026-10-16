@@ -10,7 +10,7 @@ import math
 import re
 
 VERSION = 'nour-financial-audit-v1'
-METRICS = ('eps_mad', 'book_value_per_share_mad', 'pe', 'pb', 'roe_pct',
+METRICS = ('earnings_mmad', 'pnb_mmad', 'eps_mad', 'book_value_per_share_mad', 'pe', 'pb', 'roe_pct',
            'roe_average_equity_pct', 'revenue_growth_pct', 'pnb_growth_pct',
            'dividend_yield_pct', 'net_debt_strict_mmad', 'net_debt_ebitda')
 # Enumerated statuses already used by Nour; an arbitrary "verified" is not proof.
@@ -129,6 +129,10 @@ def audit_financials(record, facts, asof, calculated=None):
     previous_revenue = f'chiffre_affaires_{year - 1}' if isinstance(year, int) and not isinstance(year, bool) else 'chiffre_affaires_precedent'
     previous_pnb = f'produit_net_bancaire_{year - 1}' if isinstance(year, int) and not isinstance(year, bool) else 'produit_net_bancaire_precedent'
     deps = {
+        # Direct published amounts must obey the same unit/date/scope gates
+        # as derived ratios. They are never estimated from sector statistics.
+        'earnings_mmad': [net],
+        'pnb_mmad': ['produit_net_bancaire'],
         'eps_mad': [net, eps_shares], 'pe': [net, eps_shares],
         'book_value_per_share_mad': [equity, book_shares], 'pb': [equity, book_shares],
         'roe_pct': [net, equity], 'roe_average_equity_pct': [net, equity],
