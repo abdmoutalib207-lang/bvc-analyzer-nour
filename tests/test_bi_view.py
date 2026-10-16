@@ -40,6 +40,27 @@ class BiViewTests(unittest.TestCase):
         self.assertNotIn('Croissance du CA', page)
         self.assertIn('Produit net bancaire', page)
 
+    def test_financial_sector_missing_pnb_does_not_become_industrial_ca(self):
+        item = {'sector_guidance': {'family': 'Banque'},
+                'fundamental': {'pnb_mmad': None, 'pnb_growth_pct': None,
+                                'revenue_growth_pct': 12, 'eps_mad': 3.4}}
+        page = financial_dashboard(item)
+        self.assertIn('Croissance du PNB', page)
+        self.assertIn('Produit net bancaire', page)
+        self.assertNotIn('Croissance du CA', page)
+        self.assertNotIn('>12,00<', page)
+        self.assertIn('1 / 8 indicateurs affichables', page)
+        # Missing PNB does not suppress independently available EPS.
+        self.assertIn('>3,40<', page)
+        for family in ('Finance - crédit-bail', 'Finance - crédit à la consommation'):
+            self.assertIn('Croissance du PNB',
+                          financial_dashboard({'sector_guidance': {'family': family},
+                                               'fundamental': {}}))
+
+    def test_unreasonably_large_integer_is_not_rendered_as_a_valid_number(self):
+        page = financial_dashboard({'fundamental': {'pe': 10 ** 1000}})
+        self.assertIn('0 / 7 indicateurs affichables', page)
+
     def test_graph_requires_explicit_same_half_year_group_comparison(self):
         data = dict(period_end='2026-06-30', reported_net_previous_period_end='2025-06-30',
                     currency='MAD', accounting_basis='Consolidé IFRS', reported_net_label='Résultat part du groupe',
