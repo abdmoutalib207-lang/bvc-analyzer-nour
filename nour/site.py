@@ -454,17 +454,21 @@ def sector_page(report, style, script):
                 f'publication : {number(detail.get("reported_mmad"),3)} MDH ; '
                 f'écart : {number(detail.get("difference_mmad"),3)} MDH.</p>'
                 if detail else '')
+        source = action.get("document_url")
+        source_link = (f'<a href="{esc(source)}" target="_blank" rel="noopener noreferrer">Rapport annuel ↗</a>'
+                       if isinstance(source, str) and source.startswith("https://") else "Source primaire à retrouver")
         priority_rows.append(
             f'<tr><td>{esc(action["priority"])}</td>'
             f'<td><a href="titres/{esc(action["symbol"])}.html">{esc(action["symbol"])}</a></td>'
             f'<td>{esc(action["code"])}</td>'
-            f'<td>{esc(action["instruction"])}{debt}</td></tr>')
+            f'<td>{esc(action["instruction"])}{debt}</td>'
+            f'<td>{esc(action.get("annual_exercise"))} · {source_link}</td></tr>')
     priority_table = ('<section class="panel"><h2>Blocages à rapprocher</h2>'
                       + f'<p>{audit["blocking_issuers"]} sociétés avec ratios suspendus ; '
                       + f'{audit["blocking_actions"]} actions documentaires prioritaires. '
                       + 'Aucun ratio ne sera débloqué par cette file de contrôle.</p>'
                       + '<div style="overflow-x:auto"><table><thead><tr>'
-                      + '<th>Priorité</th><th>Société</th><th>Contrôle</th><th>Travail requis</th>'
+                      + '<th>Priorité</th><th>Société</th><th>Contrôle</th><th>Travail requis</th><th>Rapport</th>'
                       + '</tr></thead><tbody>' + ''.join(priority_rows)
                       + '</tbody></table></div></section>')
     body = (
