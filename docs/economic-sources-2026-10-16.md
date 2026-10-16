@@ -39,3 +39,19 @@
 - Aucun changement du dépôt principal ; aucune modification des résultats comptables existants.
 
 La liste des liens ne prouve pas l'existence d'une API ni le droit de redistribution des documents. Les éventuels liens hébergés hors des origines officielles autorisées sont ignorés jusqu'à revue.
+
+## Vérification réelle sur GitHub Actions — 16 octobre 2026
+
+Artefact `nour-sector-source-probe`, exécution `38972210425` :
+
+| Source | État HTTP du collecteur | Liens candidats | Décision |
+|---|---|---:|---|
+| ACAPS | succès | 19 | Plusieurs PDF statistiques sectoriels repérés ; chiffres non lus |
+| HCP | succès | 10 | Pages de conjoncture repérées |
+| Office des Changes | succès | 13 | Pages de séries et commerce extérieur repérées |
+| ANP | succès | 0 | Page accessible, mais aucun document pertinent détecté |
+| Tanger Med | succès | 35 | Résultats mêlant brochures/tarifs ; filtrage renforcé après cet essai |
+| BAM | HTTP 403 | — | Aucune tentative de contournement |
+| ONDA | HTTP 403 | — | Aucune tentative de contournement |
+
+**5/7 pages accessibles, mais seulement 4/7 avec des liens repérés.** Une page accessible n'est pas une preuve de données valides. Le nouveau filtre exclut les PDF sans mots-clés sectoriels, et l'interface indique clairement les pages vides ou bloquées. Les sources BAM et ONDA ne sont pas considérées comme intégrées ; il faut un autre point d'accès public officiel autorisé ou une vérification manuelle. Aucune extraction numérique n'est activée.
