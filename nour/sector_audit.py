@@ -23,7 +23,11 @@ DOCUMENT_CHECKLIST = {
     "Immobilier - promotion": (("chiffre_affaires",), ("resultat_net_part_groupe", "resultat_net_social")),
     "BTP et ingénierie": (("chiffre_affaires",), ("resultat_net_part_groupe", "resultat_net_social")),
     "Tourisme et hôtellerie": (("chiffre_affaires",),),
-    "Santé et distribution médicale": (("chiffre_affaires",),),
+    "Santé - hôpitaux": (("chiffre_affaires",),),
+    "Santé - industrie pharmaceutique": (("chiffre_affaires",),),
+    "Santé - distribution et équipements": (("chiffre_affaires",),),
+    "Agroalimentaire et boissons": (("chiffre_affaires",),),
+    "Métallurgie et matériaux industriels": (("chiffre_affaires",),),
     "Agriculture et intrants": (("chiffre_affaires",),),
     "Ports et logistique": (("chiffre_affaires",),),
     "Mines": (("chiffre_affaires",),),
@@ -131,6 +135,9 @@ def audit_sector_report(report):
         required = DOCUMENT_CHECKLIST.get(family, ())
         missing = ["/".join(alternatives) for alternatives in required
                    if not any(key in evidence for key in alternatives)]
+        unverified = ["/".join(alternatives) for alternatives in required
+                      if any(key in evidence for key in alternatives)
+                      and not any(_primary_checked(evidence.get(key)) for key in alternatives)]
         audit = f.get("financial_audit") or {}
         audit_status = audit.get("status", "unavailable")
         actions = _review_actions(symbol, audit)
@@ -153,7 +160,7 @@ def audit_sector_report(report):
             status = "financial_audit_blocked"
         elif not checked:
             status = "primary_page_check_required"
-        elif missing or audit_status != "checked":
+        elif missing or unverified or audit_status != "checked":
             status = "additional_review_required"
         else:
             status = "selected_pages_checked"
@@ -168,6 +175,7 @@ def audit_sector_report(report):
             "evidence_count": len(evidence),
             "selected_page_evidence_count": len(checked),
             "missing_annual_fact_groups": missing,
+            "unverified_annual_fact_groups": unverified,
             "business_kpis_to_collect": method["metrics_to_verify"],
             "accounting_exclusions": method["invalid_shortcuts"],
             "blocked_metrics": audit.get("blocked_metrics") or [],
