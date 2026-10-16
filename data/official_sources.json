@@ -1,0 +1,1706 @@
+{
+  "schema_version": 1,
+  "role": "official_document_discovery_only",
+  "usable_for_score": false,
+  "issuer_site_coverage": {
+    "registered": 5,
+    "universe": 80
+  },
+  "issuer_site_seeds": {
+    "provenance": "4 issuer investor URLs supplied in project context; TMA public official-site search 2026-10-16",
+    "TMA_search_url": "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees"
+  },
+  "source_roles": {
+    "AMMC": "financial_statements_and_regulated_publications",
+    "issuer_sites": "financial_reports_annexes_presentations",
+    "Bourse_de_Casablanca": {
+      "role": "security_master_and_corporate_actions",
+      "collection": "not_integrated"
+    },
+    "Maroclear": {
+      "role": "security_identification_and_corporate_actions",
+      "collection": "not_integrated_access_not_assessed"
+    }
+  },
+  "issuers": {
+    "ADH": {
+      "record_id": "ADH",
+      "name": "Douja Promotion Groupe Addoha",
+      "aliases": [
+        "Douja Prom Addoha"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ADI": {
+      "record_id": "ADI",
+      "name": "Alliances Développement Immobilier",
+      "aliases": [
+        "Alliances"
+      ],
+      "allowed_origins": [
+        "https://alliances.co.ma",
+        "https://ammc.ma",
+        "https://www.alliances.co.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [
+        "https://www.alliances.co.ma/publications"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "AFI": {
+      "record_id": "AFI",
+      "name": "AFRIC INDUSTRIES S.A.",
+      "aliases": [
+        "Afric Industries SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/AFI_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "AFM": {
+      "record_id": "AFM",
+      "name": "AFMA",
+      "aliases": [
+        "AFMA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Afma_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "AGM": {
+      "record_id": "AGM",
+      "name": "AGMA",
+      "aliases": [
+        "Agma"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "AKD": {
+      "record_id": "AKD",
+      "name": "AKDITAL",
+      "aliases": [
+        "Akdital"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ALU": {
+      "record_id": "ALU",
+      "name": "ALU",
+      "aliases": [
+        "Aluminium du Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/ALM_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ARD": {
+      "record_id": "ARD",
+      "name": "ARADEI CAPITAL",
+      "aliases": [
+        "Aradei Capital"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ATL": {
+      "record_id": "ATL",
+      "name": "ATLANTASANAD",
+      "aliases": [
+        "AtlantaSanad"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/AtlantaSanad_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ATW": {
+      "record_id": "ATW",
+      "name": "Attijariwafa bank",
+      "aliases": [
+        "Attijariwafa Bank"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://ir.attijariwafabank.com",
+        "https://www.ammc.ma"
+      ],
+      "pages": [
+        "https://ir.attijariwafabank.com/financial-information/quarterly-results"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "BAL": {
+      "record_id": "BAL",
+      "name": "BALIMA (Société Immobilière Balima)",
+      "aliases": [
+        "Balima"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Balima_RFA_2025_0.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "BCP": {
+      "record_id": "BCP",
+      "name": "Banque Centrale Populaire",
+      "aliases": [
+        "Banque Populaire"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "BMC": {
+      "record_id": "BMC",
+      "name": "BMCI",
+      "aliases": [
+        "BMCI"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "BOA": {
+      "record_id": "BOA",
+      "name": "Bank of Africa",
+      "aliases": [
+        "Bank of Africa"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CAR": {
+      "record_id": "CAR",
+      "name": "CARTIER SAADA S.A.",
+      "aliases": [
+        "Cartier Saada"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Cartier_Saada_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CASH": {
+      "record_id": "CASH",
+      "name": "Cash Plus",
+      "aliases": [
+        "Cash Plus SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Cash_Plus_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/NO_CASHPLUS_036_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CDM": {
+      "record_id": "CDM",
+      "name": "Crédit du Maroc",
+      "aliases": [
+        "Crédit du Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CP_CDM_cloture_augmentation_capital.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CFGB": {
+      "record_id": "CFGB",
+      "name": "CFG Bank",
+      "aliases": [
+        "CFG Bank"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CIH": {
+      "record_id": "CIH",
+      "name": "CIH Bank",
+      "aliases": [
+        "CIH Bank"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CIH_Bank_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CP_CIH_Bank_resultats_augmentation_capital_numeraire.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CIM": {
+      "record_id": "CIM",
+      "name": "CIMENTS DU MAROC",
+      "aliases": [
+        "Ciments du Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Cimar_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CMGP": {
+      "record_id": "CMGP",
+      "name": "CMGP GROUP",
+      "aliases": [
+        "CMGP Group"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CMT": {
+      "record_id": "CMT",
+      "name": "Compagnie Minière de Touissit",
+      "aliases": [
+        "Minière Touissit"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "COL": {
+      "record_id": "COL",
+      "name": "COLORADO S.A.",
+      "aliases": [
+        "Colorado"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Colorado_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CSR": {
+      "record_id": "CSR",
+      "name": "Cosumar",
+      "aliases": [
+        "Cosumar"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Cosumar_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "CTM": {
+      "record_id": "CTM",
+      "name": "CTM",
+      "aliases": [
+        "CTM"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "DAR": {
+      "record_id": "DAR",
+      "name": "DAR",
+      "aliases": [
+        "Dari Couspate"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Dari_Couspate_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "DHO": {
+      "record_id": "DHO",
+      "name": "Delta Holding",
+      "aliases": [
+        "Delta Holding"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/DHO_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "DIS": {
+      "record_id": "DIS",
+      "name": "Diac Salaf",
+      "aliases": [
+        "Diac Salaf"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": []
+    },
+    "DLM": {
+      "record_id": "DLM",
+      "name": "Delattre Levivier Maroc",
+      "aliases": [
+        "Delattre Levivier Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": []
+    },
+    "DSW": {
+      "record_id": "DSW",
+      "name": "DISWAY",
+      "aliases": [
+        "Disway"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "DTT": {
+      "record_id": "DTT",
+      "name": "DTT",
+      "aliases": [
+        "Disty Technologies"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Disty_technologies_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ENK": {
+      "record_id": "ENK",
+      "name": "ENNAKL AUTOMOBILES S.A.",
+      "aliases": [
+        "Ennakl"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "EQD": {
+      "record_id": "EQD",
+      "name": "Eqdom",
+      "aliases": [
+        "Crédit Eqdom"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "FNB": {
+      "record_id": "FNB",
+      "name": "FENIE BROSSETTE S.A.",
+      "aliases": [
+        "Fénie Brossette"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Fenie_Brossette_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "GAZ": {
+      "record_id": "GAZ",
+      "name": "AFRIQUIA GAZ",
+      "aliases": [
+        "Afriquia Gaz"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "HAL": {
+      "record_id": "HAL",
+      "name": "HAL",
+      "aliases": [
+        "Auto Hall"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Hall_RFA_2025_0.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CP_AutoHall_Avis_emission_actions.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "HPS": {
+      "record_id": "HPS",
+      "name": "HPS — Hightech Payment Systems",
+      "aliases": [
+        "HPS"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/HPS_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "IAM": {
+      "record_id": "IAM",
+      "name": "Maroc Telecom",
+      "aliases": [
+        "Maroc Telecom"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Maroc_Telecom_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "IBM": {
+      "record_id": "IBM",
+      "name": "IB Maroc.com",
+      "aliases": [
+        "IB Maroc.com"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": []
+    },
+    "IMI": {
+      "record_id": "IMI",
+      "name": "IMMORENTE INVEST",
+      "aliases": [
+        "Immorente Invest"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "INV": {
+      "record_id": "INV",
+      "name": "INVOLYS S.A.",
+      "aliases": [
+        "Involys"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Involys_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "JET": {
+      "record_id": "JET",
+      "name": "JET",
+      "aliases": [
+        "Jet Contractors"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "LBV": {
+      "record_id": "LBV",
+      "name": "Label'Vie",
+      "aliases": [
+        "Label Vie"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/LabelVie_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "LES": {
+      "record_id": "LES",
+      "name": "LESIEUR CRISTAL",
+      "aliases": [
+        "Lesieur Cristal"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "LHM": {
+      "record_id": "LHM",
+      "name": "Holcim Maroc (ex-LafargeHolcim Maroc)",
+      "aliases": [
+        "Holcim Maroc SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/LafargeHolcim_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "M2M": {
+      "record_id": "M2M",
+      "name": "M2M GROUP",
+      "aliases": [
+        "M2M Group"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/M2M_Group_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/M2M_group_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MDP": {
+      "record_id": "MDP",
+      "name": "Med Paper",
+      "aliases": [
+        "Med Paper"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CP_Med_Paper_T4_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Med_Paper_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MGL": {
+      "record_id": "MGL",
+      "name": "Maghrebail",
+      "aliases": [
+        "Maghrebail"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Maghrebail_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MIC": {
+      "record_id": "MIC",
+      "name": "MIC",
+      "aliases": [
+        "Microdata"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Microdata_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MNG": {
+      "record_id": "MNG",
+      "name": "Managem",
+      "aliases": [
+        "Managem"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MOX": {
+      "record_id": "MOX",
+      "name": "MAGHREB OXYGENE",
+      "aliases": [
+        "Maghreb Oxygène"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/MOX_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MRL": {
+      "record_id": "MRL",
+      "name": "Maroc Leasing",
+      "aliases": [
+        "Maroc Leasing"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/MLE_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MSA": {
+      "record_id": "MSA",
+      "name": "Sodep-Marsa Maroc",
+      "aliases": [
+        "Sodep-Marsa Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://marsamaroc.co.ma",
+        "https://www.ammc.ma",
+        "https://www.marsamaroc.co.ma"
+      ],
+      "pages": [
+        "https://www.marsamaroc.co.ma/fr/publications-financieres"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "MUT": {
+      "record_id": "MUT",
+      "name": "MUTANDIS SCA",
+      "aliases": [
+        "Mutandis SCA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "NEJ": {
+      "record_id": "NEJ",
+      "name": "AUTO NEJMA",
+      "aliases": [
+        "Auto Nejma"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "OUL": {
+      "record_id": "OUL",
+      "name": "OULMES",
+      "aliases": [
+        "Oulmès"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Oulmes_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "PPM": {
+      "record_id": "PPM",
+      "name": "PROMOPHARM S.A",
+      "aliases": [
+        "Promopharm SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Promopharm_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "RDS": {
+      "record_id": "RDS",
+      "name": "Résidences Dar Saada (RDS)",
+      "aliases": [
+        "Résidences Dar Saada"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "REB": {
+      "record_id": "REB",
+      "name": "REBAB COMPANY SA LIMITED",
+      "aliases": [
+        "Rebab"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Rebab_company_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "RIS": {
+      "record_id": "RIS",
+      "name": "Risma",
+      "aliases": [
+        "Risma"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Avis_Risma_AGO_02_06_2026.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Risma_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "S2M": {
+      "record_id": "S2M",
+      "name": "S2M (SOCIETE MAGHREBINE DE MONETIQUE)",
+      "aliases": [
+        "S2M"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/S2M_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SAF": {
+      "record_id": "SAF",
+      "name": "Sanlam Maroc",
+      "aliases": [
+        "Sanlam Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/CP_Sanlam_Maroc_post_AGE_02_07_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Sanlam_Maroc_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SBS": {
+      "record_id": "SBS",
+      "name": "SBS",
+      "aliases": [
+        "Société des Boissons du Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/SBM_RFA_2025_0.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SGTM": {
+      "record_id": "SGTM",
+      "name": "SGTM",
+      "aliases": [
+        "SGTM SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SLM": {
+      "record_id": "SLM",
+      "name": "Salafin",
+      "aliases": [
+        "Salafin"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SMI": {
+      "record_id": "SMI",
+      "name": "SOCIÉTÉ MÉTALLURGIQUE D'IMITER",
+      "aliases": [
+        "Société Métallurgique d'Imiter"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SNA": {
+      "record_id": "SNA",
+      "name": "Sonasid",
+      "aliases": [
+        "Sonasid"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Sonasid_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SNP": {
+      "record_id": "SNP",
+      "name": "SNEP",
+      "aliases": [
+        "SNEP"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SOT": {
+      "record_id": "SOT",
+      "name": "Sothema",
+      "aliases": [
+        "Sothema"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Sothema_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "SRM": {
+      "record_id": "SRM",
+      "name": "SOCIÉTÉ DE RÉALISATIONS MÉCANIQUES",
+      "aliases": [
+        "Société de Réalisations Mécaniques"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "STK": {
+      "record_id": "STK",
+      "name": "STOKVIS NORD AFRIQUE",
+      "aliases": [
+        "Stokvis Nord Afrique"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Stokvis_NA_S1_26.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Stokvis_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "STR": {
+      "record_id": "STR",
+      "name": "STROC INDUSTRIE S.A.",
+      "aliases": [
+        "Stroc Industrie"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Stroc_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "T2S": {
+      "record_id": "T2S",
+      "name": "T2S GROUP HOLDING",
+      "aliases": [
+        "T2S Group Holding"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "TGCC": {
+      "record_id": "TGCC",
+      "name": "TGCC SA",
+      "aliases": [
+        "TGCC SA"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "TMA": {
+      "record_id": "TMA",
+      "name": "TotalEnergies Marketing Maroc",
+      "aliases": [
+        "TotalEnergies Marketing Maroc"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://totalenergies.ma",
+        "https://www.ammc.ma",
+        "https://www.totalenergies.ma"
+      ],
+      "pages": [
+        "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Total_RFA_2024.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json",
+          "role": "historical_reference"
+        },
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "status": "selected_pages_reviewed",
+          "origin": "facts_reference.json",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "period_end": "2025-12-31"
+        }
+      ]
+    },
+    "TQA": {
+      "record_id": "TQA",
+      "name": "Taqa Morocco",
+      "aliases": [
+        "Taqa Morocco"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "UNI": {
+      "record_id": "UNI",
+      "name": "UNIMER GROUP",
+      "aliases": [
+        "Unimer"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Unimer_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "VCNE": {
+      "record_id": "VCNE",
+      "name": "Vicenne",
+      "aliases": [
+        "Vicenne"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://vicenne.com",
+        "https://www.ammc.ma",
+        "https://www.vicenne.com"
+      ],
+      "pages": [
+        "https://vicenne.com/investisseurs/"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Vicenne_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "WAF": {
+      "record_id": "WAF",
+      "name": "Wafa Assurance",
+      "aliases": [
+        "Wafa Assurance"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    },
+    "ZLD": {
+      "record_id": "ZLD",
+      "name": "ZELLIDJA S.A.",
+      "aliases": [
+        "Zellidja"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma"
+      ],
+      "pages": [],
+      "issuer_site_status": "not_yet_registered",
+      "reference_documents": [
+        {
+          "url": "https://www.ammc.ma/sites/default/files/Zellidja_RFA_2025.pdf",
+          "status": "existing_reference_not_refetched",
+          "origin": "facts_reference.json"
+        }
+      ]
+    }
+  }
+}

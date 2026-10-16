@@ -3642,6 +3642,292 @@
           "unite_au_rapport": "KMAD",
           "colonne_exercice_clos": 1,
           "page": 26,
+          "note": "Fonds propres groupe 3 739 480 KMAD ; minoritaires 98 KMAD distincts. Le capital du bilan est arrondi : ne pas en déduire le nombre d’actions ; p.23 publie 26 208 850 titres.",
+          "unite": "MMAD",
+          "printed_page": 26,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "nombre_actions_au_rapport": {
+          "valeur": 26208850,
+          "valeur_au_rapport": 26208850,
+          "unite": "actions",
+          "unite_au_rapport": "actions",
+          "page": 23,
+          "printed_page": 23,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Nombre explicitement publié dans les tableaux BPA et dividendes. L’en-tête KMAD concerne les montants, pas les 26 208 850 actions. Ne pas déduire 26 208 860 actions du capital arrondi du bilan. La table ne suffit pas à certifier séparément une moyenne pondérée IAS 33."
+        },
+        "total_actif": {
+          "valeur": 7970.234,
+          "valeur_au_rapport": 7970234,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 24,
+          "note": "« TOTAL ACTIF 7.970.234 7.743.182 »",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 24,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "total_passif": {
+          "valeur": 7970.234,
+          "valeur_au_rapport": 7970234,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 26,
+          "note": "« TOTAL PASSIF 7.970.234 7.743.182 »",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 26,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "capitaux_propres_consolides": {
+          "valeur": 3739.578,
+          "valeur_au_rapport": 3739578,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 26,
+          "note": "« CAPITAUX PROPRES 3.739.578 3.735.222 »",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 26,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "dettes_financieres": {
+          "valeur": 2116.222,
+          "valeur_au_rapport": 2116222,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 3,
+          "page": 26,
+          "note": "« Total Dettes Financières 616.489 1.499.734 2.116.222 2.013.150 » ; note « Dettes financières » : colonnes « A moins d'un an / A plus d'un an / Total 2025 / 2024 » — total 2025, troisième colonne. Établissements de crédit 1 445 990 + dettes diverses 312 583 + location 16 184 + concours bancaires 341 465. Recoupé au bilan : 1 499 261 + 474 + 275 024 + 341 465 = 2 116 224.",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 26,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "tresorerie_actif": {
+          "valeur": 249.215,
+          "valeur_au_rapport": 249215,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 24,
+          "note": "« Trésorerie et équivalence de trésorerie 249.215 356.260 »",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 24,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "resultat_exploitation": {
+          "valeur": 32.714,
+          "valeur_au_rapport": 32714,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 22,
+          "note": "« RESULTAT D'EXPLOITATION 32.714 (47.343) »",
+          "base": "consolidé IFRS, 31/12/2025",
+          "releve_le": "2026-09-30"
+        },
+        "resultat_financier": {
+          "valeur": -14.184,
+          "valeur_au_rapport": -14184,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 22,
+          "note": "« Résultat financier (14.184) (21.136) »",
+          "base": "consolidé IFRS, 31/12/2025",
+          "releve_le": "2026-09-30"
+        },
+        "resultat_avant_impot": {
+          "valeur": 18.53,
+          "valeur_au_rapport": 18530,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 22,
+          "note": "« RESULTAT AVANT IMPOT DES ENTREPRISES INTERGREES 18.530 (68.479) »",
+          "base": "consolidé IFRS, 31/12/2025",
+          "releve_le": "2026-09-30"
+        },
+        "impot_resultat": {
+          "valeur": 14.04,
+          "valeur_au_rapport": 14040,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 22,
+          "composantes": [
+            {
+              "page": 22,
+              "citation": "Impôts sur les sociétés (353) (5.398)",
+              "valeur_au_rapport": 353
+            },
+            {
+              "page": 22,
+              "citation": "Impôt différé (13.687) (5.821)",
+              "valeur_au_rapport": 13687
+            }
+          ],
+          "note": "impôt exigible 353 + différé 13 687 = 14 040, soit 75,8 % d'un résultat avant impôt de 18 530 : taux effectif réel, élevé parce que le résultat est faible.",
+          "base": "consolidé IFRS, 31/12/2025",
+          "releve_le": "2026-09-30"
+        },
+        "resultat_net_consolide": {
+          "valeur": 4.491,
+          "valeur_au_rapport": 4491,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 22,
+          "note": "« RESULTAT DE L'ENSEMBLE CONSOLIDE 4.491 (79.698) »",
+          "base": "consolidé IFRS",
+          "releve_le": "2026-09-30",
+          "unite": "MMAD",
+          "printed_page": 22,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "chiffre_affaires": {
+          "valeur": 468.513,
+          "valeur_au_rapport": 468513,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "page": 22,
+          "printed_page": 22,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "chiffre_affaires_2024": {
+          "valeur": 233.682,
+          "valeur_au_rapport": 233682,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "page": 22,
+          "printed_page": 22,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2024-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "resultat_net_part_groupe": {
+          "valeur": 4.494,
+          "valeur_au_rapport": 4494,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "page": 22,
+          "printed_page": 22,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "resultat_net_part_groupe_2024": {
+          "valeur": -79.675,
+          "valeur_au_rapport": -79675,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "page": 22,
+          "printed_page": 22,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2024-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "valeur": 3735.121,
+          "valeur_au_rapport": 3735121,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "page": 26,
+          "printed_page": 26,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2024-12-31",
+          "validation_status": "selected_pages_visually_checked"
+        },
+        "nombre_actions": {
+          "valeur": 26208850,
+          "valeur_au_rapport": 26208850,
+          "unite": "actions",
+          "unite_au_rapport": "actions",
+          "page": 23,
+          "printed_page": 23,
+          "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+          "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+          "base": "consolidé IFRS",
+          "period_end": "2025-12-31",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Nombre explicitement publié dans les tableaux BPA et dividendes. L’en-tête KMAD concerne les montants, pas les 26 208 850 actions. Ne pas déduire 26 208 860 actions du capital arrondi du bilan. La table ne suffit pas à certifier séparément une moyenne pondérée IAS 33."
+        }
+      },
+      "pages_document": 91,
+      "provenance": {
+        "repository": "abdmoutalib207-lang/-bvc-analyzer",
+        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+        "path": "pipeline/faits_financiers.json",
+        "imported_at": "2026-10-04",
+        "validation_status": "referenced_import_not_independent_audit"
+      },
+      "accounting_basis": "consolidé IFRS, 31/12/2025",
+      "reservations": [
+        "RDS : changement de reconnaissance du CA à la signature de l’acte notarié en 2025 (RFA p.6). La croissance annuelle calculée n’est pas à méthode constante.",
+        "RDS : le RFA p.83 renvoie au rapport d’audit consolidé sur le site émetteur ; ce rapport externe n’est pas relu par le présent contrôle de pages sélectionnées."
+      ],
+      "latest_report": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/RDS_S1_26.pdf",
+        "accounting_basis": "résultat net part du groupe, consolidé (IFRS) — observation des CAC (sans réserve) sur la titrisation FT Olympe",
+        "pages": "p.5, état du résultat global, colonnes « 30/06/2026 30/06/2025 » : « RESULTAT NET PART DU GROUPE 19.747 6.465 », « Chiffres d'affaires 208.787 162.088 ». ⚠️ Tableaux titrés « EN MDH » mais en KMAD, le point séparant les milliers : l'attestation écrit « un bénéfice net consolidé de 19.746 milliers de dirhams », le communiqué p.1 « 209 MDH » de chiffre d'affaires et « 20 MDH » de résultat. Social : perte de 10 566 KMAD (attestation p.4)",
+        "reported_net_millions": 19.747,
+        "reported_net_previous_millions": 6.465,
+        "revenue_millions": 208.787,
+        "revenue_previous_millions": 162.088,
+        "currency": "MAD",
+        "note": null,
+        "validation_status": "referenced_import_not_independent_audit",
+        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+      },
+      "exercice_clos": "2025-12-31",
+      "reconciliation_prior_oct16": {
+        "capitaux_propres_part_groupe": {
+          "valeur": 3739.48,
+          "valeur_au_rapport": 3739480,
+          "unite_au_rapport": "KMAD",
+          "colonne_exercice_clos": 1,
+          "page": 26,
           "note": "« CAPITAUX PROPRES PART GROUPE 3.739.480 3.735.121 » ; en-tête « En milliers de dirhams 31/12/2025 31/12/2024 ». Capital 1.310.443 KMAD = 26 208 860 titres de nominale 50. Minoritaires 98 KMAD, d'où un total de 3.739.578."
         },
         "nombre_actions_au_rapport": {
@@ -3763,29 +4049,20 @@
           "releve_le": "2026-09-30"
         }
       },
-      "pages_document": 91,
-      "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "pipeline/faits_financiers.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
-      },
-      "accounting_basis": "consolidé IFRS, 31/12/2025",
-      "reservations": [],
-      "latest_report": {
-        "period_end": "2026-06-30",
-        "document_url": "https://www.ammc.ma/sites/default/files/RDS_S1_26.pdf",
-        "accounting_basis": "résultat net part du groupe, consolidé (IFRS) — observation des CAC (sans réserve) sur la titrisation FT Olympe",
-        "pages": "p.5, état du résultat global, colonnes « 30/06/2026 30/06/2025 » : « RESULTAT NET PART DU GROUPE 19.747 6.465 », « Chiffres d'affaires 208.787 162.088 ». ⚠️ Tableaux titrés « EN MDH » mais en KMAD, le point séparant les milliers : l'attestation écrit « un bénéfice net consolidé de 19.746 milliers de dirhams », le communiqué p.1 « 209 MDH » de chiffre d'affaires et « 20 MDH » de résultat. Social : perte de 10 566 KMAD (attestation p.4)",
-        "reported_net_millions": 19.747,
-        "reported_net_previous_millions": 6.465,
-        "revenue_millions": 208.787,
-        "revenue_previous_millions": 162.088,
-        "currency": "MAD",
-        "note": null,
-        "validation_status": "referenced_import_not_independent_audit",
-        "source_commit": "f7a08cca96a254499c7c159524f2e22b42490799"
+      "financial_review": {
+        "reviewed_at": "2026-10-16",
+        "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+        "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+        "pages": [
+          9,
+          21,
+          22,
+          23,
+          24,
+          26
+        ],
+        "method": "Lecture visuelle de pages PDF, périodes 2025/2024, périmètre IFRS consolidé et unités KMAD contrôlés. Le semestre reste inchangé et non recertifié.",
+        "conclusion": "RNPG 4,494 MMAD distinct du résultat total 4,491 ; fonds propres groupe 3 739,480 distincts du total 3 739,578. Nombre publié 26 208 850 actions, corrigé au lieu de la division du capital arrondi. CA annuel 468,513 MMAD. Dette nette calculée 1 867,007 MMAD, sans rapprochement à une définition nette publiée ; pas de certification de tous les comptes."
       }
     },
     "SGTM": {
@@ -5773,37 +6050,236 @@
     },
     "TMA": {
       "societe": "TotalEnergies Marketing Maroc",
-      "exercice": 2024,
-      "document": "Rapport Financier Annuel 2024",
-      "url": "https://www.ammc.ma/sites/default/files/Total_RFA_2024.pdf",
+      "exercice": 2025,
+      "document": "Communication financière 2025 et avis AGO du 3 juin 2026 (comptes consolidés IFRS)",
+      "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
       "depose_aupres_de": "AMMC",
-      "releve_le": "2026-09-16",
+      "releve_le": "2026-10-16",
       "faits": {
+        "chiffre_affaires": {
+          "valeur": 15126.704,
+          "valeur_au_rapport": 15126704,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "valeur": 16751.842,
+          "valeur_au_rapport": 16751842,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "resultat_net_part_groupe": {
+          "valeur": 851.083,
+          "valeur_au_rapport": 851083,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "resultat_net_part_groupe_2024": {
+          "valeur": 934.195,
+          "valeur_au_rapport": 934195,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "valeur": 851.083,
+          "valeur_au_rapport": 851083,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
         "capitaux_propres_part_groupe": {
+          "valeur": 1984.665,
+          "valeur_au_rapport": 1984665,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
           "valeur": 2745.769,
           "valeur_au_rapport": 2745769,
+          "unite": "MMAD",
           "unite_au_rapport": "KMAD",
-          "colonne_exercice_clos": 1,
-          "page": 21,
-          "note": "« Total des capitaux propres - part du Groupe 2 745 769 2 315 933 » ; en-tête « PASSIF 31/12/2024 31/12/2023 ». ⚠️ EXERCICE 2024 : l'AMMC ne sert pas de rapport 2025 pour cet émetteur. Capital 448 000 KMAD = 8 960 000 titres de nominale 50, ce que le marché confirme à 8 960 135 — le nombre d'actions n'a donc pas bougé depuis la clôture."
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "capitaux_propres_consolides": {
+          "valeur": 1984.665,
+          "valeur_au_rapport": 1984665,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "total_actif": {
+          "valeur": 8258.143,
+          "valeur_au_rapport": 8258143,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "total_passif": {
+          "valeur": 8258.143,
+          "valeur_au_rapport": 8258143,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": ""
+        },
+        "dettes_financieres_non_courantes_a_rapprocher": {
+          "valeur": 514.346,
+          "valeur_au_rapport": 514346,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Poste du bilan publié ; périmètre des dettes de location non rapproché. Conservé pour contrôle, exclu du calcul de dette nette industrielle et du multiple."
+        },
+        "dettes_financieres_courantes_a_rapprocher": {
+          "valeur": 373.609,
+          "valeur_au_rapport": 373609,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Poste du bilan publié ; périmètre des dettes de location non rapproché. Conservé pour contrôle, exclu du calcul de dette nette industrielle et du multiple."
+        },
+        "tresorerie_a_rapprocher": {
+          "valeur": 1176.535,
+          "valeur_au_rapport": 1176535,
+          "unite": "MMAD",
+          "unite_au_rapport": "KMAD",
+          "devise": "MAD",
+          "page": 6,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Poste du bilan publié ; périmètre des dettes de location non rapproché. Conservé pour contrôle, exclu du calcul de dette nette industrielle et du multiple."
+        },
+        "nombre_actions": {
+          "valeur": 8960000,
+          "valeur_au_rapport": 8960000,
+          "unite": "actions",
+          "unite_au_rapport": "actions",
+          "devise": "MAD",
+          "page": 3,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Nombre d’actions composant explicitement le capital au 31 décembre 2025, dans le projet de résolution. Pas une moyenne pondérée IAS 33 ; BPA calculé indicatif. Ni division du capital arrondi, ni inversion du BPA arrondi à 95 MAD."
         },
         "nombre_actions_au_rapport": {
           "valeur": 8960000,
-          "page": 21,
+          "valeur_au_rapport": 8960000,
           "unite": "actions",
-          "note": "capital 448 000 KMAD ÷ nominale 50. Le marché en implique 8 960 135 (écart 0,002 %)."
+          "unite_au_rapport": "actions",
+          "devise": "MAD",
+          "page": 3,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+          "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+          "validation_status": "selected_pages_visually_checked",
+          "note": "Nombre d’actions composant explicitement le capital au 31 décembre 2025, dans le projet de résolution. Pas une moyenne pondérée IAS 33 ; BPA calculé indicatif. Ni division du capital arrondi, ni inversion du BPA arrondi à 95 MAD."
         }
       },
-      "pages_document": 122,
+      "pages_document": 8,
       "provenance": {
-        "repository": "abdmoutalib207-lang/-bvc-analyzer",
-        "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
-        "path": "pipeline/faits_financiers.json",
-        "imported_at": "2026-10-04",
-        "validation_status": "referenced_import_not_independent_audit"
+        "source_type": "regulator_pdf",
+        "source_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+        "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+        "reviewed_at": "2026-10-16",
+        "validation_status": "selected_pages_visually_checked_not_whole_report_certified"
       },
-      "accounting_basis": "Part du groupe lorsque explicitement publiée",
-      "reservations": [],
+      "accounting_basis": "consolidé IFRS",
+      "reservations": [
+        "TMA : comptes IFRS annuels 2025 dans la communication AGO AMMC (8 pages), pas le RFA intégral. Actions de clôture publiées : BPA indicatif ; dividende proposé non retenu sans décision AGO.",
+        "TMA : au S1 2026, postes de dette moins trésorerie = 326,343 MMAD, contre −288,580 MMAD fin 2025 (AMMC S1 p.4, mêmes postes). Périmètre des locations non rapproché : dette nette industrielle et multiple indisponibles ; le S1 reste distinct et non annualisé."
+      ],
       "semester_activity_label": "CA",
       "latest_report": {
         "period_end": "2026-06-30",
@@ -5825,6 +6301,115 @@
           "reviewed_at": "2026-10-04",
           "validation_status": "selected_page_visually_checked_not_whole_report_certified"
         }
+      },
+      "annual_reference_prior_oct16": {
+        "exercice": 2024,
+        "document": "Rapport Financier Annuel 2024",
+        "url": "https://www.ammc.ma/sites/default/files/Total_RFA_2024.pdf",
+        "pages_document": 122,
+        "faits": {
+          "capitaux_propres_part_groupe": {
+            "valeur": 2745.769,
+            "valeur_au_rapport": 2745769,
+            "unite_au_rapport": "KMAD",
+            "colonne_exercice_clos": 1,
+            "page": 21,
+            "note": "« Total des capitaux propres - part du Groupe 2 745 769 2 315 933 » ; en-tête « PASSIF 31/12/2024 31/12/2023 ». ⚠️ EXERCICE 2024 : l'AMMC ne sert pas de rapport 2025 pour cet émetteur. Capital 448 000 KMAD = 8 960 000 titres de nominale 50, ce que le marché confirme à 8 960 135 — le nombre d'actions n'a donc pas bougé depuis la clôture."
+          },
+          "nombre_actions_au_rapport": {
+            "valeur": 8960000,
+            "page": 21,
+            "unite": "actions",
+            "note": "capital 448 000 KMAD ÷ nominale 50. Le marché en implique 8 960 135 (écart 0,002 %)."
+          }
+        },
+        "provenance": {
+          "repository": "abdmoutalib207-lang/-bvc-analyzer",
+          "commit": "f7a08cca96a254499c7c159524f2e22b42490799",
+          "path": "pipeline/faits_financiers.json",
+          "imported_at": "2026-10-04",
+          "validation_status": "referenced_import_not_independent_audit"
+        },
+        "accounting_basis": "Part du groupe lorsque explicitement publiée"
+      },
+      "exercice_clos": "2025-12-31",
+      "devise": "MAD",
+      "financial_review": {
+        "reviewed_at": "2026-10-16",
+        "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
+        "document_hash": "sha256:c199525c357c4e84a51221866305a50586e866310c1a627ef450bed6df0fb2f3",
+        "pages": [
+          3,
+          6,
+          7
+        ],
+        "method": "Pages PDF rendues et lues : actions de clôture p.3 ; comptes consolidés IFRS 2025/2024 et unités KMAD p.6 ; opinion des commissaires aux comptes p.7. Contrôle de pages sélectionnées, sans certification du rapport entier.",
+        "conclusion": "RNPG 851,083 MMAD, fonds propres groupe 1 984,665 MMAD et 8 960 000 actions publiées. Le résultat social de 802,568 MMAD n’est pas substitué au RNPG. Ratios annuels fondés sur 2025 ; référence S1 préexistante préservée."
+      },
+      "complementary_reference_verified": {
+        "period_end": "2026-06-30",
+        "document_url": "https://www.ammc.ma/sites/default/files/Total_Maroc_S1_26.pdf",
+        "document_hash": "sha256:da3d59b5038415464640b87cc3c0a2f71c3ee3c67ffa689cab1496c428a0db96",
+        "pages": [
+          4
+        ],
+        "accounting_basis": "consolidé IFRS",
+        "reviewed_at": "2026-10-16",
+        "validation_status": "selected_pages_visually_checked",
+        "faits": {
+          "dettes_financieres_non_courantes": {
+            "valeur": 473.879,
+            "valeur_au_rapport": 473879,
+            "unite": "MMAD",
+            "unite_au_rapport": "KMAD",
+            "devise": "MAD",
+            "page": 4,
+            "period_end": "2026-06-30",
+            "base": "consolidé IFRS",
+            "url": "https://www.ammc.ma/sites/default/files/Total_Maroc_S1_26.pdf",
+            "document_hash": "sha256:da3d59b5038415464640b87cc3c0a2f71c3ee3c67ffa689cab1496c428a0db96",
+            "validation_status": "selected_pages_visually_checked",
+            "note": ""
+          },
+          "dettes_financieres_courantes": {
+            "valeur": 841.2,
+            "valeur_au_rapport": 841200,
+            "unite": "MMAD",
+            "unite_au_rapport": "KMAD",
+            "devise": "MAD",
+            "page": 4,
+            "period_end": "2026-06-30",
+            "base": "consolidé IFRS",
+            "url": "https://www.ammc.ma/sites/default/files/Total_Maroc_S1_26.pdf",
+            "document_hash": "sha256:da3d59b5038415464640b87cc3c0a2f71c3ee3c67ffa689cab1496c428a0db96",
+            "validation_status": "selected_pages_visually_checked",
+            "note": ""
+          },
+          "tresorerie": {
+            "valeur": 988.736,
+            "valeur_au_rapport": 988736,
+            "unite": "MMAD",
+            "unite_au_rapport": "KMAD",
+            "devise": "MAD",
+            "page": 4,
+            "period_end": "2026-06-30",
+            "base": "consolidé IFRS",
+            "url": "https://www.ammc.ma/sites/default/files/Total_Maroc_S1_26.pdf",
+            "document_hash": "sha256:da3d59b5038415464640b87cc3c0a2f71c3ee3c67ffa689cab1496c428a0db96",
+            "validation_status": "selected_pages_visually_checked",
+            "note": ""
+          }
+        },
+        "debt_components_mmad": {
+          "noncurrent": 473.879,
+          "current": 841.2,
+          "cash": 988.736
+        },
+        "arithmetic_net_debt_mmad": 326.343,
+        "annual_comparative_net_debt_mmad": -288.58,
+        "method": "Dettes financières non courantes + courantes − trésorerie et équivalents ; calcul arithmétique de postes, pas une définition de dette nette industrielle validée. La colonne décembre 2025 p.4 confirme 514,346 + 373,609 − 1 176,535 = −288,580 MMAD.",
+        "lease_debt_scope": "unresolved",
+        "semester_annualized": false
       }
     },
     "DHO": {

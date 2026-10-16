@@ -16,6 +16,7 @@ from nour.briefing_view import briefing_text
 from nour.report_contracts import synchronize_market
 from nour.macro import context_view
 from nour.research import enrich, archive_scores
+from tools.audit_readiness import publication_health
 
 ROOT = Path(__file__).resolve().parent
 
@@ -42,6 +43,9 @@ def main():
     report['overview_health'] = json.loads(overview_health.read_text()) if overview_health.exists() else {}
     news_health = ROOT/'data/news_health.json'
     report['news_health'] = json.loads(news_health.read_text()) if news_health.exists() else {'status':'not_observed'}
+    official_health = ROOT/'data/official_sources_health.json'
+    report['official_sources_health'] = (json.loads(official_health.read_text())
+                                        if official_health.exists() else {'status': 'not_observed'})
     health_file=ROOT/"data/health.json"
     report["health"] = json.loads(health_file.read_text()) if health_file.exists() else {
         "result":"not_configured","message":"Collecte automatique non encore exécutée"}
@@ -91,6 +95,15 @@ def main():
                 "intraday_status":report["intraday"]["status"], "briefings":links,
                 "publication_stage":"built_before_pages_deployment"})
     target = ROOT / "web/report.json"
+    financial_health = publication_health(report)
+    if financial_health['failures']:
+        raise ValueError('Publication refusée : incohérence arithmétique des fondamentaux : '
+                         + json.dumps(financial_health['failures'], ensure_ascii=False))
+    report['financial_health'] = {
+        key: financial_health[key] for key in
+        ('version', 'status', 'arithmetic_checks', 'documents_certified')
+    }
+    atomic_json(ROOT/'web/financial-health.json', financial_health)
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT/"web/news.json").write_text(json.dumps(news,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (ROOT/"web/briefing.json").write_text(json.dumps(briefing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

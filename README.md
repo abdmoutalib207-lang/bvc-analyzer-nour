@@ -4,6 +4,11 @@
 
 Moteur d'analyse indépendant de `-bvc-analyzer` : 80 fiches, graphiques historiques, indicateurs techniques, fondamentaux sourcés, score descriptif unique, briefing de séance et radar de publications. Aucun NLP ni texte WhatsApp n'entre dans les calculs. Le projet principal ne reçoit aucune écriture.
 
+[Fiabilité et collecte officielle du 16/10/2026](docs/official-reliability-2026-10-16.md) :
+contrôles d'unités/périodes/périmètres avant calcul, recalcul arithmétique avant
+publication, indexation de documents candidats, compléments primaires RDS et TMA.
+Les documents détectés n'alimentent jamais automatiquement les faits vérifiés.
+
 ## Utilisation
 
 - Site : ouvrir `web/index.html`, puis choisir un titre, filtrer l'univers ou ouvrir **Briefing** / **Actualités**. Le graphique garde une courbe SVG lisible sans JavaScript ; avec JavaScript, le pointeur et les flèches du clavier lisent les données OHLCV d'une séance, les boutons changent la période, parcourent l'historique, passent de la courbe aux bougies et affichent MM20, MM50, Bollinger, RSI, MACD ou volumes. Les indicateurs visuels ne contribuent pas au score.
