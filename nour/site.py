@@ -447,6 +447,26 @@ def sector_page(report, style, script):
             f'<td>{esc(business)}'
             + (f'<p class="muted">Faits annuels à retrouver : {esc(missing)}</p>' if missing else '')
             + f'</td><td>{link}</td></tr>')
+    priority_rows = []
+    for action in audit['review_queue']:
+        detail = action.get('debt_comparison_mmad')
+        debt = (f'<p class="muted">Calcul : {number(detail.get("calculated_mmad"),3)} MDH ; '
+                f'publication : {number(detail.get("reported_mmad"),3)} MDH ; '
+                f'écart : {number(detail.get("difference_mmad"),3)} MDH.</p>'
+                if detail else '')
+        priority_rows.append(
+            f'<tr><td>{esc(action["priority"])}</td>'
+            f'<td><a href="titres/{esc(action["symbol"])}.html">{esc(action["symbol"])}</a></td>'
+            f'<td>{esc(action["code"])}</td>'
+            f'<td>{esc(action["instruction"])}{debt}</td></tr>')
+    priority_table = ('<section class="panel"><h2>Blocages à rapprocher</h2>'
+                      + f'<p>{audit["blocking_issuers"]} sociétés avec ratios suspendus ; '
+                      + f'{audit["blocking_actions"]} actions documentaires prioritaires. '
+                      + 'Aucun ratio ne sera débloqué par cette file de contrôle.</p>'
+                      + '<div style="overflow-x:auto"><table><thead><tr>'
+                      + '<th>Priorité</th><th>Société</th><th>Contrôle</th><th>Travail requis</th>'
+                      + '</tr></thead><tbody>' + ''.join(priority_rows)
+                      + '</tbody></table></div></section>')
     body = (
         header('index.html', report.get('snapshot_updated') or '')
         + '<main><div class="hero"><span class="eyebrow">Contrôle indépendant · Nour</span>'
@@ -455,6 +475,7 @@ def sector_page(report, style, script):
         + 'Les indicateurs cités sont des points à vérifier, pas des résultats observés.</p>'
         + f'<div class="stamp">{audit["universe"]} sociétés · {audit["curated"]} avec grille métier spécifique · '
         + f'{audit["selected_pages_reviewed_issuers"]} avec au moins un fait appuyé par une page contrôlée</div></div>'
+        + priority_table
         + '<section class="panel"><h2>Inventaire des contrôles</h2>'
         + '<p>Une page sélectionnée contrôlée ne certifie pas un rapport entier. '
         + 'Une source seulement référencée doit encore être rapprochée de son PDF. '
