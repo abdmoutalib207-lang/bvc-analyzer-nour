@@ -61,6 +61,15 @@ class SectorSourceTests(unittest.TestCase):
         self.assertEqual(second["sources"]["BAM"]["checked_at"], second["checked_at"])
         self.assertEqual(first["sources"]["BAM"]["status"], "success")
 
+    def test_irrelevant_brochures_do_not_count_as_sector_statistics(self):
+        source = self.config["sources"][-1]
+        html = (b'<a href="/files/brochure-2026.pdf">Telecharger</a>'
+                b'<a href="/files/rapport-trafic-2026.pdf">Telecharger</a>'
+                b'<a href="/files/cahier-tarifaire.pdf">Tarifs</a>')
+        links = extract_links(html, source["url"], source["origins"], source["keywords"])
+        self.assertEqual(len(links), 1)
+        self.assertIn("rapport-trafic", links[0]["url"])
+
     def test_config_rejects_non_official_redirect_origins_and_duplicates(self):
         modified = copy.deepcopy(self.config)
         modified["sources"][0]["url"] = "http://127.0.0.1/internal"
@@ -81,6 +90,7 @@ class SectorSourceTests(unittest.TestCase):
         self.assertNotIn("<script>", rendered)
         self.assertIn("Dernier succès", rendered)
         self.assertIn("Première collecte non exécutée", monitor_html(None))
+        self.assertIn("accessible · aucun document repéré", monitor_html({"sources": {"ANP": {"status": "success", "link_count": 0}}}))
 
 
 if __name__ == "__main__":
