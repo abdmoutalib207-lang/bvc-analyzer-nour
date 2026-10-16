@@ -487,7 +487,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
     from .sector_audit import audit_sector_report
-    (output / "sector-readiness.json").write_text(json.dumps(audit_sector_report(report), ensure_ascii=False, indent=2)+"\\n", encoding="utf-8")
+    (output / "sector-readiness.json").write_text(json.dumps(audit_sector_report(report), ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     (output/'recherche.html').write_text(shell('Laboratoire statistique',
         header('index.html', fixture['snapshot_updated']) + research_body(fixture, report),
         style, script), encoding='utf-8')
