@@ -16,7 +16,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','macro.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route.startsWith('titres/')){
           const dashboard=page.locator('[data-bi-dashboard]');
@@ -71,6 +71,22 @@ const shots=process.env.NOUR_SCREENSHOTS;
           }
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
+        }
+        if(route==='metiers.html'){
+          const body=await page.locator('main').innerText();
+          for(const label of ['Analyse par métier','Blocages à rapprocher','TGCC','SGTM','CMGP','Documents']){
+            if(label==='Documents')continue;
+            assert.ok(body.includes(label),'Missing métier review: '+label);
+          }
+          assert.equal(await page.locator('table').count(),2);
+          assert.equal(await page.locator('table').last().locator('tbody tr').count(),80);
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Métier page overflows '+width);
+          const json=await (await context.request.get(new URL('sector-readiness.json',base).href)).json();
+          assert.equal(json.universe,80);
+          assert.equal(json.curated,78);
+          assert.equal(json.documents_certified,false);
+          assert.ok(json.review_queue.some(x=>x.code==='group_earnings_missing_total_not_substituted'&&x.symbol==='TGCC'));
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`metiers-${width}.png`),fullPage:true});}
         }
         if(route==='recherche.html'){
           await page.locator('#lab-symbol').selectOption('ADI');
