@@ -27,3 +27,15 @@
 - Soumettre toute installation ou service payant à une autorisation préalable.
 
 **État actuel :** inventaire de découverte uniquement. Aucun connecteur externe supplémentaire, aucune ingestion automatique et aucun déblocage de ratio.
+
+## Collecte automatique — première étape sur sept organismes
+
+- Configuration : `data/sector_source_watch.json` (BAM, ACAPS, HCP, Office des Changes, ANP, ONDA, Tanger Med).
+- Collecteur : `nour/sector_sources.py`, commande `python tools/update_sector_sources.py`.
+- Workflow : exécution à l'édition de **16 h, heure de Casablanca**, ainsi que lors des déclenchements manuels et des mises à jour de `main`, **uniquement après fusion et autorisation de publication**.
+- Sorties : `data/sector_source_candidates.json` (pages et liens candidats, horodatages, empreinte de page), `data/sector_source_health.json` (succès/échecs), visibles dans `sources.html`.
+- Sécurité : uniquement HTTPS et origines officielles explicitement autorisées ; limites de durée/taille, isolation des erreurs, dernière collecte réussie conservée en cas d'échec.
+- **Limite volontaire :** la première étape détecte les publications et liens téléchargeables, mais ne lit pas automatiquement leurs chiffres, ne valide pas les PDF et n'alimente ni ratios ni scores. Les statistiques par société nécessitent un extracteur propre à la source, un contrat de données, un contrôle des unités/périodes et des tests indépendants.
+- Aucun changement du dépôt principal ; aucune modification des résultats comptables existants.
+
+La liste des liens ne prouve pas l'existence d'une API ni le droit de redistribution des documents. Les éventuels liens hébergés hors des origines officielles autorisées sont ignorés jusqu'à revue.
