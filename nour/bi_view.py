@@ -10,7 +10,12 @@ def esc(value):
 
 
 def finite(value):
-    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return False
+    try:
+        return math.isfinite(value)
+    except (OverflowError, ValueError):
+        return False
 
 
 def number(value):
@@ -19,7 +24,12 @@ def number(value):
 
 def financial_dashboard(item):
     f = item.get('fundamental') or {}
-    bank = finite(f.get('pnb_mmad'))
+    family = (item.get('sector_guidance') or {}).get('family')
+    # Financial-sector presentation is a classification, not an inference from
+    # whether the PNB happened to be present in this year's source documents.
+    bank = (family in ('Banque', 'Finance - crédit-bail',
+                       'Finance - crédit à la consommation')
+            or finite(f.get('pnb_mmad')))
     growth_key = 'pnb_growth_pct' if bank else 'revenue_growth_pct'
     metrics = [
         ('eps_mad', 'Bénéfice par action', 'MAD', 'valorisation', False,
