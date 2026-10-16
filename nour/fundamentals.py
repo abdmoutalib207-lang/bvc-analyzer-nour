@@ -48,7 +48,8 @@ def _calculate(record, facts):
             accounting_basis=f.get('base') or out['accounting_basis'],
             original_unit=f.get('unite_au_rapport'),
             document_hash=f.get('document_hash'), printed_page=f.get('printed_page'),
-            validation_status=f.get('validation_status','referenced_import'))
+            validation_status=f.get('validation_status','referenced_import'),
+            period_end=f.get('period_end'), currency=f.get('devise', out['currency']))
         return float(v)
     if out['currency'] != 'MAD':
         out['warnings'].append('Devise étrangère : aucun ratio au cours MAD sans conversion documentée.')
