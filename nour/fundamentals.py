@@ -231,14 +231,27 @@ def calculate(record, facts, asof=None):
     # calculation so invalid dates cannot leak a future report into the result.
     analysis_day = date.fromisoformat(asof)
     visible_facts = facts
-    if isinstance(facts, dict) and isinstance(facts.get('latest_report'), dict):
-        period = facts['latest_report'].get('period_end')
+    if isinstance(facts, dict):
+        year = facts.get('exercice')
+        annual = facts.get('exercice_clos') or (
+            f'{year}-12-31' if isinstance(year, int) and not isinstance(year, bool)
+            else None)
+        try:
+            annual_day = date.fromisoformat(annual)
+        except (TypeError, ValueError):
+            annual_day = None
+        if annual_day is not None and annual_day > analysis_day:
+            # A future annual report must not leak through the provenance
+            # drawer even though the financial audit would block its ratios.
+            visible_facts = None
+    if isinstance(visible_facts, dict) and isinstance(visible_facts.get('latest_report'), dict):
+        period = visible_facts['latest_report'].get('period_end')
         try:
             report_day = date.fromisoformat(period)
         except (TypeError, ValueError):
             report_day = None
         if report_day is None or report_day > analysis_day:
-            visible_facts = {**facts, 'latest_report': None}
+            visible_facts = {**visible_facts, 'latest_report': None}
     visible_record = record
     quote_day = record.get('price_asof')
     if quote_day is not None:
