@@ -37,10 +37,34 @@ FAMILIES = {
         "exclude": ("carnet de commandes BTP", "PNB bancaire"),
         "sources": ("rapports de gestion", "résultats", "observatoires touristiques"),
     },
-    "Santé et distribution médicale": {
-        "symbols": ("VCNE", "SOT"),
+    "Santé - hôpitaux": {
+        "symbols": ("AKD",),
+        "metrics": ("capacité lits", "taux d'occupation si publié", "activité par spécialité", "marge opérationnelle", "capex", "dette"),
+        "exclude": ("rotation des stocks comme indicateur principal", "PNB bancaire"),
+        "sources": ("rapports de l'opérateur", "résultats consolidés", "AMMC"),
+    },
+    "Santé - industrie pharmaceutique": {
+        "symbols": ("SOT", "PPM"),
         "metrics": ("croissance organique", "marge brute", "mix produits", "stocks", "BFR", "capex"),
         "exclude": ("taux d'occupation hôtelier", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Santé - distribution et équipements": {
+        "symbols": ("VCNE",),
+        "metrics": ("chiffre d'affaires par segment", "marge de distribution", "stocks", "BFR", "capex", "créances"),
+        "exclude": ("taux d'occupation hospitalier comme indicateur direct du distributeur", "PNB bancaire"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Agroalimentaire et boissons": {
+        "symbols": ("LES", "MUT", "OUL", "UNI", "CAR", "CSR"),
+        "metrics": ("volumes", "prix/mix", "coûts des intrants", "marge", "stocks", "BFR", "capex"),
+        "exclude": ("PNB bancaire", "carnet de commandes BTP"),
+        "sources": ("rapports émetteurs", "résultats", "AMMC"),
+    },
+    "Métallurgie et matériaux industriels": {
+        "symbols": ("SNA",),
+        "metrics": ("volumes", "prix moyens", "coûts de l'énergie", "marge", "BFR", "capex"),
+        "exclude": ("production minière supposée", "PNB bancaire"),
         "sources": ("rapports émetteurs", "résultats", "AMMC"),
     },
     "Agriculture et intrants": {
