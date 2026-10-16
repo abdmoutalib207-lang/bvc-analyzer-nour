@@ -67,3 +67,15 @@ les tests, la fusion et la vérification du site servi.
 - Aucun changement du score canonique.
 - Tests unitaires, publication simulée et QA mobile avant fusion.
 - Contrôle de la séance réellement servie après déploiement.
+
+## Lot 2 — audit de fiabilité documentaire
+
+- `nour/sector_audit.py` inventorie les 80 sociétés depuis le rapport calculé, avec métier, statut de rapprochement, pages sélectionnées et faits annuels manquants.
+- `tools/audit_sector_readiness.py` permet le contrôle automatique de ce rapport sans réseau ni PDF téléchargé.
+- `web/sector-readiness.json` est un export documentaire transparent ; `web/metiers.html` en est la vue lisible, accessible par le menu « Métiers ».
+- Les banques et assureurs ne peuvent présenter des multiples industriels de dette nette : le contrôle bloque la publication si ces valeurs sont présentes.
+- Une preuve « page sélectionnée contrôlée » doit porter date, unité, devise MAD, périmètre comptable, page, URL primaire HTTPS et empreinte SHA-256.
+- Aucun KPI métier absent n'est imputé. Les profils spécialisés n'ajoutent aucun résultat financier non vérifié.
+- Le moteur conserve les scores, les historiques et les chiffres financiers existants ; seules des métadonnées de provenance et de présentation sont ajoutées.
+
+La revue CI doit encore valider le lot avant toute fusion. Une revue documentaire exhaustive et la qualification métier des sociétés non encore couvertes restent nécessaires.
