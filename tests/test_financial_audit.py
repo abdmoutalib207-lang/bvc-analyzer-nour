@@ -72,6 +72,36 @@ class FinancialAuditTests(unittest.TestCase):
                     self.assertIn(metric, a['blocked_metrics'])
                 self.assertNotIn('roe_pct', a['blocked_metrics'])
 
+    def test_displayed_earnings_and_pnb_share_ratio_unit_and_period_guards(self):
+        # An incorrect RNPG unit previously left a false amount visible even
+        # though BPA/PER/ROE were withheld by the financial audit.
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['unite'] = 'KMAD'
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['earnings_mmad'])
+        self.assertIsNone(result['eps_mad'])
+        self.assertIsNone(result['pe'])
+        self.assertIsNone(result['roe_pct'])
+        self.assertEqual(result['revenue_growth_pct'], 20)
+        self.assertIn('earnings_mmad', result['financial_audit']['blocked_metrics'])
+
+        f = facts()
+        f['faits']['produit_net_bancaire'] = fact(150, period='2024-12-31')
+        f['faits']['produit_net_bancaire_2024'] = fact(120, period='2024-12-31')
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['pnb_mmad'])
+        self.assertIsNone(result['pnb_growth_pct'])
+        self.assertEqual(result['earnings_mmad'], 20)
+        self.assertIn('pnb_mmad', result['financial_audit']['blocked_metrics'])
+
+    def test_displayed_earnings_can_be_negative_without_fabricated_positive_per(self):
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['valeur'] = -20
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertEqual(result['earnings_mmad'], -20)
+        self.assertIsNone(result['pe'])
+        self.assertEqual(result['eps_mad'], -20)
+
     def test_explicit_cross_period_or_social_group_mix_is_blocked(self):
         f = facts()
         f['faits']['capitaux_propres_part_groupe']['period_end'] = '2026-06-30'
