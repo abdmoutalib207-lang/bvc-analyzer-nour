@@ -1,10 +1,18 @@
 """Sector rules are descriptive, isolated from numerical scoring."""
 import unittest
+import json
+from pathlib import Path
 
 from nour.sector_methods import FAMILIES, guidance
 
 
 class SectorMethodsTests(unittest.TestCase):
+    def test_curated_tickers_are_real_nour_symbols_not_source_aliases(self):
+        symbols = set(json.loads((Path(__file__).resolve().parents[1] / 'data/source_codes.json').read_text()))
+        for family, details in FAMILIES.items():
+            for ticker in details['symbols']:
+                self.assertIn(ticker, symbols, (family, ticker))
+
     def test_curated_families_do_not_overlap(self):
         seen = set()
         for family, data in FAMILIES.items():
