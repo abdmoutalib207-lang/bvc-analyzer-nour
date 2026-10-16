@@ -6,6 +6,7 @@ import math
 import re
 from pathlib import Path
 
+from .bi_view import financial_dashboard, semester_chart
 from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
@@ -68,8 +69,9 @@ def svg_chart(bars):
 
 def shell(title, body, style, script):
     prefix = '../' if 'href="../index.html"' in body else ''
+    bi_style = f'<link rel="stylesheet" href="{prefix}bi.css">' if 'data-bi-dashboard' in body else ''
     return (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08121b"><title>{esc(title)} · BVC Analyzer Nour</title><style>{style}</style>'
-            f'<link rel="stylesheet" href="{prefix}assistant.css"></head><body>'
+            f'<link rel="stylesheet" href="{prefix}assistant.css">{bi_style}</head><body>'
             f'{body}{assistant_panel(prefix)}<script>{script}</script>'
             f'<script src="{prefix}research.js" defer></script>'
             f'<script src="{prefix}assistant-domains.js" defer></script>'
@@ -185,27 +187,6 @@ def detail_page(item, record, fixture, style, script):
                            info_card('Support 20 séances',number(technical.get('support20')),'MAD'),
                            info_card('Résistance 20 séances',number(technical.get('resistance20')),'MAD'),
                            info_card('Volume / médiane 20 séances',number(technical.get('volume_vs_median20')),'×')))
-    def fundamental_card(title, value, unit='', directional=False):
-        tone = ('missing' if value is None else 'positive' if directional and value > 0
-                else 'negative' if directional and value < 0 else 'neutral')
-        display = number(value) if value is not None else '—'
-        missing = ('Suspendu : dette à rapprocher' if title.startswith('Dette nette')
-                   and (calculated.get('debt_reconciliation') or {}).get('status') == 'unresolved'
-                   else 'Non documenté ou non applicable')
-        return (f'<article class="kpi fundamental-card tone-{tone}"><span>{esc(title)}</span>'
-                f'<strong>{display}</strong>{f" <small>{esc(unit)}</small>" if unit else ""}'
-                f'<em>{missing if value is None else "Valeur négative" if tone=="negative" else "Valeur positive" if tone=="positive" else "Ratio descriptif"}</em></article>')
-    eps_title = (f'BPA historique {calculated.get("exercise")}' if calculated.get('historical_per_share_only') else 'Bénéfice par action')
-    fundamental_cards=''.join((fundamental_card(eps_title,calculated.get('eps_mad'),'MAD'),
-                               fundamental_card('PER recalculé',calculated.get('pe')),
-                               fundamental_card('P/B recalculé',calculated.get('pb')),
-                               fundamental_card('ROE',calculated.get('roe_pct'),'%',True),
-                               fundamental_card('Croissance du CA',calculated.get('revenue_growth_pct'),'%',True),
-                               *([fundamental_card('Produit net bancaire',calculated.get('pnb_mmad'),'MMAD'),
-                                  fundamental_card('Croissance du PNB',calculated.get('pnb_growth_pct'),'%',True)]
-                                 if calculated.get('pnb_mmad') is not None else []),
-                               fundamental_card('Dette nette stricte',calculated.get('net_debt_strict_mmad'),'MMAD'),
-                               fundamental_card('Dette nette stricte / EBE',calculated.get('net_debt_ebitda'),'×')))
     financial_details = (f'<p class="fineprint">Périmètre : {esc(calculated.get("accounting_basis"))}. '
                          f'Devise : {esc(calculated.get("currency"))}. Fin de période : {esc(calculated.get("period_end"))}.</p>'
                          f'<p class="fineprint">{esc(calculated.get("roe_method"))}. '
@@ -277,7 +258,7 @@ def detail_page(item, record, fixture, style, script):
         financial_details += (f'<section class="panel"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
             f'<p>{esc(calculated.get("semester_activity_label", "CA"))} : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
             f'{esc(recent.get("reported_net_label", "résultat selon le périmètre du document"))} : {number(recent.get("reported_net_millions"))} millions.</p>'
-            f'{comparison}'
+            f'{semester_chart(recent)}{comparison}'
             f'<p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
             f'{esc(recent.get("note") or "")}</p>'
             f'<a href="{esc(recent["document_url"])}" target="_blank" rel="noopener noreferrer">Document semestriel référencé</a>'
@@ -324,7 +305,7 @@ def detail_page(item, record, fixture, style, script):
             + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
             + statistics_html
             + research_panels(item)
-            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p><div class="detail-grid">{fundamental_cards}</div><p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
+            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
             + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
@@ -448,11 +429,11 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "titres").mkdir(exist_ok=True)
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
-    for asset in ('assistant.js', 'assistant-domains.js', 'research.js', 'assistant.css', 'assistant-config.json'):
+    for asset in ('assistant.js', 'assistant-domains.js', 'research.js', 'assistant.css', 'bi.css', 'assistant-config.json'):
         if (output / asset).resolve() != (assets / asset).resolve():
             (output / asset).write_bytes((assets / asset).read_bytes())
     style = (assets / "nour.css").read_text(encoding="utf-8")
-    script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js'))
+    script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")

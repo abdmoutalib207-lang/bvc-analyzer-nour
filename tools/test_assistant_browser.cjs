@@ -18,6 +18,25 @@ const shots=process.env.NOUR_SCREENSHOTS;
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
       for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route.startsWith('titres/')){
+          const dashboard=page.locator('[data-bi-dashboard]');
+          await dashboard.locator('[data-bi-filters]').waitFor();
+          const cards=dashboard.locator('[data-bi-metric]');
+          const before=await cards.locator('strong').allTextContents();
+          await dashboard.locator('#bi-group').selectOption('dette');
+          assert.equal(await dashboard.locator('[data-bi-metric]:visible').count(),2);
+          assert.equal(await dashboard.locator('[data-bi-explanation]:visible').count(),1);
+          await dashboard.locator('#bi-group').selectOption('rentabilite');
+          const roe=dashboard.locator('[data-bi-metric="roe_pct"]');
+          await roe.focus();await page.keyboard.press('Enter');
+          assert.equal(await roe.getAttribute('aria-pressed'),'true');
+          assert.equal(await dashboard.locator('#bi-explain-roe_pct').isVisible(),true);
+          assert.equal(await dashboard.locator('#bi-explain-pe').isVisible(),false);
+          await dashboard.locator('#bi-group').selectOption('all');
+          assert.deepEqual(await cards.locator('strong').allTextContents(),before);
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+          if(shots){fs.mkdirSync(shots,{recursive:true});await dashboard.screenshot({path:path.join(shots,`bi-${route.split('/')[1].split('.')[0]}-${width}.png`)});}
+        }
         if(route==='titres/ADI.html'){
           const body=await page.locator('main').innerText();
           const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
