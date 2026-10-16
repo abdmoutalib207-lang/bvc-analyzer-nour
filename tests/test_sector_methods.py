@@ -39,6 +39,20 @@ class SectorMethodsTests(unittest.TestCase):
         self.assertIn("EVP", guidance("MSA")["metrics_to_verify"])
         self.assertIn("revenus récurrents si publiés", guidance("T2S")["metrics_to_verify"])
 
+    def test_health_businesses_and_hospital_kpis_are_not_conflated(self):
+        hospital = guidance("AKD")
+        pharma = guidance("SOT")
+        distributor = guidance("VCNE")
+        self.assertEqual(len({hospital["family"], pharma["family"], distributor["family"]}), 3)
+        self.assertIn("capacité lits", hospital["metrics_to_verify"])
+        self.assertIn("mix produits", pharma["metrics_to_verify"])
+        self.assertIn("marge de distribution", distributor["metrics_to_verify"])
+        self.assertIn("rotation des stocks comme indicateur principal", hospital["invalid_shortcuts"])
+
+    def test_agribusiness_and_farming_inputs_are_separate(self):
+        self.assertNotEqual(guidance("MUT")["family"], guidance("CMGP")["family"])
+        self.assertIn("coûts des intrants", guidance("CSR")["metrics_to_verify"])
+
     def test_unknown_symbol_abstains(self):
         result = guidance("UNKNOWN", {"sector": "Autres"})
         self.assertEqual(result["coverage"], "broad_only")
