@@ -139,6 +139,20 @@ class FinancialAuditTests(unittest.TestCase):
         f['faits']['dividende_par_action'] = fact(-2, 'MAD')
         self.assertIn('dividend_yield_pct', self.audit(f)['blocked_metrics'])
 
+    def test_huge_integer_fact_and_price_do_not_crash_build(self):
+        f = facts()
+        f['faits']['dettes_financieres']['valeur'] = 10 ** 1000
+        out = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(out['net_debt_strict_mmad'])
+        self.assertIsNone(out['net_debt_ebitda'])
+        self.assertIn('invalid_numeric_fact',
+                      {c['code'] for c in out['financial_audit']['checks']})
+        f = facts()
+        out = calculate({'price': 10 ** 1000}, f, asof='2026-10-16')
+        self.assertIsNone(out['pe'])
+        self.assertIsNone(out['pb'])
+        self.assertEqual(out['earnings_mmad'], 20)
+
     def test_core_debt_inputs_must_be_compatible_and_ebe_positive(self):
         f = facts()
         f['faits']['tresorerie_actif']['base'] = 'social'
