@@ -81,7 +81,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}sources.html">Sources</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -516,6 +516,17 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
+    from .economic_sources import load_catalog, catalog_page, catalog_summary
+    economic_catalog = load_catalog()
+    (output / "sources.html").write_text(
+        shell("Sources économiques marocaines",
+              header("index.html", report.get("snapshot_updated") or "")
+              + catalog_page(economic_catalog)
+              + "<footer>BVC Analyzer Nour · sources contextuelles non certifiantes.</footer>",
+              style, script), encoding="utf-8")
+    (output / "economic-sources-summary.json").write_text(
+        json.dumps(catalog_summary(economic_catalog), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
     from .sector_audit import audit_sector_report
     (output / "sector-readiness.json").write_text(json.dumps(audit_sector_report(report), ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     (output/'recherche.html').write_text(shell('Laboratoire statistique',
