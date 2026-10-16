@@ -17,7 +17,7 @@ class BiViewTests(unittest.TestCase):
         self.assertIn('BPA non arrondi', page)
         self.assertIn('Suspendu : dette à rapprocher', page)
         self.assertIn('0,00', page)
-        self.assertIn('3 / 7 indicateurs affichables', page)
+        self.assertIn('3 / 8 indicateurs affichables', page)
 
     def test_loss_is_explained_and_unsafe_source_is_not_a_link(self):
         page = financial_dashboard({'fundamental': {'earnings_mmad': -10,
@@ -29,7 +29,7 @@ class BiViewTests(unittest.TestCase):
 
     def test_missing_and_non_finite_values_are_not_displayed_as_zero(self):
         page = financial_dashboard({'fundamental': {'pe': float('nan'), 'roe_pct': True}})
-        self.assertIn('0 / 7 indicateurs affichables', page)
+        self.assertIn('0 / 8 indicateurs affichables', page)
         self.assertNotIn('>0,00<', page)
         self.assertNotIn('>nan<', page)
         self.assertIn('Indisponible', page)
@@ -49,7 +49,7 @@ class BiViewTests(unittest.TestCase):
         self.assertIn('Produit net bancaire', page)
         self.assertNotIn('Croissance du CA', page)
         self.assertNotIn('>12,00<', page)
-        self.assertIn('1 / 8 indicateurs affichables', page)
+        self.assertIn('1 / 9 indicateurs affichables', page)
         # Missing PNB does not suppress independently available EPS.
         self.assertIn('>3,40<', page)
         for family in ('Finance - crédit-bail', 'Finance - crédit à la consommation'):
@@ -59,7 +59,21 @@ class BiViewTests(unittest.TestCase):
 
     def test_unreasonably_large_integer_is_not_rendered_as_a_valid_number(self):
         page = financial_dashboard({'fundamental': {'pe': 10 ** 1000}})
-        self.assertIn('0 / 7 indicateurs affichables', page)
+        self.assertIn('0 / 8 indicateurs affichables', page)
+
+    def test_independent_annual_net_is_visible_and_blocked_status_is_explicit(self):
+        item = {'fundamental': {'exercise': 2025, 'earnings_mmad': -12.5,
+                'evidence': {'resultat_net_part_groupe': {'page': 18}},
+                'metric_availability': {
+                    'earnings_mmad': {'status': 'available', 'reason_codes': []},
+                    'eps_mad': {'status': 'blocked', 'reason_codes': ['fact_unit_mismatch']}}}}
+        page = financial_dashboard(item)
+        self.assertIn('Résultat net part du groupe', page)
+        self.assertIn('>-12,50<', page)
+        self.assertIn('Bloqué par contrôle', page)
+        self.assertIn('fact_unit_mismatch', page)
+        self.assertIn('1 / 8 indicateurs affichables', page)
+        self.assertNotIn('Résultat net consolidé total', page)
 
     def test_graph_requires_explicit_same_half_year_group_comparison(self):
         data = dict(period_end='2026-06-30', reported_net_previous_period_end='2025-06-30',
