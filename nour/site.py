@@ -439,6 +439,7 @@ def sector_page(report, style, script):
                 if isinstance(source, str) and source.startswith('https://') else 'Document non référencé')
         business = ', '.join(item['business_kpis_to_collect']) or 'Méthode métier à compléter'
         missing = ', '.join(item['missing_annual_fact_groups'])
+        unverified = ', '.join(item['unverified_annual_fact_groups'])
         rows.append(
             f'<tr><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td>'
             f'<td>{esc(item["family"])}</td>'
@@ -446,6 +447,7 @@ def sector_page(report, style, script):
             f'<td>{item["selected_page_evidence_count"]}/{item["evidence_count"]} faits documentés</td>'
             f'<td>{esc(business)}'
             + (f'<p class="muted">Faits annuels à retrouver : {esc(missing)}</p>' if missing else '')
+            + (f'<p class="muted">Faits présents mais à contrôler dans le PDF : {esc(unverified)}</p>' if unverified else '')
             + f'</td><td>{link}</td></tr>')
     priority_rows = []
     for action in audit['review_queue']:
