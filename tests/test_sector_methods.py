@@ -26,6 +26,10 @@ class SectorMethodsTests(unittest.TestCase):
         self.assertIn("mix produits", health["metrics_to_verify"])
         self.assertNotEqual(bank["family"], hotel["family"])
         self.assertIn("PNB bancaire", hotel["invalid_shortcuts"])
+        self.assertIn("ARPU", guidance("IAM")["metrics_to_verify"])
+        self.assertIn("volumes ciment", guidance("LHM")["metrics_to_verify"])
+        self.assertIn("EVP", guidance("MSA")["metrics_to_verify"])
+        self.assertIn("revenus récurrents si publiés", guidance("T2S")["metrics_to_verify"])
 
     def test_unknown_symbol_abstains(self):
         result = guidance("UNKNOWN", {"sector": "Autres"})
