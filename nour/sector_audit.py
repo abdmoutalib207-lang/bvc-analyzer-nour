@@ -145,6 +145,14 @@ def audit_sector_report(report):
             action["document_url"] = f.get("document_url")
             action["annual_exercise"] = f.get("exercise")
             action["accounting_basis"] = f.get("accounting_basis")
+            action["source_pages_to_check"] = [
+                {"field": key, "page_hint": evidence[key].get("page"),
+                 "status": evidence[key].get("validation_status")}
+                for key in action.get("fields", [])
+                if isinstance(evidence.get(key), dict)
+                and isinstance(evidence[key].get("page"), int)
+                and not isinstance(evidence[key]["page"], bool)
+            ]
         review_queue.extend(actions)
         if family in NON_INDUSTRIAL_DEBT_FAMILIES:
             for metric in ("net_debt_ebitda", "net_debt_strict_mmad"):
