@@ -184,6 +184,19 @@ class FinancialAuditTests(unittest.TestCase):
                 self.assertEqual(result['earnings_mmad'], 20)
                 self.assertEqual(result['eps_mad'], 20)
 
+    def test_availability_marks_blocked_not_merely_missing_and_preserves_others(self):
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['unite'] = 'KMAD'
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        availability = result['metric_availability']
+        self.assertEqual(availability['earnings_mmad']['status'], 'blocked')
+        self.assertIn('fact_unit_mismatch',
+                      availability['earnings_mmad']['reason_codes'])
+        self.assertEqual(availability['eps_mad']['status'], 'blocked')
+        self.assertEqual(availability['revenue_growth_pct']['status'], 'available')
+        self.assertEqual(availability['pnb_mmad']['status'], 'unavailable')
+        self.assertIsNone(result['earnings_mmad'])
+
     def test_core_debt_inputs_must_be_compatible_and_ebe_positive(self):
         f = facts()
         f['faits']['tresorerie_actif']['base'] = 'social'
