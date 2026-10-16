@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 import hashlib
 from html.parser import HTMLParser
 from html import escape
+import unicodedata
 import json
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -87,7 +88,13 @@ def extract_links(body, base_url, origins, keywords):
         label = " ".join(title.split())[:220]
         path = urlsplit(url).path.lower()
         document = path.endswith(EXTENSIONS)
-        if not document and not any(k.casefold() in (label + " " + path).casefold() for k in keywords):
+        # Official sites often use English PDF filenames and French anchor labels.
+        # A generic brochure, tariff or commemorative PDF is not a sector KPI.
+        def fold(value):
+            return "".join(ch for ch in unicodedata.normalize("NFKD", value.casefold())
+                           if not unicodedata.combining(ch))
+        haystack = fold(label + " " + path)
+        if not any(fold(k) in haystack for k in keywords):
             continue
         if url == base_url:
             continue
@@ -155,6 +162,11 @@ def monitor_html(state):
     for source_id, entry in sorted(state.get("sources", {}).items()):
         last = entry.get("last_success_at") or "jamais"
         checked = entry.get("checked_at") or "inconnu"
+        status = entry.get("status") or "unknown"
+        if status == "success" and not entry.get("link_count"):
+            status = "accessible · aucun document repéré"
+        elif status == "error":
+            status = "échec · " + str(entry.get("error") or "source indisponible")[:110]
         links = []
         for item in entry.get("links", [])[:8]:
             url = item.get("url")
@@ -166,7 +178,7 @@ def monitor_html(state):
                          + escape(str(title)) + '</a></li>')
         docs = ('<ul>' + "".join(links) + '</ul>') if links else 'Aucun lien retenu'
         rows.append('<tr><td>' + escape(source_id) + '</td><td>'
-                    + escape(entry.get("status") or "unknown") + '</td><td>'
+                    + escape(status) + '</td><td>'
                     + escape(last) + '</td><td>' + escape(checked)
                     + '</td><td>' + docs + '</td></tr>')
     return ('<section class="panel"><h2>Collecte sectorielle automatique</h2>'
