@@ -26,7 +26,7 @@ FAMILIES = {
         "sources": ("rapports annuels", "communiqués d'activité", "AMMC"),
     },
     "BTP et ingénierie": {
-        "symbols": ("TGC", "TGCC", "GTM", "SGTM", "JET"),
+        "symbols": ("TGCC", "SGTM", "JET"),
         "metrics": ("carnet de commandes", "prise de commandes", "marge chantier", "BFR", "trésorerie", "capex"),
         "exclude": ("préventes immobilières comme CA", "carnet de commandes comme bénéfice acquis"),
         "sources": ("rapports de gestion", "résultats consolidés", "AMMC"),
@@ -38,13 +38,13 @@ FAMILIES = {
         "sources": ("rapports de gestion", "résultats", "observatoires touristiques"),
     },
     "Santé et distribution médicale": {
-        "symbols": ("VCN", "VCNE", "SOT"),
+        "symbols": ("VCNE", "SOT"),
         "metrics": ("croissance organique", "marge brute", "mix produits", "stocks", "BFR", "capex"),
         "exclude": ("taux d'occupation hôtelier", "PNB bancaire"),
         "sources": ("rapports émetteurs", "résultats", "AMMC"),
     },
     "Agriculture et intrants": {
-        "symbols": ("CMG", "CMGP"),
+        "symbols": ("CMGP",),
         "metrics": ("saisonnalité", "mix produits", "marge brute", "stocks", "BFR", "créances clients"),
         "exclude": ("carnet de commandes BTP", "PNB bancaire"),
         "sources": ("rapports émetteurs", "statistiques agricoles", "AMMC"),
