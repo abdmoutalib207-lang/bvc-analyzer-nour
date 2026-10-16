@@ -111,7 +111,7 @@ class RuntimeContracts(unittest.TestCase):
         # must explicitly simulate an absent closing, not depend on its age.
         for item in report['results']:
             item['asof'] = '2026-10-02'
-        report['runtime'] = run_context(datetime(2026,10,5,19,0,tzinfo=ZONE), '0 18 * * 1-5','schedule')
+        report['runtime'] = run_context(datetime(2026,10,5,19,0,tzinfo=ZONE), '0 16 * * 1-5','schedule')
         brief = create_briefing(report)
         self.assertEqual(brief['edition_status'],'closing_pending')
         page = briefing_page(self.fixture,brief,'','')
