@@ -153,6 +153,37 @@ class FinancialAuditTests(unittest.TestCase):
         self.assertIsNone(out['pb'])
         self.assertEqual(out['earnings_mmad'], 20)
 
+    def test_future_semester_is_not_exposed_and_does_not_change_annual_ratios(self):
+        f = facts()
+        f['latest_report'] = {'period_end': '2026-12-31',
+                              'reported_net_millions': 999999,
+                              'document_url': 'https://example.org/future.pdf'}
+        original = copy.deepcopy(f)
+        result = calculate({'price': 100, 'price_asof': '2026-10-15'}, f,
+                           asof='2026-10-16')
+        self.assertIsNone(result['latest_report'])
+        self.assertEqual(result['earnings_mmad'], 20)
+        self.assertEqual(result['pe'], 5)
+        self.assertEqual(f, original)
+        # A valid older half-year remains visible without annualization.
+        f['latest_report']['period_end'] = '2026-06-30'
+        result = calculate({'price': 100, 'price_asof': '2026-10-15'}, f,
+                           asof='2026-10-16')
+        self.assertEqual(result['latest_report']['reported_net_millions'], 999999)
+        self.assertEqual(result['earnings_mmad'], 20)
+
+    def test_future_and_explicitly_stale_quotes_do_not_price_annual_ratios(self):
+        f = facts()
+        for rec in ({'price': 100, 'price_asof': '2026-10-17'},
+                    {'price': 100, 'price_asof': 'not-a-date'},
+                    {'price': 100, 'price_asof': '2026-10-15', 'stale': True}):
+            with self.subTest(rec=rec):
+                result = calculate(rec, f, asof='2026-10-16')
+                self.assertIsNone(result['pe'])
+                self.assertIsNone(result['pb'])
+                self.assertEqual(result['earnings_mmad'], 20)
+                self.assertEqual(result['eps_mad'], 20)
+
     def test_core_debt_inputs_must_be_compatible_and_ebe_positive(self):
         f = facts()
         f['faits']['tresorerie_actif']['base'] = 'social'
