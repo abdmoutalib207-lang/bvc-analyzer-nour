@@ -71,10 +71,10 @@ def technical(record):
             "limited_by_resumption": resumed}
 
 
-def fundamentals(record, facts):
+def fundamentals(record, facts, asof=None):
     """Single implementation shared by every consumer."""
     from .fundamentals import calculate
-    return calculate(record, facts)
+    return calculate(record, facts, asof=asof)
 
 
 def canonical_score(quality, tech, fundamental):

@@ -32,7 +32,8 @@ def audit(report):
                     unit = 'actions' if key.startswith('nombre_actions') else 'MMAD'
                     if key == 'dividende_par_action':
                         unit = 'DH'
-                    if e.get('unit') != unit:
+                    allowed_units = {'DH', 'MAD'} if key == 'dividende_par_action' else {unit}
+                    if e.get('unit') not in allowed_units:
                         failures.append(dict(symbol=s, metric='unit:' + key,
                                              actual=e.get('unit'), expected=unit))
                     return Decimal(str(e['value']))
@@ -88,6 +89,21 @@ def audit(report):
         score_states=dict(Counter(r['canonical_score']['state'] for r in rows)),
         coverage=report['fundamental_coverage'],
         limitation='Arithmetic of available exported facts only; does not independently verify all PDFs, publication dates, accounting scopes or share denominators.')
+
+
+def publication_health(report):
+    """Recompute exported ratios before publication; never repair by imputation."""
+    result = audit(report)
+    result.update(version='nour-financial-health-v1',
+                  snapshot_updated=report.get('snapshot_updated'),
+                  source_commit=report.get('source_commit'),
+                  status='blocked' if result['failures'] else 'arithmetic_checked',
+                  documents_certified=False)
+    result['issuer_controls'] = {
+        row['symbol']: row['fundamental'].get('financial_audit', {})
+        for row in report['results']
+    }
+    return result
 
 
 if __name__ == '__main__':

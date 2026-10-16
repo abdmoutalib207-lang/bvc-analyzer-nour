@@ -244,6 +244,20 @@ def detail_page(item, record, fixture, style, script):
     if calculated.get('warnings'):
         financial_details += '<details><summary>Réserves sur les fondamentaux</summary><ul>'+''.join(
             f'<li>{esc(w)}</li>' for w in calculated['warnings'])+'</ul></details>'
+    audit = calculated.get('financial_audit') or {}
+    if audit:
+        freshness = audit.get('freshness') or {}
+        label = ('Restrictions de calcul' if audit.get('blocked_metrics') else
+                 'Traçabilité à compléter' if audit.get('status') == 'review_required' else
+                 'Contrats de calcul contrôlés')
+        newer = (f'<p>Publication plus récente : {esc(freshness.get("latest_report_period_end"))}. '
+                 'Les ratios annuels conservent leur période ; aucun semestre n’est annualisé.</p>'
+                 if freshness.get('newer_report_available') else '')
+        financial_details += (f'<details><summary>Contrôles des calculs · {label}</summary>'
+            f'{newer}<p>Unités, dates, périmètres et dénominateurs contrôlés automatiquement. '
+            'Les incompatibilités explicites suspendent les ratios concernés ; '
+            'une référence documentaire ne certifie pas le rapport.</p>'
+            '<a href="../financial-health.json">Consulter le relevé des contrôles</a></details>')
     review = calculated.get('financial_review') or {}
     if review:
         financial_details += (f'<section class="panel"><h3>Rapprochement documentaire · {esc(review.get("reviewed_at"))}</h3>'

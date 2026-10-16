@@ -1,16 +1,17 @@
 """Attributed annual facts: currency, denominator and period are explicit contracts."""
 import math
 import re
+from datetime import date
 from urllib.parse import urlparse
 
 
-def calculate(record, facts):
+def _calculate(record, facts):
     out = dict(source='absent', exercise=None, document_url=None, evidence={},
                eps_mad=None, book_value_per_share_mad=None, pe=None, pb=None,
                revenue_growth_pct=None, roe_pct=None, dividend_yield_pct=None,
                earnings_mmad=None, warnings=[], accounting_basis=None,
                currency=None, net_debt_strict_mmad=None, net_debt_ebitda=None,
-               calculation_version='nour-fundamentals-v5', point_in_time_ready=False,
+               calculation_version='nour-fundamentals-v6', point_in_time_ready=False,
                roe_average_equity_pct=None, debt_reconciliation={},
                roe_method='Résultat annuel / capitaux propres de clôture, non moyens',
                pnb_mmad=None, pnb_growth_pct=None,
@@ -199,6 +200,15 @@ def calculate(record, facts):
     out['coverage_pct'] = 25*sum(out[k] is not None for k in metrics)
     out['missing_metrics'] = [k for k in metrics if out[k] is None]
     return out
+
+
+def calculate(record, facts, asof=None):
+    """Canonical calculation boundary: audit contracts before any score consumes it."""
+    from .financial_audit import audit_financials, apply_financial_audit
+    asof = asof or date.today().isoformat()
+    computed = _calculate(record, facts)
+    checks = audit_financials(record, facts, asof, calculated=computed)
+    return apply_financial_audit(computed, checks)
 
 
 def coverage(results):

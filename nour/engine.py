@@ -141,7 +141,7 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
         historical = asof < str(fixture.get('snapshot_updated', ''))[:10]
-        item["fundamental"] = fundamentals(rec, None if historical else facts.get(symbol))
+        item["fundamental"] = fundamentals(rec, None if historical else facts.get(symbol), asof=asof)
         if historical:
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
         item["historical_statistics"] = describe(dated)
