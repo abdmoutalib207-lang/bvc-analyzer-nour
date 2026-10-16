@@ -107,8 +107,8 @@
         "Tous"
       ],
       "scope": "Comptes nationaux, inflation, enquêtes de conjoncture",
-      "verification_status": "page_confirmed",
-      "url": "https://www.hcp.ma/downloads/Enquete-nationale-de-conjoncture-aupres-des-menages_t22527.html",
+      "verification_status": "link_candidate_not_revalidated",
+      "url": "https://www.hcp.ma",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
@@ -125,8 +125,8 @@
         "Industrie - chimie et gaz"
       ],
       "scope": "Commerce extérieur, recettes voyages, IDE et statistiques par secteur",
-      "verification_status": "page_confirmed",
-      "url": "https://www.oc.gov.ma/fr/etudes-et-statistiques/series-statistiques",
+      "verification_status": "link_candidate_not_revalidated",
+      "url": "https://www.oc.gov.ma",
       "automatic_import": false,
       "issuer_accounting_fact_authority": false,
       "publication_frequency": "document_dependent",
