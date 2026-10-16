@@ -184,6 +184,21 @@ class FinancialAuditTests(unittest.TestCase):
                 self.assertEqual(result['earnings_mmad'], 20)
                 self.assertEqual(result['eps_mad'], 20)
 
+    def test_future_annual_report_does_not_leak_into_provenance_or_metrics(self):
+        f = facts()
+        f['exercice'] = 2027
+        f['exercice_clos'] = '2027-12-31'
+        f['faits']['resultat_net_part_groupe']['valeur'] = 999999
+        original = copy.deepcopy(f)
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['document_url'])
+        self.assertEqual(result['evidence'], {})
+        self.assertIsNone(result['earnings_mmad'])
+        self.assertIsNone(result['eps_mad'])
+        self.assertIn('annual_period_future',
+                      {x['code'] for x in result['financial_audit']['checks']})
+        self.assertEqual(f, original)
+
     def test_availability_marks_blocked_not_merely_missing_and_preserves_others(self):
         f = facts()
         f['faits']['resultat_net_part_groupe']['unite'] = 'KMAD'
