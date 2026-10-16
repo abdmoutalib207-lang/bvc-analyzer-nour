@@ -1,37 +1,37 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-15",
+  "generated_for": "2026-10-16",
   "market_session": "2026-10-15",
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "schedule",
-    "slot": "closing",
-    "label": "Briefing de fin de journée / filet de sécurité",
-    "target_time": "18:00",
-    "schedule": "0 18 * * 1-5",
-    "scheduled_at": "2026-10-15T18:00:00+00:00",
-    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
-    "edition_for": "2026-10-15",
-    "started_at": "2026-10-15T20:08:36+00:00",
-    "built_at": "2026-10-15T20:09:14.922042+00:00",
-    "delay_minutes": 128.6,
-    "late": true,
-    "run_id": "38799536607",
-    "commit": "481246173b7345a4174773b0aa9f00c8917b6924",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38799536607"
+    "event": "push",
+    "slot": "adhoc",
+    "label": "Point de marché à la demande",
+    "target_time": null,
+    "schedule": null,
+    "scheduled_at": null,
+    "scheduled_at_basis": null,
+    "edition_for": "2026-10-16",
+    "started_at": "2026-10-16T02:29:25+00:00",
+    "built_at": "2026-10-16T02:29:45.912917+00:00",
+    "delay_minutes": null,
+    "late": false,
+    "run_id": "38840670949",
+    "commit": "6311f8245dd02a1c86c1dff281b791c60e070413",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38840670949"
   },
-  "title": "Briefing de fin de journée / filet de sécurité",
+  "title": "Point de marché à la demande",
   "intraday": {
     "schema_version": 1,
-    "session": "2026-10-07",
-    "observed_at": "2026-10-07T01:22:43.372886+00:00",
+    "session": "2026-10-16",
+    "observed_at": "2026-10-16T02:29:27.317865+00:00",
     "source": "https://www.cdgcapitalbourse.ma/api/",
     "quotes": {},
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
-    "status": "stale",
-    "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
+    "status": "provisional",
+    "notice": "Observation CDG provisoire, pas un flux temps réel ni une clôture."
   },
   "edition_status": "published",
   "edition_notice": null,
@@ -222,7 +222,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": null,
           "net_debt_ebitda": null,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": 10.64,
           "debt_reconciliation": {
@@ -297,7 +297,68 @@
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette nette non rapprochée : calcul et chiffre publié divergent au-delà de la tolérance. Dette nette et multiple suspendus ; les deux valeurs restent visibles pour vérification du périmètre.",
           "coverage_pct": 100,
-          "missing_metrics": []
+          "missing_metrics": [],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "ADI",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "blocked",
+            "blocked_metrics": [
+              "net_debt_ebitda",
+              "net_debt_strict_mmad"
+            ],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "excedent_brut_exploitation",
+                  "nombre_actions"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              },
+              {
+                "code": "debt_arithmetic_mismatch",
+                "status": "blocked",
+                "fields": [
+                  "dettes_financieres",
+                  "tresorerie_actif",
+                  "endettement_net"
+                ],
+                "blocked_metrics": [
+                  "net_debt_strict_mmad",
+                  "net_debt_ebitda"
+                ],
+                "detail": "Écart à date, unité et base comptable identiques ; définition économique de dette à rapprocher, sans arbitrage automatique."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "unresolved",
+              "calculated_mmad": 1361.489,
+              "reported_mmad": 1303,
+              "difference_mmad": 58.489,
+              "tolerance_mmad": 26.060000000000002
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Préventes, livraisons, stocks, dette et conversion du résultat en trésorerie.",
         "source": "CDG Capital Bourse",
@@ -323,7 +384,7 @@
       "price": 161.7,
       "asof": "2026-10-15",
       "data_status": "OBSERVABLE",
-      "score": 37.5,
+      "score": 30.0,
       "score_state": "CALCULABLE",
       "support": 150.0,
       "resistance": 175.0,
@@ -349,29 +410,77 @@
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
           "evidence": {
+            "resultat_net_part_groupe": {
+              "value": 4.494,
+              "page": 22,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 22,
+              "validation_status": "selected_pages_visually_checked"
+            },
             "capitaux_propres_part_groupe": {
               "value": 3739.48,
               "page": 26,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
-              "note": "« CAPITAUX PROPRES PART GROUPE 3.739.480 3.735.121 » ; en-tête « En milliers de dirhams 31/12/2025 31/12/2024 ». Capital 1.310.443 KMAD = 26 208 860 titres de nominale 50. Minoritaires 98 KMAD, d'où un total de 3.739.578.",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "note": "Fonds propres groupe 3 739 480 KMAD ; minoritaires 98 KMAD distincts. Le capital du bilan est arrondi : ne pas en déduire le nombre d’actions ; p.23 publie 26 208 850 titres.",
+              "accounting_basis": "consolidé IFRS",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import"
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 26,
+              "validation_status": "selected_pages_visually_checked"
             },
-            "nombre_actions_au_rapport": {
-              "value": 26208860,
-              "page": 26,
+            "nombre_actions": {
+              "value": 26208850,
+              "page": 23,
               "unit": "actions",
               "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
-              "note": "capital 1.310.443 KMAD ÷ nominale 50. Le marché en implique 26 209 302 (écart 0,002 %).",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
-              "original_unit": null,
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import"
+              "note": "Nombre explicitement publié dans les tableaux BPA et dividendes. L’en-tête KMAD concerne les montants, pas les 26 208 850 actions. Ne pas déduire 26 208 860 actions du capital arrondi du bilan. La table ne suffit pas à certifier séparément une moyenne pondérée IAS 33.",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "actions",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 23,
+              "validation_status": "selected_pages_visually_checked"
+            },
+            "chiffre_affaires": {
+              "value": 468.513,
+              "page": 22,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 22,
+              "validation_status": "selected_pages_visually_checked"
+            },
+            "chiffre_affaires_2024": {
+              "value": 233.682,
+              "page": 22,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 22,
+              "validation_status": "selected_pages_visually_checked"
+            },
+            "capitaux_propres_part_groupe_2024": {
+              "value": 3735.121,
+              "page": 26,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 26,
+              "validation_status": "selected_pages_visually_checked"
             },
             "dettes_financieres": {
               "value": 2116.222,
@@ -379,11 +488,11 @@
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
               "note": "« Total Dettes Financières 616.489 1.499.734 2.116.222 2.013.150 » ; note « Dettes financières » : colonnes « A moins d'un an / A plus d'un an / Total 2025 / 2024 » — total 2025, troisième colonne. Établissements de crédit 1 445 990 + dettes diverses 312 583 + location 16 184 + concours bancaires 341 465. Recoupé au bilan : 1 499 261 + 474 + 275 024 + 341 465 = 2 116 224.",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "accounting_basis": "consolidé IFRS",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import"
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 26,
+              "validation_status": "selected_pages_visually_checked"
             },
             "tresorerie_actif": {
               "value": 249.215,
@@ -391,29 +500,32 @@
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
               "note": "« Trésorerie et équivalence de trésorerie 249.215 356.260 »",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "accounting_basis": "consolidé IFRS",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import"
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 24,
+              "validation_status": "selected_pages_visually_checked"
             }
           },
-          "eps_mad": null,
+          "eps_mad": 0.17,
           "book_value_per_share_mad": 142.68,
-          "pe": null,
+          "pe": 943.03,
           "pb": 1.13,
-          "revenue_growth_pct": null,
-          "roe_pct": null,
+          "revenue_growth_pct": 100.49,
+          "roe_pct": 0.12,
           "dividend_yield_pct": null,
-          "earnings_mmad": null,
-          "warnings": [],
+          "earnings_mmad": 4.494,
+          "warnings": [
+            "RDS : changement de reconnaissance du CA à la signature de l’acte notarié en 2025 (RFA p.6). La croissance annuelle calculée n’est pas à méthode constante.",
+            "RDS : le RFA p.83 renvoie au rapport d’audit consolidé sur le site émetteur ; ce rapport externe n’est pas relu par le présent contrôle de pages sélectionnées."
+          ],
           "accounting_basis": "consolidé IFRS, 31/12/2025",
           "currency": "MAD",
           "net_debt_strict_mmad": 1867.01,
           "net_debt_ebitda": null,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
-          "roe_average_equity_pct": null,
+          "roe_average_equity_pct": 0.12,
           "debt_reconciliation": {
             "status": "not_cross_checked",
             "calculated_mmad": 1867.01,
@@ -450,17 +562,61 @@
           },
           "semester_activity_label": "CA",
           "period_end": "2025-12-31",
-          "financial_review": null,
+          "financial_review": {
+            "reviewed_at": "2026-10-16",
+            "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+            "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+            "pages": [
+              9,
+              21,
+              22,
+              23,
+              24,
+              26
+            ],
+            "method": "Lecture visuelle de pages PDF, périodes 2025/2024, périmètre IFRS consolidé et unités KMAD contrôlés. Le semestre reste inchangé et non recertifié.",
+            "conclusion": "RNPG 4,494 MMAD distinct du résultat total 4,491 ; fonds propres groupe 3 739,480 distincts du total 3 739,578. Nombre publié 26 208 850 actions, corrigé au lieu de la division du capital arrondi. CA annuel 468,513 MMAD. Dette nette calculée 1 867,007 MMAD, sans rapprochement à une définition nette publiée ; pas de certification de tous les comptes."
+          },
           "external_references": [],
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
-          "coverage_pct": 25,
-          "missing_metrics": [
-            "eps_mad",
-            "roe_pct",
-            "revenue_growth_pct"
-          ]
+          "coverage_pct": 100,
+          "missing_metrics": [],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "RDS",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "checked",
+            "blocked_metrics": [],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Backlog sécurisé, reconnaissance du chiffre d’affaires, livraisons et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -586,7 +742,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": 782.75,
           "net_debt_ebitda": 0.3,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -635,7 +791,73 @@
             "eps_mad",
             "roe_pct",
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "TGCC",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "blocked",
+            "blocked_metrics": [
+              "eps_mad",
+              "pe",
+              "roe_average_equity_pct",
+              "roe_pct"
+            ],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "nombre_actions_au_rapport",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              },
+              {
+                "code": "group_earnings_missing_total_not_substituted",
+                "status": "blocked",
+                "fields": [
+                  "resultat_net_consolide"
+                ],
+                "blocked_metrics": [
+                  "eps_mad",
+                  "pe",
+                  "roe_pct",
+                  "roe_average_equity_pct"
+                ],
+                "detail": null
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Carnet de commandes, marges, BFR et conversion en cash.",
         "source": "CDG Capital Bourse",
@@ -761,7 +983,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": -84.51,
           "net_debt_ebitda": null,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -810,7 +1032,73 @@
             "eps_mad",
             "roe_pct",
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "SGTM",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "blocked",
+            "blocked_metrics": [
+              "eps_mad",
+              "pe",
+              "roe_average_equity_pct",
+              "roe_pct"
+            ],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "nombre_actions_au_rapport",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              },
+              {
+                "code": "group_earnings_missing_total_not_substituted",
+                "status": "blocked",
+                "fields": [
+                  "resultat_net_consolide"
+                ],
+                "blocked_metrics": [
+                  "eps_mad",
+                  "pe",
+                  "roe_pct",
+                  "roe_average_equity_pct"
+                ],
+                "detail": null
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Carnet de commandes, prises de commandes, BFR et dette nette.",
         "source": "CDG Capital Bourse",
@@ -936,7 +1224,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": 54.09,
           "net_debt_ebitda": 0.12,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -985,7 +1273,73 @@
             "eps_mad",
             "roe_pct",
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "CMGP",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "blocked",
+            "blocked_metrics": [
+              "eps_mad",
+              "pe",
+              "roe_average_equity_pct",
+              "roe_pct"
+            ],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "nombre_actions_au_rapport",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              },
+              {
+                "code": "group_earnings_missing_total_not_substituted",
+                "status": "blocked",
+                "fields": [
+                  "resultat_net_consolide"
+                ],
+                "blocked_metrics": [
+                  "eps_mad",
+                  "pe",
+                  "roe_pct",
+                  "roe_average_equity_pct"
+                ],
+                "detail": null
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Mix d’activité, marge, BFR et financement de la croissance.",
         "source": "CDG Capital Bourse",
@@ -1147,7 +1501,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": -752.63,
           "net_debt_ebitda": null,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -1194,7 +1548,67 @@
           "coverage_pct": 75,
           "missing_metrics": [
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "MSA",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "review_required",
+            "blocked_metrics": [],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "chiffre_affaires",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "nombre_actions_au_rapport",
+                  "resultat_net_part_groupe",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              },
+              {
+                "code": "published_debt_basis_not_comparable",
+                "status": "review_required",
+                "fields": [
+                  "dettes_financieres",
+                  "tresorerie_actif",
+                  "endettement_net"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pas de conclusion de contradiction sans date, unité et périmètre explicites identiques."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_comparable",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Trafic portuaire, concessions, capacité, investissements et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -1377,7 +1791,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": 23.92,
           "net_debt_ebitda": 0.03,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -1422,7 +1836,57 @@
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
           "coverage_pct": 100,
-          "missing_metrics": []
+          "missing_metrics": [],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "SMI",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "review_required",
+            "blocked_metrics": [],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_sociaux",
+                  "chiffre_affaires",
+                  "chiffre_affaires_2024",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "nombre_actions_au_rapport",
+                  "resultat_net_social",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Production, prix de l’argent, coûts, investissements et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -1568,7 +2032,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": 336.14,
           "net_debt_ebitda": 0.87,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -1617,7 +2081,54 @@
             "eps_mad",
             "pb",
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "T2S",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "review_required",
+            "blocked_metrics": [],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "dettes_financieres",
+                  "excedent_brut_exploitation",
+                  "resultat_net_part_groupe",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Mix équipements/services, marge, créances clients et trésorerie.",
         "source": "CDG Capital Bourse",
@@ -1770,7 +2281,7 @@
           "currency": "MAD",
           "net_debt_strict_mmad": 142.87,
           "net_debt_ebitda": null,
-          "calculation_version": "nour-fundamentals-v5",
+          "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
           "roe_average_equity_pct": null,
           "debt_reconciliation": {
@@ -1817,7 +2328,56 @@
           "coverage_pct": 75,
           "missing_metrics": [
             "revenue_growth_pct"
-          ]
+          ],
+          "financial_audit": {
+            "version": "nour-financial-audit-v1",
+            "asof": "2026-10-16",
+            "symbol": "CMT",
+            "scope": "available_annual_inputs_only",
+            "documents_certified": false,
+            "status": "review_required",
+            "blocked_metrics": [],
+            "checks": [
+              {
+                "code": "newer_report_available",
+                "status": "info",
+                "fields": [],
+                "blocked_metrics": [],
+                "detail": "Ratios annuels conservés ; référence plus récente distincte, jamais annualisée."
+              },
+              {
+                "code": "fact_provenance_incomplete",
+                "status": "review_required",
+                "fields": [
+                  "capitaux_propres_part_groupe",
+                  "chiffre_affaires",
+                  "dettes_financieres",
+                  "dividende_par_action",
+                  "nombre_actions_au_rapport",
+                  "resultat_net_part_groupe",
+                  "tresorerie_actif"
+                ],
+                "blocked_metrics": [],
+                "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
+              }
+            ],
+            "freshness": {
+              "annual_period_end": "2025-12-31",
+              "latest_report_period_end": "2026-06-30",
+              "newer_report_available": true,
+              "annual_age_calendar_days": 289,
+              "annual_years_behind_latest": 1,
+              "semester_annualized": false
+            },
+            "debt_comparison": {
+              "status": "not_available",
+              "calculated_mmad": null,
+              "reported_mmad": null,
+              "difference_mmad": null,
+              "tolerance_mmad": null
+            },
+            "automatic_extraction_certified": false
+          }
         },
         "checkpoint": "Production, prix des métaux, coûts et événements liés à la reprise.",
         "source": "CDG Capital Bourse",
@@ -1978,6 +2538,125 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "3853271477f3d94d50",
+      "title": "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Standard-Chartered-Trumps-Russian-Diesel-Wont-Add-New-Supply.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "e5fa6dcec7e595570b",
+      "title": "The Diesel Crunch Will Persist Well into 2027",
+      "url": "https://oilprice.com/Energy/Crude-Oil/The-Diesel-Crunch-Will-Persist-Well-into-2027.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "d0c7cf6df88702c307",
+      "title": "Le déclin des capacités européennes de raffinage aggrave la crise des carburants",
+      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261015-le-d%C3%A9clin-des-capacit%C3%A9s-europ%C3%A9ennes-de-raffinage-aggrave-la-crise-des-carburants",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-15T22:03:54+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "9a8ed1d9c3d5c1e03c",
+      "title": "Exxon’s Oil Boom Could Keep Guyana’s Gas at Home",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Exxons-Oil-Boom-Could-Keep-Guyanas-Gas-at-Home.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T22:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "7531909a2e80db51b4",
+      "title": "U.S. Nuclear Fuel Independence Edges Closer as Urenco Expansion Hits 75%",
+      "url": "https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Nuclear-Fuel-Independence-Edges-Closer-as-Urenco-Expansion-Hits-75.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "3fc9bce298bdc401b1",
+      "title": "La France et l'Allemagne s'entendent sur l'avenir de l'industrie automobile",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261015-la-france-et-l-allemagne-s-entendent-sur-l-avenir-de-l-industrie-automobile",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-15T20:51:15+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "a4eae3bbcd2874d635",
+      "title": "La quotidienne des marchés financiers africains: BGFI frappe les esprits, MSC bouscule la logistique",
+      "url": "https://www.financialafrik.com/2026/10/15/la-quotidienne-des-marches-financiers-africains-bgfi-frappe-les-esprits-msc-bouscule-la-logistique/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-15T20:23:03+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
       "id": "8981cdd224452eb922",
       "title": "6 Countries Pledge Faster Cargo Transfers on Eurasia-Europe Land Bridge",
       "url": "https://oilprice.com/Geopolitics/International/6-Countries-Pledge-Faster-Cargo-Transfers-on-Eurasia-Europe-Land-Bridge.html",
@@ -2119,125 +2798,6 @@
       "url": "https://www.financialafrik.com/2026/10/15/nigeria-shell-va-vendre-son-activite-de-distribution-de-gaz-a-vaaris-energy/",
       "publisher": "Financial Afrik",
       "published_at": "2026-10-15T17:14:08+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "bf7c0fa3cae392a364",
-      "title": "Sénégal : 247,5 millions FCFA en jeu, la BOA obtient une victoire judiciaire face à GANAAN Pêcheries",
-      "url": "https://www.financialafrik.com/2026/10/15/senegal-2475-millions-fcfa-en-jeu-la-boa-obtient-une-victoire-judiciaire-face-a-ganaan-pecheries/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T17:05:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "d56a241d2f7eaec4b1",
-      "title": "Venezuela's Oil Recovery Gains Momentum as New Drilling Rigs Arrive",
-      "url": "https://oilprice.com/Energy/Crude-Oil/Venezuelas-Oil-Recovery-Gains-Momentum-as-New-Drilling-Rigs-Arrive.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-15T17:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "85945f59d9acfc7f53",
-      "title": "États-Unis: Donald Trump empêtré dans une inflation qu'il n'arrive pas à faire baisser",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261015-%C3%A9tats-unis-donald-trump-emp%C3%AAtr%C3%A9-dans-une-inflation-qu-il-n-arrive-pas-%C3%A0-faire-baisser",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-15T16:59:09+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "7d407d7bee45ec1b0f",
-      "title": "Le Starlink militaire bridé en Ukraine : l'art du chantage selon Donald Trump ?",
-      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261015-starshield-starlink-ukraine-chantage-militaire-donald-trump-pentagone-guerre-zelensky-russie",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-10-15T16:30:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
-    },
-    {
-      "id": "6cb910289c541198b8",
-      "title": "EIA Says US Crude Inventories Down Nearly 9 Million Barrels",
-      "url": "https://oilprice.com/Energy/Crude-Oil/EIA-Says-US-Crude-Inventories-Down-Nearly-9-Million-Barrels.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-15T16:09:12+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "d45025748fa93027a9",
-      "title": "Trump Denies Cutting Ukraine Intelligence Amid Satellite Restrictions",
-      "url": "https://oilprice.com/Geopolitics/Europe/Trump-Denies-Cutting-Ukraine-Intelligence-Amid-Satellite-Restrictions.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-15T16:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "011b11533b8721fc8f",
-      "title": "BGFI Holding Corporation : pari réussi, l’offre de 80,558 milliards de FCFA sursouscrite",
-      "url": "https://www.financialafrik.com/2026/10/15/bgfi-holding-corporation-pari-reussi-loffre-de-80558-milliards-de-fcfa-sursouscrite/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T15:51:33+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -2487,9 +3047,128 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-15T20:08:54.963426+00:00"
+    "observed_at": "2026-10-16T02:29:39.768728+00:00"
   },
   "context_news": [
+    {
+      "id": "3853271477f3d94d50",
+      "title": "Standard Chartered: Trump's Russian Diesel Won't Add New Supply",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Standard-Chartered-Trumps-Russian-Diesel-Wont-Add-New-Supply.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "e5fa6dcec7e595570b",
+      "title": "The Diesel Crunch Will Persist Well into 2027",
+      "url": "https://oilprice.com/Energy/Crude-Oil/The-Diesel-Crunch-Will-Persist-Well-into-2027.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "d0c7cf6df88702c307",
+      "title": "Le déclin des capacités européennes de raffinage aggrave la crise des carburants",
+      "url": "https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261015-le-d%C3%A9clin-des-capacit%C3%A9s-europ%C3%A9ennes-de-raffinage-aggrave-la-crise-des-carburants",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-15T22:03:54+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "9a8ed1d9c3d5c1e03c",
+      "title": "Exxon’s Oil Boom Could Keep Guyana’s Gas at Home",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Exxons-Oil-Boom-Could-Keep-Guyanas-Gas-at-Home.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T22:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "7531909a2e80db51b4",
+      "title": "U.S. Nuclear Fuel Independence Edges Closer as Urenco Expansion Hits 75%",
+      "url": "https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Nuclear-Fuel-Independence-Edges-Closer-as-Urenco-Expansion-Hits-75.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-15T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "3fc9bce298bdc401b1",
+      "title": "La France et l'Allemagne s'entendent sur l'avenir de l'industrie automobile",
+      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261015-la-france-et-l-allemagne-s-entendent-sur-l-avenir-de-l-industrie-automobile",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-15T20:51:15+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "a4eae3bbcd2874d635",
+      "title": "La quotidienne des marchés financiers africains: BGFI frappe les esprits, MSC bouscule la logistique",
+      "url": "https://www.financialafrik.com/2026/10/15/la-quotidienne-des-marches-financiers-africains-bgfi-frappe-les-esprits-msc-bouscule-la-logistique/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-15T20:23:03+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "8981cdd224452eb922",
       "title": "6 Countries Pledge Faster Cargo Transfers on Eurasia-Europe Land Bridge",
@@ -2574,132 +3253,13 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "324e9bf7b9715aca53",
-      "title": "Britain’s Biggest Business Lobby Calls for Tax Cuts and Lower Energy Bills",
-      "url": "https://oilprice.com/Energy/Energy-General/Britains-Biggest-Business-Lobby-Calls-for-Tax-Cuts-and-Lower-Energy-Bills.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-15T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "7bf1275461bea18d8a",
-      "title": "Afrique du Sud : l’inflation attendue à 3 % seulement en 2028",
-      "url": "https://www.financialafrik.com/2026/10/15/afrique-du-sud-linflation-attendue-a-3-seulement-en-2028/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T17:35:03+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "2e43c008fecf23f1ee",
-      "title": "Maroc : l’ACAPS digitalise le traitement des réclamations des assurés face à une activité en forte hausse",
-      "url": "https://www.financialafrik.com/2026/10/15/maroc-lacaps-digitalise-le-traitement-des-reclamations-des-assures-face-a-une-activite-en-forte-hausse/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T17:20:45+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "46c32d1e22dd03682a",
-      "title": "Nigeria : Shell va vendre son activité de distribution de gaz à Vaaris Energy",
-      "url": "https://www.financialafrik.com/2026/10/15/nigeria-shell-va-vendre-son-activite-de-distribution-de-gaz-a-vaaris-energy/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T17:14:08+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "bf7c0fa3cae392a364",
-      "title": "Sénégal : 247,5 millions FCFA en jeu, la BOA obtient une victoire judiciaire face à GANAAN Pêcheries",
-      "url": "https://www.financialafrik.com/2026/10/15/senegal-2475-millions-fcfa-en-jeu-la-boa-obtient-une-victoire-judiciaire-face-a-ganaan-pecheries/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-15T17:05:56+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "d56a241d2f7eaec4b1",
-      "title": "Venezuela's Oil Recovery Gains Momentum as New Drilling Rigs Arrive",
-      "url": "https://oilprice.com/Energy/Crude-Oil/Venezuelas-Oil-Recovery-Gains-Momentum-as-New-Drilling-Rigs-Arrive.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-15T17:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "85945f59d9acfc7f53",
-      "title": "États-Unis: Donald Trump empêtré dans une inflation qu'il n'arrive pas à faire baisser",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261015-%C3%A9tats-unis-donald-trump-emp%C3%AAtr%C3%A9-dans-une-inflation-qu-il-n-arrive-pas-%C3%A0-faire-baisser",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-15T16:59:09+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-15T20:09:14.922042+00:00",
-    "checked_at": "2026-10-15T20:09:08.247275+00:00",
-    "status": "partial",
+    "cutoff": "2026-10-16T02:29:45.912917+00:00",
+    "checked_at": "2026-10-16T02:29:40.350865+00:00",
+    "status": "ok",
     "groups": [
       {
         "title": "Indices actions",
@@ -2708,34 +3268,34 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7747.71,
-            "change_pct": 0.37271957030370023,
+            "value": 7744.06,
+            "change_pct": 0.3254332848810951,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T19:40:52+00:00",
+            "observed_at": "2026-10-15T20:33:54+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 52191.59,
-            "change_pct": 1.104404600565488,
+            "value": 52177.69,
+            "change_pct": 1.0774778251224086,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T19:40:52+00:00",
+            "observed_at": "2026-10-15T20:34:05+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
@@ -2752,24 +3312,24 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:NI225",
             "name": "Nikkei 225",
             "unit": "points",
-            "value": 64425.73,
-            "change_pct": -4.8983475601628355,
+            "value": 65571.72,
+            "change_pct": 1.7787768955043242,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T06:30:01+00:00",
+            "observed_at": "2026-10-16T02:29:30+00:00",
             "currency": "JPY",
             "mode": "streaming",
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           }
         ]
@@ -2781,68 +3341,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.7577,
-            "change_pct": -1.1588213247434673,
+            "value": 9.7442,
+            "change_pct": -0.14039906127343021,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:08:57+00:00",
+            "observed_at": "2026-10-16T02:16:29+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.939,
-            "change_pct": -0.5816595473961652,
+            "value": 10.922,
+            "change_pct": -0.16453382084094065,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:04:26+00:00",
+            "observed_at": "2026-10-16T02:24:29+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 16.43,
-            "change_pct": -2.608180201541205,
+            "value": 16.46,
+            "change_pct": -2.4303497332542983,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T19:40:31+00:00",
+            "observed_at": "2026-10-15T20:14:31+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.015,
-            "change_pct": -0.5003511235955107,
+            "value": 102.019,
+            "change_pct": 0.01470530567428784,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:01:31+00:00",
+            "observed_at": "2026-10-16T02:21:27+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           }
         ]
@@ -2854,76 +3414,74 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4195.8,
-            "change_pct": 2.139779449353698,
+            "value": 4175.4,
+            "change_pct": 0.12709527349462296,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:08:44+00:00",
+            "observed_at": "2026-10-16T02:29:28+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 105.92,
-            "change_pct": -0.13200075429002506,
+            "value": 105.46,
+            "change_pct": -0.4342900302114878,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:08:54+00:00",
+            "observed_at": "2026-10-16T02:29:28+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.5655,
-            "change_pct": -1.4263193453944862,
+            "value": 6.5875,
+            "change_pct": 0.4728132387706945,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-15T20:08:55+00:00",
+            "observed_at": "2026-10-16T02:29:28+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-15T20:09:08.247275+00:00",
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 145.1,
-            "change_pct": 0.0689655172413754,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-15T09:08:53+00:00",
+            "value": 144.95,
+            "change_pct": -0.034482758620697496,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-16T00:23:12+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-15T17:21:55.076120+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-16T02:29:40.350865+00:00",
+            "collection_state": "collected"
           }
         ]
       }
     ],
-    "errors": {
-      "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
-    },
+    "errors": {},
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
   },
   "fundamental_coverage": {
