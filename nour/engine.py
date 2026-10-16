@@ -97,7 +97,7 @@ def analyze(record, asof, quantity=1000):
     else:
         verdict = "LIMITÉ"
     return {
-        "symbol": symbol, "name": record.get("name"),
+        "symbol": symbol, "name": record.get("name"), "sector": record.get("sector"),
         "decision": verdict,
         "decision_type": "data_readiness_only",
         "asof": record.get("price_asof"), "age_calendar_days": age_days,
