@@ -67,6 +67,18 @@ try {
   }
   const future=structuredClone(real);future.symbols.ADI.asof='2099-01-01';s=await setup({snapshot:future});await expect(s,503);assert.equal(s.calls(),0);
   s=await setup();globalThis.fetch=async()=>new Response('upstream secret detail',{status:500});const noSource=await expect(s,503);assert.equal(s.calls(),0);assert.ok(!(await noSource.text()).includes('secret detail'));
+  s=await setup();{
+    const original=globalThis.fetch;let attempts=0;
+    globalThis.fetch=async (url,options)=>{
+      attempts++;
+      if(attempts===1)throw Error('private fetch error');
+      assert.equal(url,'https://raw.githubusercontent.com/abdmoutalib207-lang/bvc-analyzer-nour/main/web/assistant-data.json');
+      assert.equal(options.redirect,'error');
+      return Response.json(real);
+    };
+    const fallback=await expect(s,200);assert.equal((await fallback.json()).mode,'llm');assert.equal(attempts,2);
+    globalThis.fetch=original;
+  }
   s=await setup();let release;const latch=new Promise(resolve=>release=resolve);s.env.AI.run=async()=>{await latch;return {response:'Réponse'};};
   const p1=s.worker.fetch(s.request(),s.env),p2=s.worker.fetch(s.request(),s.env);
   // Give asynchronous auth/source validation time to reserve both slots.
