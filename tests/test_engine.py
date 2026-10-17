@@ -91,6 +91,15 @@ class EngineContract(unittest.TestCase):
         self.assertIsNone(item['fundamental']['pb'])
         self.assertIsNotNone(item['fundamental']['earnings_mmad'])
 
+    def test_full_report_survives_oversized_candle_and_excludes_it(self):
+        fixture = deepcopy(FIXTURE)
+        fixture['records']['ADI']['candles'][-1]['c'] = 10 ** 1000
+        report = build_report(fixture, ASOF)
+        item = next(x for x in report['results'] if x['symbol'] == 'ADI')
+        self.assertGreaterEqual(item['quality']['rejected_bars'], 1)
+        self.assertLess(item['technical']['sessions'],
+                        len(fixture['records']['ADI']['candles']))
+
     def test_short_history_cannot_pass_full_readiness(self):
         result = analyze(FIXTURE["records"]["T2S"], ASOF)
         self.assertEqual(result["decision"], "LIMITÉ")
