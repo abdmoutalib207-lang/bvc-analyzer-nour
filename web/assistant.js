@@ -104,7 +104,7 @@
     if(/collecte|mise a jour|actualis|fraicheur/.test(q)){
       const r=data.runtime||{};
       lines.push(`Dernière construction : ${r.built_at||'indisponible'} · édition ${r.label||r.slot||'indisponible'}. Horaire visé : ${r.target_time||'indisponible'} (${r.timezone||'Africa/Casablanca'}) · retard constaté : ${fmt(r.delay_minutes,'minutes')}.`);
-      lines.push('Collectes programmées les jours ouvrés à 09:45, 11:46, 13:45, 15:45 et 18:00, heure de Casablanca. Le lancement GitHub peut être retardé; ce n’est pas un flux temps réel.');
+      lines.push(data.knowledge?.definitions?.collection||'Consultez le suivi des mises à jour pour les horaires et retards réellement observés.');
       if(r.run_url)sources.push({label:'Dernière collecte',url:r.run_url});sources.push({label:'Tableau de bord · fraîcheur',url:'index.html'});return result();
     }
     if(/laboratoire/.test(q)&&!/probabil|demain|prochaine/.test(q)){
