@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "endpoint": null,
-  "provider_label": null,
-  "mode": "local",
-  "notice": "Lecture locale des données. Le LLM nécessite un serveur et un fournisseur explicitement configurés."
+  "endpoint": "https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant",
+  "provider_label": "Cloudflare Workers AI · Mistral Small 3.1",
+  "mode": "optional_private",
+  "notice": "IA facultative et privée, envoi seulement après activation explicite et code personnel. Calculs canoniques et réponses locales inchangés."
 }
