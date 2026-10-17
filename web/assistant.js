@@ -1,6 +1,23 @@
-/* Explanatory layer only. No scoring, order, storage or provider key access. */
+/* Explanatory layer only. Optional tab access; no scoring, orders or provider keys. */
 (function(root){
   'use strict';
+  const TAB_ACCESS_KEY='nour.assistant.tab-access.v1',TAB_ACCESS_TTL=8*60*60*1000;
+  function createTabAccess(getStorage,now=()=>Date.now()){
+    function clear(){try{getStorage().removeItem(TAB_ACCESS_KEY);return true;}catch{return false;}}
+    function read(endpoint){
+      try{const raw=getStorage().getItem(TAB_ACCESS_KEY);if(!raw)return null;const saved=JSON.parse(raw),time=now();
+        if(saved.endpoint!==endpoint||typeof saved.code!=='string'||!/^[^\s]{20,200}$/.test(saved.code)||
+          !Number.isFinite(saved.expiresAt)||saved.expiresAt<=time||saved.expiresAt>time+TAB_ACCESS_TTL){clear();return null;}
+        return saved;
+      }catch{clear();return null;}
+    }
+    function save(code,endpoint){
+      if(typeof code!=='string'||!/^[^\s]{20,200}$/.test(code))return null;
+      const previous=read(endpoint),saved={code,endpoint,expiresAt:previous?.code===code?previous.expiresAt:now()+TAB_ACCESS_TTL};
+      try{getStorage().setItem(TAB_ACCESS_KEY,JSON.stringify(saved));return saved;}catch{return null;}
+    }
+    return {read,save,clear};
+  }
   const domains=typeof module==='object'&&module.exports?require('./assistant-domains.js'):root?.NourAssistantDomains;
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const fmt=(x,unit='')=>typeof x==='number'&&Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(unit?' '+unit:''):'indisponible';
@@ -357,17 +374,32 @@
     if(prepared.inherited)answer.text+='\n\nContexte conservé : '+[...(prepared.period?.semester?[prepared.period.semester]:[]),...(prepared.period?.years||[]),...prepared.dates].join(' · ')+'.';
     return domains?.decorate(question,data,answer)||answer;
   }
-  const api={localAnswer,symbolsFor,dateIn,datesIn,validURL,parseHistory,prepareQuestion};
+  const api={localAnswer,symbolsFor,dateIn,datesIn,validURL,parseHistory,prepareQuestion,createTabAccess};
   if(typeof module==='object'&&module.exports)module.exports=api;
   if(!root?.document)return;
   const doc=root.document, dialog=doc.getElementById('assistant-dialog');
   if(!dialog)return;
   const el=id=>doc.getElementById('assistant-'+id), prefix=dialog.dataset.prefix||'';
-  let data=null, loading=null, config={endpoint:null}, busy=false, controller=null, generation=0, conversation={}, privateCode=null;
+  let data=null, loading=null, config={endpoint:null}, busy=false, controller=null, generation=0, conversation={}, privateCode=null,rememberedUntil=0;
+  const tabAccess=createTabAccess(()=>root.sessionStorage);
+  function restoreAccess(){
+    const saved=config.endpoint?tabAccess.read(config.endpoint):null;
+    if(saved){privateCode=saved.code;rememberedUntil=saved.expiresAt;el('remember').checked=true;}
+    else if(rememberedUntil){privateCode=null;rememberedUntil=0;el('remember').checked=false;}
+  }
+  function rememberAccess(){
+    if(!el('remember').checked){tabAccess.clear();rememberedUntil=0;return;}
+    if(!privateCode)return;
+    const saved=tabAccess.save(privateCode,config.endpoint);
+    if(saved)rememberedUntil=saved.expiresAt;
+    else{rememberedUntil=0;el('remember').checked=false;el('remember-help').textContent='Mémorisation bloquée dans ce navigateur : le code reste utilisable dans cette page uniquement.';}
+  }
   function showAccessState(){
     const enabled=el('ai').checked;
     el('access-option').hidden=!enabled||Boolean(privateCode);
     el('access-active').hidden=!enabled||!privateCode;
+    el('remember-option').hidden=!enabled;
+    el('access-scope').textContent=rememberedUntil?'Accès IA conservé dans cet onglet (8 h maximum).':'Accès IA actif pour cette page.';
   }
   async function loadHistory(question,symbols){
     if(!datesIn(question).length||/actualite|radar|briefing|publication/.test(normalize(question)))return;
@@ -404,6 +436,7 @@
     catch{config={endpoint:null};}
     const trustedEndpoint='https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant';
     if(config.endpoint===trustedEndpoint){
+      restoreAccess();showAccessState();
       el('ai-option').hidden=false;
       el('ai-label').textContent='Utiliser l’IA Cloudflare (Mistral) : envoi volontaire de la question et des données publiques sélectionnées.';
     }else config.endpoint=null;
@@ -430,20 +463,21 @@
       conversation=answer.context||{};
       if(answer.symbols.length===1&&(answer.symbols[0]==='MASI'||data.symbols[answer.symbols[0]]))el('symbol').value=answer.symbols[0];
       if(el('ai').checked&&config.endpoint){
+        restoreAccess();showAccessState();
         const secret=privateCode||el('access').value.trim();
         if(secret.length<20||secret.length>200)throw new Error('Renseignez votre code privé Cloudflare (20 à 200 caractères).');
-        el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),35000);
+        el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),55000);
         let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+secret},credentials:'omit',signal:controller.signal,
           body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true,snapshot_id:data.llm_snapshot_id})});}finally{clearTimeout(timeout);}
         const result=await res.json();
         if(res.status===401||res.status===403){
-          privateCode=null;el('access').value='';showAccessState();
+          privateCode=null;rememberedUntil=0;tabAccess.clear();el('access').value='';showAccessState();
           throw new Error('Code Cloudflare refusé. Saisissez-le à nouveau.');
         }
         if(result.snapshot_id&&data.llm_snapshot_id&&result.snapshot_id!==data.llm_snapshot_id)throw new Error('Les données ont changé pendant la conversation. Rechargez la page pour conserver des réponses cohérentes.');
         if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
         if(epoch!==generation)return;
-        privateCode=secret;el('access').value='';showAccessState();
+        privateCode=secret;rememberAccess();el('access').value='';showAccessState();
         message('assistant',result.text,result.sources||answer.sources,'llm');
         message('assistant','Référence chiffrée Nour (distincte du texte IA) :\n\n'+answer.text,answer.sources);
       }else if(epoch===generation)message('assistant',answer.text,answer.sources);
@@ -454,12 +488,14 @@
     finally{if(epoch===generation){controller=null;resetBusy();if(dialog.open)el('question').focus();}}
   }
   el('open').hidden=false;
-  el('open').addEventListener('click',async()=>{dialog.showModal();el('question').focus();try{await load();}catch(error){message('assistant',error.message);el('status').textContent='Chargement impossible.';}});
+  el('open').addEventListener('click',async()=>{dialog.showModal();el('question').focus();try{await load();restoreAccess();showAccessState();}catch(error){message('assistant',error.message);el('status').textContent='Chargement impossible.';}});
   el('close').addEventListener('click',()=>dialog.close());
-  // Never persist the private code in localStorage, sessionStorage or cookies.
-  // pagehide also clears a restored back-forward cache page after navigation.
+  // Optional sessionStorage survives refresh/navigation in this tab. No
+  // localStorage or cookies. Page-only codes are cleared even for bfcache.
   root.addEventListener('pagehide',()=>{generation++;controller?.abort();controller=null;resetBusy();privateCode=null;el('access').value='';showAccessState();});
-  el('forget').addEventListener('click',()=>{privateCode=null;el('access').value='';showAccessState();el('access').focus();});
+  root.addEventListener('pageshow',()=>{restoreAccess();showAccessState();});
+  el('remember').addEventListener('change',()=>{rememberAccess();showAccessState();});
+  el('forget').addEventListener('click',()=>{generation++;controller?.abort();controller=null;resetBusy();privateCode=null;rememberedUntil=0;tabAccess.clear();el('remember').checked=false;el('access').value='';showAccessState();el('access').focus();});
   el('expand').addEventListener('click',()=>{
     const expanded=dialog.classList.toggle('assistant-expanded');
     el('expand').setAttribute('aria-pressed',String(expanded));
@@ -470,6 +506,7 @@
   el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
   el('form').addEventListener('submit',event=>{event.preventDefault();submit(el('question').value);});
   el('ai').addEventListener('change',()=>{
+    restoreAccess();
     showAccessState();
     el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';
   });

@@ -28,8 +28,20 @@ de probabilité de prochaine séance, recommandation d'ordre ou annualisation S1
 
 La configuration publique pointe vers l'endpoint privé Cloudflare Workers AI /
 Mistral Small 3.1. L'appel exige une activation volontaire et un code privé.
-Le code reste en mémoire dans la page et est oublié à sa fermeture/navigation ;
-une commande permet de l'oublier avant. Le mode local fonctionne sans ce code.
+Le code reste par défaut en mémoire dans la page. L’option explicite « Garder
+l’accès dans cet onglet » conserve un code validé dans `sessionStorage`, lié
+à l’endpoint autorisé, pendant huit heures maximum sans prolongation à chaque
+question. Il survit alors aux actualisations et changements de fiche dans le
+même onglet. Le mode IA reste à activer volontairement après rechargement.
+« Oublier le code », un refus d’accès ou l’expiration effacent la mémorisation.
+Le bouton d’oubli annule aussi l’appel en cours pour qu’il ne restaure pas le code.
+La fermeture normale de l’onglet termine ce stockage de session ; certains
+navigateurs peuvent restaurer leur session, d’où l’expiration absolue et le
+bouton d’oubli. Ce n’est pas un coffre chiffré : les scripts de la même origine
+peuvent accéder au stockage. Aucun `localStorage` ni cookie n’est créé. Si le
+stockage est bloqué, le fonctionnement en mémoire reste disponible et signalé.
+Le mode local fonctionne sans ce code. Aucun secret n’entre dans les fichiers,
+exports, journaux ou historique de conversation Nour.
 Le badge distingue consultation locale et explication IA. La référence chiffrée
 locale est affichée séparément de la prose générée.
 

@@ -86,3 +86,26 @@ console.log(`Assistant: 320 title/topic smoke scenarios + ${scenarios.length} pr
 const collectionAnswer=api.localAnswer('Quand a lieu la collecte ?',data,'MASI');
 for(const slot of ['09:45','12:45','16:00'])assert.ok(collectionAnswer.text.includes(slot));
 for(const retired of ['11:46','13:45','15:45','18:00'])assert.ok(!collectionAnswer.text.includes(retired));
+
+// Tab access must expire absolutely, survive a new page instance, and be
+// revocable from every restored page without involving persistent storage.
+{
+  let clock=100000;
+  const items=new Map(),storage={getItem:k=>items.get(k)||null,setItem:(k,v)=>items.set(k,v),removeItem:k=>items.delete(k)};
+  const endpoint='https://worker.test/api/assistant',code='test-tab-code-'.repeat(3);
+  const first=api.createTabAccess(()=>storage,()=>clock);
+  assert.equal(first.read(endpoint),null);assert.equal(first.save('short',endpoint),null);
+  const saved=first.save(code,endpoint);assert.equal(saved.expiresAt,clock+8*60*60*1000);
+  const reloaded=api.createTabAccess(()=>storage,()=>clock);
+  assert.equal(reloaded.read(endpoint).code,code);
+  clock+=7*60*60*1000;assert.equal(reloaded.save(code,endpoint).expiresAt,saved.expiresAt,'questions must not extend expiry');
+  clock=saved.expiresAt;assert.equal(reloaded.read(endpoint),null);assert.equal(items.size,0);
+  first.save(code,endpoint);assert.equal(reloaded.read('https://other.test'),null);assert.equal(items.size,0);
+  first.save(code,endpoint);first.clear();assert.equal(reloaded.read(endpoint),null);
+  items.set('nour.assistant.tab-access.v1','malformed');assert.equal(first.read(endpoint),null);assert.equal(items.size,0);
+  const blocked=api.createTabAccess(()=>{throw new Error('storage denied');});
+  assert.equal(blocked.read(endpoint),null);assert.equal(blocked.save(code,endpoint),null);assert.equal(blocked.clear(),false);
+  const separate=api.createTabAccess(()=>({getItem:()=>null,removeItem:()=>{}}),()=>clock);
+  first.save(code,endpoint);assert.equal(separate.read(endpoint),null);
+  console.log('Tab access: refresh restoration, absolute 8-hour expiry, endpoint binding, forgetting, malformed and blocked storage passed.');
+}

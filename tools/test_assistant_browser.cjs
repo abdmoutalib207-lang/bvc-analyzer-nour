@@ -283,7 +283,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.getByText('Clôture du 2026-03-31 :',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-messages img').count(),0);
         assert.equal(await page.locator('#assistant-ai').isChecked(),false);
-        if(width===375&&route==='index.html'){
+        if(route==='index.html'){
           let validated=0,simulateUnavailable=false;
           await page.route('https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant',async intercepted=>{
             const req=intercepted.request();
@@ -304,6 +304,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
           });
           await page.locator('#assistant-ai').check();
           assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
+          assert.equal(await page.locator('#assistant-remember').isChecked(),false);
           await page.locator('#assistant-question').fill('Explique ADI');
           await page.getByRole('button',{name:'Envoyer',exact:true}).click();
           await page.getByText('Renseignez votre code privé Cloudflare',{exact:false}).waitFor();
@@ -346,6 +347,48 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.getByText('IA de test indisponible',{exact:true}).waitFor();
           assert.ok((await page.locator('#assistant-messages').innerText()).includes('Consultation locale Nour · aucune réponse IA produite'));
           assert.equal(validated,4);
+          simulateUnavailable=false;
+          // Without opt-in a refresh must still forget the page-only code.
+          await page.reload({waitUntil:'networkidle'});
+          await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
+          await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
+          assert.equal(await page.locator('#assistant-remember').isChecked(),false);
+          await page.locator('#assistant-remember').check();
+          await page.locator('#assistant-access').fill('X'.repeat(32));
+          await page.locator('#assistant-question').fill('Explique le PER ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.getByText('Explication de test sans calcul',{exact:true}).waitFor();
+          assert.equal(validated,5);
+          assert.equal(await page.evaluate(()=>Object.keys(localStorage).some(k=>k.startsWith('nour.assistant.'))),false);
+          await page.reload({waitUntil:'networkidle'});
+          await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
+          await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
+          assert.equal(await page.locator('#assistant-ai').isChecked(),false,'access restoration must not restore AI consent');
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          assert.equal(await page.locator('#assistant-access').inputValue(),'');
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Remembered access overflows '+width);
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`assistant-tab-access-${width}.png`)});}
+          await page.locator('#assistant-question').fill('Explique le PER ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('#assistant-send').disabled===false);
+          assert.equal(validated,6);
+          // Same tab, another issuer page, same validated access.
+          await page.goto(new URL('titres/ADI.html',base).href,{waitUntil:'networkidle'});
+          await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
+          await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          await page.locator('#assistant-forget').click();
+          assert.equal(await page.evaluate(()=>sessionStorage.getItem('nour.assistant.tab-access.v1')),null);
+          await page.reload({waitUntil:'networkidle'});
+          await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
+          await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
+          assert.equal(await page.locator('#assistant-remember').isChecked(),false);
           await page.locator('#assistant-ai').uncheck();
         }
         await page.keyboard.press('Escape');

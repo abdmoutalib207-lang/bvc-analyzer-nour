@@ -82,18 +82,24 @@ export default {
     if(payload.snapshot_id&&payload.snapshot_id!==index.snapshot_id)return reply(origin,{error:'Le relevé a changé. Rechargez la page.'},409);
     try{context=retrieve(index,payload.symbols,payload.question);}
     catch{return reply(origin,{error:'Titre, date ou budget de preuves incompatible avec la demande. Posez une question ciblée ; les données locales restent disponibles.'},400);}
+    let stage='quota',providerTimedOut=false;
     try{
       const quota=env.NOUR_QUOTA.get(env.NOUR_QUOTA.idFromName('nour-private-global-v1'));
       const reserved=await quota.fetch(new Request('https://quota/reserve',{method:'POST',body:JSON.stringify({user:account.id})}));
       if(!reserved.ok)return reply(origin,{error:'Quota IA atteint ou indisponible. Les données locales restent disponibles.'},reserved.status===429?429:503);
+      stage='provider';
       const task=env.AI.run(MODEL,{max_tokens:1000,temperature:0,messages:[{role:'system',content:SYSTEM},{role:'user',content:JSON.stringify({releve_nour:context,question_utilisateur:payload.question})}]});
-      let timer;const result=await Promise.race([task,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('timeout')),25000);})]).finally(()=>clearTimeout(timer));
+      let timer;const result=await Promise.race([task,new Promise((_,reject)=>{timer=setTimeout(()=>{providerTimedOut=true;reject(new Error('timeout'));},40000);})]).finally(()=>clearTimeout(timer));
+      stage='provider_response';
       if(typeof result.response!=='string'||!result.response.trim())throw new Error();
       return reply(origin,{mode:'llm',text:result.response.slice(0,8000),sources:sources(context),analysis_date:context.analysis_date,snapshot_id:context.snapshot_id,provider:'Cloudflare Workers AI · Mistral Small 3.1',notice:'Explication IA ; les chiffres et réserves Nour priment.'});
-    }catch{
+    }catch(e){
       // No question, code, IP, provider response or document text in logs.
-      console.error(JSON.stringify({event:'nour_ai_error',type:'provider_or_quota',date:new Date().toISOString().slice(0,10)}));
-      return reply(origin,{error:'IA indisponible. Aucun résultat généré ; consultation locale disponible.'},502);
+      const name=String(e?.name||'Error').replace(/[^A-Za-z0-9]/g,'').slice(0,32);
+      const upstreamCode=Number.isSafeInteger(e?.code)?'_'+e.code:'';
+      const diagnostic=providerTimedOut?'provider_timeout':stage+'_'+name+upstreamCode;
+      console.error(JSON.stringify({event:'nour_ai_error',type:diagnostic,date:new Date().toISOString().slice(0,10)}));
+      return reply(origin,{error:'IA indisponible ('+diagnostic+'). Aucun résultat généré ; consultation locale disponible.'},502);
     }
   }
 };

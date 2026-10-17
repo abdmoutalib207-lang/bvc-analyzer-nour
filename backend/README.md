@@ -34,6 +34,13 @@ du fournisseur, URL arbitraire, question ou secret n'est exposé. Cet échec
 précède la réservation du quota et l'appel au modèle. Le frontend conserve la
 consultation locale et ne la présente pas comme une réponse IA.
 
+Les erreurs ultérieures distinguent `quota`, `provider`, `provider_response`
+et `provider_timeout`, avec seulement le type d'erreur borné et, s'il existe,
+un code numérique fournisseur. Aucun message brut d'exception n'est renvoyé.
+Le délai du modèle est de 40 secondes, celui du navigateur de 55 secondes pour
+laisser aussi terminer la lecture de la source. Aucun nouvel essai automatique
+ne double les appels, et le plafond de sortie reste à 1 000 tokens.
+
 ## Vérification
 
 `node tools/test_worker.mjs` vérifie notamment refus des redirections, limites

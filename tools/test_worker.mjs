@@ -83,5 +83,15 @@ try{
   }
   globalThis.fetch=indexFetch;
   assert.equal((await loadIndex()).snapshot_id,index.snapshot_id);
+  const oldError=console.error,events=[];console.error=value=>events.push(value);
+  try{
+    const quotaFailure=await worker.fetch(request(),{...env,NOUR_QUOTA:{idFromName:n=>n,get:()=>({fetch:async()=>{throw new TypeError('do not expose private detail');}})}});
+    assert.equal(quotaFailure.status,502);assert.match((await quotaFailure.json()).error,/quota_TypeError/);
+    const providerFailure=await worker.fetch(request(),{...env,AI:{run(){throw Object.assign(new Error('do not expose private detail'),{code:4001});}}});
+    assert.equal(providerFailure.status,502);assert.match((await providerFailure.json()).error,/provider_Error_4001/);
+    const empty=await worker.fetch(request(),{...env,AI:{async run(){return {response:''};}}});
+    assert.match((await empty.json()).error,/provider_response_Error/);
+    assert(events.every(line=>!line.includes('private detail')&&!line.includes(secret)&&!line.includes(payload.question)));
+  }finally{console.error=oldError;}
 }finally{globalThis.fetch=originalFetch;}
 console.log('Worker unit checks: compact retrieval, cited pages, immutable facts, consent, origin, code rotation, kill switch, persistent transactional quotas, snapshot drift and provider isolation passed. Cloudflare deployment/live inference not measured.');
