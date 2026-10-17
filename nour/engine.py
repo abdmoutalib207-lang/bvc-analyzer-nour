@@ -142,7 +142,14 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
         historical = asof < str(fixture.get('snapshot_updated', ''))[:10]
-        item["fundamental"] = fundamentals(rec, None if historical else facts.get(symbol), asof=asof)
+        # A quote can have a numeric price yet be rejected by the market
+        # integrity checks (stale, future, or inconsistent with last close).
+        # It must never be used to price annual EPS/book value in that case.
+        quote_for_valuation = ({**rec, 'stale': True}
+                               if item['decision'] in ('INDISPONIBLE', 'SUSPENDU')
+                               else rec)
+        item["fundamental"] = fundamentals(
+            quote_for_valuation, None if historical else facts.get(symbol), asof=asof)
         if historical:
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
         item["historical_statistics"] = describe(dated)
