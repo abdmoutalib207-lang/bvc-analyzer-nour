@@ -38,8 +38,23 @@ def audit(web):
     if source_summary['usable_for_score'] or source_summary['usable_to_certify_issuer_financial_facts']:
         raise ValueError('Economic context cannot certify company accounts')
     config = json.loads((web/'assistant-config.json').read_text())
-    if config.get('endpoint') is not None:
-        raise ValueError('Public LLM must not be enabled without its protected backend')
+    endpoint = config.get('endpoint')
+    if endpoint is not None:
+        approved = 'https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant'
+        if endpoint != approved or config.get('mode') != 'optional_private':
+            raise ValueError('Only pinned protected Cloudflare Worker may be enabled')
+        javascript = (web/'assistant.js').read_text()
+        html = (web/'index.html').read_text()
+        for proof in ("'Authorization':'Bearer '+secret", "el('ai').checked&&config.endpoint",
+                      "credentials:'omit'", "el('access').value"):
+            if proof not in javascript:
+                raise ValueError('Missing protected opt-in Worker request contract: ' + proof)
+        for proof in ('id="assistant-ai-option"', 'id="assistant-access-option"',
+                      'type="password"', 'autocomplete="off"'):
+            if proof not in html:
+                raise ValueError('Missing private Worker user control: ' + proof)
+        if any(k in config for k in ('token','secret','access_token','api_key')):
+            raise ValueError('Secret must not appear in public assistant config')
     pages = list(web.glob('*.html')) + list((web/'titres').glob('*.html'))
     for page in pages:
         text = page.read_text()
@@ -53,7 +68,7 @@ def audit(web):
         if re.search(r'\bsk-[a-zA-Z0-9_-]{20,}', path.read_text()):
             raise ValueError(f'Possible credential in {path.name}')
     print(f'Assistant audit: {len(pages)} pages, {len(actual["symbols"])} titles, '
-          f'{len(actual["masi_history"])} MASI sessions; exact report parity, public LLM disabled')
+          f'{len(actual["masi_history"])} MASI sessions; exact report parity, guarded optional LLM contract checked')
 
 
 if __name__ == '__main__':
