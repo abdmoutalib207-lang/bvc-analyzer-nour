@@ -255,6 +255,15 @@ const shots=process.env.NOUR_SCREENSHOTS;
         }
         const rect=await page.locator('#assistant-dialog').boundingBox();
         assert.ok(rect.x>=0&&rect.y>=0&&rect.x+rect.width<=width+1&&rect.y+rect.height<=901);
+        if(width===1440&&route==='index.html'){
+          assert.ok(rect.width>=800,'Desktop dialog should use a readable width.');
+          await page.locator('#assistant-expand').click();
+          assert.equal(await page.locator('#assistant-expand').getAttribute('aria-pressed'),'true');
+          const large=await page.locator('#assistant-dialog').boundingBox();
+          assert.ok(large.width>rect.width&&large.x>=0&&large.x+large.width<=width+1);
+          await page.locator('#assistant-expand').click();
+          assert.equal(await page.locator('#assistant-expand').getAttribute('aria-pressed'),'false');
+        }
         await page.getByRole('button',{name:'Effacer',exact:true}).click();
         assert.equal(await page.locator('.assistant-message').count(),0);
         await page.locator('#assistant-question').fill('<img src=x onerror=alert(1)> MASI le 31/03/26');
@@ -263,7 +272,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         assert.equal(await page.locator('#assistant-messages img').count(),0);
         assert.equal(await page.locator('#assistant-ai').isChecked(),false);
         if(width===375&&route==='index.html'){
-          let validated=false;
+          let validated=0;
           await page.route('https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant',async intercepted=>{
             const req=intercepted.request();
             if(req.method()==='OPTIONS'){
@@ -276,7 +285,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
             const payload=req.postDataJSON();
             assert.equal(payload.consent,true);
             assert.ok(payload.question.includes('ADI'));
-            validated=true;
+            validated++;
             await intercepted.fulfill({status:200,contentType:'application/json',headers:{'Access-Control-Allow-Origin':'*'},
               body:JSON.stringify({mode:'llm',text:'Explication de test sans calcul',sources:[]})});
           });
@@ -285,15 +294,38 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.locator('#assistant-question').fill('Explique ADI');
           await page.getByRole('button',{name:'Envoyer',exact:true}).click();
           await page.getByText('Renseignez votre code privé Cloudflare',{exact:false}).waitFor();
-          assert.equal(validated,false);
+          assert.equal(validated,0);
           await page.locator('#assistant-access').fill('X'.repeat(32));
           await page.locator('#assistant-question').fill('Explique ADI');
           await page.getByRole('button',{name:'Envoyer',exact:true}).click();
           await page.getByText('Explication de test sans calcul',{exact:true}).waitFor();
-          assert.equal(validated,true);
-          await page.locator('#assistant-ai').uncheck();
+          assert.equal(validated,1);
           assert.equal(await page.locator('#assistant-access').inputValue(),'');
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          await page.getByRole('button',{name:'Effacer',exact:true}).click();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          await page.locator('#assistant-question').fill('Explique ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('#assistant-send').disabled===false);
+          assert.equal(validated,2);
+          await page.locator('#assistant-ai').uncheck();
           assert.equal(await page.locator('#assistant-access-option').isVisible(),false);
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          await page.getByRole('button',{name:'Fermer l’assistant'}).click();
+          await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),true);
+          await page.locator('#assistant-question').fill('Explique ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('#assistant-send').disabled===false);
+          assert.equal(validated,3);
+          await page.locator('#assistant-forget').click();
+          assert.equal(await page.locator('#assistant-access-active').isVisible(),false);
+          assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
+          await page.locator('#assistant-question').fill('Explique ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.getByText('Renseignez votre code privé Cloudflare',{exact:false}).last().waitFor();
+          assert.equal(validated,3);
         }
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('#assistant-dialog').isVisible(),false);
