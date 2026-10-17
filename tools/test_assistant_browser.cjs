@@ -254,6 +254,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
           let validated=false;
           await page.route('https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant',async intercepted=>{
             const req=intercepted.request();
+            if(req.method()==='OPTIONS'){
+              await intercepted.fulfill({status:204,headers:{
+                'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'POST, OPTIONS',
+                'Access-Control-Allow-Headers':'Content-Type, Authorization'}});
+              return;
+            }
             assert.equal(req.headers()['authorization'],'Bearer '+'X'.repeat(32));
             const payload=req.postDataJSON();
             assert.equal(payload.consent,true);
