@@ -37,7 +37,7 @@
 .assistant-form textarea{flex:1;min-width:0;resize:none;padding:10px;font-size:16px}
 .assistant-form button{background:#254d3c;color:#e5ffe9}
 #assistant-status{font-size:11px;color:#a6c0cc;margin:8px 0 0}
-@media(max-width:540px){.assistant-dialog.assistant-expanded{width:calc(100vw - 12px);height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.assistant-messages{padding:10px 14px}.assistant-launch{right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px 14px}.assistant-dialog{width:calc(100vw - 12px);height:calc(100dvh - 12px);max-height:calc(100dvh - 12px);margin:6px;border-radius:16px}.assistant-form{padding-bottom:max(12px,env(safe-area-inset-bottom))}.assistant-head{padding-top:14px}}
+@media(max-width:540px){#assistant-expand{display:none}.assistant-dialog.assistant-expanded{width:calc(100vw - 12px);height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.assistant-messages{padding:10px 14px}.assistant-launch{right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px 14px}.assistant-dialog{width:calc(100vw - 12px);height:calc(100dvh - 12px);max-height:calc(100dvh - 12px);margin:6px;border-radius:16px}.assistant-form{padding-bottom:max(12px,env(safe-area-inset-bottom))}.assistant-head{padding-top:14px}}
 @media(prefers-reduced-motion:reduce){.assistant-dialog button{transition:none}.assistant-dialog button:active{transform:none}}
 
 .assistant-access-active{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px 10px;color:#bdd1d9;font-size:12px}
