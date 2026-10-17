@@ -1,27 +1,27 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-16",
+  "generated_for": "2026-10-17",
   "market_session": "2026-10-16",
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "schedule",
-    "slot": "closing",
-    "label": "Briefing de fin de journée / filet de sécurité",
-    "target_time": "18:00",
-    "schedule": "0 18 * * 1-5",
-    "scheduled_at": "2026-10-16T18:00:00+00:00",
-    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
-    "edition_for": "2026-10-16",
-    "started_at": "2026-10-16T19:46:39+00:00",
-    "built_at": "2026-10-16T19:47:05.268397+00:00",
-    "delay_minutes": 106.7,
-    "late": true,
-    "run_id": "38957381246",
-    "commit": "74c31c9ee0ef462d2d83c18cd5c1cc29625562f0",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/38957381246"
+    "event": "push",
+    "slot": "adhoc",
+    "label": "Point de marché à la demande",
+    "target_time": null,
+    "schedule": null,
+    "scheduled_at": null,
+    "scheduled_at_basis": null,
+    "edition_for": "2026-10-17",
+    "started_at": "2026-10-17T13:20:16+00:00",
+    "built_at": "2026-10-17T13:20:57.729840+00:00",
+    "delay_minutes": null,
+    "late": false,
+    "run_id": "39036129140",
+    "commit": "c63054c268769beaa24fb58f06d375ba4566dd4a",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39036129140"
   },
-  "title": "Briefing de fin de journée / filet de sécurité",
+  "title": "Point de marché à la demande",
   "intraday": {
     "schema_version": 1,
     "session": "2026-10-16",
@@ -95,7 +95,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe": {
               "value": 3993.181,
@@ -107,7 +109,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 21,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "nombre_actions": {
               "value": 22078588,
@@ -119,7 +123,9 @@
               "original_unit": null,
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 50,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "chiffre_affaires": {
               "value": 2431.512,
@@ -131,7 +137,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "chiffre_affaires_2024": {
               "value": 2363.364,
@@ -143,7 +151,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe_2024": {
               "value": 3668.286,
@@ -155,7 +165,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 21,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 2114.079,
@@ -167,7 +179,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 21,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 752.59,
@@ -179,7 +193,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 21,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 603,
@@ -191,7 +207,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "endettement_net": {
               "value": 1303,
@@ -203,7 +221,9 @@
               "original_unit": "MMAD",
               "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
               "printed_page": 17,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             }
           },
           "eps_mad": 18.46,
@@ -298,9 +318,67 @@
           "net_debt_method": "Dette nette non rapprochée : calcul et chiffre publié divergent au-delà de la tolérance. Dette nette et multiple suspendus ; les deux valeurs restent visibles pour vérification du périmètre.",
           "coverage_pct": 100,
           "missing_metrics": [],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "blocked",
+              "reason_codes": [
+                "debt_arithmetic_mismatch"
+              ]
+            },
+            "net_debt_ebitda": {
+              "status": "blocked",
+              "reason_codes": [
+                "debt_arithmetic_mismatch"
+              ]
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "ADI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -346,7 +424,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -420,7 +498,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe": {
               "value": 3739.48,
@@ -432,7 +512,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 26,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "nombre_actions": {
               "value": 26208850,
@@ -444,7 +526,9 @@
               "original_unit": "actions",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 23,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "chiffre_affaires": {
               "value": 468.513,
@@ -456,7 +540,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "chiffre_affaires_2024": {
               "value": 233.682,
@@ -468,7 +554,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 22,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe_2024": {
               "value": 3735.121,
@@ -480,7 +568,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 26,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 2116.222,
@@ -492,7 +582,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 26,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 249.215,
@@ -504,7 +596,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 24,
-              "validation_status": "selected_pages_visually_checked"
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
             }
           },
           "eps_mad": 0.17,
@@ -583,9 +677,63 @@
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
           "coverage_pct": 100,
           "missing_metrics": [],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "unavailable",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "RDS",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -604,7 +752,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -678,7 +826,23 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 1161.165,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "« Résultat Net 1 161 165 527 281 »",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 34674300,
@@ -690,7 +854,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 2708.541,
@@ -702,7 +868,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 1925.788,
@@ -714,7 +882,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 2638.919,
@@ -726,7 +896,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": null,
@@ -792,9 +964,71 @@
             "roe_pct",
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "roe_average_equity_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "available",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "TGCC",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -845,7 +1079,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -937,7 +1171,23 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 1341.942,
+              "page": 88,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "« Résultat net de l'ensemble consolidé 1 341 942 589 658 »",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 60000000,
@@ -949,7 +1199,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 2171.841,
@@ -961,7 +1213,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 2256.346,
@@ -973,7 +1227,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 2489,
@@ -985,7 +1241,9 @@
               "original_unit": "MMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": null,
@@ -1051,9 +1309,71 @@
             "roe_pct",
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "roe_average_equity_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "unavailable",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "SGTM",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1104,7 +1424,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1178,7 +1498,23 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 252.754943,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "« RÉSULTAT NET DES ENTREPRISES INTÉGRÉES 252 754 943 182 532 410 » ; = « RÉSULTAT NET DE L'ENSEMBLE CONSOLIDÉ 252 754 943 ».",
+              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 17000900,
@@ -1190,7 +1526,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 1029.820216,
@@ -1202,7 +1540,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 975.732912,
@@ -1214,7 +1554,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 469.98402,
@@ -1226,7 +1568,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": null,
@@ -1292,9 +1636,71 @@
             "roe_pct",
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "roe_average_equity_pct": {
+              "status": "blocked",
+              "reason_codes": [
+                "group_earnings_missing_total_not_substituted"
+              ]
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "available",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "CMGP",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1345,7 +1751,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1419,7 +1825,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe": {
               "value": 4048.148,
@@ -1431,7 +1839,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 73395600,
@@ -1443,7 +1853,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "chiffre_affaires": {
               "value": 5784.894,
@@ -1455,7 +1867,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 1367.295,
@@ -1467,7 +1881,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 2119.924,
@@ -1479,7 +1895,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 3192,
@@ -1491,7 +1909,9 @@
               "original_unit": "MMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "endettement_net": {
               "value": -752.628,
@@ -1503,7 +1923,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": 21.65,
@@ -1567,9 +1989,63 @@
           "missing_metrics": [
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "unavailable",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "MSA",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1614,7 +2090,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1706,7 +2182,9 @@
               "original_unit": null,
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "86",
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "capitaux_propres_sociaux": {
               "value": 1660.22315808,
@@ -1718,7 +2196,9 @@
               "original_unit": null,
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "85",
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 1645090,
@@ -1730,7 +2210,9 @@
               "original_unit": null,
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "108",
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "chiffre_affaires": {
               "value": 1566.03353459,
@@ -1742,7 +2224,9 @@
               "original_unit": null,
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "86",
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "chiffre_affaires_2024": {
               "value": 1052.71264187,
@@ -1754,7 +2238,9 @@
               "original_unit": null,
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "86",
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 34.880608,
@@ -1766,7 +2252,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 10.957381,
@@ -1778,7 +2266,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 864.051358,
@@ -1790,7 +2280,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": 241.39,
@@ -1855,9 +2347,63 @@
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
           "coverage_pct": 100,
           "missing_metrics": [],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "available",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "SMI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1892,7 +2438,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1966,7 +2512,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe": {
               "value": 1410.404,
@@ -1978,7 +2526,9 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:de6a0f8919f0fd2903caab99aa5cc2e07adb2451812aade8025d831c8631eda8",
               "printed_page": null,
-              "validation_status": "pdf_page_visually_checked_2026-10-04"
+              "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 21785174,
@@ -1990,7 +2540,9 @@
               "original_unit": "actions",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 695.783,
@@ -2002,7 +2554,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 359.641,
@@ -2014,7 +2568,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "excedent_brut_exploitation": {
               "value": 388.402,
@@ -2026,7 +2582,9 @@
               "original_unit": "KMAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": null,
@@ -2100,9 +2658,63 @@
             "pb",
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "available",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "T2S",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2134,7 +2746,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2208,7 +2820,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "capitaux_propres_part_groupe": {
               "value": 901.142608,
@@ -2220,7 +2834,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 1681233,
@@ -2232,7 +2848,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "chiffre_affaires": {
               "value": 690.452,
@@ -2244,7 +2862,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dividende_par_action": {
               "value": 0,
@@ -2256,7 +2876,9 @@
               "original_unit": null,
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "dettes_financieres": {
               "value": 171.581683,
@@ -2268,7 +2890,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             },
             "tresorerie_actif": {
               "value": 28.713549,
@@ -2280,7 +2904,9 @@
               "original_unit": "MAD",
               "document_hash": null,
               "printed_page": null,
-              "validation_status": "referenced_import"
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
             }
           },
           "eps_mad": 116.86,
@@ -2347,9 +2973,63 @@
           "missing_metrics": [
             "revenue_growth_pct"
           ],
+          "metric_availability": {
+            "earnings_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pnb_mmad": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "eps_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "book_value_per_share_mad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pe": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "pb": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "roe_average_equity_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "revenue_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "pnb_growth_pct": {
+              "status": "unavailable",
+              "reason_codes": []
+            },
+            "dividend_yield_pct": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_strict_mmad": {
+              "status": "available",
+              "reason_codes": []
+            },
+            "net_debt_ebitda": {
+              "status": "unavailable",
+              "reason_codes": []
+            }
+          },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-16",
+            "asof": "2026-10-17",
             "symbol": "CMT",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2383,7 +3063,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 289,
+              "annual_age_calendar_days": 290,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2450,6 +3130,23 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
+    },
+    {
+      "id": "06f5c3b3308e77d07f",
+      "title": "Christine Lagarde: IMFC Statement",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-17T05:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "cd9635bff9b025cebd",
@@ -2571,6 +3268,74 @@
       "scope": "MAROC",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "aa59dcb0466780e946",
+      "title": "Kenya : le visa disparaît, les barrières restent",
+      "url": "https://www.financialafrik.com/2026/10/17/kenya-le-visa-disparait-les-barrieres-restent/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-17T10:51:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "297af3c982d21c7978",
+      "title": "Dette du Sénégal : le FMI précise la clé du déblocage",
+      "url": "https://www.financialafrik.com/2026/10/17/dette-du-senegal-le-fmi-precise-la-cle-du-deblocage/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-17T08:59:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "d477cd7970cc7be7cc",
+      "title": "Global Energy Import Dependence Set to Peak by 2034, Rystad Says",
+      "url": "https://oilprice.com/Energy/Energy-General/Global-Energy-Import-Dependence-Set-to-Peak-by-2034-Rystad-Says.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-16T22:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "f1dcea64b0222d6851",
+      "title": "Nomination de M. Fouzi LEKJAA Ministre de l’Economie, des Finances et de la Performance publique – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE43MmpBQmE3bi1XWkV1Yk5KY24xWlM4YUlZb083VTlsdEV3bDRMOVpSRXZrRm9MY0ZkaWlHWDdwQTNVekhBTGk5QV9QaGVrcXRxMlRjeFo2Q0FLTWdCMm1kdDFfYWNUcW9xeHVuSklLcXNwZHVDZWNsQg?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-16T19:29:25+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "6213e0f72007afa823",
@@ -2741,91 +3506,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "049da320faac8c3e12",
-      "title": "Oil Prices Are Stuck at $105 as Geopolitical Risks Mount",
-      "url": "https://oilprice.com/Energy/Oil-Prices/Oil-Prices-Are-Stuck-at-105-as-Geopolitical-Risks-Mount.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:13:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "488148576d475648cf",
-      "title": "IMF Sounds Alarm Over AI’s Threat to Government Tax Bases",
-      "url": "https://oilprice.com/Energy/Energy-General/IMF-Sounds-Alarm-Over-AIs-Threat-to-Government-Tax-Bases.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "0d881ff72e2c6252ee",
-      "title": "Nouveau gouvernement au Maroc : Fouzi Lekjaa, maître des bourses et des arènes",
-      "url": "https://www.financialafrik.com/2026/10/16/nouveau-gouvernement-au-maroc-fouzi-lekjaa-maitre-des-bourses-et-des-arenes/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T15:51:28+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "74d3cff96a68a2575f",
-      "title": "German Power Supply Startups Exit Market as Wholesale Prices Soar",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/German-Power-Supply-Startups-Exit-Market-as-Wholesale-Prices-Soar.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T15:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "18bb003757832f9bb4",
-      "title": "Global Gas Crunch Makes Europe’s Remaining Coal Plants Profitable",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Global-Gas-Crunch-Makes-Europes-Remaining-Coal-Plants-Profitable.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T14:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
@@ -3065,9 +3745,94 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-16T19:46:57.589674+00:00"
+    "observed_at": "2026-10-17T13:20:50.017539+00:00"
   },
   "context_news": [
+    {
+      "id": "aa59dcb0466780e946",
+      "title": "Kenya : le visa disparaît, les barrières restent",
+      "url": "https://www.financialafrik.com/2026/10/17/kenya-le-visa-disparait-les-barrieres-restent/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-17T10:51:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "297af3c982d21c7978",
+      "title": "Dette du Sénégal : le FMI précise la clé du déblocage",
+      "url": "https://www.financialafrik.com/2026/10/17/dette-du-senegal-le-fmi-precise-la-cle-du-deblocage/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-17T08:59:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "06f5c3b3308e77d07f",
+      "title": "Christine Lagarde: IMFC Statement",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-10-17T05:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "d477cd7970cc7be7cc",
+      "title": "Global Energy Import Dependence Set to Peak by 2034, Rystad Says",
+      "url": "https://oilprice.com/Energy/Energy-General/Global-Energy-Import-Dependence-Set-to-Peak-by-2034-Rystad-Says.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-16T22:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "f1dcea64b0222d6851",
+      "title": "Nomination de M. Fouzi LEKJAA Ministre de l’Economie, des Finances et de la Performance publique – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE43MmpBQmE3bi1XWkV1Yk5KY24xWlM4YUlZb083VTlsdEV3bDRMOVpSRXZrRm9MY0ZkaWlHWDdwQTNVekhBTGk5QV9QaGVrcXRxMlRjeFo2Q0FLTWdCMm1kdDFfYWNUcW9xeHVuSklLcXNwZHVDZWNsQg?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-16T19:29:25+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
+    },
     {
       "id": "6213e0f72007afa823",
       "title": "Norway's Untapped Oil and Gas Frontier Is Drawing Renewed Interest",
@@ -3186,98 +3951,13 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "2404ff40cffc34236a",
-      "title": "« Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk",
-      "url": "https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T17:02:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "1e647bc834720c007a",
-      "title": "Equatorial Guinea Rewrites Oil Law After Production Collapses 85%",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Equatorial-Guinea-Rewrites-Oil-Law-After-Production-Collapses-85.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "7b9e3476ca983e6738",
-      "title": "Alassane Kaboré prend les commandes de Coris Bank International Côte d’Ivoire",
-      "url": "https://www.financialafrik.com/2026/10/16/alassane-kabore-prend-les-commandes-de-coris-bank-international-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T16:13:05+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "049da320faac8c3e12",
-      "title": "Oil Prices Are Stuck at $105 as Geopolitical Risks Mount",
-      "url": "https://oilprice.com/Energy/Oil-Prices/Oil-Prices-Are-Stuck-at-105-as-Geopolitical-Risks-Mount.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:13:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "488148576d475648cf",
-      "title": "IMF Sounds Alarm Over AI’s Threat to Government Tax Bases",
-      "url": "https://oilprice.com/Energy/Energy-General/IMF-Sounds-Alarm-Over-AIs-Threat-to-Government-Tax-Bases.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-16T19:47:05.268397+00:00",
-    "checked_at": "2026-10-16T19:46:58.423216+00:00",
-    "status": "partial",
+    "cutoff": "2026-10-17T13:20:57.729840+00:00",
+    "checked_at": "2026-10-17T13:20:50.953021+00:00",
+    "status": "ok",
     "groups": [
       {
         "title": "Indices actions",
@@ -3286,34 +3966,34 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7650.06,
-            "change_pct": -1.2138335705043608,
+            "value": 7659.44,
+            "change_pct": -1.0927084759157444,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:21:13+00:00",
+            "observed_at": "2026-10-16T20:42:08+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 51928.35,
-            "change_pct": -0.47786707307280907,
+            "value": 52002.41,
+            "change_pct": -0.33592901487206284,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:21:13+00:00",
+            "observed_at": "2026-10-16T20:42:09+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
@@ -3330,7 +4010,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
@@ -3347,7 +4027,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           }
         ]
@@ -3359,17 +4039,17 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.7378,
-            "change_pct": -0.20598694391210548,
+            "value": 9.7498,
+            "change_pct": -0.08300966396457113,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:46:27+00:00",
+            "observed_at": "2026-10-16T21:01:14+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
@@ -3380,47 +4060,47 @@
             "change_pct": 0.08226691042047844,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:44:25+00:00",
+            "observed_at": "2026-10-16T21:04:27+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 20.17,
-            "change_pct": 22.53948967193196,
+            "value": 19.99,
+            "change_pct": 21.445929526123923,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:21:01+00:00",
+            "observed_at": "2026-10-16T20:15:01+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 101.802,
-            "change_pct": -0.19803144974706696,
+            "value": 101.779,
+            "change_pct": -0.22057958511431758,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:41:15+00:00",
+            "observed_at": "2026-10-16T20:59:59+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           }
         ]
@@ -3432,17 +4112,17 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4191.5,
-            "change_pct": 0.5131771420349545,
+            "value": 4181.1,
+            "change_pct": 0.2637826431020839,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:46:47+00:00",
+            "observed_at": "2026-10-16T23:28:44+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
@@ -3453,55 +4133,53 @@
             "change_pct": 3.7197885196374596,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:46:47+00:00",
+            "observed_at": "2026-10-16T23:27:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.5705,
-            "change_pct": 0.21352855944482935,
+            "value": 6.5735,
+            "change_pct": 0.2592846793258652,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-16T19:46:32+00:00",
+            "observed_at": "2026-10-16T23:27:05+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-16T19:46:58.423216+00:00",
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 144.95,
-            "change_pct": -0.034482758620697496,
-            "state": "cached",
-            "notice": "Archive conservée après collecte incomplète",
-            "observed_at": "2026-10-16T00:23:12+00:00",
+            "value": 145.65,
+            "change_pct": 0.48292514660228847,
+            "state": "observed",
+            "notice": "Dernière observation source",
+            "observed_at": "2026-10-16T23:24:11+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-16T16:57:52.672889+00:00",
-            "collection_state": "cached"
+            "collected_at": "2026-10-17T13:20:50.953021+00:00",
+            "collection_state": "collected"
           }
         ]
       }
     ],
-    "errors": {
-      "ICEEUR:ATW1!": "Régression ou contradiction au même horodatage ; archive conservée"
-    },
+    "errors": {},
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
   },
   "fundamental_coverage": {

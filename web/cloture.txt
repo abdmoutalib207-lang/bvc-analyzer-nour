@@ -1,5 +1,5 @@
 Briefing de clôture — séance 2026-10-16
-Préparé le 2026-10-16
+Préparé le 2026-10-17
 
 Lecture de séanceL’essentiel
 
@@ -13,7 +13,7 @@ Le relevé de marché totalise 117,01 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-16T19:46:57.589674+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-17T13:20:50.017539+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -191,7 +191,7 @@ Fondamentaux, sources et score descriptif
 
 Base fondamentale référencée : exercice 2025. P/B 9,92 ×.
 
- [https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf] Rapport source ↗ · pages 36, 87. Chiffres hérités à recouper ; les multiples utilisent le cours daté de la fiche. Cette base historique ne remplace pas les derniers résultats semestriels et ne prouve pas qu’un titre est bon marché.
+ [https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf] Rapport source ↗ · pages 36, 87, 88. Chiffres hérités à recouper ; les multiples utilisent le cours daté de la fiche. Cette base historique ne remplace pas les derniers résultats semestriels et ne prouve pas qu’un titre est bon marché.
 
 Points sectoriels à examiner : Carnet de commandes, prises de commandes, BFR et dette nette.
 
@@ -369,25 +369,21 @@ AMMC · 2026-10-15 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-16T19:46:58.423216+00:00 · état partial. Horodatages en UTC.
-
-Détails de collecte macro
-
-ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
+Collecte tentée : 2026-10-17T13:20:50.953021+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 650,06points · -1,21 %
+7 659,44points · -1,09 %
 
-Dernière observation source2026-10-16T19:21:13+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-16T20:42:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 928,35points · -0,48 %
+52 002,41points · -0,34 %
 
-Dernière observation source2026-10-16T19:21:13+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-16T20:42:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -405,57 +401,65 @@ Risque et devises
 
 USD/MAD
 
-9,7378MAD / USD · -0,21 %
+9,7498MAD / USD · -0,08 %
 
-Dernière observation source2026-10-16T19:46:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-16T21:01:14+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
 10,9490MAD / EUR · 0,08 %
 
-Dernière observation source2026-10-16T19:44:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-16T21:04:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-20,17points · 22,54 %
+19,99points · 21,45 %
 
-Dernière observation source2026-10-16T19:21:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-16T20:15:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,80points · -0,20 %
+101,78points · -0,22 %
 
-Dernière observation source2026-10-16T19:41:15+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-16T20:59:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 191,50USD / once troy · 0,51 %
+4 181,10USD / once troy · 0,26 %
 
-Dernière observation source2026-10-16T19:46:47+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-16T23:28:44+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 109,86USD / baril · 3,72 %
 
-Dernière observation source2026-10-16T19:46:47+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-16T23:27:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,57USD / livre · 0,21 %
+6,57USD / livre · 0,26 %
 
-Dernière observation source2026-10-16T19:46:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-16T23:27:05+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
-144,95USD / tonne · -0,03 %
+145,65USD / tonne · 0,48 %
 
-Archive conservée après collecte incomplète2026-10-16T00:23:12+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Dernière observation source2026-10-16T23:24:11+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Global-Energy-Import-Dependence-Set-to-Peak-by-2034-Rystad-Says.html] Global Energy Import Dependence Set to Peak by 2034, Rystad Says ↗
+
+OilPrice · 2026-10-16T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://news.google.com/rss/articles/CBMieEFVX3lxTE43MmpBQmE3bi1XWkV1Yk5KY24xWlM4YUlZb083VTlsdEV3bDRMOVpSRXZrRm9MY0ZkaWlHWDdwQTNVekhBTGk5QV9QaGVrcXRxMlRjeFo2Q0FLTWdCMm1kdDFfYWNUcW9xeHVuSklLcXNwZHVDZWNsQg?oc=5] Nomination de M. Fouzi LEKJAA Ministre de l’Economie, des Finances et de la Performance publique – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية ↗
+
+Finances Maroc · relais presse · 2026-10-16T19:29:25+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Crude-Oil/Norways-Untapped-Oil-and-Gas-Frontier-Is-Drawing-Renewed-Interest.html] Norway's Untapped Oil and Gas Frontier Is Drawing Renewed Interest ↗
 
@@ -480,14 +484,6 @@ OilPrice · 2026-10-16T18:00:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/US-Oil-Drillers-Back-Off-Even-As-Prices-Soar.html] U.S. Oil Drillers Back Off Even As Prices Soar ↗
 
 OilPrice · 2026-10-16T17:29:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261016-%C3%A9ducation-l-avenir-de-la-jeunesse-%C3%A0-quel-prix] Éducation: l’avenir de la jeunesse, à quel prix? ↗
-
-RFI · économie · 2026-10-16T17:08:20+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/] « Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk ↗
-
-Financial Afrik · 2026-10-16T17:02:57+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -543,6 +539,14 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-13T13:14:09+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/Global-Energy-Import-Dependence-Set-to-Peak-by-2034-Rystad-Says.html] Global Energy Import Dependence Set to Peak by 2034, Rystad Says ↗
+
+OilPrice · 2026-10-16T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://news.google.com/rss/articles/CBMieEFVX3lxTE43MmpBQmE3bi1XWkV1Yk5KY24xWlM4YUlZb083VTlsdEV3bDRMOVpSRXZrRm9MY0ZkaWlHWDdwQTNVekhBTGk5QV9QaGVrcXRxMlRjeFo2Q0FLTWdCMm1kdDFfYWNUcW9xeHVuSklLcXNwZHVDZWNsQg?oc=5] Nomination de M. Fouzi LEKJAA Ministre de l’Economie, des Finances et de la Performance publique – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية ↗
+
+Finances Maroc · relais presse · 2026-10-16T19:29:25+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Crude-Oil/Norways-Untapped-Oil-and-Gas-Frontier-Is-Drawing-Renewed-Interest.html] Norway's Untapped Oil and Gas Frontier Is Drawing Renewed Interest ↗
 
 OilPrice · 2026-10-16T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -554,12 +558,4 @@ France 24 · économie · 2026-10-16T18:57:22+00:00 · International · Économi
  [https://www.financialafrik.com/2026/10/16/la-quotidienne-des-marches-financiers-africains-a-dakar-la-bceao-injecte-des-liquidites-a-nairobi-statu-quo-sur-le-controle-de-safaricom/] La quotidienne des marchés financiers africains : à Dakar, la BCEAO injecte des liquidités ; à Nairobi, statu quo sur le contrôle de Safaricom ↗
 
 Financial Afrik · 2026-10-16T18:30:33+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/US-Offers-Another-17-Million-SPR-Barrels-as-Fuel-Crisis-Deepens.html] U.S. Offers Another 17 Million SPR Barrels as Fuel Crisis Deepens ↗
-
-OilPrice · 2026-10-16T18:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Alternative-Energy/Wind-Power/Wind-Farm-Approved-in-Victoria-Australia-Would-Be-Largest-in-Southern-Hemispher.html] Wind Farm Approved in Victoria, Australia Would Be Largest in Southern Hemispher ↗
-
-OilPrice · 2026-10-16T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

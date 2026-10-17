@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "institution_count": 36,
+  "roles": {
+    "issuer_document": 2,
+    "macro_context": 3,
+    "market_prices": 1,
+    "policy_context": 9,
+    "prudential_context": 2,
+    "sector_context": 18,
+    "security_reference": 1
+  },
+  "auto_import_enabled": false,
+  "usable_for_score": false,
+  "usable_to_certify_issuer_financial_facts": false
+}
