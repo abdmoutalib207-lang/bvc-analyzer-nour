@@ -393,8 +393,10 @@
     if(current&&data.symbols[current])el('symbol').value=current;
     try{const res=await root.fetch(prefix+'assistant-config.json',{cache:'no-cache'});if(res.ok)config=await res.json();}
     catch{config={endpoint:null};}
-    if(config.endpoint&&(/^(?:\/api\/assistant|api\/assistant)$/.test(config.endpoint)||/^https:\/\//.test(config.endpoint))){
-      el('ai-option').hidden=false;el('ai-label').textContent=`Utiliser l’IA (${config.provider_label||'fournisseur configuré'}) : envoyer la question et les données sélectionnées. Aucune clé dans le navigateur.`;
+    const trustedEndpoint='https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant';
+    if(config.endpoint===trustedEndpoint){
+      el('ai-option').hidden=false;
+      el('ai-label').textContent='Utiliser l’IA Cloudflare (Mistral) : envoi volontaire de la question et des données publiques sélectionnées.';
     }else config.endpoint=null;
     message('assistant',`Données chargées · analyse du ${data.analysis_date}. Je couvre ${data.knowledge?.capabilities?.length||0} domaines de Nour : comptes, graphiques, laboratoire, risques, actualités et autres fonctions. Cliquez sur « Toutes les fonctions » pour les exemples. Les réponses locales suivent des règles explicites; elles ne sont pas générées par une IA.`);
     el('status').textContent='Conversation conservée uniquement en mémoire dans cette page.';
@@ -419,8 +421,10 @@
       conversation=answer.context||{};
       if(answer.symbols.length===1&&(answer.symbols[0]==='MASI'||data.symbols[answer.symbols[0]]))el('symbol').value=answer.symbols[0];
       if(el('ai').checked&&config.endpoint){
+        const secret=el('access').value;
+        if(secret.length<20||secret.length>200)throw new Error('Renseignez votre code privé Cloudflare (20 à 200 caractères).');
         el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),35000);
-        let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},credentials:'omit',signal:controller.signal,
+        let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+secret},credentials:'omit',signal:controller.signal,
           body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true})});}finally{clearTimeout(timeout);}
         const result=await res.json();if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
         if(epoch!==generation)return;
@@ -434,9 +438,14 @@
   el('open').hidden=false;
   el('open').addEventListener('click',async()=>{dialog.showModal();el('question').focus();try{await load();}catch(error){message('assistant',error.message);el('status').textContent='Chargement impossible.';}});
   el('close').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('close',()=>{el('access').value='';});
   el('symbol').addEventListener('change',()=>{conversation={};});
-  el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
+  el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};el('access').value='';resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
   el('form').addEventListener('submit',event=>{event.preventDefault();submit(el('question').value);});
-  el('ai').addEventListener('change',()=>{el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';});
+  el('ai').addEventListener('change',()=>{
+    el('access-option').hidden=!el('ai').checked;
+    if(!el('ai').checked)el('access').value='';
+    el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';
+  });
   for(const button of doc.querySelectorAll('[data-assistant-question]'))button.addEventListener('click',()=>submit(button.dataset.assistantQuestion));
 })(typeof window==='undefined'?null:window);
