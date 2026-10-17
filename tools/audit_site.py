@@ -8,6 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nour.assistant import build_data, read_briefings, read_history_files
+from nour.assistant_context import compact_data
 from nour.sector_audit import audit_sector_report
 from nour.economic_sources import load_catalog, catalog_summary
 
@@ -55,6 +56,9 @@ def audit(web):
                 raise ValueError('Missing private Worker user control: ' + proof)
         if any(k in config for k in ('token','secret','access_token','api_key')):
             raise ValueError('Secret must not appear in public assistant config')
+    index = json.loads((web/'assistant-context.json').read_text())
+    if index != compact_data(actual) or index['snapshot_id'] != actual['llm_snapshot_id']:
+        raise ValueError('LLM retrieval index differs from the canonical assistant facts')
     pages = list(web.glob('*.html')) + list((web/'titres').glob('*.html'))
     for page in pages:
         text = page.read_text()

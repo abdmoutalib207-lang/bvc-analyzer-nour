@@ -122,6 +122,30 @@ def info_card(title, value, suffix=""):
     return f'<article class="kpi"><span>{esc(title)}</span><strong>{esc(value)}</strong>{(" <small>"+esc(suffix)+"</small>") if suffix else ""}</article>'
 
 
+def collection_panel(health):
+    from .publication import collection_view
+    view = collection_view(health or {})
+    conflicts = view['conflicts']
+    rows = ''.join('<tr>' + ''.join(f'<td>{esc(value)}</td>' for value in
+        (c.get('symbol'), c.get('session'), ', '.join(c.get('fields') or []),
+         json.dumps(c.get('retained'), ensure_ascii=False) if c.get('retained') else 'Non archivée dans cet ancien relevé',
+         json.dumps(c.get('observed'), ensure_ascii=False) if c.get('observed') else 'Non archivée dans cet ancien relevé',
+         c.get('reason') or 'Observation divergente ; historique conservé, contrôle requis')) + '</tr>' for c in conflicts)
+    table = ('<div class="tablewrap"><table><thead><tr><th>Titre</th><th>Séance</th><th>Champs</th><th>Conservé</th><th>Observé</th><th>Motif du refus</th></tr></thead><tbody>' + rows + '</tbody></table></div>') if rows else ''
+    return (f'<section class="panel"><h3>Collecte : {esc(view["label"])}</h3>'
+            f'<p>Contrôle : {esc(view["checked_at"])} · {esc(view["message"])}</p>{table}'
+            '<p class="fineprint">Un run terminé ne signifie pas que toutes les observations ont été intégrées. Aucun conflit n’est résolu par écrasement automatique.</p></section>')
+
+
+def provenance_panel(values):
+    values = values or {}
+    return ('<section class="panel"><h3>Provenance des données et de la publication</h3>'
+            f'<p>Commit source des données historiques : <code>{esc(values.get("source_snapshot_commit"))}</code></p>'
+            f'<p>Commit du générateur : <code>{esc(values.get("generator_commit"))}</code></p>'
+            f'<p>Commit de publication : <span data-publication-commit data-generator="{esc(values.get("generator_commit"))}" data-market-hash="{esc(values.get("market_snapshot_sha256"))}">voir le manifeste de l’artefact</span> · <a href="publication.json">manifeste</a> '
+            '(disponible après sauvegarde dans le workflow). Une construction locale ne prouve pas le déploiement.</p></section>')
+
+
 def runtime_panel(runtime, intraday=None):
     if not runtime:
         return ''
@@ -130,12 +154,13 @@ def runtime_panel(runtime, intraday=None):
     warning = '<p class="banner">Créneau exécuté en retard. Les données reflètent l’heure réelle de collecte, pas l’heure prévue.</p>' if runtime.get('late') else ''
     link = f'<a href="{esc(runtime["run_url"])}" target="_blank" rel="noopener noreferrer">Voir le run GitHub ↗</a>' if runtime.get('run_url') else ''
     live = intraday or {}
+    diagnostics = collection_panel(runtime.get('collection')) + provenance_panel(runtime.get('provenance'))
     return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
             '<p>Créneaux lundi–vendredi : 09:45 · 12:45 · 16:00 (Casablanca). La clôture de 16h reste non confirmée tant que la collecte ne l’a pas validée. GitHub peut retarder ou manquer un déclenchement.</p>'
             f'<p>Créneau attendu : {esc(runtime.get("scheduled_at") or "déclenchement à la demande")}.</p>'
             f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
             f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
-            '<p class="fineprint">Les scores et graphiques restent calculés sur les clôtures historiques. Les points provisoires sont séparés. Cette page est mise à jour à chaque publication réussie, sans streaming.</p></section>')
+            + diagnostics + '<p class="fineprint">Les scores et graphiques restent calculés sur les clôtures historiques. Les points provisoires sont séparés. Cette page est mise à jour à chaque publication réussie, sans streaming.</p></section>')
 
 
 def intraday_line(quote, observed=None):
@@ -298,6 +323,7 @@ def detail_page(item, record, fixture, style, script):
             + f'<div class="eyebrow" style="margin-top:20px">{esc(record.get("sector") or "Action cotée")} · {esc(symbol)}</div><h1>{esc(record["name"])}</h1>'
             + f'<p>Dernier cours disponible : <strong>{number(item["price"])} MAD</strong> au {esc(item["asof"])}. Source prix : {esc(item["price_source"])}. <span class="status {esc(item["decision"])}">{esc(item["decision"])}</span></p>'
             + f'<div class="stamp">Historique {esc(first)} → {esc(last)} · {len(bars)} séances · mis à jour après collecte validée</div></div>'
+            + f'<p class="fineprint">{esc((item.get("history_readiness") or {}).get("label"))}</p>'
             + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
             + f'<section class="panel"><span class="eyebrow">Historique graphique</span><h2>{esc(symbol)} · prix et volumes</h2><p class="panel-sub">Pointez une séance pour ses données OHLCV ; activez les indicateurs ci-dessous. La plage « Tout » couvre les séances valides disponibles.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
@@ -307,7 +333,7 @@ def detail_page(item, record, fixture, style, script):
             + research_panels(item)
             + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
-            + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
+            + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
     return shell(f'{symbol} · {record["name"]}', body, style, script)
 
@@ -336,7 +362,7 @@ def home_page(fixture, report, style, script):
         tone = 'gain' if change is not None and change>0 else 'loss' if change is not None and change<0 else 'muted'
         history_link = (f'<a class="csv-button" href="historique/{esc(symbol)}.csv" download aria-label="Historique CSV de {esc(symbol)}">CSV</a>'
                         if bars else '<span class="muted">Indisponible</span>')
-        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span></td><td>{history_link}</td></tr>')
+        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
     body = (header('index.html', (report.get('market_overview') or {}).get('asof') or fixture["snapshot_updated"])

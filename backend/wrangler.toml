@@ -1,0 +1,21 @@
+name = "bvc-nour-assistant"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+[ai]
+binding = "AI"
+
+[vars]
+# Deliberately disabled until the administrator configures and validates it.
+NOUR_AI_ENABLED = "false"
+MONTHLY_CALL_LIMIT = "300"
+USER_MONTHLY_CALL_LIMIT = "100"
+USER_MINUTE_CALL_LIMIT = "8"
+
+[[durable_objects.bindings]]
+name = "NOUR_QUOTA"
+class_name = "NourQuota"
+
+[[migrations]]
+tag = "nour-quota-v1"
+new_sqlite_classes = ["NourQuota"]

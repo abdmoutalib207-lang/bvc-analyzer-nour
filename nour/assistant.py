@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 from .assistant_knowledge import knowledge
 
 VERSION = 'nour-assistant-data-v1'
-SYMBOL_FIELDS = ('symbol', 'name', 'asof', 'price', 'price_source', 'age_calendar_days',
+SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'sector_guidance', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_source', 'age_calendar_days',
                  'decision', 'technical', 'canonical_score', 'historical_statistics',
                  'market_risk', 'sector_comparison', 'quality', 'day_turnover_mad_actual',
                  'day_shares', 'close_dates_last_60', 'close_series_last_60',
@@ -74,11 +74,12 @@ def build_data(report, briefings=None, history_files=None):
         row['fundamental'] = {k: deepcopy(f.get(k)) for k in FUNDAMENTAL_FIELDS}
         row['url'] = f"titres/{item['symbol']}.html"
         symbols[item['symbol']] = row
-    return clean({'schema_version': VERSION, 'analysis_date': report['analysis_date'],
+    result = clean({'schema_version': VERSION, 'analysis_date': report['analysis_date'],
         'snapshot_updated': report.get('snapshot_updated'), 'score_version': report.get('score_version'),
         'market': deepcopy(report.get('market_overview') or {}),
         'market_volume_audit': deepcopy(report.get('market_volume_audit') or {}),
         'runtime': deepcopy(report.get('runtime') or {}),
+        'provenance': deepcopy(report.get('provenance') or {}),
         'intraday': deepcopy(report.get('intraday') or {}),
         'score_archive': deepcopy(report.get('score_archive') or {}),
         'research': deepcopy(report.get('research') or {}),
@@ -100,27 +101,15 @@ def build_data(report, briefings=None, history_files=None):
             'probability': 'Une fréquence historique n’est pas une probabilité de prochaine séance. Les statistiques sont inconditionnelles et leurs limites restent visibles.',
             'assistant': 'Lecture des données publiées. L’IA optionnelle explique; elle ne calcule ni ne modifie les scores et ne passe aucun ordre.'}})
 
+    from .assistant_context import compact_data
+    result['llm_snapshot_id'] = compact_data(result)['snapshot_id']
+    return result
+
 
 def context_for(data, symbols, question):
     """The server selects its own trusted snapshot, never facts sent by a client."""
-    if not isinstance(symbols, list) or not 1 <= len(symbols) <= 2:
-        raise ValueError('Choisissez un ou deux titres, ou MASI.')
-    selected = {}
-    for symbol in symbols:
-        if symbol == 'MASI':
-            selected['MASI'] = {'market': data['market'],
-                'history_first': min(data['masi_history'], default=None),
-                'history_last': max(data['masi_history'], default=None),
-                'history_sessions': len(data['masi_history'])}
-        elif symbol in data['symbols']:
-            selected[symbol] = deepcopy(data['symbols'][symbol])
-        else:
-            raise ValueError('Titre absent du référentiel Nour.')
-    import re
-    dates = re.findall(r'\b\d{4}-\d{2}-\d{2}\b', question)
-    return {'analysis_date': data['analysis_date'], 'snapshot_updated': data.get('snapshot_updated'),
-        'definitions': data['definitions'], 'selected': selected,
-        'masi_dates': {d: data['masi_history'].get(d) for d in dates[:6]}}
+    from .assistant_context import compact_data, retrieve
+    return retrieve(compact_data(data), symbols, question)
 
 
 def source_links(context):
@@ -132,16 +121,32 @@ def source_links(context):
         f = row.get('fundamental') or {}
         for label, url in [('Comptes annuels', f.get('document_url')),
                            ('Dernière publication', (f.get('latest_report') or {}).get('document_url'))]:
-            if isinstance(url, str) and urlsplit(url).scheme == 'https':
+            if (isinstance(url, str) and urlsplit(url).scheme == 'https'
+                    and not urlsplit(url).username and not urlsplit(url).password):
                 out.append({'label': f'{symbol} · {label}', 'url': url})
+        for key, evidence in (f.get('evidence') or {}).items():
+            if not isinstance(evidence, dict):
+                continue
+            url = evidence.get('document_url') or f.get('document_url')
+            page = evidence.get('page')
+            if (isinstance(url, str) and urlsplit(url).scheme == 'https'
+                    and not urlsplit(url).username and not urlsplit(url).password
+                    and isinstance(page, int) and not isinstance(page, bool) and page > 0):
+                out.append({'label': f'{symbol} · {key} · page PDF {page}',
+                            'url': url.split('#')[0] + f'#page={page}'})
     return out
 
 
 def export(report, output):
     target = Path(output) / 'assistant-data.json'
-    target.write_text(json.dumps(build_data(report, read_briefings(output,report['analysis_date']),
-        read_history_files(output,[r['symbol'] for r in report['results']])), ensure_ascii=False, separators=(',', ':'),
+    data = build_data(report, read_briefings(output, report['analysis_date']),
+                      read_history_files(output, [r['symbol'] for r in report['results']]))
+    target.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':'),
                                  allow_nan=False) + '\n', encoding='utf-8')
+    from .assistant_context import compact_data
+    (Path(output) / 'assistant-context.json').write_text(
+        json.dumps(compact_data(data), ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\n',
+        encoding='utf-8')
 
 
 def panel(prefix=''):

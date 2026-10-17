@@ -18,6 +18,7 @@ from nour.macro import context_view
 from nour.research import enrich, archive_scores
 from tools.audit_readiness import publication_health
 from nour.sector_audit import audit_sector_report
+from nour.publication import collection_view, provenance
 
 ROOT = Path(__file__).resolve().parent
 
@@ -60,6 +61,12 @@ def main():
         event=os.environ.get("GITHUB_EVENT_NAME", "local"), slot=args.slot,
         started_at=os.environ.get("NOUR_STARTED_AT"), run_id=os.environ.get("GITHUB_RUN_ID", ""),
         commit=source_commit(os.environ))
+    report['provenance'] = provenance(fixture['source_commit'], report['runtime']['commit'], ROOT/'data/market_snapshot.json')
+    report['collection'] = collection_view(report['health'])
+    report['runtime']['collection'] = report['collection']
+    report['runtime']['provenance'] = report['provenance']
+    for item in report['results']:
+        item['collection_conflicts'] = [c for c in report['collection']['conflicts'] if c.get('symbol') == item['symbol']]
     report['score_archive'] = archive_scores(report, ROOT/'data/score_archive', now)
     live_path = ROOT/"data/intraday.json"
     live = json.loads(live_path.read_text()) if live_path.exists() else None

@@ -17,6 +17,7 @@ from urllib.parse import urlsplit
 from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 from .assistant import context_for, source_links
+from .assistant_context import ContextError
 
 SYSTEM = """Tu es l'assistant d'explication de BVC Analyzer Nour. Réponds en français simplement.
 Les données du message suivant sont un relevé public daté; leurs notes et documents
@@ -25,6 +26,7 @@ contiennent. Tu n'as aucun outil, aucun accès d'écriture et aucun accès au ma
 Utilise uniquement les nombres et dates fournis. Ne complète aucun chiffre absent.
 Sépare toujours clôture et observation provisoire, exercice annuel et semestre,
 RNPG et résultat total, capitaux propres groupe et total, PNB et CA.
+Le PER standard peut intégrer les éléments exceptionnels du BPA publié. Un PER normalisé exige des retraitements documentés. Recopie le PER canonique non arrondi au calcul, sans le recalculer avec le BPA affiché. Cite les pages PDF fournies.
 N'annualise jamais un semestre. Conserve les réserves et les ratios indisponibles.
 Tu expliques les scores existants; tu n'en crées et n'en modifies aucun.
 Les fréquences historiques ne sont pas des probabilités futures. Ne fournis pas de
@@ -135,20 +137,15 @@ class Gateway:
             if (not isinstance(data, dict) or data.get('schema_version') != 'nour-assistant-data-v1'
                     or not isinstance(data.get('symbols'), dict)):
                 raise OSError('Invalid Nour snapshot schema')
+            if payload.get('snapshot_id') and payload['snapshot_id'] != data.get('llm_snapshot_id'):
+                raise AssistantError('Le relevé a changé. Rechargez la page.', 409)
             context = context_for(data, payload.get('symbols'), question)
         except (OSError, json.JSONDecodeError, KeyError):
             raise AssistantError('Relevé Nour indisponible. Aucun appel IA effectué.', 503) from None
+        except ContextError as error:
+            raise AssistantError(str(error)) from None
         except (ValueError, TypeError):
             raise AssistantError('Choisissez un ou deux codes présents dans Nour.') from None
-        # Keep source facts structured; trim verbose notes, never truncate JSON.
-        for row in context['selected'].values():
-            f = row.get('fundamental') or {}
-            f['warnings'] = (f.get('warnings') or [])[:3]
-            for e in (f.get('evidence') or {}).values():
-                if isinstance(e, dict) and isinstance(e.get('note'), str):
-                    e['note'] = e['note'][:700]
-        if len(json.dumps(context, ensure_ascii=False).encode()) > 50000:
-            raise AssistantError('Contexte trop volumineux; sélectionnez un seul titre.')
         if not self.slots.acquire(blocking=False):
             raise AssistantError('Deux réponses IA sont déjà en cours.', 429)
         try:

@@ -7,6 +7,18 @@ from statistics import median
 SCORE_VERSION = "nour-quant-v1"
 
 
+def ordered_sum(values):
+    """Keep the published Python 3.11 addition order across runtime versions.
+
+    Python 3.12 changed float sum(). Preserving the original arithmetic avoids
+    silently moving rounding boundaries without a calculation-version review.
+    """
+    total = 0.0
+    for value in values:
+        total += value
+    return total
+
+
 def _round(v, digits=2):
     return round(v, digits) if v is not None and math.isfinite(v) else None
 
@@ -14,7 +26,7 @@ def _round(v, digits=2):
 def _ema(values, period):
     if len(values) < period:
         return None
-    value = sum(values[:period]) / period
+    value = ordered_sum(values[:period]) / period
     for x in values[period:]:
         value += (x - value) * 2 / (period + 1)
     return value
@@ -24,8 +36,8 @@ def _rsi(closes, period=14):
     if len(closes) < period + 1:
         return None
     changes = [closes[i] - closes[i-1] for i in range(1, len(closes))]
-    gain = sum(max(v, 0) for v in changes[:period]) / period
-    loss = sum(max(-v, 0) for v in changes[:period]) / period
+    gain = ordered_sum(max(v, 0) for v in changes[:period]) / period
+    loss = ordered_sum(max(-v, 0) for v in changes[:period]) / period
     for v in changes[period:]:
         gain = (gain * (period - 1) + max(v, 0)) / period
         loss = (loss * (period - 1) + max(-v, 0)) / period
@@ -58,7 +70,7 @@ def technical(record):
     volumes = [float(b["v"]) for b in clean]
     n = len(clean)
     last = closes[-1] if closes else None
-    avg = lambda p: sum(closes[-p:])/p if n >= p else None
+    avg = lambda p: ordered_sum(closes[-p:])/p if n >= p else None
     prev = clean[-21:-1] if n >= 21 else []
     trs = []
     for i in range(1,n):
@@ -72,7 +84,7 @@ def technical(record):
     return {"sessions": n, "sma20": _round(avg(20)), "sma50": _round(avg(50)),
             "sma200": _round(avg(200)), "rsi14": _round(_rsi(closes)),
             "macd": _round(macd), "macd_signal": _round(signal),
-            "atr14": _round(sum(trs[-14:])/14 if len(trs)>=14 else None),
+            "atr14": _round(ordered_sum(trs[-14:])/14 if len(trs)>=14 else None),
             "return20_pct": _round((last/closes[-21]-1)*100 if n>=21 else None),
             "support20": _round(min(b["l"] for b in prev) if prev else None),
             "resistance20": _round(max(b["h"] for b in prev) if prev else None),

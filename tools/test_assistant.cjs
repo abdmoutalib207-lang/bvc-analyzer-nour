@@ -82,3 +82,7 @@ for(const [question,check] of scenarios){
 assert.deepEqual(api.localAnswer('Et son RSI ?',data,'ADI').symbols,['ADI']);
 assert.ok(api.localAnswer('Et son RSI ?',data,'ADI').text.includes('RSI 14 : '+f(data.symbols.ADI.technical.rsi14)));
 console.log(`Assistant: 320 title/topic smoke scenarios + ${scenarios.length} precise-answer cases, follow-up context, report parity, missing values and safe links passed.`);
+
+const collectionAnswer=api.localAnswer('Quand a lieu la collecte ?',data,'MASI');
+for(const slot of ['09:45','12:45','16:00'])assert.ok(collectionAnswer.text.includes(slot));
+for(const retired of ['11:46','13:45','15:45','18:00'])assert.ok(!collectionAnswer.text.includes(retired));

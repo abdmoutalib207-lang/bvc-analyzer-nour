@@ -42,4 +42,11 @@
     filterNews();
   });
   filterNews();
+  const publication=q('[data-publication-commit]');
+  if(publication&&/^[a-f0-9]{40}$/.test(publication.dataset.generator||'')){
+    fetch('publication.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(manifest=>{
+      if(manifest.generator_commit!==publication.dataset.generator||manifest.market_snapshot_sha256!==publication.dataset.marketHash||!/^[a-f0-9]{40}$/.test(manifest.publication_commit))throw new Error();
+      publication.textContent=manifest.publication_commit;
+    }).catch(()=>{publication.textContent='manifeste absent ou d’une autre construction ; identité non confirmée';});
+  }
 })();

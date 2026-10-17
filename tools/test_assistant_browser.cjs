@@ -24,6 +24,18 @@ const shots=process.env.NOUR_SCREENSHOTS;
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
       for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='index.html'){
+          await page.getByText('Suivi des mises à jour',{exact:true}).click();
+          const publication=page.locator('[data-publication-commit]');
+          await page.waitForFunction(()=>/^[a-f0-9]{40}$/.test(document.querySelector('[data-publication-commit]')?.textContent||''));
+          assert.match(await publication.innerText(),/^[a-f0-9]{40}$/);
+          const diagnostics=await page.locator('main').innerText();
+          assert.ok(diagnostics.includes('Commit source des données historiques'));
+          assert.ok(diagnostics.includes('Commit du générateur'));
+          assert.ok(diagnostics.includes('Aucun conflit n’est résolu par écrasement automatique'));
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Expanded collection/provenance overflows '+width);
+          await page.getByText('Suivi des mises à jour',{exact:true}).click();
+        }
         if(route.startsWith('titres/')){
           const dashboard=page.locator('[data-bi-dashboard]');
           await dashboard.locator('[data-bi-filters]').waitFor();
@@ -272,7 +284,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         assert.equal(await page.locator('#assistant-messages img').count(),0);
         assert.equal(await page.locator('#assistant-ai').isChecked(),false);
         if(width===375&&route==='index.html'){
-          let validated=0;
+          let validated=0,simulateUnavailable=false;
           await page.route('https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant',async intercepted=>{
             const req=intercepted.request();
             if(req.method()==='OPTIONS'){
@@ -284,10 +296,11 @@ const shots=process.env.NOUR_SCREENSHOTS;
             assert.equal(req.headers()['authorization'],'Bearer '+'X'.repeat(32));
             const payload=req.postDataJSON();
             assert.equal(payload.consent,true);
+            assert.match(payload.snapshot_id,/^[a-f0-9]{64}$/);
             assert.ok(payload.question.includes('ADI'));
             validated++;
             await intercepted.fulfill({status:200,contentType:'application/json',headers:{'Access-Control-Allow-Origin':'*'},
-              body:JSON.stringify({mode:'llm',text:'Explication de test sans calcul',sources:[]})});
+              body:JSON.stringify(simulateUnavailable?{mode:'unavailable',error:'IA de test indisponible'}:{mode:'llm',text:'Explication de test sans calcul',sources:[]})});
           });
           await page.locator('#assistant-ai').check();
           assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
@@ -326,6 +339,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.getByRole('button',{name:'Envoyer',exact:true}).click();
           await page.getByText('Renseignez votre code privé Cloudflare',{exact:false}).last().waitFor();
           assert.equal(validated,3);
+          simulateUnavailable=true;
+          await page.locator('#assistant-access').fill('X'.repeat(32));
+          await page.locator('#assistant-question').fill('Explique le PER ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.getByText('IA de test indisponible',{exact:true}).waitFor();
+          assert.ok((await page.locator('#assistant-messages').innerText()).includes('Consultation locale Nour · aucune réponse IA produite'));
+          assert.equal(validated,4);
+          await page.locator('#assistant-ai').uncheck();
         }
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('#assistant-dialog').isVisible(),false);
