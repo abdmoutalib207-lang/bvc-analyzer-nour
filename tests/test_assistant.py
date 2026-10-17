@@ -89,6 +89,9 @@ class AssistantFacts(unittest.TestCase):
                        'sans IA générative','maxlength="1200"','id="assistant-ai-option"'):
             self.assertIn(needle,text)
         self.assertIn('id="assistant-access-option"',text)
+        self.assertIn('id="assistant-access-active"',text)
+        self.assertIn('id="assistant-forget"',text)
+        self.assertIn('id="assistant-expand"',text)
         self.assertIn('type="password"',text)
         self.assertIn('autocomplete="off"',text)
         self.assertIn('for="assistant-access" hidden',text)
