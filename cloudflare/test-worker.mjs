@@ -11,7 +11,7 @@ let moduleId=0, checks=0;
 async function setup({snapshot=real,result={response:'Réponse de test'},error=false}={}) {
   const worker=(await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64')+'#'+moduleId++)).default;
   let calls=0, reads=0, prompt;
-  globalThis.fetch=async (url,options)=>{reads++;assert.equal(url,'https://abdmoutalib207-lang.github.io/bvc-analyzer-nour/assistant-data.json');assert.equal(options.redirect,'error');return Response.json(snapshot);};
+  globalThis.fetch=async (url,options)=>{reads++;assert.equal(url,'https://abdmoutalib207-lang.github.io/bvc-analyzer-nour/assistant-data.json');assert.equal(options.redirect,'manual');return Response.json(snapshot);};
   const env={NOUR_ACCESS_TOKEN:token,AI:{run:async (model,args)=>{calls++;assert.equal(model,'@cf/mistralai/mistral-small-3.1-24b-instruct');assert.equal(args.max_tokens,700);assert.equal(args.stream,false);prompt=JSON.parse(args.messages[1].content);if(error)throw Error('provider-private-detail');return result;}}};
   const request=(payload={question:'PER ADI',symbols:['ADI'],consent:true},options={})=>{
     const headers={'Origin':'https://abdmoutalib207-lang.github.io','Authorization':'Bearer '+token,'Content-Type':'application/json',...options.headers};
@@ -73,7 +73,7 @@ try {
       attempts++;
       if(attempts===1)throw Error('private fetch error');
       assert.equal(url,'https://raw.githubusercontent.com/abdmoutalib207-lang/bvc-analyzer-nour/main/web/assistant-data.json');
-      assert.equal(options.redirect,'error');
+      assert.equal(options.redirect,'manual');
       return Response.json(real);
     };
     const fallback=await expect(s,200);assert.equal((await fallback.json()).mode,'llm');assert.equal(attempts,2);
