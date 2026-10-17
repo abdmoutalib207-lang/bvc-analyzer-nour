@@ -14,9 +14,16 @@ def describe(record):
               else None for b in bars]
     output = []
     for horizon in (1,5,20):
-        samples = [(closes[i]/closes[i-horizon]-1)*100
-                   for i in range(horizon,len(closes),horizon)
-                   if all(v is not None for v in closes[i-horizon:i+1])]
+        samples = []
+        for i in range(horizon, len(closes), horizon):
+            if not all(v is not None for v in closes[i-horizon:i+1]):
+                continue
+            try:
+                value = (closes[i] / closes[i-horizon] - 1) * 100
+            except (OverflowError, ZeroDivisionError):
+                continue
+            if isfinite(value):
+                samples.append(value)
         n = len(samples)
         if n<30:
             output.append(dict(horizon_sessions=horizon, observations=n, state='insufficient',
