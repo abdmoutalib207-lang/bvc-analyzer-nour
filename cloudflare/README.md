@@ -103,3 +103,7 @@ Ne pas annoncer ce candidat comme deploye avant controle de l'adresse reelle.
 - [Secrets](https://developers.cloudflare.com/workers/configuration/secrets/)
 - [Connecter un Worker existant a GitHub](https://developers.cloudflare.com/workers/ci-cd/builds/)
 - [Parametres du build](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
+
+## Déclenchement initial Cloudflare — 17 octobre 2026
+
+Connexion GitHub configurée par le propriétaire sur la branche `feat/cloudflare-private-assistant`, répertoire `cloudflare`. Ce commit documentaire déclenche la première compilation Cloudflare ; il ne change ni le Worker ni les données, et n'atteste pas à lui seul du succès du déploiement.
