@@ -1,5 +1,15 @@
 """Unconditional historical frequencies, never probabilities of a future price."""
 from math import sqrt, isfinite
+
+
+def _finite_positive_number(value):
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or value <= 0:
+        return False
+    try:
+        return isfinite(value)
+    except (OverflowError, ValueError, TypeError):
+        return False
+
 from statistics import median
 
 
@@ -9,8 +19,7 @@ def describe(record):
         n = record.get('sessions_since_resume')
         bars = bars[-n:] if isinstance(n,int) and not isinstance(n,bool) and n>0 else []
     # An invalid close breaks the sequence rather than shortening the horizon.
-    closes = [b.get('c') if isinstance(b.get('c'),(int,float)) and not isinstance(b.get('c'),bool)
-              and isfinite(b['c']) and b['c']>0 and b.get('l',float('inf'))<=b['c']<=b.get('h',0)
+    closes = [b.get('c') if _finite_positive_number(b.get('c')) and b.get('l',float('inf'))<=b['c']<=b.get('h',0)
               else None for b in bars]
     output = []
     for horizon in (1,5,20):
