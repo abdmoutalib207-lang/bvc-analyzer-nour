@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T13:20:21.843516+00:00",
+  "updated_at": "2026-10-17T16:27:22.317132+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "e70528b5977d2ec210",
+      "title": "Bolivia’s Energy Crisis Deepens as Natural Gas Reserves Run Dry",
+      "url": "https://oilprice.com/Energy/Energy-General/Bolivias-Energy-Crisis-Deepens-as-Natural-Gas-Reserves-Run-Dry.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T15:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "aa59dcb0466780e946",
       "title": "Kenya : le visa disparaît, les barrières restent",
@@ -3608,23 +3625,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "7f4dc2aa3a92e0562c",
-      "title": "Pakistan Looks to Import Crude Oil from Libya to Diversify Supply",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Pakistan-Looks-to-Import-Crude-Oil-from-Libya-to-Diversify-Supply.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-12T12:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "ed8ab768f5abfc3ac6",
