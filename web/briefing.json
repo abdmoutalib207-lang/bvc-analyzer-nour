@@ -13,13 +13,13 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-17",
-    "started_at": "2026-10-17T16:27:17+00:00",
-    "built_at": "2026-10-17T16:28:00.351828+00:00",
+    "started_at": "2026-10-17T18:46:47+00:00",
+    "built_at": "2026-10-17T18:47:43.590141+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39049461239",
-    "commit": "1460db217b622af30ca8865402cee9902b213e79",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39049461239"
+    "run_id": "39059582500",
+    "commit": "0ab5e76c8cc148ede54053a35d38dad964ae4a8e",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39059582500"
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -3270,6 +3270,40 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "d3ab3d2d042f347f6f",
+      "title": "Texas Researchers Say Permian Wastewater Could Cool AI Data Centers",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Texas-Researchers-Say-Permian-Wastewater-Could-Cool-AI-Data-Centers.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "997462ce244f3888bf",
+      "title": "Europe Braces for a Winter Energy Crisis as Gas Reserves Run Low",
+      "url": "https://oilprice.com/Energy/Energy-General/Europe-Braces-for-a-Winter-Energy-Crisis-as-Gas-Reserves-Run-Low.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "e70528b5977d2ec210",
       "title": "Bolivia’s Energy Crisis Deepens as Natural Gas Reserves Run Dry",
       "url": "https://oilprice.com/Energy/Energy-General/Bolivias-Energy-Crisis-Deepens-as-Natural-Gas-Reserves-Run-Dry.html",
@@ -3472,40 +3506,6 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "2404ff40cffc34236a",
-      "title": "« Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk",
-      "url": "https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T17:02:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "1e647bc834720c007a",
-      "title": "Equatorial Guinea Rewrites Oil Law After Production Collapses 85%",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Equatorial-Guinea-Rewrites-Oil-Law-After-Production-Collapses-85.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
@@ -3745,9 +3745,43 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-17T16:27:52.786768+00:00"
+    "observed_at": "2026-10-17T18:47:35.686670+00:00"
   },
   "context_news": [
+    {
+      "id": "d3ab3d2d042f347f6f",
+      "title": "Texas Researchers Say Permian Wastewater Could Cool AI Data Centers",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Texas-Researchers-Say-Permian-Wastewater-Could-Cool-AI-Data-Centers.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "997462ce244f3888bf",
+      "title": "Europe Braces for a Winter Energy Crisis as Gas Reserves Run Low",
+      "url": "https://oilprice.com/Energy/Energy-General/Europe-Braces-for-a-Winter-Energy-Crisis-as-Gas-Reserves-Run-Low.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "e70528b5977d2ec210",
       "title": "Bolivia’s Energy Crisis Deepens as Natural Gas Reserves Run Dry",
@@ -3917,46 +3951,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "3ba67eadb988d2c7cd",
-      "title": "Wind Farm Approved in Victoria, Australia Would Be Largest in Southern Hemispher",
-      "url": "https://oilprice.com/Alternative-Energy/Wind-Power/Wind-Farm-Approved-in-Victoria-Australia-Would-Be-Largest-in-Southern-Hemispher.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "6105bdf4ce5bbc2cbe",
-      "title": "U.S. Oil Drillers Back Off Even As Prices Soar",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Oil-Drillers-Back-Off-Even-As-Prices-Soar.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T17:29:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-17T16:28:00.351828+00:00",
-    "checked_at": "2026-10-17T16:27:53.534493+00:00",
+    "cutoff": "2026-10-17T18:47:43.590141+00:00",
+    "checked_at": "2026-10-17T18:47:36.816937+00:00",
     "status": "ok",
     "groups": [
       {
@@ -3976,7 +3976,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -3993,7 +3993,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4010,7 +4010,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4027,7 +4027,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4049,7 +4049,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4066,7 +4066,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4083,7 +4083,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4100,7 +4100,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4122,7 +4122,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4139,7 +4139,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4156,7 +4156,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           },
           {
@@ -4173,7 +4173,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-17T16:27:53.534493+00:00",
+            "collected_at": "2026-10-17T18:47:36.816937+00:00",
             "collection_state": "collected"
           }
         ]
