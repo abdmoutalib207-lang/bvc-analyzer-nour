@@ -128,7 +128,13 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
                 # Never revise historical candles based on a live response. Flag
                 # the discrepancy without preventing other tickers from updating.
                 conflicts.append({"symbol": ticker, "session": session,
-                                  "fields": differing})
+                                  "fields": differing,
+                                  "retained": {k: existing.get(k) for k in differing},
+                                  "observed": {k: bar.get(k) for k in differing},
+                                  "observed_at": now.astimezone(CASABLANCA).isoformat(),
+                                  "source": quote["source"],
+                                  "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+                                  "resolution": "pending_review"})
                 continue
         else:
             if rec["candles"] and rec["candles"][-1]["d"] > session:

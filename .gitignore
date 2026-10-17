@@ -7,3 +7,8 @@ __pycache__/
 !.env.example
 .ecc/session/
 .cache/official-documents/
+
+# Generated only after the data commit, included in the Pages artifact.
+web/publication.json
+backend/.dev.vars
+backend/.wrangler/

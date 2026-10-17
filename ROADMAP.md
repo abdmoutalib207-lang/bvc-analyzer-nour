@@ -35,3 +35,19 @@ Tant que 1, 3 et 4 restent ouverts, Nour est un terminal analytique consultable 
   ponts de dette ADI/MUT, les autres dénominateurs et la couche IA.
 
 - Complément disponible terminé : 77/80 annuels et 76/80 semestriels. [Preuves et références restantes](docs/batches/2026-10-04-remaining.md). Annuel manquant : DIS/Diac Salaf, DLM, IBM ; semestre : mêmes titres et CAR à clôture décalée. [Rapprochement principal/Nour](docs/comparisons/2026-10-04-principal.md) : cinq BPA annuels concordent, divergences de période/capital/fonds propres documentées. Ratios sans dénominateur vérifié toujours bloqués.
+
+
+## Consolidation audit externe — 17 octobre 2026
+
+Objectif : centre de consultation financière BVC fiable et sourcé, sans objectif
+prédictif. Voir `docs/consolidation-audit-2026-10-17.md` pour le lot testé,
+les preuves et les limites. La cible 9,5/10 est un objectif, pas une note acquise.
+
+- Contexte IA compact, règles financières, citations par page, réserve intégrale.
+- Collecte : divergences par titre, détail des prochaines observations refusées.
+- Profondeur et âge historiques, sans modifier les états et scores existants.
+- Provenance historique/générateur/artefact distincte, empreintes des exports.
+- Code Worker versionné avec quotas persistants, rotation et désactivation ;
+  activation et tests Cloudflare encore distincts de la fusion Pages.
+- À poursuivre : rapprochement des dix conflits, revue primaire plus large,
+  passages documentaires datés (issue #11), évaluation réelle des réponses IA.

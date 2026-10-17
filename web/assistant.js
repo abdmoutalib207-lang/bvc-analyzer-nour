@@ -348,6 +348,10 @@
     const answer=(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
     if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|minoritaires|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
     if(/demain|prochaine seance|va (?:monter|baisser)/.test(q)&&!answer.text.includes(data.definitions.probability))answer.text+='\n\n'+data.definitions.probability;
+    for(const s of answer.symbols||[]){const row=data.symbols?.[s];if(!row)continue;
+      if(row.history_readiness?.label)answer.text+='\n\nQualité historique : '+row.history_readiness.label+'.';
+      for(const c of row.collection_conflicts||[])answer.text+='\nCollecte '+s+' · '+c.session+' : conflit sur '+(c.fields||[]).join(', ')+'. Historique conservé ; rapprochement requis.';
+    }
     answer.context={domain:answer.domain,symbols:answer.symbols.slice(),period:answer.domain==='fundamentals'?prepared.period:null,dates:prepared.dates.slice(),labFilters:answer.labFilters,measure:prepared.measure};
     answer.resolvedQuestion=question;
     if(prepared.inherited)answer.text+='\n\nContexte conservé : '+[...(prepared.period?.semester?[prepared.period.semester]:[]),...(prepared.period?.years||[]),...prepared.dates].join(' · ')+'.';
@@ -403,7 +407,7 @@
       el('ai-option').hidden=false;
       el('ai-label').textContent='Utiliser l’IA Cloudflare (Mistral) : envoi volontaire de la question et des données publiques sélectionnées.';
     }else config.endpoint=null;
-    message('assistant',`Données chargées · analyse du ${data.analysis_date}. Je couvre ${data.knowledge?.capabilities?.length||0} domaines de Nour : comptes, graphiques, laboratoire, risques, actualités et autres fonctions. Cliquez sur « Toutes les fonctions » pour les exemples. Les réponses locales suivent des règles explicites; elles ne sont pas générées par une IA.`);
+    message('assistant',`Données chargées · analyse du ${data.analysis_date}. Je couvre ${data.knowledge?.capabilities?.length||0} domaines de Nour : comptes, graphiques, laboratoire, risques, actualités et autres fonctions. Cliquez sur « Toutes les fonctions » pour les exemples. Mode local : lecture déterministe des données. Mode IA facultatif : explication générée par Cloudflare/Mistral après activation et code privé. Les chiffres sourcés Nour restent la référence.`);
     el('status').textContent='Conversation conservée uniquement en mémoire dans cette page.';
   }
   function load(){
@@ -430,20 +434,23 @@
         if(secret.length<20||secret.length>200)throw new Error('Renseignez votre code privé Cloudflare (20 à 200 caractères).');
         el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),35000);
         let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+secret},credentials:'omit',signal:controller.signal,
-          body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true})});}finally{clearTimeout(timeout);}
+          body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true,snapshot_id:data.llm_snapshot_id})});}finally{clearTimeout(timeout);}
         const result=await res.json();
         if(res.status===401||res.status===403){
           privateCode=null;el('access').value='';showAccessState();
           throw new Error('Code Cloudflare refusé. Saisissez-le à nouveau.');
         }
+        if(result.snapshot_id&&data.llm_snapshot_id&&result.snapshot_id!==data.llm_snapshot_id)throw new Error('Les données ont changé pendant la conversation. Rechargez la page pour conserver des réponses cohérentes.');
         if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
-        privateCode=secret;el('access').value='';showAccessState();
         if(epoch!==generation)return;
+        privateCode=secret;el('access').value='';showAccessState();
         message('assistant',result.text,result.sources||answer.sources,'llm');
         message('assistant','Référence chiffrée Nour (distincte du texte IA) :\n\n'+answer.text,answer.sources);
       }else if(epoch===generation)message('assistant',answer.text,answer.sources);
       if(epoch===generation)el('status').textContent='Réponse datée. Consultez les sources et réserves avant toute décision.';
-    }catch(error){if(epoch===generation){message('assistant',error.name==='AbortError'?'Délai IA dépassé. Désactivez le mode IA pour lire les données locales.':error.message);el('status').textContent='Réponse indisponible; aucun chiffre n’a été inventé.';}}
+    }catch(error){if(epoch===generation){
+      if(data){const fallback=localAnswer(question,data,el('symbol').value,conversation);message('assistant','Consultation locale Nour · aucune réponse IA produite :\n\n'+fallback.text,fallback.sources);}
+      message('assistant',error.name==='AbortError'?'Délai IA dépassé. Désactivez le mode IA pour lire les données locales.':error.message);el('status').textContent='Réponse indisponible; aucun chiffre n’a été inventé.';}}
     finally{if(epoch===generation){controller=null;resetBusy();if(dialog.open)el('question').focus();}}
   }
   el('open').hidden=false;
@@ -451,7 +458,7 @@
   el('close').addEventListener('click',()=>dialog.close());
   // Never persist the private code in localStorage, sessionStorage or cookies.
   // pagehide also clears a restored back-forward cache page after navigation.
-  root.addEventListener('pagehide',()=>{privateCode=null;el('access').value='';showAccessState();});
+  root.addEventListener('pagehide',()=>{generation++;controller?.abort();controller=null;resetBusy();privateCode=null;el('access').value='';showAccessState();});
   el('forget').addEventListener('click',()=>{privateCode=null;el('access').value='';showAccessState();el('access').focus();});
   el('expand').addEventListener('click',()=>{
     const expanded=dialog.classList.toggle('assistant-expanded');

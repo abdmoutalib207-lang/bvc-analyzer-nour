@@ -2,14 +2,15 @@
 from datetime import date
 from math import ceil, sqrt, isfinite
 from statistics import median, stdev
-from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
+from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION, ordered_sum
 from .fundamentals import coverage
 from .statistics import describe
 from .sector_methods import guidance
+from .publication import history_readiness
 
 
 def _mean(items):
-    return sum(items) / len(items) if items else None
+    return ordered_sum(items) / len(items) if items else None
 
 
 def _round(value, digits=2):
@@ -149,6 +150,7 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         dated = {**rec, 'candles': [b for b in rec.get('candles', [])
                                   if isinstance(b.get('d'), str) and b['d'] <= asof]}
         item["technical"] = technical(dated)
+        item["history_readiness"] = history_readiness(item)
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
         historical = asof < str(fixture.get('snapshot_updated', ''))[:10]
