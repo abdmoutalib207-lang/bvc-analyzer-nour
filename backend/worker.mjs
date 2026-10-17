@@ -9,6 +9,29 @@ const reply=(origin,body,status=200)=>new Response(JSON.stringify(body),{status,
 
 export async function sha256(value){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))].map(x=>x.toString(16).padStart(2,'0')).join('');}
 
+class ContextFailure extends Error {constructor(code){super(code);this.code=code;}}
+export async function loadIndex(){
+  let response;
+  try{
+    // Match the deployed pilot's Workers-compatible redirect policy. Never
+    // forward client credentials or follow a redirect to another resource.
+    response=await fetch(INDEX_URL,{redirect:'manual',signal:AbortSignal.timeout(10000),
+      headers:{Accept:'application/json','Cache-Control':'no-cache'}});
+  }catch(e){throw new ContextFailure('fetch_'+String(e?.name||'Error').replace(/[^A-Za-z0-9]/g,'').slice(0,32));}
+  if(!response.ok){await response.body?.cancel();throw new ContextFailure('http_'+response.status);}
+  if(!response.body)throw new ContextFailure('empty');
+  const reader=response.body.getReader(),chunks=[];let size=0;
+  try{
+    for(;;){const {value,done}=await reader.read();if(done)break;size+=value.length;
+      if(size>2000000){await reader.cancel();throw new ContextFailure('too_large');}chunks.push(value);}
+  }catch(e){if(e instanceof ContextFailure)throw e;throw new ContextFailure('body_read');}
+  finally{reader.releaseLock();}
+  const raw=new Uint8Array(size);let cursor=0;for(const chunk of chunks){raw.set(chunk,cursor);cursor+=chunk.length;}
+  let index;try{index=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(raw));}catch{throw new ContextFailure('invalid_json');}
+  if(!index||index.schema_version!=='nour-assistant-context-v1'||typeof index.snapshot_id!=='string'||!/^[a-f0-9]{64}$/.test(index.snapshot_id))throw new ContextFailure('invalid_schema');
+  return index;
+}
+
 export class NourQuota {
   constructor(ctx,env){this.ctx=ctx;this.env=env;}
   async fetch(request){
@@ -54,12 +77,8 @@ export default {
     if(!payload||typeof payload.question!=='string'||!payload.question.trim()||payload.question.length>1200||payload.consent!==true)return reply(origin,{error:'Question limitée à 1 200 caractères et consentement explicite requis.'},400);
     let context,index;
     try{
-      // The URL is fixed; client context, URLs, model names and facts are ignored.
-      const response=await fetch(INDEX_URL,{cache:'no-store',redirect:'error',signal:AbortSignal.timeout(10000)});
-      if(!response.ok)throw new Error();
-      index=await response.json();
-      if(index.schema_version!=='nour-assistant-context-v1')throw new Error();
-    }catch{return reply(origin,{error:'Contexte Nour indisponible. Les réponses locales restent disponibles.'},503);}
+      index=await loadIndex();
+    }catch(e){const code=e instanceof ContextFailure?e.code:'unknown';return reply(origin,{error:'Contexte Nour indisponible ('+code+'). Les réponses locales restent disponibles.'},503);}
     if(payload.snapshot_id&&payload.snapshot_id!==index.snapshot_id)return reply(origin,{error:'Le relevé a changé. Rechargez la page.'},409);
     try{context=retrieve(index,payload.symbols,payload.question);}
     catch{return reply(origin,{error:'Titre, date ou budget de preuves incompatible avec la demande. Posez une question ciblée ; les données locales restent disponibles.'},400);}
