@@ -13,13 +13,202 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-17",
-    "started_at": "2026-10-17T18:46:47+00:00",
-    "built_at": "2026-10-17T18:47:43.590141+00:00",
+    "started_at": "2026-10-17T21:21:18+00:00",
+    "built_at": "2026-10-17T21:22:01.354773+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39059582500",
-    "commit": "0ab5e76c8cc148ede54053a35d38dad964ae4a8e",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39059582500"
+    "run_id": "39070571493",
+    "commit": "b44d93236a06bff2005b7dc1d5868b13ec07a6ed",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39070571493",
+    "collection": {
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-17T21:21:19.108184+00:00",
+      "last_session": "2026-10-16",
+      "message": "10 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
+    },
+    "provenance": {
+      "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
+      "generator_commit": "b44d93236a06bff2005b7dc1d5868b13ec07a6ed",
+      "publication_commit": null,
+      "publication_manifest": "publication.json",
+      "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
+      "market_snapshot_sha256": "af3db1a1d81c5b67c6381148406c4baadaf968bb061397bb8f2dfa69d1a99e64",
+      "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
+    }
   },
   "title": "Point de marché à la demande",
   "intraday": {
@@ -3270,6 +3459,23 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "1fb922702c588e3f1d",
+      "title": "Middle East Chemicals Keep Their Cost Edge Despite Hormuz Crisis",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Middle-East-Chemicals-Keep-Their-Cost-Edge-Despite-Hormuz-Crisis.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "d3ab3d2d042f347f6f",
       "title": "Texas Researchers Say Permian Wastewater Could Cool AI Data Centers",
       "url": "https://oilprice.com/Energy/Crude-Oil/Texas-Researchers-Say-Permian-Wastewater-Could-Cool-AI-Data-Centers.html",
@@ -3489,23 +3695,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "525cbbd4b0da3f19b7",
-      "title": "Éducation: l’avenir de la jeunesse, à quel prix?",
-      "url": "https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261016-%C3%A9ducation-l-avenir-de-la-jeunesse-%C3%A0-quel-prix",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-16T17:08:20+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
     }
   ],
   "news_role": "veille uniquement",
@@ -3745,9 +3934,26 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-17T18:47:35.686670+00:00"
+    "observed_at": "2026-10-17T21:21:54.025758+00:00"
   },
   "context_news": [
+    {
+      "id": "1fb922702c588e3f1d",
+      "title": "Middle East Chemicals Keep Their Cost Edge Despite Hormuz Crisis",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Middle-East-Chemicals-Keep-Their-Cost-Edge-Despite-Hormuz-Crisis.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "d3ab3d2d042f347f6f",
       "title": "Texas Researchers Say Permian Wastewater Could Cool AI Data Centers",
@@ -3934,29 +4140,12 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "8f26c0a07059171815",
-      "title": "U.S. Offers Another 17 Million SPR Barrels as Fuel Crisis Deepens",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Offers-Another-17-Million-SPR-Barrels-as-Fuel-Crisis-Deepens.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T18:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-17T18:47:43.590141+00:00",
-    "checked_at": "2026-10-17T18:47:36.816937+00:00",
+    "cutoff": "2026-10-17T21:22:01.354773+00:00",
+    "checked_at": "2026-10-17T21:21:54.631256+00:00",
     "status": "ok",
     "groups": [
       {
@@ -3976,7 +4165,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -3993,7 +4182,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4010,7 +4199,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4027,7 +4216,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4049,7 +4238,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4066,7 +4255,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4083,7 +4272,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4100,7 +4289,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4122,7 +4311,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4139,7 +4328,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4156,7 +4345,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -4173,7 +4362,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]

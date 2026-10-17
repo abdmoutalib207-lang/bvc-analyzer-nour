@@ -103,7 +103,7 @@
       "ytd_pct": -9.81
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-17T18:47:35.686670+00:00",
+    "observed_at": "2026-10-17T21:21:54.025758+00:00",
     "turnover_mad": 117005677.43,
     "breadth": {
       "up": 29,
@@ -113,6 +113,23 @@
     }
   },
   "news": [
+    {
+      "id": "1fb922702c588e3f1d",
+      "title": "Middle East Chemicals Keep Their Cost Edge Despite Hormuz Crisis",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Middle-East-Chemicals-Keep-Their-Cost-Edge-Despite-Hormuz-Crisis.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-17T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "d3ab3d2d042f347f6f",
       "title": "Texas Researchers Say Permian Wastewater Could Cool AI Data Centers",
@@ -3720,23 +3737,6 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "da844ce214fdfdb68a",
-      "title": "CREA: India Curtailed Over 4% of Its Solar Output in July and August",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/CREA-India-Curtailed-Over-4-of-Its-Solar-Output-in-July-and-August.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-12T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
       "id": "ed8ab768f5abfc3ac6",
       "title": "Auto Nejma - Avis de 2ème convocation à l'AG des obligataires du 23 octobre 2026 (EO juin 2025)",
       "url": "https://www.ammc.ma/sites/default/files/Avis_2e_convocation_Auto_Nejma_AG_obligataires_23_10_26.pdf",
@@ -5314,6 +5314,18 @@
         "volume_vs_median20": 1.54,
         "limited_by_resumption": false
       },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 823,
+        "indicator_sessions": 823,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 823 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
+      },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
         "exercise": 2025,
@@ -5812,6 +5824,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -5997,6 +6010,18 @@
         "resistance20": 410.0,
         "volume_vs_median20": 0.75,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -6559,6 +6584,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -6744,6 +6770,18 @@
         "resistance20": 335.0,
         "volume_vs_median20": 0.09,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 825,
+        "indicator_sessions": 825,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 825 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -7229,6 +7267,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -7414,6 +7453,18 @@
         "resistance20": 1293.0,
         "volume_vs_median20": 0.2,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 818,
+        "indicator_sessions": 818,
+        "post_resume_only": false,
+        "last_close": "2026-10-15",
+        "age_calendar_days": 2,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 818 séances · dernière clôture 2026-10-15",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -7796,6 +7847,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -7984,6 +8036,18 @@
         "resistance20": 7080.0,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 814,
+        "indicator_sessions": 814,
+        "post_resume_only": false,
+        "last_close": "2026-10-12",
+        "age_calendar_days": 5,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 814 séances · dernière clôture 2026-10-12",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -8383,6 +8447,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -8568,6 +8633,18 @@
         "resistance20": 1140.0,
         "volume_vs_median20": 1.25,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -9045,6 +9122,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -9230,6 +9308,18 @@
         "resistance20": 2075.0,
         "volume_vs_median20": 0.12,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 89,
+        "indicator_sessions": 89,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 89 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -9685,6 +9775,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -9870,6 +9961,18 @@
         "resistance20": 449.9,
         "volume_vs_median20": 0.27,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -10351,6 +10454,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -10536,6 +10640,18 @@
         "resistance20": 124.9,
         "volume_vs_median20": 0.2,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -10934,6 +11050,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -11119,6 +11236,18 @@
         "resistance20": 700.0,
         "volume_vs_median20": 0.7,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -11626,6 +11755,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -11814,6 +11944,18 @@
         "resistance20": 200.0,
         "volume_vs_median20": 0.67,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 817,
+        "indicator_sessions": 817,
+        "post_resume_only": false,
+        "last_close": "2026-10-12",
+        "age_calendar_days": 5,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 817 séances · dernière clôture 2026-10-12",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -12241,6 +12383,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -12426,6 +12569,18 @@
         "resistance20": 251.9,
         "volume_vs_median20": 0.39,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -12933,6 +13088,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -13118,6 +13274,18 @@
         "resistance20": 614.9,
         "volume_vs_median20": 0.01,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 73,
+        "indicator_sessions": 73,
+        "post_resume_only": false,
+        "last_close": "2026-10-15",
+        "age_calendar_days": 2,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 73 séances · dernière clôture 2026-10-15",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -13577,6 +13745,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -13762,6 +13931,18 @@
         "resistance20": 197.0,
         "volume_vs_median20": 0.66,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -14286,6 +14467,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -14471,6 +14671,18 @@
         "resistance20": 21.21,
         "volume_vs_median20": 0.49,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 95,
+        "indicator_sessions": 95,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 95 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -14933,6 +15145,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -15118,6 +15331,18 @@
         "resistance20": 240.0,
         "volume_vs_median20": 0.69,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 188,
+        "indicator_sessions": 188,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 188 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -15608,6 +15833,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -15793,6 +16019,18 @@
         "resistance20": 996.0,
         "volume_vs_median20": 0.19,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -16351,6 +16589,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -16536,6 +16775,18 @@
         "resistance20": 210.0,
         "volume_vs_median20": 0.05,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 592,
+        "indicator_sessions": 592,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 592 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -16952,6 +17203,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -17137,6 +17389,18 @@
         "resistance20": 343.5,
         "volume_vs_median20": 2.48,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -17676,6 +17940,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -17861,6 +18126,18 @@
         "resistance20": 1635.0,
         "volume_vs_median20": 0.73,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 100,
+        "indicator_sessions": 100,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 100 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -18342,6 +18619,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -18527,6 +18805,18 @@
         "resistance20": 309.0,
         "volume_vs_median20": 3.43,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 429,
+        "indicator_sessions": 429,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 429 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -19035,6 +19325,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -19222,6 +19531,18 @@
         "resistance20": 4573.0,
         "volume_vs_median20": 0.3,
         "limited_by_resumption": true
+      },
+      "history_readiness": {
+        "state": "LIMITÉ",
+        "depth": "short",
+        "validated_close_sessions": 703,
+        "indicator_sessions": 22,
+        "post_resume_only": true,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "LIMITÉ · 22 séances post-reprise · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -19670,6 +19991,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -19855,6 +20177,18 @@
         "resistance20": 80.0,
         "volume_vs_median20": 4.06,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -20337,6 +20671,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -20522,6 +20857,18 @@
         "resistance20": 188.85,
         "volume_vs_median20": 0.49,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 820,
+        "indicator_sessions": 820,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 820 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -21044,6 +21391,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -21229,6 +21595,18 @@
         "resistance20": 869.0,
         "volume_vs_median20": 0.56,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 825,
+        "indicator_sessions": 825,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 825 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -21729,6 +22107,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -21917,6 +22296,18 @@
         "resistance20": 4200.0,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "short",
+        "validated_close_sessions": 70,
+        "indicator_sessions": 70,
+        "post_resume_only": false,
+        "last_close": "2026-10-01",
+        "age_calendar_days": 16,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique court · 70 séances · dernière clôture 2026-10-01",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -22359,6 +22750,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -22544,6 +22936,18 @@
         "resistance20": 52.7,
         "volume_vs_median20": 0.3,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -22941,6 +23345,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -23009,6 +23414,18 @@
         "resistance20": null,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "none",
+        "validated_close_sessions": 0,
+        "indicator_sessions": 0,
+        "post_resume_only": false,
+        "last_close": "2026-08-05",
+        "age_calendar_days": null,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · aucune séance exploitable · dernière clôture 2026-08-05",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "absent",
@@ -23285,6 +23702,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -23353,6 +23771,18 @@
         "resistance20": null,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "none",
+        "validated_close_sessions": 0,
+        "indicator_sessions": 0,
+        "post_resume_only": false,
+        "last_close": "2026-09-25",
+        "age_calendar_days": null,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · aucune séance exploitable · dernière clôture 2026-09-25",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "absent",
@@ -23676,6 +24106,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -23861,6 +24292,18 @@
         "resistance20": 774.0,
         "volume_vs_median20": 0.81,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 95,
+        "indicator_sessions": 95,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 95 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -24392,6 +24835,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -24577,6 +25021,18 @@
         "resistance20": 370.0,
         "volume_vs_median20": 0.89,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 95,
+        "indicator_sessions": 95,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 95 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -25111,6 +25567,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -25296,6 +25771,18 @@
         "resistance20": 49.29,
         "volume_vs_median20": 0.03,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 751,
+        "indicator_sessions": 751,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 751 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -25758,6 +26245,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -25946,6 +26434,18 @@
         "resistance20": 1495.0,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 769,
+        "indicator_sessions": 769,
+        "post_resume_only": false,
+        "last_close": "2026-09-30",
+        "age_calendar_days": 17,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 769 séances · dernière clôture 2026-09-30",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -26399,6 +26899,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -26584,6 +27085,18 @@
         "resistance20": 373.0,
         "volume_vs_median20": 1.08,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -27037,6 +27550,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -27222,6 +27736,18 @@
         "resistance20": 3700.0,
         "volume_vs_median20": 3.32,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -27730,6 +28256,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -27915,6 +28442,18 @@
         "resistance20": 65.98,
         "volume_vs_median20": 3.04,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -28480,6 +29019,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -28665,6 +29205,18 @@
         "resistance20": 650.0,
         "volume_vs_median20": 2.79,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 815,
+        "indicator_sessions": 815,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 815 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -29183,6 +29735,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -29368,6 +29939,18 @@
         "resistance20": 96.99,
         "volume_vs_median20": 2.14,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -29782,6 +30365,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -29967,6 +30569,18 @@
         "resistance20": 60.97,
         "volume_vs_median20": 0.07,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 89,
+        "indicator_sessions": 89,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 89 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "absent",
@@ -30317,6 +30931,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -30502,6 +31117,18 @@
         "resistance20": 93.0,
         "volume_vs_median20": 0.54,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 95,
+        "indicator_sessions": 95,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 95 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -30939,6 +31566,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -31124,6 +31752,18 @@
         "resistance20": 136.0,
         "volume_vs_median20": 0.01,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 825,
+        "indicator_sessions": 825,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 825 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -31638,6 +32278,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -31823,6 +32464,18 @@
         "resistance20": 1999.0,
         "volume_vs_median20": 1.73,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -32301,6 +32954,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -32486,6 +33158,18 @@
         "resistance20": 4199.0,
         "volume_vs_median20": 0.16,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -32950,6 +33634,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -33135,6 +33820,18 @@
         "resistance20": 310.0,
         "volume_vs_median20": 7.22,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 825,
+        "indicator_sessions": 825,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 825 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -33701,6 +34398,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -33886,6 +34584,18 @@
         "resistance20": 1766.0,
         "volume_vs_median20": 2.82,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 826,
+        "indicator_sessions": 826,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 826 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -34346,6 +35056,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -34531,6 +35242,18 @@
         "resistance20": 416.0,
         "volume_vs_median20": 2.0,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 816,
+        "indicator_sessions": 816,
+        "post_resume_only": false,
+        "last_close": "2026-10-13",
+        "age_calendar_days": 4,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 816 séances · dernière clôture 2026-10-13",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -35023,6 +35746,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -35132,6 +35856,18 @@
         "resistance20": 24.78,
         "volume_vs_median20": 22.07,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "LIMITÉ",
+        "depth": "short",
+        "validated_close_sessions": 21,
+        "indicator_sessions": 21,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "LIMITÉ · historique court · 21 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -35603,6 +36339,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -35788,6 +36525,18 @@
         "resistance20": 923.0,
         "volume_vs_median20": 0.24,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 750,
+        "indicator_sessions": 750,
+        "post_resume_only": false,
+        "last_close": "2026-10-13",
+        "age_calendar_days": 4,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 750 séances · dernière clôture 2026-10-13",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -36262,6 +37011,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -36447,6 +37197,18 @@
         "resistance20": 787.0,
         "volume_vs_median20": 1.11,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 89,
+        "indicator_sessions": 89,
+        "post_resume_only": false,
+        "last_close": "2026-10-15",
+        "age_calendar_days": 2,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 89 séances · dernière clôture 2026-10-15",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -36927,6 +37689,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -37112,6 +37875,18 @@
         "resistance20": 1716.0,
         "volume_vs_median20": 0.37,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 823,
+        "indicator_sessions": 823,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 823 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -37670,6 +38445,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -37855,6 +38631,18 @@
         "resistance20": 399.9,
         "volume_vs_median20": 5.33,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 823,
+        "indicator_sessions": 823,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 823 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -38335,6 +39123,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -38520,6 +39327,18 @@
         "resistance20": 389.55,
         "volume_vs_median20": 1.0,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 743,
+        "indicator_sessions": 743,
+        "post_resume_only": false,
+        "last_close": "2026-10-13",
+        "age_calendar_days": 4,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 743 séances · dernière clôture 2026-10-13",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -38981,6 +39800,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -39166,6 +39986,18 @@
         "resistance20": 840.0,
         "volume_vs_median20": 0.69,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 592,
+        "indicator_sessions": 592,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 592 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -39657,6 +40489,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -39842,6 +40675,18 @@
         "resistance20": 240.0,
         "volume_vs_median20": 0.25,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -40423,6 +41268,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -40611,6 +41457,18 @@
         "resistance20": 5621.0,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 811,
+        "indicator_sessions": 811,
+        "post_resume_only": false,
+        "last_close": "2026-09-25",
+        "age_calendar_days": 22,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 811 séances · dernière clôture 2026-09-25",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -41034,6 +41892,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -41219,6 +42078,18 @@
         "resistance20": 1225.0,
         "volume_vs_median20": 2.5,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 79,
+        "indicator_sessions": 79,
+        "post_resume_only": false,
+        "last_close": "2026-10-13",
+        "age_calendar_days": 4,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 79 séances · dernière clôture 2026-10-13",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -41700,6 +42571,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -41888,6 +42760,18 @@
         "resistance20": 1480.0,
         "volume_vs_median20": 1.31,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 740,
+        "indicator_sessions": 740,
+        "post_resume_only": false,
+        "last_close": "2026-09-25",
+        "age_calendar_days": 22,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 740 séances · dernière clôture 2026-09-25",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -42301,6 +43185,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -42486,6 +43371,18 @@
         "resistance20": 175.0,
         "volume_vs_median20": 0.4,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 569,
+        "indicator_sessions": 569,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 569 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -42992,6 +43889,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -43177,6 +44075,18 @@
         "resistance20": 104.0,
         "volume_vs_median20": 1.71,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 89,
+        "indicator_sessions": 89,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 89 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -43560,6 +44470,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -43745,6 +44656,18 @@
         "resistance20": 326.0,
         "volume_vs_median20": 0.63,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 591,
+        "indicator_sessions": 591,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 591 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -44203,6 +45126,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -44388,6 +45312,18 @@
         "resistance20": 540.0,
         "volume_vs_median20": 1.98,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 91,
+        "indicator_sessions": 91,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 91 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -44879,6 +45815,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -44972,6 +45909,18 @@
         "resistance20": null,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "LIMITÉ",
+        "depth": "short",
+        "validated_close_sessions": 13,
+        "indicator_sessions": 13,
+        "post_resume_only": false,
+        "last_close": "2026-10-15",
+        "age_calendar_days": 2,
+        "deep_threshold_sessions": 252,
+        "label": "LIMITÉ · historique court · 13 séances · dernière clôture 2026-10-15",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -45359,6 +46308,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -45544,6 +46494,18 @@
         "resistance20": 2122.0,
         "volume_vs_median20": 0.29,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 84,
+        "indicator_sessions": 84,
+        "post_resume_only": false,
+        "last_close": "2026-10-15",
+        "age_calendar_days": 2,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 84 séances · dernière clôture 2026-10-15",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -45993,6 +46955,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -46178,6 +47141,18 @@
         "resistance20": 650.9,
         "volume_vs_median20": 0.84,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 181,
+        "indicator_sessions": 181,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 181 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -46662,6 +47637,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -46769,6 +47745,18 @@
         "resistance20": null,
         "volume_vs_median20": null,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "LIMITÉ",
+        "depth": "short",
+        "validated_close_sessions": 20,
+        "indicator_sessions": 20,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "LIMITÉ · historique court · 20 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -47196,6 +48184,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -47381,6 +48370,18 @@
         "resistance20": 6740.0,
         "volume_vs_median20": 0.21,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 592,
+        "indicator_sessions": 592,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 592 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -47866,6 +48867,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -48051,6 +49053,18 @@
         "resistance20": 1960.0,
         "volume_vs_median20": 0.52,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 755,
+        "indicator_sessions": 755,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 755 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -48534,6 +49548,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -48719,6 +49734,18 @@
         "resistance20": 325.0,
         "volume_vs_median20": 1.64,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 91,
+        "indicator_sessions": 91,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 91 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -49242,6 +50269,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -49427,6 +50455,18 @@
         "resistance20": 367.0,
         "volume_vs_median20": 0.81,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 566,
+        "indicator_sessions": 566,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 566 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -49901,6 +50941,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -50089,6 +51130,18 @@
         "resistance20": 470.0,
         "volume_vs_median20": 2.92,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "deep",
+        "validated_close_sessions": 570,
+        "indicator_sessions": 570,
+        "post_resume_only": false,
+        "last_close": "2026-10-12",
+        "age_calendar_days": 5,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique profond · 570 séances · dernière clôture 2026-10-12",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -50552,6 +51605,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -50737,6 +51791,18 @@
         "resistance20": 65.0,
         "volume_vs_median20": 0.38,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -51243,6 +52309,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -51428,6 +52513,18 @@
         "resistance20": 179.9,
         "volume_vs_median20": 0.6,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 83,
+        "indicator_sessions": 83,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 83 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -51924,6 +53021,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -52095,6 +53193,18 @@
         "resistance20": 225.0,
         "volume_vs_median20": 0.84,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 53,
+        "indicator_sessions": 53,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 53 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -52580,6 +53690,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -52765,6 +53876,18 @@
         "resistance20": 695.0,
         "volume_vs_median20": 0.17,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 1199,
+        "indicator_sessions": 1199,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 1199 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -53254,6 +54377,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -53439,6 +54581,18 @@
         "resistance20": 1474.0,
         "volume_vs_median20": 0.43,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "Pages sélectionnées du PDF primaire contrôlées visuellement ; rapport non certifié par Nour",
@@ -53946,6 +55100,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -54131,6 +55286,18 @@
         "resistance20": 1776.0,
         "volume_vs_median20": 0.61,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 756,
+        "indicator_sessions": 756,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 756 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -54589,6 +55756,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -54777,6 +55945,18 @@
         "resistance20": 175.0,
         "volume_vs_median20": 2.67,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "INDISPONIBLE",
+        "depth": "short",
+        "validated_close_sessions": 69,
+        "indicator_sessions": 69,
+        "post_resume_only": false,
+        "last_close": "2026-10-09",
+        "age_calendar_days": 8,
+        "deep_threshold_sessions": 252,
+        "label": "INDISPONIBLE · historique court · 69 séances · dernière clôture 2026-10-09",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -55249,6 +56429,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -55434,6 +56615,18 @@
         "resistance20": 337.8,
         "volume_vs_median20": 0.11,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 285,
+        "indicator_sessions": 285,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 285 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -55859,6 +57052,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -56044,6 +57238,18 @@
         "resistance20": 5400.0,
         "volume_vs_median20": 9.96,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "deep",
+        "validated_close_sessions": 752,
+        "indicator_sessions": 752,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique profond · 752 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -56442,6 +57648,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Famille de métier distinguée du secteur général."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -56627,6 +57834,18 @@
         "resistance20": 324.75,
         "volume_vs_median20": 0.51,
         "limited_by_resumption": false
+      },
+      "history_readiness": {
+        "state": "OBSERVABLE",
+        "depth": "short",
+        "validated_close_sessions": 84,
+        "indicator_sessions": 84,
+        "post_resume_only": false,
+        "last_close": "2026-10-16",
+        "age_calendar_days": 1,
+        "deep_threshold_sessions": 252,
+        "label": "OBSERVABLE · historique court · 84 séances · dernière clôture 2026-10-16",
+        "notice": "Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score."
       },
       "fundamental": {
         "source": "relevé documentaire référencé, non certifié par cet import",
@@ -57080,6 +58299,7 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
+      "collection_conflicts": [],
       "intraday_quote": null,
       "intraday_observed_at": null
     }
@@ -57101,7 +58321,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-16",
-    "observed_at": "2026-10-17T18:47:35.686670+00:00",
+    "observed_at": "2026-10-17T21:21:54.025758+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -57245,7 +58465,7 @@
   "market_volume_audit": {
     "status": "discrepancy",
     "asof": "2026-10-16",
-    "observed_at": "2026-10-17T18:47:35.686670+00:00",
+    "observed_at": "2026-10-17T21:21:54.025758+00:00",
     "expected_lines": 61,
     "observed_lines": 61,
     "coverage_complete": true,
@@ -103764,13 +104984,13 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-17T18:47:35.686670+00:00",
+    "checked_at": "2026-10-17T21:21:54.025758+00:00",
     "asof": "2026-10-16"
   },
   "news_health": {
-    "checked_at": "2026-10-17T18:46:52.976083+00:00",
+    "checked_at": "2026-10-17T21:21:25.114202+00:00",
     "status": "partial",
-    "fetched_items": 92,
+    "fetched_items": 91,
     "errors": [
       "Mining.com: HTTP Error 403: Forbidden"
     ],
@@ -103813,7 +105033,7 @@
       {
         "name": "Finances Maroc · relais presse",
         "status": "ok",
-        "items": 5
+        "items": 4
       },
       {
         "name": "Financial Afrik",
@@ -103864,11 +105084,11 @@
   },
   "official_sources_health": {
     "schema_version": 1,
-    "checked_at": "2026-10-17T18:46:53.276354+00:00",
+    "checked_at": "2026-10-17T21:21:25.409235+00:00",
     "status": "ok",
     "sources": {
       "https://www.ammc.ma/fr/communiques-presse-emetteurs": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "ADH",
           "ADI",
@@ -103952,68 +105172,68 @@
           "ZLD"
         ],
         "status": "success",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
-        "sha256": "3e189e75e1a45c70499278715110229f6dc37501fb7f0640fc3b9febf62fa978",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
+        "sha256": "1c58db406023cb13d7dce9c8ad490bf650a2953457ef26b5cfb8cd45296f1051",
         "indexed_links": 10,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://www.alliances.co.ma/publications": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "ADI"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
         "sha256": "8280bfbfdaf4c6690eac494d88f320f6c9084b2317da8d3e482f82d494a76cd3",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://ir.attijariwafabank.com/financial-information/quarterly-results": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "ATW"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
         "sha256": "4179d3d55365567df6a2858f7f046a75ab07430f949f615a3b54c0b882d3eb1e",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://www.marsamaroc.co.ma/fr/publications-financieres": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "MSA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
         "sha256": "a319c84895c29d6ba02e383241fc737add00bffe4c2aa1465071942b6bea3d17",
         "indexed_links": 153,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "TMA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
         "sha256": "1553656b550e68236481718f571d4b76009b1998e50d4162e291110f3d6f845d",
         "indexed_links": 3,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://vicenne.com/investisseurs/": {
-        "checked_at": "2026-10-17T18:46:53.276354+00:00",
+        "checked_at": "2026-10-17T21:21:25.409235+00:00",
         "tickers": [
           "VCNE"
         ],
         "status": "success",
-        "last_success_at": "2026-10-17T18:46:53.276354+00:00",
-        "sha256": "25e6ef858845de3e82aba71373d6a2dca811ae1cc22af2004c40cffc56712dc7",
+        "last_success_at": "2026-10-17T21:21:25.409235+00:00",
+        "sha256": "8797dfceb681094e5cb06623368b5c8459b6682aabb9cef8afd1507ca92afcca",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
@@ -104023,7 +105243,7 @@
     "scope": "indexation seulement; aucun chiffre extrait ni certifié"
   },
   "health": {
-    "checked_at": "2026-10-17T18:46:47.733517+00:00",
+    "checked_at": "2026-10-17T21:21:19.108184+00:00",
     "source": "CDG Capital Bourse",
     "result": "conflict",
     "last_session": "2026-10-16",
@@ -104040,77 +105260,177 @@
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "CMGP",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "CSR",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "DTT",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "HPS",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "IAM",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "JET",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "MOX",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "STK",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         },
         {
           "symbol": "TGCC",
           "session": "2026-10-16",
           "fields": [
             "v"
-          ]
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
         }
       ]
     }
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-17T18:47:36.816937+00:00",
+    "checked_at": "2026-10-17T21:21:54.631256+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
@@ -104122,7 +105442,7 @@
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
@@ -104135,7 +105455,7 @@
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
@@ -104148,7 +105468,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -104161,7 +105481,7 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
@@ -104174,7 +105494,7 @@
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
@@ -104187,7 +105507,7 @@
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
@@ -104200,7 +105520,7 @@
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
@@ -104213,7 +105533,7 @@
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
@@ -104226,7 +105546,7 @@
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
@@ -104239,7 +105559,7 @@
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
@@ -104252,7 +105572,7 @@
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
@@ -104265,7 +105585,7 @@
         "description": "API2 Rotterdam Coal Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-        "collected_at": "2026-10-17T18:47:36.816937+00:00",
+        "collected_at": "2026-10-17T21:21:54.631256+00:00",
         "collection_state": "collected"
       }
     },
@@ -104275,8 +105595,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-17T18:47:43.590141+00:00",
-    "checked_at": "2026-10-17T18:47:36.816937+00:00",
+    "cutoff": "2026-10-17T21:22:01.354773+00:00",
+    "checked_at": "2026-10-17T21:21:54.631256+00:00",
     "status": "ok",
     "groups": [
       {
@@ -104296,7 +105616,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104313,7 +105633,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104330,7 +105650,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104347,7 +105667,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]
@@ -104369,7 +105689,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104386,7 +105706,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104403,7 +105723,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104420,7 +105740,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]
@@ -104442,7 +105762,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104459,7 +105779,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104476,7 +105796,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           },
           {
@@ -104493,7 +105813,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-17T18:47:36.816937+00:00",
+            "collected_at": "2026-10-17T21:21:54.631256+00:00",
             "collection_state": "collected"
           }
         ]
@@ -104512,13 +105832,391 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-17",
-    "started_at": "2026-10-17T18:46:47+00:00",
-    "built_at": "2026-10-17T18:47:43.590141+00:00",
+    "started_at": "2026-10-17T21:21:18+00:00",
+    "built_at": "2026-10-17T21:22:01.354773+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39059582500",
-    "commit": "0ab5e76c8cc148ede54053a35d38dad964ae4a8e",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39059582500"
+    "run_id": "39070571493",
+    "commit": "b44d93236a06bff2005b7dc1d5868b13ec07a6ed",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39070571493",
+    "collection": {
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-17T21:21:19.108184+00:00",
+      "last_session": "2026-10-16",
+      "message": "10 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-17T21:21:19.108184+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
+    },
+    "provenance": {
+      "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
+      "generator_commit": "b44d93236a06bff2005b7dc1d5868b13ec07a6ed",
+      "publication_commit": null,
+      "publication_manifest": "publication.json",
+      "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
+      "market_snapshot_sha256": "af3db1a1d81c5b67c6381148406c4baadaf968bb061397bb8f2dfa69d1a99e64",
+      "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
+    }
+  },
+  "provenance": {
+    "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
+    "generator_commit": "b44d93236a06bff2005b7dc1d5868b13ec07a6ed",
+    "publication_commit": null,
+    "publication_manifest": "publication.json",
+    "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
+    "market_snapshot_sha256": "af3db1a1d81c5b67c6381148406c4baadaf968bb061397bb8f2dfa69d1a99e64",
+    "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
+  },
+  "collection": {
+    "result": "conflict",
+    "label": "Nouvelle observation refusée pour conflit",
+    "checked_at": "2026-10-17T21:21:19.108184+00:00",
+    "last_session": "2026-10-16",
+    "message": "10 bougie(s) divergente(s) non remplacée(s)",
+    "conflicts": [
+      {
+        "symbol": "BOA",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 11089
+        },
+        "observed": {
+          "v": 11092
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "CMGP",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 23199
+        },
+        "observed": {
+          "v": 25199
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "CSR",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 3851
+        },
+        "observed": {
+          "v": 3951
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "DTT",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 260
+        },
+        "observed": {
+          "v": 261
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "HPS",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 8684
+        },
+        "observed": {
+          "v": 8685
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "IAM",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 66458
+        },
+        "observed": {
+          "v": 66603
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "JET",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 2309
+        },
+        "observed": {
+          "v": 2310
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "MOX",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 32
+        },
+        "observed": {
+          "v": 33
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "STK",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 2926
+        },
+        "observed": {
+          "v": 2928
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "TGCC",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 4107
+        },
+        "observed": {
+          "v": 4112
+        },
+        "observed_at": "2026-10-17T21:21:19.108184+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      }
+    ],
+    "fully_validated": false
   },
   "score_archive": {
     "daily_snapshots": 10,
