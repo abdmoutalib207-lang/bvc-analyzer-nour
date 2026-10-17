@@ -13,6 +13,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
   try{
     for(const width of [375,768,1440]){
       const context=await browser.newContext({viewport:{width,height:900}});
+      // The loopback server deliberately exposes only its local LLM gateway.
+      // Browser QA for static Pages must instead load the exact public config.
+      await context.route('**/assistant-config.json',async request=>{
+        await request.fulfill({status:200,contentType:'application/json',
+          body:fs.readFileSync(path.join(__dirname,'../web/assistant-config.json'),'utf8')});
+      });
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
