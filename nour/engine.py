@@ -43,7 +43,7 @@ def analyze(record, asof, quantity=1000):
                 invalid_close.append(day.isoformat())
                 continue
             valid.append({"d": day.isoformat(), "o": o, "h": h, "l": l, "c": c, "v": v})
-        except (KeyError, ValueError, TypeError):
+        except (KeyError, ValueError, TypeError, OverflowError):
             issues.append("Ligne illisible")
     if [bar["d"] for bar in valid] != sorted(bar["d"] for bar in valid):
         issues.append("Dates historiques non croissantes")
@@ -51,10 +51,20 @@ def analyze(record, asof, quantity=1000):
 
     age_days = None
     if valid and record.get("price_asof"):
-        age_days = (date.fromisoformat(asof) - date.fromisoformat(record["price_asof"])).days
+        try:
+            age_days = (date.fromisoformat(asof) - date.fromisoformat(record["price_asof"])).days
+        except (TypeError, ValueError):
+            issues.append("Date de cours illisible")
     if age_days is None or age_days < 0 or age_days > 4 or record.get("stale"):
         issues.append("Cours absent, futur ou périmé à la date du rapport")
-    if not valid or abs(valid[-1]["c"] - float(record.get("price") or 0)) > .001 or valid[-1]["d"] != record.get("price_asof"):
+    try:
+        price = float(record.get("price"))
+    except (TypeError, ValueError, OverflowError):
+        price = None
+    if price is not None and (not isfinite(price) or price <= 0):
+        price = None
+    if (not valid or price is None or abs(valid[-1]["c"] - price) > .001
+            or valid[-1]["d"] != record.get("price_asof")):
         issues.append("Désaccord entre séance, clôture et instantané")
     if invalid_open:
         issues.append(f"{len(invalid_open)} ouverture(s) hors fourchette : OHLC non fiables pour ATR / spread")
