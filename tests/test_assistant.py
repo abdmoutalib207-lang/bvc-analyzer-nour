@@ -83,12 +83,16 @@ class AssistantFacts(unittest.TestCase):
         self.assertTrue(any(s['url']=='titres/JET.html' for s in sources))
         self.assertFalse(any('javascript:' in s['url'] for s in sources))
 
-    def test_panel_has_labelled_dialog_local_mode_and_no_key_input(self):
+    def test_panel_has_labelled_dialog_local_default_and_private_opt_in(self):
         text = panel('../')
         for needle in ('aria-labelledby="assistant-title"','data-prefix="../"',
                        'sans IA générative','maxlength="1200"','id="assistant-ai-option"'):
             self.assertIn(needle,text)
-        self.assertNotIn('type="password"',text)
+        self.assertIn('id="assistant-access-option"',text)
+        self.assertIn('type="password"',text)
+        self.assertIn('autocomplete="off"',text)
+        self.assertIn('for="assistant-access" hidden',text)
+        self.assertNotIn('NOUR_ACCESS_TOKEN',text)
 
     def test_extended_facts_are_independent_copies_of_existing_results(self):
         original = copy.deepcopy(self.report)

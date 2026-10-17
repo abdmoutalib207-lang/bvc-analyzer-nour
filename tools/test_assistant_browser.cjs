@@ -13,6 +13,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
   try{
     for(const width of [375,768,1440]){
       const context=await browser.newContext({viewport:{width,height:900}});
+      // The loopback server deliberately exposes only its local LLM gateway.
+      // Browser QA for static Pages must instead load the exact public config.
+      await context.route('**/assistant-config.json',async request=>{
+        await request.fulfill({status:200,contentType:'application/json',
+          body:fs.readFileSync(path.join(__dirname,'../web/assistant-config.json'),'utf8')});
+      });
       const errors=[];const page=await context.newPage();
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
@@ -137,7 +143,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
         await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-symbol option').count(),81);
-        assert.equal(await page.locator('#assistant-ai-option').isVisible(),false);
+        assert.equal(await page.locator('#assistant-ai-option').isVisible(),true,
+          JSON.stringify(await page.evaluate(async()=>({
+            config:await fetch('assistant-config.json').then(r=>r.json()).catch(e=>String(e)),
+            optionHidden:document.getElementById('assistant-ai-option')?.hidden,
+            optionStyle:getComputedStyle(document.getElementById('assistant-ai-option')).display,
+            scriptUrl:[...document.scripts].find(x=>x.src.includes('assistant.js'))?.src
+          }))));
+        assert.equal(await page.locator('#assistant-access-option').isVisible(),false);
         const expected=route.startsWith('titres/')?route.split('/')[1].split('.')[0]:'MASI';
         assert.equal(await page.locator('#assistant-symbol').inputValue(),expected);
         await page.locator('#assistant-symbol').selectOption('JET');
@@ -249,6 +262,39 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.getByText('Clôture du 2026-03-31 :',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-messages img').count(),0);
         assert.equal(await page.locator('#assistant-ai').isChecked(),false);
+        if(width===375&&route==='index.html'){
+          let validated=false;
+          await page.route('https://bvc-nour-assistant.abdmoutalib207.workers.dev/api/assistant',async intercepted=>{
+            const req=intercepted.request();
+            if(req.method()==='OPTIONS'){
+              await intercepted.fulfill({status:204,headers:{
+                'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'POST, OPTIONS',
+                'Access-Control-Allow-Headers':'Content-Type, Authorization'}});
+              return;
+            }
+            assert.equal(req.headers()['authorization'],'Bearer '+'X'.repeat(32));
+            const payload=req.postDataJSON();
+            assert.equal(payload.consent,true);
+            assert.ok(payload.question.includes('ADI'));
+            validated=true;
+            await intercepted.fulfill({status:200,contentType:'application/json',headers:{'Access-Control-Allow-Origin':'*'},
+              body:JSON.stringify({mode:'llm',text:'Explication de test sans calcul',sources:[]})});
+          });
+          await page.locator('#assistant-ai').check();
+          assert.equal(await page.locator('#assistant-access-option').isVisible(),true);
+          await page.locator('#assistant-question').fill('Explique ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.getByText('Renseignez votre code privé Cloudflare',{exact:false}).waitFor();
+          assert.equal(validated,false);
+          await page.locator('#assistant-access').fill('X'.repeat(32));
+          await page.locator('#assistant-question').fill('Explique ADI');
+          await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+          await page.getByText('Explication de test sans calcul',{exact:true}).waitFor();
+          assert.equal(validated,true);
+          await page.locator('#assistant-ai').uncheck();
+          assert.equal(await page.locator('#assistant-access').inputValue(),'');
+          assert.equal(await page.locator('#assistant-access-option').isVisible(),false);
+        }
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('#assistant-dialog').isVisible(),false);
         assert.equal(await page.locator('#assistant-open').evaluate(el=>el===document.activeElement),true);
