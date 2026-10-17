@@ -55,6 +55,51 @@ class EngineContract(unittest.TestCase):
         self.assertEqual(result["quality"]["rejected_bars"], 1)
         self.assertEqual(result["decision"], "LIMITÉ")
 
+    def test_malformed_quote_date_and_nonfinite_price_are_safe(self):
+        for bad_date in ('not-a-date', '2026-99-99'):
+            rec = deepcopy(FIXTURE['records']['ADI'])
+            rec['price_asof'] = bad_date
+            result = analyze(rec, ASOF)
+            self.assertEqual(result['decision'], 'INDISPONIBLE')
+            self.assertIn('Date de cours illisible', result['quality']['issues'])
+            self.assertFalse(result['liquidity']['ready'])
+        for bad_price in (float('nan'), float('inf'), 10 ** 1000, 'invalid'):
+            rec = deepcopy(FIXTURE['records']['ADI'])
+            rec['price'] = bad_price
+            result = analyze(rec, ASOF)
+            self.assertEqual(result['decision'], 'INDISPONIBLE')
+            self.assertFalse(result['liquidity']['ready'])
+        rec = deepcopy(FIXTURE['records']['ADI'])
+        rec['candles'][-1]['c'] = 10 ** 1000
+        result = analyze(rec, ASOF)
+        self.assertTrue(result['quality']['rejected_bars'] >= 1)
+
+    def test_rejected_market_quote_cannot_produce_pe_or_pb(self):
+        facts = json.loads((Path(__file__).resolve().parents[1] /
+                            'data/facts_reference.json').read_text())['records']
+        rec = deepcopy(FIXTURE['records']['ADI'])
+        rec['price'] = 1
+        fixture = deepcopy(FIXTURE)
+        fixture['records']['ADI'] = rec
+        # The pilot snapshot predates the current imported facts. Re-anchor
+        # the snapshot for this regression without changing annual evidence.
+        fixture['snapshot_updated'] = '2026-10-16T00:00:00'
+        report = build_report(fixture, '2026-10-16', facts=facts)
+        item = next(x for x in report['results'] if x['symbol'] == 'ADI')
+        self.assertEqual(item['decision'], 'INDISPONIBLE')
+        self.assertIsNone(item['fundamental']['pe'])
+        self.assertIsNone(item['fundamental']['pb'])
+        self.assertIsNotNone(item['fundamental']['earnings_mmad'])
+
+    def test_full_report_survives_oversized_candle_and_excludes_it(self):
+        fixture = deepcopy(FIXTURE)
+        fixture['records']['ADI']['candles'][-1]['c'] = 10 ** 1000
+        report = build_report(fixture, ASOF)
+        item = next(x for x in report['results'] if x['symbol'] == 'ADI')
+        self.assertGreaterEqual(item['quality']['rejected_bars'], 1)
+        self.assertLess(item['technical']['sessions'],
+                        len(fixture['records']['ADI']['candles']))
+
     def test_short_history_cannot_pass_full_readiness(self):
         result = analyze(FIXTURE["records"]["T2S"], ASOF)
         self.assertEqual(result["decision"], "LIMITÉ")

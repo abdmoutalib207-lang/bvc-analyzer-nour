@@ -81,7 +81,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}sources.html">Sources</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -131,7 +131,7 @@ def runtime_panel(runtime, intraday=None):
     link = f'<a href="{esc(runtime["run_url"])}" target="_blank" rel="noopener noreferrer">Voir le run GitHub ↗</a>' if runtime.get('run_url') else ''
     live = intraday or {}
     return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
-            '<p>Créneaux lundi–vendredi : 09:45 · 11:46 · 13:45 · 15:45 · 18:00. GitHub peut retarder ou manquer un déclenchement.</p>'
+            '<p>Créneaux lundi–vendredi : 09:45 · 12:45 · 16:00 (Casablanca). La clôture de 16h reste non confirmée tant que la collecte ne l’a pas validée. GitHub peut retarder ou manquer un déclenchement.</p>'
             f'<p>Créneau attendu : {esc(runtime.get("scheduled_at") or "déclenchement à la demande")}.</p>'
             f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
             f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
@@ -420,6 +420,84 @@ def briefing_page(fixture, briefing, style, script):
     return shell('Briefing', body, style, script)
 
 
+def sector_page(report, style, script):
+    """Human-readable, explicitly uncertified per-issuer source review."""
+    from .sector_audit import audit_sector_report
+    audit = audit_sector_report(report)
+    status_labels = {
+        'missing_primary_document': 'Document primaire absent',
+        'financial_audit_blocked': 'Ratios bloqués : rapprochement nécessaire',
+        'primary_page_check_required': 'Contrôle primaire à réaliser',
+        'additional_review_required': 'Contrôle complémentaire',
+        'selected_pages_checked': 'Pages sélectionnées contrôlées',
+    }
+    rows = []
+    for item in sorted(audit['issuers'], key=lambda r: (str(r['family']), r['symbol'])):
+        symbol = item['symbol']
+        source = item.get('document_url')
+        link = (f'<a href="{esc(source)}" target="_blank" rel="noopener noreferrer">Document ↗</a>'
+                if isinstance(source, str) and source.startswith('https://') else 'Document non référencé')
+        business = ', '.join(item['business_kpis_to_collect']) or 'Méthode métier à compléter'
+        missing = ', '.join(item['missing_annual_fact_groups'])
+        unverified = ', '.join(item['unverified_annual_fact_groups'])
+        rows.append(
+            f'<tr><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td>'
+            f'<td>{esc(item["family"])}</td>'
+            f'<td>{esc(status_labels.get(item["status"], item["status"]))}</td>'
+            f'<td>{item["selected_page_evidence_count"]}/{item["evidence_count"]} faits documentés</td>'
+            f'<td>{esc(business)}'
+            + (f'<p class="muted">Faits annuels à retrouver : {esc(missing)}</p>' if missing else '')
+            + (f'<p class="muted">Faits présents mais à contrôler dans le PDF : {esc(unverified)}</p>' if unverified else '')
+            + f'</td><td>{link}</td></tr>')
+    priority_rows = []
+    for action in audit['review_queue']:
+        detail = action.get('debt_comparison_mmad')
+        debt = (f'<p class="muted">Calcul : {number(detail.get("calculated_mmad"),3)} MDH ; '
+                f'publication : {number(detail.get("reported_mmad"),3)} MDH ; '
+                f'écart : {number(detail.get("difference_mmad"),3)} MDH.</p>'
+                if detail else '')
+        source = action.get("document_url")
+        source_link = (f'<a href="{esc(source)}" target="_blank" rel="noopener noreferrer">Rapport annuel ↗</a>'
+                       if isinstance(source, str) and source.startswith("https://") else "Source primaire à retrouver")
+        pages = ', '.join(f'{row["field"]} : p. {row["page_hint"]}'
+                          for row in action.get("source_pages_to_check", []))
+        page_hint = f'<p class="muted">Pages indicatives à vérifier : {esc(pages)}</p>' if pages else ''
+        priority_rows.append(
+            f'<tr><td>{esc(action["priority"])}</td>'
+            f'<td><a href="titres/{esc(action["symbol"])}.html">{esc(action["symbol"])}</a></td>'
+            f'<td>{esc(action["code"])}</td>'
+            f'<td>{esc(action["instruction"])}{debt}{page_hint}</td>'
+            f'<td>{esc(action.get("annual_exercise"))} · {source_link}</td></tr>')
+    priority_table = ('<section class="panel"><h2>Blocages à rapprocher</h2>'
+                      + f'<p>{audit["blocking_issuers"]} sociétés avec ratios suspendus ; '
+                      + f'{audit["blocking_actions"]} actions documentaires prioritaires. '
+                      + 'Aucun ratio ne sera débloqué par cette file de contrôle.</p>'
+                      + '<div style="overflow-x:auto"><table><thead><tr>'
+                      + '<th>Priorité</th><th>Société</th><th>Contrôle</th><th>Travail requis</th><th>Rapport</th>'
+                      + '</tr></thead><tbody>' + ''.join(priority_rows)
+                      + '</tbody></table></div></section>')
+    body = (
+        header('index.html', report.get('snapshot_updated') or '')
+        + '<main><div class="hero"><span class="eyebrow">Contrôle indépendant · Nour</span>'
+        + '<h1>Analyse par métier et fiabilité documentaire</h1>'
+        + '<p>Chaque société est examinée selon son activité, sans comparer mécaniquement banques, BTP, tourisme ou santé. '
+        + 'Les indicateurs cités sont des points à vérifier, pas des résultats observés.</p>'
+        + f'<div class="stamp">{audit["universe"]} sociétés · {audit["curated"]} avec grille métier spécifique · '
+        + f'{audit["selected_pages_reviewed_issuers"]} avec au moins un fait appuyé par une page contrôlée</div></div>'
+        + priority_table
+        + '<section class="panel"><h2>Inventaire des contrôles</h2>'
+        + '<p>Une page sélectionnée contrôlée ne certifie pas un rapport entier. '
+        + 'Une source seulement référencée doit encore être rapprochée de son PDF. '
+        + 'Les indicateurs manquants restent indisponibles.</p>'
+        + '<div style="overflow-x:auto"><table><thead><tr>'
+        + '<th>Société</th><th>Métier</th><th>État</th><th>Preuves</th>'
+        + '<th>Indicateurs à rechercher</th><th>Source</th>'
+        + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+        + '<p><a class="btnlink outline" href="sector-readiness.json">Données d’audit JSON</a></p></section>'
+        + '</main><footer>BVC Analyzer Nour · contrôle des sources, non certification comptable.</footer>')
+    return shell('Métiers et fiabilité', body, style, script)
+
+
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
     fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in rec.get('candles', [])
         if isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']]}
@@ -437,6 +515,25 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
+    (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
+    from .economic_sources import load_catalog, catalog_page, catalog_summary
+    from .sector_sources import monitor_html, validate_state
+    economic_catalog = load_catalog()
+    watch_file = Path(__file__).resolve().parents[1] / "data/sector_source_candidates.json"
+    watch_state = json.loads(watch_file.read_text(encoding="utf-8")) if watch_file.exists() else None
+    if watch_state is not None:
+        validate_state(watch_state)
+    (output / "sources.html").write_text(
+        shell("Sources économiques marocaines",
+              header("index.html", report.get("snapshot_updated") or "")
+              + catalog_page(economic_catalog).replace("</main>", monitor_html(watch_state) + "</main>")
+              + "<footer>BVC Analyzer Nour · sources contextuelles non certifiantes.</footer>",
+              style, script), encoding="utf-8")
+    (output / "economic-sources-summary.json").write_text(
+        json.dumps(catalog_summary(economic_catalog), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
+    from .sector_audit import audit_sector_report
+    (output / "sector-readiness.json").write_text(json.dumps(audit_sector_report(report), ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     (output/'recherche.html').write_text(shell('Laboratoire statistique',
         header('index.html', fixture['snapshot_updated']) + research_body(fixture, report),
         style, script), encoding='utf-8')

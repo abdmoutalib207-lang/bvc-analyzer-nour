@@ -37,10 +37,19 @@ def _rsi(closes, period=14):
 def technical(record):
     bars = record.get("candles") or []
     # The first malformed bar blocks precise OHLC-derived indicators; no fabrication.
-    clean = [b for b in bars if all(isinstance(b.get(k), (int,float)) and not isinstance(b.get(k), bool) and
-                                     math.isfinite(float(b[k])) for k in ("o","h","l","c","v"))
-             and b["c"] > 0 and b["h"] >= max(b["o"], b["c"], b["l"])
-             and b["l"] <= min(b["o"], b["c"]) and b["v"] >= 0]
+    clean = []
+    for bar in bars:
+        try:
+            if any(isinstance(bar.get(k), bool) or not isinstance(bar.get(k), (int, float))
+                   for k in ("o", "h", "l", "c", "v")):
+                continue
+            b = {k: float(bar[k]) for k in ("o", "h", "l", "c", "v")}
+        except (AttributeError, TypeError, ValueError, OverflowError):
+            continue
+        if (all(math.isfinite(v) for v in b.values())
+                and b["c"] > 0 and b["h"] >= max(b["o"], b["c"], b["l"])
+                and b["l"] <= min(b["o"], b["c"]) and b["v"] >= 0):
+            clean.append(b)
     resumed = bool(record.get("resumed_recently"))
     if resumed:
         n = record.get("sessions_since_resume")

@@ -5,6 +5,7 @@ from statistics import median, stdev
 from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION
 from .fundamentals import coverage
 from .statistics import describe
+from .sector_methods import guidance
 
 
 def _mean(items):
@@ -42,7 +43,7 @@ def analyze(record, asof, quantity=1000):
                 invalid_close.append(day.isoformat())
                 continue
             valid.append({"d": day.isoformat(), "o": o, "h": h, "l": l, "c": c, "v": v})
-        except (KeyError, ValueError, TypeError):
+        except (KeyError, ValueError, TypeError, OverflowError):
             issues.append("Ligne illisible")
     if [bar["d"] for bar in valid] != sorted(bar["d"] for bar in valid):
         issues.append("Dates historiques non croissantes")
@@ -50,10 +51,20 @@ def analyze(record, asof, quantity=1000):
 
     age_days = None
     if valid and record.get("price_asof"):
-        age_days = (date.fromisoformat(asof) - date.fromisoformat(record["price_asof"])).days
+        try:
+            age_days = (date.fromisoformat(asof) - date.fromisoformat(record["price_asof"])).days
+        except (TypeError, ValueError):
+            issues.append("Date de cours illisible")
     if age_days is None or age_days < 0 or age_days > 4 or record.get("stale"):
         issues.append("Cours absent, futur ou périmé à la date du rapport")
-    if not valid or abs(valid[-1]["c"] - float(record.get("price") or 0)) > .001 or valid[-1]["d"] != record.get("price_asof"):
+    try:
+        price = float(record.get("price"))
+    except (TypeError, ValueError, OverflowError):
+        price = None
+    if price is not None and (not isfinite(price) or price <= 0):
+        price = None
+    if (not valid or price is None or abs(valid[-1]["c"] - price) > .001
+            or valid[-1]["d"] != record.get("price_asof")):
         issues.append("Désaccord entre séance, clôture et instantané")
     if invalid_open:
         issues.append(f"{len(invalid_open)} ouverture(s) hors fourchette : OHLC non fiables pour ATR / spread")
@@ -96,7 +107,7 @@ def analyze(record, asof, quantity=1000):
     else:
         verdict = "LIMITÉ"
     return {
-        "symbol": symbol, "name": record.get("name"),
+        "symbol": symbol, "name": record.get("name"), "sector": record.get("sector"),
         "decision": verdict,
         "decision_type": "data_readiness_only",
         "asof": record.get("price_asof"), "age_calendar_days": age_days,
@@ -141,11 +152,21 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
         historical = asof < str(fixture.get('snapshot_updated', ''))[:10]
-        item["fundamental"] = fundamentals(rec, None if historical else facts.get(symbol), asof=asof)
+        # A quote can have a numeric price yet be rejected by the market
+        # integrity checks (stale, future, or inconsistent with last close).
+        # It must never be used to price annual EPS/book value in that case.
+        quote_for_valuation = ({**rec, 'stale': True}
+                               if item['decision'] in ('INDISPONIBLE', 'SUSPENDU')
+                               else rec)
+        item["fundamental"] = fundamentals(
+            quote_for_valuation, None if historical else facts.get(symbol), asof=asof)
         if historical:
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
         item["historical_statistics"] = describe(dated)
         item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
+        # Descriptive industry-specific review prompts only; not a financial fact
+        # and not an input to the score or to the technical indicators.
+        item["sector_guidance"] = guidance(symbol, {"sector": rec.get("sector")})
         results.append(item)
     return {
         "project": fixture["project"], "schema_version": 2, "analysis_date": asof,

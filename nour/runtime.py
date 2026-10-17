@@ -5,12 +5,15 @@ from zoneinfo import ZoneInfo
 ZONE = ZoneInfo("Africa/Casablanca")
 SLOTS = {
     "45 9 * * 1-5": ("morning", "09:45", "Briefing du matin"),
-    "46 11 * * 1-5": ("refresh", "11:46", "Actualisation de fin de matinée"),
-    "45 13 * * 1-5": ("midday", "13:45", "Briefing de mi-journée"),
-    "45 15 * * 1-5": ("preclose", "15:45", "Actualisation avant clôture"),
-    "0 18 * * 1-5": ("closing", "18:00", "Briefing de fin de journée / filet de sécurité"),
+    "45 12 * * 1-5": ("midday", "12:45", "Briefing de mi-journée"),
+    "0 16 * * 1-5": ("closing", "16:00", "Briefing de clôture (confirmation requise)"),
 }
 EDITIONS = {"morning": "matin", "midday": "midi", "closing": "cloture"}
+# Manual refreshes remain possible without creating additional daily cron jobs.
+MANUAL_ONLY = {
+    "refresh": ("refresh", None, "Actualisation manuelle"),
+    "preclose": ("preclose", None, "Point provisoire manuel"),
+}
 
 
 def source_commit(environment):
@@ -35,6 +38,7 @@ def run_context(now=None, schedule="", event="local", slot="auto", started_at=No
             target -= timedelta(days=1)
     elif slot != "auto":
         choices = {value[0]: value for value in SLOTS.values()}
+        choices.update(MANUAL_ONLY)
         if slot not in choices:
             raise ValueError(f"Créneau manuel inconnu : {slot}")
         selected, clock, label = choices[slot]

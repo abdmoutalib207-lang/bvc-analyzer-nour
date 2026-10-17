@@ -37,8 +37,14 @@ def _calculate(record, facts):
     def fact(key):
         f = data.get(key) or {}
         v, page = f.get('valeur'), f.get('page')
-        if (isinstance(v, bool) or not isinstance(v, (int,float)) or not math.isfinite(v)
-                or isinstance(page, bool) or not isinstance(page,int) or page < 1):
+        if isinstance(v, bool) or not isinstance(v, (int, float)):
+            return None
+        try:
+            numeric = float(v)
+        except (OverflowError, ValueError, TypeError):
+            return None
+        if (not math.isfinite(numeric) or isinstance(page, bool)
+                or not isinstance(page, int) or page < 1):
             return None
         if f.get('devise', out['currency']) != 'MAD':
             return None
@@ -48,8 +54,9 @@ def _calculate(record, facts):
             accounting_basis=f.get('base') or out['accounting_basis'],
             original_unit=f.get('unite_au_rapport'),
             document_hash=f.get('document_hash'), printed_page=f.get('printed_page'),
-            validation_status=f.get('validation_status','referenced_import'))
-        return float(v)
+            validation_status=f.get('validation_status','referenced_import'),
+            period_end=f.get('period_end'), currency=f.get('devise', out['currency']))
+        return numeric
     if out['currency'] != 'MAD':
         out['warnings'].append('Devise étrangère : aucun ratio au cours MAD sans conversion documentée.')
         return out
@@ -61,6 +68,10 @@ def _calculate(record, facts):
         net = fact('resultat_net_social')
     if equity is None:
         equity = fact('capitaux_propres_sociaux')
+    # Keep the consolidated *total* as a traceable review item only.
+    # It must never replace net income attributable to group shareholders.
+    if net is None and data.get('resultat_net_consolide'):
+        fact('resultat_net_consolide')
     weighted = fact('nombre_actions_retenu_pour_le_bpa')
     existing = fact('nombre_actions_existant')
     ordinary = fact('nombre_actions') or fact('nombre_actions_au_rapport')
@@ -91,7 +102,12 @@ def _calculate(record, facts):
     previous = fact(f"chiffre_affaires_{(facts.get('exercice') or 0)-1}")
     dividend = fact('dividende_par_action')
     price = record.get('price')
-    price = float(price) if isinstance(price,(int,float)) and not isinstance(price,bool) and math.isfinite(price) and price>0 else None
+    try:
+        price = float(price) if isinstance(price, (int, float)) and not isinstance(price, bool) else None
+    except (OverflowError, ValueError, TypeError):
+        price = None
+    if price is not None and (not math.isfinite(price) or price <= 0):
+        price = None
     eps = net*1e6/eps_shares if net is not None and eps_shares and eps_shares>0 else None
     book = equity*1e6/book_shares if equity is not None and book_shares and book_shares>0 else None
     rnd = lambda x: round(x,2) if x is not None and math.isfinite(x) else None
@@ -203,10 +219,51 @@ def _calculate(record, facts):
 
 
 def calculate(record, facts, asof=None):
-    """Canonical calculation boundary: audit contracts before any score consumes it."""
+    """Canonical calculation boundary: audit contracts before any score consumes it.
+
+    Annual and semiannual facts are distinct. Never show a report whose period
+    is after the analysis date, even if it is present in the imported snapshot.
+    Never combine a future or explicitly stale price with historical EPS/equity.
+    """
     from .financial_audit import audit_financials, apply_financial_audit
     asof = asof or date.today().isoformat()
-    computed = _calculate(record, facts)
+    # audit_financials also validates this ISO date, but validate before any
+    # calculation so invalid dates cannot leak a future report into the result.
+    analysis_day = date.fromisoformat(asof)
+    visible_facts = facts
+    if isinstance(facts, dict):
+        year = facts.get('exercice')
+        annual = facts.get('exercice_clos') or (
+            f'{year}-12-31' if isinstance(year, int) and not isinstance(year, bool)
+            else None)
+        try:
+            annual_day = date.fromisoformat(annual)
+        except (TypeError, ValueError):
+            annual_day = None
+        if annual_day is not None and annual_day > analysis_day:
+            # A future annual report must not leak through the provenance
+            # drawer even though the financial audit would block its ratios.
+            visible_facts = None
+    if isinstance(visible_facts, dict) and isinstance(visible_facts.get('latest_report'), dict):
+        period = visible_facts['latest_report'].get('period_end')
+        try:
+            report_day = date.fromisoformat(period)
+        except (TypeError, ValueError):
+            report_day = None
+        if report_day is None or report_day > analysis_day:
+            visible_facts = {**visible_facts, 'latest_report': None}
+    visible_record = record
+    quote_day = record.get('price_asof')
+    if quote_day is not None:
+        try:
+            valid_quote_day = date.fromisoformat(quote_day) <= analysis_day
+        except (TypeError, ValueError):
+            valid_quote_day = False
+        if not valid_quote_day:
+            visible_record = {**record, 'price': None}
+    if record.get('stale'):
+        visible_record = {**visible_record, 'price': None}
+    computed = _calculate(visible_record, visible_facts)
     checks = audit_financials(record, facts, asof, calculated=computed)
     return apply_financial_audit(computed, checks)
 

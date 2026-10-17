@@ -72,6 +72,36 @@ class FinancialAuditTests(unittest.TestCase):
                     self.assertIn(metric, a['blocked_metrics'])
                 self.assertNotIn('roe_pct', a['blocked_metrics'])
 
+    def test_displayed_earnings_and_pnb_share_ratio_unit_and_period_guards(self):
+        # An incorrect RNPG unit previously left a false amount visible even
+        # though BPA/PER/ROE were withheld by the financial audit.
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['unite'] = 'KMAD'
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['earnings_mmad'])
+        self.assertIsNone(result['eps_mad'])
+        self.assertIsNone(result['pe'])
+        self.assertIsNone(result['roe_pct'])
+        self.assertEqual(result['revenue_growth_pct'], 20)
+        self.assertIn('earnings_mmad', result['financial_audit']['blocked_metrics'])
+
+        f = facts()
+        f['faits']['produit_net_bancaire'] = fact(150, period='2024-12-31')
+        f['faits']['produit_net_bancaire_2024'] = fact(120, period='2024-12-31')
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['pnb_mmad'])
+        self.assertIsNone(result['pnb_growth_pct'])
+        self.assertEqual(result['earnings_mmad'], 20)
+        self.assertIn('pnb_mmad', result['financial_audit']['blocked_metrics'])
+
+    def test_displayed_earnings_can_be_negative_without_fabricated_positive_per(self):
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['valeur'] = -20
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertEqual(result['earnings_mmad'], -20)
+        self.assertIsNone(result['pe'])
+        self.assertEqual(result['eps_mad'], -20)
+
     def test_explicit_cross_period_or_social_group_mix_is_blocked(self):
         f = facts()
         f['faits']['capitaux_propres_part_groupe']['period_end'] = '2026-06-30'
@@ -108,6 +138,79 @@ class FinancialAuditTests(unittest.TestCase):
         self.assertIn('net_debt_strict_mmad', self.audit(f)['blocked_metrics'])
         f['faits']['dividende_par_action'] = fact(-2, 'MAD')
         self.assertIn('dividend_yield_pct', self.audit(f)['blocked_metrics'])
+
+    def test_huge_integer_fact_and_price_do_not_crash_build(self):
+        f = facts()
+        f['faits']['dettes_financieres']['valeur'] = 10 ** 1000
+        out = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(out['net_debt_strict_mmad'])
+        self.assertIsNone(out['net_debt_ebitda'])
+        self.assertIn('invalid_numeric_fact',
+                      {c['code'] for c in out['financial_audit']['checks']})
+        f = facts()
+        out = calculate({'price': 10 ** 1000}, f, asof='2026-10-16')
+        self.assertIsNone(out['pe'])
+        self.assertIsNone(out['pb'])
+        self.assertEqual(out['earnings_mmad'], 20)
+
+    def test_future_semester_is_not_exposed_and_does_not_change_annual_ratios(self):
+        f = facts()
+        f['latest_report'] = {'period_end': '2026-12-31',
+                              'reported_net_millions': 999999,
+                              'document_url': 'https://example.org/future.pdf'}
+        original = copy.deepcopy(f)
+        result = calculate({'price': 100, 'price_asof': '2026-10-15'}, f,
+                           asof='2026-10-16')
+        self.assertIsNone(result['latest_report'])
+        self.assertEqual(result['earnings_mmad'], 20)
+        self.assertEqual(result['pe'], 5)
+        self.assertEqual(f, original)
+        # A valid older half-year remains visible without annualization.
+        f['latest_report']['period_end'] = '2026-06-30'
+        result = calculate({'price': 100, 'price_asof': '2026-10-15'}, f,
+                           asof='2026-10-16')
+        self.assertEqual(result['latest_report']['reported_net_millions'], 999999)
+        self.assertEqual(result['earnings_mmad'], 20)
+
+    def test_future_and_explicitly_stale_quotes_do_not_price_annual_ratios(self):
+        f = facts()
+        for rec in ({'price': 100, 'price_asof': '2026-10-17'},
+                    {'price': 100, 'price_asof': 'not-a-date'},
+                    {'price': 100, 'price_asof': '2026-10-15', 'stale': True}):
+            with self.subTest(rec=rec):
+                result = calculate(rec, f, asof='2026-10-16')
+                self.assertIsNone(result['pe'])
+                self.assertIsNone(result['pb'])
+                self.assertEqual(result['earnings_mmad'], 20)
+                self.assertEqual(result['eps_mad'], 20)
+
+    def test_future_annual_report_does_not_leak_into_provenance_or_metrics(self):
+        f = facts()
+        f['exercice'] = 2027
+        f['exercice_clos'] = '2027-12-31'
+        f['faits']['resultat_net_part_groupe']['valeur'] = 999999
+        original = copy.deepcopy(f)
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        self.assertIsNone(result['document_url'])
+        self.assertEqual(result['evidence'], {})
+        self.assertIsNone(result['earnings_mmad'])
+        self.assertIsNone(result['eps_mad'])
+        self.assertIn('annual_period_future',
+                      {x['code'] for x in result['financial_audit']['checks']})
+        self.assertEqual(f, original)
+
+    def test_availability_marks_blocked_not_merely_missing_and_preserves_others(self):
+        f = facts()
+        f['faits']['resultat_net_part_groupe']['unite'] = 'KMAD'
+        result = calculate({'price': 100}, f, asof='2026-10-16')
+        availability = result['metric_availability']
+        self.assertEqual(availability['earnings_mmad']['status'], 'blocked')
+        self.assertIn('fact_unit_mismatch',
+                      availability['earnings_mmad']['reason_codes'])
+        self.assertEqual(availability['eps_mad']['status'], 'blocked')
+        self.assertEqual(availability['revenue_growth_pct']['status'], 'available')
+        self.assertEqual(availability['pnb_mmad']['status'], 'unavailable')
+        self.assertIsNone(result['earnings_mmad'])
 
     def test_core_debt_inputs_must_be_compatible_and_ebe_positive(self):
         f = facts()

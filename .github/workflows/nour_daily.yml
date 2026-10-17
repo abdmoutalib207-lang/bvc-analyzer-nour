@@ -33,13 +33,9 @@ on:
   schedule:
     - cron: '45 9 * * 1-5'
       timezone: 'Africa/Casablanca'
-    - cron: '46 11 * * 1-5'
+    - cron: '45 12 * * 1-5'
       timezone: 'Africa/Casablanca'
-    - cron: '45 13 * * 1-5'
-      timezone: 'Africa/Casablanca'
-    - cron: '45 15 * * 1-5'
-      timezone: 'Africa/Casablanca'
-    - cron: '0 18 * * 1-5'
+    - cron: '0 16 * * 1-5'
       timezone: 'Africa/Casablanca'
 permissions:
   contents: write
@@ -76,11 +72,16 @@ jobs:
         id: news
         continue-on-error: true
         run: python tools/update_news.py
-      - name: Discover official financial documents (candidates only)
+      - name: Discover official financial documents at the 16h edition (candidates only)
         id: official_sources
-        if: github.event_name != 'schedule' || github.event.schedule == '0 18 * * 1-5'
+        if: github.event_name != 'schedule' || github.event.schedule == '0 16 * * 1-5'
         continue-on-error: true
         run: python tools/update_official_sources.py
+      - name: Discover sector publications from official Moroccan institutions
+        id: sector_sources
+        if: github.event_name != 'schedule' || github.event.schedule == '0 16 * * 1-5'
+        continue-on-error: true
+        run: python tools/update_sector_sources.py
       - name: Refresh MASI and market overview directly from CDG
         id: overview
         continue-on-error: true
@@ -177,5 +178,6 @@ jobs:
           echo 'Market: ${{ steps.market.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'News: ${{ steps.news.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'Official document discovery: ${{ steps.official_sources.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Sector publication discovery: ${{ steps.sector_sources.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'MASI: ${{ steps.overview.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'Macro: ${{ steps.macro.outcome }}' >> "$GITHUB_STEP_SUMMARY"
