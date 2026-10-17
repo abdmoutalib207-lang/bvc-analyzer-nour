@@ -137,7 +137,13 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
         await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
         assert.equal(await page.locator('#assistant-symbol option').count(),81);
-        assert.equal(await page.locator('#assistant-ai-option').isVisible(),true);
+        assert.equal(await page.locator('#assistant-ai-option').isVisible(),true,
+          JSON.stringify(await page.evaluate(async()=>({
+            config:await fetch('assistant-config.json').then(r=>r.json()).catch(e=>String(e)),
+            optionHidden:document.getElementById('assistant-ai-option')?.hidden,
+            optionStyle:getComputedStyle(document.getElementById('assistant-ai-option')).display,
+            scriptUrl:[...document.scripts].find(x=>x.src.includes('assistant.js'))?.src
+          }))));
         assert.equal(await page.locator('#assistant-access-option').isVisible(),false);
         const expected=route.startsWith('titres/')?route.split('/')[1].split('.')[0]:'MASI';
         assert.equal(await page.locator('#assistant-symbol').inputValue(),expected);
