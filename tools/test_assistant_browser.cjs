@@ -77,9 +77,11 @@ const shots=process.env.NOUR_SCREENSHOTS;
           for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','Autorité de contrôle des assurances','Office des Changes']){
             assert.ok(body.includes(name),'Missing economic source '+name);
           }
-          assert.equal(await page.locator('table tbody tr').count(),36);
           const summary=await (await context.request.get(new URL('economic-sources-summary.json',base).href)).json();
-          assert.equal(summary.institution_count,36);
+          // Institutions may grow as official sources are curated: verify parity,
+          // not a stale fixed count from an older source catalog.
+          assert.ok(Number.isInteger(summary.institution_count)&&summary.institution_count>=36);
+          assert.equal(await page.locator('table tbody tr').count(),summary.institution_count);
           assert.equal(summary.auto_import_enabled,false);
           assert.equal(summary.usable_to_certify_issuer_financial_facts,false);
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Sources page overflows '+width);
