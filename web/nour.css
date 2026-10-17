@@ -91,4 +91,4 @@ summary{cursor:pointer;font-size:15px;font-weight:650;color:#d5e7dd}summary:focu
 @media(max-width:650px){.chart-root .chart svg{min-width:0}.chart-toolbar button{min-height:42px}.chart-navigation{gap:5px}.chart-readout{min-height:100px;gap:7px 11px}.chart-root:fullscreen,.chart-root.chart-expanded{padding:12px}.chart-range-controls{gap:10px}}
 
 /* Long Git identities remain readable in the provenance panel on mobile. */
-.panel code{overflow-wrap:anywhere;word-break:break-word}
+.panel code,.panel [data-publication-commit]{overflow-wrap:anywhere;word-break:break-word}
