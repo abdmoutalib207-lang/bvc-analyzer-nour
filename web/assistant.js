@@ -359,7 +359,12 @@
   const doc=root.document, dialog=doc.getElementById('assistant-dialog');
   if(!dialog)return;
   const el=id=>doc.getElementById('assistant-'+id), prefix=dialog.dataset.prefix||'';
-  let data=null, loading=null, config={endpoint:null}, busy=false, controller=null, generation=0, conversation={};
+  let data=null, loading=null, config={endpoint:null}, busy=false, controller=null, generation=0, conversation={}, privateCode=null;
+  function showAccessState(){
+    const enabled=el('ai').checked;
+    el('access-option').hidden=!enabled||Boolean(privateCode);
+    el('access-active').hidden=!enabled||!privateCode;
+  }
   async function loadHistory(question,symbols){
     if(!datesIn(question).length||/actualite|radar|briefing|publication/.test(normalize(question)))return;
     for(const s of symbols){
@@ -421,12 +426,18 @@
       conversation=answer.context||{};
       if(answer.symbols.length===1&&(answer.symbols[0]==='MASI'||data.symbols[answer.symbols[0]]))el('symbol').value=answer.symbols[0];
       if(el('ai').checked&&config.endpoint){
-        const secret=el('access').value;
+        const secret=privateCode||el('access').value.trim();
         if(secret.length<20||secret.length>200)throw new Error('Renseignez votre code privé Cloudflare (20 à 200 caractères).');
         el('status').textContent='Explication IA en cours…';controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),35000);
         let res;try{res=await root.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+secret},credentials:'omit',signal:controller.signal,
           body:JSON.stringify({question:answer.resolvedQuestion||question,symbols:answer.symbols,consent:true})});}finally{clearTimeout(timeout);}
-        const result=await res.json();if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
+        const result=await res.json();
+        if(res.status===401||res.status===403){
+          privateCode=null;el('access').value='';showAccessState();
+          throw new Error('Code Cloudflare refusé. Saisissez-le à nouveau.');
+        }
+        if(!res.ok||result.mode!=='llm'||typeof result.text!=='string')throw new Error(result.error||'Le fournisseur IA n’a pas répondu.');
+        privateCode=secret;el('access').value='';showAccessState();
         if(epoch!==generation)return;
         message('assistant',result.text,result.sources||answer.sources,'llm');
         message('assistant','Référence chiffrée Nour (distincte du texte IA) :\n\n'+answer.text,answer.sources);
@@ -438,13 +449,21 @@
   el('open').hidden=false;
   el('open').addEventListener('click',async()=>{dialog.showModal();el('question').focus();try{await load();}catch(error){message('assistant',error.message);el('status').textContent='Chargement impossible.';}});
   el('close').addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('close',()=>{el('access').value='';});
+  // Never persist the private code in localStorage, sessionStorage or cookies.
+  // pagehide also clears a restored back-forward cache page after navigation.
+  root.addEventListener('pagehide',()=>{privateCode=null;el('access').value='';showAccessState();});
+  el('forget').addEventListener('click',()=>{privateCode=null;el('access').value='';showAccessState();el('access').focus();});
+  el('expand').addEventListener('click',()=>{
+    const expanded=dialog.classList.toggle('assistant-expanded');
+    el('expand').setAttribute('aria-pressed',String(expanded));
+    el('expand').textContent=expanded?'Réduire':'Agrandir';
+    el('expand').setAttribute('aria-label',expanded?'Réduire la fenêtre':'Agrandir la fenêtre');
+  });
   el('symbol').addEventListener('change',()=>{conversation={};});
-  el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};el('access').value='';resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
+  el('clear').addEventListener('click',()=>{generation++;controller?.abort();controller=null;conversation={};resetBusy();el('messages').replaceChildren();el('question').value='';el('status').textContent='Conversation effacée de cette page.';el('question').focus();});
   el('form').addEventListener('submit',event=>{event.preventDefault();submit(el('question').value);});
   el('ai').addEventListener('change',()=>{
-    el('access-option').hidden=!el('ai').checked;
-    if(!el('ai').checked)el('access').value='';
+    showAccessState();
     el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';
   });
   for(const button of doc.querySelectorAll('[data-assistant-question]'))button.addEventListener('click',()=>submit(button.dataset.assistantQuestion));
