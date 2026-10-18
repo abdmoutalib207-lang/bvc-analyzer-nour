@@ -1,0 +1,34 @@
+# Équipe de contrôle Nour et surveillance persistante
+
+Le travail est réparti entre collecte, contrôle des chiffres, vérification
+indépendante et supervision de l'intégration. Pendant le développement, ces
+missions peuvent être confiées à des agents distincts avec périmètres limités.
+Leur activité conversationnelle ne constitue pas un service IA exécuté 24h/24.
+
+La permanence opérationnelle repose sur les contrôles du dépôt :
+
+| Mission | Exécution persistante | Preuve |
+| --- | --- | --- |
+| Collecte | Collecteurs CDG et Wafabourse, après clôture | Sources datées et empreintes |
+| Contrôle financier | Sommes DH et titres, puis chaque ligne et prix | `data/market_integrity.json` |
+| Vérification indépendante | Tests, audit final du rapport et navigateur | Workflow de revue puis publication |
+| Supervision | État réel des collectes, refus de publier un bilan incohérent | Résumé GitHub Actions |
+| Mémoire | Incidents et corrections conservés, leçons et tests | `data/error_memory.json`, `data/market_integrity_log.json` |
+
+Le workflow quotidien contrôle les éditions de 09h45, 12h45 et 16h00 et ajoute
+une vérification de clôture à 17h15, heure de Casablanca, les jours ouvrés.
+Les contrôles de clôture ne valident pas une observation intrajournalière.
+Les horaires GitHub sont des déclenchements planifiés, pas une garantie
+d'exécution à la seconde. Les agents n'ajoutent aucun abonnement LLM ni
+accès d'écriture au moteur principal.
+
+Une correction automatique ne porte que sur quantités et montants : les OHLC
+doivent être identiques, la séance et les titres doivent correspondre, chaque
+ligne doit concorder entre distributeurs, puis les agrégats doivent se retrouver.
+Une divergence de prix ou une source incomplète interdit l'arbitrage automatique.
+Des fournisseurs différents peuvent partager un flux amont ; le contrôle ne
+prétend pas certifier leur indépendance ni l'intégralité du marché hors périmètre.
+
+Le journal d'incidents est sauvegardé même si la publication est refusée,
+sans publier les données de marché refusées. Les incidents résolus ne sont pas
+effacés ; une réapparition rouvre le dossier avec son compteur d'occurrences.

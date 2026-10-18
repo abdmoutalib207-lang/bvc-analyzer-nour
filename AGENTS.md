@@ -38,6 +38,12 @@ Ne pas installer leurs dépendances optionnelles ni lancer une commande de mise
 
 ## Vérification et livraison
 
+Avant une correction de collecte ou de calcul, lire `data/error_memory.json`
+et `docs/error-memory.md` lorsqu'ils existent. Conserver les incidents résolus,
+la preuve avant/après et un test anti-récidive ; une panne de source ne résout
+jamais un incident. Voir `docs/market-control-team.md` pour les rôles spécialisés
+et leurs contrôles programmés. Les profils ne sont pas des processus IA permanents.
+
 `python tools/ecc.py verify` vérifie provenance, empreintes et liens locaux.
 `python tools/verify_nour.py --build --asof YYYY-MM-DD` construit, teste les
 contrats Python, les contrôles JS et audite les pages. Les étapes non effectuées

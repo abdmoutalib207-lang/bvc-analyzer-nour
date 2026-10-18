@@ -152,5 +152,11 @@ for(const symbol of ['DIS','DLM']){
 check('IBM est elle encore cotée ?',r=>r.text.includes('Cotation suivie')&&r.text.includes('2023-06-30')&&!r.text.includes('ne reconnais pas'));
 check('PER IBM',r=>r.text.includes('PER : indisponible')&&r.text.includes('aucun compte annuel 2025')&&r.sources.some(s=>s.url.endsWith('IB_Maroc_2022_S1_23.pdf')));
 for(const symbol of ['IBM','MDP','SLM'])assert.ok(data.symbols[symbol].quality.usable_close_bars>700,symbol+' full documented history');
+const memoryFixture=structuredClone(data);
+memoryFixture.cross_source_volume_audit={status:'matched',session:'2026-10-16',observed_at:'2026-10-18T21:00:00Z',cross_source_verified:true,quantities_cross_source_verified:true};
+memoryFixture.error_memory_summary={incidents:10,open:0,resolved:10,lessons:1,lessons_catalog:[{title:'Quantité distincte du montant',rule:'Vérifier les unités.'}]};
+check('Montre le journal des erreurs',r=>r.text.includes('10 résolus conservés')&&r.text.includes('Vérifier les unités.')&&r.sources.some(s=>s.url==='error-memory.json')&&r.sources.some(s=>s.url==='market-integrity.json'),'MASI',{},memoryFixture);
+memoryFixture.cross_source_volume_audit={status:'unavailable',cross_source_verified:false,quantities_cross_source_verified:false};
+check('Contrôle multisource',r=>r.text.includes('Montants entre fournisseurs non confirmés')&&!r.text.includes('confirmés ligne par ligne'),'MASI',{},memoryFixture);
 assert.ok(domains.labFilters('laboratoire 20 seances 1 % a l’achat 2 % a la vente').filters.buy===1);
 console.log(`Assistant domains: ${checked} checked answers across all ${data.knowledge.capabilities.length} capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);

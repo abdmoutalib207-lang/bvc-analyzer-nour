@@ -9,6 +9,7 @@ OUTCOMES = {
     'partial': 'Intégration partielle · observations refusées pour conflit',
     'conflict': 'Nouvelle observation refusée pour conflit',
     'unchanged': 'Aucune nouveauté',
+    'reconciled': 'Séance rapprochée entre fournisseurs',
     'error': 'Source indisponible ou observation invalide',
     'intraday': 'Observation provisoire · aucune clôture intégrée',
     'awaiting_quotes': 'En attente de transactions',
@@ -41,7 +42,7 @@ def collection_view(health):
             'checked_at': health.get('checked_at'), 'last_session': health.get('last_session'),
             'message': health.get('message'),
             'conflicts': deepcopy((health.get('details') or {}).get('conflicts') or []),
-            'fully_validated': result in ('updated', 'unchanged')}
+            'fully_validated': result in ('updated', 'unchanged', 'reconciled')}
 
 
 def provenance(snapshot_commit, generator_commit, fixture_path=None):

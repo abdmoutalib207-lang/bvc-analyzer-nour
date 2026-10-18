@@ -5,7 +5,7 @@
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const finite=x=>typeof x==='number'&&Number.isFinite(x);
   const fmt=(x,u='')=>finite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(u?' '+u:''):'indisponible';
-  const stateLabel=s=>({available:'disponible',insufficient:'insuffisant',historical_only:'historique uniquement',closed:'clôture',published:'publié',provisional:'provisoire',stale:'archive ancienne',unavailable:'indisponible',partial:'partiel',updated:'actualisé',unchanged:'inchangé'}[s]||s||'indisponible');
+  const stateLabel=s=>({available:'disponible',insufficient:'insuffisant',historical_only:'historique uniquement',closed:'clôture',published:'publié',provisional:'provisoire',stale:'archive ancienne',unavailable:'indisponible',partial:'partiel',updated:'actualisé',unchanged:'inchangé',reconciled:'rapproché entre fournisseurs'}[s]||s||'indisponible');
   const isMethod=question=>/explique|c.est quoi|qu.est.ce|que.*veut dire|ca veut dire|a quoi (?:sert|correspond)|signifi|definition|comment|formule|pour les nuls|difference|fonctionn/.test(normalize(question));
   const terms=[
     [/\bvar(?:95)?\b|value at risk/,'var'],[/\bcvar(?:95)?\b|expected shortfall/,'cvar'],
@@ -126,6 +126,13 @@
       if(!articles.length)lines.push('Aucune publication dans le flux disponible ne signifie pas qu’aucune publication existe.');
       if(/inflation|taux directeur/.test(q))lines.push('Nour ne fournit pas ici un chiffre validé de taux ou d’inflation : seul le radar de sources est implémenté.');
       lines.push(`État du radar : ${data.health?.news_health?.status||'indisponible'}.`);definition('news');link('Radar complet et filtres','actualites.html');return result('news');
+    }
+    if(/journal.*erreurs?|memoire.*erreurs?|erreurs?.*corrige|controle.*multisource|rapprochement.*sources/.test(q)){
+      const a=data.cross_source_volume_audit||{},m=data.error_memory_summary||{};
+      lines.push(`Contrôle des volumes : ${a.status||'non observé'} · séance ${a.session||'non datée'} · observation ${a.observed_at||'non datée'}. Montants entre fournisseurs ${a.cross_source_verified?'confirmés ligne par ligne':'non confirmés'} ; quantités ${a.quantities_cross_source_verified?'confirmées':'non confirmées'}.`);
+      lines.push(`Mémoire durable : ${m.incidents??0} incidents · ${m.open??0} ouverts · ${m.resolved??0} résolus conservés · ${m.lessons??0} règles anti-récidive.`);
+      for(const lesson of m.lessons_catalog||[])lines.push(lesson.title+' : '+lesson.rule);
+      link('Journal des erreurs et corrections','error-memory.json');link('Rapprochement des volumes','market-integrity.json');return result('quality');
     }
     if(/collecte|mise a jour|actualis|fraicheur/.test(q)){
       const r=data.runtime||{};definition('collection');lines.push(`Dernière construction : ${r.built_at||'indisponible'} · démarrage ${r.started_at||'indisponible'} · édition ${r.label||r.slot||'indisponible'} · horaire visé ${r.target_time||'non programmé'} · retard constaté ${fmt(r.delay_minutes,'minutes')}.`);

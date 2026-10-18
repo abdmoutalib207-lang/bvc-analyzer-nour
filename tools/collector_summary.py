@@ -8,7 +8,7 @@ def summary(data):
     out = ['## Nour : état réel des collectes', '', '| Collecte | État des données |', '| --- | --- |']
     for label, filename in [('Marché', 'health.json'), ('Actualités', 'news_health.json'),
                             ('Sources officielles', 'official_sources_health.json'),
-                            ('MASI', 'overview_health.json')]:
+                            ('MASI', 'overview_health.json'), ('Volumes multisources', 'market_integrity.json')]:
         try:
             record = json.loads((Path(data)/filename).read_text())
             status = record.get('result') or record.get('status') or 'non observé'

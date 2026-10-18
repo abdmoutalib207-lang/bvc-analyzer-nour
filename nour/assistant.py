@@ -7,6 +7,7 @@ import math
 from pathlib import Path
 from urllib.parse import urlsplit
 from .assistant_knowledge import knowledge
+from .market_integrity import integrity_summary
 
 VERSION = 'nour-assistant-data-v1'
 SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'issuer_status', 'history_provenance', 'sector_guidance', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_source', 'age_calendar_days',
@@ -78,6 +79,8 @@ def build_data(report, briefings=None, history_files=None):
         'snapshot_updated': report.get('snapshot_updated'), 'score_version': report.get('score_version'),
         'market': deepcopy(report.get('market_overview') or {}),
         'market_volume_audit': deepcopy(report.get('market_volume_audit') or {}),
+        'cross_source_volume_audit': integrity_summary(report.get('cross_source_volume_audit')),
+        'error_memory_summary': deepcopy(report.get('error_memory_summary') or {}),
         'runtime': deepcopy(report.get('runtime') or {}),
         'provenance': deepcopy(report.get('provenance') or {}),
         'intraday': deepcopy(report.get('intraday') or {}),
