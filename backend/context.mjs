@@ -7,7 +7,7 @@ export function retrieve(index, symbols, question) {
   if(!routes.length)routes=index.policy.routes.slice(0,1);
   if(routes.some(r=>r.id==='briefing'))routes=routes.filter(r=>r.id!=='overview');
   if(routes.some(r=>r.id==='overview'))routes=routes.filter(r=>['overview','news','macro','quality'].includes(r.id));
-  const base=['symbol','name','sector','url','price','price_source','asof','decision','age_calendar_days','quality','history_readiness','collection_conflicts','day_shares','day_turnover_mad_actual'];
+  const base=['symbol','name','sector','url','price','price_source','asof','decision','age_calendar_days','quality','history_readiness','collection_conflicts','day_shares','day_turnover_mad_actual','issuer_status','history_provenance'];
   const fields=new Set([...base,...routes.flatMap(r=>r.fields)]),keys=new Set(routes.flatMap(r=>r.definitions));
   const selected={};
   for(const s of [...new Set(symbols)]){
@@ -62,6 +62,7 @@ export function sources(context){
   for(const [symbol,row] of Object.entries(context.selected)){
     if(symbol==='MASI')continue;
     result.push({label:`Fiche ${symbol} · ${row.asof}`,url:row.url});
+    for(const source of row.issuer_status?.sources||[]){try{const u=new URL(source.url);if(u.protocol==='https:'&&!u.username&&!u.password)result.push({label:`${symbol} · ${source.label}`,url:u.href});}catch{}}
     const f=row.fundamental||{};
     for(const [key,e] of Object.entries(f.evidence||{})){
       const url=e.document_url||f.document_url;

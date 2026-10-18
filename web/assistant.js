@@ -419,11 +419,14 @@
         return families[i][1]+'\n'+text;
       }).join('\n\n'),sources,symbols,mode:'local',domain:'overview'};
     }
-    const answer=(selection&&queries.renderSelection(selection,data))||composed||(comprehensive&&titleOverview(data,symbols))||(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&queries?.facts(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
+    const statusQuestion=!dates.length&&symbols.some(s=>data.symbols[s]?.issuer_status)&&/cotation|cotee?s?\b|radie|suspend|derniers? comptes|retard.*publication/.test(q)&&!/\bper\b|\bbpa\b|\broe\b|dette/.test(q);
+    const statusAnswer=statusQuestion?{text:`Données Nour · analyse du ${data.analysis_date}.`,sources:[],symbols,mode:'local',domain:'quality'}:null;
+    const answer=statusAnswer||(selection&&queries.renderSelection(selection,data))||composed||(comprehensive&&titleOverview(data,symbols))||(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&queries?.facts(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
     if(comprehensive&&/actualites|nouvelles|radar/.test(q)){const extra=domains.answer('actualités '+symbols.join(' '),data,symbols);if(extra){answer.text+='\n\n'+extra.text;answer.sources.push(...extra.sources);}}
     if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|minoritaires|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
     if(/demain|prochaine seance|va (?:monter|baisser)/.test(q)&&!answer.text.includes(data.definitions.probability))answer.text+='\n\n'+data.definitions.probability;
     for(const s of answer.symbols||[]){const row=data.symbols?.[s];if(!row)continue;
+      if(row.issuer_status){const st=row.issuer_status;answer.text+='\n\n'+s+' · '+st.label+(answer.text.includes(st.reason)?'':'\n'+st.reason)+'\nDernier dépôt identifié : '+st.last_known_filing_date+' ; période '+st.last_known_financial_period+'.';for(const source of st.sources||[])answer.sources.push({label:s+' · '+source.label,url:source.url});}
       if(row.history_readiness?.label)answer.text+='\n\nQualité historique : '+row.history_readiness.label+'.';
       for(const c of row.collection_conflicts||[])answer.text+='\nCollecte '+s+' · '+c.session+' : conflit sur '+(c.fields||[]).join(', ')+'. Historique conservé ; rapprochement requis.';
     }

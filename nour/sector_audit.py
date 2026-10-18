@@ -180,7 +180,12 @@ def audit_sector_report(report):
         if row.get("sector_guidance") is not None and row["sector_guidance"] != method:
             violations.append({"symbol": symbol, "issue": "sector guidance diverges from canonical taxonomy"})
         source = f.get("document_url")
-        if not source:
+        known_status = row.get('issuer_status') or {}
+        if not source and known_status.get('current_documents_expected') is False:
+            status = 'archived_suspension'
+        elif not source and known_status.get('reporting_status') == 'late_filings':
+            status = 'known_reporting_gap'
+        elif not source:
             status = "missing_primary_document"
         elif audit_status == "blocked":
             status = "financial_audit_blocked"

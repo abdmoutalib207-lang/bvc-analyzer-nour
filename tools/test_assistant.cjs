@@ -28,7 +28,9 @@ assert.deepEqual(api.symbolsFor('Dis moi les probabilités car je veux comprendr
 assert.deepEqual(api.symbolsFor('Explique LES',data,'MASI'),['LES']);
 for(const s of Object.keys(data.symbols)){
   for(const q of ['résumé','fondamentaux','score','statistiques']){
-    const r=api.localAnswer(q,data,s);assert.ok(r.text.includes(s));assert.ok(r.text.includes(data.symbols[s].asof));
+    const r=api.localAnswer(q,data,s);assert.ok(r.text.includes(s));
+    if(data.symbols[s].asof)assert.ok(r.text.includes(data.symbols[s].asof));
+    else assert.ok(r.text.includes('Cotation suspendue')&&!r.text.includes('séance null'));
     assert.ok(r.sources.some(source=>source.url===`titres/${s}.html`));assert.equal(r.mode,'local');
   }
 }

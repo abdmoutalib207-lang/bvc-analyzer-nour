@@ -107,8 +107,15 @@ def analyze(record, asof, quantity=1000):
         verdict = "OBSERVABLE"
     else:
         verdict = "LIMITÉ"
+    documented_suspension = (record.get('suspended') and not raw
+        and (record.get('issuer_status') or {}).get('trading_status') == 'suspended')
+    if documented_suspension:
+        issues = ['Cotation suspendue : absence de transactions documentée ; aucun cours récent attesté.']
     return {
         "symbol": symbol, "name": record.get("name"), "sector": record.get("sector"),
+        "issuer_status": record.get('issuer_status'),
+        "history_provenance": record.get('history_provenance'),
+        "reference_quote": record.get('reference_quote'),
         "decision": verdict,
         "decision_type": "data_readiness_only",
         "asof": record.get("price_asof"), "age_calendar_days": age_days,
@@ -162,6 +169,9 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
                                else rec)
         item["fundamental"] = fundamentals(
             quote_for_valuation, None if historical else facts.get(symbol), asof=asof)
+        status = item.get('issuer_status') or {}
+        if status and not item['fundamental'].get('document_url'):
+            item['fundamental']['warnings'].append(status['reason'])
         if historical:
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
         item["historical_statistics"] = describe(dated)

@@ -14,7 +14,7 @@ import unicodedata
 POLICY_PATH = Path(__file__).resolve().parents[1] / 'knowledge/assistant_policy.json'
 BASE = ('symbol', 'name', 'sector', 'url', 'price', 'price_source', 'asof',
         'decision', 'age_calendar_days', 'quality', 'history_readiness',
-        'collection_conflicts', 'day_shares', 'day_turnover_mad_actual')
+        'collection_conflicts', 'day_shares', 'day_turnover_mad_actual', 'issuer_status', 'history_provenance')
 FUNDAMENTALS = ('exercise', 'document_url', 'period_end', 'currency', 'accounting_basis',
     'eps_mad', 'pe', 'pb', 'roe_pct', 'roe_average_equity_pct', 'roe_method',
     'earnings_mmad', 'book_value_per_share_mad', 'dividend_yield_pct', 'pnb_mmad',

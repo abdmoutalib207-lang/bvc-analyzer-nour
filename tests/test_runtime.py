@@ -126,7 +126,7 @@ class RuntimeContracts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary)
             (target/'data').mkdir(); (target/'web').mkdir()
-            for filename in ('market_snapshot.json','news.json','facts_reference.json'):
+            for filename in ('market_snapshot.json','news.json','facts_reference.json','issuer_status.json'):
                 shutil.copyfile(ROOT/'data'/filename,target/'data'/filename)
             with patch.object(run,'ROOT',target), patch.dict('os.environ',{},clear=True), redirect_stdout(io.StringIO()):
                 for slot in ('morning','midday','closing'):

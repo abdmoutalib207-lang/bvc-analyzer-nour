@@ -270,7 +270,12 @@ def calculate(record, facts, asof=None):
 
 def coverage(results):
     """Universe coverage is not the percentage of certified reports."""
+    archived = [r['symbol'] for r in results if (r.get('issuer_status') or {}).get('current_documents_expected') is False]
+    gaps = [r['symbol'] for r in results if r['symbol'] not in archived and not r['fundamental']['document_url']]
     return dict(universe=len(results), referenced=sum(bool(r['fundamental']['document_url']) for r in results),
+                current_universe=len(results)-len(archived), archived_symbols=archived,
+                current_missing_documents=gaps,
+                known_reporting_gaps=[r['symbol'] for r in results if r['symbol'] in gaps and (r.get('issuer_status') or {}).get('reporting_status') == 'late_filings'],
                 with_eps=sum(r['fundamental']['eps_mad'] is not None for r in results),
                 with_pb=sum(r['fundamental']['pb'] is not None for r in results),
                 with_roe=sum(r['fundamental']['roe_pct'] is not None for r in results),
