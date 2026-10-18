@@ -58,6 +58,10 @@
     periodButtons.forEach(b => b.setAttribute('aria-pressed', String(state.period === b.dataset.period)));
     toggleButtons.forEach(b => b.setAttribute('aria-pressed', String(state.indicators.has(b.dataset.indicator))));
     modeButtons.forEach(b => b.setAttribute('aria-pressed', String(state.type === b.dataset.chartType)));
+    root.querySelectorAll('[data-chart-preset]').forEach(b=>{
+      const expected=b.dataset.chartPreset==='trend'?['volume','sma20','sma50']:b.dataset.chartPreset==='momentum'?['volume','rsi','macd']:['volume'];
+      b.setAttribute('aria-pressed',String(expected.length===state.indicators.size&&expected.every(key=>state.indicators.has(key))));
+    });
     const theme=root.querySelector('[data-chart-theme]');
     if(theme){theme.textContent=root.dataset.chartTheme==='light'?'Fond sombre':'Fond clair';theme.setAttribute('aria-pressed',String(root.dataset.chartTheme==='light'));}
     const undo=root.querySelector('[data-chart-undo]');if(undo)undo.disabled=drawings.length===0;
@@ -123,10 +127,10 @@
       `<path class="price-line" d="${closePath}"/>`;
     const overlay = (key, color) => `<path d="${path(derived.map(d=>d[key]),x,yp)}" fill="none" stroke="${color}" stroke-width="1.8" vector-effect="non-scaling-stroke"/>`;
     let indicators = '';
-    if (state.indicators.has('bands')) indicators += overlay('upper','#a18feb') + overlay('lower','#a18feb');
+    if (state.indicators.has('bands')) indicators += overlay('upper',light?'#7551bb':'#a18feb') + overlay('lower',light?'#7551bb':'#a18feb');
     if (state.indicators.has('sma20')) indicators += overlay('sma20',light?'#9c6508':'#f3ce77');
     if (state.indicators.has('sma50')) indicators += overlay('sma50',light?'#087f9c':'#5ac9de');
-    for(const [key,color] of [['sma200','#e99f9f'],['ema20','#a7df80'],['ema50','#f5a85c']]) if(state.indicators.has(key)) indicators += overlay(key,color);
+    for(const [key,color] of [['sma200',light?'#a34451':'#e99f9f'],['ema20',light?'#387925':'#a7df80'],['ema50',light?'#a76018':'#f5a85c']]) if(state.indicators.has(key)) indicators += overlay(key,color);
     if (volumeOn) {
       const maxVolume = Math.max(1,...visible.map(b=>b[5]));
       const width = clamp(plotW/visible.length*.7,.7,9);
@@ -137,7 +141,7 @@
       const yr = v => rsiY + 74 * (100-v)/100 + 14;
       indicators += `<text x="${L}" y="${rsiY+8}">RSI 14</text>` +
         [30,70].map(level => `<line class="chart-threshold" x1="${L}" x2="${R}" y1="${yr(level)}" y2="${yr(level)}"/><text x="${R+5}" y="${yr(level)+4}">${level}</text>`).join('') +
-        `<path d="${path(derived.map(d=>d.rsi),x,yr)}" fill="none" stroke="#c9a3f1" stroke-width="1.8"/>`;
+        `<path d="${path(derived.map(d=>d.rsi),x,yr)}" fill="none" stroke="${light?'#7750bc':'#c9a3f1'}" stroke-width="1.8"/>`;
     }
     if (macdOn) {
       const values = derived.flatMap(d=>[d.macd,d.signal]).filter(v=>v!==null);
@@ -148,14 +152,14 @@
       indicators += `<text x="${L}" y="${macdY+10}">MACD 12/26/9</text><line class="chart-threshold" x1="${L}" x2="${R}" y1="${ym(0)}" y2="${ym(0)}"/>` +
         derived.map((d,j)=> d.macd===null || d.signal===null ? '' :
           `<rect class="${d.macd-d.signal>=0 ? 'hist-up' : 'hist-down'}" x="${x(j)-width/2}" y="${Math.min(ym(0),ym(d.macd-d.signal))}" width="${width}" height="${Math.max(1,Math.abs(ym(d.macd-d.signal)-ym(0)))}"/>`).join('') +
-        `<path d="${path(derived.map(d=>d.macd),x,ym)}" fill="none" stroke="#83d6e5" stroke-width="1.8"/>` +
-        `<path d="${path(derived.map(d=>d.signal),x,ym)}" fill="none" stroke="#f3ce77" stroke-width="1.5"/>`;
+        `<path d="${path(derived.map(d=>d.macd),x,ym)}" fill="none" stroke="${light?'#087f9c':'#83d6e5'}" stroke-width="1.8"/>` +
+        `<path d="${path(derived.map(d=>d.signal),x,ym)}" fill="none" stroke="${light?'#9c6508':'#f3ce77'}" stroke-width="1.5"/>`;
     }
     if(atrOn){
       const bound=Math.max(.01,...derived.map(d=>d.atr14_wilder).filter(v=>v!==null));
       const ya=v=>atrY+78-v/bound*55;
       indicators+=`<text x="${L}" y="${atrY+12}">ATR 14 · WILDER · MAD</text><line class="chart-threshold" x1="${L}" x2="${R}" y1="${ya(0)}" y2="${ya(0)}"/>`+
-        `<path d="${path(derived.map(d=>d.atr14_wilder),x,ya)}" fill="none" stroke="#a7df80" stroke-width="1.8"/>`;
+        `<path d="${path(derived.map(d=>d.atr14_wilder),x,ya)}" fill="none" stroke="${light?'#387925':'#a7df80'}" stroke-width="1.8"/>`;
     }
     const comparison=explorer?.selection();
     const range = comparison ? comparison.map(i=>clamp(i-start,0,visible.length-1)).sort((a,b)=>a-b) : null;
