@@ -13,7 +13,7 @@ Le relevé de marché totalise 117,01 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-18T19:51:17.577682+00:00.
+Source marché :  [https://www.cdgcapitalbourse.ma/Bourse/market] CDG Capital Bourse ↗ · relevé 2026-10-18T22:45:23.145100+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -211,11 +211,11 @@ Le cours reste entre le plancher 257,00 et la borne haute 309,00 MAD des 20 séa
 
 RSI 14 à 29,23 : momentum très faible ; une survente ne garantit pas un rebond.
 
-Quantité échangée : 3,43 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+Quantité échangée : 3,73 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
 
 Liquidité robuste estimée hors cinq plus fortes séances : 1,78 MDH, contre 2,00 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
 
-Support de référence 257,00 · borne haute 309,00 MAD · RSI 29,23 · activité 3,43 ×
+Support de référence 257,00 · borne haute 309,00 MAD · RSI 29,23 · activité 3,73 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -369,7 +369,7 @@ AMMC · 2026-10-15 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-18T19:51:18.278667+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-18T22:45:23.863439+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
@@ -401,15 +401,15 @@ Risque et devises
 
 USD/MAD
 
-9,7498MAD / USD · -0,08 %
+9,7360MAD / USD · -0,14 %
 
-Dernière observation source2026-10-16T21:01:14+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-18T21:25:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9490MAD / EUR · 0,08 %
+10,8870MAD / EUR · -0,57 %
 
-Dernière observation source2026-10-16T21:04:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-18T21:54:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -419,29 +419,29 @@ Dernière observation source2026-10-16T20:15:01+00:00Différé source : 15 min �
 
 Indice dollar
 
-101,78points · -0,22 %
+101,89points · 0,11 %
 
-Dernière observation source2026-10-16T20:59:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-18T22:40:09+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 181,10USD / once troy · 0,26 %
+4 198,20USD / once troy · 0,41 %
 
-Dernière observation source2026-10-16T23:28:44+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-18T22:45:11+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-109,86USD / baril · 3,72 %
+108,93USD / baril · -0,85 %
 
-Dernière observation source2026-10-16T23:27:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-18T22:45:04+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,57USD / livre · 0,26 %
+6,57USD / livre · -0,02 %
 
-Dernière observation source2026-10-16T23:27:05+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-18T22:44:41+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -452,6 +452,10 @@ Dernière observation source2026-10-16T23:24:11+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html] Hormuz Is Turning Shipping’s Fuel Bill Into a Supply Crisis ↗
+
+OilPrice · 2026-10-18T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/The-Nuclear-Power-Shortcut-That-Could-Add-Gigawatts-to-the-US-Grid.html] The Nuclear Power Shortcut That Could Add Gigawatts to the U.S. Grid ↗
 
@@ -480,10 +484,6 @@ Financial Afrik · 2026-10-18T11:18:58+00:00 · Maroc · Économie · alerte non
  [https://www.financialafrik.com/2026/10/18/assemblee-de-la-banque-mondiale-et-du-fmi-a-bangkok-chomage-des-jeunes-et-les-lapalissades-des-dirigeants/] Assemblée de la Banque Mondiale et du FMI à Bangkok : chômage des jeunes et les lapalissades des dirigeants ↗
 
 Financial Afrik · 2026-10-18T10:22:06+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/18/de-lomvs-au-ministere-de-lenergie-mohamed-ould-abdel-vetah-face-a-la-crise-electrique-mauritanienne/] De l’OMVS au ministère de l’Énergie et du Pétrole : Mohamed Ould Abdel Vetah face à la crise électrique mauritanienne ↗
-
-Financial Afrik · 2026-10-18T09:29:41+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -539,6 +539,10 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-18T11:18:58+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html] Hormuz Is Turning Shipping’s Fuel Bill Into a Supply Crisis ↗
+
+OilPrice · 2026-10-18T21:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/The-Nuclear-Power-Shortcut-That-Could-Add-Gigawatts-to-the-US-Grid.html] The Nuclear Power Shortcut That Could Add Gigawatts to the U.S. Grid ↗
 
 OilPrice · 2026-10-18T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -554,8 +558,4 @@ OilPrice · 2026-10-18T17:00:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/18/ace-global-la-tierce-detention-monte-en-gamme/] ACE Global : la tierce détention monte en gamme ↗
 
 Financial Afrik · 2026-10-18T16:24:42+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Electric-Supercars-Are-Getting-Faster-Smarter-and-Harder-to-Ignore.html] Electric Supercars Are Getting Faster, Smarter, and Harder to Ignore ↗
-
-OilPrice · 2026-10-18T15:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

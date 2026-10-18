@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-18T19:50:46.497287+00:00",
+  "updated_at": "2026-10-18T22:44:52.394138+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "06ecf44845c644a795",
+      "title": "Hormuz Is Turning Shipping’s Fuel Bill Into a Supply Crisis",
+      "url": "https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T21:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "dd874611e583e0ac75",
       "title": "The Nuclear Power Shortcut That Could Add Gigawatts to the U.S. Grid",
@@ -3610,23 +3627,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "41825c364a0b4b216f",
-      "title": "La Bourse de Paris termine en hausse avant une semaine chargée en publications - France 24",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcHVrM0lOY1lUQ21nNEVsRWtwcVR6SWU5YmdJX2VlR1VMUm9BVUsyVU9ZaEVGMkZCaS1zZGw5V0M5cGt6elJETEZYek1EV3owbUlrcjVWanFrZmQta3ZRWnVNYWx3Nmk1dzdIUHQ2VXlmUEJCSlNfNkc0OEVlUklrRTQ3SmtjSVRTRnF3UjFkLXFPTEZmNlY1bHo3c2JpdmpBTmtJWWJOTkpSX0M4ZFF5ZnE3cWhtaFBnenZKYkpkS0NoWF83bjhBMm5jcF8wNGNjTkE?oc=5",
-      "publisher": "Inflation US / zone euro · presse",
-      "published_at": "2026-10-12T16:27:43+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "inflation",
-      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "ed8ab768f5abfc3ac6",
