@@ -66,6 +66,10 @@ liste et annonce le nombre omis. Il ne raccourcit pas une réserve pour faire
 tenir un titre. Un seul dossier encore trop volumineux reste un refus explicite.
 La réponse locale garde sa liste demandée.
 
+L'en-tête public `X-Nour-Assistant-Version: nour-data-queries-v2` permet de
+constater le déploiement de cette architecture sans exposer de secret ni appeler
+le modèle. Il ne démontre pas la qualité d'une inférence réelle.
+
 Les dates de questions quantitatives, même accompagnées d'actualités, ne
 permettent pas de réutiliser les ratios actuels comme données historiques.
 

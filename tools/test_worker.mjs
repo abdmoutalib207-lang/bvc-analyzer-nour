@@ -66,6 +66,7 @@ try{
   assert.equal((await worker.fetch(request(),rotated)).status,401);
   assert.equal(providerCalls,1);
   const cors=await worker.fetch(request(null,auth,'OPTIONS'),env);assert.equal(cors.status,204);
+  assert.equal(cors.headers.get('X-Nour-Assistant-Version'),'nour-data-queries-v2','public deployment marker without credentials or provider call');
   // Source failures expose only bounded diagnostics and never consume AI quota.
   const counts=[providerCalls,quotaCalls];
   for(const [fetcher,diagnostic] of [
