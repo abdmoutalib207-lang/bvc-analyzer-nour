@@ -111,8 +111,8 @@
     const q=normalize(question), sources=[],lines=[`Données Nour · analyse du ${data.analysis_date}.`];
     const result=()=>({text:lines.join('\n\n'),sources,symbols,mode:'local'});
     if(symbols.length>2){lines.push('Comparez au maximum deux titres par question.');return result();}
-    const ignored=new Set(['MASI','PER','PE','PB','BPA','ROE','ROIC','ROI','RSI','MACD','ATR','PNB','CA','RNPG','EBITDA','EBE','MAD','DH','MDH','MMAD','MM','USD','EUR','VIX','DXY','CAC','API','LLM','IA','S1','S2','PDF','TVA','ECC','CSV','JSON','OHLC','OHLCV','IFRS','CGNC','CNC','BAM','AMMC','HCP','FED','BCE','NLP','PEA']);
-    const unknown=(question.match(/\b[A-Z][A-Z0-9]{1,5}\b/g)||[]).filter(s=>!ignored.has(s)&&!/^(MM|SMA|RSI)\d+$/.test(s)&&!data.symbols?.[s]&&!Object.values(data.symbols||{}).some(row=>normalize(row.name).split(/\W+/).includes(normalize(s))));
+    const ignored=new Set(['MASI','PER','PE','PB','BPA','ROE','ROIC','ROI','RSI','MACD','ATR','PNB','CA','RNPG','EBITDA','EBE','MAD','DH','MDH','MMAD','MM','USD','EUR','VIX','DXY','CAC','API','LLM','IA','S1','S2','PDF','TVA','ECC','CSV','JSON','OHLC','OHLCV','IFRS','CGNC','CNC','BAM','AMMC','HCP','FED','BCE','NLP','PEA','EMA','SMA','TTM','FY']);
+    const unknown=(question.match(/\b[A-Z][A-Z0-9]{1,5}\b/g)||[]).filter(s=>!ignored.has(s)&&!/^(MM|SMA|EMA|RSI)\d+$/.test(s)&&!data.symbols?.[s]&&!Object.values(data.symbols||{}).some(row=>normalize(row.name).split(/\W+/).includes(normalize(s))));
     if(unknown.length){lines.push(`Titre ou abréviation non reconnu : ${[...new Set(unknown)].join(', ')}. Précisez le nom ou le symbole; le contexte sélectionné n’a pas été utilisé à sa place.`);return result();}
     const dates=datesIn(question);
     if(dates.some(d=>!d.valid)){lines.push('Date invalide : '+dates.filter(d=>!d.valid).map(d=>d.date).join(', ')+'. Utilisez une date réelle, au format JJ/MM/AAAA.');return result();}
@@ -160,8 +160,11 @@
       [/\b(?:mm|sma)\s*20\b|moyenne mobile\s*20/,'MM20','sma20','MAD','technical'],
       [/\b(?:mm|sma)\s*50\b|moyenne mobile\s*50/,'MM50','sma50','MAD','technical'],
       [/\b(?:mm|sma)\s*200\b|moyenne mobile\s*200/,'MM200','sma200','MAD','technical'],
+      [/\bema\s*20\b/,'EMA20','ema20','MAD','technical'],
+      [/\bema\s*50\b/,'EMA50','ema50','MAD','technical'],
       [/\bmacd\b/,'MACD','macd','MAD','technical'],
       [/\batr\b/,'ATR 14 (moyenne simple)','atr14','MAD','technical'],
+      [/\batr\b|wilder/,'ATR 14 (Wilder)','atr14_wilder','MAD','technical'],
       [/support/,'Support descriptif sur 20 séances précédentes','support20','MAD','technical'],
       [/resistan/,'Résistance descriptive sur 20 séances précédentes','resistance20','MAD','technical'],
       [/\bbeta\b/,'Bêta historique','beta','','market_risk'],
@@ -175,6 +178,11 @@
     const evidenceMetrics=[[/chiffre d.affaires|\bca\b/,'Chiffre d’affaires','chiffre_affaires'],[/\bebe\b|\bebitda\b/,'EBE utilisé pour dette/EBITDA','excedent_brut_exploitation'],[/dettes financieres/,'Dettes financières','dettes_financieres'],[/tresorerie/,'Trésorerie-actif','tresorerie_actif'],[/dividende(?!.*rendement)/,'Dividende par action','dividende_par_action']].filter(([p])=>p.test(q));
     const unsupported=/\broic\b|\broi\b|objectif.*cours|prix cible/.test(q);
     const close=/cloture|\bcours\b|\bprix\b/.test(q);
+    if(/\bttm\b|douze mois glissants|12 mois glissants|previsionnel|\bforward\b/.test(q)&&metrics.some(m=>m[4]==='fundamental')){
+      lines.push('Ce ratio TTM ou prévisionnel n’est pas calculé dans Nour. Le ratio annuel ne le remplace pas. Consultez les comptes annuels et la dernière publication séparément.');
+      for(const s of symbols){const row=data.symbols[s];if(row)sources.push({label:`Fiche ${s} · sources et périodes`,url:row.url});}
+      return result();
+    }
     if(!metrics.length&&!dates.length&&!volume&&!earnings&&!shares&&!equity&&!evidenceMetrics.length&&!unsupported&&!close)return null;
     if(prospective||/probabil|statist|frequen/.test(q))return null;
     for(const s of symbols){
@@ -288,6 +296,36 @@
     }
     return result();
   }
+  function titleOverview(data,symbols){
+    if(!symbols.length||symbols.includes('MASI'))return null;
+    const lines=[`Synthèse complète Nour · analyse du ${data.analysis_date}.`],sources=[];
+    for(const symbol of symbols){
+      const row=data.symbols[symbol];if(!row)continue;
+      const f=row.fundamental||{},t=row.technical||{},latest=f.latest_report||{},risk=row.market_risk||{},tail=risk.tail_risk||{},liq=row.liquidity||{},guide=row.sector_guidance||{};
+      lines.push(`${symbol} · ${row.name} · ${row.sector||'secteur non renseigné'}`);
+      lines.push(`Marché · séance ${row.asof||'indisponible'}\nClôture : ${fmt(row.price,'MAD')} · source ${row.price_source||'non précisée'}.\nQuantité : ${fmt(row.day_shares,'titres')} · montant échangé : ${fmt(row.day_turnover_mad_actual,'MAD')}.`);
+      lines.push(`Technique · ${t.sessions??0} séances utilisées\nRSI 14 : ${fmt(t.rsi14)} · MM20 : ${fmt(t.sma20,'MAD')} · MM50 : ${fmt(t.sma50,'MAD')} · MM200 : ${fmt(t.sma200,'MAD')}.\nEMA20 : ${fmt(t.ema20,'MAD')} · EMA50 : ${fmt(t.ema50,'MAD')}.\nMACD : ${fmt(t.macd,'MAD')} · signal : ${fmt(t.macd_signal,'MAD')}.\nBollinger 20/2 : ${fmt(t.bollinger_lower)} à ${fmt(t.bollinger_upper)} MAD.\nATR 14 Wilder : ${fmt(t.atr14_wilder,'MAD')} · ATR 14 moyenne simple : ${fmt(t.atr14,'MAD')}.\nSupport / résistance des 20 séances précédentes : ${fmt(t.support20)} / ${fmt(t.resistance20)} MAD.`);
+      lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · fin de période ${f.period_end||'non renseignée'}\nPérimètre : ${f.accounting_basis||'non renseigné'} · devise ${f.currency||'non renseignée'}.\nRésultat annuel retenu : ${fmt(f.earnings_mmad,'MMAD')} · BPA : ${fmt(f.eps_mad,'MAD')}.\nPER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE de clôture : ${fmt(f.roe_pct,'%')}.\nPNB : ${fmt(f.pnb_mmad,'MMAD')} · croissance du CA : ${fmt(f.revenue_growth_pct,'%')}.\nDette nette stricte : ${fmt(f.net_debt_strict_mmad,'MMAD')} · dette nette / EBE : ${fmt(f.net_debt_ebitda)}.\nBPA : ${f.eps_denominator||'dénominateur non vérifié'}.\nVérification annuelle : ${validationLabel(f.validation_status)}.`);
+      if(latest.period_end)lines.push(`Dernière publication · période ${latest.period_end}, distincte des comptes annuels\nPérimètre : ${latest.accounting_basis||'non renseigné'} · ${latest.reported_net_label||'résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)}. Le semestre n’est pas annualisé.`);
+      else lines.push('Dernière publication : indisponible. Aucun semestre n’est déduit des comptes annuels.');
+      lines.push(`Risques historiques · état ${risk.status||'indisponible'} · ${risk.paired_returns??0} rendements appariés\nBêta : ${fmt(risk.beta)} · corrélation au MASI : ${fmt(risk.correlation)} · volatilité annualisée : ${fmt(risk.volatility_pct,'%')}.\nDrawdown : ${fmt(risk.drawdown_pct,'%')} · VaR historique 95 % sur une séance : ${fmt(tail.var95_loss_pct,'%')} · CVaR : ${fmt(tail.cvar95_loss_pct,'%')}.\nLiquidité médiane : ${liq.ready?fmt(liq.median_turnover_mad_estimated,'MAD estimés'):'indisponible'}.\n${risk.note||'Les risques non calculés restent indisponibles.'}\n${tail.note||'Pas de mesure de perte future garantie.'}`);
+      if(guide.metrics_to_verify?.length)lines.push(`Lecture métier · ${guide.family||row.sector}\nPoints à vérifier dans les publications : ${guide.metrics_to_verify.join(', ')}. ${guide.note||'Ces points ne sont pas des chiffres disponibles.'}`);
+      const warnings=[latest.note,...(f.warnings||[]),...(row.quality?.issues||[])].filter(Boolean);
+      lines.push(`Qualité et réserves · ${row.decision||'indisponible'}\n${warnings.length?warnings.join('\n'):'Aucune réserve supplémentaire dans cet export ; cela ne certifie pas les comptes.'}`);
+      const debt=f.debt_reconciliation||{};
+      if(debt.status==='unresolved')lines.push(`Dette non rapprochée : calcul ${fmt(debt.calculated_mmad,'MMAD')}, publication ${fmt(debt.reported_mmad,'MMAD')}, écart ${fmt(debt.difference_mmad,'MMAD')}. Ratios concernés suspendus ; aucun arbitrage automatique.`);
+      lines.push('Lecture des méthodes · Les ratios ci-dessus sont annuels, pas des ratios TTM reconstruits. Les cours ne sont pas ajustés aux opérations sur titres. Sources, dates, périmètres et méthodes doivent être identiques pour comparer deux plateformes. Aucun objectif de cours ni probabilité de prochaine séance n’est déduit de cette synthèse.');
+      sources.push({label:`Fiche ${symbol} · ${row.asof}`,url:row.url});
+      if(f.document_url)sources.push({label:`${symbol} · comptes annuels ${f.exercise||''}`,url:f.document_url});
+      if(latest.document_url)sources.push({label:`${symbol} · publication ${latest.period_end||''}`,url:latest.document_url});
+      for(const [key,e] of Object.entries(f.evidence||{})){
+        if(!e||!Number.isInteger(e.page)||e.page<=0)continue;
+        const url=e.document_url||f.document_url;
+        if(url&&validURL(url))sources.push({label:`${symbol} · ${key} · page PDF ${e.page}`,url:url.split('#')[0]+'#page='+e.page});
+      }
+    }
+    return {text:lines.join('\n\n'),sources,symbols,mode:'local',domain:'overview'};
+  }
   function baseAnswer(question,data,fallback){
     const q=normalize(question), symbols=symbolsFor(question,data,fallback), sources=[];
     const precise=preciseAnswer(question,data,symbols);if(precise)return precise;
@@ -354,7 +392,7 @@
     const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
     if(guard)return guard;
     const q=normalize(question),dates=datesIn(question);
-    for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes mobiles : 20, 50 et 200 séances.',sources:[],symbols,mode:'local'};}
+    for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]],[/\bema\s*(\d+)\b/,[20,50]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes simples : 20, 50 et 200 séances; EMA : 20 et 50 séances.',sources:[],symbols,mode:'local'};}
     if(/\b(?:le|au|du)\s+\d{1,2}\s+[a-z]+\s+20\d{2}\b/.test(q)&&!dates.length)return {text:'Utilisez la date au format JJ/MM/AAAA ou AAAA-MM-JJ pour une lecture historique précise.',sources:[],symbols,mode:'local'};
     if(dates.length&&/risque|beta|correlation|volatil|drawdown|\bc?var(?:95)?\b|value at risk|expected shortfall|score|\bper\b|\brsi\b|\b(?:mm|sma)\s*\d+|macd|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const normalizedDates=question.replace(/\b(20\d{2}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/(?:20\d{2}|\d{2}))\b/g,m=>dateIn(m)||m);
@@ -362,7 +400,8 @@
       text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const datedHistory=dates.length&&!/briefing|publication|actualite|radar|macro|international|brent|cuivre|charbon|usd|eur|dollar|vix|nikkei|cac 40|s&p|\bfed\b|\bbce\b|\bhcp\b/.test(q);
     const namedMacro=/brent|petrole|cuivre|charbon|vix|dxy|indice dollar|usd\s*\/\s*mad|eur\s*\/\s*mad|dollar.*dirham|euro.*dirham|s&p|sp ?500|cac\s*40|dow jones|nikkei/.test(q)&&!/actualite|radar|publication|fonction|capacit/.test(q);
-    const answer=(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
+    const comprehensive=!dates.length&&/synthese|analyse complete|dossier complet|vue globale|vue d.ensemble|bilan complet/.test(q)&&!/briefing|edition|actualites|macro|international/.test(q);
+    const answer=(comprehensive&&titleOverview(data,symbols))||(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
     if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|minoritaires|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
     if(/demain|prochaine seance|va (?:monter|baisser)/.test(q)&&!answer.text.includes(data.definitions.probability))answer.text+='\n\n'+data.definitions.probability;
     for(const s of answer.symbols||[]){const row=data.symbols?.[s];if(!row)continue;

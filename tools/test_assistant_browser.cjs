@@ -25,6 +25,20 @@ const shots=process.env.NOUR_SCREENSHOTS;
       for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='index.html'){
+          const report=await (await context.request.get(new URL('report.json',base).href)).json();
+          await page.locator('#fundamental-explorer summary').click();
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
+          await page.locator('#fundamental-availability').selectOption('missing_annual');
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),report.results.filter(r=>!r.fundamental.exercise).length);
+          await page.locator('#fundamental-reset').click();
+          await page.locator('#fundamental-pe-max').fill('25');
+          const selected=await page.locator('[data-fundamental-row]:visible').evaluateAll(rows=>rows.map(row=>JSON.parse(row.dataset.facts)));
+          assert.ok(selected.length>0);
+          assert.ok(selected.every(row=>Number.isFinite(row.pe)&&row.pe<=25));
+          await page.locator('#fundamental-reset').click();
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Fundamental explorer overflow '+width);
+          await page.locator('#fundamental-explorer summary').click();
           await page.getByText('Suivi des mises à jour',{exact:true}).click();
           const publication=page.locator('[data-publication-commit]');
           await page.waitForFunction(()=>/^[a-f0-9]{40}$/.test(document.querySelector('[data-publication-commit]')?.textContent||''));
@@ -59,6 +73,16 @@ const shots=process.env.NOUR_SCREENSHOTS;
           const body=await page.locator('main').innerText();
           const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
           const currentAdi=currentReport.results.find(r=>r.symbol==='ADI').fundamental;
+          for(const key of ['sma200','ema20','ema50','atr']){
+            await page.locator(`[data-indicator="${key}"]`).click();
+            assert.equal(await page.locator(`[data-indicator="${key}"]`).getAttribute('aria-pressed'),'true');
+          }
+          const chartText=await page.locator('[data-chart-readout]').innerText();
+          for(const label of ['MM200','EMA20','EMA50','ATR Wilder'])assert.ok(chartText.includes(label),'Missing chart value '+label);
+          assert.ok((await page.locator('#plot svg').innerHTML()).includes('ATR 14 · WILDER · MAD'));
+          await page.getByText('Méthodes et différences entre plateformes',{exact:true}).click();
+          assert.ok((await page.locator('main').innerText()).includes('Les cours ne sont pas ajustés aux opérations sur titres'));
+          await page.getByText('Méthodes et différences entre plateformes',{exact:true}).click();
           if(currentAdi.debt_reconciliation?.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));
           if(currentAdi.roe_average_equity_pct!==null)assert.ok(body.includes('ROE sur fonds propres moyens : '+currentAdi.roe_average_equity_pct.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' %'));
           assert.ok(body.includes('Groupe de comparaison : Promoteurs immobiliers'));

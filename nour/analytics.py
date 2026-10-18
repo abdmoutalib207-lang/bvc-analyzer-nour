@@ -46,6 +46,16 @@ def _rsi(closes, period=14):
     return 100.0 if loss == 0 else 100 - 100 / (1 + gain / loss)
 
 
+def _wilder(values, period=14):
+    """RMA seeded with the first complete simple average, never zero-filled."""
+    if len(values) < period:
+        return None
+    result = ordered_sum(values[:period]) / period
+    for value in values[period:]:
+        result = (result * (period - 1) + value) / period
+    return result
+
+
 def technical(record):
     bars = record.get("candles") or []
     # The first malformed bar blocks precise OHLC-derived indicators; no fabrication.
@@ -81,10 +91,27 @@ def technical(record):
     # Signal EMA must use the full MACD sequence, not the latest value alone.
     macd_series = [(_ema(closes[:i],12)-_ema(closes[:i],26)) for i in range(26,n+1)]
     signal = _ema(macd_series,9) if len(macd_series) >= 9 else None
+    # Keep the published SMA ATR as atr14. Wilder is a separately named measure.
+    atr_wilder = _wilder(([clean[0]['h'] - clean[0]['l']] + trs) if clean else [])
+    middle = avg(20)
+    deviation = (math.sqrt(ordered_sum((c-middle)**2 for c in closes[-20:])/20)
+                 if middle is not None else None)
     return {"sessions": n, "sma20": _round(avg(20)), "sma50": _round(avg(50)),
             "sma200": _round(avg(200)), "rsi14": _round(_rsi(closes)),
             "macd": _round(macd), "macd_signal": _round(signal),
             "atr14": _round(ordered_sum(trs[-14:])/14 if len(trs)>=14 else None),
+            "atr14_wilder": _round(atr_wilder),
+            "atr14_wilder_pct": _round(atr_wilder/last*100 if atr_wilder is not None and last else None),
+            "ema20": _round(_ema(closes,20)), "ema50": _round(_ema(closes,50)),
+            "bollinger_middle": _round(middle),
+            "bollinger_upper": _round(middle+2*deviation if middle is not None else None),
+            "bollinger_lower": _round(middle-2*deviation if middle is not None else None),
+            "macd_histogram": _round(macd-signal if signal is not None else None),
+            "methods": {"version":"nour-technical-v2", "rsi14":"Wilder RMA; 14 price changes",
+                "atr14":"SMA; 14 true ranges with previous close",
+                "atr14_wilder":"Wilder RMA; first true range = high-low; SMA seed 14",
+                "ema":"SMA seed; alpha=2/(period+1)", "bollinger":"SMA20 +/- 2 population standard deviations",
+                "price_basis":"Available validated unadjusted daily OHLCV; no interpolation"},
             "return20_pct": _round((last/closes[-21]-1)*100 if n>=21 else None),
             "support20": _round(min(b["l"] for b in prev) if prev else None),
             "resistance20": _round(max(b["h"] for b in prev) if prev else None),

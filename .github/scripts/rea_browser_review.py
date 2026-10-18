@@ -132,6 +132,8 @@ def capture_one(cli: str, browser: str, out: Path, name: str, url: str) -> dict:
     visible = artifacts.get("accessibility", {}).get("value", {}).get("text", "").casefold()
     if any(marker in visible for marker in ("accès restreint", "réservée aux membres connectés", "log in to continue", "sign in to continue", "connectez-vous pour accéder")):
         status["status"] = "authentication_required"
+    if any(marker in visible for marker in ("échec de la vérification de votre navigateur", "vercel security checkpoint", "point de contrôle de sécurité", "browser verification failed")):
+        status["status"] = "access_limited"
     if name == "nour_local" and "Nour" not in dom:
         status["status"] = "invalid_local_content"
     return status

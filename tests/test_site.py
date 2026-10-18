@@ -101,7 +101,7 @@ class VisibleMarketSite(unittest.TestCase):
         detail = (self.output / 'titres/ADI.html').read_text()
         market = (self.output / 'index.html').read_text()
         for page in (detail, market):
-            self.assertLess(page.index('window.NourCharts={Viewport,mount}'),
+            self.assertLess(page.index('window.NourCharts={'),
                             page.index('new window.NourCharts.Viewport'))
         payload = re.search(r'<script type="application/json" id="masi-data">(.*?)</script>', market)
         self.assertIsNotNone(payload)

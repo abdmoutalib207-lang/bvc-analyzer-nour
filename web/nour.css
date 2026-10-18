@@ -92,3 +92,10 @@ summary{cursor:pointer;font-size:15px;font-weight:650;color:#d5e7dd}summary:focu
 
 /* Long Git identities remain readable in the provenance panel on mobile. */
 .panel code,.panel [data-publication-commit]{overflow-wrap:anywhere;word-break:break-word}
+/* Canonical fundamental explorer: keep the optional filters usable on mobile. */
+#fundamental-explorer .filters{margin:18px 0;align-items:flex-end}
+#fundamental-explorer .filters label{display:flex;flex-direction:column;gap:6px;max-width:100%;min-width:0;font-size:12px;color:#b5c5c5}
+#fundamental-explorer .filters input{box-sizing:border-box;max-width:100%;min-height:44px;background:#0d1e26;border:1px solid #36525b;color:#e7eeed;padding:10px;border-radius:8px;font:inherit}
+#fundamental-explorer .filters input[type=number]{width:155px}
+#fundamental-explorer .filters select{max-width:100%;min-height:44px}
+#fundamental-explorer td small{display:block;color:#a9bec1}

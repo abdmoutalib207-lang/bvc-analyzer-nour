@@ -17,48 +17,7 @@
   if (!bars.length) return;
 
   const since = root.dataset.indicatorSince || '';
-  const series = bars.map(() => ({sma20: null, sma50: null, upper: null, lower: null,
-    rsi: null, macd: null, signal: null}));
-  let closes = [], ema12 = null, ema26 = null, signal = null;
-  let macds = [], avgGain = null, avgLoss = null;
-  bars.forEach((b, i) => {
-    if (b[0] < since) return; // Reset indicators after a documented resumption.
-    const c = b[4], prev = closes.at(-1);
-    closes.push(c);
-    const n = closes.length;
-    const mean = p => closes.slice(-p).reduce((sum, x) => sum + x, 0) / p;
-    if (n >= 20) {
-      const avg = mean(20);
-      const variance = closes.slice(-20).reduce((sum, x) => sum + (x - avg) ** 2, 0) / 20;
-      series[i].sma20 = avg;
-      series[i].upper = avg + 2 * Math.sqrt(variance);
-      series[i].lower = avg - 2 * Math.sqrt(variance);
-    }
-    if (n >= 50) series[i].sma50 = mean(50);
-    if (n === 12) ema12 = mean(12);
-    else if (n > 12) ema12 += (c - ema12) * 2 / 13;
-    if (n === 26) ema26 = mean(26);
-    else if (n > 26) ema26 += (c - ema26) * 2 / 27;
-    if (ema12 !== null && ema26 !== null) {
-      const macd = ema12 - ema26;
-      series[i].macd = macd;
-      macds.push(macd);
-      if (macds.length === 9) signal = macds.reduce((sum, x) => sum + x, 0) / 9;
-      else if (macds.length > 9) signal += (macd - signal) * 2 / 10;
-      if (signal !== null) series[i].signal = signal;
-    }
-    if (n === 15) {
-      const diffs = closes.slice(1).map((x, j) => x - closes[j]);
-      avgGain = diffs.reduce((sum, x) => sum + Math.max(x, 0), 0) / 14;
-      avgLoss = diffs.reduce((sum, x) => sum + Math.max(-x, 0), 0) / 14;
-    } else if (n > 15) {
-      const diff = c - prev;
-      avgGain = (avgGain * 13 + Math.max(diff, 0)) / 14;
-      avgLoss = (avgLoss * 13 + Math.max(-diff, 0)) / 14;
-    }
-    if (avgGain !== null) series[i].rsi = avgGain + avgLoss === 0 ? 50 :
-      avgLoss === 0 ? 100 : 100 - 100 / (1 + avgGain / avgLoss);
-  });
+  const series = window.NourCharts.indicators(bars, since);
 
   const state = Object.assign(new window.NourCharts.Viewport(bars.length, Math.min(252,bars.length)),
     {type:'line', period:'252', indicators:new Set(['volume']), selected:null});
@@ -97,11 +56,14 @@
     const rsiOn = state.indicators.has('rsi');
     const macdY = rsiY + (rsiOn ? 101 : 0);
     const macdOn = state.indicators.has('macd');
-    const height = macdY + (macdOn ? 103 : 0) + 25;
+    const atrY = macdY + (macdOn ? 103 : 0);
+    const atrOn = state.indicators.has('atr');
+    const height = atrY + (atrOn ? 92 : 0) + 25;
     const x = j => L + (j + .5) * plotW / visible.length;
     const priceValues = visible.flatMap(b => state.type === 'candles' ? [b[2], b[3]] : [b[4]]);
     if (state.indicators.has('sma20')) priceValues.push(...derived.map(d => d.sma20).filter(v => v !== null));
     if (state.indicators.has('sma50')) priceValues.push(...derived.map(d => d.sma50).filter(v => v !== null));
+    for(const key of ['sma200','ema20','ema50']) if(state.indicators.has(key)) priceValues.push(...derived.map(d=>d[key]).filter(v=>v!==null));
     if (state.indicators.has('bands')) priceValues.push(...derived.flatMap(d => [d.upper, d.lower]).filter(v => v !== null));
     let lo = Math.min(...priceValues), hi = Math.max(...priceValues);
     const pad = (hi - lo) * .08 || Math.max(hi * .01, .01);
@@ -124,6 +86,7 @@
     if (state.indicators.has('bands')) indicators += overlay('upper','#a18feb') + overlay('lower','#a18feb');
     if (state.indicators.has('sma20')) indicators += overlay('sma20','#f3ce77');
     if (state.indicators.has('sma50')) indicators += overlay('sma50','#5ac9de');
+    for(const [key,color] of [['sma200','#e99f9f'],['ema20','#a7df80'],['ema50','#f5a85c']]) if(state.indicators.has(key)) indicators += overlay(key,color);
     if (volumeOn) {
       const maxVolume = Math.max(1,...visible.map(b=>b[5]));
       const width = clamp(plotW/visible.length*.7,.7,9);
@@ -148,6 +111,12 @@
         `<path d="${path(derived.map(d=>d.macd),x,ym)}" fill="none" stroke="#83d6e5" stroke-width="1.8"/>` +
         `<path d="${path(derived.map(d=>d.signal),x,ym)}" fill="none" stroke="#f3ce77" stroke-width="1.5"/>`;
     }
+    if(atrOn){
+      const bound=Math.max(.01,...derived.map(d=>d.atr14_wilder).filter(v=>v!==null));
+      const ya=v=>atrY+78-v/bound*55;
+      indicators+=`<text x="${L}" y="${atrY+12}">ATR 14 · WILDER · MAD</text><line class="chart-threshold" x1="${L}" x2="${R}" y1="${ya(0)}" y2="${ya(0)}"/>`+
+        `<path d="${path(derived.map(d=>d.atr14_wilder),x,ya)}" fill="none" stroke="#a7df80" stroke-width="1.8"/>`;
+    }
     const comparison=explorer?.selection();
     const range = comparison ? comparison.map(i=>clamp(i-start,0,visible.length-1)).sort((a,b)=>a-b) : null;
     const highlight=range ? `<rect x="${x(range[0])}" y="${top}" width="${x(range[1])-x(range[0])}" height="${priceH}" fill="#f3ce77" opacity=".1"/>` : '';
@@ -167,6 +136,8 @@
       tag.querySelector('text').setAttribute('y',yp(b[4])+4);tag.querySelector('text').textContent=fmt(b[4]);
       const extra = [state.indicators.has('sma20') && d.sma20!==null ? `MM20 ${safe(d.sma20)}` : '',
         state.indicators.has('sma50') && d.sma50!==null ? `MM50 ${safe(d.sma50)}` : '',
+        ...['sma200','ema20','ema50'].map(key=>state.indicators.has(key)&&d[key]!==null?`${key.replace('sma','MM').replace('ema','EMA')} ${safe(d[key])}`:''),
+        state.indicators.has('atr') && d.atr14_wilder!==null ? `ATR Wilder ${safe(d.atr14_wilder)} MAD` : '',
         state.indicators.has('rsi') && d.rsi!==null ? `RSI ${safe(d.rsi)}` : '',
         state.indicators.has('macd') && d.macd!==null ? `MACD ${safe(d.macd)}` : ''].filter(Boolean).join(' · ');
       const previous=bars[start+j-1]?.[4], delta=previous>0?(b[4]/previous-1)*100:null;
