@@ -1,6 +1,14 @@
 (() => {
   'use strict';
   const q = selector => document.querySelector(selector);
+  const issuerLinks=[...document.querySelectorAll('.issuer-nav a')];
+  if(issuerLinks.length && 'IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      const current=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
+      if(current)issuerLinks.forEach(link=>link.setAttribute('aria-current',String(link.hash==='#'+current.target.id)));
+    },{rootMargin:'-70px 0px -60% 0px',threshold:0});
+    issuerLinks.forEach(link=>{const section=q(link.hash);if(section)observer.observe(section);});
+  }
   const search = q('#search'), sector = q('#sector'), marketBody = q('#market-body');
   const filterMarket = () => {
     const term = (search?.value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
