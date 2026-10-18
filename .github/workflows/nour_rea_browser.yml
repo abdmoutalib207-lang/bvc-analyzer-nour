@@ -1,0 +1,51 @@
+name: Nour REA browser investigation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [nour-rea-oct18]
+    paths:
+      - '.github/workflows/nour_rea_browser.yml'
+      - 'tools/rea_browser_review.py'
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install the official pinned REA package separately from Nour
+        run: npm install --prefix "$RUNNER_TEMP/nour-rea" --ignore-scripts --no-audit --no-fund --save-exact rea-agents@6.5.0
+      - name: Select an available Chrome or install the matching Chromium
+        shell: bash
+        run: |
+          browser_path="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$browser_path" ]; then
+            node "$RUNNER_TEMP/nour-rea/node_modules/playwright-core/cli.js" install --with-deps chromium --only-shell
+            browser_path="$(python -c 'from pathlib import Path; import os; root=Path.home()/".cache/ms-playwright"; print(next(str(p) for p in root.rglob("*") if p.name in {"headless_shell", "chrome-headless-shell"} and p.is_file() and os.access(p,os.X_OK)))')"
+          fi
+          test -x "$browser_path"
+          "$browser_path" --version
+          echo "NOUR_REA_BROWSER=$browser_path" >> "$GITHUB_ENV"
+      - name: Verify real browser capture and inspect two public home pages
+        env:
+          NOUR_REA_CLI: ${{ runner.temp }}/nour-rea/node_modules/.bin/rea
+          NOUR_REA_OUTPUT: ${{ runner.temp }}/nour-rea-evidence
+        run: python tools/rea_browser_review.py
+      - name: Preserve observations and limitations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nour-rea-browser-evidence
+          path: ${{ runner.temp }}/nour-rea-evidence
+          retention-days: 7
+          if-no-files-found: warn
