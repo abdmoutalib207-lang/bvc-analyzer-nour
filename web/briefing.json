@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-17",
+  "generated_for": "2026-10-18",
   "market_session": "2026-10-16",
   "runtime": {
     "timezone": "Africa/Casablanca",
@@ -12,197 +12,26 @@
     "schedule": null,
     "scheduled_at": null,
     "scheduled_at_basis": null,
-    "edition_for": "2026-10-17",
-    "started_at": "2026-10-17T23:12:24+00:00",
-    "built_at": "2026-10-17T23:13:02.366884+00:00",
+    "edition_for": "2026-10-18",
+    "started_at": "2026-10-18T02:59:44+00:00",
+    "built_at": "2026-10-18T03:00:35.685358+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39078103744",
-    "commit": "e008ee95ff81fafd614ba311eab562676e70a91c",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39078103744",
+    "run_id": "39092025259",
+    "commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39092025259",
     "collection": {
-      "result": "conflict",
-      "label": "Nouvelle observation refusée pour conflit",
-      "checked_at": "2026-10-17T23:12:24.749949+00:00",
+      "result": "unchanged",
+      "label": "Aucune nouveauté",
+      "checked_at": "2026-10-18T02:59:44.963299+00:00",
       "last_session": "2026-10-16",
-      "message": "10 bougie(s) divergente(s) non remplacée(s)",
-      "conflicts": [
-        {
-          "symbol": "BOA",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 11089
-          },
-          "observed": {
-            "v": 11092
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "CMGP",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 23199
-          },
-          "observed": {
-            "v": 25199
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "CSR",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 3851
-          },
-          "observed": {
-            "v": 3951
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "DTT",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 260
-          },
-          "observed": {
-            "v": 261
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "HPS",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 8684
-          },
-          "observed": {
-            "v": 8685
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "IAM",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 66458
-          },
-          "observed": {
-            "v": 66603
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "JET",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 2309
-          },
-          "observed": {
-            "v": 2310
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "MOX",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 32
-          },
-          "observed": {
-            "v": 33
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "STK",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 2926
-          },
-          "observed": {
-            "v": 2928
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        },
-        {
-          "symbol": "TGCC",
-          "session": "2026-10-16",
-          "fields": [
-            "v"
-          ],
-          "retained": {
-            "v": 4107
-          },
-          "observed": {
-            "v": 4112
-          },
-          "observed_at": "2026-10-17T23:12:24.749949+00:00",
-          "source": "https://www.cdgcapitalbourse.ma/api/",
-          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-          "resolution": "pending_review"
-        }
-      ],
-      "fully_validated": false
+      "message": "Aucune nouvelle séance vérifiée",
+      "conflicts": [],
+      "fully_validated": true
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "e008ee95ff81fafd614ba311eab562676e70a91c",
+      "generator_commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -300,6 +129,20 @@
               "printed_page": 21,
               "validation_status": "selected_pages_visually_checked",
               "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 401.758,
+              "page": 23,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": null,
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
               "currency": "MAD"
             },
             "nombre_actions": {
@@ -567,7 +410,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "ADI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -613,7 +456,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -701,6 +544,20 @@
               "original_unit": "KMAD",
               "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
               "printed_page": 26,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 4.491,
+              "page": 22,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+              "note": "« RESULTAT DE L'ENSEMBLE CONSOLIDE 4.491 (79.698) »",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+              "printed_page": 22,
               "validation_status": "selected_pages_visually_checked",
               "period_end": "2025-12-31",
               "currency": "MAD"
@@ -922,7 +779,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "RDS",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -941,7 +798,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -979,7 +836,7 @@
       "price": 634.9,
       "asof": "2026-10-16",
       "data_status": "OBSERVABLE",
-      "score": 40.62,
+      "score": 52.5,
       "score_state": "CALCULABLE",
       "support": 615.0,
       "resistance": 695.0,
@@ -1005,18 +862,32 @@
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
           "evidence": {
+            "resultat_net_part_groupe": {
+              "value": 952.053,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
             "capitaux_propres_part_groupe": {
               "value": 4544.126,
               "page": 96,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-              "note": "« Capitaux Propres Part Groupe 4 544 126 1 761 218 » ; en-tête « (En milliers de dirhams) 31/12/2025 31/12/2024 ». Capital social 346 743 KMAD = 34 674 300 titres de nominale 10. Le quasi-triplement vient de l'augmentation de capital : les primes passent de 481 717 à 2 651 372 KMAD.",
-              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "resultat_net_consolide": {
@@ -1024,27 +895,69 @@
               "page": 96,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-              "note": "« Résultat Net 1 161 165 527 281 »",
-              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
-              "value": 34674300,
-              "page": 96,
+              "value": 34674332,
+              "page": 102,
               "unit": "actions",
               "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-              "note": "capital social 346 743 KMAD ÷ nominale 10. Le marché en implique 34 673 913 (écart 0,001 %).",
-              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
-              "original_unit": null,
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "note": "Nombre total et nombre retenu pour le BPA explicitement publiés, sans attestation séparée de moyenne pondérée.",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
+              "original_unit": "actions",
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": 202,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires": {
+              "value": 11931.188,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires_2024": {
+              "value": 7596.821,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
+            },
+            "capitaux_propres_part_groupe_2024": {
+              "value": 1761.218,
+              "page": 96,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+              "printed_page": "190–191",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
               "currency": "MAD"
             },
             "dettes_financieres": {
@@ -1090,22 +1003,24 @@
               "currency": "MAD"
             }
           },
-          "eps_mad": null,
+          "eps_mad": 27.46,
           "book_value_per_share_mad": 131.05,
-          "pe": null,
+          "pe": 23.12,
           "pb": 4.84,
-          "revenue_growth_pct": null,
-          "roe_pct": null,
+          "revenue_growth_pct": 57.06,
+          "roe_pct": 20.95,
           "dividend_yield_pct": null,
-          "earnings_mmad": null,
-          "warnings": [],
-          "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
+          "earnings_mmad": 952.053,
+          "warnings": [
+            "TGCC : la note 13 publie le nombre retenu pour le BPA mais ne le qualifie pas de moyenne pondérée. Nour utilise ce dénominateur documenté en BPA indicatif ; augmentation de capital sur 2025."
+          ],
+          "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
           "currency": "MAD",
           "net_debt_strict_mmad": 782.75,
           "net_debt_ebitda": 0.3,
           "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
-          "roe_average_equity_pct": null,
+          "roe_average_equity_pct": 30.2,
           "debt_reconciliation": {
             "status": "not_cross_checked",
             "calculated_mmad": 782.75,
@@ -1142,20 +1057,26 @@
           },
           "semester_activity_label": "CA",
           "period_end": "2025-12-31",
-          "financial_review": null,
+          "financial_review": {
+            "reviewed_at": "2026-10-18",
+            "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+            "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+            "pages": [
+              96,
+              102
+            ],
+            "method": "Lecture visuelle indépendante de pages PDF sélectionnées ; unités, périodes et périmètres contrôlés. Titres de clôture distincts d’une moyenne pondérée. Semestres conservés sans annualisation.",
+            "conclusion": "RNPG 952,053 MMAD distinct du total 1 161,165 et des minoritaires 209,112. La note BPA publie 34 674 332 titres, au lieu des 34 674 300 déduits du capital arrondi."
+          },
           "external_references": [],
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
-          "coverage_pct": 25,
-          "missing_metrics": [
-            "eps_mad",
-            "roe_pct",
-            "revenue_growth_pct"
-          ],
+          "coverage_pct": 100,
+          "missing_metrics": [],
           "metric_availability": {
             "earnings_mmad": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_mmad": {
@@ -1163,39 +1084,31 @@
               "reason_codes": []
             },
             "eps_mad": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "book_value_per_share_mad": {
               "status": "available",
               "reason_codes": []
             },
             "pe": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "pb": {
               "status": "available",
               "reason_codes": []
             },
             "roe_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "roe_average_equity_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "revenue_growth_pct": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_growth_pct": {
@@ -1217,17 +1130,12 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "TGCC",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
-            "status": "blocked",
-            "blocked_metrics": [
-              "eps_mad",
-              "pe",
-              "roe_average_equity_pct",
-              "roe_pct"
-            ],
+            "status": "review_required",
+            "blocked_metrics": [],
             "checks": [
               {
                 "code": "newer_report_available",
@@ -1240,35 +1148,19 @@
                 "code": "fact_provenance_incomplete",
                 "status": "review_required",
                 "fields": [
-                  "capitaux_propres_part_groupe",
                   "dettes_financieres",
                   "excedent_brut_exploitation",
-                  "nombre_actions_au_rapport",
                   "tresorerie_actif"
                 ],
                 "blocked_metrics": [],
                 "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
-              },
-              {
-                "code": "group_earnings_missing_total_not_substituted",
-                "status": "blocked",
-                "fields": [
-                  "resultat_net_consolide"
-                ],
-                "blocked_metrics": [
-                  "eps_mad",
-                  "pe",
-                  "roe_pct",
-                  "roe_average_equity_pct"
-                ],
-                "detail": null
               }
             ],
             "freshness": {
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1324,7 +1216,7 @@
       "price": 587.0,
       "asof": "2026-10-16",
       "data_status": "OBSERVABLE",
-      "score": 46.88,
+      "score": 57.5,
       "score_state": "CALCULABLE",
       "support": 570.0,
       "resistance": 650.9,
@@ -1350,18 +1242,32 @@
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
           "evidence": {
+            "resultat_net_part_groupe": {
+              "value": 1341.942,
+              "page": 88,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
             "capitaux_propres_part_groupe": {
               "value": 3550.399,
               "page": 87,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
-              "note": "« Dont : Capitaux propres part du groupe 3 550 399 2 619 799 » ; en-tête « (En Milliers de dirhams) Note 31/12/2025 31/12/2024 ». La part du groupe égale l'ensemble consolidé en 2025 parce que les intérêts minoritaires y sont nuls ; en 2024 ils valaient -1 934, d'où 2 617 864 + 1 934 = 2 619 799. L'arithmétique ferme.",
-              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "resultat_net_consolide": {
@@ -1369,27 +1275,83 @@
               "page": 88,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
-              "note": "« Résultat net de l'ensemble consolidé 1 341 942 589 658 »",
-              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
               "original_unit": "KMAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 60000000,
-              "page": 87,
+              "page": 83,
               "unit": "actions",
               "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
-              "note": "capital 1 200 000 KMAD ÷ nominale 20. ⚠️ La nominale de 20 ne figure pas parmi les six usuelles ; c'est le marché qui tranche, et il donne exactement 60 000 000 titres — 1 200 000 000 ÷ 60 000 000 = 20 au dirham près. Le capital est passé de 300 000 à 1 200 000 KMAD sur l'exercice.",
-              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-              "original_unit": null,
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "note": "État C1 : nombre de titres de clôture, pas moyenne pondérée ni séries historiques retraitées.",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "actions",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": 164,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires": {
+              "value": 15165.454,
+              "page": 88,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires_2024": {
+              "value": 11098.839,
+              "page": 88,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
+            },
+            "capitaux_propres_part_groupe_2024": {
+              "value": 2619.799,
+              "page": 87,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "KMAD",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": "172–175",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
+            },
+            "bpa_publie_a_rapprocher": {
+              "value": 37,
+              "page": 88,
+              "unit": "MAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé (normes marocaines)",
+              "original_unit": "MAD",
+              "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+              "printed_page": 174,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "dettes_financieres": {
@@ -1439,18 +1401,20 @@
           "book_value_per_share_mad": 59.17,
           "pe": null,
           "pb": 9.92,
-          "revenue_growth_pct": null,
-          "roe_pct": null,
+          "revenue_growth_pct": 36.64,
+          "roe_pct": 37.8,
           "dividend_yield_pct": null,
-          "earnings_mmad": null,
-          "warnings": [],
-          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "earnings_mmad": 1341.942,
+          "warnings": [
+            "SGTM : capital passé de 3 à 60 millions de titres ; le BPA consolidé publié de 37 MAD (p.88) exige le dénominateur ajusté ou moyen approprié. Aucun arbitrage automatique par les titres de clôture."
+          ],
+          "accounting_basis": "consolidé (normes marocaines)",
           "currency": "MAD",
           "net_debt_strict_mmad": -84.51,
           "net_debt_ebitda": null,
           "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
-          "roe_average_equity_pct": null,
+          "roe_average_equity_pct": 43.5,
           "debt_reconciliation": {
             "status": "not_cross_checked",
             "calculated_mmad": -84.51,
@@ -1487,20 +1451,29 @@
           },
           "semester_activity_label": "CA",
           "period_end": "2025-12-31",
-          "financial_review": null,
+          "financial_review": {
+            "reviewed_at": "2026-10-18",
+            "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+            "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+            "pages": [
+              83,
+              87,
+              88
+            ],
+            "method": "Lecture visuelle indépendante de pages PDF sélectionnées ; unités, périodes et périmètres contrôlés. Titres de clôture distincts d’une moyenne pondérée. Semestres conservés sans annualisation.",
+            "conclusion": "RNPG 1 341,942 MMAD et minoritaires nuls explicitement publiés. 60 000 000 titres de clôture vérifiés. Le BPA publié de 37 MAD ne se rapproche pas du RNPG / titres de clôture (22,37 MAD) ; BPA et PER suspendus, ROE conservé."
+          },
           "external_references": [],
           "eps_denominator": "nombre de titres référencé ; BPA indicatif",
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique. Trésorerie nette excédentaire : montant conservé, aucun multiple négatif de dette / EBE.",
-          "coverage_pct": 25,
+          "coverage_pct": 75,
           "missing_metrics": [
-            "eps_mad",
-            "roe_pct",
-            "revenue_growth_pct"
+            "eps_mad"
           ],
           "metric_availability": {
             "earnings_mmad": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_mmad": {
@@ -1510,7 +1483,7 @@
             "eps_mad": {
               "status": "blocked",
               "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
+                "documentary_reconciliation_pending"
               ]
             },
             "book_value_per_share_mad": {
@@ -1520,7 +1493,7 @@
             "pe": {
               "status": "blocked",
               "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
+                "documentary_reconciliation_pending"
               ]
             },
             "pb": {
@@ -1528,19 +1501,15 @@
               "reason_codes": []
             },
             "roe_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "roe_average_equity_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "revenue_growth_pct": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_growth_pct": {
@@ -1562,18 +1531,30 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "SGTM",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
             "status": "blocked",
             "blocked_metrics": [
               "eps_mad",
-              "pe",
-              "roe_average_equity_pct",
-              "roe_pct"
+              "pe"
             ],
             "checks": [
+              {
+                "code": "documentary_reconciliation_pending",
+                "status": "blocked",
+                "fields": [
+                  "resultat_net_part_groupe",
+                  "nombre_actions_au_rapport",
+                  "bpa_publie_a_rapprocher"
+                ],
+                "blocked_metrics": [
+                  "eps_mad",
+                  "pe"
+                ],
+                "detail": "SGTM : capital passé de 3 à 60 millions de titres ; le BPA consolidé publié de 37 MAD (p.88) exige le dénominateur ajusté ou moyen approprié. Aucun arbitrage automatique par les titres de clôture."
+              },
               {
                 "code": "newer_report_available",
                 "status": "info",
@@ -1585,35 +1566,19 @@
                 "code": "fact_provenance_incomplete",
                 "status": "review_required",
                 "fields": [
-                  "capitaux_propres_part_groupe",
                   "dettes_financieres",
                   "excedent_brut_exploitation",
-                  "nombre_actions_au_rapport",
                   "tresorerie_actif"
                 ],
                 "blocked_metrics": [],
                 "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
-              },
-              {
-                "code": "group_earnings_missing_total_not_substituted",
-                "status": "blocked",
-                "fields": [
-                  "resultat_net_consolide"
-                ],
-                "blocked_metrics": [
-                  "eps_mad",
-                  "pe",
-                  "roe_pct",
-                  "roe_average_equity_pct"
-                ],
-                "detail": null
               }
             ],
             "freshness": {
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1651,7 +1616,7 @@
       "price": 260.0,
       "asof": "2026-10-16",
       "data_status": "OBSERVABLE",
-      "score": 15.0,
+      "score": 22.0,
       "score_state": "CALCULABLE",
       "support": 257.0,
       "resistance": 309.0,
@@ -1677,18 +1642,32 @@
           "exercise": 2025,
           "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
           "evidence": {
+            "resultat_net_part_groupe": {
+              "value": 244.010766,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "MAD",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
             "capitaux_propres_part_groupe": {
               "value": 2788.340389,
               "page": 68,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
-              "note": "« TOTAL CAPITAUX PROPRES PART GROUPE 2 788 340 389 2 634 396 857 » ; en-tête « (en MAD) Note 31/12/2025 31/12/2024 ». Capital social 1 700 090 000 MAD sur la même page = 17 000 900 titres de nominale 100.",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
               "original_unit": "MAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "resultat_net_consolide": {
@@ -1696,27 +1675,97 @@
               "page": 68,
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
-              "note": "« RÉSULTAT NET DES ENTREPRISES INTÉGRÉES 252 754 943 182 532 410 » ; = « RÉSULTAT NET DE L'ENSEMBLE CONSOLIDÉ 252 754 943 ».",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
               "original_unit": "MAD",
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "nombre_actions_retenu_pour_le_bpa": {
+              "value": 17000900,
+              "page": 76,
+              "unit": "actions",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "Moyenne pondérée explicitement publiée ; numérateur de la note BPA non rapproché.",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "actions",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": 151,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "nombre_actions_au_rapport": {
               "value": 17000900,
-              "page": 68,
+              "page": 76,
               "unit": "actions",
               "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
-              "note": "capital 1 700 090 000 MAD ÷ nominale 100. Le marché en implique 17 000 000 (écart 0,005 %).",
-              "accounting_basis": "consolidé IFRS, 31/12/2025",
-              "original_unit": null,
-              "document_hash": null,
-              "printed_page": null,
-              "validation_status": "referenced_import",
-              "period_end": null,
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "actions",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": 151,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires": {
+              "value": 2924.661165,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "MAD",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
+              "currency": "MAD"
+            },
+            "chiffre_affaires_2024": {
+              "value": 2327.559142,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "MAD",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
+            },
+            "capitaux_propres_part_groupe_2024": {
+              "value": 2634.396857,
+              "page": 68,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "MAD",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": "134–135",
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2024-12-31",
+              "currency": "MAD"
+            },
+            "resultat_note_bpa_a_rapprocher": {
+              "value": 252.754943,
+              "page": 76,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé IFRS",
+              "original_unit": "MAD",
+              "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+              "printed_page": 151,
+              "validation_status": "selected_pages_visually_checked",
+              "period_end": "2025-12-31",
               "currency": "MAD"
             },
             "dettes_financieres": {
@@ -1766,18 +1815,20 @@
           "book_value_per_share_mad": 164.01,
           "pe": null,
           "pb": 1.59,
-          "revenue_growth_pct": null,
-          "roe_pct": null,
+          "revenue_growth_pct": 25.65,
+          "roe_pct": 8.75,
           "dividend_yield_pct": null,
-          "earnings_mmad": null,
-          "warnings": [],
-          "accounting_basis": "consolidé IFRS, 31/12/2025",
+          "earnings_mmad": 244.010766,
+          "warnings": [
+            "CMGP : contradiction interne entre le compte de résultat p.68 (RNPG 244,010766 MMAD ; BPA 14,35) et la note 17 p.76 (252,754943 MMAD ; BPA 14,87). Le total consolidé ne remplace pas le RNPG. La note publie 17 000 900 actions moyennes ; BPA et PER restent suspendus en attente de rapprochement."
+          ],
+          "accounting_basis": "consolidé IFRS",
           "currency": "MAD",
           "net_debt_strict_mmad": 54.09,
           "net_debt_ebitda": 0.12,
           "calculation_version": "nour-fundamentals-v6",
           "point_in_time_ready": false,
-          "roe_average_equity_pct": null,
+          "roe_average_equity_pct": 9.0,
           "debt_reconciliation": {
             "status": "not_cross_checked",
             "calculated_mmad": 54.09,
@@ -1814,20 +1865,28 @@
           },
           "semester_activity_label": "CA",
           "period_end": "2025-12-31",
-          "financial_review": null,
+          "financial_review": {
+            "reviewed_at": "2026-10-18",
+            "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+            "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+            "pages": [
+              68,
+              76
+            ],
+            "method": "Lecture visuelle indépendante de pages PDF sélectionnées ; unités, périodes et périmètres contrôlés. Titres de clôture distincts d’une moyenne pondérée. Semestres conservés sans annualisation.",
+            "conclusion": "RNPG 244,010766 MMAD, total 252,754943 et minoritaires 8,744177. Note 17 : 252,754943 attribués aux propriétaires contre 244,010766 dans les états et bilan ; BPA 14,87 contre 14,35. BPA et PER suspendus ; ROE groupe disponible."
+          },
           "external_references": [],
-          "eps_denominator": "nombre de titres référencé ; BPA indicatif",
+          "eps_denominator": "moyenne pondérée publiée",
           "book_denominator": "nombre de titres référencé",
           "net_debt_method": "Dette financière moins trésorerie-actif selon les postes référencés ; lire leurs composantes (placements éventuellement inclus). Non comparable sans périmètre identique.",
-          "coverage_pct": 25,
+          "coverage_pct": 75,
           "missing_metrics": [
-            "eps_mad",
-            "roe_pct",
-            "revenue_growth_pct"
+            "eps_mad"
           ],
           "metric_availability": {
             "earnings_mmad": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_mmad": {
@@ -1837,7 +1896,7 @@
             "eps_mad": {
               "status": "blocked",
               "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
+                "documentary_reconciliation_pending"
               ]
             },
             "book_value_per_share_mad": {
@@ -1847,7 +1906,7 @@
             "pe": {
               "status": "blocked",
               "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
+                "documentary_reconciliation_pending"
               ]
             },
             "pb": {
@@ -1855,19 +1914,15 @@
               "reason_codes": []
             },
             "roe_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "roe_average_equity_pct": {
-              "status": "blocked",
-              "reason_codes": [
-                "group_earnings_missing_total_not_substituted"
-              ]
+              "status": "available",
+              "reason_codes": []
             },
             "revenue_growth_pct": {
-              "status": "unavailable",
+              "status": "available",
               "reason_codes": []
             },
             "pnb_growth_pct": {
@@ -1889,18 +1944,29 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "CMGP",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
             "status": "blocked",
             "blocked_metrics": [
               "eps_mad",
-              "pe",
-              "roe_average_equity_pct",
-              "roe_pct"
+              "pe"
             ],
             "checks": [
+              {
+                "code": "documentary_reconciliation_pending",
+                "status": "blocked",
+                "fields": [
+                  "resultat_net_part_groupe",
+                  "resultat_note_bpa_a_rapprocher"
+                ],
+                "blocked_metrics": [
+                  "eps_mad",
+                  "pe"
+                ],
+                "detail": "CMGP : contradiction interne entre le compte de résultat p.68 (RNPG 244,010766 MMAD ; BPA 14,35) et la note 17 p.76 (252,754943 MMAD ; BPA 14,87). Le total consolidé ne remplace pas le RNPG. La note publie 17 000 900 actions moyennes ; BPA et PER restent suspendus en attente de rapprochement."
+              },
               {
                 "code": "newer_report_available",
                 "status": "info",
@@ -1912,35 +1978,19 @@
                 "code": "fact_provenance_incomplete",
                 "status": "review_required",
                 "fields": [
-                  "capitaux_propres_part_groupe",
                   "dettes_financieres",
                   "excedent_brut_exploitation",
-                  "nombre_actions_au_rapport",
                   "tresorerie_actif"
                 ],
                 "blocked_metrics": [],
                 "detail": "Pages, empreintes, unités, dates et périmètres à compléter ; une importation référencée ne vaut pas vérification indépendante."
-              },
-              {
-                "code": "group_earnings_missing_total_not_substituted",
-                "status": "blocked",
-                "fields": [
-                  "resultat_net_consolide"
-                ],
-                "blocked_metrics": [
-                  "eps_mad",
-                  "pe",
-                  "roe_pct",
-                  "roe_average_equity_pct"
-                ],
-                "detail": null
               }
             ],
             "freshness": {
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2024,6 +2074,20 @@
               "unit": "MMAD",
               "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
               "note": "« Capitaux propres au 31/12/2025 733 956 - 1 725 428 1 588 764 551 099 4 599 247 » dans le TABLEAU DE VARIATIONS DES CAPITAUX PROPRES, « (En milliers de Dirhams) ». ⚠️ La part du groupe n'y a pas de colonne propre : elle se lit comme le total moins les intérêts minoritaires, 4 599 247 - 551 099 = 4 048 148, ce que confirme la somme des colonnes du groupe, 733 956 + 1 725 428 + 1 588 764. Capital 733 956 KMAD = 73 395 600 titres de nominale 10.",
+              "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 1808.302,
+              "page": 122,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
+              "note": "« Résultat consolidé 1.808.302 1.458.418 349.884 »",
               "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
               "original_unit": "KMAD",
               "document_hash": null,
@@ -2234,7 +2298,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "MSA",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2279,7 +2343,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2386,6 +2450,20 @@
               "document_hash": "sha256:bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a",
               "printed_page": "85",
               "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 397.108594,
+              "page": 44,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
+              "note": "« RÉSULTAT NET (XI-XII) 399 765 889,77 -2 657 295,76 397 108 594,01 186 719 660,90 ». résultat net SOCIAL de l'exercice 2025 (clé conservée pour le module). ⚠️ À rapprocher de rnpg_exercice_2025 = 509,98 de datasets/resultats_s1_2026.json (« NON RECOUPÉ : BPA 310 × 1 645 090 actions »), qui ne se recolle pas à ce rapport : 397,1 MMAD, soit un BPA de 241,4 sur 1 645 090 actions",
+              "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
+              "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
               "period_end": null,
               "currency": "MAD"
             },
@@ -2592,7 +2670,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "SMI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2627,7 +2705,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2716,6 +2794,20 @@
               "document_hash": "sha256:de6a0f8919f0fd2903caab99aa5cc2e07adb2451812aade8025d831c8631eda8",
               "printed_page": null,
               "validation_status": "pdf_page_visually_checked_2026-10-04",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 211.269,
+              "page": 220,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
+              "note": "« Résultat net consolidé 79 936 | 77 593 | 211 269 » ; CAC p.185 : « bénéfice net consolidé de 211.269 KMAD ». Tableaux d'analyse des comptes consolidés IFRS du document de référence : en-tête « En KMAD 2023 2024 2025 », exercice 2025 en TROISIÈME colonne (clos à DROITE). Chiffres attestés par les CAC (p.185 : « capitaux propres consolidés de 1.442.346 KMAD dont un bénéfice net consolidé de 211.269 KMAD »).",
+              "accounting_basis": "consolidé IFRS, 31/12/2025, en KMAD ; part du groupe distincte de l'ensemble (minoritaires 31 941 KMAD)",
+              "original_unit": "KMAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
               "period_end": null,
               "currency": "MAD"
             },
@@ -2903,7 +2995,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "T2S",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2935,7 +3027,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3021,6 +3113,20 @@
               "note": "« Capitaux propres (Part du groupe) 901 142 608 722 030 805 » ; en-tête « (En dirhams) 31/12/2025 31/12/2024 ». Capital 168 123 300 MAD = 1 681 233 titres de nominale 100. Le Résultat Net Part Groupe de la même page, 196 465 103 MAD, est celui déjà relevé.",
               "accounting_basis": "consolidé, 31/12/2025",
               "original_unit": "MAD",
+              "document_hash": null,
+              "printed_page": null,
+              "validation_status": "referenced_import",
+              "period_end": null,
+              "currency": "MAD"
+            },
+            "resultat_net_consolide": {
+              "value": 196.459,
+              "page": 58,
+              "unit": "MMAD",
+              "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
+              "note": "",
+              "accounting_basis": "consolidé, 31/12/2025",
+              "original_unit": null,
               "document_hash": null,
               "printed_page": null,
               "validation_status": "referenced_import",
@@ -3218,7 +3324,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-17",
+            "asof": "2026-10-18",
             "symbol": "CMT",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3252,7 +3358,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 290,
+              "annual_age_calendar_days": 291,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3404,59 +3510,6 @@
       "scope": "INTL",
       "feed_id": "ecb",
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "2c9018217f53767354",
-      "title": "Philip R. Lane: The AI opportunity for Europe",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
-      "publisher": "BCE · publications",
-      "published_at": "2026-10-13T18:30:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "ca688a27006cdc18ba",
-      "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
-      "publisher": "Fed · politique monétaire",
-      "published_at": "2026-10-13T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed",
-      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
-    },
-    {
-      "id": "4d172930387a18c239",
-      "title": "Maroc : Attijariwafa bank lance Simple AI, un assistant bancaire conversationnel",
-      "url": "https://www.financialafrik.com/2026/10/13/maroc-attijariwafa-bank-lance-simple-ai-un-assistant-bancaire-conversationnel/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-13T13:14:09+00:00",
-      "tickers": [
-        "ATW"
-      ],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
       "id": "30342d22556c317e1e",
@@ -3695,6 +3748,57 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "6105bdf4ce5bbc2cbe",
+      "title": "U.S. Oil Drillers Back Off Even As Prices Soar",
+      "url": "https://oilprice.com/Energy/Energy-General/US-Oil-Drillers-Back-Off-Even-As-Prices-Soar.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-16T17:29:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "525cbbd4b0da3f19b7",
+      "title": "Éducation: l’avenir de la jeunesse, à quel prix?",
+      "url": "https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261016-%C3%A9ducation-l-avenir-de-la-jeunesse-%C3%A0-quel-prix",
+      "publisher": "RFI · économie",
+      "published_at": "2026-10-16T17:08:20+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "rfi",
+      "feed_url": "https://www.rfi.fr/fr/economie/rss"
+    },
+    {
+      "id": "2404ff40cffc34236a",
+      "title": "« Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk",
+      "url": "https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-16T17:02:57+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
     }
   ],
   "news_role": "veille uniquement",
@@ -3934,7 +4038,7 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-17T23:12:54.579944+00:00"
+    "observed_at": "2026-10-18T03:00:28.277177+00:00"
   },
   "context_news": [
     {
@@ -4144,8 +4248,8 @@
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-17T23:13:02.366884+00:00",
-    "checked_at": "2026-10-17T23:12:55.490457+00:00",
+    "cutoff": "2026-10-18T03:00:35.685358+00:00",
+    "checked_at": "2026-10-18T03:00:29.017931+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4165,7 +4269,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4182,7 +4286,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4199,7 +4303,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4216,7 +4320,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4238,7 +4342,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4255,7 +4359,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4272,7 +4376,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4289,7 +4393,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4311,7 +4415,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4328,7 +4432,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4345,7 +4449,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           },
           {
@@ -4362,7 +4466,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-17T23:12:55.490457+00:00",
+            "collected_at": "2026-10-18T03:00:29.017931+00:00",
             "collection_state": "collected"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "version": "nour-sector-evidence-v2",
-  "analysis_date": "2026-10-17",
+  "analysis_date": "2026-10-18",
   "universe": 80,
   "families": {
     "Agriculture et intrants": 1,
@@ -41,14 +41,14 @@
     "Télécommunications": 1
   },
   "review_states": {
-    "additional_review_required": 3,
+    "additional_review_required": 4,
     "financial_audit_blocked": 19,
     "missing_primary_document": 3,
-    "primary_page_check_required": 53,
-    "selected_pages_checked": 2
+    "primary_page_check_required": 48,
+    "selected_pages_checked": 6
   },
   "curated": 78,
-  "selected_pages_reviewed_issuers": 7,
+  "selected_pages_reviewed_issuers": 15,
   "violations": [],
   "review_queue": [
     {
@@ -143,27 +143,66 @@
       ]
     },
     {
-      "symbol": "CMGP",
+      "symbol": "CFGB",
       "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+      "code": "documentary_reconciliation_pending",
+      "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
       "fields": [
-        "resultat_net_consolide"
+        "resultat_net_part_groupe",
+        "nombre_actions_au_rapport",
+        "bpa_publie_a_rapprocher"
       ],
       "blocked_metrics": [
         "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
+        "pe"
+      ],
+      "document_url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "accounting_basis": "consolidé IFRS",
+      "source_pages_to_check": [
+        {
+          "field": "resultat_net_part_groupe",
+          "page_hint": 39,
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "nombre_actions_au_rapport",
+          "page_hint": 44,
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "bpa_publie_a_rapprocher",
+          "page_hint": 44,
+          "status": "selected_pages_visually_checked"
+        }
+      ]
+    },
+    {
+      "symbol": "CMGP",
+      "priority": "P1",
+      "code": "documentary_reconciliation_pending",
+      "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+      "fields": [
+        "resultat_net_part_groupe",
+        "resultat_note_bpa_a_rapprocher"
+      ],
+      "blocked_metrics": [
+        "eps_mad",
+        "pe"
       ],
       "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "accounting_basis": "consolidé IFRS, 31/12/2025",
+      "accounting_basis": "consolidé IFRS",
       "source_pages_to_check": [
         {
-          "field": "resultat_net_consolide",
+          "field": "resultat_net_part_groupe",
           "page_hint": 68,
-          "status": "referenced_import"
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "resultat_note_bpa_a_rapprocher",
+          "page_hint": 76,
+          "status": "selected_pages_visually_checked"
         }
       ]
     },
@@ -416,25 +455,35 @@
     {
       "symbol": "SGTM",
       "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+      "code": "documentary_reconciliation_pending",
+      "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
       "fields": [
-        "resultat_net_consolide"
+        "resultat_net_part_groupe",
+        "nombre_actions_au_rapport",
+        "bpa_publie_a_rapprocher"
       ],
       "blocked_metrics": [
         "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
+        "pe"
       ],
       "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+      "accounting_basis": "consolidé (normes marocaines)",
       "source_pages_to_check": [
         {
-          "field": "resultat_net_consolide",
+          "field": "resultat_net_part_groupe",
           "page_hint": 88,
-          "status": "referenced_import"
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "nombre_actions_au_rapport",
+          "page_hint": 83,
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "bpa_publie_a_rapprocher",
+          "page_hint": 88,
+          "status": "selected_pages_visually_checked"
         }
       ]
     },
@@ -538,31 +587,6 @@
       ]
     },
     {
-      "symbol": "TGCC",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 96,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
       "symbol": "CAR",
       "priority": "P2",
       "code": "nonpositive_earnings_per_not_meaningful",
@@ -648,7 +672,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.autohall.ma/uploads/investisseurs/fichiers/cd0440678fe9a6903ad441fcb850bd2e962ad130.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 11,
+      "evidence_count": 12,
       "selected_page_evidence_count": 1,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -665,7 +689,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Managem_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 11,
+      "evidence_count": 12,
       "selected_page_evidence_count": 9,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -687,6 +711,33 @@
       "review_actions": []
     },
     {
+      "symbol": "TGCC",
+      "family": "BTP et ingénierie",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 10,
+      "selected_page_evidence_count": 7,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "carnet de commandes",
+        "prise de commandes",
+        "marge chantier",
+        "BFR",
+        "trésorerie",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "préventes immobilières comme CA",
+        "carnet de commandes comme bénéfice acquis"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
       "symbol": "ADI",
       "family": "Immobilier - promotion",
       "classification": "curated",
@@ -694,7 +745,7 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 10,
+      "evidence_count": 11,
       "selected_page_evidence_count": 9,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -886,7 +937,7 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Cartier_Saada_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
+      "evidence_count": 5,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -934,6 +985,72 @@
       ]
     },
     {
+      "symbol": "CFGB",
+      "family": "Banque",
+      "classification": "curated",
+      "status": "financial_audit_blocked",
+      "financial_audit_status": "blocked",
+      "document_url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 8,
+      "selected_page_evidence_count": 8,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "PNB",
+        "RNPG",
+        "coût du risque",
+        "créances en souffrance",
+        "solvabilité",
+        "ROE"
+      ],
+      "accounting_exclusions": [
+        "CA industriel",
+        "dette nette/EBITDA industriel"
+      ],
+      "blocked_metrics": [
+        "eps_mad",
+        "pe"
+      ],
+      "review_actions": [
+        {
+          "symbol": "CFGB",
+          "priority": "P1",
+          "code": "documentary_reconciliation_pending",
+          "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+          "fields": [
+            "resultat_net_part_groupe",
+            "nombre_actions_au_rapport",
+            "bpa_publie_a_rapprocher"
+          ],
+          "blocked_metrics": [
+            "eps_mad",
+            "pe"
+          ],
+          "document_url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+          "annual_exercise": 2025,
+          "accounting_basis": "consolidé IFRS",
+          "source_pages_to_check": [
+            {
+              "field": "resultat_net_part_groupe",
+              "page_hint": 39,
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "nombre_actions_au_rapport",
+              "page_hint": 44,
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "bpa_publie_a_rapprocher",
+              "page_hint": 44,
+              "status": "selected_pages_visually_checked"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "symbol": "CMGP",
       "family": "Agriculture et intrants",
       "classification": "curated",
@@ -941,11 +1058,9 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 12,
+      "selected_page_evidence_count": 9,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "saisonnalité",
@@ -961,33 +1076,35 @@
       ],
       "blocked_metrics": [
         "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
+        "pe"
       ],
       "review_actions": [
         {
           "symbol": "CMGP",
           "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+          "code": "documentary_reconciliation_pending",
+          "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
           "fields": [
-            "resultat_net_consolide"
+            "resultat_net_part_groupe",
+            "resultat_note_bpa_a_rapprocher"
           ],
           "blocked_metrics": [
             "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
+            "pe"
           ],
           "document_url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
           "annual_exercise": 2025,
-          "accounting_basis": "consolidé IFRS, 31/12/2025",
+          "accounting_basis": "consolidé IFRS",
           "source_pages_to_check": [
             {
-              "field": "resultat_net_consolide",
+              "field": "resultat_net_part_groupe",
               "page_hint": 68,
-              "status": "referenced_import"
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "resultat_note_bpa_a_rapprocher",
+              "page_hint": 76,
+              "status": "selected_pages_visually_checked"
             }
           ]
         }
@@ -1419,7 +1536,7 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
+      "evidence_count": 9,
       "selected_page_evidence_count": 7,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -1494,12 +1611,9 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires",
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
+      "evidence_count": 11,
+      "selected_page_evidence_count": 8,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "carnet de commandes",
@@ -1515,33 +1629,41 @@
       ],
       "blocked_metrics": [
         "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
+        "pe"
       ],
       "review_actions": [
         {
           "symbol": "SGTM",
           "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+          "code": "documentary_reconciliation_pending",
+          "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
           "fields": [
-            "resultat_net_consolide"
+            "resultat_net_part_groupe",
+            "nombre_actions_au_rapport",
+            "bpa_publie_a_rapprocher"
           ],
           "blocked_metrics": [
             "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
+            "pe"
           ],
           "document_url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
           "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "accounting_basis": "consolidé (normes marocaines)",
           "source_pages_to_check": [
             {
-              "field": "resultat_net_consolide",
+              "field": "resultat_net_part_groupe",
               "page_hint": 88,
-              "status": "referenced_import"
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "nombre_actions_au_rapport",
+              "page_hint": 83,
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "bpa_publie_a_rapprocher",
+              "page_hint": 88,
+              "status": "selected_pages_visually_checked"
             }
           ]
         }
@@ -1674,7 +1796,7 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Stokvis_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -1783,67 +1905,6 @@
       ]
     },
     {
-      "symbol": "TGCC",
-      "family": "BTP et ingénierie",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires",
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "carnet de commandes",
-        "prise de commandes",
-        "marge chantier",
-        "BFR",
-        "trésorerie",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "préventes immobilières comme CA",
-        "carnet de commandes comme bénéfice acquis"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "TGCC",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 96,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "symbol": "UNI",
       "family": "Agroalimentaire et boissons",
       "classification": "curated",
@@ -1851,7 +1912,7 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Unimer_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -1981,7 +2042,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
+      "evidence_count": 8,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2012,7 +2073,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/AFI_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2028,62 +2089,6 @@
       "accounting_exclusions": [
         "commandes assimilées à un bénéfice réalisé",
         "PNB bancaire"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "AFM",
-      "family": "Assurance - courtage",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Afma_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 2,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "commissions",
-        "primes intermédiées si publiées",
-        "taux de renouvellement si publié",
-        "marge",
-        "cash-flow"
-      ],
-      "accounting_exclusions": [
-        "primes encaissées comme chiffre d'affaires de l'assureur",
-        "ratio de solvabilité d'assureur"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "AGM",
-      "family": "Assurance - courtage",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 4,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [],
-      "unverified_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "business_kpis_to_collect": [
-        "commissions",
-        "primes intermédiées si publiées",
-        "taux de renouvellement si publié",
-        "marge",
-        "cash-flow"
-      ],
-      "accounting_exclusions": [
-        "primes encaissées comme chiffre d'affaires de l'assureur",
-        "ratio de solvabilité d'assureur"
       ],
       "blocked_metrics": [],
       "review_actions": []
@@ -2096,7 +2101,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/ALM_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 3,
+      "evidence_count": 4,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2112,34 +2117,6 @@
       "accounting_exclusions": [
         "commandes assimilées à un bénéfice réalisé",
         "PNB bancaire"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "ATL",
-      "family": "Assurance",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/AtlantaSanad_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 2,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "primes",
-        "sinistralité",
-        "résultat technique",
-        "solvabilité",
-        "placements"
-      ],
-      "accounting_exclusions": [
-        "EBITDA industriel",
-        "comparaison avec courtiers"
       ],
       "blocked_metrics": [],
       "review_actions": []
@@ -2182,7 +2159,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Balima_RFA_2025_0.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2322,36 +2299,6 @@
       "review_actions": []
     },
     {
-      "symbol": "CFGB",
-      "family": "Banque",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 2,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "produit_net_bancaire",
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "PNB",
-        "RNPG",
-        "coût du risque",
-        "créances en souffrance",
-        "solvabilité",
-        "ROE"
-      ],
-      "accounting_exclusions": [
-        "CA industriel",
-        "dette nette/EBITDA industriel"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
       "symbol": "CIH",
       "family": "Banque",
       "classification": "curated",
@@ -2389,7 +2336,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Cimar_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -2414,7 +2361,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/CMT_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
+      "evidence_count": 8,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -2443,7 +2390,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Colorado_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2472,7 +2419,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Cosumar_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2502,7 +2449,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Dari_Couspate_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2532,7 +2479,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/DHO_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 3,
+      "evidence_count": 4,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -2559,7 +2506,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Disty_technologies_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
+      "evidence_count": 8,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2616,7 +2563,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Fenie_Brossette_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2644,7 +2591,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/HPS_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2672,7 +2619,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Maroc_Telecom_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
+      "evidence_count": 5,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -2699,7 +2646,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Involys_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2727,7 +2674,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2758,7 +2705,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/LabelVie_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
+      "evidence_count": 5,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -2784,7 +2731,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/LafargeHolcim_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 3,
+      "evidence_count": 4,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -2809,7 +2756,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/M2M_Group_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2895,7 +2842,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Microdata_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2923,7 +2870,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/MOX_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -2981,7 +2928,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
+      "evidence_count": 9,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -3011,7 +2958,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3040,7 +2987,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Oulmes_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3070,7 +3017,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Promopharm_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
+      "evidence_count": 5,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3099,7 +3046,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Rebab_company_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 3,
+      "evidence_count": 4,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -3126,7 +3073,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Risma_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
+      "evidence_count": 8,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3155,7 +3102,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/S2M_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3211,7 +3158,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/SBM_RFA_2025_0.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
+      "evidence_count": 5,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3270,7 +3217,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
+      "evidence_count": 9,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -3299,7 +3246,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Sonasid_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3328,7 +3275,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Sothema_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3357,7 +3304,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3385,7 +3332,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
+      "evidence_count": 7,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
@@ -3411,7 +3358,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Vicenne_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 3,
+      "evidence_count": 4,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
@@ -3433,34 +3380,6 @@
       "review_actions": []
     },
     {
-      "symbol": "WAF",
-      "family": "Assurance",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 2,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "primes",
-        "sinistralité",
-        "résultat technique",
-        "solvabilité",
-        "placements"
-      ],
-      "accounting_exclusions": [
-        "EBITDA industriel",
-        "comparaison avec courtiers"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
       "symbol": "ZLD",
       "family": "Holdings et participations",
       "classification": "curated",
@@ -3468,7 +3387,7 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Zellidja_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
+      "evidence_count": 6,
       "selected_page_evidence_count": 0,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [
@@ -3488,6 +3407,84 @@
       "review_actions": []
     },
     {
+      "symbol": "AFM",
+      "family": "Assurance - courtage",
+      "classification": "curated",
+      "status": "selected_pages_checked",
+      "financial_audit_status": "checked",
+      "document_url": "https://www.ammc.ma/sites/default/files/Afma_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 7,
+      "selected_page_evidence_count": 7,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "commissions",
+        "primes intermédiées si publiées",
+        "taux de renouvellement si publié",
+        "marge",
+        "cash-flow"
+      ],
+      "accounting_exclusions": [
+        "primes encaissées comme chiffre d'affaires de l'assureur",
+        "ratio de solvabilité d'assureur"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "AGM",
+      "family": "Assurance - courtage",
+      "classification": "curated",
+      "status": "selected_pages_checked",
+      "financial_audit_status": "checked",
+      "document_url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 6,
+      "selected_page_evidence_count": 6,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "commissions",
+        "primes intermédiées si publiées",
+        "taux de renouvellement si publié",
+        "marge",
+        "cash-flow"
+      ],
+      "accounting_exclusions": [
+        "primes encaissées comme chiffre d'affaires de l'assureur",
+        "ratio de solvabilité d'assureur"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "ATL",
+      "family": "Assurance",
+      "classification": "curated",
+      "status": "selected_pages_checked",
+      "financial_audit_status": "checked",
+      "document_url": "https://www.ammc.ma/sites/default/files/AtlantaSanad_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 5,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "primes",
+        "sinistralité",
+        "résultat technique",
+        "solvabilité",
+        "placements"
+      ],
+      "accounting_exclusions": [
+        "EBITDA industriel",
+        "comparaison avec courtiers"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
       "symbol": "RDS",
       "family": "Immobilier - promotion",
       "classification": "curated",
@@ -3495,8 +3492,8 @@
       "financial_audit_status": "checked",
       "document_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 8,
+      "evidence_count": 9,
+      "selected_page_evidence_count": 9,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
@@ -3522,8 +3519,8 @@
       "financial_audit_status": "checked",
       "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 9,
-      "selected_page_evidence_count": 9,
+      "evidence_count": 10,
+      "selected_page_evidence_count": 10,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
@@ -3536,6 +3533,32 @@
       "accounting_exclusions": [
         "production pétrolière amont supposée",
         "PNB bancaire"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "WAF",
+      "family": "Assurance",
+      "classification": "curated",
+      "status": "selected_pages_checked",
+      "financial_audit_status": "checked",
+      "document_url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 4,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "primes",
+        "sinistralité",
+        "résultat technique",
+        "solvabilité",
+        "placements"
+      ],
+      "accounting_exclusions": [
+        "EBITDA industriel",
+        "comparaison avec courtiers"
       ],
       "blocked_metrics": [],
       "review_actions": []
