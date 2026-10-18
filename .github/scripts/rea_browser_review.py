@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import functools
+from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import urlsplit, urlunsplit, parse_qsl
 import hashlib
 import http.server
 import json
@@ -15,16 +17,30 @@ from datetime import datetime, timezone
 
 
 ROOT = Path(__file__).resolve().parents[2]
-TARGETS = (
+OVERVIEW_TARGETS = (
     ("idbourse", "https://www.idbourse.com/"),
     ("tradingview", "https://www.tradingview.com/"),
 )
+REFERENCE_TARGETS = (
+    ("idbourse_adi", "https://www.idbourse.com/stocks/ADI"),
+    ("idbourse_atw", "https://www.idbourse.com/stocks/ATW"),
+    ("idbourse_screener", "https://www.idbourse.com/data-plus"),
+    ("idbourse_comparator", "https://www.idbourse.com/data-plus/comparateur"),
+    ("idbourse_valuation", "https://www.idbourse.com/simulateur-valo"),
+    ("tradingview_adi", "https://fr.tradingview.com/symbols/CSEMA-ADI/"),
+    ("tradingview_chart", "https://www.tradingview.com/chart/?symbol=CSEMA%3AADI"),
+)
+
 
 
 def scenario(browser: str, url: str) -> dict:
+    parts = urlsplit(url)
+    destination = {"url": urlunsplit(parts._replace(query="")), "query": [
+        {"name": k, "value": {"source": "literal", "value": v}} for k, v in parse_qsl(parts.query)
+    ]}
     return {
         "browser": {"mode": "launch", "executable_path": browser, "headless": True},
-        "start_url": {"url": url, "query": []},
+        "start_url": destination,
         "environment": {
             "viewport": {"width": 1440, "height": 1000},
             "locale": "fr-FR",
@@ -100,6 +116,9 @@ def capture_one(cli: str, browser: str, out: Path, name: str, url: str) -> dict:
     text = dom.casefold()
     if any(marker in text for marker in ("verify you are human", "just a moment...", "access denied", "site unavailable")):
         status["status"] = "access_limited"
+    visible = artifacts.get("accessibility", {}).get("value", {}).get("text", "").casefold()
+    if any(marker in visible for marker in ("accès restreint", "réservée aux membres connectés", "log in to continue", "sign in to continue")):
+        status["status"] = "authentication_required"
     if name == "nour_local" and "Nour" not in dom:
         status["status"] = "invalid_local_content"
     return status
@@ -110,6 +129,10 @@ def main() -> int:
     browser = os.environ["NOUR_REA_BROWSER"]
     out = Path(os.environ["NOUR_REA_OUTPUT"])
     out.mkdir(parents=True, exist_ok=True)
+    review = os.environ.get("NOUR_REA_REVIEW", "overview")
+    if review not in {"overview", "reference"}:
+        raise ValueError("Unknown fixed review set")
+    targets = REFERENCE_TARGETS if review == "reference" else OVERVIEW_TARGETS
     version = subprocess.check_output([cli, "--version"], text=True).strip()
     browser_version = subprocess.check_output([browser, "--version"], text=True).strip()
     handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT / "web"))
@@ -119,18 +142,20 @@ def main() -> int:
     report = {
         "observed_at": datetime.now(timezone.utc).isoformat(),
         "rea_version": version,
+        "review": review,
         "browser_version": browser_version,
         "financial_data_changed": False,
         "captures": [],
-        "scope": "Own local Nour page, then two unauthenticated public home pages only; no account or private endpoints.",
+        "scope": "Own local Nour page, then the explicitly selected fixed public pages; no account credentials or private API probing.",
     }
     try:
         local = capture_one(cli, browser, out, "nour_local", f"http://127.0.0.1:{server.server_port}/index.html")
         report["captures"].append(local)
         # A broken browser never gets reported as ready or retried on third-party pages.
         if local["status"] == "captured":
-            for name, url in TARGETS:
-                report["captures"].append(capture_one(cli, browser, out, name, url))
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                report["captures"].extend(pool.map(
+                    lambda target: capture_one(cli, browser, out, *target), targets))
         report["browser_ready"] = local["status"] == "captured"
     finally:
         server.shutdown()
