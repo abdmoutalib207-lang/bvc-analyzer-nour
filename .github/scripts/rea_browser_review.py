@@ -31,6 +31,7 @@ REFERENCE_TARGETS = (
     ("tradingview_chart", "https://www.tradingview.com/chart/?symbol=CSEMA%3AADI"),
 )
 
+YUNA_TARGETS = (("yuna_public_example", "https://www.yuna.ma/en/about"),)
 ASSISTANT_TARGETS = (
     ("yuna_public_example", "https://www.yuna.ma/en/about"),
     ("ecofinance_public", "https://www.ecofinanceanalytics.com/"),
@@ -61,7 +62,7 @@ def scenario(browser: str, url: str) -> dict:
         "actions": actions,
         "capture": {
             "at_end": ["url", "dom", "accessibility", "screenshot"],
-            "events": ["network", "page-errors"],
+            "events": ["page-errors"] if parts.hostname in {"yuna.ma", "www.yuna.ma"} else ["network", "page-errors"],
             "network": {"request_body": False, "response_body": False, "header_values": False},
         },
     }
@@ -142,9 +143,9 @@ def main() -> int:
     out = Path(os.environ["NOUR_REA_OUTPUT"])
     out.mkdir(parents=True, exist_ok=True)
     review = os.environ.get("NOUR_REA_REVIEW", "overview")
-    if review not in {"overview", "reference", "assistant"}:
+    if review not in {"overview", "reference", "assistant", "yuna"}:
         raise ValueError("Unknown fixed review set")
-    targets = {"overview": OVERVIEW_TARGETS, "reference": REFERENCE_TARGETS, "assistant": ASSISTANT_TARGETS}[review]
+    targets = {"overview": OVERVIEW_TARGETS, "reference": REFERENCE_TARGETS, "assistant": ASSISTANT_TARGETS, "yuna": YUNA_TARGETS}[review]
     version = subprocess.check_output([cli, "--version"], text=True).strip()
     browser_version = subprocess.check_output([browser, "--version"], text=True).strip()
     handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT / "web"))
