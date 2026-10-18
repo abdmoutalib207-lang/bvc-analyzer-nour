@@ -21,7 +21,7 @@ FUNDAMENTAL_FIELDS = ('exercise', 'document_url', 'eps_mad', 'book_value_per_sha
     'eps_denominator', 'book_denominator', 'net_debt_method', 'revenue_growth_pct',
     'period_end', 'historical_per_share_only', 'financial_review', 'provenance',
     'coverage_pct', 'missing_metrics', 'roe_method', 'calculation_version', 'semester_activity_label',
-    'roe_average_equity_pct', 'debt_reconciliation', 'external_references')
+    'roe_average_equity_pct', 'debt_reconciliation', 'external_references', 'metric_availability')
 
 NEWS_FIELDS = ('title','url','publisher','published_at','tickers','tier','status',
                'category','scope','classification','feed_id','ticker_matching')
@@ -85,7 +85,7 @@ def build_data(report, briefings=None, history_files=None):
         'research': deepcopy(report.get('research') or {}),
         'news': [{k: deepcopy(a.get(k)) for k in NEWS_FIELDS} for a in report.get('news', [])
                  if isinstance(a.get('published_at'), str) and a['published_at'][:10] <= report['analysis_date']],
-        'briefings': deepcopy(briefings or {}), 'knowledge': knowledge(),
+        'briefings': deepcopy(briefings or {}), 'knowledge': {**knowledge(), 'metric_catalog': json.loads((Path(__file__).resolve().parents[1] / 'knowledge/assistant_metrics.json').read_text())},
         'history_files': deepcopy(history_files or {}),
         'masi_history': {d: v for d, v in report.get('masi_history', {}).items()
                          if d <= report['analysis_date']},
@@ -134,6 +134,9 @@ def source_links(context):
                     and isinstance(page, int) and not isinstance(page, bool) and page > 0):
                 out.append({'label': f'{symbol} · {key} · page PDF {page}',
                             'url': url.split('#')[0] + f'#page={page}'})
+    for row in (context.get('query_result') or {}).get('rows',[]):
+        selected={**row,'fundamental':{'evidence':row.get('evidence'),'document_url':row.get('document_url')}}
+        out.extend(source_links({'selected':{row['symbol']:selected}})[1:])
     return out
 
 
@@ -167,6 +170,7 @@ def panel(prefix=''):
         '<button type="button" data-assistant-question="Quelles fonctions peux-tu expliquer ?">Toutes les fonctions</button>'
         '<button type="button" data-assistant-question="Résume les données">Résumé</button>'
         '<button type="button" data-assistant-question="Quels fondamentaux sont disponibles ?">Fondamentaux</button>'
+        '<button type="button" data-assistant-question="Les 5 PER les plus faibles en 2025">Filtrer la cote</button>'
         '<button type="button" data-assistant-question="Explique les probabilités historiques">Statistiques</button>'
         '<button type="button" data-assistant-question="Explique le score">Score</button>'
         '<button type="button" data-assistant-question="Quel est le RSI ?">RSI du titre</button>'
@@ -189,6 +193,6 @@ def panel(prefix=''):
         '<div id="assistant-access-active" class="assistant-access-active" hidden><span id="assistant-access-scope">Accès IA actif pour cette page.</span>'
         '<button type="button" id="assistant-forget">Oublier le code</button></div>'
         '<form id="assistant-form" class="assistant-form"><label for="assistant-question">Votre question</label>'
-        '<div><textarea id="assistant-question" rows="2" maxlength="1200" placeholder="Ex. : RNPG JET S1 2026, risques ADI, laboratoire MASI après frais" required></textarea>'
+        '<div><textarea id="assistant-question" rows="2" maxlength="1200" placeholder="Ex. : cours, PER, RSI et VaR ADI ; valeurs avec PER inférieur à 15" required></textarea>'
         '<button type="submit" id="assistant-send">Envoyer</button></div><p id="assistant-status" role="status">Les échanges restent dans cette fenêtre jusqu’à son rechargement.</p></form>'
         '</dialog><noscript><p class="fineprint">L’assistant nécessite JavaScript. Les données et sources restent consultables dans les fiches.</p></noscript>')

@@ -19,6 +19,7 @@
     return {read,save,clear};
   }
   const domains=typeof module==='object'&&module.exports?require('./assistant-domains.js'):root?.NourAssistantDomains;
+  const queries=typeof module==='object'&&module.exports?require('./assistant-query.js'):root?.NourAssistantQuery;
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const fmt=(x,unit='')=>typeof x==='number'&&Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(unit?' '+unit:''):'indisponible';
   const validationLabel=status=>{
@@ -387,6 +388,7 @@
     return {text:lines.join('\n\n'),sources,symbols,mode:'local'};
   }
   function localAnswer(question,data,fallback,state={}){
+    if(state.queryQuestion&&/^\s*et\b/i.test(normalize(question))&&!symbolsFor(question,data,null,false).length)question=state.queryQuestion+' '+question;
     const prepared=prepareQuestion(question,data,fallback,state);
     question=prepared.question;
     const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
@@ -394,21 +396,38 @@
     const q=normalize(question),dates=datesIn(question);
     for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]],[/\bema\s*(\d+)\b/,[20,50]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes simples : 20, 50 et 200 séances; EMA : 20 et 50 séances.',sources:[],symbols,mode:'local'};}
     if(/\b(?:le|au|du)\s+\d{1,2}\s+[a-z]+\s+20\d{2}\b/.test(q)&&!dates.length)return {text:'Utilisez la date au format JJ/MM/AAAA ou AAAA-MM-JJ pour une lecture historique précise.',sources:[],symbols,mode:'local'};
-    if(dates.length&&/risque|beta|correlation|volatil|drawdown|\bc?var(?:95)?\b|value at risk|expected shortfall|score|\bper\b|\brsi\b|\b(?:mm|sma)\s*\d+|macd|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
+    if(dates.length&&/risque|beta|correlation|volatil|drawdown|\bc?var(?:95)?\b|value at risk|expected shortfall|score|\bper\b|\brsi\b|\b(?:mm|sma|ema)\s*\d+|macd|bollinger|\batr\b|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const normalizedDates=question.replace(/\b(20\d{2}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/(?:20\d{2}|\d{2}))\b/g,m=>dateIn(m)||m);
     if(dates.length&&!/cloture|cours|prix|masi|ohlc|ouverture|plus haut|plus bas|bougie|volume|quantite|briefing|publication|actualite|radar|macro|international|brent|cuivre|charbon|usd|eur|dollar|vix|nikkei|cac 40|s&p|\bfed\b|\bbce\b|\bhcp\b/.test(q))return {
       text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};
     const datedHistory=dates.length&&!/briefing|publication|actualite|radar|macro|international|brent|cuivre|charbon|usd|eur|dollar|vix|nikkei|cac 40|s&p|\bfed\b|\bbce\b|\bhcp\b/.test(q);
     const namedMacro=/brent|petrole|cuivre|charbon|vix|dxy|indice dollar|usd\s*\/\s*mad|eur\s*\/\s*mad|dollar.*dirham|euro.*dirham|s&p|sp ?500|cac\s*40|dow jones|nikkei/.test(q)&&!/actualite|radar|publication|fonction|capacit/.test(q);
-    const comprehensive=!dates.length&&/synthese|analyse complete|dossier complet|vue globale|vue d.ensemble|bilan complet/.test(q)&&!/briefing|edition|actualites|macro|international/.test(q);
-    const answer=(comprehensive&&titleOverview(data,symbols))||(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
+    const comprehensive=!dates.length&&symbols.some(s=>s!=='MASI')&&/synthese|analyse complete|dossier complet|vue globale|vue d.ensemble|bilan complet/.test(q)&&!/briefing|edition/.test(q);
+    const selection=!dates.length&&!prepared.explicitSymbols.length&&queries?.select(data,question);
+    const families=[[/\bper\b|\bbpa\b|p\s*\/\s*b|\broe\b|rnpg|dette|fondamentaux/,'fondamentaux'],[/rsi|\b(?:mm|ema|sma)\s*\d|macd|bollinger|technique/,'technique'],[/risques?|\bc?var(?:95)?\b|beta|correlation|volatilite|drawdown/,'risques'],[/actualites|nouvelles|radar/,'actualités'],[/qualite|conflits|fiabilite/,'qualité'],[/cours|cloture|prix|volume|quantite/,'cours']].filter(([p])=>p.test(q));
+    let composed=null;
+    if(!selection&&!state._composing&&!dates.length&&!comprehensive&&families.length>1&&!/pourquoi|comment|explique|compare|comparaison|secteur|semestr|\bs[12]\b|\b20\d{2}\b/.test(q)){
+      const parts=families.map(([,label])=>{
+        const metricNames=queries.metrics(question,data.knowledge?.metric_catalog||[]).filter(m=>(label==='fondamentaux'?m.domain==='fundamentals':label==='technique'?m.domain==='technical':label==='risques'?m.domain==='risk':label==='cours'?m.domain==='market':false)).map(m=>m.id==='pe'?'PER':m.id==='eps'?'BPA':m.label);
+        const focused=(metricNames.length?metricNames.join(', '):label==='cours'&&/volume|quantite/.test(q)?'cours et volume':label)+' '+symbols.join(' ');
+        return localAnswer(focused,data,fallback,{_composing:true});
+      });
+      const header=`Données Nour · analyse du ${data.analysis_date}.`,sources=[...new Map(parts.flatMap(a=>a.sources).map(s=>[s.url,s])).values()];
+      composed={text:header+'\n\n'+parts.map((a,i)=>{
+        let text=a.text.replace(header,'').trim();
+        for(const s of symbols){const label=data.symbols[s]?.history_readiness?.label;if(label)text=text.replaceAll('\n\nQualité historique : '+label+'.','');}
+        return families[i][1]+'\n'+text;
+      }).join('\n\n'),sources,symbols,mode:'local',domain:'overview'};
+    }
+    const answer=(selection&&queries.renderSelection(selection,data))||composed||(comprehensive&&titleOverview(data,symbols))||(namedMacro&&preciseAnswer(question,data,symbols))||(!datedHistory&&queries?.facts(question,data,symbols))||(!datedHistory&&domains?.answer(normalizedDates,data,symbols,{...state,explicitSymbols:prepared.explicitSymbols}))||baseAnswer(question,data,fallback);
+    if(comprehensive&&/actualites|nouvelles|radar/.test(q)){const extra=domains.answer('actualités '+symbols.join(' '),data,symbols);if(extra){answer.text+='\n\n'+extra.text;answer.sources.push(...extra.sources);}}
     if(!answer.domain)answer.domain=/fondament|\bper\b|\bbpa\b|\broe\b|\bp\/b\b|rnpg|resultat|minoritaires|dette|pnb|chiffre d.affaires|capital|dividende/.test(q)?'fundamentals':/rsi|\bmm\s*\d|sma|macd|atr|support|resistan/.test(q)?'technical':/macro|international|brent|cuivre|charbon|dollar|vix|nikkei|cac 40|s&p/.test(q)?'macro':'market';
     if(/demain|prochaine seance|va (?:monter|baisser)/.test(q)&&!answer.text.includes(data.definitions.probability))answer.text+='\n\n'+data.definitions.probability;
     for(const s of answer.symbols||[]){const row=data.symbols?.[s];if(!row)continue;
       if(row.history_readiness?.label)answer.text+='\n\nQualité historique : '+row.history_readiness.label+'.';
       for(const c of row.collection_conflicts||[])answer.text+='\nCollecte '+s+' · '+c.session+' : conflit sur '+(c.fields||[]).join(', ')+'. Historique conservé ; rapprochement requis.';
     }
-    answer.context={domain:answer.domain,symbols:answer.symbols.slice(),period:answer.domain==='fundamentals'?prepared.period:null,dates:prepared.dates.slice(),labFilters:answer.labFilters,measure:prepared.measure};
+    answer.context={domain:answer.domain,symbols:answer.symbols.slice(),period:answer.domain==='fundamentals'?prepared.period:null,dates:prepared.dates.slice(),labFilters:answer.labFilters,measure:prepared.measure,queryQuestion:selection?question:null};
     answer.resolvedQuestion=question;
     if(prepared.inherited)answer.text+='\n\nContexte conservé : '+[...(prepared.period?.semester?[prepared.period.semester]:[]),...(prepared.period?.years||[]),...prepared.dates].join(' · ')+'.';
     return domains?.decorate(question,data,answer)||answer;

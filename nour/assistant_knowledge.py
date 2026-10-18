@@ -5,6 +5,7 @@ CAPABILITIES = [
     ('chart', 'Graphiques et indicateurs visuels', 'Comment zoomer et lire les bougies ?'),
     ('technical', 'Indicateurs techniques', 'Quelle activité et quelle variation sur 20 séances pour ADI ?'),
     ('fundamentals', 'Comptes annuels et semestriels', 'Quel chiffre d’affaires et quel résultat pour JET ?'),
+    ('screener', 'Filtres et classements de la cote', 'Les 5 PER les plus faibles en 2025'),
     ('score', 'Score et facteurs', 'Comment est calculé le score de ADI ?'),
     ('statistics', 'Fréquences historiques', 'Statistiques ADI sur 20 séances et intervalle de Wilson ?'),
     ('liquidity', 'Liquidité et capacité de sortie', 'Combien de séances pour sortir du scénario ADI ?'),

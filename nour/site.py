@@ -77,6 +77,7 @@ def shell(title, body, style, script):
             f'{body}{assistant_panel(prefix)}<script>{script}</script>'
             f'<script src="{prefix}research.js" defer></script>'
             f'<script src="{prefix}assistant-domains.js" defer></script>'
+            f'<script src="{prefix}assistant-query.js" defer></script>'
             f'<script src="{prefix}assistant.js" defer></script></body></html>')
 
 
@@ -555,9 +556,10 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "titres").mkdir(exist_ok=True)
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
-    for asset in ('assistant.js', 'assistant-domains.js', 'research.js', 'assistant.css', 'bi.css', 'assistant-config.json'):
-        if (output / asset).resolve() != (assets / asset).resolve():
-            (output / asset).write_bytes((assets / asset).read_bytes())
+    for asset in ('assistant.js', 'assistant-domains.js', 'assistant-query.js', 'research.js', 'assistant.css', 'bi.css', 'assistant-config.json'):
+        source=assets.parent/'backend/query.cjs' if asset=='assistant-query.js' else assets/asset
+        if (output / asset).resolve() != source.resolve():
+            (output / asset).write_bytes(source.read_bytes())
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")

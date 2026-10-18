@@ -11,7 +11,7 @@ function check(q,predicate,context='MASI',state={},facts=data){
   const r=api.localAnswer(q,facts,context,state);assert.ok(predicate(r),q+'\n'+r.text);checked++;return r;
 }
 const menu=check('Quelles fonctions peux-tu expliquer ?',r=>r.domain==='navigation');
-assert.equal(data.knowledge.capabilities.length,16);
+assert.equal(data.knowledge.capabilities.length,17);
 for(const capability of data.knowledge.capabilities)assert.ok(menu.text.includes(capability.label));
 const cases=[
   ['Comment télécharger les données ADI ?','chart','CSV'],
@@ -68,7 +68,7 @@ check('CA JET S1 2025 et 2026',r=>r.text.includes('Chiffre d’affaires semestri
 check('Source du Brent',r=>r.text.includes('Brent')&&r.sources.some(s=>s.label.includes('Brent')),'ADI');
 check('Combien de valeurs montent et baissent ?',r=>r.text.includes('Hausses '+data.market.breadth.up),'ADI');
 check('Quelle différence entre total et part groupe ?',r=>r.text.includes('RNPG signifie')&&!r.text.includes('ne reconnais'),'ADI');
-check('Bandes Bollinger ADI',r=>r.text.includes('ne sont pas présentes dans cet export'));
+check('Bandes Bollinger ADI',r=>r.text.includes(fmt(data.symbols.ADI.technical.bollinger_upper))&&r.text.includes(fmt(data.symbols.ADI.technical.bollinger_lower)));
 check('RNPG MGL 2025',r=>r.text.includes('Résultat annuel part du groupe demandé : indisponible'));
 check('Résultat social M2M 2025',r=>r.text.includes('Résultat annuel social demandé : indisponible'));
 check('Capitaux propres part du groupe MGL',r=>r.text.includes('part du groupe demandés : indisponible'));
@@ -146,4 +146,4 @@ assert.throws(()=>api.parseHistory('bad header','ADI',data.analysis_date),/Forma
 assert.equal(Object.keys(api.parseHistory(header+'\n2999-01-01;ADI;10;11;9;10;100;\n2026-02-30;ADI;10;11;9;10;100;\n2026-01-01;ADI;10;8;9;10;100;','ADI',data.analysis_date)).length,0);
 assert.ok(!api.validURL('historique/../../private.csv'));
 assert.ok(domains.labFilters('laboratoire 20 seances 1 % a l’achat 2 % a la vente').filters.buy===1);
-console.log(`Assistant domains: ${checked} checked answers across all 16 capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);
+console.log(`Assistant domains: ${checked} checked answers across all ${data.knowledge.capabilities.length} capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);
