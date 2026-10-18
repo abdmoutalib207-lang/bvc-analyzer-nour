@@ -70,4 +70,13 @@ for(const asof of ['2026-10-06','2026-10-07']){
   assert.deepEqual(data,before);
   checked++;
 }
+for(const verified of [true,false]){
+  const data=structuredClone(published);
+  data.cross_source_volume_audit={status:verified?'matched':'unavailable',session:data.market.asof,
+    observed_at:'2026-10-18T21:00:00Z',cross_source_verified:verified,quantities_cross_source_verified:verified};
+  result=api.localAnswer('Quel volume global MASI ?',data,'MASI');
+  assert.equal(result.text.includes('montants confirmés'),verified);
+  assert.equal(result.text.includes('Recoupement externe non confirmé : unavailable'),!verified);
+  checked++;
+}
 console.log(`Assistant volume: ${checked} stable concordant/discrepant/incomplete/unavailable fixtures, zero vs missing amounts, dated scope, source preservation and no false concordance passed.`);

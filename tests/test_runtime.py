@@ -15,7 +15,7 @@ import run
 from nour.briefing import create_briefing
 from nour.engine import build_report
 from nour.market import capture_intraday, import_session
-from nour.runtime import EDITIONS, SLOTS, ZONE, run_context, visible_intraday
+from nour.runtime import CONTROL_SLOTS, EDITIONS, SLOTS, ZONE, run_context, visible_intraday
 from nour.site import briefing_page, home_page
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,8 +35,11 @@ class RuntimeContracts(unittest.TestCase):
     def test_three_exact_local_slots_and_three_editions(self):
         workflow = (ROOT/'.github/workflows/nour_daily.yml').read_text()
         pairs = re.findall(r"cron: '([^']+)'\s+timezone: '([^']+)'", workflow)
-        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in SLOTS])
-        self.assertEqual(len(pairs), 3)
+        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in (*SLOTS, *CONTROL_SLOTS)])
+        self.assertEqual(len(pairs), 4)
+        control=run_context(datetime(2026,10,19,17,15,tzinfo=ZONE),'15 17 * * 1-5','schedule')
+        self.assertEqual(control['slot'],'refresh')
+        self.assertNotIn(control['slot'],EDITIONS)
         self.assertEqual(set(EDITIONS), {'morning','midday','closing'})
         for cron, (slot, clock, _) in SLOTS.items():
             h,m = map(int,clock.split(':'))

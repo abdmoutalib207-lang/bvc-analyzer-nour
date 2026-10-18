@@ -8,6 +8,7 @@ from pathlib import Path
 
 from nour.engine import build_report
 from nour.issuer_status import apply_status
+from nour.market_integrity import visible_integrity, memory_summary
 from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
@@ -64,9 +65,17 @@ def main():
         started_at=os.environ.get("NOUR_STARTED_AT"), run_id=os.environ.get("GITHUB_RUN_ID", ""),
         commit=source_commit(os.environ))
     report['provenance'] = provenance(fixture['source_commit'], report['runtime']['commit'], ROOT/'data/market_snapshot.json')
+    integrity_path=ROOT/'data/market_integrity.json'
+    memory_path=ROOT/'data/error_memory.json'
+    report['cross_source_volume_audit']=visible_integrity(json.loads(integrity_path.read_text()) if integrity_path.exists() else {},report)
+    memory=json.loads(memory_path.read_text()) if memory_path.exists() else {}
+    report['error_memory_summary']=memory_summary(memory)
+    atomic_json(ROOT/'web/market-integrity.json',report['cross_source_volume_audit'])
+    atomic_json(ROOT/'web/error-memory.json',memory)
     report['collection'] = collection_view(report['health'])
     report['runtime']['collection'] = report['collection']
     report['runtime']['provenance'] = report['provenance']
+    report['runtime']['market_integrity']={k:report['cross_source_volume_audit'].get(k) for k in ('status','session','observed_at','cross_source_verified')}
     for item in report['results']:
         item['collection_conflicts'] = [c for c in report['collection']['conflicts'] if c.get('symbol') == item['symbol']]
     report['score_archive'] = archive_scores(report, ROOT/'data/score_archive', now)

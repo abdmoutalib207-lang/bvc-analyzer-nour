@@ -39,6 +39,8 @@ on:
       timezone: 'Africa/Casablanca'
     - cron: '0 16 * * 1-5'
       timezone: 'Africa/Casablanca'
+    - cron: '15 17 * * 1-5'
+      timezone: 'Africa/Casablanca'
 permissions:
   contents: write
   pages: write
@@ -92,6 +94,10 @@ jobs:
         id: macro
         continue-on-error: true
         run: python tools/update_macro.py
+      - name: Cross-check final amounts and quantities with a second market provider
+        id: integrity
+        continue-on-error: true
+        run: python tools/check_market_integrity.py
       - name: Build dashboard and briefing
         env:
           NOUR_SCHEDULE: ${{ github.event.schedule }}
@@ -152,6 +158,8 @@ jobs:
           NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/published
           NOUR_PUBLISHED_URL: ${{ steps.deployment.outputs.page_url }}
         run: node tools/test_assistant_browser.cjs "$NOUR_PUBLISHED_URL"
+      - name: Audit amounts and quantities actually served after deployment
+        run: python tools/audit_market_integrity.py --public --generator-commit "$NOUR_CODE_COMMIT"
       - name: Preserve browser QA screenshots
         uses: actions/upload-artifact@v4
         if: always()
@@ -170,6 +178,9 @@ jobs:
             data/health.json
             data/overview_health.json
             data/official_sources_health.json
+            data/market_integrity.json
+            data/market_integrity_log.json
+            data/error_memory.json
             web/financial-health.json
             web/runtime.json
             web/assistant-data.json
@@ -186,3 +197,17 @@ jobs:
           echo 'Sector publication discovery: ${{ steps.sector_sources.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'MASI: ${{ steps.overview.outcome }}' >> "$GITHUB_STEP_SUMMARY"
           echo 'Macro: ${{ steps.macro.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Market integrity: ${{ steps.integrity.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve error memory even when publication is refused
+        if: always()
+        run: |
+          git config user.name 'bvc-nour-bot'
+          git config user.email 'bvc-nour-bot@users.noreply.github.com'
+          git restore --staged -- data web
+          for nour_diagnostic in data/error_memory.json data/market_integrity.json data/market_integrity_log.json; do
+            if test -f "$nour_diagnostic"; then git add "$nour_diagnostic"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m "Preserve Nour market-control incident memory"
+            git push
+          fi

@@ -24,6 +24,7 @@ def main():
                     ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_volume', 'test_assistant_domains', 'test_assistant_conversation', 'test_assistant_query'))
     commands.append(['node', 'tools/test_worker.mjs'])
     commands.append([sys.executable, 'tools/audit_site.py'])
+    commands.append([sys.executable, 'tools/audit_market_integrity.py'])
     commands.append([sys.executable, 'tools/audit_readiness.py'])
     commands.append([sys.executable, 'tools/audit_sector_readiness.py'])
     for command in commands:

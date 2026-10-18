@@ -76,6 +76,19 @@ def market_panel(report):
                 f'<div class="breadth-bar" aria-hidden="true">{bars}</div><div class="breadth-legend"><span class="gain">{fmt(up,0)} hausses</span>'
                 f'<span>{fmt(flat,0)} inchangées</span><span class="loss">{fmt(down,0)} baisses</span></div></section>')
     audit = volume_reconciliation(report, overview)
+    external = report.get('cross_source_volume_audit') or {}
+    if external.get('cross_source_verified') and external.get('session') == overview.get('asof'):
+        summary += (f'<section class="panel" data-market-integrity="verified"><h2>Volumes recoupés entre fournisseurs</h2>'
+            f'<p>CDG Capital Bourse et Wafabourse · séance {esc(external.get("session"))}. '
+            'Montants et cours vérifiés ligne par ligne, avec contrôle du total. '
+            + ('Quantités également concordantes entre les deux fournisseurs.' if external.get('quantities_cross_source_verified') else 'Quantités non recoupées sur toutes les lignes.')
+            + f'</p><p class="fineprint">Contrôle du {esc(external.get("observed_at"))}. L’indépendance des flux amont n’est pas attestée.</p>'
+            '<a href="market-integrity.json">Détail du rapprochement</a> · <a href="error-memory.json">Journal des erreurs et corrections</a></section>')
+    elif external.get('status') not in (None,'not_observed'):
+        summary += (f'<div class="banner" data-market-integrity="degraded"><strong>Recoupement externe non confirmé</strong> · '
+            f'séance {esc(external.get("session"))} · dernier contrôle {esc(external.get("observed_at"))}. '
+            'Les données conservées ne sont pas présentées comme validées entre fournisseurs. '
+            '<a href="market-integrity.json">Voir les réserves</a>.</div>')
     if audit['status'] == 'discrepancy':
         summary += (f'<div class="banner" data-volume-reconciliation="discrepancy">'
                     f'<strong>Écart de volume à vérifier · {esc(audit["asof"])}</strong> : '

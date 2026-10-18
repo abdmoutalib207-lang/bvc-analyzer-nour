@@ -65,7 +65,7 @@ def compact_data(data):
         symbols[symbol] = copied
     result = {k: deepcopy(data.get(k)) for k in
               ('analysis_date', 'snapshot_updated', 'market', 'health', 'runtime',
-               'provenance', 'macro', 'masi_history', 'coverage', 'market_volume_audit', 'intraday', 'score_archive')}
+               'provenance', 'macro', 'masi_history', 'coverage', 'market_volume_audit', 'cross_source_volume_audit', 'error_memory_summary', 'intraday', 'score_archive')}
     result.update(schema_version='nour-assistant-context-v1', symbols=symbols,
                   policy=policy(), definitions=data.get('knowledge', {}).get('definitions', {}),
                   metric_catalog=deepcopy(data.get('knowledge', {}).get('metric_catalog', [])),
@@ -154,7 +154,7 @@ def retrieve(index, symbols, question):
             if query is not None:
                 result['query_result'] = query
         if intents & {'quality', 'overview'}:
-            for key in ('coverage', 'market_volume_audit', 'intraday', 'score_archive'):
+            for key in ('coverage', 'market_volume_audit', 'cross_source_volume_audit', 'error_memory_summary', 'intraday', 'score_archive'):
                 result[key] = deepcopy(index.get(key))
     def size():
         return len(json.dumps(result, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode())

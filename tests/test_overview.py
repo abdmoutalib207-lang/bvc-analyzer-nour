@@ -73,6 +73,7 @@ class OverviewContracts(unittest.TestCase):
 class VolumeReconciliationContracts(unittest.TestCase):
     def setUp(self):
         self.overview = {'asof': '2026-10-06', 'turnover_mad': 346377516.02,
+                         'shares': 30,
                          'breadth': {'quoted': 2}, 'observed_at': '2026-10-06T18:37:08Z'}
         self.report = {'analysis_date': '2026-10-06', 'results': [
             {'symbol': 'A', 'asof': '2026-10-06', 'day_shares': 10,
@@ -117,6 +118,14 @@ class VolumeReconciliationContracts(unittest.TestCase):
                     report['results'][1]['day_turnover_mad_actual'] = {
                         'missing': None, 'nan': float('nan'), 'negative': -1}[mutation]
                 self.assertEqual(volume_reconciliation(report, overview)['status'], 'incomplete')
+
+    def test_matching_money_cannot_hide_a_quantity_mismatch(self):
+        self.overview['turnover_mad'] = 349551480.02
+        self.overview['shares'] = 31
+        audit = volume_reconciliation(self.report, self.overview)
+        self.assertEqual(audit['status'], 'discrepancy')
+        self.assertEqual(audit['difference_mad'], 0)
+        self.assertEqual(audit['difference_shares'], -1)
 
     def test_future_or_missing_summary_remains_unavailable(self):
         self.report['analysis_date'] = '2026-10-05'
