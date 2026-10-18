@@ -1,6 +1,13 @@
 # Dossiers RNPG — TGCC, SGTM et CMGP
 
-Statut : **en attente de rapprochement documentaire indépendant**.
+Statut historique du 16 octobre : **en attente de rapprochement documentaire indépendant**.
+
+**Mise à jour du 18 octobre :** les PDF ont été récupérés, rendus et relus.
+RNPG confirmés pour TGCC, SGTM et CMGP ; BPA/PER TGCC indicatifs débloqués.
+SGTM et CMGP gardent une restriction spécifique de BPA/PER. Le ROE groupe
+est disponible pour les trois. Le relevé actif et les empreintes sont dans
+[le lot primaire du 18 octobre](batches/2026-10-18-primary.md).
+Le texte ci-dessous conserve la trace des pistes et blocages antérieurs.
 Les pages et chiffres ci-dessous proviennent de `data/facts_reference.json`, qui importe des relevés historiques du moteur principal. Ils ne sont **pas** une vérification indépendante du PDF et ne permettent pas de débloquer un ratio.
 
 | Émetteur | Rapport primaire référencé | Page indicative | Chiffre relevé, résultat consolidé total | Question à résoudre |

@@ -106,7 +106,12 @@ class SectorAuditTests(unittest.TestCase):
         facts = json.loads((Path(__file__).resolve().parents[1] / "data/facts_reference.json").read_text())["records"]
         for symbol in ("TGCC", "SGTM", "CMGP"):
             with self.subTest(symbol=symbol):
-                result = calculate({"symbol": symbol, "price": 200}, facts[symbol], asof="2026-10-16")
+                # Reproduce the unresolved pre-review dossier: a later primary
+                # import must not weaken the total-versus-group guardrail.
+                unresolved = copy.deepcopy(facts[symbol])
+                unresolved['faits'] = copy.deepcopy(unresolved.get('reconciliation_prior_oct18', unresolved['faits']))
+                unresolved.pop('calculation_reservations', None)
+                result = calculate({"symbol": symbol, "price": 200}, unresolved, asof="2026-10-16")
                 self.assertIn("resultat_net_consolide", result["evidence"])
                 self.assertIsNone(result["eps_mad"])
                 self.assertIsNone(result["pe"])

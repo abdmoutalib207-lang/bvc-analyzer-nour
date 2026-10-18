@@ -107,7 +107,8 @@ class NewContracts(unittest.TestCase):
         f=json.loads((ROOT/'data/facts_reference.json').read_text())['records']
         agm=calculate({'price':6000},f['AGM'])
         self.assertEqual(agm['roe_pct'],46.24)
-        self.assertIsNone(agm['eps_mad'])
+        self.assertEqual(agm['eps_mad'],round(71.02753751e6/200000,2))
+        self.assertIn('indicatif',agm['eps_denominator'])
         slm=calculate({'price':500},f['SLM'])
         self.assertEqual(slm['eps_mad'],30.77)
         self.assertEqual(slm['book_value_per_share_mad'],round(870.833e6/3124119,2))

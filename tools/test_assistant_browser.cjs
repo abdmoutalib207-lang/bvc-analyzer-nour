@@ -118,7 +118,19 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.equal(json.universe,80);
           assert.equal(json.curated,78);
           assert.equal(json.documents_certified,false);
-          assert.ok(json.review_queue.some(x=>x.code==='group_earnings_missing_total_not_substituted'&&x.symbol==='TGCC'));
+          const publishedReport=await (await context.request.get(new URL('report.json',base).href)).json();
+          // Review progress changes the reasons, not the visibility contract:
+          // every unresolved numerator or documentary restriction is queued.
+          for(const row of publishedReport.results){
+            for(const check of row.fundamental.financial_audit.checks){
+              if(check.status==='blocked'&&['group_earnings_missing_total_not_substituted','documentary_reconciliation_pending'].includes(check.code)){
+                const action=json.review_queue.find(x=>x.symbol===row.symbol&&x.code===check.code);
+                assert.ok(action,'Missing canonical review action '+row.symbol+' '+check.code);
+                assert.deepEqual(action.blocked_metrics,check.blocked_metrics);
+                assert.ok(action.source_pages_to_check.length>0);
+              }
+            }
+          }
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`metiers-${width}.png`),fullPage:true});}
         }
         if(route==='recherche.html'){

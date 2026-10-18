@@ -73,6 +73,9 @@ def _primary_checked(fact):
 
 
 ACTION_RULES = {
+    "documentary_reconciliation_pending": (
+        "P1", "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus."
+    ),
     "debt_arithmetic_mismatch": (
         "P1", "Rapprocher le périmètre de dette nette publié avec les postes du bilan et les notes annexes ; ne pas forcer le rapprochement."
     ),

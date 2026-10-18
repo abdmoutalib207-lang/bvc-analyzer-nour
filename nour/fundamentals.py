@@ -70,7 +70,7 @@ def _calculate(record, facts):
         equity = fact('capitaux_propres_sociaux')
     # Keep the consolidated *total* as a traceable review item only.
     # It must never replace net income attributable to group shareholders.
-    if net is None and data.get('resultat_net_consolide'):
+    if data.get('resultat_net_consolide'):
         fact('resultat_net_consolide')
     weighted = fact('nombre_actions_retenu_pour_le_bpa')
     existing = fact('nombre_actions_existant')
