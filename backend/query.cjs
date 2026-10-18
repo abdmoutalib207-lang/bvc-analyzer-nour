@@ -10,6 +10,9 @@
     if(found.some(m=>m.id==='macd')){const chosen=/histogramme/.test(q)?'histogram':/signal/.test(q)?'signal':'macd';found=found.filter(m=>!['macd','signal','histogram'].includes(m.id)||m.id===chosen);}
     if(!/quell?e?s?(?: sont)?(?: les)? (?:valeurs|titres|societes|entreprises|actions)|(?:affiche|montre|cherche|recherche|trouve|donne).*(?:valeurs|titres|societes|entreprises|actions)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|(?:valeurs|titres|societes|entreprises|actions) (?:avec|ayant|dont|qui ont)|toute la cote/.test(q))return null;
     if(!found.length)return null;
+    // A closing-equity accounting basis is not a request to sort share prices.
+    if(/fonds propres (?:de |a la )?cloture/.test(q)&&!/cours|prix/.test(q))found=found.filter(m=>m.id!=='price');
+    if(!found.length)return null;
     const years=[...new Set(q.match(/\b20\d{2}\b/g)||[])];
     const missing=/indisponibl|manquant|suspend|absent|non (?:calcula|rapproch)/.test(q);
     const p={metrics:found.map(m=>m.id),filters:[],missing,blocked:/suspend|bloqu/.test(q),year:years[0]?Number(years[0]):null,sort:null,limit:5,error:null};
@@ -20,6 +23,7 @@
     for(const m of found){
       const re=new RegExp('\\b(?:'+m.pattern+')\\s*(?:(?:est|soit|annuel|annuelle)\\s*)?(inferieur(?:e)?(?:s)? a|superieur(?:e)?(?:s)? a|au moins|au plus|moins de|plus de|<=|>=|<|>|=)\\s*(-?\\d+(?:[.,]\\d+)?)');
       const match=q.match(re);if(match){const op=/inferieur|moins de|^<$/.test(match[1])?'<':/superieur|plus de|^>$/.test(match[1])?'>':/au moins|>=/.test(match[1])?'>=':/au plus|<=/.test(match[1])?'<=':'=';p.filters.push({id:m.id,op,value:Number(match[2].replace(',','.'))});
+        if(!Number.isFinite(p.filters.at(-1).value)){p.filters.at(-1).value=null;p.error='Le seuil doit être un nombre fini.';}
         const unit=q.slice(match.index+match[0].length).match(/^\s*(%|mmad\b|mdh\b|mad\b|milliards?\b|millions?\b|points?\b|x\b)/)?.[1];
         if(unit&&(unit==='mdh'?'mmad':unit)!==norm(m.unit))p.error='Unité du seuil incompatible : '+m.label+' utilise '+(m.unit||'une valeur sans unité')+'. Aucun changement d’unité automatique.';
         if(/^\s*(?:[\d.,]|e[+-]?\d)/.test(q.slice(match.index+match[0].length)))p.error='Nombre ambigu : utilisez un nombre sans séparateur de milliers, avec une virgule ou un point décimal.';
@@ -27,6 +31,12 @@
     }
     if(/plus (?:faibles?|bas|petits?)|\bcroissant\b/.test(q))p.sort={id:found[0].id,direction:'asc'};
     else if(/plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b/.test(q))p.sort={id:found[0].id,direction:'desc'};
+    if(p.sort){
+      const direction=q.match(/plus (?:faibles?|bas|petits?|eleves?|hauts?|grands?|forts?)|\b(?:de)?croissant\b/);
+      const distances=found.map(m=>({id:m.id,distance:Math.min(...[...q.matchAll(new RegExp('\\b(?:'+m.pattern+')','g'))].map(hit=>hit.index+hit[0].length<=direction.index?direction.index-hit.index-hit[0].length:hit.index>=direction.index+direction[0].length?hit.index-direction.index-direction[0].length:0))})).sort((a,b)=>a.distance-b.distance);
+      if(distances.length>1&&distances[0].distance===distances[1].distance)p.error='Précisez une seule mesure pour le tri numérique.';
+      else p.sort.id=distances[0].id;
+    }
     if(p.missing&&p.sort)p.error='Un ratio indisponible ou bloqué ne peut pas être classé par valeur. Demandez la liste des données absentes sans tri numérique.';
     if(/meilleur/.test(q))p.error='Un ratio ne définit pas les meilleurs titres. Précisez un seuil ou un ordre croissant ou décroissant.';
     if(/entre\s+-?\d|compris|au.dessus|au.dessous|sous (?:la |les )?(?:mm|ema|sma)|surachet|survend/.test(q))p.error='Ce critère relatif ou cet intervalle n’est pas pris en charge. Précisez un seuil numérique explicite sur une mesure.';
