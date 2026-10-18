@@ -145,5 +145,12 @@ assert.throws(()=>api.parseHistory(header+'\n'+row+'\n'+row,'ADI',data.analysis_
 assert.throws(()=>api.parseHistory('bad header','ADI',data.analysis_date),/Format/);
 assert.equal(Object.keys(api.parseHistory(header+'\n2999-01-01;ADI;10;11;9;10;100;\n2026-02-30;ADI;10;11;9;10;100;\n2026-01-01;ADI;10;8;9;10;100;','ADI',data.analysis_date)).length,0);
 assert.ok(!api.validURL('historique/../../private.csv'));
+for(const symbol of ['DIS','DLM']){
+  check(symbol+' est elle radiée ?',r=>r.text.includes('Cotation suspendue')&&r.text.includes('radiation')&&!r.text.includes('ne reconnais pas')&&r.sources.some(s=>s.url.includes('casablanca-bourse.com')));
+  check('PER '+symbol,r=>r.text.includes('dossier historique')&&r.text.includes('indisponible'));
+}
+check('IBM est elle encore cotée ?',r=>r.text.includes('Cotation suivie')&&r.text.includes('2023-06-30')&&!r.text.includes('ne reconnais pas'));
+check('PER IBM',r=>r.text.includes('PER : indisponible')&&r.text.includes('aucun compte annuel 2025')&&r.sources.some(s=>s.url.endsWith('IB_Maroc_2022_S1_23.pdf')));
+for(const symbol of ['IBM','MDP','SLM'])assert.ok(data.symbols[symbol].quality.usable_close_bars>700,symbol+' full documented history');
 assert.ok(domains.labFilters('laboratoire 20 seances 1 % a l’achat 2 % a la vente').filters.buy===1);
 console.log(`Assistant domains: ${checked} checked answers across all ${data.knowledge.capabilities.length} capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);

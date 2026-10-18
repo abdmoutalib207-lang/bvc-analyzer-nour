@@ -7,6 +7,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 from nour.engine import build_report
+from nour.issuer_status import apply_status
 from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
@@ -31,6 +32,7 @@ def main():
     parser.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
     fixture = json.loads((ROOT / "data/market_snapshot.json").read_text(encoding="utf-8"))
+    fixture = apply_status(fixture, json.loads((ROOT/'data/issuer_status.json').read_text()), args.asof)
     facts=json.loads((ROOT/"data/facts_reference.json").read_text(encoding="utf-8")).get("records",{})
     news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))

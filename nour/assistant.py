@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 from .assistant_knowledge import knowledge
 
 VERSION = 'nour-assistant-data-v1'
-SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'sector_guidance', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_source', 'age_calendar_days',
+SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'issuer_status', 'history_provenance', 'sector_guidance', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_source', 'age_calendar_days',
                  'decision', 'technical', 'canonical_score', 'historical_statistics',
                  'market_risk', 'sector_comparison', 'quality', 'day_turnover_mad_actual',
                  'day_shares', 'close_dates_last_60', 'close_series_last_60',
@@ -118,6 +118,10 @@ def source_links(context):
         if symbol == 'MASI':
             continue
         out.append({'label': f'Fiche {symbol} · {row.get("asof")}', 'url': row['url']})
+        for source in (row.get('issuer_status') or {}).get('sources', []):
+            url = source.get('url')
+            if isinstance(url, str) and urlsplit(url).scheme == 'https' and not urlsplit(url).username and not urlsplit(url).password:
+                out.append({'label': f'{symbol} · {source["label"]}', 'url': url})
         f = row.get('fundamental') or {}
         for label, url in [('Comptes annuels', f.get('document_url')),
                            ('Dernière publication', (f.get('latest_report') or {}).get('document_url'))]:

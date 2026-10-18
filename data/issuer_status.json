@@ -1,0 +1,47 @@
+{
+  "version": "nour-issuer-status-v1",
+  "observed_asof": "2026-10-16",
+  "source_commit": "0a0bf7c2039f72e1aca135bce0b87e7ec10a0d49",
+  "records": {
+    "DIS": {
+      "trading_status": "suspended",
+      "current_documents_expected": false,
+      "reporting_status": "archival_only",
+      "last_known_filing_date": "2012-09-26",
+      "last_known_financial_period": "2012-06-30",
+      "label": "Cotation suspendue · dossier historique",
+      "reason": "Diac Salaf : retrait d’agrément en 2013, dossier de liquidation et absence de transactions dans les exports disponibles. Les comptes récents ne sont pas un chantier de collecte ordinaire. Une suspension ne constitue pas, à elle seule, une preuve de radiation.",
+      "sources": [
+        {"label": "Bourse de Casablanca · DIS · avis de suspension", "url": "https://www.casablanca-bourse.com/en/live-market/instruments/DIS"},
+        {"label": "AMMC · communiqué Diac Salaf · mars 2013", "url": "https://www.ammc.ma/sites/default/files/CP_CDVM_Diac_Salaf_20130304.pdf"}
+      ]
+    },
+    "DLM": {
+      "trading_status": "suspended",
+      "current_documents_expected": false,
+      "reporting_status": "archival_only",
+      "last_known_filing_date": "2022-04-29",
+      "last_known_financial_period": "2021-12-31",
+      "label": "Cotation suspendue · dossier historique",
+      "reason": "DLM : demande de liquidation annoncée en novembre 2022, cotation suspendue et absence de transactions dans les exports disponibles. Derniers comptes identifiés : exercice 2021. Ne pas présenter cette absence comme un simple oubli de traitement ni assimiler automatiquement suspension et radiation.",
+      "sources": [
+        {"label": "Bourse de Casablanca · DLM · avis de suspension", "url": "https://www.casablanca-bourse.com/fr/live-market/instruments/DLM"},
+        {"label": "AMMC · DLM · comptes 2021", "url": "https://www.ammc.ma/sites/default/files/DLM_2021.pdf"},
+        {"label": "AMMC · DLM · communiqué novembre 2022", "url": "https://www.ammc.ma/sites/default/files/CP_DLM_post_CA_10_11_22.pdf"}
+      ]
+    },
+    "IBM": {
+      "trading_status": "listed",
+      "current_documents_expected": true,
+      "reporting_status": "late_filings",
+      "last_known_filing_date": "2023-10-31",
+      "last_known_financial_period": "2023-06-30",
+      "label": "Cotation suivie · publications financières anciennes",
+      "reason": "IB Maroc cote encore dans le relevé du 16 octobre 2026. Les derniers comptes identifiés couvrent 2022 et le S1 2023 ; aucun compte annuel 2025 identifié dans le catalogue consulté. Le communiqué de janvier 2023 mentionne une demande de redressement judiciaire. Les documents anciens ne peuvent pas remplacer les comptes annuels 2025 pour calculer un PER actuel.",
+      "sources": [
+        {"label": "AMMC · IB Maroc · comptes 2022 et S1 2023", "url": "https://www.ammc.ma/sites/default/files/IB_Maroc_2022_S1_23.pdf"},
+        {"label": "AMMC · IB Maroc · communiqué janvier 2023", "url": "https://www.ammc.ma/sites/default/files/CP_IB_Maroc_redressement_judiciaire.pdf"}
+      ]
+    }
+  }
+}

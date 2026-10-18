@@ -140,6 +140,7 @@
     if(/couverture|combien.*(?:titres|societes|references)|fondamentaux.*(?:correct|verifie|fiable)|manquants?/.test(q)&&!/actions|seances|liquidite/.test(q)){
       const c=data.coverage||{};lines.push(`Univers ${c.universe??'indisponible'} · références annuelles ${c.referenced??'indisponible'} · publications récentes ${c.with_recent_report??'indisponible'} · BPA ${c.with_eps??'indisponible'} · P/B ${c.with_pb??'indisponible'} · ROE ${c.with_roe??'indisponible'}.`);
       lines.push('Références annuelles manquantes : '+((c.missing_documents||[]).join(', ')||'aucune recensée')+'.');
+      if(c.archived_symbols?.length)lines.push(`Univers courant : ${c.current_universe} · dossiers suspendus conservés : ${c.archived_symbols.join(', ')}. Publications courantes absentes : ${(c.current_missing_documents||[]).join(', ')||'aucune'}. Les suspensions documentées restent des dossiers historiques, distincts des retards de publication.`);
       const all=Object.values(data.symbols||{});lines.push(`PER disponible sur ${all.filter(x=>x.fundamental?.pe!=null).length} titres. Revues annuelles de pages primaires : ${all.filter(x=>x.fundamental?.validation_status?.startsWith('selected_pages_visually_checked')).length}; autres imports à revérifier séparément.`);
       lines.push(c.interpretation||'Une référence ne certifie pas tous les ratios.');link('Données et disponibilité','index.html');return result('fundamentals');
     }

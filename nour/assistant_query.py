@@ -129,7 +129,7 @@ def select(data,question):
             continue
         if not all(numeric(values[c['id']]) and compare(values[c['id']],c) for c in p['filters']):
             continue
-        picked = {k:deepcopy(row.get(k)) for k in ('name','sector','url','asof','price_source','history_readiness')}
+        picked = {k:deepcopy(row.get(k)) for k in ('name','sector','url','asof','price_source','history_readiness','issuer_status')}
         picked.update({k:deepcopy(f.get(k)) for k in ('exercise','period_end','currency','accounting_basis','validation_status','document_url')})
         picked.update(symbol=symbol,values=values,warnings=deepcopy(f.get('warnings') or []) if financial else [],latest_report=deepcopy(f.get('latest_report') or None) if financial else None,
                       evidence={k:deepcopy(v) for k,v in (f.get('evidence') or {}).items() if any(k in proof_keys.get(m['id'],[]) for m in definitions)},metric_availability=deepcopy(f.get('metric_availability') or {}) if financial else {},

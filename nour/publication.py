@@ -21,6 +21,7 @@ def history_readiness(item):
     usable = tech.get('sessions', total)
     resumed = bool(tech.get('limited_by_resumption'))
     depth = 'none' if not usable else 'short' if usable < 252 else 'deep'
+    suspended = (item.get('issuer_status') or {}).get('trading_status') == 'suspended'
     description = ('aucune séance exploitable' if not usable else
                    f'{usable} séances post-reprise' if resumed else
                    f'historique {"profond" if depth == "deep" else "court"} · {usable} séances')
@@ -29,7 +30,8 @@ def history_readiness(item):
             'post_resume_only': resumed, 'last_close': item.get('asof'),
             'age_calendar_days': item.get('age_calendar_days'),
             'deep_threshold_sessions': 252,
-            'label': f'{item.get("decision")} · {description} · dernière clôture {item.get("asof") or "indisponible"}',
+            'label': ('Cotation suspendue · absence de transactions documentée · dossier historique' if suspended and not usable else
+                      f'{item.get("decision")} · {description} · dernière clôture {item.get("asof") or "indisponible"}'),
             'notice': 'Profondeur descriptive, sans modifier les seuils de calcul, la qualité ni le score.'}
 
 

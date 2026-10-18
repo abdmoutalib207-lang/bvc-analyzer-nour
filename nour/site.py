@@ -11,7 +11,7 @@ from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .fundamental_view import panel as fundamental_explorer, export_csv as export_fundamentals_csv
-from .issuer_view import issuer_heading, financial_history
+from .issuer_view import issuer_heading, financial_history, documentary_status
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 from .assistant import panel as assistant_panel, export as export_assistant
@@ -355,7 +355,8 @@ def detail_page(item, record, fixture, style, script):
             + '</div>'
             + f'<section class="panel" id="fondamentaux"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_history(item)}{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel" id="historique"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
-            + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
+            + documentary_status(item)
+            + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source initial des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
     return shell(f'{symbol} · {record["name"]}', body, style, script)
 
@@ -368,6 +369,8 @@ def home_page(fixture, report, style, script):
         f'{coverage.get("with_recent_report",0)} publications semestrielles. '
         f'BPA calculable : {coverage.get("with_eps",0)} ; P/B : {coverage.get("with_pb",0)} ; ROE : {coverage.get("with_roe",0)}.</p>'
         f'<p class="fineprint">Sans rapport annuel dans cette archive : {esc(", ".join(coverage.get("missing_documents",[])))}. '
+        f'Univers courant : {coverage.get("current_universe",len(items))} ; dossiers suspendus conservés : {esc(", ".join(coverage.get("archived_symbols",[])) or "aucun")}. '
+        f'Publications courantes absentes : {esc(", ".join(coverage.get("current_missing_documents",[])) or "aucune")}, avec explication sur les fiches. '
         'Une référence n’est pas une certification. Le semestre reste séparé des ratios annuels. '
         'Le score décrit des facteurs observés, pas une probabilité de gain.</p></details>')
     rows = []
@@ -383,7 +386,7 @@ def home_page(fixture, report, style, script):
         change = ((bars[-1]['c']/bars[-2]['c']-1)*100 if len(bars)>1 and bars[-2]['c'] else None)
         tone = 'gain' if change is not None and change>0 else 'loss' if change is not None and change<0 else 'muted'
         history_link = (f'<a class="csv-button" href="historique/{esc(symbol)}.csv" download aria-label="Historique CSV de {esc(symbol)}">CSV</a>'
-                        if bars else '<span class="muted">Indisponible</span>')
+                        if bars else '<span class="muted">Cotation suspendue</span>' if r.get('decision') == 'SUSPENDU' else '<span class="muted">Indisponible</span>')
         rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
@@ -474,6 +477,8 @@ def sector_page(report, style, script):
     from .sector_audit import audit_sector_report
     audit = audit_sector_report(report)
     status_labels = {
+        'archived_suspension': 'Cotation suspendue · dossier historique',
+        'known_reporting_gap': 'Publications anciennes · retard documenté',
         'missing_primary_document': 'Document primaire absent',
         'financial_audit_blocked': 'Ratios bloqués : rapprochement nécessaire',
         'primary_page_check_required': 'Contrôle primaire à réaliser',

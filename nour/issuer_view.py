@@ -22,10 +22,28 @@ def issuer_heading(item, record):
             f'<h1>{esc(record["name"])}</h1><p>{esc(history.get("label"))}</p>'
             f'<span class="status {esc(item["decision"])}">{esc(item["decision"])}</span>'
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
-            '<div class="issuer-quote"><span>Dernière clôture disponible</span>'
+            '<div class="issuer-quote"><span>Dernière clôture attestée</span>'
             f'<strong>{number(item.get("price"))} <small>MAD</small></strong>{change}'
             f'<p>Séance {esc(item.get("asof"))}<br>{esc(item.get("price_source"))}</p></div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
+
+
+def documentary_status(item):
+    status = item.get('issuer_status') or {}
+    provenance = item.get('history_provenance') or {}
+    parts = []
+    if status:
+        links = ' · '.join(f'<a href="{esc(s["url"])}" rel="noopener noreferrer">{esc(s["label"])}</a>' for s in status.get('sources', []))
+        parts.append(f'<h2>{esc(status["label"])}</h2><p>{esc(status["reason"])}</p>'
+                     f'<p>Dernier dépôt identifié : {esc(status.get("last_known_filing_date"))} ; période : {esc(status.get("last_known_financial_period"))}. Observation au {esc(status.get("observed_asof"))}.</p>'
+                     f'<p>{links}</p><p class="fineprint">{esc(status.get("validation"))}</p>')
+    if provenance:
+        parts.append(f'<h2>Historique rapproché</h2><p>{esc(provenance.get("notice"))}</p>'
+                     f'<p>Période opérateur : {esc(" → ".join(provenance["operator_period"]))}. '
+                     f'{provenance["added"]} séances ajoutées ; {provenance["replaced"]} observations corrigées.</p>'
+                     f'<p><a href="{esc(provenance["source_url"])}">Série source figée</a> · '
+                     f'<a href="{esc(provenance["manifest_url"])}">Manifeste et empreinte de l’export</a></p>')
+    return '<section class="panel">'+''.join(parts)+'</section>' if parts else ''
 
 
 def financial_history(item):
