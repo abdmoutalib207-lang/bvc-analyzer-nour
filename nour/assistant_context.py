@@ -21,7 +21,7 @@ FUNDAMENTALS = ('exercise', 'document_url', 'period_end', 'currency', 'accountin
     'pnb_growth_pct', 'revenue_growth_pct', 'net_debt_strict_mmad', 'net_debt_ebitda',
     'eps_denominator', 'book_denominator', 'net_debt_method', 'warnings',
     'validation_status', 'point_in_time_ready', 'coverage_pct', 'missing_metrics',
-    'latest_report', 'evidence', 'financial_review', 'debt_reconciliation')
+    'latest_report', 'evidence', 'financial_review', 'debt_reconciliation', 'metric_availability')
 
 
 class ContextError(ValueError):
@@ -65,13 +65,17 @@ def compact_data(data):
         symbols[symbol] = copied
     result = {k: deepcopy(data.get(k)) for k in
               ('analysis_date', 'snapshot_updated', 'market', 'health', 'runtime',
-               'provenance', 'macro', 'masi_history')}
+               'provenance', 'macro', 'masi_history', 'coverage', 'market_volume_audit', 'intraday', 'score_archive')}
     result.update(schema_version='nour-assistant-context-v1', symbols=symbols,
                   policy=policy(), definitions=data.get('knowledge', {}).get('definitions', {}),
+                  metric_catalog=deepcopy(data.get('knowledge', {}).get('metric_catalog', [])),
                   news=deepcopy(data.get('news') or []),
-                  briefings={k: {p: deepcopy(v.get(p)) for p in
+                  briefings={k: {**{p: deepcopy(v.get(p)) for p in
                       ('generated_for', 'market_session', 'title', 'edition_status',
-                       'edition_notice', 'market_summary', 'coverage', 'limitations', 'text_url')}
+                       'edition_notice', 'market_summary', 'coverage', 'limitations', 'text_url', 'editorial')},
+                      'focus': [{**{p:deepcopy(f.get(p)) for p in ('symbol','name','asof','data_status','issues')},
+                          'reading':{p:deepcopy((f.get('reading') or {}).get(p)) for p in ('paragraphs','checkpoint','source','previous_session')}}
+                          for f in v.get('focus') or []]}
                       for k, v in (data.get('briefings') or {}).items()})
     identity = json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     result['snapshot_id'] = hashlib.sha256(identity.encode()).hexdigest()
@@ -88,6 +92,8 @@ def retrieve(index, symbols, question):
     routes = [r for r in rules['routes'] if re.search(r'\b(?:' + r['pattern'] + ')', q)]
     if not routes:
         routes = rules['routes'][:1]
+    if any(r['id']=='briefing' for r in routes):
+        routes=[r for r in routes if r['id']!='overview']
     if any(r['id'] == 'overview' for r in routes):
         # The overview already covers numerical domains; explicit news/macro
         # requests still include their separate dated, bounded material.
@@ -104,7 +110,8 @@ def retrieve(index, symbols, question):
         else:
             selected[symbol] = {k: deepcopy(v) for k, v in index['symbols'][symbol].items() if k in fields}
     dates = question_dates(question)
-    historical = bool(dates) and not any(r['id'] in ('news', 'macro', 'briefing') for r in routes)
+    historical = bool(dates) and (not any(r['id'] in ('news', 'macro', 'briefing') for r in routes)
+        or any(r['id'] in ('fundamentals','technical','risk','score','laboratory') for r in routes))
     if historical:
         for symbol, row in selected.items():
             if symbol == 'MASI':
@@ -132,7 +139,32 @@ def retrieve(index, symbols, question):
     if 'macro' in intents:
         result['macro'] = deepcopy(index.get('macro'))
     if 'briefing' in intents:
-        result['briefings'] = deepcopy(index.get('briefings'))
-    if len(json.dumps(result, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode()) > rules['max_context_bytes']:
+        key='briefing-matin' if 'matin' in q else 'briefing-midi' if re.search(r'midi|mi.journee',q) else 'briefing-cloture' if re.search(r'fin de journee|edition.*cloture',q) else 'cloture' if 'cloture' in q else 'briefing'
+        briefing=deepcopy((index.get('briefings') or {}).get(key))
+        if briefing:
+            briefing['focus']=[f for f in briefing.get('focus') or [] if f.get('symbol') in symbols]
+            if dates and any(d not in (briefing.get('generated_for'),briefing.get('market_session')) for d in dates):
+                briefing=None
+        result['briefings']={key:briefing} if briefing else {}
+        result['briefing_notice']='Édition et paragraphes descriptifs déjà publiés par Nour ; pas de nouvelle analyse ni de causalité démontrée. Les données absentes ne sont pas reconstituées.'
+    if not historical:
+        from .assistant_query import select
+        if symbols == ['MASI']:
+            query = select(index, question)
+            if query is not None:
+                result['query_result'] = query
+        if intents & {'quality', 'overview'}:
+            for key in ('coverage', 'market_volume_audit', 'intraday', 'score_archive'):
+                result[key] = deepcopy(index.get(key))
+    def size():
+        return len(json.dumps(result, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode())
+    query=result.get('query_result')
+    if query and query['rows']:
+        total=len(query['rows'])
+        while size()>rules['max_context_bytes'] and len(query['rows'])>1:
+            query['rows'].pop()
+            query['omitted_for_context_budget']=total-len(query['rows'])
+            query['context_notice']='Sélection IA limitée aux premiers titres affichés pour conserver leurs preuves et réserves intégrales. Le résultat local conserve la liste demandée.'
+    if size() > rules['max_context_bytes']:
         raise ContextError('Les preuves requises dépassent le budget IA. Posez une question ciblée ; les données locales restent disponibles.')
     return result

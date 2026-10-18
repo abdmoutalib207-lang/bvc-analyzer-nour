@@ -68,6 +68,7 @@
     if(/que.*(?:peux|sais|peut).*(?:repondre|demander|faire)|fonctionnalit|quels?.*(?:indicateurs|fonctions)|que fait.*nour|comment utiliser.*nour|tout.*implemente|capacites|questions possibles|aide.*assistant/.test(q)){
       lines.push('Je couvre les fonctions suivantes. Vous pouvez demander leur explication ou les données d’un titre, et comparer deux titres.');
       for(const c of data.knowledge?.capabilities||[])lines.push(`${c.label} : « ${c.example} »`);
+      lines.push('Vous pouvez réunir plusieurs demandes : « cours, PER, RSI et VaR ADI », filtrer la cote : « quelles valeurs ont un PER inférieur à 15 et un ROE supérieur à 10 % ? », ou demander « valeurs avec dette nette suspendue ». Les classements restent descriptifs, avec leurs périodes et réserves.');
       definition('assistant');definition('limits');link('Toutes les fonctions Nour','index.html');return result('navigation');
     }
     if(/difference.*(?:part.*groupe|rnpg|total)|(?:part.*groupe|rnpg|total).*difference/.test(q)&&!rows.some(row=>q.includes(row.symbol.toLowerCase()))){definition('rnpg');definition('pb');return result('fundamentals');}
@@ -205,7 +206,7 @@
     }
     if(/graphique|bougie|zoom|bollinger|curseur|courbe|chandelier|export|telecharg|\bcsv\b|\bjson\b|navigation|filtre.*(?:univers|titre)/.test(q)){
       definition('chart');
-      if(/bollinger/.test(q)){definition('bollinger');if(!method)lines.push('Les valeurs numériques des bandes sont calculées dans le graphique et ne sont pas présentes dans cet export de l’assistant. Consultez le graphique; aucune valeur n’est inventée ici.');}
+      if(/bollinger/.test(q)){definition('bollinger');if(!method)lines.push('Les bandes numériques sont consultables par titre : demandez « bandes de Bollinger ADI ». Une série insuffisante laisse les valeurs indisponibles.');}
       if(/export|telecharg|csv|json/.test(q)){link('Rapport complet daté','report.json');link('Études JSON','recherche.json');link('Études CSV','recherche.csv');for(const row of rows)link(`Historique OHLCV ${row.symbol}`,`historique/${row.symbol}.csv`);}
       if(/filtre|navigation/.test(q))lines.push('Le tableau de marché se filtre par recherche, secteur et état des données. La fiche d’un titre affiche ses comptes, graphique, risque, comparables et sources. Les filtres du radar portent sur source/thème/périmètre/titre et ceux du laboratoire sur titre/horizon/période/régime.');
       link('Graphique et navigation',rows[0]?.url||'index.html');return result('chart');

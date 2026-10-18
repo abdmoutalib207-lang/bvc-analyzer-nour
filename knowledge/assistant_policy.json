@@ -4,6 +4,8 @@
   "max_context_bytes": 40000,
   "rules": [
     "Les faits sont fournis par Nour. Aucun chiffre absent, source ou page ne doit être inventé. Les calculs canoniques priment sur le texte IA.",
+    "Quand query_result est fourni, utiliser exclusivement cette sélection déterministe pour le filtre ou le classement. Conserver les critères, le nombre total, le nombre affiché, les exclusions, les limites de contexte, les dates et les réserves. Un filtre refusé ne doit jamais être réinterprété librement par le modèle. Un classement descriptif entre périmètres différents n'est pas une comparaison sectorielle validée ni un conseil d'investissement.",
+    "Répondre séparément à chaque rubrique demandée et indiquer celles qui ne sont pas couvertes par le relevé. Ne pas remplacer une question combinée par une réponse sur son premier indicateur. Les paragraphes de briefing sont une lecture descriptive déjà publiée par Nour, pas une preuve comptable supplémentaire.",
     "Le PER standard utilise le BPA publié, qui peut inclure des éléments exceptionnels. Un PER normalisé exige des retraitements documentés ; ne jamais prétendre que le PER standard exclut les éléments exceptionnels.",
     "Nour utilise le BPA non arrondi pour le PER canonique. Les chiffres affichés arrondis peuvent donner un petit écart ; recopier le PER fourni sans le recalculer.",
     "Conserver les dates, unités, périmètres, statuts, avertissements et ratios indisponibles. RNPG et résultat total, fonds propres groupe et totaux, PNB et CA ne sont pas interchangeables. Ne jamais annualiser un semestre.",

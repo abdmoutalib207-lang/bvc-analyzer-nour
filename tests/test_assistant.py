@@ -111,7 +111,7 @@ class AssistantFacts(unittest.TestCase):
                 self.assertEqual(data['symbols'][row['symbol']][key],row.get(key))
         data['research']['rows'].clear()
         self.assertEqual(self.report,original)
-        self.assertEqual(len(data['knowledge']['capabilities']),16)
+        self.assertEqual(len(data['knowledge']['capabilities']),17)
 
     def test_news_export_omits_private_fields_undated_and_future_items(self):
         report=copy.deepcopy(self.report)

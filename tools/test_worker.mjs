@@ -93,5 +93,14 @@ try{
     assert.match((await empty.json()).error,/provider_response_Error/);
     assert(events.every(line=>!line.includes('private detail')&&!line.includes(secret)&&!line.includes(payload.question)));
   }finally{console.error=oldError;}
+  // The model receives a server-selected universe, never caller-supplied rows.
+  let observedQuery=null;
+  const universe=await worker.fetch(request({...payload,question:'Les 5 PER les plus faibles en 2025',symbols:['MASI'],context:{query_result:{rows:[{symbol:'client-invented'}]}}}),
+    {...env,AI:{async run(model,body){observedQuery=JSON.parse(body.messages[1].content).releve_nour.query_result;return {response:'Sélection expliquée de test'};}}});
+  assert.equal(universe.status,200);
+  assert.equal(observedQuery.rows.length,5);
+  assert.ok(observedQuery.rows.every(r=>r.exercise===2025&&r.values.pe===index.symbols[r.symbol].fundamental.pe));
+  assert.ok(observedQuery.rows.every(r=>!r.symbol.includes('invented')));
+  assert.ok((await universe.json()).sources.some(s=>s.url.includes('#page=')));
 }finally{globalThis.fetch=originalFetch;}
 console.log('Worker unit checks: compact retrieval, cited pages, immutable facts, consent, origin, code rotation, kill switch, persistent transactional quotas, snapshot drift and provider isolation passed. Cloudflare deployment/live inference not measured.');
