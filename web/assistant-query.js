@@ -69,7 +69,7 @@
         exercise:f.exercise,period_end:f.period_end,currency:f.currency,accounting_basis:f.accounting_basis,
         validation_status:f.validation_status??null,values,warnings:fin?f.warnings||[]:[],latest_report:fin?f.latest_report||null:null,
         document_url:f.document_url??null,evidence:Object.fromEntries(Object.entries(f.evidence||{}).filter(([key])=>definitions.some(m=>(proofKeys[m.id]||[]).includes(key)))),metric_availability:fin?f.metric_availability||{}:{},
-        history_readiness:row.history_readiness,collection_conflicts:row.collection_conflicts||[],
+        history_readiness:row.history_readiness,issuer_status:row.issuer_status??null,collection_conflicts:row.collection_conflicts||[],
         risk_window:definitions.some(m=>m.domain==='risk')?row.market_risk:null});
     }
     if(p.sort)result.rows.sort((a,b)=>(p.sort.direction==='asc'?1:-1)*(a.values[p.sort.id]-b.values[p.sort.id])||a.symbol.localeCompare(b.symbol));
@@ -87,6 +87,7 @@
       lines.push(`${r.symbol} · ${r.name} · clôture ${r.asof||'indisponible'} · exercice ${r.exercise||'indisponible'} · ${r.currency||'devise non renseignée'} · ${r.accounting_basis||'périmètre non renseigné'}\n`+defs.map(m=>m.label+' : '+format(r.values[m.id],m.unit)).join(' · '));
       if(r.validation_status)lines.push('Vérification : '+r.validation_status+' ; rapport entier non certifié automatiquement.');
       for(const w of r.warnings)lines.push('Réserve '+r.symbol+' : '+w);
+      if(r.issuer_status){lines.push(r.symbol+' · '+r.issuer_status.label);for(const source of r.issuer_status.sources||[])sources.push({label:r.symbol+' · '+source.label,url:source.url});}
       if(r.latest_report)lines.push('Dernière publication distincte : '+r.latest_report.period_end+' · '+(r.latest_report.accounting_basis||'périmètre non renseigné')+' · '+(r.latest_report.validation_status||'statut non renseigné')+(r.latest_report.note?' · '+r.latest_report.note:''));
       for(const m of defs){const status=r.metric_availability[m.path.split('.').at(-1)];if(status&&status.status!=='available')lines.push(m.label+' · '+status.status+' · '+(status.reason_codes||[]).join(', '));}
       if(r.history_readiness?.label)lines.push(r.history_readiness.label);
@@ -107,7 +108,7 @@
     if(found.length<2&&!/bollinger|histogramme/.test(q))return null;
     const lines=[`Données Nour · analyse du ${data.analysis_date}.`],sources=[];
     for(const s of symbols){const r=data.symbols[s];if(!r)continue;
-      lines.push(`${s} · ${r.name} · clôture ${r.asof} · source ${r.price_source||'indisponible'}.`);
+      lines.push(`${s} · ${r.name} · clôture ${r.asof||'non attestée'} · source ${r.price_source||'indisponible'}.`);
       for(const m of found)lines.push(`${m.label} : ${format(value(r,m.path),m.unit)}.`);
       if(found.some(m=>m.domain==='risk'))lines.push('Risque : '+[r.market_risk?.first,r.market_risk?.last,r.market_risk?.note,r.market_risk?.tail_risk?.note].filter(Boolean).join(' · '));
       if(found.some(m=>m.domain==='technical'))lines.push('Indicateurs descriptifs sur les séances validées ; aucune prévision. Méthode : '+(r.technical?.methods?.version||'consulter la fiche')+'.');

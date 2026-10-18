@@ -42,8 +42,9 @@
   },
   "review_states": {
     "additional_review_required": 4,
+    "archived_suspension": 2,
     "financial_audit_blocked": 19,
-    "missing_primary_document": 3,
+    "known_reporting_gap": 1,
     "primary_page_check_required": 48,
     "selected_pages_checked": 6
   },
@@ -721,6 +722,53 @@
       "evidence_count": 10,
       "selected_page_evidence_count": 7,
       "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "carnet de commandes",
+        "prise de commandes",
+        "marge chantier",
+        "BFR",
+        "trésorerie",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "préventes immobilières comme CA",
+        "carnet de commandes comme bénéfice acquis"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "DIS",
+      "family": "Crédit à la consommation",
+      "classification": "partial",
+      "status": "archived_suspension",
+      "financial_audit_status": "review_required",
+      "document_url": null,
+      "annual_exercise": null,
+      "evidence_count": 0,
+      "selected_page_evidence_count": 0,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [],
+      "accounting_exclusions": [],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "DLM",
+      "family": "BTP et ingénierie",
+      "classification": "curated",
+      "status": "archived_suspension",
+      "financial_audit_status": "review_required",
+      "document_url": null,
+      "annual_exercise": null,
+      "evidence_count": 0,
+      "selected_page_evidence_count": 0,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires",
+        "resultat_net_part_groupe/resultat_net_social"
+      ],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "carnet de commandes",
@@ -1960,57 +2008,10 @@
       ]
     },
     {
-      "symbol": "DIS",
-      "family": "Crédit à la consommation",
-      "classification": "partial",
-      "status": "missing_primary_document",
-      "financial_audit_status": "review_required",
-      "document_url": null,
-      "annual_exercise": null,
-      "evidence_count": 0,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [],
-      "accounting_exclusions": [],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "DLM",
-      "family": "BTP et ingénierie",
-      "classification": "curated",
-      "status": "missing_primary_document",
-      "financial_audit_status": "review_required",
-      "document_url": null,
-      "annual_exercise": null,
-      "evidence_count": 0,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires",
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "carnet de commandes",
-        "prise de commandes",
-        "marge chantier",
-        "BFR",
-        "trésorerie",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "préventes immobilières comme CA",
-        "carnet de commandes comme bénéfice acquis"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
       "symbol": "IBM",
       "family": "Services informatiques et logiciels",
       "classification": "curated",
-      "status": "missing_primary_document",
+      "status": "known_reporting_gap",
       "financial_audit_status": "review_required",
       "document_url": null,
       "annual_exercise": null,

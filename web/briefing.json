@@ -13,17 +13,17 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-18",
-    "started_at": "2026-10-18T16:01:14+00:00",
-    "built_at": "2026-10-18T16:02:00.371680+00:00",
+    "started_at": "2026-10-18T19:50:40+00:00",
+    "built_at": "2026-10-18T19:51:25.233114+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39143082660",
-    "commit": "7a383bfd6a72aedd9dd5811c5fb1e6c464f561d2",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39143082660",
+    "run_id": "39160588425",
+    "commit": "17d2bce354311a6afd37ac59769b6f2531a7cf0e",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39160588425",
     "collection": {
       "result": "conflict",
       "label": "Nouvelle observation refusée pour conflit",
-      "checked_at": "2026-10-18T16:01:15.791544+00:00",
+      "checked_at": "2026-10-18T19:50:41.147544+00:00",
       "last_session": "2026-10-16",
       "message": "10 bougie(s) divergente(s) non remplacée(s)",
       "conflicts": [
@@ -39,7 +39,7 @@
           "observed": {
             "v": 11092
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -56,7 +56,7 @@
           "observed": {
             "v": 25199
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -73,7 +73,7 @@
           "observed": {
             "v": 3951
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -90,7 +90,7 @@
           "observed": {
             "v": 261
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107,7 +107,7 @@
           "observed": {
             "v": 8685
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -124,7 +124,7 @@
           "observed": {
             "v": 66603
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -141,7 +141,7 @@
           "observed": {
             "v": 2310
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -158,7 +158,7 @@
           "observed": {
             "v": 33
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -175,7 +175,7 @@
           "observed": {
             "v": 2928
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -192,7 +192,7 @@
           "observed": {
             "v": 4112
           },
-          "observed_at": "2026-10-18T16:01:15.791544+00:00",
+          "observed_at": "2026-10-18T19:50:41.147544+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -202,11 +202,11 @@
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "7a383bfd6a72aedd9dd5811c5fb1e6c464f561d2",
+      "generator_commit": "17d2bce354311a6afd37ac59769b6f2531a7cf0e",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "af3db1a1d81c5b67c6381148406c4baadaf968bb061397bb8f2dfa69d1a99e64",
+      "market_snapshot_sha256": "5444712bb986ad2f2543c0078ec07b01f57da4b1bdbf3ef18a43c404cc167799",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     }
   },
@@ -229,7 +229,7 @@
   "coverage": {
     "titles": 80,
     "quoted_session": 61,
-    "observable": 58
+    "observable": 60
   },
   "index": {
     "value": 16997.9176,
@@ -669,7 +669,7 @@
       "score_state": "CALCULABLE",
       "support": 150.0,
       "resistance": 175.0,
-      "rsi": 46.27,
+      "rsi": 46.25,
       "activity": 0.4,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
@@ -682,7 +682,7 @@
           "Le titre surperforme le MASI de 0,20 point(s) sur la même séance. Il progresse malgré la baisse de l’indice.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 150,00 et la borne haute 175,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 46,27 : momentum inférieur au seuil neutre de 50.",
+          "RSI 14 à 46,25 : momentum inférieur au seuil neutre de 50.",
           "Quantité échangée : 0,40 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,06 MDH, contre 1,74 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
@@ -1391,7 +1391,7 @@
       "score_state": "CALCULABLE",
       "support": 570.0,
       "resistance": 650.9,
-      "rsi": 36.45,
+      "rsi": 36.5,
       "activity": 0.84,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
@@ -1404,7 +1404,7 @@
           "Le titre sous-performe le MASI de 0,35 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 570,00 et la borne haute 650,90 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 36,45 : momentum inférieur au seuil neutre de 50.",
+          "RSI 14 à 36,50 : momentum inférieur au seuil neutre de 50.",
           "Quantité échangée : 0,84 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 6,05 MDH, contre 7,73 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
@@ -1791,7 +1791,7 @@
       "score_state": "CALCULABLE",
       "support": 257.0,
       "resistance": 309.0,
-      "rsi": 29.15,
+      "rsi": 29.23,
       "activity": 3.43,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
@@ -1804,9 +1804,9 @@
           "Le titre surperforme le MASI de 0,01 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 257,00 et la borne haute 309,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 29,15 : momentum très faible ; une survente ne garantit pas un rebond.",
+          "RSI 14 à 29,23 : momentum très faible ; une survente ne garantit pas un rebond.",
           "Quantité échangée : 3,43 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,77 MDH, contre 2,00 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,78 MDH, contre 2,00 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -2182,7 +2182,7 @@
           "active_sessions": 20,
           "median_shares": 6756.5,
           "median_turnover_mad_estimated": 1999877.5,
-          "median_turnover_ex_top5_mad_estimated": 1770705.0,
+          "median_turnover_ex_top5_mad_estimated": 1779255.0,
           "capacity_shares_per_session_at_10pct": 675.65,
           "exit_days_at_10pct": 2,
           "scenario_shares": 1000,
@@ -2203,7 +2203,7 @@
       "score_state": "CALCULABLE",
       "support": 737.0,
       "resistance": 840.0,
-      "rsi": 26.62,
+      "rsi": 26.6,
       "activity": 0.69,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
@@ -2216,7 +2216,7 @@
           "Le titre surperforme le MASI de 0,01 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 737,00 et la borne haute 840,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 26,62 : momentum très faible ; une survente ne garantit pas un rebond.",
+          "RSI 14 à 26,60 : momentum très faible ; une survente ne garantit pas un rebond.",
           "Quantité échangée : 0,69 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 14,08 MDH, contre 16,16 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
@@ -2574,7 +2574,7 @@
       "score_state": "CALCULABLE",
       "support": 5605.0,
       "resistance": 6740.0,
-      "rsi": 35.23,
+      "rsi": 35.26,
       "activity": 0.21,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
@@ -2587,7 +2587,7 @@
           "Le titre surperforme le MASI de 2,50 point(s) sur la même séance. Il progresse malgré la baisse de l’indice.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 5 605,00 et la borne haute 6 740,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 35,23 : momentum inférieur au seuil neutre de 50.",
+          "RSI 14 à 35,26 : momentum inférieur au seuil neutre de 50.",
           "Quantité échangée : 0,21 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 2,15 MDH, contre 3,16 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
@@ -3702,6 +3702,74 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "dd874611e583e0ac75",
+      "title": "The Nuclear Power Shortcut That Could Add Gigawatts to the U.S. Grid",
+      "url": "https://oilprice.com/Alternative-Energy/Nuclear-Power/The-Nuclear-Power-Shortcut-That-Could-Add-Gigawatts-to-the-US-Grid.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "c1128feacb7be7bcaf",
+      "title": "Breaking news — Vista Bank Burkina : Moumounou Gnankambary nommé DG pour piloter la fusion avec Société Générale Burkina Faso",
+      "url": "https://www.financialafrik.com/2026/10/18/breaking-news-vista-bank-burkina-moumounou-gnankambary-nomme-dg-pour-piloter-la-fusion-avec-societe-generale-burkina-faso/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T18:54:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3ff2a09e316fa582e5",
+      "title": "Iran Faces Rising Threat From Within as Baluch Insurgency Escalates",
+      "url": "https://oilprice.com/Geopolitics/Middle-East/Iran-Faces-Rising-Threat-From-Within-as-Baluch-Insurgency-Escalates.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "7f72a390fc577cc0a6",
+      "title": "ACE Global : la tierce détention monte en gamme",
+      "url": "https://www.financialafrik.com/2026/10/18/ace-global-la-tierce-detention-monte-en-gamme/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T16:24:42+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
       "id": "24e699c61d62d4174d",
       "title": "Electric Supercars Are Getting Faster, Smarter, and Harder to Ignore",
       "url": "https://oilprice.com/Energy/Energy-General/Electric-Supercars-Are-Getting-Faster-Smarter-and-Harder-to-Ignore.html",
@@ -3904,74 +3972,6 @@
       "scope": "MAROC",
       "feed_id": "mef",
       "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "6213e0f72007afa823",
-      "title": "Norway's Untapped Oil and Gas Frontier Is Drawing Renewed Interest",
-      "url": "https://oilprice.com/Energy/Crude-Oil/Norways-Untapped-Oil-and-Gas-Frontier-Is-Drawing-Renewed-Interest.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T19:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "8b20f11a1b0d5bcbd1",
-      "title": "L'électrique, star du Mondial de l'auto",
-      "url": "https://www.france24.com/fr/%C3%A9missions/la-semaine-de-l-%C3%A9co/20261016-l-%C3%A9lectrique-star-du-mondial-de-l-auto",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-10-16T18:57:22+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
-    },
-    {
-      "id": "f60e176c34494d9c71",
-      "title": "La quotidienne des marchés financiers africains : à Dakar, la BCEAO injecte des liquidités ; à Nairobi, statu quo sur le contrôle de Safaricom",
-      "url": "https://www.financialafrik.com/2026/10/16/la-quotidienne-des-marches-financiers-africains-a-dakar-la-bceao-injecte-des-liquidites-a-nairobi-statu-quo-sur-le-controle-de-safaricom/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T18:30:33+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "8f26c0a07059171815",
-      "title": "U.S. Offers Another 17 Million SPR Barrels as Fuel Crisis Deepens",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Offers-Another-17-Million-SPR-Barrels-as-Fuel-Crisis-Deepens.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T18:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
@@ -4211,9 +4211,77 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-18T16:01:53.993617+00:00"
+    "observed_at": "2026-10-18T19:51:17.577682+00:00"
   },
   "context_news": [
+    {
+      "id": "dd874611e583e0ac75",
+      "title": "The Nuclear Power Shortcut That Could Add Gigawatts to the U.S. Grid",
+      "url": "https://oilprice.com/Alternative-Energy/Nuclear-Power/The-Nuclear-Power-Shortcut-That-Could-Add-Gigawatts-to-the-US-Grid.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "c1128feacb7be7bcaf",
+      "title": "Breaking news — Vista Bank Burkina : Moumounou Gnankambary nommé DG pour piloter la fusion avec Société Générale Burkina Faso",
+      "url": "https://www.financialafrik.com/2026/10/18/breaking-news-vista-bank-burkina-moumounou-gnankambary-nomme-dg-pour-piloter-la-fusion-avec-societe-generale-burkina-faso/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T18:54:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3ff2a09e316fa582e5",
+      "title": "Iran Faces Rising Threat From Within as Baluch Insurgency Escalates",
+      "url": "https://oilprice.com/Geopolitics/Middle-East/Iran-Faces-Rising-Threat-From-Within-as-Baluch-Insurgency-Escalates.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "7f72a390fc577cc0a6",
+      "title": "ACE Global : la tierce détention monte en gamme",
+      "url": "https://www.financialafrik.com/2026/10/18/ace-global-la-tierce-detention-monte-en-gamme/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T16:24:42+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "24e699c61d62d4174d",
       "title": "Electric Supercars Are Getting Faster, Smarter, and Harder to Ignore",
@@ -4351,80 +4419,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "e70528b5977d2ec210",
-      "title": "Bolivia’s Energy Crisis Deepens as Natural Gas Reserves Run Dry",
-      "url": "https://oilprice.com/Energy/Energy-General/Bolivias-Energy-Crisis-Deepens-as-Natural-Gas-Reserves-Run-Dry.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-17T15:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "aa59dcb0466780e946",
-      "title": "Kenya : le visa disparaît, les barrières restent",
-      "url": "https://www.financialafrik.com/2026/10/17/kenya-le-visa-disparait-les-barrieres-restent/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-17T10:51:50+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "297af3c982d21c7978",
-      "title": "Dette du Sénégal : le FMI précise la clé du déblocage",
-      "url": "https://www.financialafrik.com/2026/10/17/dette-du-senegal-le-fmi-precise-la-cle-du-deblocage/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-17T08:59:50+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "06f5c3b3308e77d07f",
-      "title": "Christine Lagarde: IMFC Statement",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
-      "publisher": "BCE · publications",
-      "published_at": "2026-10-17T05:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-18T16:02:00.371680+00:00",
-    "checked_at": "2026-10-18T16:01:55.002802+00:00",
+    "cutoff": "2026-10-18T19:51:25.233114+00:00",
+    "checked_at": "2026-10-18T19:51:18.278667+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4444,7 +4444,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4461,7 +4461,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4478,7 +4478,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4495,7 +4495,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4517,7 +4517,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4534,7 +4534,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4551,7 +4551,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4568,7 +4568,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4590,7 +4590,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4607,7 +4607,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4624,7 +4624,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           },
           {
@@ -4641,7 +4641,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-18T16:01:55.002802+00:00",
+            "collected_at": "2026-10-18T19:51:18.278667+00:00",
             "collection_state": "collected"
           }
         ]
