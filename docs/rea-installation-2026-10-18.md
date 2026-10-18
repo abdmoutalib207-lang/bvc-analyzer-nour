@@ -19,12 +19,35 @@ Cette installation concerne l'environnement de travail, pas le PC Windows ni l'i
 Cet environnement peut être réinitialisé ; les commandes ci-dessous permettent de réinstaller la version identifiée.
 Aucun composant REA n'est ajouté aux pages publiques, aux collecteurs ou au backend IA de Nour.
 
-## Limite observée pour les sites web
+## Solution opérationnelle pour l'étude des sites
+
+Le navigateur et REA s'exécutent ensemble dans GitHub Actions de Nour, via
+`.github/workflows/nour_rea_browser.yml` et `.github/scripts/rea_browser_review.py`.
+Le runner utilise son Google Chrome existant ; Chromium est la solution de repli si aucun navigateur compatible n'est présent.
+Le workflow est manuel, sans programmation périodique ni modification des calculs ou de la publication de Nour.
+
+Preuve initiale : [exécution 39093450970](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39093450970), réussie.
+REA 6.5.0 et Google Chrome 155.0.8059.39 ont produit une capture DOM, accessibilité,
+URL et image pour la page Nour locale, https://www.idbourse.com/ et https://www.tradingview.com/.
+Les trois observations ont le statut `captured` et aucune section demandée manquante ou tronquée.
+Les images ont été extraites, leurs empreintes SHA-256 contrôlées et les deux pages externes inspectées visuellement.
+Ce premier essai prouve le fonctionnement du navigateur et la lecture des pages d'accueil ; il ne constitue pas une analyse complète de leurs graphiques ou méthodes de calcul.
+
+Pour relancer depuis GitHub : Actions → Nour REA browser investigation → Run workflow.
+L'artefact `nour-rea-browser-evidence` contient les requêtes déclarées, les observations et `summary.json`, avec une conservation de sept jours.
+Les cibles sont fixes ; aucun compte, cookie privé, code d'accès ou endpoint d'authentification n'est renseigné.
+Une page refusée ou indisponible conserve un état distinct ; le succès de la capture locale ne signifie pas que tous les sites sont accessibles.
+Les corps de requêtes et réponses et les valeurs d'en-têtes réseau ne sont pas collectés.
+
+Le CLI et le raccordement locaux ci-dessus restent distincts de cette exécution distante : un outil MCP n'apparaît pas automatiquement dans la conversation Work Mode en cours.
+
+## Cause du blocage dans l'environnement local
 
 Aucun exécutable Chrome/Chromium n'a été trouvé sur PATH.
 L'installation standard du Chromium Headless Shell de Playwright 1.58.2 a échoué :
 archive téléchargée invalide, message `End of central directory record signature not found`.
-Aucun navigateur local fonctionnel ni scénario interactif IDBourse/TradingView n'est donc annoncé validé.
+Le diagnostic a établi que cette URL renvoyait HTTP 200 avec une page HTML de 195 octets `Site Unavailable`, au lieu du ZIP attendu.
+L'installation locale de Chromium reste indisponible ; le workflow distant utilise son propre navigateur fonctionnel.
 Les outils de décompilation natifs optionnels n'ont pas été installés : ils ne sont pas nécessaires à l'étude de sites.
 
 ## Installation sur un ordinateur Windows avec Codex local
@@ -64,3 +87,4 @@ REA observe les éléments disponibles au navigateur ; il ne révèle pas automa
 - https://github.com/morluto/rea
 - https://github.com/morluto/rea/blob/main/docs/installation.md
 - https://github.com/morluto/rea/blob/main/docs/browser-observation.md
+

@@ -14,7 +14,7 @@ import threading
 from datetime import datetime, timezone
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGETS = (
     ("idbourse", "https://www.idbourse.com/"),
     ("tradingview", "https://www.tradingview.com/"),

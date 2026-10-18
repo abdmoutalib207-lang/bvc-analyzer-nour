@@ -6,7 +6,7 @@ on:
     branches: [nour-rea-oct18]
     paths:
       - '.github/workflows/nour_rea_browser.yml'
-      - 'tools/rea_browser_review.py'
+      - '.github/scripts/rea_browser_review.py'
 
 permissions:
   contents: read
@@ -40,7 +40,7 @@ jobs:
         env:
           NOUR_REA_CLI: ${{ runner.temp }}/nour-rea/node_modules/.bin/rea
           NOUR_REA_OUTPUT: ${{ runner.temp }}/nour-rea-evidence
-        run: python tools/rea_browser_review.py
+        run: python .github/scripts/rea_browser_review.py
       - name: Preserve observations and limitations
         if: always()
         uses: actions/upload-artifact@v4
