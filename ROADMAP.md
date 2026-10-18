@@ -51,3 +51,9 @@ les preuves et les limites. La cible 9,5/10 est un objectif, pas une note acquis
   activation et tests Cloudflare encore distincts de la fusion Pages.
 - À poursuivre : rapprochement des dix conflits, revue primaire plus large,
   passages documentaires datés (issue #11), évaluation réelle des réponses IA.
+
+## Fondamentaux — 18 octobre 2026
+
+- Huit dossiers annuels relus sur pièces primaires ; BPA 45 → 50, ROE 47 → 54, à date identique. [Preuves et restrictions ciblées](docs/batches/2026-10-18-primary.md).
+- Priorités documentées pour chacun des [80 titres](docs/fundamental-coverage-2026-10-18.md). Les références annuelles DIS/DLM/IBM restent à retrouver ; aucun résultat ancien renommé.
+- CMGP/SGTM/CFG Bank : rapprochement des BPA publiés et de leurs dénominateurs avant tout déblocage du PER. Compléter ensuite les RNPG, fonds propres et actions des autres dossiers de la file, sans annualiser les semestres.
