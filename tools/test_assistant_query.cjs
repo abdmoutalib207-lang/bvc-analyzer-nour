@@ -20,6 +20,12 @@ for(const natural of ['Quelles sont les valeurs qui ont un PER inférieur à 15 
 assert.equal(query.select(data,'Quelles valeurs ont le ROE le plus élevé ?').sort.direction,'desc');
 assert.equal(query.select(data,'Classement PER décroissant').sort.direction,'desc');
 assert.equal(query.select(data,'Classement PER croissant').sort.direction,'asc');
+const rankedRoe=query.select(data,'Les 5 valeurs avec un PER inférieur à 20 et le ROE le plus élevé en 2025');
+assert.equal(rankedRoe.sort.id,'roe');
+const roeOracle=Object.values(data.symbols).filter(r=>r.fundamental.exercise===2025&&Number.isFinite(r.fundamental.pe)&&r.fundamental.pe<20&&Number.isFinite(r.fundamental.roe_pct)).sort((a,b)=>b.fundamental.roe_pct-a.fundamental.roe_pct||a.symbol.localeCompare(b.symbol));
+assert.deepEqual(rankedRoe.rows.map(r=>r.symbol),roeOracle.slice(0,5).map(r=>r.symbol));
+assert.equal(query.select(data,'Les 5 ROE sur fonds propres de clôture les plus élevés en 2025').sort.id,'roe');
+assert.ok(query.select(data,'Quelles valeurs ont un PER inférieur à '+'9'.repeat(400)+' ?').error);
 assert.ok(query.select(data,'Quelles valeurs ont une dette nette inférieure à 100 MAD ?').error);
 assert.equal(query.select(data,'Quelles valeurs ont une dette nette inférieure à 100 MMAD ?').error,null);
 for(const q of ['Quelles valeurs ont une dette nette inférieure à 1 000 MMAD ?', 'Quelles valeurs ont un PER inférieur à 1e3 ?', 'Quelles valeurs ont un PER entre 10 et 20 ?', 'Quelles valeurs ont un cours sous la MM20 ?'])assert.ok(query.select(data,q).error,q);

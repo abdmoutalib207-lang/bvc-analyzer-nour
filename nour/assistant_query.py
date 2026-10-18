@@ -16,6 +16,10 @@ def plan(question, catalog):
         found=[m for m in found if m['id'] not in ('macd','signal','histogram') or m['id']==chosen]
     if not re.search(r'quell?e?s?(?: sont)?(?: les)? (?:valeurs|titres|societes|entreprises|actions)|(?:affiche|montre|cherche|recherche|trouve|donne).*(?:valeurs|titres|societes|entreprises|actions)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|(?:valeurs|titres|societes|entreprises|actions) (?:avec|ayant|dont|qui ont)|toute la cote', q) or not found:
         return None
+    if re.search(r'fonds propres (?:de |a la )?cloture',q) and not re.search(r'cours|prix',q):
+        found=[m for m in found if m['id']!='price']
+    if not found:
+        return None
     years = list(dict.fromkeys(re.findall(r'\b20\d{2}\b', q)))
     missing = bool(re.search(r'indisponibl|manquant|suspend|absent|non (?:calcula|rapproch)', q))
     blocked=bool(re.search(r'suspend|bloqu',q))
@@ -35,6 +39,9 @@ def plan(question, catalog):
             op, number = match.groups()
             op = '<' if re.search(r'inferieur|moins de|^<$',op) else '>' if re.search(r'superieur|plus de|^>$',op) else '>=' if re.search(r'au moins|>=',op) else '<=' if re.search(r'au plus|<=',op) else '='
             p['filters'].append(dict(id=m['id'],op=op,value=float(number.replace(',','.'))))
+            if not math.isfinite(p['filters'][-1]['value']):
+                p['filters'][-1]['value']=None
+                p['error']='Le seuil doit être un nombre fini.'
             unit=re.match(r'\s*(%|mmad\b|mdh\b|mad\b|milliards?\b|millions?\b|points?\b|x\b)',q[match.end():])
             if unit and ('mmad' if unit[1]=='mdh' else unit[1])!=normalize(m['unit']):
                 p['error']='Unité du seuil incompatible : '+m['label']+' utilise '+(m['unit'] or 'une valeur sans unité')+'. Aucun changement d’unité automatique.'
@@ -44,6 +51,18 @@ def plan(question, catalog):
         p['sort'] = dict(id=found[0]['id'],direction='asc')
     elif re.search(r'plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b',q):
         p['sort'] = dict(id=found[0]['id'],direction='desc')
+    if p['sort']:
+        direction=re.search(r'plus (?:faibles?|bas|petits?|eleves?|hauts?|grands?|forts?)|\b(?:de)?croissant\b',q)
+        distances=[]
+        for m in found:
+            hits=list(re.finditer(r'\b(?:'+m['pattern']+')',q))
+            distance=min(direction.start()-h.end() if h.end()<=direction.start() else h.start()-direction.end() if h.start()>=direction.end() else 0 for h in hits)
+            distances.append((distance,m['id']))
+        distances.sort()
+        if len(distances)>1 and distances[0][0]==distances[1][0]:
+            p['error']='Précisez une seule mesure pour le tri numérique.'
+        else:
+            p['sort']['id']=distances[0][1]
     if p['missing'] and p['sort']:
         p['error']='Un ratio indisponible ou bloqué ne peut pas être classé par valeur. Demandez la liste des données absentes sans tri numérique.'
     if 'meilleur' in q:
