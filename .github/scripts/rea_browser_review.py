@@ -31,6 +31,12 @@ REFERENCE_TARGETS = (
     ("tradingview_chart", "https://www.tradingview.com/chart/?symbol=CSEMA%3AADI"),
 )
 
+ASSISTANT_TARGETS = (
+    ("yuna_public_example", "https://www.yuna.ma/en/about"),
+    ("ecofinance_public", "https://www.ecofinanceanalytics.com/"),
+    ("tradingview_indicators", "https://www.tradingview.com/chart/?symbol=CSEMA%3AADI"),
+)
+
 
 
 def scenario(browser: str, url: str) -> dict:
@@ -38,6 +44,12 @@ def scenario(browser: str, url: str) -> dict:
     destination = {"url": urlunsplit(parts._replace(query="")), "query": [
         {"name": k, "value": {"source": "literal", "value": v}} for k, v in parse_qsl(parts.query)
     ]}
+    actions = [{"step_id": "settle", "action": "wait_for_timeout", "duration_ms": 2500}]
+    if parts.hostname == "www.tradingview.com" and parts.path == "/chart/":
+        actions.extend([
+            {"step_id": "open_indicators", "action": "click", "locator": {"kind": "role", "role": "button", "name": "Indicators, metrics, and strategies"}, "timeout_ms": 7000},
+            {"step_id": "read_indicators", "action": "wait_for_timeout", "duration_ms": 1500},
+        ])
     return {
         "browser": {"mode": "launch", "executable_path": browser, "headless": True},
         "start_url": destination,
@@ -46,7 +58,7 @@ def scenario(browser: str, url: str) -> dict:
             "locale": "fr-FR",
             "timezone": "Africa/Casablanca",
         },
-        "actions": [{"step_id": "settle", "action": "wait_for_timeout", "duration_ms": 2500}],
+        "actions": actions,
         "capture": {
             "at_end": ["url", "dom", "accessibility", "screenshot"],
             "events": ["network", "page-errors"],
@@ -117,7 +129,7 @@ def capture_one(cli: str, browser: str, out: Path, name: str, url: str) -> dict:
     if any(marker in text for marker in ("verify you are human", "just a moment...", "access denied", "site unavailable")):
         status["status"] = "access_limited"
     visible = artifacts.get("accessibility", {}).get("value", {}).get("text", "").casefold()
-    if any(marker in visible for marker in ("accès restreint", "réservée aux membres connectés", "log in to continue", "sign in to continue")):
+    if any(marker in visible for marker in ("accès restreint", "réservée aux membres connectés", "log in to continue", "sign in to continue", "connectez-vous pour accéder")):
         status["status"] = "authentication_required"
     if name == "nour_local" and "Nour" not in dom:
         status["status"] = "invalid_local_content"
@@ -130,9 +142,9 @@ def main() -> int:
     out = Path(os.environ["NOUR_REA_OUTPUT"])
     out.mkdir(parents=True, exist_ok=True)
     review = os.environ.get("NOUR_REA_REVIEW", "overview")
-    if review not in {"overview", "reference"}:
+    if review not in {"overview", "reference", "assistant"}:
         raise ValueError("Unknown fixed review set")
-    targets = REFERENCE_TARGETS if review == "reference" else OVERVIEW_TARGETS
+    targets = {"overview": OVERVIEW_TARGETS, "reference": REFERENCE_TARGETS, "assistant": ASSISTANT_TARGETS}[review]
     version = subprocess.check_output([cli, "--version"], text=True).strip()
     browser_version = subprocess.check_output([browser, "--version"], text=True).strip()
     handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT / "web"))

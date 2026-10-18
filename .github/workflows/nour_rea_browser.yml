@@ -7,7 +7,7 @@ on:
         description: 'Jeu fixe de pages à observer'
         type: choice
         default: overview
-        options: [overview, reference]
+        options: [overview, reference, assistant]
   push:
     branches: [nour-rea-oct18, nour-reference-methods-oct18]
     paths:
@@ -44,7 +44,7 @@ jobs:
           echo "NOUR_REA_BROWSER=$browser_path" >> "$GITHUB_ENV"
       - name: Verify real browser capture and inspect two public home pages
         env:
-          NOUR_REA_REVIEW: ${{ inputs.review || (github.ref_name == 'nour-reference-methods-oct18' && 'reference' || 'overview') }}
+          NOUR_REA_REVIEW: ${{ inputs.review || (github.ref_name == 'nour-reference-methods-oct18' && 'assistant' || 'overview') }}
           NOUR_REA_CLI: ${{ runner.temp }}/nour-rea/node_modules/.bin/rea
           NOUR_REA_OUTPUT: ${{ runner.temp }}/nour-rea-evidence
         run: python .github/scripts/rea_browser_review.py
