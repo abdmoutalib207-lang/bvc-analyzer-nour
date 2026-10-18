@@ -88,6 +88,63 @@ summary{cursor:pointer;font-size:15px;font-weight:650;color:#d5e7dd}summary:focu
 .chart-root:fullscreen .chart,.chart-expanded .chart{max-width:1500px;margin:auto}
 .chart-root.chart-expanded{position:fixed;inset:0;z-index:1000}
 .chart-range-controls[hidden],.chart-measure[hidden],.chart-help[hidden]{display:none}
+
+/* Issuer workspace: readable prices, short navigation and generous plotting area. */
+html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
+.issuer-page{max-width:1400px;padding-top:28px}
+.issuer-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);align-items:center;gap:30px;margin-bottom:22px}
+.issuer-hero .eyebrow{margin-top:22px}.issuer-hero h1{text-wrap:balance;margin-top:10px;font-size:clamp(32px,4vw,52px)}
+.issuer-hero p{margin-bottom:12px}.issuer-quote{border-left:1px solid #35514f;padding:8px 0 8px 28px;font-variant-numeric:tabular-nums}
+.issuer-ask{display:inline-block;min-height:44px;margin:8px 0 0 14px;border:1px solid #577655;background:#19382e;color:#daf0d1;padding:10px 15px;font-family:inherit;font-size:12px;font-weight:600;border-radius:8px;cursor:pointer}.issuer-ask:hover{background:#274b38}.issuer-ask:focus-visible{outline:2px solid #b4e283;outline-offset:3px}
+.issuer-quote>span:first-child,.issuer-quote>small{display:block;font-size:12px;color:#a7bdbf}
+.issuer-quote>strong{display:block;font-size:48px;font-weight:650;letter-spacing:-1.8px;line-height:1.35}
+.issuer-quote>strong small{font-size:16px;color:#a7bdbf;letter-spacing:0}
+.issuer-quote .quote-change{font-size:20px;font-weight:650;display:inline-block;margin:4px 0 8px}.issuer-quote p{font-size:12px}
+.issuer-nav{display:flex;gap:4px;position:sticky;top:0;z-index:20;background:#0c1c25;border:1px solid #304a50;border-radius:12px;padding:5px;overflow:auto;scrollbar-width:thin;margin-bottom:22px;box-shadow:0 5px 15px #0002}
+.issuer-nav a{flex:1;white-space:nowrap;text-align:center;padding:13px 16px;min-height:44px;text-decoration:none;font-size:13px;color:#a9bfc2;border-radius:8px}
+.issuer-nav a:hover,.issuer-nav a[aria-current=true]{background:#233d40;color:#e8f6e8}.issuer-nav a:focus-visible{outline:2px solid #b4e283;outline-offset:-2px}
+.issuer-page :is(section[id],div[id]){scroll-margin-top:72px}
+.chart-workspace{padding:22px;background:#0e202a}.chart-workspace .section-heading{margin-bottom:5px}.chart-frequency{color:#a9bfc2;font-size:12px}
+.chart-root{--chart-bg:#10212b;--chart-ink:#b3c7ce;--chart-line:#b4e283;--chart-grid:#29424e;--chart-control:#152b35;--chart-border:#36515b;color:var(--chart-ink);background:var(--chart-bg);border-radius:10px;padding:4px}
+.chart-primary{border-bottom:1px solid var(--chart-border);padding-bottom:12px}
+.chart-presets,.chart-appearance{display:flex;gap:5px;flex-wrap:wrap}.chart-toolbar button{min-height:44px;touch-action:manipulation}
+.chart-root .chart svg{background:var(--chart-bg);border-radius:0}.chart-root .chart text{fill:var(--chart-ink);font-size:11px;font-variant-numeric:tabular-nums}
+.chart-root .chart-grid{stroke:var(--chart-grid)}.chart-date-grid{opacity:.5}.chart-root .price-line{stroke:var(--chart-line)}
+.chart-settings{margin:10px 0 14px;border:1px solid var(--chart-border);border-radius:9px;background:var(--chart-control)}
+.chart-settings summary{cursor:pointer;padding:12px 14px;min-height:44px;color:var(--chart-ink);font-size:13px;font-weight:650}
+.chart-settings .chart-toolbar,.chart-settings p{margin:10px 14px}.chart-settings .indicators{gap:7px}
+.chart-settings summary:focus-visible{outline:2px solid #b4e283;outline-offset:3px}
+.chart-drawing-tools{gap:6px;justify-content:flex-start}.chart-drawing-tools [data-chart-drawing-status]{font-size:11px;color:var(--chart-ink);flex-basis:100%;line-height:1.6}
+.chart-root .chart-annotation line{stroke:#48a4f2;stroke-width:1.8;vector-effect:non-scaling-stroke}.chart-root .chart-annotation text{fill:#65b6f9;font-size:11px;font-weight:600;paint-order:stroke;stroke:var(--chart-bg);stroke-width:3px}
+.chart-root .chart-annotation circle,.chart-draft{fill:#48a4f2;stroke:var(--chart-bg);stroke-width:2}.chart-last-price{stroke:#78afa2;stroke-dasharray:3 4;stroke-width:1}
+.chart-root .chart-readout{background:var(--chart-control);border-color:var(--chart-border);color:var(--chart-ink);min-height:85px;padding:13px 15px}
+.chart-bottom{margin-top:14px;padding-top:10px;border-top:1px solid var(--chart-border)}
+.chart-root[data-chart-theme=light]{--chart-bg:#fafcfd;--chart-ink:#3c5365;--chart-line:#176b9a;--chart-grid:#e0e7eb;--chart-control:#eef3f6;--chart-border:#c7d4dc;padding:12px}
+.chart-root[data-chart-theme=light] .chart-toolbar button{background:#f4f7f9;color:#294557;border-color:#c7d4dc}
+.chart-root[data-chart-theme=light] .chart-toolbar button[aria-pressed=true]{background:#d6edc2;border-color:#89ad67;color:#183323}
+.chart-root[data-chart-theme=light] .chart-toolbar button:hover{background:#e1e9ed}
+.chart-root[data-chart-theme=light] :is(.chart-readout b,.chart-readout strong){color:#203e4c}
+.chart-root[data-chart-theme=light] .chart-readout .chart-extra{color:#3c5365}
+.chart-root[data-chart-theme=light] .chart-annotation text{fill:#1766b1}
+.chart-root[data-chart-theme=light] .candle-up :is(rect,line){stroke:#138b75;fill:#138b75}
+.chart-root[data-chart-theme=light] .candle-down :is(rect,line){stroke:#d74755;fill:#d74755}
+.chart-root[data-chart-theme=light] .volume-bar{fill:#8eacba}
+.chart-root[data-chart-theme=light] .hist-up{fill:#14866c}.chart-root[data-chart-theme=light] .hist-down{fill:#c34257}
+.chart-root[data-chart-theme=light] .chart-cross,.chart-root[data-chart-theme=light] .chart-cross-price{stroke:#466374}
+.chart-root[data-chart-theme=light] .chart-price-tag text{fill:#183323}
+.chart-root[data-chart-theme=light] .gain{color:#147754!important}.chart-root[data-chart-theme=light] .loss{color:#ae3541!important}
+.chart-root[data-chart-theme=light] :is(.fineprint,.chart-info,.chart-help,.chart-gesture-hint,.chart-range-controls label){color:#3c5365}
+.chart-root[data-chart-theme=light] .chart-help summary{color:#3c5365}
+.chart-root .chart-help summary{min-height:44px;padding:12px 0}
+.chart-root .chart .chart-price-tag text{fill:#183323;font-weight:700}
+.financial-history-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}
+.financial-history{margin:0;padding:18px;border:1px solid #36505a;background:#0b1b25;border-radius:12px;min-width:0}
+.financial-history figcaption{font-size:16px;font-weight:650}.financial-history figcaption small{display:block;color:#9bb4ba;font-size:11px;font-weight:400;margin-top:7px}
+.financial-history svg{display:block;width:100%;max-height:270px}.financial-history svg text{font-size:11px;fill:#c4d6dd;font-family:inherit;font-variant-numeric:tabular-nums}
+.financial-history .chart-grid{stroke:#3a525c}.financial-bar-0{fill:#416d9c}.financial-bar-1{fill:#64bbca}
+.financial-chart-sources{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;font-size:11px;color:#b7d5ac}
+@media(max-width:650px){.issuer-page{padding-top:20px}.issuer-hero{grid-template-columns:1fr;gap:12px}.issuer-hero h1{font-size:35px;margin-bottom:8px}.issuer-hero p{font-size:12px;margin:8px 0}.issuer-quote{border-left:0;border-top:1px solid #304c50;padding:16px 0 0}.issuer-quote>strong{font-size:42px;display:inline-block;margin-right:14px}.issuer-quote .quote-change{font-size:19px}.issuer-quote p{margin:8px 0 0}.issuer-nav{border-radius:9px}.issuer-nav a{flex:none;font-size:12px;padding:12px}.chart-workspace{padding:12px}.chart-workspace .section-heading{gap:4px}.chart-frequency{font-size:11px}.chart-primary{gap:10px}.chart-appearance{flex:1;justify-content:flex-end}.chart-root .chart-readout{min-height:120px}.chart-root[data-chart-theme=light]{padding:7px}.financial-history-grid{grid-template-columns:1fr}.chart-drawing-tools [data-chart-undo]{font-size:11px}.chart-navigation button{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:650px){.chart-root .chart svg{min-width:0}.chart-toolbar button{min-height:42px}.chart-navigation{gap:5px}.chart-readout{min-height:100px;gap:7px 11px}.chart-root:fullscreen,.chart-root.chart-expanded{padding:12px}.chart-range-controls{gap:10px}}
 
 /* Long Git identities remain readable in the provenance panel on mobile. */

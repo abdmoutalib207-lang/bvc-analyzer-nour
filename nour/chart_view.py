@@ -20,7 +20,7 @@ def explorer_footer():
             '<div class="chart-range-controls" data-chart-range-controls hidden>'
             '<label>Début <input type="range" data-chart-range-start aria-label="Début de la période" step="1"></label>'
             '<label>Fin <input type="range" data-chart-range-end aria-label="Fin de la période" step="1"></label></div>'
-            '<p class="chart-gesture-hint">Glisser pour parcourir · molette ou pincement pour zoomer · toucher une séance pour la fixer. 1M / 3M / 1A : 21 / 63 / 252 séances disponibles.</p>'
+            '<p class="chart-gesture-hint">Glisser pour parcourir · molette ou pincement pour zoomer · toucher une séance pour la fixer. 1M / 3M / 6M / 1A / 3A : 21 / 63 / 126 / 252 / 756 séances disponibles.</p>'
             '<div class="chart-help" data-chart-help hidden><p>La fenêtre dans la vue d’ensemble se déplace par glisser ; ses poignées changent la période. Les curseurs Début et Fin fonctionnent aussi au clavier.</p>'
             '<p>Sur le graphique : ← / → lisent les séances, Maj + ← / → déplacent la période, + / − zooment. Entrée fixe la séance ou choisit une date de comparaison. Échap libère le curseur et efface la comparaison. Maj + molette parcourt l’historique.</p>'
             '<p>Sur mobile, glissez horizontalement ou pincez à deux doigts. Le défilement vertical de la page reste disponible.</p></div>')

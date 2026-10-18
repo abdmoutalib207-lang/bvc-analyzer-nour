@@ -79,7 +79,7 @@
     pan(sessions) { this.set(this.count, this.start + sessions); }
   }
 
-  function mount({root, chart, state, points, defaultCount, onChange, onRead}) {
+  function mount({root, chart, state, points, defaultCount, onChange, onRead, onPick}) {
     const overview = root.querySelector('[data-chart-overview]');
     const measure = root.querySelector('[data-chart-measure]');
     const help = root.querySelector('[data-chart-help]');
@@ -121,6 +121,7 @@
         (pct === null ? '' : ` (${pct>=0?'+':''}${number(pct)} %)`) + ' · Écart des clôtures historiques, hors dividendes et frais.';
     }
     function choose(i) {
+      if(onPick?.(i,null))return;
       state.selected = i; pinned = true; onRead(i, true);
       if (comparing) {
         if (compareStart === null || compareEnd !== null) {compareStart = i; compareEnd = null;}
@@ -195,7 +196,7 @@
     const finish = (e,cancelled=false) => {
       const tap=gesture && !gesture.moved && pointers.size===1 && !cancelled;
       pointers.delete(e.pointerId); anchor=null;
-      if (tap) choose(index(e.clientX));
+      if (tap && !onPick?.(index(e.clientX),e)) choose(index(e.clientX));
       if (!pointers.size) {gesture=null; chart.classList.remove('is-dragging');}
       else {
         const remaining=[...pointers.values()][0];

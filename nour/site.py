@@ -11,6 +11,7 @@ from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .fundamental_view import panel as fundamental_explorer, export_csv as export_fundamentals_csv
+from .issuer_view import issuer_heading, financial_history
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 from .assistant import panel as assistant_panel, export as export_assistant
@@ -91,7 +92,7 @@ def graph(bars, label="1A", indicator_since=None):
     default = data[-252:]
     if not data:
         return '<div id="plot" class="chart">' + svg_chart(default) + '</div>'
-    controls = ''.join(f'<button type="button" data-period="{p}" aria-pressed="{str(p=="252").lower()}">{txt}</button>' for p, txt in [('21', '1M'), ('63', '3M'), ('252', label), ('all', 'Tout')])
+    controls = ''.join(f'<button type="button" data-period="{p}" aria-pressed="{str(p=="252").lower()}">{txt}</button>' for p, txt in [('21', '1M'), ('63', '3M'), ('126', '6M'), ('252', label), ('756', '3A'), ('all', 'Tout')])
     # Only trustworthy complete OHLCV bars are exposed to interactive candles
     # and indicators. The pre-rendered close/volume SVG remains the fallback.
     valid = [b for b in bars if quality(b) == "" and all(
@@ -108,12 +109,25 @@ def graph(bars, label="1A", indicator_since=None):
     notice = (f'{len(bars)-len(valid)} séance(s) OHLCV incohérente(s) écartée(s) du graphique interactif. '
               if len(valid) != len(bars) else '')
     return (f'<div class="chart-root" data-chart-root data-indicator-since="{esc(indicator_since or "")}" data-invalid-count="{len(bars)-len(valid)}">'
-            f'<div class="chart-toolbar"><div class="periods" role="group" aria-label="Période du graphique">{controls}</div>'
-            f'<div class="chart-mode" role="group" aria-label="Type de graphique">{mode}</div></div>'
-            f'<div class="chart-toolbar"><div class="indicators" role="group" aria-label="Afficher les indicateurs techniques">{indicators}</div>'
-            + navigation() + '</div>'
+            '<div class="chart-toolbar chart-primary"><div class="chart-presets" role="group" aria-label="Disposition du graphique">'
+            '<button type="button" data-chart-preset="price">Prix</button><button type="button" data-chart-preset="trend">Tendance</button>'
+            '<button type="button" data-chart-preset="momentum">Momentum</button></div>'
+            f'<div class="chart-mode" role="group" aria-label="Type de graphique">{mode}</div>'
+            '<div class="chart-appearance"><button type="button" data-chart-theme aria-pressed="false">Fond clair</button>'
+            '<button type="button" data-chart-export>Exporter SVG</button></div></div>'
+            f'<div class="chart-toolbar"><div class="periods" role="group" aria-label="Période du graphique">{controls}</div></div>'
+            '<details class="chart-settings"><summary>Indicateurs & réglages</summary>'
+            f'<div class="chart-toolbar"><div class="indicators" role="group" aria-label="Afficher les indicateurs techniques">{indicators}</div></div>'
+            '<p class="fineprint">Ces réglages sont conservés sur cet appareil, pour vos prochaines consultations.</p></details>'
+            '<div class="chart-toolbar chart-drawing-tools" role="group" aria-label="Annotations personnelles">'
+            '<button type="button" data-chart-tool="cursor" aria-pressed="true">Curseur</button>'
+            '<button type="button" data-chart-tool="level" aria-pressed="false">Niveau horizontal</button>'
+            '<button type="button" data-chart-tool="trend" aria-pressed="false">Droite · 2 points</button>'
+            '<button type="button" data-chart-undo>Retirer le dernier tracé</button>'
+            '<span data-chart-drawing-status role="status" aria-live="polite">Tracés personnels, conservés sur cet appareil.</span></div>'
             f'<div class="chart" id="plot" tabindex="0" aria-label="Graphique de cours, navigation au clavier disponible">{svg_chart(default)}</div>'
             f'<div class="chart-readout" data-chart-readout role="status" aria-live="off">Survolez ou touchez le graphique pour lire la séance.</div>'
+            '<div class="chart-toolbar chart-bottom">' + navigation() + '</div>'
             f'<div id="chart-info" class="chart-info">{esc(notice)}{esc(default[0][0])} → {esc(default[-1][0])} · {len(default)} séances</div>'
             + explorer_footer() +
             '<details class="chart-help"><summary>Méthodes et différences entre plateformes</summary>'
@@ -290,7 +304,7 @@ def detail_page(item, record, fixture, style, script):
             comparison = (f'<p>Même semestre au {esc(recent["reported_net_previous_period_end"])} : '
                 f'{number(previous_net)} millions de {esc(recent.get("currency"))} ; '
                 f'variation du résultat part du groupe : {number((current_net / previous_net - 1) * 100)} %.</p>')
-        financial_details += (f'<section class="panel"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
+        financial_details += (f'<section class="panel" id="publication-semestrielle"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
             f'<p>{esc(calculated.get("semester_activity_label", "CA"))} : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
             f'{esc(recent.get("reported_net_label", "résultat selon le périmètre du document"))} : {number(recent.get("reported_net_millions"))} millions.</p>'
             f'{semester_chart(recent)}{comparison}'
@@ -329,20 +343,17 @@ def detail_page(item, record, fixture, style, script):
             f' · {esc(v.get("validation_status"))}<br>{esc(v.get("note"))}</li>'
             for k,v in evidence.items())+'</ul></details>')
     body = (header('../index.html', fixture["snapshot_updated"])
-            + '<main><div class="hero"><a href="../index.html" class="muted">← Retour aux 80 valeurs</a>'
-            + f'<div class="eyebrow" style="margin-top:20px">{esc(record.get("sector") or "Action cotée")} · {esc(symbol)}</div><h1>{esc(record["name"])}</h1>'
-            + f'<p>Dernier cours disponible : <strong>{number(item["price"])} MAD</strong> au {esc(item["asof"])}. Source prix : {esc(item["price_source"])}. <span class="status {esc(item["decision"])}">{esc(item["decision"])}</span></p>'
-            + f'<div class="stamp">Historique {esc(first)} → {esc(last)} · {len(bars)} séances · mis à jour après collecte validée</div></div>'
-            + f'<p class="fineprint">{esc((item.get("history_readiness") or {}).get("label"))}</p>'
+            + '<main class="issuer-page">' + issuer_heading(item, record)
             + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
-            + f'<section class="panel"><span class="eyebrow">Historique graphique</span><h2>{esc(symbol)} · prix et volumes</h2><p class="panel-sub">Pointez une séance pour ses données OHLCV ; activez les indicateurs ci-dessous. La plage « Tout » couvre les séances valides disponibles.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
+            + f'<section class="panel chart-workspace" id="graphique" data-chart-symbol="{esc(symbol)}"><div class="section-heading"><div><span class="eyebrow">Historique graphique · {esc(symbol)}</span><h2>Prix & volumes</h2></div><span class="chart-frequency">1 jour · MAD · cours non ajustés</span></div><p class="panel-sub">Historique {esc(first)} → {esc(last)} · {len(bars)} séances. Pointez une séance ou choisissez un outil de tracé.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
-            + f'<section class="panel"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
+            + f'<section class="panel" id="technique"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
             + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
-            + statistics_html
+            + '<div id="risques">' + statistics_html
             + research_panels(item)
-            + f'<section class="panel"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
-            + f'<section class="panel"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
+            + '</div>'
+            + f'<section class="panel" id="fondamentaux"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_history(item)}{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
+            + f'<section class="panel" id="historique"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
             + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
     return shell(f'{symbol} · {record["name"]}', body, style, script)

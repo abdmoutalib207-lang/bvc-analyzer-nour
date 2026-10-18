@@ -549,5 +549,8 @@
     showAccessState();
     el('mode').textContent=el('ai').checked?'IA d’explication · sources Nour':'Lecture des données · sans IA générative';
   });
-  for(const button of doc.querySelectorAll('[data-assistant-question]'))button.addEventListener('click',()=>submit(button.dataset.assistantQuestion));
+  for(const button of doc.querySelectorAll('[data-assistant-question]'))button.addEventListener('click',()=>{
+    if(!dialog.open)dialog.showModal();
+    submit(button.dataset.assistantQuestion);
+  });
 })(typeof window==='undefined'?null:window);
