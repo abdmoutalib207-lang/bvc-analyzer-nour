@@ -14,7 +14,7 @@ def plan(question, catalog):
     if any(m['id']=='macd' for m in found):
         chosen='histogram' if 'histogramme' in q else 'signal' if 'signal' in q else 'macd'
         found=[m for m in found if m['id'] not in ('macd','signal','histogram') or m['id']==chosen]
-    if not re.search(r'quell?e?s? (?:valeurs|titres|societes)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|valeurs avec|titres avec|toute la cote', q) or not found:
+    if not re.search(r'quell?e?s?(?: sont)?(?: les)? (?:valeurs|titres|societes|entreprises|actions)|(?:affiche|montre|cherche|recherche|trouve|donne).*(?:valeurs|titres|societes|entreprises|actions)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|(?:valeurs|titres|societes|entreprises|actions) (?:avec|ayant|dont|qui ont)|toute la cote', q) or not found:
         return None
     years = list(dict.fromkeys(re.findall(r'\b20\d{2}\b', q)))
     missing = bool(re.search(r'indisponibl|manquant|suspend|absent|non (?:calcula|rapproch)', q))
@@ -35,10 +35,19 @@ def plan(question, catalog):
             op, number = match.groups()
             op = '<' if re.search(r'inferieur|moins de|^<$',op) else '>' if re.search(r'superieur|plus de|^>$',op) else '>=' if re.search(r'au moins|>=',op) else '<=' if re.search(r'au plus|<=',op) else '='
             p['filters'].append(dict(id=m['id'],op=op,value=float(number.replace(',','.'))))
-    if re.search(r'plus (?:faibles|bas|petits)|croissant',q):
+            unit=re.match(r'\s*(%|mmad\b|mdh\b|mad\b|milliards?\b|millions?\b|points?\b|x\b)',q[match.end():])
+            if unit and ('mmad' if unit[1]=='mdh' else unit[1])!=normalize(m['unit']):
+                p['error']='Unité du seuil incompatible : '+m['label']+' utilise '+(m['unit'] or 'une valeur sans unité')+'. Aucun changement d’unité automatique.'
+            if re.match(r'\s*(?:[\d.,]|e[+-]?\d)',q[match.end():]):
+                p['error']='Nombre ambigu : utilisez un nombre sans séparateur de milliers, avec une virgule ou un point décimal.'
+    if re.search(r'plus (?:faibles?|bas|petits?)|\bcroissant\b',q):
         p['sort'] = dict(id=found[0]['id'],direction='asc')
-    elif re.search(r'plus (?:eleves|hauts|grands|forts)|decroissant',q):
+    elif re.search(r'plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b',q):
         p['sort'] = dict(id=found[0]['id'],direction='desc')
+    if 'meilleur' in q:
+        p['error']='Un ratio ne définit pas les meilleurs titres. Précisez un seuil ou un ordre croissant ou décroissant.'
+    if re.search(r'entre\s+-?\d|compris|au.dessus|au.dessous|sous (?:la |les )?(?:mm|ema|sma)|surachet|survend',q):
+        p['error']='Ce critère relatif ou cet intervalle n’est pas pris en charge. Précisez un seuil numérique explicite sur une mesure.'
     if re.search(r'classement|palmares|top\b|les\s+\d+',q) and not p['sort'] and not missing:
         p['error'] = 'Précisez le classement : par exemple « les 5 PER les plus faibles en 2025 ».'
     operators=re.findall(r'[<>]=?|inferieur(?:e)?s? a|superieur(?:e)?s? a|au moins|au plus|moins de|plus de|=',q)

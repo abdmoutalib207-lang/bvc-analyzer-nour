@@ -8,7 +8,7 @@
   function plan(question,catalog){
     const q=norm(question);let found=metrics(q,catalog);
     if(found.some(m=>m.id==='macd')){const chosen=/histogramme/.test(q)?'histogram':/signal/.test(q)?'signal':'macd';found=found.filter(m=>!['macd','signal','histogram'].includes(m.id)||m.id===chosen);}
-    if(!/quell?e?s? (?:valeurs|titres|societes)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|valeurs avec|titres avec|toute la cote/.test(q))return null;
+    if(!/quell?e?s?(?: sont)?(?: les)? (?:valeurs|titres|societes|entreprises|actions)|(?:affiche|montre|cherche|recherche|trouve|donne).*(?:valeurs|titres|societes|entreprises|actions)|liste|classement|classer|filtr|palmares|top\s*\d*|les\s+\d+|(?:valeurs|titres|societes|entreprises|actions) (?:avec|ayant|dont|qui ont)|toute la cote/.test(q))return null;
     if(!found.length)return null;
     const years=[...new Set(q.match(/\b20\d{2}\b/g)||[])];
     const missing=/indisponibl|manquant|suspend|absent|non (?:calcula|rapproch)/.test(q);
@@ -19,10 +19,16 @@
     const requested=q.match(/(?:top\s*|les\s+)(\d+)\b/);if(requested)p.limit=Math.max(1,Math.min(20,Number(requested[1])));
     for(const m of found){
       const re=new RegExp('\\b(?:'+m.pattern+')\\s*(?:(?:est|soit|annuel|annuelle)\\s*)?(inferieur(?:e)?(?:s)? a|superieur(?:e)?(?:s)? a|au moins|au plus|moins de|plus de|<=|>=|<|>|=)\\s*(-?\\d+(?:[.,]\\d+)?)');
-      const match=q.match(re);if(match){const op=/inferieur|moins de|^<$/.test(match[1])?'<':/superieur|plus de|^>$/.test(match[1])?'>':/au moins|>=/.test(match[1])?'>=':/au plus|<=/.test(match[1])?'<=':'=';p.filters.push({id:m.id,op,value:Number(match[2].replace(',','.'))});}
+      const match=q.match(re);if(match){const op=/inferieur|moins de|^<$/.test(match[1])?'<':/superieur|plus de|^>$/.test(match[1])?'>':/au moins|>=/.test(match[1])?'>=':/au plus|<=/.test(match[1])?'<=':'=';p.filters.push({id:m.id,op,value:Number(match[2].replace(',','.'))});
+        const unit=q.slice(match.index+match[0].length).match(/^\s*(%|mmad\b|mdh\b|mad\b|milliards?\b|millions?\b|points?\b|x\b)/)?.[1];
+        if(unit&&(unit==='mdh'?'mmad':unit)!==norm(m.unit))p.error='Unité du seuil incompatible : '+m.label+' utilise '+(m.unit||'une valeur sans unité')+'. Aucun changement d’unité automatique.';
+        if(/^\s*(?:[\d.,]|e[+-]?\d)/.test(q.slice(match.index+match[0].length)))p.error='Nombre ambigu : utilisez un nombre sans séparateur de milliers, avec une virgule ou un point décimal.';
+      }
     }
-    if(/plus (?:faibles|bas|petits)|croissant/.test(q))p.sort={id:found[0].id,direction:'asc'};
-    else if(/plus (?:eleves|hauts|grands|forts)|decroissant/.test(q))p.sort={id:found[0].id,direction:'desc'};
+    if(/plus (?:faibles?|bas|petits?)|\bcroissant\b/.test(q))p.sort={id:found[0].id,direction:'asc'};
+    else if(/plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b/.test(q))p.sort={id:found[0].id,direction:'desc'};
+    if(/meilleur/.test(q))p.error='Un ratio ne définit pas les meilleurs titres. Précisez un seuil ou un ordre croissant ou décroissant.';
+    if(/entre\s+-?\d|compris|au.dessus|au.dessous|sous (?:la |les )?(?:mm|ema|sma)|surachet|survend/.test(q))p.error='Ce critère relatif ou cet intervalle n’est pas pris en charge. Précisez un seuil numérique explicite sur une mesure.';
     if(/classement|palmares|top\b|les\s+\d+/.test(q)&&!p.sort&&!missing)p.error='Précisez le classement : par exemple « les 5 PER les plus faibles en 2025 ».';
     const operators=q.match(/[<>]=?|inferieur(?:e)?s? a|superieur(?:e)?s? a|au moins|au plus|moins de|plus de|=/g)||[];
     if(operators.length!==p.filters.length)p.error='Critère numérique non reconnu : utilisez par exemple « PER inférieur à 15 et ROE supérieur à 10 % ».';

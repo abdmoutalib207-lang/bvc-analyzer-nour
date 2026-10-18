@@ -100,6 +100,17 @@ class AssistantQuery(unittest.TestCase):
 
     def test_python_worker_and_browser_query_contracts_agree(self):
         queries=['Les 5 PER les plus faibles en 2025','Les 20 PER les plus faibles en 2025',
+                 'Quelles sont les valeurs qui ont un PER inférieur à 15 et un ROE supérieur à 10 % ?',
+                 'Montre les sociétés ayant un PER inférieur à 15 et un ROE supérieur à 10 %',
+                 'Quelles valeurs ont le ROE le plus élevé ?',
+                 'Quelles sont les meilleures valeurs avec un PER ?',
+                 'Classement PER décroissant','Classement PER croissant',
+                 'Quelles valeurs ont une dette nette inférieure à 100 MAD ?',
+                 'Quelles valeurs ont une dette nette inférieure à 100 MMAD ?',
+                 'Quelles valeurs ont une dette nette inférieure à 1 000 MMAD ?',
+                 'Quelles valeurs ont un PER inférieur à 1e3 ?',
+                 'Quelles valeurs ont un PER entre 10 et 20 ?',
+                 'Quelles valeurs ont un cours sous la MM20 ?',
                  'Quelles valeurs ont un PER inférieur à 15 et un ROE supérieur à 10 % ?',
                  'Les 5 PER les plus faibles du secteur Banque en 2025','Valeurs avec dette nette suspendue',
                  'Quelles valeurs ont un PER >= 15 et un ROE <= 10 ?',

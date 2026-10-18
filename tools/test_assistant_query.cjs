@@ -16,6 +16,14 @@ for(const row of ranking.rows){
 const selected=query.select(data,'Quelles valeurs ont un PER inférieur à 15 et un ROE supérieur à 10 % ?');
 assert.equal(selected.matched,Object.values(data.symbols).filter(r=>Number.isFinite(r.fundamental.pe)&&r.fundamental.pe<15&&Number.isFinite(r.fundamental.roe_pct)&&r.fundamental.roe_pct>10).length);
 for(const row of selected.rows)assert.ok(row.values.pe<15&&row.values.roe>10);
+for(const natural of ['Quelles sont les valeurs qui ont un PER inférieur à 15 et un ROE supérieur à 10 % ?', 'Montre les sociétés ayant un PER inférieur à 15 et un ROE supérieur à 10 %'])assert.equal(query.select(data,natural).matched,selected.matched);
+assert.equal(query.select(data,'Quelles valeurs ont le ROE le plus élevé ?').sort.direction,'desc');
+assert.equal(query.select(data,'Classement PER décroissant').sort.direction,'desc');
+assert.equal(query.select(data,'Classement PER croissant').sort.direction,'asc');
+assert.ok(query.select(data,'Quelles valeurs ont une dette nette inférieure à 100 MAD ?').error);
+assert.equal(query.select(data,'Quelles valeurs ont une dette nette inférieure à 100 MMAD ?').error,null);
+for(const q of ['Quelles valeurs ont une dette nette inférieure à 1 000 MMAD ?', 'Quelles valeurs ont un PER inférieur à 1e3 ?', 'Quelles valeurs ont un PER entre 10 et 20 ?', 'Quelles valeurs ont un cours sous la MM20 ?'])assert.ok(query.select(data,q).error,q);
+assert.ok(query.select(data,'Quelles sont les meilleures valeurs avec un PER ?').error);
 const bank=query.select(data,'Les 5 PER les plus faibles du secteur Banque en 2025');
 assert.ok(bank.rows.length);assert.ok(bank.rows.every(r=>r.sector==='Banque'));
 const blocked=query.select(data,'Valeurs avec dette nette suspendue');
