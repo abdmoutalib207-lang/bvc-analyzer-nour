@@ -13,25 +13,196 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-18",
-    "started_at": "2026-10-18T02:59:44+00:00",
-    "built_at": "2026-10-18T03:00:35.685358+00:00",
+    "started_at": "2026-10-18T12:28:36+00:00",
+    "built_at": "2026-10-18T12:29:21.890791+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39092025259",
-    "commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39092025259",
+    "run_id": "39127417815",
+    "commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39127417815",
     "collection": {
-      "result": "unchanged",
-      "label": "Aucune nouveauté",
-      "checked_at": "2026-10-18T02:59:44.963299+00:00",
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-18T12:28:36.441717+00:00",
       "last_session": "2026-10-16",
-      "message": "Aucune nouvelle séance vérifiée",
-      "conflicts": [],
-      "fully_validated": true
+      "message": "10 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
+      "generator_commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -3512,6 +3683,59 @@
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
+      "id": "04f956c7355350ff53",
+      "title": "Entretien exclusif /  Ismail Douiri, Directeur Général d’Attijariwafa bank",
+      "url": "https://www.financialafrik.com/2026/10/18/entretienexclusif-ismail-douiri-directeur-general-dattijariwafa-bank/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T11:18:58+00:00",
+      "tickers": [
+        "ATW"
+      ],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3aa29047a0b0e80457",
+      "title": "Assemblée de la Banque Mondiale et du FMI à Bangkok : chômage des jeunes et les lapalissades des dirigeants",
+      "url": "https://www.financialafrik.com/2026/10/18/assemblee-de-la-banque-mondiale-et-du-fmi-a-bangkok-chomage-des-jeunes-et-les-lapalissades-des-dirigeants/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T10:22:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "893093c208dfe9595d",
+      "title": "De l’OMVS au ministère de l’Énergie et du Pétrole : Mohamed Ould Abdel Vetah face à la crise électrique mauritanienne",
+      "url": "https://www.financialafrik.com/2026/10/18/de-lomvs-au-ministere-de-lenergie-mohamed-ould-abdel-vetah-face-a-la-crise-electrique-mauritanienne/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T09:29:41+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
       "id": "30342d22556c317e1e",
       "title": "Oil Prices Stay High as War Keeps Supply Tight Into 2027",
       "url": "https://oilprice.com/Energy/Oil-Prices/Oil-Prices-Stay-High-as-War-Keeps-Supply-Tight-Into-2027.html",
@@ -3748,57 +3972,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "6105bdf4ce5bbc2cbe",
-      "title": "U.S. Oil Drillers Back Off Even As Prices Soar",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Oil-Drillers-Back-Off-Even-As-Prices-Soar.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T17:29:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "525cbbd4b0da3f19b7",
-      "title": "Éducation: l’avenir de la jeunesse, à quel prix?",
-      "url": "https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261016-%C3%A9ducation-l-avenir-de-la-jeunesse-%C3%A0-quel-prix",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-16T17:08:20+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "2404ff40cffc34236a",
-      "title": "« Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk",
-      "url": "https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T17:02:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     }
   ],
   "news_role": "veille uniquement",
@@ -4038,9 +4211,62 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-18T03:00:28.277177+00:00"
+    "observed_at": "2026-10-18T12:29:17.270909+00:00"
   },
   "context_news": [
+    {
+      "id": "04f956c7355350ff53",
+      "title": "Entretien exclusif /  Ismail Douiri, Directeur Général d’Attijariwafa bank",
+      "url": "https://www.financialafrik.com/2026/10/18/entretienexclusif-ismail-douiri-directeur-general-dattijariwafa-bank/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T11:18:58+00:00",
+      "tickers": [
+        "ATW"
+      ],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3aa29047a0b0e80457",
+      "title": "Assemblée de la Banque Mondiale et du FMI à Bangkok : chômage des jeunes et les lapalissades des dirigeants",
+      "url": "https://www.financialafrik.com/2026/10/18/assemblee-de-la-banque-mondiale-et-du-fmi-a-bangkok-chomage-des-jeunes-et-les-lapalissades-des-dirigeants/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T10:22:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "893093c208dfe9595d",
+      "title": "De l’OMVS au ministère de l’Énergie et du Pétrole : Mohamed Ould Abdel Vetah face à la crise électrique mauritanienne",
+      "url": "https://www.financialafrik.com/2026/10/18/de-lomvs-au-ministere-de-lenergie-mohamed-ould-abdel-vetah-face-a-la-crise-electrique-mauritanienne/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T09:29:41+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "30342d22556c317e1e",
       "title": "Oil Prices Stay High as War Keeps Supply Tight Into 2027",
@@ -4193,63 +4419,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "f1dcea64b0222d6851",
-      "title": "Nomination de M. Fouzi LEKJAA Ministre de l’Economie, des Finances et de la Performance publique – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE43MmpBQmE3bi1XWkV1Yk5KY24xWlM4YUlZb083VTlsdEV3bDRMOVpSRXZrRm9MY0ZkaWlHWDdwQTNVekhBTGk5QV9QaGVrcXRxMlRjeFo2Q0FLTWdCMm1kdDFfYWNUcW9xeHVuSklLcXNwZHVDZWNsQg?oc=5",
-      "publisher": "Finances Maroc · relais presse",
-      "published_at": "2026-10-16T19:29:25+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "mef",
-      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "6213e0f72007afa823",
-      "title": "Norway's Untapped Oil and Gas Frontier Is Drawing Renewed Interest",
-      "url": "https://oilprice.com/Energy/Crude-Oil/Norways-Untapped-Oil-and-Gas-Frontier-Is-Drawing-Renewed-Interest.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T19:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "8b20f11a1b0d5bcbd1",
-      "title": "L'électrique, star du Mondial de l'auto",
-      "url": "https://www.france24.com/fr/%C3%A9missions/la-semaine-de-l-%C3%A9co/20261016-l-%C3%A9lectrique-star-du-mondial-de-l-auto",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-10-16T18:57:22+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-18T03:00:35.685358+00:00",
-    "checked_at": "2026-10-18T03:00:29.017931+00:00",
+    "cutoff": "2026-10-18T12:29:21.890791+00:00",
+    "checked_at": "2026-10-18T12:29:17.934434+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4269,7 +4444,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4286,7 +4461,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4303,7 +4478,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4320,7 +4495,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4342,7 +4517,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4359,7 +4534,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4376,7 +4551,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4393,7 +4568,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4415,7 +4590,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4432,7 +4607,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4449,7 +4624,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -4466,7 +4641,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]

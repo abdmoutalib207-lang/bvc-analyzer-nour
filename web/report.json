@@ -103,7 +103,7 @@
       "ytd_pct": -9.81
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-18T03:00:28.277177+00:00",
+    "observed_at": "2026-10-18T12:29:17.270909+00:00",
     "turnover_mad": 117005677.43,
     "breadth": {
       "up": 29,
@@ -113,6 +113,59 @@
     }
   },
   "news": [
+    {
+      "id": "04f956c7355350ff53",
+      "title": "Entretien exclusif /  Ismail Douiri, Directeur Général d’Attijariwafa bank",
+      "url": "https://www.financialafrik.com/2026/10/18/entretienexclusif-ismail-douiri-directeur-general-dattijariwafa-bank/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T11:18:58+00:00",
+      "tickers": [
+        "ATW"
+      ],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "3aa29047a0b0e80457",
+      "title": "Assemblée de la Banque Mondiale et du FMI à Bangkok : chômage des jeunes et les lapalissades des dirigeants",
+      "url": "https://www.financialafrik.com/2026/10/18/assemblee-de-la-banque-mondiale-et-du-fmi-a-bangkok-chomage-des-jeunes-et-les-lapalissades-des-dirigeants/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T10:22:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "893093c208dfe9595d",
+      "title": "De l’OMVS au ministère de l’Énergie et du Pétrole : Mohamed Ould Abdel Vetah face à la crise électrique mauritanienne",
+      "url": "https://www.financialafrik.com/2026/10/18/de-lomvs-au-ministere-de-lenergie-mohamed-ould-abdel-vetah-face-a-la-crise-electrique-mauritanienne/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-18T09:29:41+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "30342d22556c317e1e",
       "title": "Oil Prices Stay High as War Keeps Supply Tight Into 2027",
@@ -3686,57 +3739,6 @@
       "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
-      "id": "c32b869ab8e1548dcb",
-      "title": "Quand l’Afrique accueille les capitaux étrangers, mais freine ses propres entrepreneurs",
-      "url": "https://www.financialafrik.com/2026/10/12/quand-lafrique-accueille-les-capitaux-etrangers-mais-freine-ses-propres-entrepreneurs/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-12T14:34:32+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "5d19c50793e3eb704b",
-      "title": "Ecobank TI dans l’Empire du Milieu : un pont entre le yuan et les monnaies africaines ?",
-      "url": "https://www.financialafrik.com/2026/10/12/ecobank-ti-dans-lempire-du-milieu-un-pont-entre-le-yuan-et-les-monnaies-africaines/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-12T14:07:52+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "edd56dbde953b8730c",
-      "title": "House Republicans Move to Block Trump's Russian Diesel Deal",
-      "url": "https://oilprice.com/Geopolitics/North-America/House-Republicans-Move-to-Block-Trumps-Russian-Diesel-Deal.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-12T14:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
       "id": "ed8ab768f5abfc3ac6",
       "title": "Auto Nejma - Avis de 2ème convocation à l'AG des obligataires du 23 octobre 2026 (EO juin 2025)",
       "url": "https://www.ammc.ma/sites/default/files/Avis_2e_convocation_Auto_Nejma_AG_obligataires_23_10_26.pdf",
@@ -5308,6 +5310,23 @@
         "macd": -0.29,
         "macd_signal": -0.69,
         "atr14": 1.35,
+        "atr14_wilder": 1.19,
+        "atr14_wilder_pct": 3.4,
+        "ema20": 33.05,
+        "ema50": 33.69,
+        "bollinger_middle": 32.82,
+        "bollinger_upper": 35.74,
+        "bollinger_lower": 29.9,
+        "macd_histogram": 0.4,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 7.66,
         "support20": 29.1,
         "resistance20": 34.89,
@@ -6019,6 +6038,23 @@
         "macd": -14.76,
         "macd_signal": -15.49,
         "atr14": 15.22,
+        "atr14_wilder": 14.06,
+        "atr14_wilder_pct": 3.91,
+        "ema20": 359.18,
+        "ema50": 378.36,
+        "bollinger_middle": 361.72,
+        "bollinger_upper": 409.35,
+        "bollinger_lower": 314.09,
+        "macd_histogram": 0.73,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.51,
         "support20": 321.2,
         "resistance20": 410.0,
@@ -6793,6 +6829,23 @@
         "macd": -1.57,
         "macd_signal": -1.49,
         "atr14": 3.92,
+        "atr14_wilder": 3.67,
+        "atr14_wilder_pct": 1.12,
+        "ema20": 328.4,
+        "ema50": 330.83,
+        "bollinger_middle": 328.8,
+        "bollinger_upper": 335.5,
+        "bollinger_lower": 322.1,
+        "macd_histogram": -0.09,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -1.8,
         "support20": 322.2,
         "resistance20": 335.0,
@@ -7490,6 +7543,23 @@
         "macd": -3.25,
         "macd_signal": -3.16,
         "atr14": 2.21,
+        "atr14_wilder": 4.07,
+        "atr14_wilder_pct": 0.33,
+        "ema20": 1253.78,
+        "ema50": 1254.72,
+        "bollinger_middle": 1248.75,
+        "bollinger_upper": 1261.04,
+        "bollinger_lower": 1236.46,
+        "macd_histogram": -0.09,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.4,
         "support20": 1231.0,
         "resistance20": 1293.0,
@@ -8147,6 +8217,23 @@
         "macd": -19.65,
         "macd_signal": -11.39,
         "atr14": 107.0,
+        "atr14_wilder": 109.4,
+        "atr14_wilder_pct": 1.56,
+        "ema20": 6917.24,
+        "ema50": 6928.7,
+        "bollinger_middle": 6953.95,
+        "bollinger_upper": 7307.06,
+        "bollinger_lower": 6600.84,
+        "macd_histogram": -8.26,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 4.79,
         "support20": 6680.0,
         "resistance20": 7080.0,
@@ -8775,6 +8862,23 @@
         "macd": -21.19,
         "macd_signal": -23.11,
         "atr14": 26.21,
+        "atr14_wilder": 23.15,
+        "atr14_wilder_pct": 2.18,
+        "ema20": 1077.01,
+        "ema50": 1109.09,
+        "bollinger_middle": 1080.3,
+        "bollinger_upper": 1160.45,
+        "bollinger_lower": 1000.15,
+        "macd_histogram": 1.92,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -5.0,
         "support20": 993.0,
         "resistance20": 1140.0,
@@ -9450,6 +9554,23 @@
         "macd": 21.62,
         "macd_signal": 20.96,
         "atr14": 63.0,
+        "atr14_wilder": 52.9,
+        "atr14_wilder_pct": 2.76,
+        "ema20": 1894.59,
+        "ema50": 1874.18,
+        "bollinger_middle": 1886.75,
+        "bollinger_upper": 1978.87,
+        "bollinger_lower": 1794.63,
+        "macd_histogram": 0.66,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 5.32,
         "support20": 1795.0,
         "resistance20": 2075.0,
@@ -10117,6 +10238,23 @@
         "macd": -3.11,
         "macd_signal": -2.63,
         "atr14": 10.87,
+        "atr14_wilder": 10.06,
+        "atr14_wilder_pct": 2.36,
+        "ema20": 432.13,
+        "ema50": 434.22,
+        "bollinger_middle": 432.14,
+        "bollinger_upper": 444.23,
+        "bollinger_lower": 420.05,
+        "macd_histogram": -0.48,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.84,
         "support20": 415.0,
         "resistance20": 449.9,
@@ -10796,6 +10934,23 @@
         "macd": -0.99,
         "macd_signal": -1.22,
         "atr14": 2.9,
+        "atr14_wilder": 2.81,
+        "atr14_wilder_pct": 2.34,
+        "ema20": 120.76,
+        "ema50": 122.77,
+        "bollinger_middle": 120.7,
+        "bollinger_upper": 124.63,
+        "bollinger_lower": 116.77,
+        "macd_histogram": 0.23,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 0.92,
         "support20": 116.5,
         "resistance20": 124.9,
@@ -11445,6 +11600,23 @@
         "macd": -7.03,
         "macd_signal": -6.99,
         "atr14": 9.07,
+        "atr14_wilder": 8.65,
+        "atr14_wilder_pct": 1.29,
+        "ema20": 676.4,
+        "ema50": 685.01,
+        "bollinger_middle": 676.23,
+        "bollinger_upper": 692.39,
+        "bollinger_lower": 660.07,
+        "macd_histogram": -0.04,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -1.54,
         "support20": 661.0,
         "resistance20": 700.0,
@@ -12163,6 +12335,23 @@
         "macd": 0.92,
         "macd_signal": -0.26,
         "atr14": 2.36,
+        "atr14_wilder": 2.6,
+        "atr14_wilder_pct": 1.31,
+        "ema20": 194.02,
+        "ema50": 195.97,
+        "bollinger_middle": 192.54,
+        "bollinger_upper": 202.66,
+        "bollinger_lower": 182.42,
+        "macd_histogram": 1.18,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.5,
         "support20": 188.0,
         "resistance20": 200.0,
@@ -12802,6 +12991,23 @@
         "macd": -0.49,
         "macd_signal": -0.48,
         "atr14": 6.28,
+        "atr14_wilder": 5.91,
+        "atr14_wilder_pct": 2.41,
+        "ema20": 246.2,
+        "ema50": 247.14,
+        "bollinger_middle": 247.09,
+        "bollinger_upper": 252.76,
+        "bollinger_lower": 241.42,
+        "macd_histogram": -0.02,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 2.08,
         "support20": 235.0,
         "resistance20": 251.9,
@@ -13517,6 +13723,23 @@
         "macd": -10.01,
         "macd_signal": -11.09,
         "atr14": 19.1,
+        "atr14_wilder": 17.55,
+        "atr14_wilder_pct": 3.13,
+        "ema20": 565.99,
+        "ema50": 582.1,
+        "bollinger_middle": 562.4,
+        "bollinger_upper": 592.17,
+        "bollinger_lower": 532.64,
+        "macd_histogram": 1.08,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.92,
         "support20": 540.0,
         "resistance20": 614.9,
@@ -14173,6 +14396,23 @@
         "macd": -2.54,
         "macd_signal": -1.94,
         "atr14": 4.39,
+        "atr14_wilder": 4.22,
+        "atr14_wilder_pct": 2.33,
+        "ema20": 185.59,
+        "ema50": 188.61,
+        "bollinger_middle": 187.6,
+        "bollinger_upper": 199.07,
+        "bollinger_lower": 176.12,
+        "macd_histogram": -0.59,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.74,
         "support20": 180.0,
         "resistance20": 197.0,
@@ -14724,7 +14964,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -14905,6 +15163,23 @@
         "macd": -0.4,
         "macd_signal": -0.69,
         "atr14": 0.82,
+        "atr14_wilder": 0.8,
+        "atr14_wilder_pct": 4.01,
+        "ema20": 19.84,
+        "ema50": 21.48,
+        "bollinger_middle": 19.07,
+        "bollinger_upper": 20.7,
+        "bollinger_lower": 17.44,
+        "macd_histogram": 0.29,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.5,
         "support20": 17.9,
         "resistance20": 21.21,
@@ -15580,6 +15855,23 @@
         "macd": -6.31,
         "macd_signal": -6.85,
         "atr14": 7.11,
+        "atr14_wilder": 6.91,
+        "atr14_wilder_pct": 3.21,
+        "ema20": 219.96,
+        "ema50": 232.09,
+        "bollinger_middle": 220.32,
+        "bollinger_upper": 237.45,
+        "bollinger_lower": 203.2,
+        "macd_histogram": 0.54,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.02,
         "support20": 203.5,
         "resistance20": 240.0,
@@ -16268,6 +16560,23 @@
         "macd": -15.31,
         "macd_signal": -14.34,
         "atr14": 19.28,
+        "atr14_wilder": 19.84,
+        "atr14_wilder_pct": 2.17,
+        "ema20": 938.09,
+        "ema50": 959.15,
+        "bollinger_middle": 938.67,
+        "bollinger_upper": 973.1,
+        "bollinger_lower": 904.23,
+        "macd_histogram": -0.97,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.31,
         "support20": 905.3,
         "resistance20": 996.0,
@@ -17034,6 +17343,23 @@
         "macd": -2.53,
         "macd_signal": -2.4,
         "atr14": 5.42,
+        "atr14_wilder": 4.89,
+        "atr14_wilder_pct": 2.52,
+        "ema20": 195.71,
+        "ema50": 198.35,
+        "bollinger_middle": 196.35,
+        "bollinger_upper": 205.94,
+        "bollinger_lower": 186.76,
+        "macd_histogram": -0.13,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.9,
         "support20": 188.0,
         "resistance20": 210.0,
@@ -17813,6 +18139,23 @@
         "macd": -9.35,
         "macd_signal": -9.36,
         "atr14": 8.54,
+        "atr14_wilder": 8.59,
+        "atr14_wilder_pct": 2.79,
+        "ema20": 313.0,
+        "ema50": 326.97,
+        "bollinger_middle": 313.51,
+        "bollinger_upper": 334.66,
+        "bollinger_lower": 292.36,
+        "macd_histogram": 0.0,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.8,
         "support20": 300.0,
         "resistance20": 343.5,
@@ -18560,6 +18903,23 @@
         "macd": -53.96,
         "macd_signal": -54.81,
         "atr14": 58.71,
+        "atr14_wilder": 48.99,
+        "atr14_wilder_pct": 3.41,
+        "ema20": 1489.55,
+        "ema50": 1563.94,
+        "bollinger_middle": 1492.95,
+        "bollinger_upper": 1628.55,
+        "bollinger_lower": 1357.35,
+        "macd_histogram": 0.85,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -7.65,
         "support20": 1400.0,
         "resistance20": 1635.0,
@@ -19253,6 +19613,23 @@
         "macd": -13.56,
         "macd_signal": -12.89,
         "atr14": 10.05,
+        "atr14_wilder": 9.58,
+        "atr14_wilder_pct": 3.68,
+        "ema20": 276.19,
+        "ema50": 297.21,
+        "bollinger_middle": 277.52,
+        "bollinger_upper": 307.84,
+        "bollinger_lower": 247.2,
+        "macd_histogram": -0.67,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -9.41,
         "support20": 257.0,
         "resistance20": 309.0,
@@ -19867,7 +20244,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -20050,6 +20445,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": 196.79,
+        "atr14_wilder": 215.83,
+        "atr14_wilder_pct": 5.36,
+        "ema20": 3926.34,
+        "ema50": null,
+        "bollinger_middle": 4046.75,
+        "bollinger_upper": 4791.62,
+        "bollinger_lower": 3301.88,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 50.21,
         "support20": 2681.0,
         "resistance20": 4573.0,
@@ -20710,6 +21122,23 @@
         "macd": -0.88,
         "macd_signal": -0.8,
         "atr14": 2.72,
+        "atr14_wilder": 2.44,
+        "atr14_wilder_pct": 3.16,
+        "ema20": 77.59,
+        "ema50": 78.65,
+        "bollinger_middle": 77.87,
+        "bollinger_upper": 80.9,
+        "bollinger_lower": 74.84,
+        "macd_histogram": -0.08,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.23,
         "support20": 74.0,
         "resistance20": 80.0,
@@ -21404,6 +21833,23 @@
         "macd": -3.37,
         "macd_signal": -3.8,
         "atr14": 4.99,
+        "atr14_wilder": 4.77,
+        "atr14_wilder_pct": 2.75,
+        "ema20": 177.34,
+        "ema50": 182.48,
+        "bollinger_middle": 176.45,
+        "bollinger_upper": 183.15,
+        "bollinger_lower": 169.75,
+        "macd_histogram": 0.43,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.89,
         "support20": 169.0,
         "resistance20": 188.85,
@@ -21958,7 +22404,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -22139,6 +22603,23 @@
         "macd": -17.61,
         "macd_signal": -16.4,
         "atr14": 25.54,
+        "atr14_wilder": 22.42,
+        "atr14_wilder_pct": 2.78,
+        "ema20": 825.28,
+        "ema50": 847.69,
+        "bollinger_middle": 828.35,
+        "bollinger_upper": 873.48,
+        "bollinger_lower": 783.22,
+        "macd_histogram": -1.21,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -7.26,
         "support20": 760.0,
         "resistance20": 869.0,
@@ -22840,6 +23321,23 @@
         "macd": 17.79,
         "macd_signal": 3.72,
         "atr14": 11.36,
+        "atr14_wilder": 9.35,
+        "atr14_wilder_pct": 0.22,
+        "ema20": 4147.52,
+        "ema50": 4152.33,
+        "bollinger_middle": 4116.4,
+        "bollinger_upper": 4238.7,
+        "bollinger_lower": 3994.1,
+        "macd_histogram": 14.08,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 2.96,
         "support20": 4060.0,
         "resistance20": 4200.0,
@@ -23495,6 +23993,23 @@
         "macd": -1.51,
         "macd_signal": -1.67,
         "atr14": 1.95,
+        "atr14_wilder": 1.89,
+        "atr14_wilder_pct": 3.94,
+        "ema20": 48.97,
+        "ema50": 51.71,
+        "bollinger_middle": 48.77,
+        "bollinger_upper": 51.78,
+        "bollinger_lower": 45.77,
+        "macd_histogram": 0.15,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.0,
         "support20": 46.0,
         "resistance20": 52.7,
@@ -23987,6 +24502,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": null,
+        "atr14_wilder": null,
+        "atr14_wilder_pct": null,
+        "ema20": null,
+        "ema50": null,
+        "bollinger_middle": null,
+        "bollinger_upper": null,
+        "bollinger_lower": null,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": null,
         "support20": null,
         "resistance20": null,
@@ -24344,6 +24876,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": null,
+        "atr14_wilder": null,
+        "atr14_wilder_pct": null,
+        "ema20": null,
+        "ema50": null,
+        "bollinger_middle": null,
+        "bollinger_upper": null,
+        "bollinger_lower": null,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": null,
         "support20": null,
         "resistance20": null,
@@ -24865,6 +25414,23 @@
         "macd": -2.62,
         "macd_signal": -2.85,
         "atr14": 22.51,
+        "atr14_wilder": 19.06,
+        "atr14_wilder_pct": 2.56,
+        "ema20": 745.98,
+        "ema50": 753.55,
+        "bollinger_middle": 746.37,
+        "bollinger_upper": 764.21,
+        "bollinger_lower": 728.53,
+        "macd_histogram": 0.22,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 1.09,
         "support20": 726.0,
         "resistance20": 774.0,
@@ -25595,6 +26161,23 @@
         "macd": -2.09,
         "macd_signal": -1.2,
         "atr14": 11.66,
+        "atr14_wilder": 9.65,
+        "atr14_wilder_pct": 2.8,
+        "ema20": 349.51,
+        "ema50": 351.44,
+        "bollinger_middle": 350.57,
+        "bollinger_upper": 365.99,
+        "bollinger_lower": 335.16,
+        "macd_histogram": -0.88,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.35,
         "support20": 330.0,
         "resistance20": 370.0,
@@ -26161,7 +26744,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -26342,6 +26943,23 @@
         "macd": -0.39,
         "macd_signal": -0.5,
         "atr14": 1.33,
+        "atr14_wilder": 1.25,
+        "atr14_wilder_pct": 2.61,
+        "ema20": 47.7,
+        "ema50": 48.64,
+        "bollinger_middle": 47.61,
+        "bollinger_upper": 48.96,
+        "bollinger_lower": 46.27,
+        "macd_histogram": 0.11,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.62,
         "support20": 45.85,
         "resistance20": 49.29,
@@ -27005,6 +27623,23 @@
         "macd": -6.7,
         "macd_signal": -9.87,
         "atr14": 1.43,
+        "atr14_wilder": 3.3,
+        "atr14_wilder_pct": 0.22,
+        "ema20": 1487.75,
+        "ema50": 1496.94,
+        "bollinger_middle": 1484.0,
+        "bollinger_upper": 1498.0,
+        "bollinger_lower": 1470.0,
+        "macd_histogram": 3.16,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 0.33,
         "support20": 1480.0,
         "resistance20": 1495.0,
@@ -27656,6 +28291,23 @@
         "macd": -7.11,
         "macd_signal": -8.06,
         "atr14": 18.79,
+        "atr14_wilder": 17.85,
+        "atr14_wilder_pct": 5.38,
+        "ema20": 333.46,
+        "ema50": 336.78,
+        "bollinger_middle": 333.27,
+        "bollinger_upper": 365.24,
+        "bollinger_lower": 301.3,
+        "macd_histogram": 0.95,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -1.19,
         "support20": 302.3,
         "resistance20": 373.0,
@@ -28321,6 +28973,23 @@
         "macd": -23.71,
         "macd_signal": -27.64,
         "atr14": 71.29,
+        "atr14_wilder": 62.21,
+        "atr14_wilder_pct": 1.73,
+        "ema20": 3620.31,
+        "ema50": 3656.98,
+        "bollinger_middle": 3611.6,
+        "bollinger_upper": 3698.57,
+        "bollinger_lower": 3524.63,
+        "macd_histogram": 3.93,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.7,
         "support20": 3500.0,
         "resistance20": 3700.0,
@@ -29027,6 +29696,23 @@
         "macd": -1.54,
         "macd_signal": -1.6,
         "atr14": 2.17,
+        "atr14_wilder": 2.14,
+        "atr14_wilder_pct": 3.57,
+        "ema20": 61.58,
+        "ema50": 64.2,
+        "bollinger_middle": 61.5,
+        "bollinger_upper": 64.64,
+        "bollinger_lower": 58.36,
+        "macd_histogram": 0.05,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.23,
         "support20": 58.0,
         "resistance20": 65.98,
@@ -29804,6 +30490,23 @@
         "macd": -32.7,
         "macd_signal": -27.58,
         "atr14": 27.24,
+        "atr14_wilder": 22.3,
+        "atr14_wilder_pct": 4.31,
+        "ema20": 560.68,
+        "ema50": 594.21,
+        "bollinger_middle": 572.24,
+        "bollinger_upper": 670.87,
+        "bollinger_lower": 473.61,
+        "macd_histogram": -5.12,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -16.61,
         "support20": 505.0,
         "resistance20": 650.0,
@@ -30354,7 +31057,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -30535,6 +31256,23 @@
         "macd": -1.62,
         "macd_signal": -1.53,
         "atr14": 1.5,
+        "atr14_wilder": 1.43,
+        "atr14_wilder_pct": 1.59,
+        "ema20": 92.33,
+        "ema50": 94.01,
+        "bollinger_middle": 92.7,
+        "bollinger_upper": 97.45,
+        "bollinger_lower": 87.95,
+        "macd_histogram": -0.1,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.37,
         "support20": 89.9,
         "resistance20": 96.99,
@@ -30980,7 +31718,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -31161,6 +31917,23 @@
         "macd": -1.73,
         "macd_signal": -1.44,
         "atr14": 2.58,
+        "atr14_wilder": 2.32,
+        "atr14_wilder_pct": 4.54,
+        "ema20": 54.28,
+        "ema50": 56.73,
+        "bollinger_middle": 54.84,
+        "bollinger_upper": 60.35,
+        "bollinger_lower": 49.33,
+        "macd_histogram": -0.3,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -9.11,
         "support20": 48.0,
         "resistance20": 60.97,
@@ -31710,6 +32483,23 @@
         "macd": -0.31,
         "macd_signal": -0.33,
         "atr14": 0.75,
+        "atr14_wilder": 0.72,
+        "atr14_wilder_pct": 0.79,
+        "ema20": 90.99,
+        "ema50": 91.25,
+        "bollinger_middle": 90.99,
+        "bollinger_upper": 92.29,
+        "bollinger_lower": 89.7,
+        "macd_histogram": 0.02,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.76,
         "support20": 89.93,
         "resistance20": 93.0,
@@ -32345,6 +33135,23 @@
         "macd": -3.68,
         "macd_signal": -3.29,
         "atr14": 3.09,
+        "atr14_wilder": 3.99,
+        "atr14_wilder_pct": 3.44,
+        "ema20": 119.58,
+        "ema50": 124.94,
+        "bollinger_middle": 120.61,
+        "bollinger_upper": 130.88,
+        "bollinger_lower": 110.34,
+        "macd_histogram": -0.39,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -10.85,
         "support20": 112.1,
         "resistance20": 136.0,
@@ -33072,6 +33879,23 @@
         "macd": -144.87,
         "macd_signal": -121.71,
         "atr14": 80.5,
+        "atr14_wilder": 73.38,
+        "atr14_wilder_pct": 5.1,
+        "ema20": 1668.45,
+        "ema50": 1855.03,
+        "bollinger_middle": 1709.35,
+        "bollinger_upper": 2081.69,
+        "bollinger_lower": 1337.01,
+        "macd_histogram": -23.16,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -24.21,
         "support20": 1455.0,
         "resistance20": 1999.0,
@@ -33609,7 +34433,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -33790,6 +34632,23 @@
         "macd": -51.2,
         "macd_signal": -55.37,
         "atr14": 100.64,
+        "atr14_wilder": 102.28,
+        "atr14_wilder_pct": 2.63,
+        "ema20": 3922.18,
+        "ema50": 3955.37,
+        "bollinger_middle": 3922.95,
+        "bollinger_upper": 4147.02,
+        "bollinger_lower": 3698.88,
+        "macd_histogram": 4.16,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.6,
         "support20": 3720.0,
         "resistance20": 4199.0,
@@ -34466,6 +35325,23 @@
         "macd": -7.05,
         "macd_signal": -5.85,
         "atr14": 11.61,
+        "atr14_wilder": 9.92,
+        "atr14_wilder_pct": 3.57,
+        "ema20": 292.5,
+        "ema50": 304.38,
+        "bollinger_middle": 294.63,
+        "bollinger_upper": 316.37,
+        "bollinger_lower": 272.9,
+        "macd_histogram": -1.2,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -8.85,
         "support20": 280.0,
         "resistance20": 310.0,
@@ -35231,6 +36107,23 @@
         "macd": -31.87,
         "macd_signal": -37.71,
         "atr14": 55.07,
+        "atr14_wilder": 52.85,
+        "atr14_wilder_pct": 3.28,
+        "ema20": 1622.52,
+        "ema50": 1677.57,
+        "bollinger_middle": 1619.7,
+        "bollinger_upper": 1715.7,
+        "bollinger_lower": 1523.7,
+        "macd_histogram": 5.84,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -0.06,
         "support20": 1523.0,
         "resistance20": 1766.0,
@@ -35906,6 +36799,23 @@
         "macd": -2.0,
         "macd_signal": -1.13,
         "atr14": 7.03,
+        "atr14_wilder": 7.63,
+        "atr14_wilder_pct": 1.91,
+        "ema20": 398.25,
+        "ema50": 399.26,
+        "bollinger_middle": 399.6,
+        "bollinger_upper": 415.09,
+        "bollinger_lower": 384.1,
+        "macd_histogram": -0.86,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.44,
         "support20": 387.05,
         "resistance20": 416.0,
@@ -36510,6 +37420,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": 1.07,
+        "atr14_wilder": 1.07,
+        "atr14_wilder_pct": 4.7,
+        "ema20": 23.77,
+        "ema50": null,
+        "bollinger_middle": 23.82,
+        "bollinger_upper": 24.98,
+        "bollinger_lower": 22.65,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -5.21,
         "support20": 22.11,
         "resistance20": 24.78,
@@ -37182,6 +38109,23 @@
         "macd": -5.05,
         "macd_signal": -4.72,
         "atr14": 9.92,
+        "atr14_wilder": 10.16,
+        "atr14_wilder_pct": 1.14,
+        "ema20": 900.48,
+        "ema50": 905.25,
+        "bollinger_middle": 900.41,
+        "bollinger_upper": 925.84,
+        "bollinger_lower": 874.98,
+        "macd_histogram": -0.33,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -2.3,
         "support20": 883.0,
         "resistance20": 923.0,
@@ -37807,6 +38751,23 @@
         "macd": -1.17,
         "macd_signal": 0.34,
         "atr14": 14.0,
+        "atr14_wilder": 15.5,
+        "atr14_wilder_pct": 2.04,
+        "ema20": 755.61,
+        "ema50": 757.29,
+        "bollinger_middle": 757.26,
+        "bollinger_upper": 785.95,
+        "bollinger_lower": 728.57,
+        "macd_histogram": -1.51,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 0.66,
         "support20": 728.0,
         "resistance20": 787.0,
@@ -38500,6 +39461,23 @@
         "macd": -37.24,
         "macd_signal": -33.17,
         "atr14": 54.86,
+        "atr14_wilder": 57.54,
+        "atr14_wilder_pct": 3.83,
+        "ema20": 1550.34,
+        "ema50": 1561.54,
+        "bollinger_middle": 1556.1,
+        "bollinger_upper": 1673.23,
+        "bollinger_lower": 1438.97,
+        "macd_histogram": -4.07,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.88,
         "support20": 1380.0,
         "resistance20": 1716.0,
@@ -39270,6 +40248,23 @@
         "macd": -0.19,
         "macd_signal": 0.62,
         "atr14": 16.11,
+        "atr14_wilder": 13.44,
+        "atr14_wilder_pct": 3.5,
+        "ema20": 386.33,
+        "ema50": 385.47,
+        "bollinger_middle": 385.95,
+        "bollinger_upper": 399.07,
+        "bollinger_lower": 372.83,
+        "macd_histogram": -0.81,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 2.1,
         "support20": 353.8,
         "resistance20": 399.9,
@@ -39781,7 +40776,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -39965,6 +40978,23 @@
         "macd": -0.53,
         "macd_signal": 0.64,
         "atr14": 2.53,
+        "atr14_wilder": 2.01,
+        "atr14_wilder_pct": 0.54,
+        "ema20": 376.95,
+        "ema50": 373.88,
+        "bollinger_middle": 380.28,
+        "bollinger_upper": 395.83,
+        "bollinger_lower": 364.73,
+        "macd_histogram": -1.17,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.99,
         "support20": 367.0,
         "resistance20": 389.55,
@@ -40577,6 +41607,23 @@
         "macd": -25.04,
         "macd_signal": -24.16,
         "atr14": 18.41,
+        "atr14_wilder": 15.34,
+        "atr14_wilder_pct": 2.04,
+        "ema20": 779.06,
+        "ema50": 812.2,
+        "bollinger_middle": 782.12,
+        "bollinger_upper": 844.45,
+        "bollinger_lower": 719.79,
+        "macd_histogram": -0.88,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -8.54,
         "support20": 737.0,
         "resistance20": 840.0,
@@ -41280,6 +42327,23 @@
         "macd": -2.17,
         "macd_signal": -3.44,
         "atr14": 7.73,
+        "atr14_wilder": 7.31,
+        "atr14_wilder_pct": 3.23,
+        "ema20": 225.32,
+        "ema50": 229.5,
+        "bollinger_middle": 223.87,
+        "bollinger_upper": 234.51,
+        "bollinger_lower": 213.22,
+        "macd_histogram": 1.26,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 2.35,
         "support20": 210.0,
         "resistance20": 240.0,
@@ -42077,6 +43141,23 @@
         "macd": 90.35,
         "macd_signal": 74.41,
         "atr14": 22.71,
+        "atr14_wilder": 19.36,
+        "atr14_wilder_pct": 0.34,
+        "ema20": 5496.58,
+        "ema50": 5322.81,
+        "bollinger_middle": 5446.1,
+        "bollinger_upper": 5762.51,
+        "bollinger_lower": 5129.69,
+        "macd_histogram": 15.93,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 6.0,
         "support20": 5303.0,
         "resistance20": 5621.0,
@@ -42715,6 +43796,23 @@
         "macd": 8.94,
         "macd_signal": 3.21,
         "atr14": 18.57,
+        "atr14_wilder": 16.64,
+        "atr14_wilder_pct": 1.4,
+        "ema20": 1170.67,
+        "ema50": 1170.28,
+        "bollinger_middle": 1165.6,
+        "bollinger_upper": 1219.56,
+        "bollinger_lower": 1111.64,
+        "macd_histogram": 5.73,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 3.39,
         "support20": 1091.0,
         "resistance20": 1225.0,
@@ -43387,6 +44485,23 @@
         "macd": 39.26,
         "macd_signal": 28.05,
         "atr14": 7.5,
+        "atr14_wilder": 10.7,
+        "atr14_wilder_pct": 0.72,
+        "ema20": 1407.76,
+        "ema50": 1372.12,
+        "bollinger_middle": 1390.2,
+        "bollinger_upper": 1522.18,
+        "bollinger_lower": 1258.22,
+        "macd_histogram": 11.21,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 13.85,
         "support20": 1223.0,
         "resistance20": 1480.0,
@@ -44012,6 +45127,23 @@
         "macd": -3.89,
         "macd_signal": -4.4,
         "atr14": 5.95,
+        "atr14_wilder": 5.03,
+        "atr14_wilder_pct": 3.11,
+        "ema20": 162.79,
+        "ema50": 167.35,
+        "bollinger_middle": 163.25,
+        "bollinger_upper": 177.84,
+        "bollinger_lower": 148.66,
+        "macd_histogram": 0.51,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.63,
         "support20": 150.0,
         "resistance20": 175.0,
@@ -44730,6 +45862,23 @@
         "macd": -0.61,
         "macd_signal": -0.19,
         "atr14": 4.45,
+        "atr14_wilder": 4.35,
+        "atr14_wilder_pct": 4.64,
+        "ema20": 96.06,
+        "ema50": 96.36,
+        "bollinger_middle": 96.22,
+        "bollinger_upper": 105.31,
+        "bollinger_lower": 87.13,
+        "macd_histogram": -0.43,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.29,
         "support20": 87.52,
         "resistance20": 104.0,
@@ -45325,6 +46474,23 @@
         "macd": -5.89,
         "macd_signal": -5.46,
         "atr14": 9.55,
+        "atr14_wilder": 7.7,
+        "atr14_wilder_pct": 2.57,
+        "ema20": 306.56,
+        "ema50": 314.52,
+        "bollinger_middle": 308.79,
+        "bollinger_upper": 329.4,
+        "bollinger_lower": 288.19,
+        "macd_histogram": -0.43,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -5.51,
         "support20": 290.65,
         "resistance20": 326.0,
@@ -45995,6 +47161,23 @@
         "macd": -7.92,
         "macd_signal": -6.24,
         "atr14": 20.38,
+        "atr14_wilder": 17.87,
+        "atr14_wilder_pct": 3.75,
+        "ema20": 496.82,
+        "ema50": 504.46,
+        "bollinger_middle": 500.49,
+        "bollinger_upper": 537.72,
+        "bollinger_lower": 463.26,
+        "macd_histogram": -1.67,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -5.41,
         "support20": 466.0,
         "resistance20": 540.0,
@@ -46607,6 +47790,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": null,
+        "atr14_wilder": null,
+        "atr14_wilder_pct": null,
+        "ema20": null,
+        "ema50": null,
+        "bollinger_middle": null,
+        "bollinger_upper": null,
+        "bollinger_lower": null,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": null,
         "support20": null,
         "resistance20": null,
@@ -47191,6 +48391,23 @@
         "macd": -19.17,
         "macd_signal": -23.41,
         "atr14": 96.79,
+        "atr14_wilder": 79.18,
+        "atr14_wilder_pct": 3.81,
+        "ema20": 2052.21,
+        "ema50": 2095.47,
+        "bollinger_middle": 2054.2,
+        "bollinger_upper": 2153.21,
+        "bollinger_lower": 1955.19,
+        "macd_histogram": 4.24,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 3.74,
         "support20": 1800.0,
         "resistance20": 2122.0,
@@ -47853,6 +49070,23 @@
         "macd": -14.8,
         "macd_signal": -16.31,
         "atr14": 11.89,
+        "atr14_wilder": 14.3,
+        "atr14_wilder_pct": 2.44,
+        "ema20": 602.0,
+        "ema50": 633.98,
+        "bollinger_middle": 601.89,
+        "bollinger_upper": 630.54,
+        "bollinger_lower": 573.24,
+        "macd_histogram": 1.51,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": 1.21,
         "support20": 570.0,
         "resistance20": 650.9,
@@ -48552,6 +49786,23 @@
         "macd": null,
         "macd_signal": null,
         "atr14": 5.18,
+        "atr14_wilder": 6.21,
+        "atr14_wilder_pct": 1.48,
+        "ema20": 423.17,
+        "ema50": null,
+        "bollinger_middle": 423.17,
+        "bollinger_upper": 431.05,
+        "bollinger_lower": 415.3,
+        "macd_histogram": null,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": null,
         "support20": null,
         "resistance20": null,
@@ -49177,6 +50428,23 @@
         "macd": -232.86,
         "macd_signal": -197.49,
         "atr14": 203.93,
+        "atr14_wilder": 193.32,
+        "atr14_wilder_pct": 3.36,
+        "ema20": 6041.99,
+        "ema50": 6354.68,
+        "bollinger_middle": 6130.5,
+        "bollinger_upper": 6858.13,
+        "bollinger_lower": 5402.87,
+        "macd_histogram": -35.38,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -14.03,
         "support20": 5605.0,
         "resistance20": 6740.0,
@@ -49874,6 +51142,23 @@
         "macd": -71.84,
         "macd_signal": -62.51,
         "atr14": 50.64,
+        "atr14_wilder": 52.29,
+        "atr14_wilder_pct": 3.17,
+        "ema20": 1744.89,
+        "ema50": 1840.35,
+        "bollinger_middle": 1761.7,
+        "bollinger_upper": 1943.64,
+        "bollinger_lower": 1579.76,
+        "macd_histogram": -9.33,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -10.43,
         "support20": 1612.0,
         "resistance20": 1960.0,
@@ -50569,6 +51854,23 @@
         "macd": -12.26,
         "macd_signal": -12.79,
         "atr14": 12.72,
+        "atr14_wilder": 12.09,
+        "atr14_wilder_pct": 4.26,
+        "ema20": 297.58,
+        "ema50": 316.92,
+        "bollinger_middle": 295.71,
+        "bollinger_upper": 317.76,
+        "bollinger_lower": 273.65,
+        "macd_histogram": 0.53,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -9.77,
         "support20": 276.0,
         "resistance20": 325.0,
@@ -51290,6 +52592,23 @@
         "macd": -14.23,
         "macd_signal": -12.72,
         "atr14": 15.89,
+        "atr14_wilder": 14.19,
+        "atr14_wilder_pct": 4.61,
+        "ema20": 325.06,
+        "ema50": 341.94,
+        "bollinger_middle": 329.15,
+        "bollinger_upper": 373.83,
+        "bollinger_lower": 284.48,
+        "macd_histogram": -1.5,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -15.62,
         "support20": 291.0,
         "resistance20": 367.0,
@@ -51979,6 +53298,23 @@
         "macd": -2.82,
         "macd_signal": -1.11,
         "atr14": 4.86,
+        "atr14_wilder": 5.96,
+        "atr14_wilder_pct": 1.33,
+        "ema20": 458.88,
+        "ema50": 462.67,
+        "bollinger_middle": 461.66,
+        "bollinger_upper": 476.79,
+        "bollinger_lower": 446.53,
+        "macd_histogram": -1.7,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.06,
         "support20": 433.35,
         "resistance20": 470.0,
@@ -52640,6 +53976,23 @@
         "macd": -4.8,
         "macd_signal": -4.61,
         "atr14": 3.64,
+        "atr14_wilder": 2.65,
+        "atr14_wilder_pct": 5.53,
+        "ema20": 53.79,
+        "ema50": 60.8,
+        "bollinger_middle": 54.74,
+        "bollinger_upper": 68.63,
+        "bollinger_lower": 40.85,
+        "macd_histogram": -0.19,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -24.36,
         "support20": 42.1,
         "resistance20": 65.0,
@@ -53177,7 +54530,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -53358,6 +54729,23 @@
         "macd": -6.44,
         "macd_signal": -6.43,
         "atr14": 8.15,
+        "atr14_wilder": 7.28,
+        "atr14_wilder_pct": 4.63,
+        "ema20": 162.05,
+        "ema50": 171.28,
+        "bollinger_middle": 163.35,
+        "bollinger_upper": 181.58,
+        "bollinger_lower": 145.12,
+        "macd_histogram": -0.01,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -7.47,
         "support20": 150.55,
         "resistance20": 179.9,
@@ -54038,6 +55426,23 @@
         "macd": -5.88,
         "macd_signal": -7.13,
         "atr14": 6.46,
+        "atr14_wilder": 5.99,
+        "atr14_wilder_pct": 2.87,
+        "ema20": 210.89,
+        "ema50": 225.44,
+        "bollinger_middle": 210.91,
+        "bollinger_upper": 229.24,
+        "bollinger_lower": 192.57,
+        "macd_histogram": 1.24,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.06,
         "support20": 190.1,
         "resistance20": 225.0,
@@ -54735,6 +56140,23 @@
         "macd": -19.8,
         "macd_signal": -21.54,
         "atr14": 15.76,
+        "atr14_wilder": 15.34,
+        "atr14_wilder_pct": 2.42,
+        "ema20": 658.3,
+        "ema50": 693.31,
+        "bollinger_middle": 653.94,
+        "bollinger_upper": 682.09,
+        "bollinger_lower": 625.78,
+        "macd_histogram": 1.74,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -5.52,
         "support20": 615.0,
         "resistance20": 695.0,
@@ -55290,7 +56712,25 @@
         },
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
-      "collection_conflicts": [],
+      "collection_conflicts": [
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
       "intraday_quote": null,
       "intraday_observed_at": null
     },
@@ -55471,6 +56911,23 @@
         "macd": -34.2,
         "macd_signal": -36.76,
         "atr14": 40.93,
+        "atr14_wilder": 41.05,
+        "atr14_wilder_pct": 3.05,
+        "ema20": 1378.13,
+        "ema50": 1432.25,
+        "bollinger_middle": 1374.4,
+        "bollinger_upper": 1448.62,
+        "bollinger_lower": 1300.18,
+        "macd_histogram": 2.56,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.93,
         "support20": 1300.0,
         "resistance20": 1474.0,
@@ -56190,6 +57647,23 @@
         "macd": -38.71,
         "macd_signal": -42.48,
         "atr14": 51.57,
+        "atr14_wilder": 47.31,
+        "atr14_wilder_pct": 2.88,
+        "ema20": 1644.12,
+        "ema50": 1701.01,
+        "bollinger_middle": 1645.6,
+        "bollinger_upper": 1762.08,
+        "bollinger_lower": 1529.12,
+        "macd_histogram": 3.76,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -4.65,
         "support20": 1560.0,
         "resistance20": 1776.0,
@@ -56863,6 +58337,23 @@
         "macd": -1.49,
         "macd_signal": -1.2,
         "atr14": 0.73,
+        "atr14_wilder": 0.64,
+        "atr14_wilder_pct": 0.38,
+        "ema20": 171.12,
+        "ema50": 171.84,
+        "bollinger_middle": 171.53,
+        "bollinger_upper": 176.2,
+        "bollinger_lower": 166.86,
+        "macd_histogram": -0.29,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -3.43,
         "support20": 168.9,
         "resistance20": 175.0,
@@ -57548,6 +59039,23 @@
         "macd": -10.83,
         "macd_signal": -11.96,
         "atr14": 11.26,
+        "atr14_wilder": 9.94,
+        "atr14_wilder_pct": 3.31,
+        "ema20": 305.01,
+        "ema50": 324.87,
+        "bollinger_middle": 305.74,
+        "bollinger_upper": 337.81,
+        "bollinger_lower": 273.66,
+        "macd_histogram": 1.13,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -7.41,
         "support20": 275.0,
         "resistance20": 337.8,
@@ -58185,6 +59693,23 @@
         "macd": -124.19,
         "macd_signal": -131.43,
         "atr14": 122.5,
+        "atr14_wilder": 117.91,
+        "atr14_wilder_pct": 2.38,
+        "ema20": 4966.65,
+        "ema50": 5158.53,
+        "bollinger_middle": 4955.35,
+        "bollinger_upper": 5262.01,
+        "bollinger_lower": 4648.69,
+        "macd_histogram": 7.24,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -8.3,
         "support20": 4760.0,
         "resistance20": 5400.0,
@@ -58818,6 +60343,23 @@
         "macd": -11.38,
         "macd_signal": -8.66,
         "atr14": 11.79,
+        "atr14_wilder": 13.05,
+        "atr14_wilder_pct": 5.62,
+        "ema20": 262.63,
+        "ema50": 261.48,
+        "bollinger_middle": 264.74,
+        "bollinger_upper": 302.51,
+        "bollinger_lower": 226.97,
+        "macd_histogram": -2.72,
+        "methods": {
+          "version": "nour-technical-v2",
+          "rsi14": "Wilder RMA; 14 price changes",
+          "atr14": "SMA; 14 true ranges with previous close",
+          "atr14_wilder": "Wilder RMA; first true range = high-low; SMA seed 14",
+          "ema": "SMA seed; alpha=2/(period+1)",
+          "bollinger": "SMA20 +/- 2 population standard deviations",
+          "price_basis": "Available validated unadjusted daily OHLCV; no interpolation"
+        },
         "return20_pct": -24.87,
         "support20": 234.1,
         "resistance20": 324.75,
@@ -59324,7 +60866,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-16",
-    "observed_at": "2026-10-18T03:00:28.277177+00:00",
+    "observed_at": "2026-10-18T12:29:17.270909+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -59468,7 +61010,7 @@
   "market_volume_audit": {
     "status": "discrepancy",
     "asof": "2026-10-16",
-    "observed_at": "2026-10-18T03:00:28.277177+00:00",
+    "observed_at": "2026-10-18T12:29:17.270909+00:00",
     "expected_lines": 61,
     "observed_lines": 61,
     "coverage_complete": true,
@@ -105987,13 +107529,13 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-18T03:00:28.277177+00:00",
+    "checked_at": "2026-10-18T12:29:17.270909+00:00",
     "asof": "2026-10-16"
   },
   "news_health": {
-    "checked_at": "2026-10-18T02:59:50.414857+00:00",
+    "checked_at": "2026-10-18T12:28:41.217707+00:00",
     "status": "partial",
-    "fetched_items": 91,
+    "fetched_items": 87,
     "errors": [
       "Mining.com: HTTP Error 403: Forbidden"
     ],
@@ -106021,7 +107563,7 @@
       {
         "name": "Europe / partenaires du Maroc",
         "status": "ok",
-        "items": 2
+        "items": 1
       },
       {
         "name": "Fed · politique monétaire",
@@ -106035,8 +107577,8 @@
       },
       {
         "name": "Finances Maroc · relais presse",
-        "status": "ok",
-        "items": 4
+        "status": "empty",
+        "items": 0
       },
       {
         "name": "Financial Afrik",
@@ -106076,7 +107618,7 @@
       {
         "name": "Proche-Orient · presse",
         "status": "ok",
-        "items": 2
+        "items": 3
       },
       {
         "name": "RFI · économie",
@@ -106087,11 +107629,11 @@
   },
   "official_sources_health": {
     "schema_version": 1,
-    "checked_at": "2026-10-18T02:59:50.705736+00:00",
+    "checked_at": "2026-10-18T12:28:41.412130+00:00",
     "status": "ok",
     "sources": {
       "https://www.ammc.ma/fr/communiques-presse-emetteurs": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "ADH",
           "ADI",
@@ -106175,68 +107717,68 @@
           "ZLD"
         ],
         "status": "success",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
-        "sha256": "863ac420b2968c1538953d8a752472cfda92ad9ac1f2a44ece620c0950755d43",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "sha256": "079ce3dffded0287661e83e1b45d4ab2ef75f515c2a0f9caf2bfe58c13dc0179",
         "indexed_links": 10,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://www.alliances.co.ma/publications": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "ADI"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
         "sha256": "8280bfbfdaf4c6690eac494d88f320f6c9084b2317da8d3e482f82d494a76cd3",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://ir.attijariwafabank.com/financial-information/quarterly-results": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "ATW"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
         "sha256": "4179d3d55365567df6a2858f7f046a75ab07430f949f615a3b54c0b882d3eb1e",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://www.marsamaroc.co.ma/fr/publications-financieres": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "MSA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
         "sha256": "a319c84895c29d6ba02e383241fc737add00bffe4c2aa1465071942b6bea3d17",
         "indexed_links": 153,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "TMA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
         "sha256": "1553656b550e68236481718f571d4b76009b1998e50d4162e291110f3d6f845d",
         "indexed_links": 3,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://vicenne.com/investisseurs/": {
-        "checked_at": "2026-10-18T02:59:50.705736+00:00",
+        "checked_at": "2026-10-18T12:28:41.412130+00:00",
         "tickers": [
           "VCNE"
         ],
         "status": "success",
-        "last_success_at": "2026-10-18T02:59:50.705736+00:00",
-        "sha256": "0c1bd48b90d36b7fb545070d94d667298aa99125fb9f3a33312cfa66e981296b",
+        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "sha256": "03d0b0e12f55a8eb38ca04f61cb93f29cefea94bed4dc3a7a2608b5309728711",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
@@ -106246,23 +107788,194 @@
     "scope": "indexation seulement; aucun chiffre extrait ni certifié"
   },
   "health": {
-    "checked_at": "2026-10-18T02:59:44.963299+00:00",
+    "checked_at": "2026-10-18T12:28:36.441717+00:00",
     "source": "CDG Capital Bourse",
-    "result": "unchanged",
+    "result": "conflict",
     "last_session": "2026-10-16",
-    "message": "Aucune nouvelle séance vérifiée",
+    "message": "10 bougie(s) divergente(s) non remplacée(s)",
     "details": {
       "session": "2026-10-16",
       "active_quotes": 61,
       "new_bars": 0,
       "source": "https://www.cdgcapitalbourse.ma/api/",
       "ignored_old_quotes": 0,
-      "conflicts": []
+      "conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ]
     }
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-18T03:00:29.017931+00:00",
+    "checked_at": "2026-10-18T12:29:17.934434+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
@@ -106274,7 +107987,7 @@
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
@@ -106287,7 +108000,7 @@
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
@@ -106300,7 +108013,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -106313,7 +108026,7 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
@@ -106326,7 +108039,7 @@
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
@@ -106339,7 +108052,7 @@
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
@@ -106352,7 +108065,7 @@
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
@@ -106365,7 +108078,7 @@
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
@@ -106378,7 +108091,7 @@
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
@@ -106391,7 +108104,7 @@
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
@@ -106404,7 +108117,7 @@
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
@@ -106417,7 +108130,7 @@
         "description": "API2 Rotterdam Coal Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-        "collected_at": "2026-10-18T03:00:29.017931+00:00",
+        "collected_at": "2026-10-18T12:29:17.934434+00:00",
         "collection_state": "collected"
       }
     },
@@ -106427,8 +108140,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-18T03:00:35.685358+00:00",
-    "checked_at": "2026-10-18T03:00:29.017931+00:00",
+    "cutoff": "2026-10-18T12:29:21.890791+00:00",
+    "checked_at": "2026-10-18T12:29:17.934434+00:00",
     "status": "ok",
     "groups": [
       {
@@ -106448,7 +108161,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106465,7 +108178,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106482,7 +108195,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106499,7 +108212,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]
@@ -106521,7 +108234,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106538,7 +108251,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106555,7 +108268,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106572,7 +108285,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]
@@ -106594,7 +108307,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106611,7 +108324,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106628,7 +108341,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           },
           {
@@ -106645,7 +108358,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-18T03:00:29.017931+00:00",
+            "collected_at": "2026-10-18T12:29:17.934434+00:00",
             "collection_state": "collected"
           }
         ]
@@ -106664,25 +108377,196 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-18",
-    "started_at": "2026-10-18T02:59:44+00:00",
-    "built_at": "2026-10-18T03:00:35.685358+00:00",
+    "started_at": "2026-10-18T12:28:36+00:00",
+    "built_at": "2026-10-18T12:29:21.890791+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39092025259",
-    "commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39092025259",
+    "run_id": "39127417815",
+    "commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39127417815",
     "collection": {
-      "result": "unchanged",
-      "label": "Aucune nouveauté",
-      "checked_at": "2026-10-18T02:59:44.963299+00:00",
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-18T12:28:36.441717+00:00",
       "last_session": "2026-10-16",
-      "message": "Aucune nouvelle séance vérifiée",
-      "conflicts": [],
-      "fully_validated": true
+      "message": "10 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "BOA",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 11089
+          },
+          "observed": {
+            "v": 11092
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CMGP",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 23199
+          },
+          "observed": {
+            "v": 25199
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "CSR",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 3851
+          },
+          "observed": {
+            "v": 3951
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "DTT",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 260
+          },
+          "observed": {
+            "v": 261
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "HPS",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 8684
+          },
+          "observed": {
+            "v": 8685
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IAM",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 66458
+          },
+          "observed": {
+            "v": 66603
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "JET",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2309
+          },
+          "observed": {
+            "v": 2310
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MOX",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 32
+          },
+          "observed": {
+            "v": 33
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "STK",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 2926
+          },
+          "observed": {
+            "v": 2928
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TGCC",
+          "session": "2026-10-16",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 4107
+          },
+          "observed": {
+            "v": 4112
+          },
+          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
+      "generator_commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -106692,7 +108576,7 @@
   },
   "provenance": {
     "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-    "generator_commit": "eef282ebcf5c941d3ea63ebde257633b9d55bd87",
+    "generator_commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
     "publication_commit": null,
     "publication_manifest": "publication.json",
     "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -106700,13 +108584,184 @@
     "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
   },
   "collection": {
-    "result": "unchanged",
-    "label": "Aucune nouveauté",
-    "checked_at": "2026-10-18T02:59:44.963299+00:00",
+    "result": "conflict",
+    "label": "Nouvelle observation refusée pour conflit",
+    "checked_at": "2026-10-18T12:28:36.441717+00:00",
     "last_session": "2026-10-16",
-    "message": "Aucune nouvelle séance vérifiée",
-    "conflicts": [],
-    "fully_validated": true
+    "message": "10 bougie(s) divergente(s) non remplacée(s)",
+    "conflicts": [
+      {
+        "symbol": "BOA",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 11089
+        },
+        "observed": {
+          "v": 11092
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "CMGP",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 23199
+        },
+        "observed": {
+          "v": 25199
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "CSR",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 3851
+        },
+        "observed": {
+          "v": 3951
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "DTT",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 260
+        },
+        "observed": {
+          "v": 261
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "HPS",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 8684
+        },
+        "observed": {
+          "v": 8685
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "IAM",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 66458
+        },
+        "observed": {
+          "v": 66603
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "JET",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 2309
+        },
+        "observed": {
+          "v": 2310
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "MOX",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 32
+        },
+        "observed": {
+          "v": 33
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "STK",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 2926
+        },
+        "observed": {
+          "v": 2928
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      },
+      {
+        "symbol": "TGCC",
+        "session": "2026-10-16",
+        "fields": [
+          "v"
+        ],
+        "retained": {
+          "v": 4107
+        },
+        "observed": {
+          "v": 4112
+        },
+        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "source": "https://www.cdgcapitalbourse.ma/api/",
+        "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+        "resolution": "pending_review"
+      }
+    ],
+    "fully_validated": false
   },
   "score_archive": {
     "daily_snapshots": 11,
