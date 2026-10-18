@@ -104,6 +104,24 @@ def audit_financials(record, facts, asof, calculated=None):
         add('annual_period_future', 'blocked', metrics=METRICS)
     if f.get('devise', 'MAD') != 'MAD':
         add('currency_conversion_not_documented', 'blocked', metrics=METRICS)
+    # A PDF can contradict itself even when each individual input has a valid
+    # unit and date. Keep the explicit, manually documented restriction across
+    # every consumer of calculate(), including scores and assistant exports.
+    for reservation in f.get('calculation_reservations') or []:
+        if not isinstance(reservation, dict):
+            raise ValueError('Réserve de calcul invalide')
+        if reservation.get('status') != 'unresolved':
+            continue
+        metrics = reservation.get('metrics')
+        fields = reservation.get('fields')
+        detail = reservation.get('detail')
+        if (not isinstance(metrics, list) or not metrics
+                or any(not isinstance(m, str) or m not in METRICS for m in metrics)
+                or not isinstance(fields, list) or not fields
+                or any(not isinstance(k, str) or not k for k in fields)
+                or not isinstance(detail, str) or not detail.strip()):
+            raise ValueError('Réserve de calcul non documentée ou métrique inconnue')
+        add('documentary_reconciliation_pending', 'blocked', fields, metrics, detail)
     if freshness['newer_report_available']:
         add('newer_report_available', 'info', detail='Ratios annuels conservés ; référence plus récente distincte, jamais annualisée.')
         if latest_day.year - annual_day.year > 1:
@@ -260,6 +278,10 @@ def apply_financial_audit(calculated, audit):
         for key in METRICS
     }
     out['financial_audit'] = deepcopy(audit)
+    for check in audit.get('checks') or []:
+        if check['code'] == 'documentary_reconciliation_pending':
+            if check['detail'] not in out.setdefault('warnings', []):
+                out['warnings'].append(check['detail'])
     return out
 
 

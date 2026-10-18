@@ -1,0 +1,659 @@
+{
+  "reviewed_at": "2026-10-18",
+  "collection_run": 39090727188,
+  "records": {
+    "TGCC": {
+      "url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+      "document_hash": "sha256:68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+      "exercise": 2025,
+      "basis": "consolidé (normes marocaines, avis CNC n°5)",
+      "pages": [
+        96,
+        102
+      ],
+      "conclusion": "RNPG 952,053 MMAD distinct du total 1 161,165 et des minoritaires 209,112. La note BPA publie 34 674 332 titres, au lieu des 34 674 300 déduits du capital arrondi.",
+      "reservations": [
+        "TGCC : la note 13 publie le nombre retenu pour le BPA mais ne le qualifie pas de moyenne pondérée. Nour utilise ce dénominateur documenté en BPA indicatif ; augmentation de capital sur 2025."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 952053,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_part_groupe_2024": {
+          "original_value": 521810,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 1161165,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 4544126,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 1761218,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "chiffre_affaires": {
+          "original_value": 11931188,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "original_value": 7596821,
+          "original_unit": "KMAD",
+          "pdf_page": 96,
+          "printed_page": "190–191",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 34674332,
+          "original_unit": "actions",
+          "pdf_page": 102,
+          "printed_page": 202,
+          "period_end": "2025-12-31",
+          "note": "Nombre total et nombre retenu pour le BPA explicitement publiés, sans attestation séparée de moyenne pondérée."
+        }
+      }
+    },
+    "SGTM": {
+      "url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+      "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+      "exercise": 2025,
+      "basis": "consolidé (normes marocaines)",
+      "pages": [
+        83,
+        87,
+        88
+      ],
+      "conclusion": "RNPG 1 341,942 MMAD et minoritaires nuls explicitement publiés. 60 000 000 titres de clôture vérifiés. Le BPA publié de 37 MAD ne se rapproche pas du RNPG / titres de clôture (22,37 MAD) ; BPA et PER suspendus, ROE conservé.",
+      "reservations": [
+        "SGTM : capital passé de 3 à 60 millions de titres ; le BPA consolidé publié de 37 MAD (p.88) exige le dénominateur ajusté ou moyen approprié. Aucun arbitrage automatique par les titres de clôture."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 1341942,
+          "original_unit": "KMAD",
+          "pdf_page": 88,
+          "printed_page": "172–175",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_part_groupe_2024": {
+          "original_value": 589759,
+          "original_unit": "KMAD",
+          "pdf_page": 88,
+          "printed_page": "172–175",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 1341942,
+          "original_unit": "KMAD",
+          "pdf_page": 88,
+          "printed_page": "172–175",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 3550399,
+          "original_unit": "KMAD",
+          "pdf_page": 87,
+          "printed_page": "172–175",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 2619799,
+          "original_unit": "KMAD",
+          "pdf_page": 87,
+          "printed_page": "172–175",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "chiffre_affaires": {
+          "original_value": 15165454,
+          "original_unit": "KMAD",
+          "pdf_page": 88,
+          "printed_page": "172–175",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "original_value": 11098839,
+          "original_unit": "KMAD",
+          "pdf_page": 88,
+          "printed_page": "172–175",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 60000000,
+          "original_unit": "actions",
+          "pdf_page": 83,
+          "printed_page": 164,
+          "period_end": "2025-12-31",
+          "note": "État C1 : nombre de titres de clôture, pas moyenne pondérée ni séries historiques retraitées."
+        },
+        "bpa_publie_a_rapprocher": {
+          "original_value": 37,
+          "original_unit": "MAD",
+          "pdf_page": 88,
+          "printed_page": 174,
+          "period_end": "2025-12-31",
+          "note": ""
+        }
+      },
+      "calculation_reservations": [
+        {
+          "status": "unresolved",
+          "fields": [
+            "resultat_net_part_groupe",
+            "nombre_actions_au_rapport",
+            "bpa_publie_a_rapprocher"
+          ],
+          "metrics": [
+            "eps_mad",
+            "pe"
+          ],
+          "detail": "SGTM : capital passé de 3 à 60 millions de titres ; le BPA consolidé publié de 37 MAD (p.88) exige le dénominateur ajusté ou moyen approprié. Aucun arbitrage automatique par les titres de clôture."
+        }
+      ]
+    },
+    "CMGP": {
+      "url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+      "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+      "exercise": 2025,
+      "basis": "consolidé IFRS",
+      "pages": [
+        68,
+        76
+      ],
+      "conclusion": "RNPG 244,010766 MMAD, total 252,754943 et minoritaires 8,744177. Note 17 : 252,754943 attribués aux propriétaires contre 244,010766 dans les états et bilan ; BPA 14,87 contre 14,35. BPA et PER suspendus ; ROE groupe disponible.",
+      "reservations": [
+        "CMGP : contradiction interne entre le compte de résultat p.68 (RNPG 244,010766 MMAD ; BPA 14,35) et la note 17 p.76 (252,754943 MMAD ; BPA 14,87). Le total consolidé ne remplace pas le RNPG. La note publie 17 000 900 actions moyennes ; BPA et PER restent suspendus en attente de rapprochement."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 244010766,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 252754943,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 2788340389,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 2634396857,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "chiffre_affaires": {
+          "original_value": 2924661165,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "original_value": 2327559142,
+          "original_unit": "MAD",
+          "pdf_page": 68,
+          "printed_page": "134–135",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 17000900,
+          "original_unit": "actions",
+          "pdf_page": 76,
+          "printed_page": 151,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "nombre_actions_retenu_pour_le_bpa": {
+          "original_value": 17000900,
+          "original_unit": "actions",
+          "pdf_page": 76,
+          "printed_page": 151,
+          "period_end": "2025-12-31",
+          "note": "Moyenne pondérée explicitement publiée ; numérateur de la note BPA non rapproché."
+        },
+        "resultat_note_bpa_a_rapprocher": {
+          "original_value": 252754943,
+          "original_unit": "MAD",
+          "pdf_page": 76,
+          "printed_page": 151,
+          "period_end": "2025-12-31",
+          "note": ""
+        }
+      },
+      "calculation_reservations": [
+        {
+          "status": "unresolved",
+          "fields": [
+            "resultat_net_part_groupe",
+            "resultat_note_bpa_a_rapprocher"
+          ],
+          "metrics": [
+            "eps_mad",
+            "pe"
+          ],
+          "detail": "CMGP : contradiction interne entre le compte de résultat p.68 (RNPG 244,010766 MMAD ; BPA 14,35) et la note 17 p.76 (252,754943 MMAD ; BPA 14,87). Le total consolidé ne remplace pas le RNPG. La note publie 17 000 900 actions moyennes ; BPA et PER restent suspendus en attente de rapprochement."
+        }
+      ]
+    },
+    "AFM": {
+      "url": "https://www.ammc.ma/sites/default/files/Afma_RFA_2025.pdf",
+      "document_hash": "sha256:bcc6aa26ed9b131582b0db9d3fb4c3f5b474dd528b69bbb962da7c7305d8eb03",
+      "exercise": 2025,
+      "basis": "consolidé IFRS",
+      "pages": [
+        18,
+        56,
+        57,
+        77
+      ],
+      "conclusion": "RNPG IFRS 72,655851 MMAD, fonds propres groupe 70,369986, 1 000 000 titres explicites. La synthèse de gestion p.18 est expressément sans retraitement IFRS 16 (RNPG 70,204), distincte des comptes IFRS p.57.",
+      "reservations": [
+        "AFMA : RNPG IFRS 72,655851 MMAD (p.57) distinct de 70,204 MMAD sans retraitement IFRS 16 (p.18) et du RNPG hors contrôle fiscal 78,643 MMAD. Aucun mélange de ces bases. BPA Nour sur titres de clôture, indicatif."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 72655851,
+          "original_unit": "MAD",
+          "pdf_page": 57,
+          "printed_page": 56,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 73450609,
+          "original_unit": "MAD",
+          "pdf_page": 57,
+          "printed_page": 56,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 70369986,
+          "original_unit": "MAD",
+          "pdf_page": 56,
+          "printed_page": 55,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 68518855,
+          "original_unit": "MAD",
+          "pdf_page": 56,
+          "printed_page": 55,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "chiffre_affaires": {
+          "original_value": 316421198,
+          "original_unit": "MAD",
+          "pdf_page": 57,
+          "printed_page": 56,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "original_value": 286224142,
+          "original_unit": "MAD",
+          "pdf_page": 57,
+          "printed_page": 56,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 1000000,
+          "original_unit": "actions",
+          "pdf_page": 77,
+          "printed_page": 76,
+          "period_end": "2025-12-31",
+          "note": "Total explicitement publié pour les deux exercices dans l’état de répartition du capital social."
+        }
+      }
+    },
+    "CFGB": {
+      "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+      "exercise": 2025,
+      "basis": "consolidé IFRS",
+      "pages": [
+        38,
+        39,
+        40,
+        44
+      ],
+      "conclusion": "RNPG 370,445 MMAD distinct du total 381,362. Fonds propres groupe 2 065,577 MMAD. Capital exact 700 159 200 MAD p.44 / nominal 20 = 35 007 960 titres, et non 35 007 950. BPA publié 10,89 non rapproché du RNPG par action de clôture 10,58 ; BPA/PER suspendus, P/B et ROE disponibles.",
+      "reservations": [
+        "CFG Bank : BPA publié 10,89 MAD (p.44), contre RNPG / titres de clôture ≈10,58. Le total consolidé / ces titres ≈10,89 ne justifie pas de remplacer le RNPG. Moyenne pondérée et base du BPA à rapprocher ; BPA et PER suspendus."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 370445,
+          "original_unit": "KMAD",
+          "pdf_page": 39,
+          "printed_page": "76–77",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 381362,
+          "original_unit": "KMAD",
+          "pdf_page": 39,
+          "printed_page": "76–77",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 2065577,
+          "original_unit": "KMAD",
+          "pdf_page": 40,
+          "printed_page": "78–79",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 1812920,
+          "original_unit": "KMAD",
+          "pdf_page": 40,
+          "printed_page": "78–79",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "produit_net_bancaire": {
+          "original_value": 1247229,
+          "original_unit": "KMAD",
+          "pdf_page": 39,
+          "printed_page": "76–77",
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "produit_net_bancaire_2024": {
+          "original_value": 941408,
+          "original_unit": "KMAD",
+          "pdf_page": 39,
+          "printed_page": "76–77",
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 35007960,
+          "original_unit": "actions",
+          "pdf_page": 44,
+          "printed_page": 87,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 700 159 200 MAD / nominal 20 MAD ; recoupé avec la Bourse. Ne pas diviser le capital KMAD arrondi p.40."
+        },
+        "bpa_publie_a_rapprocher": {
+          "original_value": 10.89,
+          "original_unit": "MAD",
+          "pdf_page": 44,
+          "printed_page": 86,
+          "period_end": "2025-12-31",
+          "note": ""
+        }
+      },
+      "nominal_reference": {
+        "url": "https://www.casablanca-bourse.com/fr/live-market/instruments/CFG",
+        "nominal_mad": 20,
+        "checked_at": "2026-10-18",
+        "note": "35 007 960 titres et nominal 20 MAD ; concorde avec le capital exact du RFA p.44."
+      },
+      "financial_business": true,
+      "calculation_reservations": [
+        {
+          "status": "unresolved",
+          "fields": [
+            "resultat_net_part_groupe",
+            "nombre_actions_au_rapport",
+            "bpa_publie_a_rapprocher"
+          ],
+          "metrics": [
+            "eps_mad",
+            "pe"
+          ],
+          "detail": "CFG Bank : BPA publié 10,89 MAD (p.44), contre RNPG / titres de clôture ≈10,58. Le total consolidé / ces titres ≈10,89 ne justifie pas de remplacer le RNPG. Moyenne pondérée et base du BPA à rapprocher ; BPA et PER suspendus."
+        }
+      ]
+    },
+    "ATL": {
+      "url": "https://www.ammc.ma/sites/default/files/AtlantaSanad_RFA_2025.pdf",
+      "document_hash": "sha256:5c700bd201146a3c38b60b962b1ef0cbba75f338917087e36842f49f8880b67e",
+      "exercise": 2025,
+      "basis": "consolidé (normes marocaines)",
+      "pages": [
+        2,
+        140,
+        141
+      ],
+      "conclusion": "RNPG 467,639 MMAD, fonds propres groupe 2 481,937. Capital exact 602 835 950 MAD p.2 / nominal 10 = 60 283 595 titres ; correction des 60 283 600 déduits du bilan arrondi. BPA indicatif sur clôture, pas moyenne pondérée certifiée.",
+      "reservations": [
+        "AtlantaSanad : comptes consolidés en normes marocaines, à ne pas comparer automatiquement aux assureurs IFRS 17. Les écarts d’arrondi de 1 à 2 KMAD entre total, groupe et minoritaires sont conservés."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 467639,
+          "original_unit": "KMAD",
+          "pdf_page": 141,
+          "printed_page": 141,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "resultat_net_consolide": {
+          "original_value": 467641,
+          "original_unit": "KMAD",
+          "pdf_page": 141,
+          "printed_page": 141,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 2481937,
+          "original_unit": "KMAD",
+          "pdf_page": 140,
+          "printed_page": 140,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 2367730,
+          "original_unit": "KMAD",
+          "pdf_page": 140,
+          "printed_page": 140,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 60283595,
+          "original_unit": "actions",
+          "pdf_page": 2,
+          "printed_page": 2,
+          "period_end": "2025-12-31",
+          "note": "Capital exact en MAD / nominal AMMC 10 MAD, recoupé avec 60 283 595 titres Bourse. Pas division du capital KMAD arrondi."
+        }
+      },
+      "nominal_reference": {
+        "url": "https://www.ammc.ma/fr/instruments-financiers/actions/action-atlanta",
+        "nominal_mad": 10,
+        "checked_at": "2026-10-18",
+        "note": "Nominal de l’action ATL ; ISIN MA0000011710."
+      },
+      "financial_business": true
+    },
+    "WAF": {
+      "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_RFA_2025.pdf",
+      "document_hash": "sha256:162f0a480d639cd9e19b6e44304d6170bd47f5c5ab899dc3260d7db0fc3b8ec6",
+      "exercise": 2025,
+      "basis": "consolidé IFRS 17 / IFRS 9",
+      "pages": [
+        4,
+        16
+      ],
+      "conclusion": "RNPG IFRS 1 026,036 MMAD, fonds propres groupe 14 960,337 et comparatif retraité 12 566,785. Capital social exact 350 millions MAD / nominal 100 = 3 500 000 titres. BPA sur clôture indicatif.",
+      "reservations": [
+        "Wafa Assurance : IFRS 17 et IFRS 9 depuis le 01/01/2024 ; comparatif 2024 retraité. Ne pas mélanger RNPG IFRS et résultat social 943,15701813 MMAD ni assimiler les primes émises aux produits IFRS 17."
+      ],
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 1026036,
+          "original_unit": "KMAD",
+          "pdf_page": 16,
+          "printed_page": 16,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 14960337,
+          "original_unit": "KMAD",
+          "pdf_page": 16,
+          "printed_page": 16,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 12566785,
+          "original_unit": "KMAD",
+          "pdf_page": 16,
+          "printed_page": 16,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 3500000,
+          "original_unit": "actions",
+          "pdf_page": 4,
+          "printed_page": 4,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 350 000 000 MAD / nominal AMMC 100 MAD. Nombre de clôture, pas moyenne pondérée."
+        }
+      },
+      "nominal_reference": {
+        "url": "https://v8.ammc.ma/fr/instruments-financiers/actions/action-wafa-assurance",
+        "nominal_mad": 100,
+        "checked_at": "2026-10-18",
+        "note": "ISIN MA0000010928. WAF est l’alias Nour, WAA le ticker du référentiel AMMC."
+      },
+      "financial_business": true
+    },
+    "AGM": {
+      "url": "https://www.ammc.ma/sites/default/files/Agma_RFA_2025.pdf",
+      "document_hash": "sha256:7558ce34b46cbe9bf95d2c73a26cbe5cf2bd7aed678be5cde140ae65ac427f5c",
+      "exercise": 2025,
+      "basis": "Social, CGNC",
+      "pages": [
+        13,
+        15
+      ],
+      "conclusion": "Résultat social 71,02753751 MMAD et fonds propres 153,61203091 ; capital exact 20 millions MAD p.15 / nominal AMMC 100 = 200 000 titres. BPA/PER/P/B indicatifs débloqués ; semestre consolidé distinct.",
+      "reservations": [
+        "AGMA : dénominateur calculé à partir du capital annuel exact et du nominal AMMC, recoupé avec 200 000 titres Bourse ; pas une moyenne pondérée publiée. Comptes sociaux annuels distincts du semestre consolidé IFRS."
+      ],
+      "facts": {
+        "resultat_net_social": {
+          "original_value": 71027537.51,
+          "original_unit": "MAD",
+          "pdf_page": 13,
+          "printed_page": 13,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_sociaux": {
+          "original_value": 153612030.91,
+          "original_unit": "MAD",
+          "pdf_page": 15,
+          "printed_page": 15,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "capitaux_propres_sociaux_2024": {
+          "original_value": 142584493.4,
+          "original_unit": "MAD",
+          "pdf_page": 15,
+          "printed_page": 15,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "chiffre_affaires": {
+          "original_value": 186607885.22,
+          "original_unit": "MAD",
+          "pdf_page": 13,
+          "printed_page": 13,
+          "period_end": "2025-12-31",
+          "note": ""
+        },
+        "chiffre_affaires_2024": {
+          "original_value": 172249393.18,
+          "original_unit": "MAD",
+          "pdf_page": 13,
+          "printed_page": 13,
+          "period_end": "2024-12-31",
+          "note": ""
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 200000,
+          "original_unit": "actions",
+          "pdf_page": 15,
+          "printed_page": 15,
+          "period_end": "2025-12-31",
+          "note": "Capital annuel exact 20 000 000 MAD / nominal AMMC 100 MAD ; recoupé Bourse. Titres de clôture, BPA indicatif."
+        }
+      },
+      "nominal_reference": {
+        "url": "https://www.ammc.ma/fr/instruments-financiers/actions/action-agma-lahlou-tazi",
+        "nominal_mad": 100,
+        "checked_at": "2026-10-18",
+        "note": "ISIN MA0000010944 ; Bourse confirme 200 000 titres."
+      }
+    }
+  }
+}

@@ -53,7 +53,10 @@ class FinancialMergeGate(unittest.TestCase):
     def test_unverified_consolidated_total_is_not_group_net(self):
         for symbol in ('TGCC', 'SGTM', 'CMGP'):
             with self.subTest(symbol=symbol):
-                f = self.items[symbol]['fundamental']
+                unresolved = copy.deepcopy(self.facts[symbol])
+                unresolved['faits'] = copy.deepcopy(unresolved.get('reconciliation_prior_oct18', unresolved['faits']))
+                unresolved.pop('calculation_reservations', None)
+                f = calculate(self.fixture['records'][symbol], unresolved, asof=self.asof)
                 self.assertIn('resultat_net_consolide', f['evidence'])
                 self.assertIsNone(f['earnings_mmad'])
                 self.assertIsNone(f['eps_mad'])
