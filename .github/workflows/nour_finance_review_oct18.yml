@@ -1,0 +1,24 @@
+name: Nour annual document review October 18
+on:
+  workflow_dispatch:
+  push:
+    branches: [nour-fundamentals-oct18]
+    paths: ['tools/collect_primary_oct18.py', '.github/workflows/nour_finance_review_oct18.yml']
+permissions:
+  contents: read
+jobs:
+  documents:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Collect fixed public PDFs without altering financial data
+        run: python tools/collect_primary_oct18.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nour-primary-oct18
+          path: tmp/primary-oct18
+          retention-days: 7
