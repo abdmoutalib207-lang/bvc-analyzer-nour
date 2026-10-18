@@ -103,7 +103,7 @@
       "ytd_pct": -9.81
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-18T12:29:17.270909+00:00",
+    "observed_at": "2026-10-18T13:27:35.840295+00:00",
     "turnover_mad": 117005677.43,
     "breadth": {
       "up": 29,
@@ -14977,7 +14977,7 @@
           "observed": {
             "v": 11092
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -20257,7 +20257,7 @@
           "observed": {
             "v": 25199
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -22417,7 +22417,7 @@
           "observed": {
             "v": 3951
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -26757,7 +26757,7 @@
           "observed": {
             "v": 261
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -31070,7 +31070,7 @@
           "observed": {
             "v": 8685
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -31731,7 +31731,7 @@
           "observed": {
             "v": 66603
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -34446,7 +34446,7 @@
           "observed": {
             "v": 2310
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -40789,7 +40789,7 @@
           "observed": {
             "v": 33
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -54543,7 +54543,7 @@
           "observed": {
             "v": 2928
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -56725,7 +56725,7 @@
           "observed": {
             "v": 4112
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -60866,7 +60866,7 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-16",
-    "observed_at": "2026-10-18T12:29:17.270909+00:00",
+    "observed_at": "2026-10-18T13:27:35.840295+00:00",
     "status": "closed",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -61010,7 +61010,7 @@
   "market_volume_audit": {
     "status": "discrepancy",
     "asof": "2026-10-16",
-    "observed_at": "2026-10-18T12:29:17.270909+00:00",
+    "observed_at": "2026-10-18T13:27:35.840295+00:00",
     "expected_lines": 61,
     "observed_lines": 61,
     "coverage_complete": true,
@@ -107529,13 +107529,13 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-18T12:29:17.270909+00:00",
+    "checked_at": "2026-10-18T13:27:35.840295+00:00",
     "asof": "2026-10-16"
   },
   "news_health": {
-    "checked_at": "2026-10-18T12:28:41.217707+00:00",
+    "checked_at": "2026-10-18T13:27:06.261433+00:00",
     "status": "partial",
-    "fetched_items": 87,
+    "fetched_items": 91,
     "errors": [
       "Mining.com: HTTP Error 403: Forbidden"
     ],
@@ -107577,8 +107577,8 @@
       },
       {
         "name": "Finances Maroc · relais presse",
-        "status": "empty",
-        "items": 0
+        "status": "ok",
+        "items": 4
       },
       {
         "name": "Financial Afrik",
@@ -107629,11 +107629,11 @@
   },
   "official_sources_health": {
     "schema_version": 1,
-    "checked_at": "2026-10-18T12:28:41.412130+00:00",
+    "checked_at": "2026-10-18T13:27:06.616649+00:00",
     "status": "ok",
     "sources": {
       "https://www.ammc.ma/fr/communiques-presse-emetteurs": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "ADH",
           "ADI",
@@ -107716,69 +107716,69 @@
           "WAF",
           "ZLD"
         ],
-        "status": "success",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "status": "no_new",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
         "sha256": "079ce3dffded0287661e83e1b45d4ab2ef75f515c2a0f9caf2bfe58c13dc0179",
         "indexed_links": 10,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://www.alliances.co.ma/publications": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "ADI"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
         "sha256": "8280bfbfdaf4c6690eac494d88f320f6c9084b2317da8d3e482f82d494a76cd3",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://ir.attijariwafabank.com/financial-information/quarterly-results": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "ATW"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
         "sha256": "4179d3d55365567df6a2858f7f046a75ab07430f949f615a3b54c0b882d3eb1e",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
       },
       "https://www.marsamaroc.co.ma/fr/publications-financieres": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "MSA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
         "sha256": "a319c84895c29d6ba02e383241fc737add00bffe4c2aa1465071942b6bea3d17",
         "indexed_links": 153,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://totalenergies.ma/total-au-maroc/espace-actionnaires/informations-reglementees": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "TMA"
         ],
         "status": "no_new",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
         "sha256": "1553656b550e68236481718f571d4b76009b1998e50d4162e291110f3d6f845d",
         "indexed_links": 3,
         "new_candidates": 0,
         "discovery_status": "pdf_links_found"
       },
       "https://vicenne.com/investisseurs/": {
-        "checked_at": "2026-10-18T12:28:41.412130+00:00",
+        "checked_at": "2026-10-18T13:27:06.616649+00:00",
         "tickers": [
           "VCNE"
         ],
         "status": "success",
-        "last_success_at": "2026-10-18T12:28:41.412130+00:00",
-        "sha256": "03d0b0e12f55a8eb38ca04f61cb93f29cefea94bed4dc3a7a2608b5309728711",
+        "last_success_at": "2026-10-18T13:27:06.616649+00:00",
+        "sha256": "bdf8f8f3acd4e5efd0c26b0f6ed483341c00a42fa9c50c930b18429383607e90",
         "indexed_links": 0,
         "new_candidates": 0,
         "discovery_status": "no_pdf_links_visible"
@@ -107788,7 +107788,7 @@
     "scope": "indexation seulement; aucun chiffre extrait ni certifié"
   },
   "health": {
-    "checked_at": "2026-10-18T12:28:36.441717+00:00",
+    "checked_at": "2026-10-18T13:27:01.423707+00:00",
     "source": "CDG Capital Bourse",
     "result": "conflict",
     "last_session": "2026-10-16",
@@ -107812,7 +107812,7 @@
           "observed": {
             "v": 11092
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107829,7 +107829,7 @@
           "observed": {
             "v": 25199
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107846,7 +107846,7 @@
           "observed": {
             "v": 3951
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107863,7 +107863,7 @@
           "observed": {
             "v": 261
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107880,7 +107880,7 @@
           "observed": {
             "v": 8685
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107897,7 +107897,7 @@
           "observed": {
             "v": 66603
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107914,7 +107914,7 @@
           "observed": {
             "v": 2310
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107931,7 +107931,7 @@
           "observed": {
             "v": 33
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107948,7 +107948,7 @@
           "observed": {
             "v": 2928
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107965,7 +107965,7 @@
           "observed": {
             "v": 4112
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -107975,7 +107975,7 @@
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-18T12:29:17.934434+00:00",
+    "checked_at": "2026-10-18T13:27:36.455195+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
@@ -107987,7 +107987,7 @@
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
@@ -108000,7 +108000,7 @@
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
@@ -108013,7 +108013,7 @@
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -108026,7 +108026,7 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
@@ -108039,7 +108039,7 @@
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
@@ -108052,7 +108052,7 @@
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
@@ -108065,7 +108065,7 @@
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
@@ -108078,7 +108078,7 @@
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
@@ -108091,7 +108091,7 @@
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
@@ -108104,7 +108104,7 @@
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
@@ -108117,7 +108117,7 @@
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
@@ -108130,7 +108130,7 @@
         "description": "API2 Rotterdam Coal Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-        "collected_at": "2026-10-18T12:29:17.934434+00:00",
+        "collected_at": "2026-10-18T13:27:36.455195+00:00",
         "collection_state": "collected"
       }
     },
@@ -108140,8 +108140,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-18T12:29:21.890791+00:00",
-    "checked_at": "2026-10-18T12:29:17.934434+00:00",
+    "cutoff": "2026-10-18T13:27:43.371330+00:00",
+    "checked_at": "2026-10-18T13:27:36.455195+00:00",
     "status": "ok",
     "groups": [
       {
@@ -108161,7 +108161,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108178,7 +108178,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108195,7 +108195,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108212,7 +108212,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           }
         ]
@@ -108234,7 +108234,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108251,7 +108251,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108268,7 +108268,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108285,7 +108285,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           }
         ]
@@ -108307,7 +108307,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108324,7 +108324,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108341,7 +108341,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           },
           {
@@ -108358,7 +108358,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-18T12:29:17.934434+00:00",
+            "collected_at": "2026-10-18T13:27:36.455195+00:00",
             "collection_state": "collected"
           }
         ]
@@ -108377,17 +108377,17 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "edition_for": "2026-10-18",
-    "started_at": "2026-10-18T12:28:36+00:00",
-    "built_at": "2026-10-18T12:29:21.890791+00:00",
+    "started_at": "2026-10-18T13:27:00+00:00",
+    "built_at": "2026-10-18T13:27:43.371330+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39127417815",
-    "commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39127417815",
+    "run_id": "39131578684",
+    "commit": "c9c9be454829149a1634b3f9c3b4dc80dbd6a2b0",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39131578684",
     "collection": {
       "result": "conflict",
       "label": "Nouvelle observation refusée pour conflit",
-      "checked_at": "2026-10-18T12:28:36.441717+00:00",
+      "checked_at": "2026-10-18T13:27:01.423707+00:00",
       "last_session": "2026-10-16",
       "message": "10 bougie(s) divergente(s) non remplacée(s)",
       "conflicts": [
@@ -108403,7 +108403,7 @@
           "observed": {
             "v": 11092
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108420,7 +108420,7 @@
           "observed": {
             "v": 25199
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108437,7 +108437,7 @@
           "observed": {
             "v": 3951
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108454,7 +108454,7 @@
           "observed": {
             "v": 261
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108471,7 +108471,7 @@
           "observed": {
             "v": 8685
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108488,7 +108488,7 @@
           "observed": {
             "v": 66603
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108505,7 +108505,7 @@
           "observed": {
             "v": 2310
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108522,7 +108522,7 @@
           "observed": {
             "v": 33
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108539,7 +108539,7 @@
           "observed": {
             "v": 2928
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108556,7 +108556,7 @@
           "observed": {
             "v": 4112
           },
-          "observed_at": "2026-10-18T12:28:36.441717+00:00",
+          "observed_at": "2026-10-18T13:27:01.423707+00:00",
           "source": "https://www.cdgcapitalbourse.ma/api/",
           "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
           "resolution": "pending_review"
@@ -108566,7 +108566,7 @@
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
+      "generator_commit": "c9c9be454829149a1634b3f9c3b4dc80dbd6a2b0",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -108576,7 +108576,7 @@
   },
   "provenance": {
     "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-    "generator_commit": "c5d1bc56d51bc87458690f585bc58a771644a1a5",
+    "generator_commit": "c9c9be454829149a1634b3f9c3b4dc80dbd6a2b0",
     "publication_commit": null,
     "publication_manifest": "publication.json",
     "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -108586,7 +108586,7 @@
   "collection": {
     "result": "conflict",
     "label": "Nouvelle observation refusée pour conflit",
-    "checked_at": "2026-10-18T12:28:36.441717+00:00",
+    "checked_at": "2026-10-18T13:27:01.423707+00:00",
     "last_session": "2026-10-16",
     "message": "10 bougie(s) divergente(s) non remplacée(s)",
     "conflicts": [
@@ -108602,7 +108602,7 @@
         "observed": {
           "v": 11092
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108619,7 +108619,7 @@
         "observed": {
           "v": 25199
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108636,7 +108636,7 @@
         "observed": {
           "v": 3951
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108653,7 +108653,7 @@
         "observed": {
           "v": 261
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108670,7 +108670,7 @@
         "observed": {
           "v": 8685
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108687,7 +108687,7 @@
         "observed": {
           "v": 66603
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108704,7 +108704,7 @@
         "observed": {
           "v": 2310
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108721,7 +108721,7 @@
         "observed": {
           "v": 33
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108738,7 +108738,7 @@
         "observed": {
           "v": 2928
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
@@ -108755,7 +108755,7 @@
         "observed": {
           "v": 4112
         },
-        "observed_at": "2026-10-18T12:28:36.441717+00:00",
+        "observed_at": "2026-10-18T13:27:01.423707+00:00",
         "source": "https://www.cdgcapitalbourse.ma/api/",
         "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
         "resolution": "pending_review"
