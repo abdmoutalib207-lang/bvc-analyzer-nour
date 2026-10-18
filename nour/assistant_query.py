@@ -44,6 +44,8 @@ def plan(question, catalog):
         p['sort'] = dict(id=found[0]['id'],direction='asc')
     elif re.search(r'plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b',q):
         p['sort'] = dict(id=found[0]['id'],direction='desc')
+    if p['missing'] and p['sort']:
+        p['error']='Un ratio indisponible ou bloqué ne peut pas être classé par valeur. Demandez la liste des données absentes sans tri numérique.'
     if 'meilleur' in q:
         p['error']='Un ratio ne définit pas les meilleurs titres. Précisez un seuil ou un ordre croissant ou décroissant.'
     if re.search(r'entre\s+-?\d|compris|au.dessus|au.dessous|sous (?:la |les )?(?:mm|ema|sma)|surachet|survend',q):

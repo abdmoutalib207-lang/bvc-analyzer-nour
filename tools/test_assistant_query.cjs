@@ -24,6 +24,7 @@ assert.ok(query.select(data,'Quelles valeurs ont une dette nette inférieure à 
 assert.equal(query.select(data,'Quelles valeurs ont une dette nette inférieure à 100 MMAD ?').error,null);
 for(const q of ['Quelles valeurs ont une dette nette inférieure à 1 000 MMAD ?', 'Quelles valeurs ont un PER inférieur à 1e3 ?', 'Quelles valeurs ont un PER entre 10 et 20 ?', 'Quelles valeurs ont un cours sous la MM20 ?'])assert.ok(query.select(data,q).error,q);
 assert.ok(query.select(data,'Quelles sont les meilleures valeurs avec un PER ?').error);
+assert.ok(query.select(data,'Les 5 PER indisponibles les plus faibles').error);
 const bank=query.select(data,'Les 5 PER les plus faibles du secteur Banque en 2025');
 assert.ok(bank.rows.length);assert.ok(bank.rows.every(r=>r.sector==='Banque'));
 const blocked=query.select(data,'Valeurs avec dette nette suspendue');

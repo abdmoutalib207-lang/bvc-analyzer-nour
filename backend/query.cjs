@@ -27,6 +27,7 @@
     }
     if(/plus (?:faibles?|bas|petits?)|\bcroissant\b/.test(q))p.sort={id:found[0].id,direction:'asc'};
     else if(/plus (?:eleves?|hauts?|grands?|forts?)|\bdecroissant\b/.test(q))p.sort={id:found[0].id,direction:'desc'};
+    if(p.missing&&p.sort)p.error='Un ratio indisponible ou bloqué ne peut pas être classé par valeur. Demandez la liste des données absentes sans tri numérique.';
     if(/meilleur/.test(q))p.error='Un ratio ne définit pas les meilleurs titres. Précisez un seuil ou un ordre croissant ou décroissant.';
     if(/entre\s+-?\d|compris|au.dessus|au.dessous|sous (?:la |les )?(?:mm|ema|sma)|surachet|survend/.test(q))p.error='Ce critère relatif ou cet intervalle n’est pas pris en charge. Précisez un seuil numérique explicite sur une mesure.';
     if(/classement|palmares|top\b|les\s+\d+/.test(q)&&!p.sort&&!missing)p.error='Précisez le classement : par exemple « les 5 PER les plus faibles en 2025 ».';

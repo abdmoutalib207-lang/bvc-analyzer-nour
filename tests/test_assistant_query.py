@@ -104,6 +104,7 @@ class AssistantQuery(unittest.TestCase):
                  'Montre les sociétés ayant un PER inférieur à 15 et un ROE supérieur à 10 %',
                  'Quelles valeurs ont le ROE le plus élevé ?',
                  'Quelles sont les meilleures valeurs avec un PER ?',
+                 'Les 5 PER indisponibles les plus faibles',
                  'Classement PER décroissant','Classement PER croissant',
                  'Quelles valeurs ont une dette nette inférieure à 100 MAD ?',
                  'Quelles valeurs ont une dette nette inférieure à 100 MMAD ?',
