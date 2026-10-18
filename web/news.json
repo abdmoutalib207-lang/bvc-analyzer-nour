@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-18T12:28:41.333007+00:00",
+  "updated_at": "2026-10-18T15:47:09.884902+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "24e699c61d62d4174d",
+      "title": "Electric Supercars Are Getting Faster, Smarter, and Harder to Ignore",
+      "url": "https://oilprice.com/Energy/Energy-General/Electric-Supercars-Are-Getting-Faster-Smarter-and-Harder-to-Ignore.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-18T15:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "04f956c7355350ff53",
       "title": "Entretien exclusif /  Ismail Douiri, Directeur Général d’Attijariwafa bank",
@@ -3610,23 +3627,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "ebc52466d0fc2ef88c",
-      "title": "La Bourse de Paris termine en hausse avant une semaine chargée en publications - tv5monde",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOY3cxaExlQlo5ZlZ0ZDF2SjFpSXJoVUMyNjNDSXk2ZnhoMXUxdWFWZEJYV0FzQUtCN1lRcHc5Vnk0N1ZMazZzOS1tanc0TENTb0FsNGt2TmxBSEFRYlhOZy1WcGs0X240aXZMUFlFQ0RjWHZXMVpqdnU0eVpURURVQzhRUHM0MW12bVFiVFU2NkFmT2J4ckFVUVE2Wm12SmRZNUJnQU9LRVIxa2h3aW5tRUdyT0psbTZVRWNPdkNuaEx5WlNGaGVMeEVFWFA?oc=5",
-      "publisher": "Inflation US / zone euro · presse",
-      "published_at": "2026-10-12T14:41:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "inflation",
-      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "ed8ab768f5abfc3ac6",
