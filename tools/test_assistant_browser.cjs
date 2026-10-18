@@ -92,6 +92,15 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok((await page.locator('#plot svg').innerHTML()).includes('RSI 14'));
           await graph.locator('[data-chart-theme]').click();
           assert.equal(await graph.getAttribute('data-chart-theme'),'light');
+          const contrasts=await graph.evaluate(root=>{
+            const luminance=color=>{const rgb=color.match(/[\d.]+/g).slice(0,3).map(v=>{v=Number(v)/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];};
+            const background=luminance(getComputedStyle(root).backgroundColor);
+            return ['.chart-help summary','.chart-readout .gain,.chart-readout .loss','.chart-info','.chart-gesture-hint'].map(selector=>{
+              const text=luminance(getComputedStyle(root.querySelector(selector)).color);
+              return (Math.max(text,background)+.05)/(Math.min(text,background)+.05);
+            });
+          });
+          assert.ok(contrasts.every(ratio=>ratio>=4.5),'Light chart text contrast below 4.5: '+contrasts.join(','));
           // Real user taps at price coordinates create personal lines, never facts.
           await graph.locator('[data-chart-tool="level"]').click();
           await page.locator('#plot').click({position:{x:80,y:95}});

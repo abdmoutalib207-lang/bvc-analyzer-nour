@@ -134,6 +134,8 @@ html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
 .chart-root[data-chart-theme=light] .chart-price-tag text{fill:#183323}
 .chart-root[data-chart-theme=light] .gain{color:#147754!important}.chart-root[data-chart-theme=light] .loss{color:#ae3541!important}
 .chart-root[data-chart-theme=light] :is(.fineprint,.chart-info,.chart-help,.chart-gesture-hint,.chart-range-controls label){color:#3c5365}
+.chart-root[data-chart-theme=light] .chart-help summary{color:#3c5365}
+.chart-root .chart-help summary{min-height:44px;padding:12px 0}
 .chart-root .chart .chart-price-tag text{fill:#183323;font-weight:700}
 .financial-history-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0}
 .financial-history{margin:0;padding:18px;border:1px solid #36505a;background:#0b1b25;border-radius:12px;min-width:0}
