@@ -83,6 +83,27 @@ assert.deepEqual(api.localAnswer('Et son RSI ?',data,'ADI').symbols,['ADI']);
 assert.ok(api.localAnswer('Et son RSI ?',data,'ADI').text.includes('RSI 14 : '+f(data.symbols.ADI.technical.rsi14)));
 console.log(`Assistant: 320 title/topic smoke scenarios + ${scenarios.length} precise-answer cases, follow-up context, report parity, missing values and safe links passed.`);
 
+for(const [symbol,row] of Object.entries(data.symbols)){
+  const full=api.localAnswer(`Fais une synthèse complète de ${symbol} : marché, technique, fondamentaux, risques, qualité et sources.`,data,'MASI');
+  assert.equal(full.domain,'overview',symbol);
+  for(const section of ['Marché · séance','Technique ·','Comptes annuels','Dernière publication','Risques historiques','Qualité et réserves','Lecture des méthodes'])assert.ok(full.text.includes(section),symbol+' '+section);
+  for(const warning of row.fundamental.warnings||[])assert.ok(full.text.includes(warning),symbol+' warning lost');
+  if(row.fundamental.latest_report?.note)assert.ok(full.text.includes(row.fundamental.latest_report.note),symbol+' semester reservation');
+  assert.ok(!full.text.includes('Point de marché à la demande'),symbol+' must not be routed to a briefing');
+  assert.ok(full.sources.some(s=>s.url===row.url),symbol+' source');
+  if(row.fundamental.document_url)assert.ok(full.sources.some(s=>s.url===row.fundamental.document_url),symbol+' annual source');
+}
+for(const [question,key,label] of [['EMA20 ADI','ema20','EMA20'],['EMA50 ADI','ema50','EMA50'],['ATR ADI','atr14_wilder','ATR 14 (Wilder)']]){
+  assert.ok(api.localAnswer(question,data,'MASI').text.includes(label+' : '+f(data.symbols.ADI.technical[key])),question);
+}
+assert.ok(api.localAnswer('EMA200 ADI',data,'MASI').text.includes('Cette période'));
+for(const question of ['PER TTM ADI','BPA prévisionnel ADI']){
+  const unsupported=api.localAnswer(question,data,'MASI');
+  assert.ok(unsupported.text.includes('Le ratio annuel ne le remplace pas'));
+  assert.ok(!unsupported.text.includes('PER :'));
+}
+console.log('Assistant dossiers: 80 complete sourced summaries, all reservations, EMA20/50 and distinct ATR methods passed.');
+
 const collectionAnswer=api.localAnswer('Quand a lieu la collecte ?',data,'MASI');
 for(const slot of ['09:45','12:45','16:00'])assert.ok(collectionAnswer.text.includes(slot));
 for(const retired of ['11:46','13:45','15:45','18:00'])assert.ok(!collectionAnswer.text.includes(retired));

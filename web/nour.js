@@ -10,6 +10,25 @@
   };
   search?.addEventListener('input', filterMarket);
   sector?.addEventListener('change', filterMarket);
+  const filterFundamentals=()=>{
+    const term=(q('#fundamental-search')?.value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    const selected=q('#fundamental-sector')?.value||'',available=q('#fundamental-availability')?.value||'';
+    const max=q('#fundamental-pe-max')?.value||'',min=q('#fundamental-roe-min')?.value||'';
+    let visible=0;
+    document.querySelectorAll('[data-fundamental-row]').forEach(row=>{
+      const f=JSON.parse(row.dataset.facts);
+      const coverage=!available||(available==='missing_eps'?f.eps_mad===null:available==='missing_annual'?!f.annual_exercise:Number.isFinite(f[available]));
+      row.hidden=!(row.dataset.search.includes(term)&&(!selected||f.sector===selected)&&coverage&&
+        (!max||(Number.isFinite(f.pe)&&f.pe<=Number(max)))&&(!min||(Number.isFinite(f.roe_pct)&&f.roe_pct>=Number(min))));
+      if(!row.hidden)visible++;
+    });
+    if(q('#fundamental-count'))q('#fundamental-count').textContent=`${visible} titres affichés`;
+  };
+  for(const id of ['fundamental-search','fundamental-sector','fundamental-availability','fundamental-pe-max','fundamental-roe-min'])q('#'+id)?.addEventListener('input',filterFundamentals);
+  q('#fundamental-reset')?.addEventListener('click',()=>{
+    for(const id of ['fundamental-search','fundamental-sector','fundamental-availability','fundamental-pe-max','fundamental-roe-min'])if(q('#'+id))q('#'+id).value='';
+    filterFundamentals();
+  });
   q('#sort-score')?.addEventListener('click', () => {
     const rows = [...marketBody.querySelectorAll('[data-market-row]')];
     const descending = marketBody.dataset.sort !== 'desc';

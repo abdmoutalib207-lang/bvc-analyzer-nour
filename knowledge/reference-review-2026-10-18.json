@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-10-18",
+  "scope": "BVC Analyzer Nour uniquement",
+  "usable_for_canonical_facts": false,
+  "bulk_data_import_enabled": false,
+  "references": [
+    {
+      "name": "IDBourse",
+      "purpose": "Données et méthodes adaptées à Casablanca, screener et comparaison",
+      "urls": [
+        "https://www.idbourse.com/",
+        "https://www.idbourse.com/stocks/ADI",
+        "https://www.idbourse.com/stocks/ATW",
+        "https://www.idbourse.com/data-plus",
+        "https://www.idbourse.com/data-plus/comparateur",
+        "https://www.idbourse.com/simulateur-valo"
+      ],
+      "run": 39094926861,
+      "observed": "Pages internes demandant une connexion, y compris le simulateur ; aucune formule ni valeur membre prétendue vérifiée.",
+      "next_step": "Connexion autorisée dans un navigateur utilisateur pour une revue ciblée des périodes, sources, dénominateurs et ratios."
+    },
+    {
+      "name": "TradingView",
+      "purpose": "Interactions de graphique et définitions publiques des indicateurs",
+      "urls": [
+        "https://www.tradingview.com/chart/?symbol=CSEMA%3AADI",
+        "https://www.tradingview.com/support/solutions/43000502338-relative-strength-index-rsi/",
+        "https://www.tradingview.com/support/solutions/43000501823-average-true-range-atr/",
+        "https://www.tradingview.com/support/solutions/43000501840-bollinger-bands-bb/",
+        "https://www.tradingview.com/support/solutions/43000502589-moving-averages/",
+        "https://www.tradingview.com/support/solutions/43000502344-moving-average-convergence-divergence-macd-indicator/"
+      ],
+      "runs": [
+        39094926861,
+        39095134593
+      ],
+      "observed": "Graphique ADI accessible ; ouverture réelle du sélecteur d’indicateurs par REA ; définitions officielles consultées.",
+      "not_verified": "Identité numérique avec les séries TradingView, réglages ajustés, flux intrajournaliers ou résultats de scripts propriétaires."
+    },
+    {
+      "name": "Yuna",
+      "purpose": "Explication adaptée au niveau demandé, synthèse structurée, lecture métier et citations",
+      "urls": [
+        "https://www.yuna.ma/en",
+        "https://www.yuna.ma/en/about",
+        "https://www.yuna.ma/politique-utilisation"
+      ],
+      "observed": "Documentation et comparaison publiques consultées par recherche web. REA : erreur de validation de statut réseau au premier essai ; essai UI seul montrant un contrôle de navigateur Vercel (Code 21), pas la page produit. Aucun contournement ni conversation privée.",
+      "not_verified": "Conversation authentifiée et qualité réelle du modèle. Les réponses publicitaires ne sont pas importées comme faits Nour.",
+      "runs": [
+        39095134593,
+        39095607340
+      ]
+    },
+    {
+      "name": "EcoFinance / EcoIA",
+      "purpose": "Recherche documentaire, calcul dédié, explication pédagogique et sources",
+      "urls": [
+        "https://www.ecofinanceanalytics.com/",
+        "https://www.ecofinanceanalytics.com/ecoia/"
+      ],
+      "run": 39095134593,
+      "observed": "Accueil capturé avec REA ; description et exemple publics EcoIA consultés.",
+      "not_verified": "Application mobile, conversation authentifiée ou réponses produites en direct. Le site promotionnel affiche encore bientôt disponible alors que le test transmis par l’utilisateur indique un accès réel."
+    }
+  ],
+  "nour_delivery": [
+    "Explorateur des fondamentaux des 80 titres, filtres de disponibilité, PER maximum, ROE minimum et CSV canonique.",
+    "MM200, EMA20, EMA50 et ATR Wilder sur le graphique ; anciennes valeurs techniques et score conservés.",
+    "Contrôle Python/navigateur sur les 80 historiques ; amorces, reprise et absence de fuite future vérifiées.",
+    "Dossier local complet avec comptes annuels et dernière publication séparés, risques, méthode sectorielle, réserves intégrales et pages PDF.",
+    "Ratio annuel jamais substitué à une demande TTM ou prévisionnelle ; règles explicites dans le contexte IA."
+  ],
+  "remaining_data_coverage": {
+    "eps_available": 50,
+    "roe_available": 54,
+    "missing_annual_documents": [
+      "DIS",
+      "DLM",
+      "IBM"
+    ],
+    "note": "Pas de fait financier externe ajouté dans ce lot ; les blocages précédents restent visibles."
+  }
+}

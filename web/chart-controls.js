@@ -2,6 +2,64 @@
 (() => {
   'use strict';
   const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  function indicators(bars, since='') {
+    const series = bars.map(() => ({sma20: null, sma50: null, sma200: null, ema20: null, ema50: null, atr14_wilder: null, upper: null, lower: null,
+    rsi: null, macd: null, signal: null}));
+    let closes = [], ema12 = null, ema26 = null, signal = null;
+  let macds = [], avgGain = null, avgLoss = null, atr = null, ranges = [];
+  bars.forEach((b, i) => {
+    if (b[0] < since) return; // Reset indicators after a documented resumption.
+    const c = b[4], prev = closes.at(-1);
+    closes.push(c);
+    const n = closes.length;
+    const mean = p => closes.slice(-p).reduce((sum, x) => sum + x, 0) / p;
+    if (n >= 20) {
+      const avg = mean(20);
+      const variance = closes.slice(-20).reduce((sum, x) => sum + (x - avg) ** 2, 0) / 20;
+      series[i].sma20 = avg;
+      series[i].upper = avg + 2 * Math.sqrt(variance);
+      series[i].lower = avg - 2 * Math.sqrt(variance);
+    }
+    if (n >= 50) series[i].sma50 = mean(50);
+    if (n >= 200) series[i].sma200 = mean(200);
+    for (const period of [20,50]) {
+      const key='ema'+period;
+      if(n===period) series[i][key]=mean(period);
+      else if(n>period) series[i][key]=series[i-1][key]+(c-series[i-1][key])*2/(period+1);
+    }
+    const tr=prev===undefined?b[2]-b[3]:Math.max(b[2]-b[3],Math.abs(b[2]-prev),Math.abs(b[3]-prev));
+    ranges.push(tr);
+    if(n===14)atr=ranges.reduce((sum,v)=>sum+v,0)/14;
+    else if(n>14)atr=(atr*13+tr)/14;
+    series[i].atr14_wilder=atr;
+    if (n === 12) ema12 = mean(12);
+    else if (n > 12) ema12 += (c - ema12) * 2 / 13;
+    if (n === 26) ema26 = mean(26);
+    else if (n > 26) ema26 += (c - ema26) * 2 / 27;
+    if (ema12 !== null && ema26 !== null) {
+      const macd = ema12 - ema26;
+      series[i].macd = macd;
+      macds.push(macd);
+      if (macds.length === 9) signal = macds.reduce((sum, x) => sum + x, 0) / 9;
+      else if (macds.length > 9) signal += (macd - signal) * 2 / 10;
+      if (signal !== null) series[i].signal = signal;
+    }
+    if (n === 15) {
+      const diffs = closes.slice(1).map((x, j) => x - closes[j]);
+      avgGain = diffs.reduce((sum, x) => sum + Math.max(x, 0), 0) / 14;
+      avgLoss = diffs.reduce((sum, x) => sum + Math.max(-x, 0), 0) / 14;
+    } else if (n > 15) {
+      const diff = c - prev;
+      avgGain = (avgGain * 13 + Math.max(diff, 0)) / 14;
+      avgLoss = (avgLoss * 13 + Math.max(-diff, 0)) / 14;
+    }
+    if (avgGain !== null) series[i].rsi = avgGain + avgLoss === 0 ? 50 :
+      avgLoss === 0 ? 100 : 100 - 100 / (1 + avgGain / avgLoss);
+  });
+
+    return series;
+  }
+
   class Viewport {
     constructor(length, count) {
       this.length = length; this.minimum = Math.min(6, length);
@@ -210,6 +268,6 @@
     return {sync, selection:()=>comparing && compareStart!==null && compareEnd!==null ? [compareStart,compareEnd] : null,
       resetCursor:()=>{pinned=false;state.selected=null;}, comparing:()=>comparing};
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports={Viewport};
-  if (typeof window !== 'undefined') window.NourCharts={Viewport,mount};
+  if (typeof module !== 'undefined' && module.exports) module.exports={Viewport,indicators};
+  if (typeof window !== 'undefined') window.NourCharts={Viewport,mount,indicators};
 })();

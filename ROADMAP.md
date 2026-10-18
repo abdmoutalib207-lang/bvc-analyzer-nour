@@ -57,3 +57,10 @@ les preuves et les limites. La cible 9,5/10 est un objectif, pas une note acquis
 - Huit dossiers annuels relus sur pièces primaires ; BPA 45 → 50, ROE 47 → 54, à date identique. [Preuves et restrictions ciblées](docs/batches/2026-10-18-primary.md).
 - Priorités documentées pour chacun des [80 titres](docs/fundamental-coverage-2026-10-18.md). Les références annuelles DIS/DLM/IBM restent à retrouver ; aucun résultat ancien renommé.
 - CMGP/SGTM/CFG Bank : rapprochement des BPA publiés et de leurs dénominateurs avant tout déblocage du PER. Compléter ensuite les RNPG, fonds propres et actions des autres dossiers de la file, sans annualiser les semestres.
+
+## Références spécialisées — 18 octobre 2026
+
+- [Étude vérifiable et premier lot livré](docs/reference-methods-2026-10-18.md) : IDBourse pour la couverture et les méthodes, TradingView pour l’ergonomie et les définitions techniques, Yuna et EcoFinance pour la structuration pédagogique de l’assistant.
+- Les pages membres IDBourse restent à examiner après connexion autorisée. Aucune donnée privée ou formule inaccessible n’est prétendue intégrée.
+- Disponibles : explorateur fondamental et CSV issus des calculs Nour, MM200/EMA20/EMA50 et ATR Wilder, dossier conversationnel complet, distinction annuel/TTM/prévisionnel, tests de parité sur 80 historiques.
+- Restent : rapprochements documentaires et opérations sur capital de l’inventaire existant, pièces annuelles DIS/DLM/IBM, assistant réellement génératif à tester avec accès utilisateur. Les captures de pages publiques Yuna/EcoFinance ne valident pas leur modèle conversationnel.

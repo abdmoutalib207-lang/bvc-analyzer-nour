@@ -10,6 +10,7 @@ from .bi_view import financial_dashboard, semester_chart
 from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
+from .fundamental_view import panel as fundamental_explorer, export_csv as export_fundamentals_csv
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 from .assistant import panel as assistant_panel, export as export_assistant
@@ -99,8 +100,9 @@ def graph(bars, label="1A", indicator_since=None):
     json_data = json.dumps([[b[k] for k in ('d', 'o', 'h', 'l', 'c', 'v')] for b in valid],
                            ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
     indicators = ''.join(f'<button type="button" data-indicator="{key}" aria-pressed="{str(key=="volume").lower()}">{text}</button>'
-                         for key, text in [('sma20','MM20'),('sma50','MM50'),('bands','Bollinger'),
-                                           ('rsi','RSI 14'),('macd','MACD'),('volume','Volumes')])
+                         for key, text in [('sma20','MM20'),('sma50','MM50'),('sma200','MM200'),
+                                           ('ema20','EMA20'),('ema50','EMA50'),('bands','Bollinger'),
+                                           ('rsi','RSI 14'),('macd','MACD'),('atr','ATR Wilder'),('volume','Volumes')])
     mode = ''.join(f'<button type="button" data-chart-type="{key}" aria-pressed="{str(key=="line").lower()}">{text}</button>'
                    for key, text in [('line','Courbe'),('candles','Bougies')])
     notice = (f'{len(bars)-len(valid)} séance(s) OHLCV incohérente(s) écartée(s) du graphique interactif. '
@@ -114,7 +116,14 @@ def graph(bars, label="1A", indicator_since=None):
             f'<div class="chart-readout" data-chart-readout role="status" aria-live="off">Survolez ou touchez le graphique pour lire la séance.</div>'
             f'<div id="chart-info" class="chart-info">{esc(notice)}{esc(default[0][0])} → {esc(default[-1][0])} · {len(default)} séances</div>'
             + explorer_footer() +
-            '<p class="fineprint">Indicateurs calculés depuis les séances OHLCV valides ; ils ne modifient ni le score ni les données publiées. Les séries reprennent à zéro après une suspension signalée.</p>'
+            '<details class="chart-help"><summary>Méthodes et différences entre plateformes</summary>'
+            '<p>MM20, MM50 et MM200 : moyennes simples des clôtures. EMA20 et EMA50 : moyennes exponentielles, amorcées par une moyenne simple, coefficient 2 / (période + 1). '
+            'RSI 14 : lissage de Wilder sur 14 variations. MACD 12/26/9 : EMA12 − EMA26, signal EMA9 et histogramme MACD − signal. '
+            'Bollinger : moyenne 20 ± deux écarts-types de population. ATR Wilder 14 : lissage des amplitudes vraies, avec haut − bas pour la première séance.</p>'
+            '<p>Calcul sur tout l’historique chargé avant le zoom. Les périodes comptent les séances disponibles, sans interpolation. '
+            'Après une reprise documentée, les indicateurs repartent à zéro. Les cours ne sont pas ajustés aux opérations sur titres : '
+            'une différence de source, de date, de profondeur ou d’ajustement peut expliquer un écart avec une autre plateforme. '
+            'Le réglage et l’ajout d’un indicateur visuel ne modifient pas le score.</p></details>'
             f'<script type="application/json" id="history-data">{json_data}</script></div>')
 
 
@@ -208,7 +217,8 @@ def detail_page(item, record, fixture, style, script):
     score=item.get('canonical_score') or {}
     tech_extended=''.join((info_card('RSI 14',number(technical.get('rsi14'))),
                            info_card('Moyenne 50 séances',number(technical.get('sma50')),'MAD'),
-                           info_card('ATR 14',number(technical.get('atr14')),'MAD'),
+                           info_card('ATR 14 · moyenne simple',number(technical.get('atr14')),'MAD'),
+                           info_card('ATR 14 · Wilder',number(technical.get('atr14_wilder')),'MAD'),
                            info_card('Support 20 séances',number(technical.get('support20')),'MAD'),
                            info_card('Résistance 20 séances',number(technical.get('resistance20')),'MAD'),
                            info_card('Volume / médiane 20 séances',number(technical.get('volume_vs_median20')),'×')))
@@ -372,6 +382,7 @@ def home_page(fixture, report, style, script):
             + research_teaser(report)
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Contexte indépendant des scores</span><h2>Macro et international</h2><p>12 instruments : indices, devises, risque et matières premières. Cotations datées, alertes Maroc / international et état des sources.</p></div><a class="btnlink outline" href="macro.html">Ouvrir les marchés mondiaux</a></div></section>'
             + fundamental_summary
+            + fundamental_explorer(report)
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
             + f'<p class="panel-sub">{len(items)} valeurs suivies · cliquez sur le code pour le graphique et les indicateurs, sur CSV pour l’historique. La variation compare les deux dernières clôtures disponibles de chaque titre.</p><div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernière clôture</th><th>Variation</th><th>Date clôture</th><th>Point de séance</th><th>Score</th><th>État des données</th><th>Historique</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
             + '<p class="fineprint">Les états décrivent la disponibilité des données, jamais une recommandation. Un historique peut rester indisponible tant qu’aucune séance validée n’a été importée.</p></section>'
@@ -539,6 +550,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
+    export_fundamentals_csv(report, output / 'fondamentaux.csv')
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
