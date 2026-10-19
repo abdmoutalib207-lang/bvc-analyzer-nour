@@ -9,6 +9,7 @@ from pathlib import Path
 from nour.engine import build_report
 from nour.issuer_status import apply_status
 from nour.market_integrity import visible_integrity, memory_summary
+from nour.market_reference import apply_market_reference
 from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
@@ -39,7 +40,14 @@ def main():
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
     overview_path = ROOT/'data/market_overview.json'
     overview = json.loads(overview_path.read_text()) if overview_path.exists() else {}
+    reference_path=ROOT/'data/market_reference.json'
+    reference=json.loads(reference_path.read_text()) if reference_path.exists() else {}
+    for key in ('current','last_closed'):
+        if key in overview:
+            overview[key]=apply_market_reference(overview[key],reference)
     synchronize_market(report, overview.get('current', {}))
+    atomic_json(ROOT/'web/market-reference.json',report['market_overview'].get('official_reference') or
+                {'status':'not_available','asof':report['market_overview'].get('asof')})
     history_path = ROOT/'data/masi_history.json'
     report['masi_history'] = json.loads(history_path.read_text()).get('seances', {}) if history_path.exists() else {}
     report['masi_history'] = {d: v for d,v in report['masi_history'].items() if d <= args.asof}

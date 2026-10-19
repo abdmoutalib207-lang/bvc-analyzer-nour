@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sessions": {
+    "2026-10-19": {
+      "asof": "2026-10-19",
+      "review_status": "manual_capture_reviewed",
+      "reviewed_at": "2026-10-19T18:40:00+00:00",
+      "source_url": "https://www.casablanca-bourse.com/market-data/volume",
+      "source_label": "Bourse de Casablanca · marché au comptant",
+      "capture_sha256": "50a117bea73088602a4b873c60f45669b517a1c85476fcc51cc88f46af546149",
+      "turnover_mad": "113956983.12",
+      "shares": 876356,
+      "contracts": 3671,
+      "date_evidence": "Séance identifiée par l’utilisateur avec les relevés du 19 octobre 2026 ; la capture officielle isolée ne montre pas sa date de séance.",
+      "notice": "Transcription relue de la capture officielle fournie par l’utilisateur. Ce n’est pas une collecte automatique du site officiel. La décomposition complète et le périmètre exact des unités restent à rapprocher."
+    }
+  }
+}

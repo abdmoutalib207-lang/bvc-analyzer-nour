@@ -9,6 +9,7 @@ from urllib.request import Request,urlopen
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from nour.report_contracts import volume_reconciliation
 from nour.market_integrity import validated_detail_scope
+from nour.market_reference import reviewed_reference
 
 
 def audit_market_integrity(report):
@@ -17,6 +18,11 @@ def audit_market_integrity(report):
     cross=report.get('cross_source_volume_audit') or {}
     detail_valid=validated_detail_scope(report,cross)
     failures=[]
+    official=overview.get('official_reference')
+    if official and not reviewed_reference(overview,{'schema_version':1,'sessions':{overview.get('asof'):official}}):
+        failures.append('Référence officielle non applicable à cette séance ou à ces chiffres.')
+    if overview.get('transactions_quality') and overview.get('transactions') is not None:
+        failures.append('Compteur de transactions sans date propre présenté comme chiffre de séance.')
     if overview.get('status')=='closed' and internal['status']!='matched' and not detail_valid:
         failures.append('Les montants, quantités ou lignes de la clôture ne retrouvent pas le total daté.')
     if cross.get('status') in ('conflict','incomplete','stale') or cross.get('publication_safe') is False:

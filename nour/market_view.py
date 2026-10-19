@@ -68,11 +68,20 @@ def market_panel(report):
     bars = ''.join(f'<span class="breadth-{kind}" style="width:{(value or 0)*100/max(1,total):.2f}%"></span>'
                    for kind,value in (('up',up),('flat',flat),('down',down)))
     detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
+    official=overview.get('official_reference') or {}
     kpis = ''.join(f'<div class="kpi"><span>{name}</span><strong>{value}</strong></div>' for name,value in (
-        ('Volume annoncé · non confirmé · MDH' if detail_only else 'Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
-        ('Titres annoncés · non confirmés' if detail_only else 'Titres échangés',fmt(overview.get('shares'),0)),
-        ('Transactions',fmt(overview.get('transactions'),0)),
+        ('Volume global · référence officielle · MDH' if official else 'Volume annoncé · non confirmé · MDH' if detail_only else 'Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
+        ('Unités comptant · référence officielle' if official else 'Titres annoncés · non confirmés' if detail_only else 'Titres échangés',fmt(overview.get('shares'),0)),
+        ('Contrats · référence officielle' if official else 'Transactions · date non attestée',fmt(official.get('contracts') if official else overview.get('transactions'),0)),
         ('Valeurs annoncées · non confirmées' if detail_only else 'Valeurs échangées',fmt(breadth.get('quoted'),0))))
+    if overview.get('transactions_quality'):
+        summary += (f'<section class="panel" data-market-counter-quality><h2>Compteurs et dates</h2>'
+            f'<p>Compteur « transactions » du fournisseur : {fmt(overview.get("transactions_reported"),0)}. '
+            'Sa date propre n’est pas attestée ; ce compteur est exclu du chiffre validé de séance.</p>'
+            + (f'<p>Référence officielle du {esc(official.get("asof"))} : {fmt(official.get("contracts"),0)} contrats. '
+               'Capture fournie par l’utilisateur et revue manuellement ; collecte officielle automatique non établie. '
+               '<a href="https://www.casablanca-bourse.com/market-data/volume">Source officielle</a> · '
+               '<a href="market-reference.json">Référence documentaire et méthode de vérification</a>.</p>' if official else '')+'</section>')
     summary += (f'<div class="kpis">{kpis}</div><section class="panel"><div class="section-heading"><h2>Participation du marché</h2>'
                 f'<span class="panel-sub">Séance {esc(overview.get("asof"))} · lignes échangées recensées</span></div>'
                 f'<div class="breadth-bar" aria-hidden="true">{bars}</div><div class="breadth-legend"><span class="gain">{fmt(up,0)} hausses</span>'
@@ -81,13 +90,15 @@ def market_panel(report):
     external = report.get('cross_source_volume_audit') or {}
     if external.get('publication_scope')=='validated_title_lines' and external.get('cross_source_verified'):
         total=(external.get('totals') or {}).get('retained_after') or {}
-        summary += (f'<section class="panel banner" data-market-integrity="detail-only"><h2>Total global non confirmé · titres recoupés séparément</h2>'
+        summary += (f'<section class="panel banner" data-market-integrity="detail-only"><h2>{"Total global corroboré · détail à rapprocher" if official else "Total global non confirmé · titres recoupés séparément"}</h2>'
             f'<p>Les {esc(total.get("quoted"))} titres détaillés concordent entre deux fournisseurs : '
             f'{fmt(float(total.get("turnover_mad",0)))} MAD et {fmt(total.get("shares"),0)} actions.</p>'
-            f'<p>Le total annoncé reste {fmt(overview.get("turnover_mad"))} MAD, {fmt(overview.get("shares"),0)} actions '
-            f'et {fmt(breadth.get("quoted"),0)} titres. Il n’est pas validé. Aucune ligne manquante n’est reconstituée.</p>'
+            f'<p>Le total annoncé reste {fmt(overview.get("turnover_mad"))} MAD, {fmt(overview.get("shares"),0)} unités '
+            f'et {fmt(breadth.get("quoted"),0)} lignes annoncées. '
+            + ('Le montant global et la quantité sont corroborés par la référence officielle revue ; leur décomposition reste à rapprocher. ' if official else 'Ce total n’est pas recoupé. ')
+            + 'Aucune ligne manquante n’est reconstituée.</p>'
             f'<p>Écarts annoncé moins détaillé : {fmt(overview.get("turnover_mad",0)-float(total.get("turnover_mad",0)))} MAD ; '
-            f'{fmt(overview.get("shares",0)-total.get("shares",0),0)} actions ; {fmt(breadth.get("quoted",0)-total.get("quoted",0),0)} titre(s).</p>'
+            f'{fmt(overview.get("shares",0)-total.get("shares",0),0)} unités ; {fmt(breadth.get("quoted",0)-total.get("quoted",0),0)} ligne(s).</p>'
             '<a href="market-integrity.json">Preuves et écarts</a> · <a href="error-memory.json">Journal des incidents</a></section>')
     elif external.get('cross_source_verified') and external.get('session') == overview.get('asof'):
         summary += (f'<section class="panel" data-market-integrity="verified"><h2>Volumes recoupés entre fournisseurs</h2>'
@@ -140,6 +151,9 @@ def closing_summary(overview):
     breadth = overview.get('breadth') or {}
     verb = 'est observé' if overview.get('status') == 'intraday' else 'clôture'
     lines = [f'Le MASI {verb} à {fmt(index.get("value"))} points ({fmt(index.get("change_pct"))} %), soit {fmt(index.get("variation_points"))} points par rapport à la clôture précédente.']
+    official=overview.get('official_reference') or {}
+    if official:
+        lines.append(f'Référence officielle du {official["asof"]}, capture revue manuellement : {fmt(official["contracts"],0)} contrats. Le détail du périmètre reste à rapprocher.')
     if overview.get('low') is not None and overview.get('high') is not None:
         lines.append(f'Fourchette de séance : {fmt(overview["low"])} à {fmt(overview["high"])} points.')
     if breadth:

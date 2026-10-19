@@ -4,6 +4,11 @@
   const Research=typeof module==='object'&&module.exports?require('./research.js'):root.NourResearch;
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const finite=x=>typeof x==='number'&&Number.isFinite(x);
+  function officialReference(m){
+    const o=m?.official_reference;
+    return o?.asof===m?.asof&&o?.review_status==='manual_capture_reviewed'&&
+      Number(o.turnover_mad)===m.turnover_mad&&o.shares===m.shares&&Number.isInteger(o.contracts)&&o.contracts>=0?o:null;
+  }
   const fmt=(x,u='')=>finite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(u?' '+u:''):'indisponible';
   const stateLabel=s=>({available:'disponible',insufficient:'insuffisant',historical_only:'historique uniquement',closed:'clôture',published:'publié',provisional:'provisoire',stale:'archive ancienne',unavailable:'indisponible',partial:'partiel',updated:'actualisé',unchanged:'inchangé',reconciled:'rapproché entre fournisseurs'}[s]||s||'indisponible');
   const isMethod=question=>/explique|c.est quoi|qu.est.ce|que.*veut dire|ca veut dire|a quoi (?:sert|correspond)|signifi|definition|comment|formule|pour les nuls|difference|fonctionn/.test(normalize(question));
@@ -134,7 +139,7 @@
     }
     if(/journal.*erreurs?|memoire.*erreurs?|erreurs?.*corrige|controle.*multisource|rapprochement.*sources/.test(q)){
       const a=data.cross_source_volume_audit||{},m=data.error_memory_summary||{};
-      if(a.publication_scope==='validated_title_lines')lines.push('Total global annoncé non confirmé : le recoupement porte uniquement sur les titres détaillés. Aucun titre manquant ni total complet ne sont reconstitués.');
+      if(a.publication_scope==='validated_title_lines')lines.push(officialReference(data.market)?'Total global corroboré par une capture officielle revue manuellement ; la décomposition reste à rapprocher.':'Total global annoncé non confirmé : le recoupement porte uniquement sur les titres détaillés. Aucun titre manquant ni total complet ne sont reconstitués.');
       lines.push(`Contrôle des volumes : ${a.status||'non observé'} · séance ${a.session||'non datée'} · observation ${a.observed_at||'non datée'}. Montants entre fournisseurs ${a.cross_source_verified?'confirmés ligne par ligne':'non confirmés'} ; quantités ${a.quantities_cross_source_verified?'confirmées':'non confirmées'}.`);
       lines.push(`Mémoire durable : ${m.incidents??0} incidents · ${m.open??0} ouverts · ${m.resolved??0} résolus conservés · ${m.lessons??0} règles anti-récidive.`);
       for(const lesson of m.lessons_catalog||[])lines.push(lesson.title+' : '+lesson.rule);
@@ -227,12 +232,17 @@
     }
     if(/ecc|assistant|generative|\bllm\b|ollama|intelligence artificielle/.test(q)){definition('assistant');definition('limits');link('Assistant et fonctions','index.html');return result('assistant');}
     if(/smart money|carnet|spread|objectif de cours|prediction|predire/.test(q)){definition('limits');link('Données disponibles','index.html');return result('assistant');}
-    if(/plus haut|plus bas|extrem|depuis.*janvier|\bytd\b|hausses|baisses|combien.*(?:hausse|baisse)|valeurs.*(?:montent|baissent)|secteurs?|amplitude|largeur.*marche|transactions|plus fortes.*(?:hausse|baisse)/.test(q)&&(!rows.length||/valeurs.*(?:montent|baissent)|hausses.*baisses|largeur.*marche/.test(q))){
+    if(/transactions|contrats/.test(q)&&/\b(?:20\d{2}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/\d{2,4})\b/.test(q))return null;
+    if(/plus haut|plus bas|extrem|depuis.*janvier|\bytd\b|hausses|baisses|combien.*(?:hausse|baisse)|valeurs.*(?:montent|baissent)|secteurs?|amplitude|largeur.*marche|transactions|contrats|plus fortes.*(?:hausse|baisse)/.test(q)&&(!rows.length||/valeurs.*(?:montent|baissent)|hausses.*baisses|largeur.*marche/.test(q))){
       const m=data.market||{},b=m.breadth||{};lines.push(`Marché · séance ${m.asof||'non datée'} · état ${m.status||'indisponible'}.`);
       if(/plus haut|plus bas|extrem|amplitude/.test(q))lines.push(`Plus haut MASI ${fmt(m.high,'points')} · plus bas ${fmt(m.low,'points')}. Ces extrêmes ne sont pas une clôture.`);
       if(/depuis.*janvier|\bytd\b/.test(q))lines.push(`Variation MASI depuis la fin d’année précédente : ${fmt(m.masi?.ytd_pct,'%')}.`);
       if(/hausse|baisse|montent|baissent|largeur/.test(q))lines.push(`Hausses ${b.up??'—'} · baisses ${b.down??'—'} · inchangées ${b.flat??'—'} · valeurs traitées ${b.quoted??'—'}.`);
-      if(/transactions/.test(q))lines.push(`Transactions : ${fmt(m.transactions)}.`);
+      if(/transactions|contrats/.test(q)){
+        lines.push(`Transactions : ${fmt(m.transactions)}.`);
+        if(m.transactions_quality)lines.push(`Compteur fournisseur conservé : ${fmt(m.transactions_reported)} ; date propre non attestée. Il n’est pas validé pour cette séance et n’est pas rattaché à une autre date par déduction.`);
+        const o=officialReference(m);if(o){lines.push(`Référence officielle du ${o.asof} : ${fmt(o.contracts,'contrats')} · capture fournie par l’utilisateur et revue manuellement. Collecte officielle automatique non établie.`);link('Bourse de Casablanca · volumes au comptant',o.source_url);}
+      }
       if(/secteur/.test(q))for(const s of m.sectors||[])lines.push(`${s.libelle} : ${fmt(s.variation_pct,'%')}.`);
       if(/plus fortes/.test(q)){const e=data.briefings?.briefing?.editorial||{};for(const key of ['leaders','laggards'])for(const x of (e[key]||[]).slice(0,3))lines.push(`${key==='leaders'?'Hausse':'Baisse'} ${x.symbol} : ${fmt(x.change_pct,'%')} · classement de l’édition ${data.briefings.briefing.market_session}.`);}
       link('Séance et secteurs','index.html');return result('market');
@@ -247,7 +257,7 @@
       if(selected.length&&!rows.length){for(const [,key] of selected.slice(0,5))definition(key);link('Méthodes et données','index.html');return result('navigation');}}
     return null;
   }
-  const api={answer,decorate,labFilters};
+  const api={answer,decorate,labFilters,officialReference};
   if(typeof module==='object'&&module.exports)module.exports=api;
   root.NourAssistantDomains=api;
 })(typeof window==='undefined'?globalThis:window);

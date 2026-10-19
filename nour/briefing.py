@@ -70,6 +70,8 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
     editorial = market_reading(report, overview if index_current else {}, session)
     detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
     aggregate_notice='Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.' if detail_only else ''
+    if detail_only and overview.get('official_reference'):
+        aggregate_notice='Total global corroboré par une capture officielle revue manuellement ; le rapprochement avec le périmètre des titres détaillés reste incomplet.'
     if aggregate_notice:
         editorial['paragraphs'].insert(0,aggregate_notice)
         editorial['vigilance'].insert(0,aggregate_notice)

@@ -28,6 +28,7 @@ on:
       - 'web/nour.css'
       - 'web/logos/**'
       - 'data/company_logos.json'
+      - 'data/market_reference.json'
       - 'vendor/ecc/**'
       - '.agents/**'
       - '.claude/**'

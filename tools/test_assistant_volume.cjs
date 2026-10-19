@@ -108,4 +108,29 @@ for(const shares of [undefined,null,0,1]){
   assert.ok(!answer.text.includes('montants confirmés'));
   assert.deepEqual(data,before);checked++;
 }
+{
+  const data=structuredClone(published);
+  data.market={asof:'2026-10-19',status:'closed',turnover_mad:113956983.12,shares:876356,transactions:null,
+    transactions_reported:2851,transactions_quality:{status:'session_not_independently_attested'},
+    official_reference:{asof:'2026-10-19',contracts:3671,turnover_mad:'113956983.12',shares:876356,review_status:'manual_capture_reviewed',source_url:'https://www.casablanca-bourse.com/market-data/volume'}};
+  data.cross_source_volume_audit={publication_scope:'validated_title_lines',totals:{retained_after:{quoted:61,turnover_mad:'113956939.12',shares:876345}}};
+  const before=structuredClone(data);
+  for(const question of ['Quel volume global MASI ?','Combien de transactions MASI ?','Combien de contrats MASI ?']){
+    const answer=api.localAnswer(question,data,'MASI');
+    assert.ok(answer.text.includes('3\u202f671 contrats'),answer.text);
+    assert.ok(!answer.text.includes('2\u202f851 transactions'),answer.text);
+    assert.ok(answer.text.includes('date propre non attestée'),answer.text);
+    assert.ok(answer.text.includes('capture fournie par l’utilisateur et revue manuellement'),answer.text);
+    if(question.includes('volume')){
+      assert.ok(answer.text.includes('Total global corroboré'),answer.text);
+      assert.ok(answer.text.includes('décomposition à rapprocher'),answer.text);
+    }
+    assert.ok(!answer.text.includes('totaux concordants'),answer.text);checked++;
+  }
+  assert.deepEqual(data,before);
+  const old=api.localAnswer('Combien de contrats MASI le 16/10/2026 ?',data,'MASI');
+  assert.ok(!old.text.includes('3\u202f671 contrats'),old.text);
+  const moved=structuredClone(data);moved.market.asof='2026-10-20';
+  assert.ok(!api.localAnswer('Combien de contrats MASI ?',moved,'MASI').text.includes('3\u202f671 contrats'));
+}
 console.log(`Assistant volume: ${checked} stable concordant/discrepant/incomplete/unavailable fixtures, zero vs missing amounts, dated scope, source preservation and no false concordance passed.`);

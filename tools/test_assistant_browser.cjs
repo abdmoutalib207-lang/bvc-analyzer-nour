@@ -37,6 +37,13 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok(!(await page.locator('.market-hero').innerText()).includes('CDG'));
           const report=await (await context.request.get(new URL('report.json',base).href)).json();
           marketReport=report;
+          if(report.market_overview?.official_reference){
+            const counters=await page.locator('[data-market-counter-quality]').innerText();
+            assert.ok(counters.replace(/\s/g,'').includes(String(report.market_overview.official_reference.contracts)+'contrats'));
+            assert.ok(counters.includes('date propre n’est pas attestée'));
+            assert.ok(counters.includes('revue manuellement'));
+            if(report.cross_source_volume_audit?.publication_scope==='validated_title_lines')assert.ok((await page.locator('[data-market-integrity="detail-only"]').innerText()).includes('Total global corroboré'));
+          }
           if(report.market_overview?.observed_at){
             const stamp=page.locator('.market-panel .collection-stamp time');
             assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(report.market_overview.observed_at).getTime());

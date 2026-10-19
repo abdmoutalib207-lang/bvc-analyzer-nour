@@ -177,7 +177,7 @@
       [/correlation/,'Corrélation historique au MASI','correlation','','market_risk']
     ].filter(([pattern])=>pattern.test(q));
     const prospective=/demain|prochaine|predi|va (?:monter|baisser)|dois.je (?:acheter|vendre)/.test(q);
-    const volume=/volume|capitaux echanges|quantite|combien.*titres echanges/.test(q);
+    const volume=/volume|capitaux echanges|quantite|combien.*titres echanges|transactions?|contrats?/.test(q);
     const earnings=/rnpg|resultat|benefice|minoritaires/.test(q)&&!/cours.*benefice/.test(q);
     const shares=/nombre.*actions|combien.*actions|denominateur/.test(q);
     const equity=/capitaux propres|fonds propres/.test(q);
@@ -193,18 +193,20 @@
     if(prospective||/probabil|statist|frequen/.test(q))return null;
     for(const s of symbols){
       if(s==='MASI'){
-        const m=data.market||{},h=data.masi_history||{};
+        const m=data.market||{},h=data.masi_history||{},official=domains?.officialReference(m);
         lines.push(`MASI · séance ${m.masi?.asof||m.asof||'non datée'}.`);
         if(dates.length){for(const {date} of dates)lines.push(Object.hasOwn(h,date)?`Clôture du ${date} : ${fmt(h[date],'points')}.`:`Aucune clôture MASI disponible au ${date}. Aucun cours n’est interpolé.`);if(/plus haut|plus bas|ouverture|ohlc|bougie/.test(q))lines.push('Les extrêmes et l’ouverture MASI à ces dates ne sont pas fournis par cet historique de clôtures.');}
         else if(close)lines.push(`Clôture : ${fmt(m.masi?.value,'points')} · variation ${fmt(m.masi?.change_pct,'%')}.`);
         if(volume){
           if(dates.some(d=>d.date!==m.asof))lines.push('Le volume global à cette date n’est pas disponible dans cet export.');
-          else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${Number.isFinite(m.shares)?fmt(m.shares,'titres échangés'):'titres échangés : indisponible'} · ${fmt(m.transactions,'transactions')}.`);
+          else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${Number.isFinite(m.shares)?fmt(m.shares,official?'unités comptant':'titres échangés'):'titres échangés : indisponible'} · ${fmt(m.transactions,'transactions')}.`);
+            if(m.transactions_quality)lines.push(`Compteur fournisseur conservé : ${fmt(m.transactions_reported)} ; date propre non attestée. Il n’est pas validé pour cette séance et n’est pas rattaché à une autre date par déduction.`);
+            if(official){const o=official;lines.push(`Référence officielle du ${o.asof} : ${fmt(o.contracts,'contrats')} · capture fournie par l’utilisateur et revue manuellement. Collecte officielle automatique non établie.`);sources.push({label:'Bourse de Casablanca · volumes au comptant',url:o.source_url});}
             const a=data.market_volume_audit||{};lines.push(`Rapprochement des lignes de la séance : ${a.status==='matched'?'totaux concordants':a.status==='discrepancy'?'écart constaté':'couverture non confirmée'} · ${a.observed_lines??'—'} / ${a.expected_lines??'—'} lignes. Les fiches anciennes sont exclues de la somme.`);
             const x=data.cross_source_volume_audit||{};
             if(x.publication_scope==='validated_title_lines'){
               const total=x.totals?.retained_after||{};
-              lines.push(`Total global annoncé non confirmé. Seules les ${total.quoted??'—'} lignes détaillées sont recoupées entre deux fournisseurs : ${fmt(Number(total.turnover_mad),'MAD')} · ${fmt(total.shares,'titres échangés')}. Aucun titre manquant n’est reconstitué.`);
+              lines.push(`${official?'Total global corroboré par la référence officielle revue ; décomposition à rapprocher.':'Total global annoncé non confirmé.'} Seules les ${total.quoted??'—'} lignes détaillées sont recoupées entre deux fournisseurs : ${fmt(Number(total.turnover_mad),'MAD')} · ${fmt(total.shares,'titres échangés')}. Aucun titre manquant n’est reconstitué.`);
             }else lines.push(x.cross_source_verified?`Recoupement entre deux fournisseurs ligne par ligne : montants confirmés · quantités ${x.quantities_cross_source_verified?'également confirmées':'non recoupées sur toutes les lignes'} · séance ${x.session} · contrôle ${x.observed_at}.`:`Recoupement externe non confirmé : ${x.status||'non observé'}.`);}
         }
         if(metrics.length||earnings||equity||shares||unsupported)lines.push('Le PER global du marché et son historique ne sont pas intégrés dans Nour. Les autres ratios et indicateurs techniques demandés ne sont pas disponibles pour le MASI dans cet export; aucun chiffre n’est déduit du graphique.');
