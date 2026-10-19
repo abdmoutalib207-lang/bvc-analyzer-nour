@@ -63,7 +63,7 @@ assert.ok(!result.text.includes('totaux concordants'));
 checked++;
 for(const asof of ['2026-10-06','2026-10-07']){
   const data=structuredClone(published);
-  data.market.asof='2026-10-07';data.symbols.MRL.asof=asof;
+  data.market={...data.market,status:'closed',asof:'2026-10-07',masi:{...data.market.masi,asof:'2026-10-07'}};data.symbols.MRL.asof=asof;
   const before=structuredClone(data);
   result=api.localAnswer('PER MRL',data,'MASI');
   assert.equal(result.text.includes('différente de la dernière clôture du marché'),asof!=='2026-10-07');
