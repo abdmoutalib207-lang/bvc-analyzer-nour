@@ -69,6 +69,14 @@ def market_panel(report):
                    for kind,value in (('up',up),('flat',flat),('down',down)))
     detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
     official=overview.get('official_reference') or {}
+    historical=report.get('volume_history_check') or {}
+    if historical:
+        reference=historical.get('reference')
+        summary += ('<section class="panel"><h2>Historique des volumes</h2><p>'
+            + (f'Export daté du {esc(reference["session"])} : {fmt(reference["transactions"],0)} transactions sur le marché central. '
+               if reference else 'La séance courante n’est pas couverte par l’export historique. ')
+            + 'Document fourni par l’utilisateur et relu ; les écarts fournisseurs sont conservés. '
+              '<a href="historique-volumes.html">Consulter les séances, les marchés et les contrôles</a>.</p></section>')
     kpis = ''.join(f'<div class="kpi"><span>{name}</span><strong>{value}</strong></div>' for name,value in (
         ('Volume global · référence officielle · MDH' if official else 'Volume annoncé · non confirmé · MDH' if detail_only else 'Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
         ('Unités comptant · référence officielle' if official else 'Titres annoncés · non confirmés' if detail_only else 'Titres échangés',fmt(overview.get('shares'),0)),

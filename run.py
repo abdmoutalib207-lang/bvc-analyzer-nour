@@ -10,6 +10,7 @@ from nour.engine import build_report
 from nour.issuer_status import apply_status
 from nour.market_integrity import visible_integrity, memory_summary
 from nour.market_reference import apply_market_reference
+from nour.volume_history import checked_history, compare_current, history_page
 from nour.site import build_site
 from nour.briefing import create_briefing
 from nour.market import atomic_json
@@ -46,6 +47,17 @@ def main():
         if key in overview:
             overview[key]=apply_market_reference(overview[key],reference)
     synchronize_market(report, overview.get('current', {}))
+    volume_history_path=ROOT/'data/volume_history.json'
+    if volume_history_path.exists():
+        volume_history=checked_history(json.loads(volume_history_path.read_text()))
+        report['volume_history']={**volume_history,'records':[
+            row for row in volume_history['records'] if row['session']<=args.asof]}
+        # A documentary comparison never changes source counters or candles.
+        report['volume_history_check']=compare_current(volume_history,report['market_overview'])
+        atomic_json(ROOT/'web/volume-history.json',volume_history)
+        atomic_json(ROOT/'web/volume-history-check.json',report['volume_history_check'])
+        (ROOT/'web/historique-volumes.html').write_text(
+            history_page(volume_history,report['volume_history_check']),encoding='utf-8')
     atomic_json(ROOT/'web/market-reference.json',report['market_overview'].get('official_reference') or
                 {'status':'not_available','asof':report['market_overview'].get('asof')})
     history_path = ROOT/'data/masi_history.json'

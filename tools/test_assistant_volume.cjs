@@ -57,7 +57,7 @@ assert.ok(result.text.includes('couverture non confirmée · 0 / — lignes'));
 assert.ok(!result.text.includes('totaux concordants'));
 checked++;
 result=api.localAnswer('Volume global MASI le 01/01/2023',absent,'MASI');
-assert.ok(result.text.includes('Le volume global à cette date n’est pas disponible'));
+assert.ok(result.text.includes('Le volume global au 2023-01-01 n’est pas disponible'));
 assert.ok(!result.text.includes('Volume global :'));
 assert.ok(!result.text.includes('totaux concordants'));
 checked++;
@@ -132,5 +132,22 @@ for(const shares of [undefined,null,0,1]){
   assert.ok(!old.text.includes('3\u202f671 contrats'),old.text);
   const moved=structuredClone(data);moved.market.asof='2026-10-20';
   assert.ok(!api.localAnswer('Combien de contrats MASI ?',moved,'MASI').text.includes('3\u202f671 contrats'));
+}
+{
+  const data=structuredClone(published);
+  data.volume_history=JSON.parse(fs.readFileSync('data/volume_history.json','utf8'));
+  const before=structuredClone(data);
+  const old=api.localAnswer('Combien de transactions MASI le 16/10/2026 ?',data,'MASI');
+  assert.ok(old.text.includes('3\u202f114 transactions'),old.text);
+  assert.ok(old.text.includes('Marché central'),old.text);
+  assert.ok(!old.text.includes('3\u202f671 transactions'),old.text);
+  assert.ok(old.sources.some(s=>s.url==='historique-volumes.html'));
+  const oct12=api.localAnswer('Quel volume global MASI le 12/10/2026 ?',data,'MASI');
+  assert.ok(oct12.text.includes('52\u202f945\u202f136,05 MAD'),oct12.text);
+  assert.ok(oct12.text.includes('199\u202f770 titres échangés'),oct12.text);
+  const absent=api.localAnswer('Quel volume global MASI le 18/09/2026 ?',data,'MASI');
+  assert.ok(absent.text.includes('n’est pas disponible'),absent.text);
+  assert.ok(!absent.text.includes('Export historique daté'),absent.text);
+  assert.deepEqual(data,before);checked+=3;
 }
 console.log(`Assistant volume: ${checked} stable concordant/discrepant/incomplete/unavailable fixtures, zero vs missing amounts, dated scope, source preservation and no false concordance passed.`);

@@ -78,6 +78,7 @@ def build_data(report, briefings=None, history_files=None):
     result = clean({'schema_version': VERSION, 'analysis_date': report['analysis_date'],
         'snapshot_updated': report.get('snapshot_updated'), 'score_version': report.get('score_version'),
         'market': deepcopy(report.get('market_overview') or {}),
+        'volume_history': deepcopy(report.get('volume_history') or {}),
         'market_volume_audit': deepcopy(report.get('market_volume_audit') or {}),
         'cross_source_volume_audit': integrity_summary(report.get('cross_source_volume_audit')),
         'error_memory_summary': deepcopy(report.get('error_memory_summary') or {}),

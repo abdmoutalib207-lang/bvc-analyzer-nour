@@ -198,7 +198,16 @@
         if(dates.length){for(const {date} of dates)lines.push(Object.hasOwn(h,date)?`Clôture du ${date} : ${fmt(h[date],'points')}.`:`Aucune clôture MASI disponible au ${date}. Aucun cours n’est interpolé.`);if(/plus haut|plus bas|ouverture|ohlc|bougie/.test(q))lines.push('Les extrêmes et l’ouverture MASI à ces dates ne sont pas fournis par cet historique de clôtures.');}
         else if(close)lines.push(`Clôture : ${fmt(m.masi?.value,'points')} · variation ${fmt(m.masi?.change_pct,'%')}.`);
         if(volume){
-          if(dates.some(d=>d.date!==m.asof))lines.push('Le volume global à cette date n’est pas disponible dans cet export.');
+          const history=data.volume_history||{}, requested=dates.length?dates.map(d=>d.date):[m.asof];
+          const dated=history.source?.status==='user_supplied_export_reviewed'?
+            requested.map(d=>(history.records||[]).find(r=>r.session===d&&r.market==='Marché central'&&d<=data.analysis_date)):[];
+          for(const r of dated.filter(Boolean)){
+            lines.push(`Export historique daté · ${r.session} · Marché central : ${fmt(Number(r.turnover_mad),'MAD')} · ${fmt(r.shares,'titres échangés')} · ${fmt(r.transactions,'transactions')}. Document fourni par l’utilisateur et relu ; origine réseau non attestée. Transferts et opérations sur capital exclus. Ce total ne valide pas la décomposition par titre.`);
+            sources.push({label:`Historique des volumes · ${r.session} · ligne ${r.row}`,url:'historique-volumes.html'});
+          }
+          if(dates.some(d=>d.date!==m.asof)){
+            for(const {date} of dates)if(!(dated.find(r=>r?.session===date)))lines.push(`Le volume global au ${date} n’est pas disponible dans cet export.`);
+          }
           else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${Number.isFinite(m.shares)?fmt(m.shares,official?'unités comptant':'titres échangés'):'titres échangés : indisponible'} · ${fmt(m.transactions,'transactions')}.`);
             if(m.transactions_quality)lines.push(`Compteur fournisseur conservé : ${fmt(m.transactions_reported)} ; date propre non attestée. Il n’est pas validé pour cette séance et n’est pas rattaché à une autre date par déduction.`);
             if(official){const o=official;lines.push(`Référence officielle du ${o.asof} : ${fmt(o.contracts,'contrats')} · capture fournie par l’utilisateur et revue manuellement. Collecte officielle automatique non établie.`);sources.push({label:'Bourse de Casablanca · volumes au comptant',url:o.source_url});}

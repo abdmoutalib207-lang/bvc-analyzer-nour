@@ -29,6 +29,7 @@ on:
       - 'web/logos/**'
       - 'data/company_logos.json'
       - 'data/market_reference.json'
+      - 'data/volume_history.json'
       - 'vendor/ecc/**'
       - '.agents/**'
       - '.claude/**'
