@@ -19,7 +19,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await request.fulfill({status:200,contentType:'application/json',
           body:fs.readFileSync(path.join(__dirname,'../web/assistant-config.json'),'utf8')});
       });
-      const errors=[];const page=await context.newPage();
+      const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
       for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
@@ -34,6 +34,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.locator('[data-market-row] .company-logo img').first().evaluate(img=>img.closest('.company-logo').classList.remove('is-missing'));
           assert.ok(!(await page.locator('.market-hero').innerText()).includes('CDG'));
           const report=await (await context.request.get(new URL('report.json',base).href)).json();
+          marketReport=report;
+          if(report.market_overview?.observed_at){
+            const stamp=page.locator('.market-panel .collection-stamp time');
+            assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(report.market_overview.observed_at).getTime());
+            assert.ok((await stamp.innerText()).includes('Casablanca'));
+          }
           await page.locator('#fundamental-explorer summary').click();
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
           await page.locator('#fundamental-availability').selectOption('missing_annual');
@@ -62,6 +68,11 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
+          if(marketReport.health?.checked_at){
+            const stamp=page.locator('.issuer-quote .collection-stamp time');
+            assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(marketReport.health.checked_at).getTime());
+            assert.ok((await stamp.innerText()).includes('Casablanca'));
+          }
           const dashboard=page.locator('[data-bi-dashboard]');
           await dashboard.locator('[data-bi-filters]').waitFor();
           const cards=dashboard.locator('[data-bi-metric]');

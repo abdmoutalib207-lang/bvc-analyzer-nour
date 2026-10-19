@@ -10,7 +10,9 @@ SLOTS = {
 }
 EDITIONS = {"morning": "matin", "midday": "midi", "closing": "cloture"}
 CONTROL_SLOTS = {'15 17 * * 1-5': ('refresh', '17:15', 'Contrôle de clôture entre fournisseurs')}
-# Manual refreshes remain possible without creating additional daily cron jobs.
+HOURLY_SLOTS = {f'45 {hour} * * 1-5': ('refresh', f'{hour:02d}:45', 'Actualisation horaire')
+                for hour in (10, 11, 13, 14, 15, 16, 17)}
+# Morning and midday editions already cover 09:45 and 12:45.
 MANUAL_ONLY = {
     "refresh": ("refresh", None, "Actualisation manuelle"),
     "preclose": ("preclose", None, "Point provisoire manuel"),
@@ -28,7 +30,7 @@ def run_context(now=None, schedule="", event="local", slot="auto", started_at=No
     started = datetime.fromisoformat(started_at).astimezone(ZONE) if started_at else now
     target = None
     if event == "schedule":
-        planned = {**SLOTS, **CONTROL_SLOTS}
+        planned = {**SLOTS, **CONTROL_SLOTS, **HOURLY_SLOTS}
         if schedule not in planned:
             raise ValueError(f"Créneau planifié inconnu : {schedule}")
         selected, clock, label = planned[schedule]

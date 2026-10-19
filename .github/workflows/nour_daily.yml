@@ -43,6 +43,20 @@ on:
       timezone: 'Africa/Casablanca'
     - cron: '15 17 * * 1-5'
       timezone: 'Africa/Casablanca'
+    - cron: '45 10 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 11 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 13 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 14 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 15 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 16 * * 1-5'
+      timezone: 'Africa/Casablanca'
+    - cron: '45 17 * * 1-5'
+      timezone: 'Africa/Casablanca'
 permissions:
   contents: write
   pages: write

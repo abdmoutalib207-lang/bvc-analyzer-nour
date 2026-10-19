@@ -182,7 +182,7 @@ def runtime_panel(runtime, intraday=None):
     live = intraday or {}
     diagnostics = collection_panel(runtime.get('collection')) + provenance_panel(runtime.get('provenance'))
     return (f'<section class="panel"><span class="eyebrow">Exécution indépendante · Casablanca</span><h2>{esc(runtime.get("label"))}</h2>'
-            '<p>Créneaux lundi–vendredi : 09:45 · 12:45 · 16:00 (Casablanca). La clôture de 16h reste non confirmée tant que la collecte ne l’a pas validée. GitHub peut retarder ou manquer un déclenchement.</p>'
+            '<p>Collecte toutes les 60 minutes de 09:45 à 17:45, lundi–vendredi (Casablanca). Briefings : 09:45 · 12:45 · 16:00 ; contrôle supplémentaire à 17:15. Les actualisations horaires conservent les éditions archivées. La clôture de 16h reste non confirmée tant que la collecte ne l’a pas validée. GitHub peut retarder ou manquer un déclenchement.</p>'
             f'<p>Créneau attendu : {esc(runtime.get("scheduled_at") or "déclenchement à la demande")}.</p>'
             f'<p>Démarrage réel : {esc(runtime.get("started_at"))}{late}. Page calculée : {esc(runtime.get("built_at"))}. {link}</p>{warning}'
             f'<p>{esc(live.get("notice"))} {"Observation : " + esc(live["observed_at"]) if live.get("observed_at") else ""}</p>'
@@ -208,7 +208,7 @@ def recent_table(bars, count=40):
             + '</tbody></table></div>')
 
 
-def detail_page(item, record, fixture, style, script):
+def detail_page(item, record, fixture, style, script, collection=None):
     symbol = item["symbol"]
     bars = record["candles"]
     first = bars[0]["d"] if bars else "—"
@@ -346,7 +346,7 @@ def detail_page(item, record, fixture, style, script):
             f' · {esc(v.get("validation_status"))}<br>{esc(v.get("note"))}</li>'
             for k,v in evidence.items())+'</ul></details>')
     body = (header('../index.html', fixture["snapshot_updated"])
-            + '<main class="issuer-page">' + issuer_heading(item, record)
+            + '<main class="issuer-page">' + issuer_heading(item, record, collection)
             + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
             + f'<section class="panel chart-workspace" id="graphique" data-chart-symbol="{esc(symbol)}"><div class="section-heading"><div><span class="eyebrow">Historique graphique · {esc(symbol)}</span><h2>Prix & volumes</h2></div><span class="chart-frequency">1 jour · MAD · cours non ajustés</span></div><p class="panel-sub">Historique {esc(first)} → {esc(last)} · {len(bars)} séances. Pointez une séance ou choisissez un outil de tracé.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
@@ -622,7 +622,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
         if not re.fullmatch(r"[A-Z0-9]{2,5}", symbol):
             raise ValueError(f"Unsafe symbol: {symbol!r}")
         rec = fixture["records"][symbol]
-        (output / "titres" / f"{symbol}.html").write_text(detail_page(by_symbol[symbol], rec, fixture, style, script), encoding="utf-8")
+        (output / "titres" / f"{symbol}.html").write_text(detail_page(by_symbol[symbol], rec, fixture, style, script, report.get('health')), encoding="utf-8")
         with (output / "historique" / f"{symbol}.csv").open("w", encoding="utf-8-sig", newline="") as out:
             writer = csv.writer(out, delimiter=";")
             writer.writerow(["Séance", "Ticker", "Ouverture", "Plus Haut", "Plus Bas", "Clôture", "Titres Échangés", "Contrôle OHLC"])

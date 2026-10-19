@@ -30,3 +30,8 @@ utiliser le logo d’une société étrangère simplement parce qu’un fourniss
 relie au ticker local. Une image non confirmée laisse le sigle affiché.
 Les miniatures TradingView de 18 px peuvent être des pictogrammes génériques :
 utiliser les variantes détaillées explicitement déclarées et vérifier leur rendu.
+
+Le 19 octobre 2026, la collecte Nour passe à chaque heure de 09:45 à 17:45
+en jours ouvrés (Africa/Casablanca), avec les éditions 09:45, 12:45, 16:00
+et le contrôle 17:15 conservés. Une actualisation horaire ne remplace pas les
+briefings archivés ; un relevé provisoire ne devient pas une clôture.

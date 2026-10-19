@@ -15,7 +15,7 @@ import run
 from nour.briefing import create_briefing
 from nour.engine import build_report
 from nour.market import capture_intraday, import_session
-from nour.runtime import CONTROL_SLOTS, EDITIONS, SLOTS, ZONE, run_context, visible_intraday
+from nour.runtime import CONTROL_SLOTS, EDITIONS, HOURLY_SLOTS, SLOTS, ZONE, run_context, visible_intraday
 from nour.site import briefing_page, home_page
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,11 +32,27 @@ class RuntimeContracts(unittest.TestCase):
                 'Ouverture': 101, 'PlusHaut': 103, 'PlusBas': 98,
                 'QteEchangee': shares, 'Volumes': shares*100}
 
-    def test_three_exact_local_slots_and_three_editions(self):
+    def test_hourly_local_collection_and_three_preserved_editions(self):
         workflow = (ROOT/'.github/workflows/nour_daily.yml').read_text()
         pairs = re.findall(r"cron: '([^']+)'\s+timezone: '([^']+)'", workflow)
-        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in (*SLOTS, *CONTROL_SLOTS)])
-        self.assertEqual(len(pairs), 4)
+        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in (*SLOTS, *CONTROL_SLOTS, *HOURLY_SLOTS)])
+        self.assertEqual(len(pairs), 11)
+        clocks=[value[1] for value in (*SLOTS.values(), *CONTROL_SLOTS.values(), *HOURLY_SLOTS.values())]
+        self.assertEqual(len(clocks),len(set(clocks)))
+        self.assertEqual(sorted(clock for clock in clocks if clock.endswith(':45')),
+                         [f'{hour:02d}:45' for hour in range(9,18)])
+        for cron, (slot, clock, _) in HOURLY_SLOTS.items():
+            hour,minute=map(int,clock.split(':'))
+            ctx=run_context(datetime(2026,10,19,hour,minute,tzinfo=ZONE),cron,'schedule')
+            self.assertEqual(ctx['slot'],'refresh')
+            self.assertEqual(ctx['delay_minutes'],0)
+            self.assertNotIn(ctx['slot'],EDITIONS)
+        delayed=run_context(datetime(2026,10,19,12,30,tzinfo=ZONE),'45 10 * * 1-5','schedule')
+        self.assertEqual(delayed['target_time'],'10:45')
+        self.assertEqual(delayed['delay_minutes'],105)
+        self.assertTrue(delayed['late'])
+        overnight=run_context(datetime(2026,10,19,1,0,tzinfo=ZONE),'45 17 * * 1-5','schedule')
+        self.assertEqual(overnight['edition_for'],'2026-10-16')
         control=run_context(datetime(2026,10,19,17,15,tzinfo=ZONE),'15 17 * * 1-5','schedule')
         self.assertEqual(control['slot'],'refresh')
         self.assertNotIn(control['slot'],EDITIONS)

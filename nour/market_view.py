@@ -3,6 +3,7 @@ import html
 import json
 from .chart_view import navigation, explorer_footer
 from .report_contracts import volume_reconciliation
+from .collection_view import collection_stamp
 
 
 def fmt(v, digits=2):
@@ -43,7 +44,7 @@ def market_panel(report):
     provisional = overview.get('status') == 'intraday'
     label = 'Point de séance provisoire' if provisional else 'Dernière clôture disponible'
     summary = (f'<section class="panel market-panel"><div class="focus-header"><div><span class="eyebrow">MASI · Casablanca</span>'
-               f'<h2>{label} · {esc(overview.get("asof"))}</h2><div class="index-value">{fmt(index.get("value"))}<small>points</small></div></div>'
+               f'<h2>{label} · {esc(overview.get("asof"))}</h2>{collection_stamp(overview.get("observed_at"), "Relevé marché collecté")}<div class="index-value">{fmt(index.get("value"))}<small>points</small></div></div>'
                f'<div class="index-change {tone}">{fmt(change)} %<small>{fmt(index.get("variation_points"))} points</small></div></div>'
                '<div class="market-stats">'
                f'<div><span>Clôture précédente</span><strong>{fmt(index.get("veille"))}</strong></div>'

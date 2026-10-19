@@ -107,7 +107,8 @@ for(const question of ['PER TTM ADI','BPA prévisionnel ADI']){
 console.log('Assistant dossiers: 80 complete sourced summaries, all reservations, EMA20/50 and distinct ATR methods passed.');
 
 const collectionAnswer=api.localAnswer('Quand a lieu la collecte ?',data,'MASI');
-for(const slot of ['09:45','12:45','16:00'])assert.ok(collectionAnswer.text.includes(slot));
+for(const slot of ['09:45','12:45','16:00','17:15','17:45'])assert.ok(collectionAnswer.text.includes(slot));
+assert.ok(collectionAnswer.text.includes('60 minutes'));
 for(const retired of ['11:46','13:45','15:45','18:00'])assert.ok(!collectionAnswer.text.includes(retired));
 
 // Tab access must expire absolutely, survive a new page instance, and be

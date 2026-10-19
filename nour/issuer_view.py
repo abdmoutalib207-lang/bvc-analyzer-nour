@@ -1,9 +1,10 @@
 """Issuer navigation and dated financial visuals, rendered from Nour facts only."""
 from .bi_view import esc, finite, number
 from .company_identity import company_logo
+from .collection_view import collection_stamp
 
 
-def issuer_heading(item, record):
+def issuer_heading(item, record, collection=None):
     history = item.get('history_readiness') or {}
     bars = record.get('candles') or []
     change = ''
@@ -25,7 +26,9 @@ def issuer_heading(item, record):
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
             '<div class="issuer-quote"><span>Dernière clôture attestée</span>'
             f'<strong>{number(item.get("price"))} <small>MAD</small></strong>{change}'
-            f'<p>Séance {esc(item.get("asof"))}<br><a href="../sources.html#marche">Sources du cours</a></p></div></div>'
+            f'<p>Séance {esc(item.get("asof"))}<br><a href="../sources.html#marche">Sources du cours</a></p>'
+            + collection_stamp((collection or {}).get('checked_at'), 'Dernière tentative de collecte' if (collection or {}).get('result')=='error' else 'Dernier passage du collecteur')
+            + '</div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
 
 
