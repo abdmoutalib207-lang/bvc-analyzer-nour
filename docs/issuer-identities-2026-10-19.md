@@ -13,6 +13,11 @@ de l’émetteur. BMCI, SanlamAllianz Maroc, TotalEnergies et Managem utilisent 
 fichiers des sites officiels locaux. Holcim Maroc utilise le logo de couverture
 du rapport AMMC 2025, avec référence à la page, empreinte du PDF et rectangle
 d’extraction. Une image d’un émetteur étranger proposée pour LHM a été rejetée.
+Les 73 fichiers TradingView utilisent les variantes détaillées `--big.svg`
+déclarées dans chaque fiche : les pictogrammes génériques de 18 px ont été
+écartés après revue visuelle. La marque Hikma de PPM est confirmée par la page
+officielle Promopharm Maroc et son communiqué de résultats 2025 ; cette portée
+de marque groupe est explicitement indiquée dans les crédits.
 
 `data/company_logos.json` conserve les URL publiques, dates, identités, tailles,
 empreintes et fichiers. Les SVG sont contrôlés contre scripts, événements,

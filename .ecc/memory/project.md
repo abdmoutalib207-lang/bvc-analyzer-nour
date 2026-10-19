@@ -28,3 +28,5 @@ les collecteurs, la provenance exacte et les réserves dans les données. Les
 logos servent à identifier les sociétés, sans partenariat implicite. Ne jamais
 utiliser le logo d’une société étrangère simplement parce qu’un fournisseur le
 relie au ticker local. Une image non confirmée laisse le sigle affiché.
+Les miniatures TradingView de 18 px peuvent être des pictogrammes génériques :
+utiliser les variantes détaillées explicitement déclarées et vérifier leur rendu.

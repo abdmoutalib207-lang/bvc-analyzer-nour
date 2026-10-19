@@ -64,6 +64,8 @@ def validate_catalog(symbols):
             raise ValueError('Invalid logo PNG')
         if not all(str(mark.get(k) or '').startswith('https://') for k in ('source_url','image_url')):
             raise ValueError('Logo provenance is missing')
+        if 'tradingview.com' in mark['source_url'] and (mark.get('variant')!='large' or '--big.svg' not in mark['image_url']):
+            raise ValueError('A generic provider thumbnail is not a detailed company logo')
 
 
 def company_logo(symbol, prefix=''):
@@ -87,5 +89,6 @@ def logo_credits():
             'Les logos restent la propriété de leurs titulaires ; leur présence n’implique aucun partenariat.</p>'
             '<p>Références publiques : fiches des émetteurs et sites institutionnels. '
             '<a href="company-logos.json">Origine et empreinte de chaque fichier</a>.</p>'
+            + ''.join(f'<p>{escape(symbol)} : {escape(mark["brand_note"])}</p>' for symbol,mark in catalog().items() if mark.get('brand_note'))
             + (f'<p>Logo non confirmé : {escape(", ".join(missing))}. Le sigle est affiché à la place.</p>' if missing else '')
             + '</details>')
