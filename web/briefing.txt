@@ -353,27 +353,27 @@ AMMC · 2026-10-15 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-19T15:05:31.911470+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-19T15:55:16.523664+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 706,00points · 0,61 %
+7 726,72points · 0,88 %
 
-Dernière observation source2026-10-19T14:41:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-19T15:41:37+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 955,17points · -0,09 %
+52 091,24points · 0,17 %
 
-Dernière observation source2026-10-19T14:41:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-19T15:41:37+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
-7 834,06points · -1,54 %
+7 868,05points · -1,11 %
 
-Dernière observation source2026-10-19T14:41:15+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
+Dernière observation source2026-10-19T15:21:15+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
 
 Nikkei 225
 
@@ -385,47 +385,47 @@ Risque et devises
 
 USD/MAD
 
-9,7891MAD / USD · 0,40 %
+9,7861MAD / USD · 0,37 %
 
-Dernière observation source2026-10-19T15:05:20+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-19T15:55:09+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9720MAD / EUR · 0,21 %
+10,9690MAD / EUR · 0,18 %
 
-Dernière observation source2026-10-19T15:04:52+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-19T15:54:48+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-17,88points · -10,56 %
+17,50points · -12,46 %
 
-Dernière observation source2026-10-19T14:41:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-19T15:20:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,93points · 0,15 %
+102,00points · 0,21 %
 
-Dernière observation source2026-10-19T15:01:20+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-19T15:41:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 163,20USD / once troy · -0,43 %
+4 162,70USD / once troy · -0,44 %
 
-Dernière observation source2026-10-19T15:05:19+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-19T15:55:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-108,26USD / baril · -1,46 %
+108,45USD / baril · -1,28 %
 
-Dernière observation source2026-10-19T15:05:20+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-19T15:55:10+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,54USD / livre · -0,53 %
+6,58USD / livre · 0,03 %
 
-Dernière observation source2026-10-19T15:05:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-19T15:55:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -436,6 +436,14 @@ Dernière observation source2026-10-19T14:35:39+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://www.financialafrik.com/2026/10/19/zlecaf-nationalismes-panafricanisme-et-populisme-lafricain-aime-t-il-lafricain/] ZLECAf, nationalismes, panafricanisme et populisme : l’Africain aime-t-il l’Africain ? ↗
+
+Financial Afrik · 2026-10-19T15:35:36+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Iraqs-October-Oil-Exports-Top-34-Million-Bpd-Nearing-Pre-War-Levels.html] Iraq's October Oil Exports Top 3.4 Million Bpd, Nearing Pre-War Levels ↗
+
+OilPrice · 2026-10-19T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Gas-Prices/Wright-Says-Gas-Prices-Peaked-As-Brent-Holds-Above-108.html] Wright Says Gas Prices Peaked As Brent Holds Above $108 ↗
 
@@ -460,14 +468,6 @@ OilPrice · 2026-10-19T13:30:00+00:00 · International · Matières premières �
  [https://oilprice.com/Latest-Energy-News/World-News/Qatari-LNG-Cargo-Heads-Through-Red-Sea-to-Europe-in-Rare-Suez-Run.html] Qatari LNG Cargo Heads Through Red Sea to Europe in Rare Suez Run ↗
 
 OilPrice · 2026-10-19T13:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/19/senegal-senelec-lexigence-de-transparence-et-de-performance-au-service-de-linteret-general/] Sénégal : Senelec, l’exigence de transparence et de performance au service de l’intérêt général ↗
-
-Financial Afrik · 2026-10-19T13:19:45+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/19/droit-des-affaires-au-burundi-demo-horizon-lf-et-alpha-justice-chambers-fusionnent/] Droit des affaires : au Burundi, Demo Horizon LF et Alpha Justice Chambers fusionnent ↗
-
-Financial Afrik · 2026-10-19T12:32:57+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -511,6 +511,14 @@ Financial Afrik · 2026-10-19T12:17:19+00:00 · Maroc · Économie · alerte non
 
 Financial Afrik · 2026-10-18T11:18:58+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://www.financialafrik.com/2026/10/19/zlecaf-nationalismes-panafricanisme-et-populisme-lafricain-aime-t-il-lafricain/] ZLECAf, nationalismes, panafricanisme et populisme : l’Africain aime-t-il l’Africain ? ↗
+
+Financial Afrik · 2026-10-19T15:35:36+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Iraqs-October-Oil-Exports-Top-34-Million-Bpd-Nearing-Pre-War-Levels.html] Iraq's October Oil Exports Top 3.4 Million Bpd, Nearing Pre-War Levels ↗
+
+OilPrice · 2026-10-19T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Gas-Prices/Wright-Says-Gas-Prices-Peaked-As-Brent-Holds-Above-108.html] Wright Says Gas Prices Peaked As Brent Holds Above $108 ↗
 
 OilPrice · 2026-10-19T15:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -518,12 +526,4 @@ OilPrice · 2026-10-19T15:00:00+00:00 · International · Matières premières �
  [https://oilprice.com/Latest-Energy-News/World-News/Mozambique-Pitches-Sasol-and-ROMPCO-on-250-Million-Gas-Project.html] Mozambique Pitches Sasol and ROMPCO on $250 Million Gas Project ↗
 
 OilPrice · 2026-10-19T14:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/19/entretien-avec-paul-sodokin-directeur-du-bureau-benin-de-nsia-asset-management/] Entretien avec Paul SODOKIN,  Directeur du Bureau Bénin de NSIA ASSET MANAGEMENT ↗
-
-Financial Afrik · 2026-10-19T14:13:21+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/19/algerie-la-saa-et-cnep-banque-sallient-pour-financer-et-assurer-le-renouvellement-du-parc-dautobus/] Algérie : la SAA et CNEP-Banque s’allient pour financer et assurer le renouvellement du parc d’autobus ↗
-
-Financial Afrik · 2026-10-19T13:39:54+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
