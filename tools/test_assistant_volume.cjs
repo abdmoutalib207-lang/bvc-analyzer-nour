@@ -79,4 +79,19 @@ for(const verified of [true,false]){
   assert.equal(result.text.includes('Recoupement externe non confirmé : unavailable'),!verified);
   checked++;
 }
+for(const shares of [undefined,null,0,1]){
+  const data=structuredClone(published);
+  data.market={asof:'2026-10-19',status:'intraday',turnover_mad:0,shares,transactions:103};
+  data.market_volume_audit={status:'incomplete',observed_lines:0,expected_lines:0};
+  data.cross_source_volume_audit={status:'intraday',cross_source_verified:false};
+  const before=structuredClone(data);
+  result=api.localAnswer('Quel volume global MASI ?',data,'MASI');
+  assert.ok(result.text.includes('Volume global : 0 MAD'));
+  assert.ok(result.text.includes('103 transactions'));
+  assert.ok(result.text.includes(shares==null?'titres échangés : indisponible':shares+' titres échangés'));
+  assert.ok(!result.text.includes('totaux concordants'));
+  assert.ok(!result.text.includes('montants confirmés'));
+  assert.deepEqual(data,before);
+  checked++;
+}
 console.log(`Assistant volume: ${checked} stable concordant/discrepant/incomplete/unavailable fixtures, zero vs missing amounts, dated scope, source preservation and no false concordance passed.`);

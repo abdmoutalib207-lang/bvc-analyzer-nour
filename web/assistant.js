@@ -194,7 +194,7 @@
         else if(close)lines.push(`Clôture : ${fmt(m.masi?.value,'points')} · variation ${fmt(m.masi?.change_pct,'%')}.`);
         if(volume){
           if(dates.some(d=>d.date!==m.asof))lines.push('Le volume global à cette date n’est pas disponible dans cet export.');
-          else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${fmt(m.shares,'titres échangés')} · ${fmt(m.transactions,'transactions')}.`);
+          else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${Number.isFinite(m.shares)?fmt(m.shares,'titres échangés'):'titres échangés : indisponible'} · ${fmt(m.transactions,'transactions')}.`);
             const a=data.market_volume_audit||{};lines.push(`Rapprochement des lignes de la séance : ${a.status==='matched'?'totaux concordants':a.status==='discrepancy'?'écart constaté':'couverture non confirmée'} · ${a.observed_lines??'—'} / ${a.expected_lines??'—'} lignes. Les fiches anciennes sont exclues de la somme.`);
             const x=data.cross_source_volume_audit||{};lines.push(x.cross_source_verified?`Recoupement entre deux fournisseurs ligne par ligne : montants confirmés · quantités ${x.quantities_cross_source_verified?'également confirmées':'non recoupées sur toutes les lignes'} · séance ${x.session} · contrôle ${x.observed_at}.`:`Recoupement externe non confirmé : ${x.status||'non observé'}.`);}
         }
