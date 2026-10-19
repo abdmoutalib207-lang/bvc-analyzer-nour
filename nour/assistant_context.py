@@ -156,6 +156,14 @@ def retrieve(index, symbols, question):
         if intents & {'quality', 'overview'}:
             for key in ('coverage', 'market_volume_audit', 'cross_source_volume_audit', 'error_memory_summary', 'intraday', 'score_archive'):
                 result[key] = deepcopy(index.get(key))
+            live = result.get('intraday')
+            if isinstance(live, dict):
+                quotes = live.get('quotes') or {}
+                live.update(quote_count=len(quotes), quotes_scope='selected_issuers_only',
+                            quotes={s:deepcopy(quotes[s]) for s in symbols if s in quotes})
+            memory = result.get('error_memory_summary')
+            if isinstance(memory, dict) and not re.search(r'journal|memoire|erreur|incident|recidive',q):
+                memory.pop('lessons_catalog',None)
     def size():
         return len(json.dumps(result, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode())
     query=result.get('query_result')

@@ -44,6 +44,28 @@ class Consolidation(unittest.TestCase):
         self.assertTrue(any('exceptionnels' in rule and 'normalisé' in rule for rule in context['rules']))
         self.assertEqual(retrieve(self.index, ['ADI', 'ATW'], 'Compare ADI et ATW')['intents'], ['sector'])
 
+    def test_intraday_title_context_excludes_other_quotes_and_keeps_all_reservations(self):
+        index=copy.deepcopy(self.index)
+        index['intraday']={'status':'provisional','observed_at':'2026-10-19T09:55:00Z','notice':'Observations provisoires non définitives',
+            'quotes':{s:{'price':row.get('price'),'asof':'2026-10-19','shares':100,'turnover_mad':1000,'notice':'Aucune clôture confirmée'} for s,row in index['symbols'].items()}}
+        index['error_memory_summary']={'lessons':1,'lessons_catalog':[{'title':'Règle conservée','rule':'Ne pas inventer un chiffre'}],'url':'error-memory.json'}
+        before=copy.deepcopy(index)
+        for symbol in index['symbols']:
+            context=retrieve(index,[symbol],'Synthèse complète : marché, technique, fondamentaux, risques, sources')
+            self.assertEqual(list(context['intraday']['quotes']),[symbol])
+            self.assertEqual(context['intraday']['quote_count'],len(index['symbols']))
+            self.assertEqual(context['intraday']['notice'],index['intraday']['notice'])
+            self.assertEqual(context['selected'][symbol]['fundamental']['warnings'],index['symbols'][symbol]['fundamental']['warnings'])
+            self.assertEqual(context['selected'][symbol]['fundamental']['evidence'],index['symbols'][symbol]['fundamental']['evidence'])
+            self.assertNotIn('lessons_catalog',context['error_memory_summary'])
+        self.assertEqual(index,before)
+        cases=[(['ADI'],'Synthèse complète ADI'),(['MASI'],'Qualité du marché'),(['ADI'],'Journal des erreurs et qualité')]
+        self.assertEqual(retrieve(index,['ADI'],cases[-1][1])['error_memory_summary']['lessons_catalog'],index['error_memory_summary']['lessons_catalog'])
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'intraday.json'
+            path.write_text(json.dumps({'index':index,'cases':[{'symbols':s,'question':q,'expected':retrieve(index,s,q)} for s,q in cases]},ensure_ascii=False))
+            subprocess.run(['node','tools/compare_context.mjs',str(path)],cwd=ROOT,check=True,capture_output=True)
+
     def test_pdf_pages_and_blocked_debt_remain_available(self):
         context = retrieve(self.index, ['ADI'], 'Pourquoi la dette nette est suspendue ?')
         f = context['selected']['ADI']['fundamental']

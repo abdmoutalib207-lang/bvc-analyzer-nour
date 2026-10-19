@@ -48,7 +48,11 @@ export function retrieve(index, symbols, question) {
     if(symbols.length===1&&symbols[0]==='MASI'){
       const query=queries.select(index,question);if(query)result.query_result=query;
     }
-    if(result.intents.some(i=>['quality','overview'].includes(i)))for(const key of ['coverage','market_volume_audit','cross_source_volume_audit','error_memory_summary','intraday','score_archive'])result[key]=index[key]??null;
+    if(result.intents.some(i=>['quality','overview'].includes(i))){
+      for(const key of ['coverage','market_volume_audit','cross_source_volume_audit','error_memory_summary','intraday','score_archive'])result[key]=structuredClone(index[key]??null);
+      if(result.intraday){const quotes=result.intraday.quotes||{};Object.assign(result.intraday,{quote_count:Object.keys(quotes).length,quotes_scope:'selected_issuers_only',quotes:Object.fromEntries(symbols.filter(s=>Object.hasOwn(quotes,s)).map(s=>[s,quotes[s]]))});}
+      if(result.error_memory_summary&&!/journal|memoire|erreur|incident|recidive/.test(q))delete result.error_memory_summary.lessons_catalog;
+    }
   }
   const size=()=>new TextEncoder().encode(JSON.stringify(result)).byteLength;
   const query=result.query_result;
