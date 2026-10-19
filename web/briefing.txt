@@ -1,4 +1,4 @@
-Point de marché à la demande — séance 2026-10-19
+Contrôle de clôture entre fournisseurs — séance 2026-10-19
 Préparé le 2026-10-19
 
 Lecture de séanceL’essentiel
@@ -15,7 +15,7 @@ Le relevé de marché totalise 113,96 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-19T21:01:58.427045+00:00.
+Sources du marché · relevé 2026-10-19T21:07:09.407741+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -385,7 +385,15 @@ AMMC · 2026-10-15 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-19T21:01:59.140077+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-19T21:07:10.471631+00:00 · état partial. Horodatages en UTC.
+
+Détails de collecte macro
+
+TVC:DXY : Régression ou contradiction au même horodatage ; archive conservée
+
+COMEX:GC1! : Régression ou contradiction au même horodatage ; archive conservée
+
+COMEX:HG1! : Régression ou contradiction au même horodatage ; archive conservée
 
 Indices actions
 
@@ -417,15 +425,15 @@ Risque et devises
 
 USD/MAD
 
-9,7904MAD / USD · 0,42 %
+9,7919MAD / USD · 0,43 %
 
-Dernière observation source2026-10-19T21:01:44+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-19T21:06:50+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9700MAD / EUR · 0,19 %
+10,9690MAD / EUR · 0,18 %
 
-Dernière observation source2026-10-19T20:34:48+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-19T21:04:49+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -437,7 +445,7 @@ Indice dollar
 
 101,98points · 0,20 %
 
-Dernière observation source2026-10-19T21:01:04+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Archive conservée après collecte incomplète2026-10-19T21:01:04+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
@@ -445,19 +453,19 @@ Or · futures
 
 4 157,20USD / once troy · -0,57 %
 
-Dernière observation source2026-10-19T20:59:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Archive conservée après collecte incomplète2026-10-19T20:59:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 109,55USD / baril · -0,28 %
 
-Dernière observation source2026-10-19T21:00:34+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-19T21:04:49+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
 6,58USD / livre · 0,11 %
 
-Dernière observation source2026-10-19T20:59:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Archive conservée après collecte incomplète2026-10-19T20:59:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
