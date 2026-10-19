@@ -108,7 +108,7 @@
     if(found.length<2&&!/bollinger|histogramme/.test(q))return null;
     const lines=[`Données Nour · analyse du ${data.analysis_date}.`],sources=[];
     for(const s of symbols){const r=data.symbols[s];if(!r)continue;
-      lines.push(`${s} · ${r.name} · clôture ${r.asof||'non attestée'} · source ${r.price_source||'indisponible'}.`);
+      lines.push(`${s} · ${r.name} · clôture ${r.asof||'non attestée'}.`);
       for(const m of found)lines.push(`${m.label} : ${format(value(r,m.path),m.unit)}.`);
       if(found.some(m=>m.domain==='risk'))lines.push('Risque : '+[r.market_risk?.first,r.market_risk?.last,r.market_risk?.note,r.market_risk?.tail_risk?.note].filter(Boolean).join(' · '));
       if(found.some(m=>m.domain==='technical'))lines.push('Indicateurs descriptifs sur les séances validées ; aucune prévision. Méthode : '+(r.technical?.methods?.version||'consulter la fiche')+'.');

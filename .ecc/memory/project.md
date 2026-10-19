@@ -21,3 +21,12 @@ Date : 2026-10-06. État de reprise observé : commit Nour
 Cette mémoire est un aide-mémoire, jamais une preuve autonome. Lire les tests,
 sources et réserves actuels avant d'utiliser un chiffre. Ne pas y stocker des
 conversations privées, identifiants ou clés API.
+
+Préférence d’interface confirmée le 19 octobre 2026 : alléger les mentions des
+fournisseurs de marché et centraliser les attributions dans Sources ; conserver
+les collecteurs, la provenance exacte et les réserves dans les données. Les
+logos servent à identifier les sociétés, sans partenariat implicite. Ne jamais
+utiliser le logo d’une société étrangère simplement parce qu’un fournisseur le
+relie au ticker local. Une image non confirmée laisse le sigle affiché.
+Les miniatures TradingView de 18 px peuvent être des pictogrammes génériques :
+utiliser les variantes détaillées explicitement déclarées et vérifier leur rendu.

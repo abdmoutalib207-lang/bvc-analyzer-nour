@@ -53,6 +53,11 @@
     const link=(label,url)=>sources.push({label,url});
     const definition=key=>{if(defs[key])lines.push(defs[key]);};
     const rows=symbols.filter(s=>data.symbols?.[s]).map(s=>data.symbols[s]);
+    if(!/synthese|resume|complet|fondament|compare|comparaison/.test(q)&&/(?:source|origine|provenance|fournisseur).*(?:cours|marche|masi|cotation)|(?:cours|marche|masi).*(?:source|origine|provenance|fournisseur)|d.ou viennent.*cours/.test(q)){
+      if(rows.length)for(const row of rows)lines.push(`${row.symbol} · cours du ${row.asof||'non daté'} · origine : ${row.price_source||'non renseignée'}.`);
+      else lines.push(`Marché · séance ${data.market?.asof||'non datée'} · origine : ${data.market?.source||'non renseignée'}.`);
+      link('Sources du marché et contrôles','sources.html#marche');return result('quality');
+    }
     const title=row=>{lines.push(`${row.symbol} · ${row.name} · séance ${row.asof||'non datée'} · statut ${row.decision||'indisponible'}.`);link(`Fiche ${row.symbol}`,row.url);
       if(row.asof!==(data.market?.asof||data.analysis_date))lines.push('La dernière séance du titre diffère de la dernière clôture du marché; aucun chiffre n’est présenté comme une nouvelle séance.');};
     const horizon=q.match(/\b(\d+)\s*(?:seances?|jours?)\b/);

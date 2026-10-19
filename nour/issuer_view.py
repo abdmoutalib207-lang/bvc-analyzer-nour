@@ -1,5 +1,6 @@
 """Issuer navigation and dated financial visuals, rendered from Nour facts only."""
 from .bi_view import esc, finite, number
+from .company_identity import company_logo
 
 
 def issuer_heading(item, record):
@@ -19,12 +20,12 @@ def issuer_heading(item, record):
         ('historique', 'Historique & sources')))
     return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
             f'<div class="eyebrow">{esc(record.get("sector") or "Action cotée")} · {esc(item["symbol"])}</div>'
-            f'<h1>{esc(record["name"])}</h1><p>{esc(history.get("label"))}</p>'
+            f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div><p>{esc(history.get("label"))}</p>'
             f'<span class="status {esc(item["decision"])}">{esc(item["decision"])}</span>'
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
             '<div class="issuer-quote"><span>Dernière clôture attestée</span>'
             f'<strong>{number(item.get("price"))} <small>MAD</small></strong>{change}'
-            f'<p>Séance {esc(item.get("asof"))}<br>{esc(item.get("price_source"))}</p></div></div>'
+            f'<p>Séance {esc(item.get("asof"))}<br><a href="../sources.html#marche">Sources du cours</a></p></div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
 
 

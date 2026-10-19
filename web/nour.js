@@ -77,3 +77,5 @@
     }).catch(()=>{publication.textContent='manifeste absent ou d’une autre construction ; identité non confirmée';});
   }
 })();
+
+document.addEventListener?.("error",function(e){if(e.target instanceof HTMLImageElement&&e.target.closest(".company-logo"))e.target.closest(".company-logo").classList.add("is-missing");},true);

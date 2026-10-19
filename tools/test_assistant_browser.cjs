@@ -25,6 +25,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
       for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='index.html'){
+          assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
+          await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
+          await page.waitForFunction(()=>[...document.querySelectorAll('[data-market-row] .company-logo img')].every(img=>img.complete&&img.naturalWidth>0));
+          const missingLogos=await page.locator('[data-market-row] .company-logo.is-missing').count();
+          await page.locator('[data-market-row] .company-logo img').first().evaluate(img=>img.dispatchEvent(new Event('error')));
+          assert.equal(await page.locator('[data-market-row] .company-logo.is-missing').count(),missingLogos+1);
+          await page.locator('[data-market-row] .company-logo img').first().evaluate(img=>img.closest('.company-logo').classList.remove('is-missing'));
+          assert.ok(!(await page.locator('.market-hero').innerText()).includes('CDG'));
           const report=await (await context.request.get(new URL('report.json',base).href)).json();
           await page.locator('#fundamental-explorer summary').click();
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
@@ -51,6 +59,9 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.getByText('Suivi des mises à jour',{exact:true}).click();
         }
         if(route.startsWith('titres/')){
+          assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
+          assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
+          assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
           const dashboard=page.locator('[data-bi-dashboard]');
           await dashboard.locator('[data-bi-filters]').waitFor();
           const cards=dashboard.locator('[data-bi-metric]');
@@ -165,6 +176,8 @@ const shots=process.env.NOUR_SCREENSHOTS;
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
         if(route==='sources.html'){
+          assert.ok((await page.locator('#marche').innerText()).includes('CDG Capital Bourse'));
+          assert.ok((await page.locator('#logos summary').innerText()).includes('Logos des sociétés'));
           const body=await page.locator('main').innerText();
           for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','Autorité de contrôle des assurances','Office des Changes']){
             assert.ok(body.includes(name),'Missing economic source '+name);
