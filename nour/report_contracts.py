@@ -21,13 +21,13 @@ def volume_reconciliation(report, overview):
                  or (number(r.get('day_turnover_mad_actual')) or 0) > 0)]
     amounts = [number(r.get('day_turnover_mad_actual')) for r in rows]
     quantities = [number(r.get('day_shares')) for r in rows]
-    complete = bool(expected and expected == len(rows)
-                    and all(v is not None for v in amounts)
+    valid_lines = bool(rows and all(v is not None for v in amounts)
                     and all(v is not None and v == v.to_integral_value() for v in quantities)
                     and len({r.get('symbol') for r in rows if r.get('symbol')}) == len(rows))
+    complete = bool(expected and expected == len(rows) and valid_lines)
     line_total = sum((v for v in amounts if v is not None), Decimal(0)) if rows else None
     delta = line_total - total if line_total is not None and total is not None else None
-    line_shares = sum(quantities, Decimal(0)) if complete else None
+    line_shares = sum(quantities, Decimal(0)) if valid_lines else None
     shares_delta = line_shares - expected_shares if line_shares is not None and expected_shares is not None else None
     status = ('unavailable' if total is None else 'incomplete' if not complete
               else 'discrepancy' if abs(delta) > Decimal('.01') or shares_delta not in (None, 0)

@@ -17,6 +17,9 @@ La permanence opérationnelle repose sur les contrôles du dépôt :
 
 Le workflow quotidien contrôle les éditions de 09h45, 12h45 et 16h00 et ajoute
 une vérification de clôture à 17h15, heure de Casablanca, les jours ouvrés.
+Il actualise aussi la consultation chaque heure de 09h45 à 17h45, sans
+remplacer les éditions archivées. L'heure réelle de collecte est affichée
+séparément de la date de séance et de la construction des pages.
 Les contrôles de clôture ne valident pas une observation intrajournalière.
 Les horaires GitHub sont des déclenchements planifiés, pas une garantie
 d'exécution à la seconde. Les agents n'ajoutent aucun abonnement LLM ni
@@ -26,6 +29,12 @@ Une correction automatique ne porte que sur quantités et montants : les OHLC
 doivent être identiques, la séance et les titres doivent correspondre, chaque
 ligne doit concorder entre distributeurs, puis les agrégats doivent se retrouver.
 Une divergence de prix ou une source incomplète interdit l'arbitrage automatique.
+Si les listes détaillées de deux fournisseurs concordent exactement mais que
+leur agrégat annoncé diverge, les lignes peuvent être publiées dans le périmètre
+explicite `validated_title_lines`. Le rapport final doit vérifier à nouveau la
+séance, les empreintes et chaque prix, montant et quantité. Le total annoncé
+reste non confirmé, sans correction automatique ni ligne manquante inventée.
+L'incident global reste ouvert et visible dans les pages et l'assistant.
 Des fournisseurs différents peuvent partager un flux amont ; le contrôle ne
 prétend pas certifier leur indépendance ni l'intégralité du marché hors périmètre.
 

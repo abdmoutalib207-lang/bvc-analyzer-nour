@@ -46,7 +46,7 @@ def _totals(rows):
             "shares": sum(int(r["shares"]) for r in rows.values()), "quoted": len(rows)}
 
 
-def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=None, minimum=20):
+def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=None, minimum=20, allow_detail_only=False):
     """Return ``(deepcopy(fixture), audit)``; corrections are all-or-nothing.
 
     Inputs are observations, not instructions. ``overview`` is the current CDG
@@ -139,9 +139,12 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
         audit["totals"]["cdg_overview"] = {"turnover_mad": str(expected_amount),
                                                  "shares": int(expected_shares), "quoted": expected_count}
         audit["totals"]["overview"] = copy.deepcopy(audit["totals"]["cdg_overview"])
-        if expected_count != len(candidates):
+        aggregate_match = (expected_count == len(candidates)
+                           and _same_amount(Decimal(totals['turnover_mad']), expected_amount)
+                           and totals['shares'] == expected_shares)
+        if expected_count != len(candidates) and not allow_detail_only:
             return refuse("Nombre de titres échangés différent de la largeur CDG", "incomplete")
-        if not _same_amount(Decimal(totals["turnover_mad"]), expected_amount) or totals["shares"] != expected_shares:
+        if not aggregate_match and not allow_detail_only:
             return refuse("Sommes détaillées CDG différentes des agrégats de séance")
 
         # Validate the retained universe, every candle and every day field before
@@ -197,7 +200,7 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
 
         if not isinstance(secondary, dict) or secondary.get("status") != "ok":
             audit["status"] = "unavailable" if not isinstance(secondary, dict) or secondary.get("status") in ("unavailable", "error", "timeout") else "incomplete"
-            audit["publication_safe"] = audit["internal_match"]
+            audit["publication_safe"] = audit["internal_match"] and aggregate_match
             audit["notices"].append("Second fournisseur indisponible : aucun rapprochement multisource validé ; aucune correction autorisée.")
             if isinstance(secondary, dict):
                 audit["providers"].append({k: secondary.get(k) for k in ("provider", "status", "source_url")})
@@ -250,8 +253,10 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
         audit["totals"]["secondary"] = {"turnover_mad": str(secondary_total), "quoted": len(other),
                                                  "shares": sum(int(r["shares"]) for r in other.values()) if quantity_count == len(other) else None,
                                                  "quantity_rows": quantity_count}
-        if not _same_amount(secondary_total, expected_amount):
+        if not _same_amount(secondary_total, expected_amount) and not allow_detail_only:
             return refuse("Somme monétaire secondaire différente de l'agrégat de séance")
+        if not aggregate_match and (quantity_count != len(candidates) or proposed):
+            return refuse("Écart agrégé : toutes les quantités doivent être recoupées et aucune correction automatique n'est autorisée", "incomplete")
         for correction in proposed:
             before,after=correction['before'],correction['after']
             quantity_changed=(before['candle_shares']!=after['candle_shares'] or before['day_shares']!=after['day_shares'])
@@ -274,6 +279,15 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
         audit["corrections"] = proposed
         audit["totals"]["retained_after"] = copy.deepcopy(totals)
         audit.update(status="reconciled" if proposed else "matched", publication_safe=True, internal_match=True)
+        if not aggregate_match:
+            audit.update(status='detail_matched', publication_scope='validated_title_lines', aggregate_match=False,
+                         validated_lines={s:{'price':str(c['price']), 'shares':int(c['shares']),
+                                             'turnover_mad':str(c['amount'])} for s,c in candidates.items()})
+            audit['refusals'].append({'code':'reported_aggregate_mismatch', 'reason':'Total annoncé non confirmé ; seules les lignes détaillées sont recoupées',
+                                      'fields':['shares','turnover_mad','lines'],
+                                      'before':{'shares':int(expected_shares),'turnover_mad':str(expected_amount),'lines':expected_count},
+                                      'observed':{'shares':totals['shares'],'turnover_mad':totals['turnover_mad'],'lines':totals['quoted']}})
+            audit['notices'].append('Total global annoncé non confirmé. Publication limitée aux titres recoupés ligne par ligne, sans modifier les agrégats annoncés ni inventer le titre manquant.')
         return updated, audit
     except (ValueError, TypeError, KeyError, InvalidOperation, OverflowError) as exc:
         return refuse(f"Contrôle incomplet ou invalide : {exc}", "incomplete")

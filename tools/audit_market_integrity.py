@@ -8,20 +8,22 @@ from urllib.parse import urlsplit
 from urllib.request import Request,urlopen
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from nour.report_contracts import volume_reconciliation
+from nour.market_integrity import validated_detail_scope
 
 
 def audit_market_integrity(report):
     overview=report.get('market_overview') or {}
     internal=volume_reconciliation(report,overview)
     cross=report.get('cross_source_volume_audit') or {}
+    detail_valid=validated_detail_scope(report,cross)
     failures=[]
-    if overview.get('status')=='closed' and internal['status']!='matched':
+    if overview.get('status')=='closed' and internal['status']!='matched' and not detail_valid:
         failures.append('Les montants, quantités ou lignes de la clôture ne retrouvent pas le total daté.')
     if cross.get('status') in ('conflict','incomplete','stale') or cross.get('publication_safe') is False:
         failures.append('Rapprochement externe contradictoire ou non applicable à ce snapshot.')
     claimed=cross.get('status') in ('matched','reconciled') or cross.get('cross_source_verified')
     if claimed and (cross.get('publication_safe') is not True or cross.get('cross_source_verified') is not True
-            or cross.get('internal_match') is not True or internal['status']!='matched'
+            or cross.get('internal_match') is not True or (internal['status']!='matched' and not detail_valid)
             or cross.get('session')!=overview.get('asof')
             or cross.get('validated_snapshot_sha256')!=(report.get('provenance') or {}).get('market_snapshot_sha256')):
         failures.append('Statut multisource sans preuve cohérente pour cette version.')
@@ -41,7 +43,9 @@ def audit_market_integrity(report):
                 failures.append('Deux fournisseurs et leurs empreintes ne sont pas identifiés.')
         except (KeyError,TypeError,ValueError,ArithmeticError):
             failures.append('Preuve de rapprochement incomplète.')
-    return {'status':'blocked' if failures else 'checked','failures':failures,
+    if cross.get('publication_scope')=='validated_title_lines' and not detail_valid:
+        failures.append('La preuve de publication limitée aux lignes est invalide.')
+    return {'status':'blocked' if failures else 'checked_with_reservations' if detail_valid else 'checked','failures':failures,
             'internal':internal,'cross_source_status':cross.get('status','not_observed')}
 
 

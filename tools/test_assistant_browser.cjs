@@ -27,7 +27,9 @@ const shots=process.env.NOUR_SCREENSHOTS;
         if(route==='index.html'){
           assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
           await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
-          await page.waitForFunction(()=>[...document.querySelectorAll('[data-market-row] .company-logo img')].every(img=>img.complete&&img.naturalWidth>0));
+          await page.waitForFunction(()=>[...document.querySelectorAll('[data-market-row] .company-logo img')].every(img=>img.complete));
+          const failedLogos=await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.filter(img=>img.naturalWidth===0).map(img=>({src:img.currentSrc||img.src,complete:img.complete})));
+          assert.deepEqual(failedLogos,[],'Logos non décodés sur '+base+' : '+JSON.stringify(failedLogos));
           const missingLogos=await page.locator('[data-market-row] .company-logo.is-missing').count();
           await page.locator('[data-market-row] .company-logo img').first().evaluate(img=>img.dispatchEvent(new Event('error')));
           assert.equal(await page.locator('[data-market-row] .company-logo.is-missing').count(),missingLogos+1);

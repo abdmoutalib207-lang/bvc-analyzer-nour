@@ -134,6 +134,7 @@
     }
     if(/journal.*erreurs?|memoire.*erreurs?|erreurs?.*corrige|controle.*multisource|rapprochement.*sources/.test(q)){
       const a=data.cross_source_volume_audit||{},m=data.error_memory_summary||{};
+      if(a.publication_scope==='validated_title_lines')lines.push('Total global annoncé non confirmé : le recoupement porte uniquement sur les titres détaillés. Aucun titre manquant ni total complet ne sont reconstitués.');
       lines.push(`Contrôle des volumes : ${a.status||'non observé'} · séance ${a.session||'non datée'} · observation ${a.observed_at||'non datée'}. Montants entre fournisseurs ${a.cross_source_verified?'confirmés ligne par ligne':'non confirmés'} ; quantités ${a.quantities_cross_source_verified?'confirmées':'non confirmées'}.`);
       lines.push(`Mémoire durable : ${m.incidents??0} incidents · ${m.open??0} ouverts · ${m.resolved??0} résolus conservés · ${m.lessons??0} règles anti-récidive.`);
       for(const lesson of m.lessons_catalog||[])lines.push(lesson.title+' : '+lesson.rule);

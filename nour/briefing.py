@@ -68,6 +68,11 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
     index_current = masi.get("asof") == session and session is not None
     from .editorial import market_reading, title_reading
     editorial = market_reading(report, overview if index_current else {}, session)
+    detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
+    aggregate_notice='Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.' if detail_only else ''
+    if aggregate_notice:
+        editorial['paragraphs'].insert(0,aggregate_notice)
+        editorial['vigilance'].insert(0,aggregate_notice)
     for f in focus:
         f['reading'] = title_reading(by[f['symbol']],session,editorial['previous_session'],
                                     masi.get('change_pct') if index_current and not editorial['provisional'] else None)
@@ -99,8 +104,8 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
             "coverage": {"titles":len(report["results"]), "quoted_session":len(active),
                          "observable":sum(x["decision"]=="OBSERVABLE" for x in active)},
             "index":masi if index_current else None,
-            "market_summary":closing_summary(overview) if index_current and overview else None,
+            "market_summary":((aggregate_notice+' ' if aggregate_notice else '')+closing_summary(overview)) if index_current and overview else None,
             "index_notice":None if index_current else "MASI non confirmé à la date de la dernière séance : valeur archivée écartée du briefing.",
             "focus":focus,"news":news,"news_role":"veille uniquement", "editorial":editorial,
             "context_news":context,"macro":macro,"fundamental_coverage":{"referenced":fundamental_count,"titles":len(report['results'])},
-            "limitations":"Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."}
+            "limitations":(aggregate_notice+' ' if aggregate_notice else '')+"Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés."}

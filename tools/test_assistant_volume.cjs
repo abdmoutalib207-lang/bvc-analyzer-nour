@@ -94,4 +94,18 @@ for(const shares of [undefined,null,0,1]){
   assert.deepEqual(data,before);
   checked++;
 }
+{
+  const data=structuredClone(published);
+  data.market={asof:'2026-10-19',status:'closed',turnover_mad:544.03,shares:41};
+  data.market_volume_audit={status:'incomplete',observed_lines:2,expected_lines:3};
+  data.cross_source_volume_audit={status:'detail_matched',publication_scope:'validated_title_lines',cross_source_verified:true,
+    quantities_cross_source_verified:true,totals:{retained_after:{quoted:2,turnover_mad:'500.03',shares:30}}};
+  const before=structuredClone(data),answer=api.localAnswer('Quel volume global MASI ?',data,'MASI');
+  assert.ok(answer.text.includes('Volume global : 544,03 MAD'));
+  assert.ok(answer.text.includes('Total global annoncé non confirmé'));
+  assert.ok(answer.text.includes('500,03 MAD'));
+  assert.ok(!answer.text.includes('totaux concordants'));
+  assert.ok(!answer.text.includes('montants confirmés'));
+  assert.deepEqual(data,before);checked++;
+}
 console.log(`Assistant volume: ${checked} stable concordant/discrepant/incomplete/unavailable fixtures, zero vs missing amounts, dated scope, source preservation and no false concordance passed.`);

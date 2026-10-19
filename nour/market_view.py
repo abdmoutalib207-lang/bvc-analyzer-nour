@@ -67,18 +67,29 @@ def market_panel(report):
     total = sum(v or 0 for v in (up,down,flat))
     bars = ''.join(f'<span class="breadth-{kind}" style="width:{(value or 0)*100/max(1,total):.2f}%"></span>'
                    for kind,value in (('up',up),('flat',flat),('down',down)))
+    detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
     kpis = ''.join(f'<div class="kpi"><span>{name}</span><strong>{value}</strong></div>' for name,value in (
-        ('Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
-        ('Titres échangés',fmt(overview.get('shares'),0)),
+        ('Volume annoncé · non confirmé · MDH' if detail_only else 'Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
+        ('Titres annoncés · non confirmés' if detail_only else 'Titres échangés',fmt(overview.get('shares'),0)),
         ('Transactions',fmt(overview.get('transactions'),0)),
-        ('Valeurs échangées',fmt(breadth.get('quoted'),0))))
+        ('Valeurs annoncées · non confirmées' if detail_only else 'Valeurs échangées',fmt(breadth.get('quoted'),0))))
     summary += (f'<div class="kpis">{kpis}</div><section class="panel"><div class="section-heading"><h2>Participation du marché</h2>'
                 f'<span class="panel-sub">Séance {esc(overview.get("asof"))} · lignes échangées recensées</span></div>'
                 f'<div class="breadth-bar" aria-hidden="true">{bars}</div><div class="breadth-legend"><span class="gain">{fmt(up,0)} hausses</span>'
                 f'<span>{fmt(flat,0)} inchangées</span><span class="loss">{fmt(down,0)} baisses</span></div></section>')
     audit = volume_reconciliation(report, overview)
     external = report.get('cross_source_volume_audit') or {}
-    if external.get('cross_source_verified') and external.get('session') == overview.get('asof'):
+    if external.get('publication_scope')=='validated_title_lines' and external.get('cross_source_verified'):
+        total=(external.get('totals') or {}).get('retained_after') or {}
+        summary += (f'<section class="panel banner" data-market-integrity="detail-only"><h2>Total global non confirmé · titres recoupés séparément</h2>'
+            f'<p>Les {esc(total.get("quoted"))} titres détaillés concordent entre deux fournisseurs : '
+            f'{fmt(float(total.get("turnover_mad",0)))} MAD et {fmt(total.get("shares"),0)} actions.</p>'
+            f'<p>Le total annoncé reste {fmt(overview.get("turnover_mad"))} MAD, {fmt(overview.get("shares"),0)} actions '
+            f'et {fmt(breadth.get("quoted"),0)} titres. Il n’est pas validé. Aucune ligne manquante n’est reconstituée.</p>'
+            f'<p>Écarts annoncé moins détaillé : {fmt(overview.get("turnover_mad",0)-float(total.get("turnover_mad",0)))} MAD ; '
+            f'{fmt(overview.get("shares",0)-total.get("shares",0),0)} actions ; {fmt(breadth.get("quoted",0)-total.get("quoted",0),0)} titre(s).</p>'
+            '<a href="market-integrity.json">Preuves et écarts</a> · <a href="error-memory.json">Journal des incidents</a></section>')
+    elif external.get('cross_source_verified') and external.get('session') == overview.get('asof'):
         summary += (f'<section class="panel" data-market-integrity="verified"><h2>Volumes recoupés entre fournisseurs</h2>'
             f'<p>Deux fournisseurs recoupés · séance {esc(external.get("session"))}. '
             'Montants et cours vérifiés ligne par ligne, avec contrôle du total. '

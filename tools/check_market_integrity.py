@@ -102,7 +102,7 @@ def main():
         try:
             lines=primary.result();secondary=secondary_future.result()
             now=datetime.now(CASABLANCA)
-            candidate,audit=reconcile_volumes(fixture,lines,overview,secondary,load(data/'source_codes.json'),now=now)
+            candidate,audit=reconcile_volumes(fixture,lines,overview,secondary,load(data/'source_codes.json'),now=now,allow_detail_only=True)
             for provider,payload in zip(audit['providers'],[lines,secondary]):
                 provider['raw_sha256']=fingerprint(payload)
                 provider['hash_kind']='canonical_observation_json_sha256'

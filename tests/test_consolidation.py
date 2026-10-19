@@ -137,7 +137,10 @@ class Consolidation(unittest.TestCase):
         row={'Symbol':codes['ADI'],'DateDernierCours':datetime.fromisoformat(bar['d']).strftime('%d/%m/%Y'),
              'Cours':bar['c'],'Ouverture':bar['o'],'PlusHaut':bar['h'],'PlusBas':bar['l'],
              'QteEchangee':quantity,'Volumes':bar['c']*quantity}
-        updated, details = import_session(fixture,[row],codes,datetime(2026,10,17,19,tzinfo=CASABLANCA),minimum=1)
+        # The publication snapshot advances; exercise a conflict after its own
+        # session closes rather than freezing the clock before newer quotes.
+        collected_at=datetime.fromisoformat(bar['d']).replace(hour=19,tzinfo=CASABLANCA)
+        updated, details = import_session(fixture,[row],codes,collected_at,minimum=1)
         conflict=details['conflicts'][0]
         self.assertEqual(conflict['retained']['v'],bar['v'])
         self.assertEqual(conflict['observed']['v'],quantity)
