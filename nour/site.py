@@ -12,6 +12,8 @@ from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .fundamental_view import panel as fundamental_explorer, export_csv as export_fundamentals_csv
 from .issuer_view import issuer_heading, financial_history, documentary_status
+from .source_view import market_sources
+from .company_identity import company_logo, logo_credits, validate_catalog
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 from .assistant import panel as assistant_panel, export as export_assistant
@@ -387,7 +389,7 @@ def home_page(fixture, report, style, script):
         tone = 'gain' if change is not None and change>0 else 'loss' if change is not None and change<0 else 'muted'
         history_link = (f'<a class="csv-button" href="historique/{esc(symbol)}.csv" download aria-label="Historique CSV de {esc(symbol)}">CSV</a>'
                         if bars else '<span class="muted">Cotation suspendue</span>' if r.get('decision') == 'SUSPENDU' else '<span class="muted">Indisponible</span>')
-        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a href="titres/{esc(symbol)}.html">{esc(symbol)}</a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
+        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a class="company-cell" href="titres/{esc(symbol)}.html">{company_logo(symbol)}<span>{esc(symbol)}</span></a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
     body = (header('index.html', (report.get('market_overview') or {}).get('asof') or fixture["snapshot_updated"])
@@ -553,6 +555,7 @@ def sector_page(report, style, script):
 
 
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
+    validate_catalog(fixture['symbols'])
     fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in rec.get('candles', [])
         if isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']]}
         for s,rec in fixture['records'].items()}}
@@ -565,6 +568,13 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
         source=assets.parent/'backend/query.cjs' if asset=='assistant-query.js' else assets/asset
         if (output / asset).resolve() != source.resolve():
             (output / asset).write_bytes(source.read_bytes())
+    if (assets/'logos').exists():
+        import shutil
+        if (output/'logos').resolve() != (assets/'logos').resolve():
+            shutil.copytree(assets/'logos', output/'logos', dirs_exist_ok=True)
+    logo_manifest = assets.parent/'data/company_logos.json'
+    if logo_manifest.exists():
+        (output/'company-logos.json').write_bytes(logo_manifest.read_bytes())
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
@@ -582,7 +592,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "sources.html").write_text(
         shell("Sources économiques marocaines",
               header("index.html", report.get("snapshot_updated") or "")
-              + catalog_page(economic_catalog).replace("</main>", monitor_html(watch_state) + "</main>")
+              + catalog_page(economic_catalog).replace("</main>", market_sources(report) + logo_credits() + monitor_html(watch_state) + "</main>")
               + "<footer>BVC Analyzer Nour · sources contextuelles non certifiantes.</footer>",
               style, script), encoding="utf-8")
     (output / "economic-sources-summary.json").write_text(

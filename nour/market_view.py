@@ -60,7 +60,7 @@ def market_panel(report):
                + (f'{esc(last[-1][0])} · MASI {fmt(last[-1][1])} points' if last else 'Aucune série disponible')
                + '</div>' + explorer_footer() + '<script type="application/json" id="masi-data">'
                + json.dumps(points).replace('<','\\u003c') + '</script></div>'
-               '<p class="fineprint">Le graphique représente les clôtures quotidiennes, pas la trajectoire intrajournalière. Les séances manquantes restent absentes. Historique initial repris de l’archive du moteur principal, dont certaines périodes viennent d’Investing.com ; nouvelles observations collectées directement par Nour auprès de CDG.</p></section>')
+               '<p class="fineprint">Le graphique représente les clôtures quotidiennes, pas la trajectoire intrajournalière. Les séances manquantes restent absentes. <a href="sources.html#marche">Origine des historiques et des observations</a>.</p></section>')
     breadth = overview.get('breadth') or {}
     up, down, flat = (breadth.get(k) for k in ('up','down','flat'))
     total = sum(v or 0 for v in (up,down,flat))
@@ -70,16 +70,16 @@ def market_panel(report):
         ('Volume échangé · MDH', fmt(overview.get('turnover_mad')/1e6 if overview.get('turnover_mad') is not None else None)),
         ('Titres échangés',fmt(overview.get('shares'),0)),
         ('Transactions',fmt(overview.get('transactions'),0)),
-        ('Valeurs échangées · source CDG',fmt(breadth.get('quoted'),0))))
+        ('Valeurs échangées',fmt(breadth.get('quoted'),0))))
     summary += (f'<div class="kpis">{kpis}</div><section class="panel"><div class="section-heading"><h2>Participation du marché</h2>'
-                f'<span class="panel-sub">Séance {esc(overview.get("asof"))} · lignes échangées de la source CDG</span></div>'
+                f'<span class="panel-sub">Séance {esc(overview.get("asof"))} · lignes échangées recensées</span></div>'
                 f'<div class="breadth-bar" aria-hidden="true">{bars}</div><div class="breadth-legend"><span class="gain">{fmt(up,0)} hausses</span>'
                 f'<span>{fmt(flat,0)} inchangées</span><span class="loss">{fmt(down,0)} baisses</span></div></section>')
     audit = volume_reconciliation(report, overview)
     external = report.get('cross_source_volume_audit') or {}
     if external.get('cross_source_verified') and external.get('session') == overview.get('asof'):
         summary += (f'<section class="panel" data-market-integrity="verified"><h2>Volumes recoupés entre fournisseurs</h2>'
-            f'<p>CDG Capital Bourse et Wafabourse · séance {esc(external.get("session"))}. '
+            f'<p>Deux fournisseurs recoupés · séance {esc(external.get("session"))}. '
             'Montants et cours vérifiés ligne par ligne, avec contrôle du total. '
             + ('Quantités également concordantes entre les deux fournisseurs.' if external.get('quantities_cross_source_verified') else 'Quantités non recoupées sur toutes les lignes.')
             + f'</p><p class="fineprint">Contrôle du {esc(external.get("observed_at"))}. L’indépendance des flux amont n’est pas attestée.</p>'
@@ -92,12 +92,12 @@ def market_panel(report):
     if audit['status'] == 'discrepancy':
         summary += (f'<div class="banner" data-volume-reconciliation="discrepancy">'
                     f'<strong>Écart de volume à vérifier · {esc(audit["asof"])}</strong> : '
-                    f'synthèse CDG {fmt(audit["cdg_turnover_mad"]/1e6)} MDH ; '
+                    f'synthèse de séance {fmt(audit["cdg_turnover_mad"]/1e6)} MDH ; '
                     f'somme des {audit["observed_lines"]} fiches de cette séance '
                     f'{fmt(audit["lines_turnover_mad"]/1e6)} MDH ; '
                     f'écart absolu {fmt(abs(audit["difference_mad"]))} DH. '
                     'Les relevés peuvent provenir de versions différentes. '
-                    'Le montant CDG reste affiché ; aucune correction des fiches n’est imposée.</div>')
+                    'Le montant de la synthèse reste affiché ; aucune correction des fiches n’est imposée.</div>')
     elif audit['status'] == 'matched':
         summary += (f'<p class="fineprint" data-volume-reconciliation="matched">'
                     f'Volume rapproché avec les {audit["observed_lines"]} fiches de la séance '
@@ -106,7 +106,7 @@ def market_panel(report):
     elif audit['status'] == 'incomplete':
         summary += ('<p class="fineprint" data-volume-reconciliation="incomplete">'
                     'Rapprochement du volume incomplet : les fiches disponibles pour cette séance '
-                    'ne permettent pas de valider le total CDG.</p>')
+                    'ne permettent pas de valider le total de séance.</p>')
     sectors = overview.get('sectors') or []
     if sectors:
         summary += '<details class="panel"><summary>Indices sectoriels de la séance</summary><div class="sector-grid">'
@@ -117,7 +117,7 @@ def market_panel(report):
         summary += '<div class="banner">Actualisation du MASI indisponible : dernière observation datée conservée.</div>'
     if not overview:
         summary += '<div class="banner">Bilan de séance indisponible : aucune valeur n’a été reconstituée.</div>'
-    summary += f'<p class="fineprint">Source : <a href="https://www.cdgcapitalbourse.ma/Bourse/market" target="_blank" rel="noopener">CDG Capital Bourse</a> · relevé {esc(overview.get("observed_at"))}. Les observations provisoires ne remplacent pas les clôtures de l’historique.</p>'
+    summary += f'<p class="fineprint"><a href="sources.html#marche">Sources du marché</a> · relevé {esc(overview.get("observed_at"))}. Les observations provisoires ne remplacent pas les clôtures de l’historique.</p>'
     return summary
 
 
@@ -131,7 +131,7 @@ def closing_summary(overview):
     if overview.get('low') is not None and overview.get('high') is not None:
         lines.append(f'Fourchette de séance : {fmt(overview["low"])} à {fmt(overview["high"])} points.')
     if breadth:
-        lines.append(f'{fmt(breadth.get("down"),0)} valeurs en baisse, {fmt(breadth.get("up"),0)} en hausse et {fmt(breadth.get("flat"),0)} inchangées parmi les {fmt(breadth.get("quoted"),0)} valeurs échangées recensées par CDG.')
+        lines.append(f'{fmt(breadth.get("down"),0)} valeurs en baisse, {fmt(breadth.get("up"),0)} en hausse et {fmt(breadth.get("flat"),0)} inchangées parmi les {fmt(breadth.get("quoted"),0)} valeurs échangées recensées.')
     if overview.get('turnover_mad') is not None:
         lines.append(f'Volume échangé : {fmt(overview["turnover_mad"]/1e6)} MDH.')
     return ' '.join(lines)

@@ -31,7 +31,7 @@
   const validURL=(url,prefix='')=>{
     if(typeof url!=='string')return null;
     if(/^https:\/\//i.test(url)){try{const u=new URL(url);return u.username||u.password?null:u.href;}catch{return null;}}
-    return /^(?:index|recherche|macro|briefing(?:-(?:matin|midi|cloture))?|cloture|actualites)\.html$/.test(url)||/^titres\/[A-Z0-9]{2,5}\.html$/.test(url)||/^historique\/[A-Z0-9]{2,5}\.csv$/.test(url)||/^(?:report|recherche|news|macro|runtime|market-integrity|error-memory)\.json$|^recherche\.csv$|^(?:briefing(?:-(?:matin|midi|cloture))?|cloture)\.txt$/.test(url)?prefix+url:null;
+    return /^sources\.html(?:#marche)?$/.test(url)?prefix+url:/^(?:index|recherche|macro|briefing(?:-(?:matin|midi|cloture))?|cloture|actualites)\.html$/.test(url)||/^titres\/[A-Z0-9]{2,5}\.html$/.test(url)||/^historique\/[A-Z0-9]{2,5}\.csv$/.test(url)||/^(?:report|recherche|news|macro|runtime|market-integrity|error-memory)\.json$|^recherche\.csv$|^(?:briefing(?:-(?:matin|midi|cloture))?|cloture)\.txt$/.test(url)?prefix+url:null;
   };
   function symbolsFor(question,data,fallback,allowFallback=true){
     let q=' '+normalize(question).replace(/[^a-z0-9]+/g,' ').trim()+' ';
@@ -196,14 +196,14 @@
           if(dates.some(d=>d.date!==m.asof))lines.push('Le volume global à cette date n’est pas disponible dans cet export.');
           else{lines.push(`Volume global : ${fmt(m.turnover_mad,'MAD')} · ${fmt(m.shares,'titres échangés')} · ${fmt(m.transactions,'transactions')}.`);
             const a=data.market_volume_audit||{};lines.push(`Rapprochement des lignes de la séance : ${a.status==='matched'?'totaux concordants':a.status==='discrepancy'?'écart constaté':'couverture non confirmée'} · ${a.observed_lines??'—'} / ${a.expected_lines??'—'} lignes. Les fiches anciennes sont exclues de la somme.`);
-            const x=data.cross_source_volume_audit||{};lines.push(x.cross_source_verified?`Recoupement CDG / Wafabourse ligne par ligne : montants confirmés · quantités ${x.quantities_cross_source_verified?'également confirmées':'non recoupées sur toutes les lignes'} · séance ${x.session} · contrôle ${x.observed_at}.`:`Recoupement externe non confirmé : ${x.status||'non observé'}.`);}
+            const x=data.cross_source_volume_audit||{};lines.push(x.cross_source_verified?`Recoupement entre deux fournisseurs ligne par ligne : montants confirmés · quantités ${x.quantities_cross_source_verified?'également confirmées':'non recoupées sur toutes les lignes'} · séance ${x.session} · contrôle ${x.observed_at}.`:`Recoupement externe non confirmé : ${x.status||'non observé'}.`);}
         }
         if(metrics.length||earnings||equity||shares||unsupported)lines.push('Le PER global du marché et son historique ne sont pas intégrés dans Nour. Les autres ratios et indicateurs techniques demandés ne sont pas disponibles pour le MASI dans cet export; aucun chiffre n’est déduit du graphique.');
         sources.push({label:'MASI · données et graphique',url:'index.html'});continue;
       }
       const row=data.symbols[s];if(!row){lines.push(`Titre ${s} absent du référentiel.`);continue;}
       const f=row.fundamental||{},latest=f.latest_report||{},ev=f.evidence||{};
-      lines.push(`${s} · ${row.name} · séance ${row.asof||'non datée'} · source ${row.price_source||'non précisée'}.`);
+      lines.push(`${s} · ${row.name} · séance ${row.asof||'non datée'}.`);
       if(row.asof!==(data.market?.asof||data.analysis_date))lines.push('Attention : dernière séance du titre différente de la dernière clôture du marché; donnée ancienne ou indisponible.');
       sources.push({label:`Fiche ${s} · ${row.asof}`,url:row.url});
       if(dates.length){
@@ -305,7 +305,7 @@
       const row=data.symbols[symbol];if(!row)continue;
       const f=row.fundamental||{},t=row.technical||{},latest=f.latest_report||{},risk=row.market_risk||{},tail=risk.tail_risk||{},liq=row.liquidity||{},guide=row.sector_guidance||{};
       lines.push(`${symbol} · ${row.name} · ${row.sector||'secteur non renseigné'}`);
-      lines.push(`Marché · séance ${row.asof||'indisponible'}\nClôture : ${fmt(row.price,'MAD')} · source ${row.price_source||'non précisée'}.\nQuantité : ${fmt(row.day_shares,'titres')} · montant échangé : ${fmt(row.day_turnover_mad_actual,'MAD')}.`);
+      lines.push(`Marché · séance ${row.asof||'indisponible'}\nClôture : ${fmt(row.price,'MAD')}.\nQuantité : ${fmt(row.day_shares,'titres')} · montant échangé : ${fmt(row.day_turnover_mad_actual,'MAD')}.`);
       lines.push(`Technique · ${t.sessions??0} séances utilisées\nRSI 14 : ${fmt(t.rsi14)} · MM20 : ${fmt(t.sma20,'MAD')} · MM50 : ${fmt(t.sma50,'MAD')} · MM200 : ${fmt(t.sma200,'MAD')}.\nEMA20 : ${fmt(t.ema20,'MAD')} · EMA50 : ${fmt(t.ema50,'MAD')}.\nMACD : ${fmt(t.macd,'MAD')} · signal : ${fmt(t.macd_signal,'MAD')}.\nBollinger 20/2 : ${fmt(t.bollinger_lower)} à ${fmt(t.bollinger_upper)} MAD.\nATR 14 Wilder : ${fmt(t.atr14_wilder,'MAD')} · ATR 14 moyenne simple : ${fmt(t.atr14,'MAD')}.\nSupport / résistance des 20 séances précédentes : ${fmt(t.support20)} / ${fmt(t.resistance20)} MAD.`);
       lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · fin de période ${f.period_end||'non renseignée'}\nPérimètre : ${f.accounting_basis||'non renseigné'} · devise ${f.currency||'non renseignée'}.\nRésultat annuel retenu : ${fmt(f.earnings_mmad,'MMAD')} · BPA : ${fmt(f.eps_mad,'MAD')}.\nPER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE de clôture : ${fmt(f.roe_pct,'%')}.\nPNB : ${fmt(f.pnb_mmad,'MMAD')} · croissance du CA : ${fmt(f.revenue_growth_pct,'%')}.\nDette nette stricte : ${fmt(f.net_debt_strict_mmad,'MMAD')} · dette nette / EBE : ${fmt(f.net_debt_ebitda)}.\nBPA : ${f.eps_denominator||'dénominateur non vérifié'}.\nVérification annuelle : ${validationLabel(f.validation_status)}.`);
       if(latest.period_end)lines.push(`Dernière publication · période ${latest.period_end}, distincte des comptes annuels\nPérimètre : ${latest.accounting_basis||'non renseigné'} · ${latest.reported_net_label||'résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)}. Le semestre n’est pas annualisé.`);
@@ -363,7 +363,7 @@
       const row=data.symbols[s];
       if(!row){lines.push(`Le titre ${s} est absent du référentiel Nour.`);continue;}
       const f=row.fundamental||{}, t=row.technical||{}, cs=row.canonical_score||{}, latest=f.latest_report||{};
-      lines.push(`${s} · ${row.name}\nClôture : ${fmt(row.price,'MAD')} · séance ${row.asof||'non datée'} · source ${row.price_source||'non précisée'}. Statut des données : ${row.decision||'indisponible'}.`);
+      lines.push(`${s} · ${row.name}\nClôture : ${fmt(row.price,'MAD')} · séance ${row.asof||'non datée'}. Statut des données : ${row.decision||'indisponible'}.`);
       if(fundamental){
         lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · ${f.accounting_basis||'périmètre non précisé'} · ${validationLabel(f.validation_status)}.\nBPA : ${fmt(f.eps_mad,'MAD')} · PER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE : ${fmt(f.roe_pct,'%')}.\nDette nette / EBITDA : ${fmt(f.net_debt_ebitda)} · PNB : ${fmt(f.pnb_mmad,'MDH')}.`);
         if(latest.period_end)lines.push(`Dernière publication : ${latest.period_end} · ${latest.accounting_basis||'périmètre non précisé'}.\n${latest.reported_net_label||'Résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)} · pages ${latest.pages||'non renseignées'}.`);

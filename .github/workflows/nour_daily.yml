@@ -26,6 +26,8 @@ on:
       - 'web/assistant.css'
       - 'web/assistant-config.json'
       - 'web/nour.css'
+      - 'web/logos/**'
+      - 'data/company_logos.json'
       - 'vendor/ecc/**'
       - '.agents/**'
       - '.claude/**'

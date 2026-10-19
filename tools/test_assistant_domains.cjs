@@ -158,5 +158,8 @@ memoryFixture.error_memory_summary={incidents:10,open:0,resolved:10,lessons:1,le
 check('Montre le journal des erreurs',r=>r.text.includes('10 résolus conservés')&&r.text.includes('Vérifier les unités.')&&r.sources.some(s=>s.url==='error-memory.json')&&r.sources.some(s=>s.url==='market-integrity.json'),'MASI',{},memoryFixture);
 memoryFixture.cross_source_volume_audit={status:'unavailable',cross_source_verified:false,quantities_cross_source_verified:false};
 check('Contrôle multisource',r=>r.text.includes('Montants entre fournisseurs non confirmés')&&!r.text.includes('confirmés ligne par ligne'),'MASI',{},memoryFixture);
+check('Quelle est la source du cours ADI ?',r=>r.text.includes(data.symbols.ADI.price_source)&&r.sources.some(s=>s.url==='sources.html#marche'));
+check('PER ADI',r=>!r.text.includes('source '+data.symbols.ADI.price_source));
+check('Fais une synthèse complète ADI : marché, technique, fondamentaux, qualité et sources',r=>r.domain!=='quality'||r.text.includes('RSI'));
 assert.ok(domains.labFilters('laboratoire 20 seances 1 % a l’achat 2 % a la vente').filters.buy===1);
 console.log(`Assistant domains: ${checked} checked answers across all ${data.knowledge.capabilities.length} capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);

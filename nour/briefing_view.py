@@ -2,6 +2,7 @@
 import html
 from .market_view import fmt
 from .editorial import numeric
+from .company_identity import company_logo
 from .macro_view import markets_html
 
 
@@ -45,12 +46,12 @@ def focus_article(item, intraday_html=''):
     reading=item.get('reading') or {};change=reading.get('change_pct');relative=reading.get('relative_masi_pp')
     tone='negative' if change is not None and change<0 else 'positive' if change is not None and change>0 else 'neutral'
     change_text=f'{fmt(change)} %' if change is not None else 'Variation comparable indisponible'
-    dated=f'Clôture {esc(item["asof"])} · {esc(reading.get("source"))} · données {esc(item["data_status"])}'
+    dated=f'Clôture {esc(item["asof"])} · données {esc(item["data_status"])}'
     metrics=(f'Support de référence {fmt(item["support"])} · borne haute {fmt(item["resistance"])} MAD · RSI {fmt(item["rsi"])} · activité {fmt(item["activity"])} ×')
     score=f'{fmt(item["score"],0)}/100' if item['score'] is not None else 'non calculable'
     news=''.join(publication(a) for a in item.get('publications',[]))
     return (f'<article class="brief-item editorial-title" id="valeur-{esc(item["symbol"])}"><div class="focus-header">'
-            f'<h3><a href="titres/{esc(item["symbol"])}.html">{esc(item["symbol"])} · {esc(item["name"])}</a></h3><strong>{fmt(item["price"])} MAD</strong></div>'
+            f'<h3><a class="company-cell" href="titres/{esc(item["symbol"])}.html">{company_logo(item["symbol"])}<span>{esc(item["symbol"])} · {esc(item["name"])}</span></a></h3><strong>{fmt(item["price"])} MAD</strong></div>'
             f'<p><span class="pill tone-{tone}">{change_text}</span></p><p class="fineprint">{dated}</p>'
             +paragraphs(reading.get('paragraphs') or [item['scenario']])
             +f'<p class="brief-levels">{esc(metrics)}</p><details><summary>Fondamentaux, sources et score descriptif</summary>'
@@ -62,7 +63,7 @@ def focus_article(item, intraday_html=''):
 
 def render_editorial(briefing, intraday_renderer):
     e=briefing.get('editorial') or {};idx=briefing.get('index') or {}
-    source=(f'<p class="fineprint">Source marché : <a href="{esc(e["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(e.get("source"))} ↗</a> · relevé {esc(e.get("observed_at"))}.</p>' if e.get('source_url') else '<p class="fineprint">Source MASI non confirmée pour cette séance.</p>')
+    source=(f'<p class="fineprint"><a href="sources.html#marche">Sources du marché</a> · relevé {esc(e.get("observed_at"))}.</p>' if e.get('source_url') else '<p class="fineprint">Source MASI non confirmée pour cette séance.</p>')
     essential=paragraphs(e.get('paragraphs') or [briefing.get('index_notice') or 'Synthèse de marché indisponible.'])
     sections=f'<section class="panel briefing-section" id="essentiel"><span class="eyebrow">Lecture de séance</span><h2>L’essentiel</h2>{essential}{source}</section>'
     ranking=[]
