@@ -44,8 +44,19 @@ c.ask('Résultat Cash Plus SA',r=>r.symbols[0]==='CASH'&&r.text.includes('Résul
 c.ask('RNPG JET S1 2026',r=>r.text.includes('91,51'));
 c.choose('ADI');
 c.ask('Et le résultat ?',r=>r.text.includes('Résultat annuel retenu')&&r.symbols[0]==='ADI'&&!r.text.includes('Contexte conservé'));
-c.ask('RSI ADI',r=>!r.text.includes('donnée ancienne ou indisponible'));
-c.ask('PER MRL',r=>r.text.includes('différente de la dernière clôture du marché')===(data.symbols.MRL.asof!==data.market.asof));
+c.ask('RSI ADI',r=>r.text.includes('RSI 14 : '+fmt(facts.symbols.ADI.technical.rsi14))&&!r.text.includes('Contexte conservé'));
+const closedSession=data.market.status==='closed'?(data.market.masi?.asof||data.market.asof):Object.keys(data.masi_history).sort().at(-1);
+c.ask('PER MRL',r=>r.text.includes('différente de la dernière clôture du marché')===(data.symbols.MRL.asof!==closedSession));
 c.ask('Et PER ZZZ ?',r=>r.text.includes('non reconnu')&&!r.text.includes('PER :'));
 c.ask('Je cherche mon mot de passe',r=>r.text.includes('Je ne reconnais pas assez précisément'));
+for(const status of ['intraday','closed']){
+  const fixture=structuredClone(data);fixture.analysis_date='2026-10-19';
+  fixture.market={status,asof:'2026-10-19',masi:{asof:'2026-10-19'}};
+  fixture.masi_history={'2026-10-16':16997.92};fixture.symbols.ADI.asof='2026-10-16';
+  const before=structuredClone(fixture),r=api.localAnswer('RSI ADI',fixture,'ADI');
+  assert.equal(r.text.includes('donnée ancienne ou indisponible'),status==='closed');
+  assert.deepEqual(fixture,before);checked++;
+  fixture.symbols.ADI.asof='2026-10-15';
+  assert.ok(api.localAnswer('RSI ADI',fixture,'ADI').text.includes('donnée ancienne ou indisponible'));checked++;
+}
 console.log(`Assistant conversations: ${checked} natural question/follow-up regressions, comparison subjects, periods, history dates, definitions, benchmark MASI and explicit context reset passed.`);

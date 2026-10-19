@@ -63,6 +63,11 @@
     });
   }
   const dateIn=question=>datesIn(question).find(d=>d.valid)?.date||null;
+  function latestClosedSession(data){
+    const market=data.market||{};
+    if(market.status==='closed')return market.masi?.asof||market.asof||null;
+    return Object.keys(data.masi_history||{}).filter(d=>dateIn(d)===d&&d<=data.analysis_date&&(!market.asof||d<market.asof)).sort().pop()||null;
+  }
   function measureFor(question){
     if(/\bc?var(?:95)?\b|value at risk|expected shortfall/.test(normalize(question)))return /\bcvar|expected shortfall/.test(normalize(question))?'CVaR':'VaR';
     const q=normalize(question),measures=[[/\bper\b|\bpe\b/,'PER'],[/\bbpa\b/,'BPA'],[/\bpb\b|p\s*\/\s*b/,'P/B'],[/\broe\b/,'ROE'],[/minoritaires/,'résultat minoritaires'],[/resultat.*total/,'résultat total'],[/rnpg|resultat.*part.*groupe/,'RNPG'],[/resultat|benefice/,'résultat'],[/pnb|produit net bancaire/,'PNB'],[/chiffre d.affaires|\bca\b/,'CA'],[/rsi/,'RSI'],[/\b(?:mm|sma)\s*(?:20|50|200)\b/,(q.match(/\b(?:mm|sma)\s*(20|50|200)\b/)||[])[0]],[/macd/,'MACD'],[/atr/,'ATR'],[/risque/,'risques'],[/beta/,'bêta'],[/correlation/,'corrélation'],[/liquidite/,'liquidité'],[/volume|quantite/,'volume'],[/bougie|ohlc/,'bougie'],[/cours|prix|cloture/,'clôture'],[/score/,'score'],[/statist/,'statistiques']];
@@ -204,7 +209,8 @@
       const row=data.symbols[s];if(!row){lines.push(`Titre ${s} absent du référentiel.`);continue;}
       const f=row.fundamental||{},latest=f.latest_report||{},ev=f.evidence||{};
       lines.push(`${s} · ${row.name} · séance ${row.asof||'non datée'}.`);
-      if(row.asof!==(data.market?.asof||data.analysis_date))lines.push('Attention : dernière séance du titre différente de la dernière clôture du marché; donnée ancienne ou indisponible.');
+      const lastClosed=latestClosedSession(data);
+      if(lastClosed&&row.asof!==lastClosed)lines.push('Attention : dernière séance du titre différente de la dernière clôture du marché; donnée ancienne ou indisponible.');
       sources.push({label:`Fiche ${s} · ${row.asof}`,url:row.url});
       if(dates.length){
         if(data.history_files?.[s])sources.push({label:`Historique OHLCV ${s}`,url:data.history_files[s].url});
