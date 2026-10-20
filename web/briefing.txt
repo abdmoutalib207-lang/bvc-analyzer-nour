@@ -1,4 +1,4 @@
-Contrôle de clôture entre fournisseurs — séance 2026-10-20
+Actualisation horaire — séance 2026-10-20
 Préparé le 2026-10-20
 
 Lecture de séanceL’essentiel
@@ -15,7 +15,7 @@ Le relevé de marché totalise 148,10 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-20T20:00:29.145628+00:00.
+Sources du marché · relevé 2026-10-20T20:09:21.068427+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -381,9 +381,17 @@ AMMC · 2026-10-20 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-20T20:00:29.946793+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-20T20:09:22.175235+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
+
+SP:SPX : Régression ou contradiction au même horodatage ; archive conservée
+
+DJ:DJI : Régression ou contradiction au même horodatage ; archive conservée
+
+CBOE:VIX : Régression ou contradiction au même horodatage ; archive conservée
+
+TVC:DXY : Régression ou contradiction au même horodatage ; archive conservée
 
 ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
 
@@ -393,13 +401,13 @@ S&P 500
 
 7 708,27points · 0,23 %
 
-Dernière observation source2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Archive conservée après collecte incomplète2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
 52 448,05points · 0,93 %
 
-Dernière observation source2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Archive conservée après collecte incomplète2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -417,9 +425,9 @@ Risque et devises
 
 USD/MAD
 
-9,7913MAD / USD · 0,01 %
+9,7908MAD / USD · 0,01 %
 
-Dernière observation source2026-10-20T20:00:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-20T20:09:11+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
@@ -431,33 +439,33 @@ VIX
 
 17,49points · -5,15 %
 
-Dernière observation source2026-10-20T19:39:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Archive conservée après collecte incomplète2026-10-20T19:39:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
 101,73points · -0,24 %
 
-Dernière observation source2026-10-20T20:00:09+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Archive conservée après collecte incomplète2026-10-20T20:00:09+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 141,30USD / once troy · -0,45 %
+4 139,00USD / once troy · -0,51 %
 
-Dernière observation source2026-10-20T20:00:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-20T20:09:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 108,79USD / baril · -0,69 %
 
-Dernière observation source2026-10-20T20:00:12+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-20T20:09:06+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
 6,61USD / livre · 0,53 %
 
-Dernière observation source2026-10-20T20:00:12+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-20T20:09:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
