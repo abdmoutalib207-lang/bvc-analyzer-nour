@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T14:30:32.571127+00:00",
+  "updated_at": "2026-10-20T15:23:03.570289+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -19,6 +19,23 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "1a181ef4f88b927b3a",
+      "title": "Industrialisation des océans : la ruée vers les fonds marins",
+      "url": "https://www.france24.com/fr/%C3%A9missions/aux-avant-postes/20261020-industrialisation-des-oc%C3%A9ans-la-ru%C3%A9e-vers-les-fonds-marins",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-20T14:04:10+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "6acf7b7cee7d0b0199",
@@ -427,6 +444,23 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "25eaa421ac8ba41aa9",
+      "title": "Germany’s Renewable Power Reform Sparks Investment Backlash",
+      "url": "https://oilprice.com/The-Environment/Global-Warming/Germanys-Renewable-Power-Reform-Sparks-Investment-Backlash.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-19T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "b7e34c6db92ae669f1",
@@ -3593,40 +3627,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "c9f5075faef278541b",
-      "title": "Minerais critiques : l’État français devient premier actionnaire d’Eramet via une augmentation du capital de 500 millions €",
-      "url": "https://www.financialafrik.com/2026/10/14/minerais-critiques-letat-francais-devient-premier-actionnaire-deramet-via-une-augmentation-du-capital-de-500-millions-e/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-14T12:32:04+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "fbc4b4c24a94716a29",
-      "title": "Aramco’s New Chinese JV Refinery Gets First Saudi Crude Cargo",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Aramcos-New-Chinese-JV-Refinery-Gets-First-Saudi-Crude-Cargo.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-14T12:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "ed8ab768f5abfc3ac6",
