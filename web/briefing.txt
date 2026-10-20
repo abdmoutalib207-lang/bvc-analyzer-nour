@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-10-19
+Briefing de mi-journée — séance 2026-10-19
 Préparé le 2026-10-20
 
 Lecture de séanceL’essentiel
@@ -343,27 +343,31 @@ AMMC · 2026-10-16 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-20T15:23:04.893264+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-20T15:50:39.811992+00:00 · état partial. Horodatages en UTC.
+
+Détails de collecte macro
+
+EURONEXT:PX1 : Régression ou contradiction au même horodatage ; archive conservée
 
 Indices actions
 
 S&P 500
 
-7 718,74points · 0,36 %
+7 718,99points · 0,37 %
 
-Dernière observation source2026-10-20T15:00:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-20T15:40:19+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 472,45points · 0,97 %
+52 480,71points · 0,99 %
 
-Dernière observation source2026-10-20T15:00:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-20T15:40:19+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
 7 865,64points · -0,03 %
 
-Dernière observation source2026-10-20T15:22:45+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
+Archive conservée après collecte incomplète2026-10-20T15:22:45+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
 
 Nikkei 225
 
@@ -375,47 +379,47 @@ Risque et devises
 
 USD/MAD
 
-9,7965MAD / USD · 0,07 %
+9,7933MAD / USD · 0,03 %
 
-Dernière observation source2026-10-20T15:22:32+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-20T15:50:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,0020MAD / EUR · 0,27 %
+10,9980MAD / EUR · 0,24 %
 
-Dernière observation source2026-10-20T15:19:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-20T15:49:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-17,62points · -4,45 %
+17,99points · -2,44 %
 
-Dernière observation source2026-10-20T15:00:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-20T15:20:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,69points · -0,27 %
+101,75points · -0,22 %
 
-Dernière observation source2026-10-20T15:20:31+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-20T15:40:18+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 155,50USD / once troy · -0,11 %
+4 152,20USD / once troy · -0,19 %
 
-Dernière observation source2026-10-20T15:22:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-20T15:50:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-107,67USD / baril · -1,72 %
+108,46USD / baril · -0,99 %
 
-Dernière observation source2026-10-20T15:22:54+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-20T15:50:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,60USD / livre · 0,43 %
+6,60USD / livre · 0,36 %
 
-Dernière observation source2026-10-20T15:22:52+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-20T15:50:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -426,6 +430,10 @@ Dernière observation source2026-10-20T09:50:48+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-and-Asia-Locked-In-Dispute-Over-2027-Term-Oil-Deals.html] Saudi Arabia and Asia Locked In Dispute Over 2027 Term Oil Deals ↗
+
+OilPrice · 2026-10-20T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Latest-Energy-News/World-News/Shipping-Crisis-Forces-Asian-Crude-Buyers-to-Use-Smaller-Tankers.html] Shipping Crisis Forces Asian Crude Buyers to Use Smaller Tankers ↗
 
@@ -454,10 +462,6 @@ Europe / partenaires du Maroc · 2026-10-20T12:53:00+00:00 · Maroc · Économie
  [https://www.financialafrik.com/2026/10/20/egypte-moodys-anticipe-une-baisse-durable-du-poids-de-la-dette-publique/] Égypte : Moody’s anticipe une baisse durable du poids de la dette publique ↗
 
 Financial Afrik · 2026-10-20T12:36:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Asias-Coal-Prices-To-Stay-High-as-Supply-Drops-and-Demand-Firms.html] Asia’s Coal Prices To Stay High as Supply Drops and Demand Firms ↗
-
-OilPrice · 2026-10-20T12:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -501,6 +505,10 @@ Financial Afrik · 2026-10-19T12:17:19+00:00 · Maroc · Économie · alerte non
 
 Financial Afrik · 2026-10-18T11:18:58+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-and-Asia-Locked-In-Dispute-Over-2027-Term-Oil-Deals.html] Saudi Arabia and Asia Locked In Dispute Over 2027 Term Oil Deals ↗
+
+OilPrice · 2026-10-20T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Latest-Energy-News/World-News/Shipping-Crisis-Forces-Asian-Crude-Buyers-to-Use-Smaller-Tankers.html] Shipping Crisis Forces Asian Crude Buyers to Use Smaller Tankers ↗
 
 OilPrice · 2026-10-20T14:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -512,8 +520,4 @@ France 24 · économie · 2026-10-20T14:04:10+00:00 · International · Économi
  [https://oilprice.com/Geopolitics/Middle-East/Russias-Shadow-Role-in-Iran-War-Comes-Under-Fresh-Scrutiny.html] Russia’s Shadow Role in Iran War Comes Under Fresh Scrutiny ↗
 
 OilPrice · 2026-10-20T14:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/HSBC-Sees-Hormuz-Becoming-Redundant-in-Five-Years.html] HSBC Sees Hormuz Becoming Redundant in Five Years ↗
-
-OilPrice · 2026-10-20T13:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
