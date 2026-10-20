@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-10-20
+Contrôle de clôture entre fournisseurs — séance 2026-10-20
 Préparé le 2026-10-20
 
 Lecture de séanceL’essentiel
@@ -15,7 +15,7 @@ Le relevé de marché totalise 148,10 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 076,72 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-20T19:34:42.639087+00:00.
+Sources du marché · relevé 2026-10-20T20:00:29.145628+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -381,7 +381,7 @@ AMMC · 2026-10-20 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-20T19:34:43.468969+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-20T20:00:29.946793+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
@@ -391,15 +391,15 @@ Indices actions
 
 S&P 500
 
-7 705,33points · 0,19 %
+7 708,27points · 0,23 %
 
-Dernière observation source2026-10-20T19:34:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 400,59points · 0,84 %
+52 448,05points · 0,93 %
 
-Dernière observation source2026-10-20T19:34:33+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-20T19:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -417,47 +417,47 @@ Risque et devises
 
 USD/MAD
 
-9,7970MAD / USD · 0,07 %
+9,7913MAD / USD · 0,01 %
 
-Dernière observation source2026-10-20T19:34:15+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-20T20:00:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-11,0000MAD / EUR · 0,26 %
+11,0010MAD / EUR · 0,26 %
 
-Dernière observation source2026-10-20T19:34:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-20T19:59:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
 17,49points · -5,15 %
 
-Dernière observation source2026-10-20T19:34:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-20T19:39:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
 101,73points · -0,24 %
 
-Dernière observation source2026-10-20T19:34:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-20T20:00:09+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 139,50USD / once troy · -0,50 %
+4 141,30USD / once troy · -0,45 %
 
-Dernière observation source2026-10-20T19:34:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-20T20:00:17+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 108,79USD / baril · -0,69 %
 
-Dernière observation source2026-10-20T19:34:26+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-20T20:00:12+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,61USD / livre · 0,46 %
+6,61USD / livre · 0,53 %
 
-Dernière observation source2026-10-20T19:34:19+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-20T20:00:12+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -468,6 +468,10 @@ Archive conservée après collecte incomplète2026-10-20T09:50:48+00:00Différé
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/The-Middle-Easts-Next-Energy-Boom-Has-Nothing-to-Do-With-Oil.html] The Middle East's Next Energy Boom Has Nothing to Do With Oil ↗
+
+OilPrice · 2026-10-20T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/10/20/atlantic-financial-group-afg-prend-le-controle-de-la-banque-de-lhabitat-du-tchad/] Atlantic Financial Group (AFG) prend le contrôle de la Banque de l’Habitat du Tchad ↗
 
@@ -496,10 +500,6 @@ Financial Afrik · 2026-10-20T18:10:00+00:00 · Périmètre non établi · Écon
  [https://oilprice.com/Alternative-Energy/Geothermal-Energy/Geothermal-Just-Proved-It-Can-Compete-With-Solar-Plus-Storage-on-Price.html] Geothermal Just Proved It Can Compete With Solar-Plus-Storage on Price ↗
 
 OilPrice · 2026-10-20T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/20/carte-brune-de-la-cedeao-dakar-accelere-la-reforme-et-le-passage-au-numerique-des-janvier-2027/] Carte brune de la cedeao : Dakar accélère la réforme et le passage au numérique dès janvier 2027 ↗
-
-Financial Afrik · 2026-10-20T17:53:33+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -561,6 +561,10 @@ Financial Afrik · 2026-10-19T12:17:19+00:00 · Maroc · Économie · alerte non
 
 Financial Afrik · 2026-10-18T11:18:58+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/The-Middle-Easts-Next-Energy-Boom-Has-Nothing-to-Do-With-Oil.html] The Middle East's Next Energy Boom Has Nothing to Do With Oil ↗
+
+OilPrice · 2026-10-20T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/10/20/atlantic-financial-group-afg-prend-le-controle-de-la-banque-de-lhabitat-du-tchad/] Atlantic Financial Group (AFG) prend le contrôle de la Banque de l’Habitat du Tchad ↗
 
 Financial Afrik · 2026-10-20T19:03:23+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -572,8 +576,4 @@ OilPrice · 2026-10-20T19:00:00+00:00 · International · Matières premières �
  [https://oilprice.com/Latest-Energy-News/World-News/Gas-Production-Plunges-126-as-Europe-Heads-into-Winter.html] Norway's Gas Production Plunges 12.6% as Europe Heads into Winter ↗
 
 OilPrice · 2026-10-20T18:31:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://news.google.com/rss/articles/CBMieEFVX3lxTE11eU5kTS1iT0M3Z0dyek1zYkpuQkxWY1pVeVVpWXlXSGUzUHJnTGVKekl5RXV1S1FYQWwwN0MzZk55V3h5Y2lqVjI1WWZ2T3dqdnFKRkhuOXhtVzVMQU1ldERPWnptRjlDdjNOVVk5ZmJaTmhZc1hKcA?oc=5] Le Conseil de gouvernement adopte le Projet de Loi de Finances 2027 – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية ↗
-
-Finances Maroc · relais presse · 2026-10-20T18:28:28+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
