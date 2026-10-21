@@ -113,6 +113,11 @@ for(const shares of [undefined,null,0,1]){
   data.market={asof:'2026-10-19',status:'closed',turnover_mad:113956983.12,shares:876356,transactions:null,
     transactions_reported:2851,transactions_quality:{status:'session_not_independently_attested'},
     official_reference:{asof:'2026-10-19',contracts:3671,turnover_mad:'113956983.12',shares:876356,review_status:'manual_capture_reviewed',source_url:'https://www.casablanca-bourse.com/market-data/volume'}};
+  // This scenario has 61 detailed lines for 62 announced lines. Do not inherit
+  // a live audit that may legitimately become matched on a later session.
+  data.market_volume_audit={status:'incomplete',asof:'2026-10-19',observed_lines:61,expected_lines:62,
+    coverage_complete:false,cdg_turnover_mad:113956983.12,lines_turnover_mad:113956939.12,
+    difference_mad:-44,cdg_shares:876356,lines_shares:876345,difference_shares:-11};
   data.cross_source_volume_audit={publication_scope:'validated_title_lines',totals:{retained_after:{quoted:61,turnover_mad:'113956939.12',shares:876345}}};
   const before=structuredClone(data);
   for(const question of ['Quel volume global MASI ?','Combien de transactions MASI ?','Combien de contrats MASI ?']){
