@@ -2,771 +2,108 @@
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
   "generated_for": "2026-10-21",
-  "market_session": "2026-10-20",
+  "market_session": "2026-10-21",
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "schedule",
-    "slot": "refresh",
-    "label": "Actualisation horaire",
-    "target_time": "11:45",
-    "schedule": "45 11 * * 1-5",
-    "scheduled_at": "2026-10-21T11:45:00+00:00",
-    "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
+    "event": "push",
+    "slot": "adhoc",
+    "label": "Point de marché à la demande",
+    "target_time": null,
+    "schedule": null,
+    "scheduled_at": null,
+    "scheduled_at_basis": null,
     "edition_for": "2026-10-21",
-    "started_at": "2026-10-21T15:37:44+00:00",
-    "built_at": "2026-10-21T15:38:00.124307+00:00",
-    "delay_minutes": 232.7,
-    "late": true,
-    "run_id": "39627364837",
-    "commit": "f93181824e88c62b7a9174e7bc965d7ab85d4ead",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39627364837",
+    "started_at": "2026-10-21T22:48:26+00:00",
+    "built_at": "2026-10-21T22:49:23.294206+00:00",
+    "delay_minutes": null,
+    "late": false,
+    "run_id": "39689108084",
+    "commit": "fd492160340b24943d91055e39fff92ad613dda3",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39689108084",
     "collection": {
-      "result": "intraday",
-      "label": "Observation provisoire · aucune clôture intégrée",
-      "checked_at": "2026-10-21T15:37:44.344045+00:00",
-      "last_session": "2026-10-20",
-      "message": "60 observations provisoires ; clôtures et scores historiques inchangés",
+      "result": "updated",
+      "label": "Nouvelle séance intégrée",
+      "checked_at": "2026-10-21T22:48:27.725736+00:00",
+      "last_session": "2026-10-21",
+      "message": "62 bougies validées ; 0 conflit(s) conservés",
       "conflicts": [],
-      "fully_validated": false
+      "fully_validated": true
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "f93181824e88c62b7a9174e7bc965d7ab85d4ead",
+      "generator_commit": "fd492160340b24943d91055e39fff92ad613dda3",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "45f9c2e089f6b2a7151fd58a166c5853083723cfcd69cbd95c2fc6ee72e4d21d",
+      "market_snapshot_sha256": "f801fc3fba181290dd266169c27144cfb5ac2ce773fd02dd998f166419bc4d75",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
-      "status": "intraday",
+      "status": "matched",
       "session": "2026-10-21",
-      "observed_at": "2026-10-21T15:37:50.786092+00:00",
-      "cross_source_verified": false
+      "observed_at": "2026-10-21T22:49:13.631109+00:00",
+      "cross_source_verified": true
     }
   },
-  "title": "Actualisation horaire",
+  "title": "Point de marché à la demande",
   "intraday": {
     "schema_version": 1,
     "session": "2026-10-21",
     "observed_at": "2026-10-21T15:37:44.344045+00:00",
     "source": "https://www.cdgcapitalbourse.ma/api/",
-    "quotes": {
-      "ADH": {
-        "price": 36.15,
-        "asof": "2026-10-21",
-        "open": 35.02,
-        "high": 36.29,
-        "low": 35.02,
-        "shares": 296108,
-        "turnover_mad": 10646516.56,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ADI": {
-        "price": 356.0,
-        "asof": "2026-10-21",
-        "open": 353.5,
-        "high": 357.7,
-        "low": 352.0,
-        "shares": 3298,
-        "turnover_mad": 1168960.5,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "AFI": {
-        "price": 327.0,
-        "asof": "2026-10-21",
-        "open": 327.0,
-        "high": 327.0,
-        "low": 327.0,
-        "shares": 15,
-        "turnover_mad": 4905.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "AKD": {
-        "price": 1044.0,
-        "asof": "2026-10-21",
-        "open": 1048.0,
-        "high": 1050.0,
-        "low": 1039.0,
-        "shares": 730,
-        "turnover_mad": 762666.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ARD": {
-        "price": 425.2,
-        "asof": "2026-10-21",
-        "open": 425.1,
-        "high": 427.0,
-        "low": 424.0,
-        "shares": 949,
-        "turnover_mad": 403146.7,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "HAL": {
-        "price": 59.99,
-        "asof": "2026-10-21",
-        "open": 59.02,
-        "high": 59.99,
-        "low": 59.02,
-        "shares": 223,
-        "turnover_mad": 13226.25,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ATL": {
-        "price": 119.0,
-        "asof": "2026-10-21",
-        "open": 121.0,
-        "high": 121.0,
-        "low": 119.0,
-        "shares": 1098,
-        "turnover_mad": 130734.9,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ATW": {
-        "price": 672.5,
-        "asof": "2026-10-21",
-        "open": 672.5,
-        "high": 673.0,
-        "low": 672.1,
-        "shares": 7663,
-        "turnover_mad": 5153220.4,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "BMC": {
-        "price": 550.0,
-        "asof": "2026-10-21",
-        "open": 550.0,
-        "high": 566.0,
-        "low": 550.0,
-        "shares": 77,
-        "turnover_mad": 42462.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "BCP": {
-        "price": 247.0,
-        "asof": "2026-10-21",
-        "open": 245.0,
-        "high": 247.0,
-        "low": 240.0,
-        "shares": 212248,
-        "turnover_mad": 52001855.6,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "BOA": {
-        "price": 180.0,
-        "asof": "2026-10-21",
-        "open": 178.0,
-        "high": 181.95,
-        "low": 178.0,
-        "shares": 410,
-        "turnover_mad": 73678.7,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CASH": {
-        "price": 206.6,
-        "asof": "2026-10-21",
-        "open": 211.0,
-        "high": 211.0,
-        "low": 206.0,
-        "shares": 1258,
-        "turnover_mad": 262129.55,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CDM": {
-        "price": 928.0,
-        "asof": "2026-10-21",
-        "open": 930.0,
-        "high": 930.0,
-        "low": 928.0,
-        "shares": 83,
-        "turnover_mad": 77070.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CFGB": {
-        "price": 194.0,
-        "asof": "2026-10-21",
-        "open": 193.0,
-        "high": 194.0,
-        "low": 190.5,
-        "shares": 2868,
-        "turnover_mad": 549281.85,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CIH": {
-        "price": 300.0,
-        "asof": "2026-10-21",
-        "open": 297.5,
-        "high": 303.0,
-        "low": 297.5,
-        "shares": 536,
-        "turnover_mad": 160753.6,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CIM": {
-        "price": 1394.0,
-        "asof": "2026-10-21",
-        "open": 1429.0,
-        "high": 1429.0,
-        "low": 1394.0,
-        "shares": 673,
-        "turnover_mad": 943043.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CMGP": {
-        "price": 263.3,
-        "asof": "2026-10-21",
-        "open": 260.3,
-        "high": 263.9,
-        "low": 260.0,
-        "shares": 1136,
-        "turnover_mad": 295679.15,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CMT": {
-        "price": 3955.0,
-        "asof": "2026-10-21",
-        "open": 3955.0,
-        "high": 3955.0,
-        "low": 3955.0,
-        "shares": 4,
-        "turnover_mad": 15820.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "COL": {
-        "price": 77.01,
-        "asof": "2026-10-21",
-        "open": 77.19,
-        "high": 77.19,
-        "low": 73.0,
-        "shares": 266,
-        "turnover_mad": 19659.49,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CAR": {
-        "price": 18.99,
-        "asof": "2026-10-21",
-        "open": 18.82,
-        "high": 19.0,
-        "low": 18.5,
-        "shares": 17426,
-        "turnover_mad": 327464.42,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CSR": {
-        "price": 174.4,
-        "asof": "2026-10-21",
-        "open": 176.0,
-        "high": 176.0,
-        "low": 172.0,
-        "shares": 27536,
-        "turnover_mad": 4737232.55,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "CTM": {
-        "price": 780.0,
-        "asof": "2026-10-21",
-        "open": 780.0,
-        "high": 780.0,
-        "low": 780.0,
-        "shares": 5,
-        "turnover_mad": 3900.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "DHO": {
-        "price": 47.03,
-        "asof": "2026-10-21",
-        "open": 48.05,
-        "high": 48.05,
-        "low": 47.03,
-        "shares": 1691,
-        "turnover_mad": 80247.44,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "DSW": {
-        "price": 753.0,
-        "asof": "2026-10-21",
-        "open": 753.0,
-        "high": 753.0,
-        "low": 753.0,
-        "shares": 6,
-        "turnover_mad": 4518.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "DTT": {
-        "price": 340.0,
-        "asof": "2026-10-21",
-        "open": 339.5,
-        "high": 344.0,
-        "low": 339.0,
-        "shares": 55,
-        "turnover_mad": 18711.5,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "FNB": {
-        "price": 329.9,
-        "asof": "2026-10-21",
-        "open": 315.5,
-        "high": 329.9,
-        "low": 315.5,
-        "shares": 25,
-        "turnover_mad": 7963.4,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "GAZ": {
-        "price": 3610.0,
-        "asof": "2026-10-21",
-        "open": 3605.0,
-        "high": 3610.0,
-        "low": 3532.0,
-        "shares": 3019,
-        "turnover_mad": 10898190.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "SGTM": {
-        "price": 572.0,
-        "asof": "2026-10-21",
-        "open": 570.1,
-        "high": 579.0,
-        "low": 570.1,
-        "shares": 2370,
-        "turnover_mad": 1356748.7,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "HPS": {
-        "price": 530.0,
-        "asof": "2026-10-21",
-        "open": 525.0,
-        "high": 544.5,
-        "low": 520.0,
-        "shares": 100632,
-        "turnover_mad": 52544883.8,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "IAM": {
-        "price": 88.45,
-        "asof": "2026-10-21",
-        "open": 87.8,
-        "high": 88.7,
-        "low": 87.8,
-        "shares": 20323,
-        "turnover_mad": 1791201.52,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "IBM": {
-        "price": 50.49,
-        "asof": "2026-10-21",
-        "open": 52.0,
-        "high": 52.0,
-        "low": 50.1,
-        "shares": 272,
-        "turnover_mad": 13681.58,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "IMI": {
-        "price": 91.25,
-        "asof": "2026-10-21",
-        "open": 91.25,
-        "high": 91.25,
-        "low": 91.25,
-        "shares": 198,
-        "turnover_mad": 18067.5,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "INV": {
-        "price": 125.6,
-        "asof": "2026-10-21",
-        "open": 125.6,
-        "high": 125.6,
-        "low": 125.6,
-        "shares": 254,
-        "turnover_mad": 31902.4,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "JET": {
-        "price": 1439.0,
-        "asof": "2026-10-21",
-        "open": 1400.0,
-        "high": 1450.0,
-        "low": 1392.0,
-        "shares": 2297,
-        "turnover_mad": 3220028.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "LES": {
-        "price": 275.0,
-        "asof": "2026-10-21",
-        "open": 280.0,
-        "high": 280.0,
-        "low": 275.0,
-        "shares": 100,
-        "turnover_mad": 27621.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "LHM": {
-        "price": 1610.0,
-        "asof": "2026-10-21",
-        "open": 1615.0,
-        "high": 1615.0,
-        "low": 1605.0,
-        "shares": 1083,
-        "turnover_mad": 1743559.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MDP": {
-        "price": 22.1,
-        "asof": "2026-10-21",
-        "open": 22.0,
-        "high": 22.1,
-        "low": 21.92,
-        "shares": 2417,
-        "turnover_mad": 53142.2,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MIC": {
-        "price": 736.0,
-        "asof": "2026-10-21",
-        "open": 738.1,
-        "high": 738.1,
-        "low": 736.0,
-        "shares": 26,
-        "turnover_mad": 19142.1,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MNG": {
-        "price": 1501.0,
-        "asof": "2026-10-21",
-        "open": 1520.0,
-        "high": 1520.0,
-        "low": 1500.0,
-        "shares": 6750,
-        "turnover_mad": 10129325.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MSA": {
-        "price": 761.0,
-        "asof": "2026-10-21",
-        "open": 760.0,
-        "high": 765.0,
-        "low": 752.0,
-        "shares": 1335,
-        "turnover_mad": 1014552.2,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MUT": {
-        "price": 222.0,
-        "asof": "2026-10-21",
-        "open": 226.0,
-        "high": 226.0,
-        "low": 222.0,
-        "shares": 2449,
-        "turnover_mad": 551799.5,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ENK": {
-        "price": 47.5,
-        "asof": "2026-10-21",
-        "open": 47.9,
-        "high": 47.9,
-        "low": 47.5,
-        "shares": 113,
-        "turnover_mad": 5404.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "RDS": {
-        "price": 170.0,
-        "asof": "2026-10-21",
-        "open": 165.0,
-        "high": 170.95,
-        "low": 165.0,
-        "shares": 47154,
-        "turnover_mad": 7962469.15,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "RIS": {
-        "price": 293.0,
-        "asof": "2026-10-21",
-        "open": 292.0,
-        "high": 298.0,
-        "low": 291.25,
-        "shares": 8021,
-        "turnover_mad": 2349075.85,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "S2M": {
-        "price": 460.0,
-        "asof": "2026-10-21",
-        "open": 465.1,
-        "high": 465.1,
-        "low": 460.0,
-        "shares": 65,
-        "turnover_mad": 29970.4,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "SNA": {
-        "price": 1640.0,
-        "asof": "2026-10-21",
-        "open": 1660.0,
-        "high": 1660.0,
-        "low": 1618.0,
-        "shares": 3745,
-        "turnover_mad": 6139345.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "SMI": {
-        "price": 5799.0,
-        "asof": "2026-10-21",
-        "open": 5800.0,
-        "high": 5800.0,
-        "low": 5790.0,
-        "shares": 75,
-        "turnover_mad": 434985.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "STK": {
-        "price": 47.0,
-        "asof": "2026-10-21",
-        "open": 48.49,
-        "high": 48.49,
-        "low": 46.0,
-        "shares": 2653,
-        "turnover_mad": 124356.37,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "SNP": {
-        "price": 280.0,
-        "asof": "2026-10-21",
-        "open": 284.95,
-        "high": 285.0,
-        "low": 275.05,
-        "shares": 117,
-        "turnover_mad": 32676.2,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "SOT": {
-        "price": 316.0,
-        "asof": "2026-10-21",
-        "open": 310.0,
-        "high": 322.75,
-        "low": 310.0,
-        "shares": 267,
-        "turnover_mad": 83966.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "STR": {
-        "price": 152.0,
-        "asof": "2026-10-21",
-        "open": 155.95,
-        "high": 155.95,
-        "low": 152.0,
-        "shares": 142,
-        "turnover_mad": 22046.15,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "T2S": {
-        "price": 212.0,
-        "asof": "2026-10-21",
-        "open": 212.0,
-        "high": 215.0,
-        "low": 206.6,
-        "shares": 33215,
-        "turnover_mad": 7050208.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "TGCC": {
-        "price": 609.2,
-        "asof": "2026-10-21",
-        "open": 614.0,
-        "high": 617.0,
-        "low": 608.5,
-        "shares": 8745,
-        "turnover_mad": 5340378.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "TMA": {
-        "price": 1321.0,
-        "asof": "2026-10-21",
-        "open": 1323.0,
-        "high": 1330.0,
-        "low": 1320.0,
-        "shares": 162,
-        "turnover_mad": 214422.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "TQA": {
-        "price": 1630.0,
-        "asof": "2026-10-21",
-        "open": 1630.0,
-        "high": 1630.0,
-        "low": 1630.0,
-        "shares": 5,
-        "turnover_mad": 8150.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "VCNE": {
-        "price": 295.0,
-        "asof": "2026-10-21",
-        "open": 293.5,
-        "high": 298.0,
-        "low": 293.5,
-        "shares": 517,
-        "turnover_mad": 152028.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "WAF": {
-        "price": 5035.0,
-        "asof": "2026-10-21",
-        "open": 5145.0,
-        "high": 5145.0,
-        "low": 4991.0,
-        "shares": 723,
-        "turnover_mad": 3641141.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "ZLD": {
-        "price": 230.0,
-        "asof": "2026-10-21",
-        "open": 233.0,
-        "high": 233.0,
-        "low": 230.0,
-        "shares": 10,
-        "turnover_mad": 2312.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "MGL": {
-        "price": 898.0,
-        "asof": "2026-10-21",
-        "open": 898.0,
-        "high": 898.0,
-        "low": 898.0,
-        "shares": 30,
-        "turnover_mad": 26940.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
-      "REB": {
-        "price": 90.0,
-        "asof": "2026-10-21",
-        "open": 90.0,
-        "high": 90.0,
-        "low": 90.0,
-        "shares": 11,
-        "turnover_mad": 990.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      }
-    },
+    "quotes": {},
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
-    "status": "provisional",
-    "notice": "Observation CDG provisoire, pas un flux temps réel ni une clôture."
+    "status": "stale",
+    "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-20T18:06:54.566825+00:00",
-  "market_status": "intraday",
+  "snapshot_updated": "2026-10-21T22:48:27.725736+00:00",
+  "market_status": "closed",
   "coverage": {
     "titles": 80,
-    "quoted_session": 63,
-    "observable": 62
+    "quoted_session": 62,
+    "observable": 61
   },
-  "index": null,
-  "market_summary": null,
-  "index_notice": "MASI non confirmé à la date de la dernière séance : valeur archivée écartée du briefing.",
+  "index": {
+    "value": 17007.8597,
+    "asof": "2026-10-21",
+    "veille": 16934.5897,
+    "change_pct": 0.43,
+    "variation_points": 73.27,
+    "ytd_pct": -9.76
+  },
+  "market_summary": "Le MASI clôture à 17 007,86 points (0,43 %), soit 73,27 points par rapport à la clôture précédente. Fourchette de séance : 16 925,90 à 17 007,86 points. 30 valeurs en baisse, 29 en hausse et 3 inchangées parmi les 62 valeurs échangées recensées. Volume échangé : 244,87 MDH.",
+  "index_notice": null,
   "focus": [
     {
       "symbol": "ADI",
       "name": "Alliances",
-      "price": 356.0,
-      "asof": "2026-10-20",
+      "price": 366.0,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
-      "score": 40.0,
+      "score": 65.0,
       "score_state": "CALCULABLE",
       "support": 321.2,
-      "resistance": 410.0,
-      "rsi": 45.19,
-      "activity": 0.53,
+      "resistance": 403.0,
+      "rsi": 50.7,
+      "activity": 0.88,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 356.0,
-        "asof": "2026-10-21",
-        "open": 353.5,
-        "high": 357.7,
-        "low": 352.0,
-        "shares": 3298,
-        "turnover_mad": 1168960.5,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": -1.11,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 2.81,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 2.38,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
-          "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le cours reste entre le plancher 321,20 et la borne haute 410,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 45,19 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,53 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 2,52 MDH, contre 3,02 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Le titre surperforme le MASI de 2,38 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.",
+          "Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.",
+          "Le cours reste entre le plancher 321,20 et la borne haute 403,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 50,70 : momentum au-dessus du seuil neutre de 50.",
+          "Quantité échangée : 0,88 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 2,52 MDH, contre 2,77 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -930,8 +267,8 @@
           },
           "eps_mad": 18.46,
           "book_value_per_share_mad": 180.86,
-          "pe": 19.28,
-          "pb": 1.97,
+          "pe": 19.83,
+          "pb": 2.02,
           "revenue_growth_pct": 2.88,
           "roe_pct": 10.21,
           "dividend_yield_pct": null,
@@ -1145,56 +482,46 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 8647.5,
-          "median_turnover_mad_estimated": 3023307.0,
+          "median_shares": 7893.5,
+          "median_turnover_mad_estimated": 2774739.0,
           "median_turnover_ex_top5_mad_estimated": 2518840.8,
-          "capacity_shares_per_session_at_10pct": 864.75,
+          "capacity_shares_per_session_at_10pct": 789.35,
           "exit_days_at_10pct": 2,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1639378.1
+        "turnover_mad": 2752276.5
       },
       "publications": []
     },
     {
       "symbol": "RDS",
       "name": "Résidences Dar Saada",
-      "price": 164.8,
-      "asof": "2026-10-20",
+      "price": 170.0,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
-      "score": 50.0,
+      "score": 47.0,
       "score_state": "CALCULABLE",
       "support": 150.0,
       "resistance": 175.0,
-      "rsi": 50.29,
-      "activity": 0.48,
+      "rsi": 57.19,
+      "activity": 6.83,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 170.0,
-        "asof": "2026-10-21",
-        "open": 165.0,
-        "high": 170.95,
-        "low": 165.0,
-        "shares": 47154,
-        "turnover_mad": 7962469.15,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": -0.06,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 3.16,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 2.73,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre surperforme le MASI de 2,73 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.",
           "Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.",
           "Le cours reste entre le plancher 150,00 et la borne haute 175,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 50,29 : momentum au-dessus du seuil neutre de 50.",
-          "Quantité échangée : 0,48 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,06 MDH, contre 1,74 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "RSI 14 à 57,19 : momentum au-dessus du seuil neutre de 50.",
+          "Quantité échangée : 6,83 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,08 MDH, contre 1,87 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -1330,8 +657,8 @@
           },
           "eps_mad": 0.17,
           "book_value_per_share_mad": 142.68,
-          "pe": 961.11,
-          "pb": 1.16,
+          "pe": 991.43,
+          "pb": 1.19,
           "revenue_growth_pct": 100.49,
           "roe_pct": 0.12,
           "dividend_yield_pct": null,
@@ -1498,54 +825,44 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 10748.0,
-          "median_turnover_mad_estimated": 1738479.55,
-          "median_turnover_ex_top5_mad_estimated": 1064850.0,
-          "capacity_shares_per_session_at_10pct": 1074.8,
+          "median_shares": 11458.0,
+          "median_turnover_mad_estimated": 1871925.0,
+          "median_turnover_ex_top5_mad_estimated": 1082667.0,
+          "capacity_shares_per_session_at_10pct": 1145.8,
           "exit_days_at_10pct": 1,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 900615.45
+        "turnover_mad": 12426669.15
       },
       "publications": []
     },
     {
       "symbol": "TGCC",
       "name": "TGCC SA",
-      "price": 614.0,
-      "asof": "2026-10-20",
+      "price": 614.9,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
       "score": 45.0,
       "score_state": "CALCULABLE",
-      "support": 615.0,
-      "resistance": 695.0,
-      "rsi": 24.81,
-      "activity": 0.32,
-      "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
+      "support": 614.0,
+      "resistance": 687.0,
+      "rsi": 25.52,
+      "activity": 0.58,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 609.2,
-        "asof": "2026-10-21",
-        "open": 614.0,
-        "high": 617.0,
-        "low": 608.5,
-        "shares": 8745,
-        "turnover_mad": 5340378.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": -0.98,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 0.15,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": -0.28,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre sous-performe le MASI de 0,28 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le plancher des 20 séances précédentes, 615,00 MAD, est rompu. Il devient un niveau de reconquête ; il n’est plus présenté comme un support qui tient. La borne haute de référence reste 695,00 MAD.",
-          "RSI 14 à 24,81 : momentum très faible ; une survente ne garantit pas un rebond.",
-          "Quantité échangée : 0,32 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Le cours reste entre le plancher 614,00 et la borne haute 687,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 25,52 : momentum très faible ; une survente ne garantit pas un rebond.",
+          "Quantité échangée : 0,58 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 10,00 MDH, contre 13,75 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
@@ -1696,7 +1013,7 @@
           },
           "eps_mad": 27.46,
           "book_value_per_share_mad": 131.05,
-          "pe": 22.36,
+          "pe": 22.4,
           "pb": 4.69,
           "revenue_growth_pct": 57.06,
           "roe_pct": 20.95,
@@ -1879,7 +1196,7 @@
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 4188303.8
+        "turnover_mad": 7673308.9
       },
       "publications": []
     },
@@ -1887,38 +1204,28 @@
       "symbol": "SGTM",
       "name": "SGTM SA",
       "price": 580.0,
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
       "score": 52.5,
       "score_state": "CALCULABLE",
-      "support": 575.0,
+      "support": 570.5,
       "resistance": 650.9,
       "rsi": 33.69,
-      "activity": 0.59,
+      "activity": 0.3,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 572.0,
-        "asof": "2026-10-21",
-        "open": 570.1,
-        "high": 579.0,
-        "low": 570.1,
-        "shares": 2370,
-        "turnover_mad": 1356748.7,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
         "change_pct": 0.0,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": -0.43,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre sous-performe le MASI de 0,43 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le cours reste entre le plancher 575,00 et la borne haute 650,90 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "Le cours reste entre le plancher 570,50 et la borne haute 650,90 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
           "RSI 14 à 33,69 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,59 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 5,48 MDH, contre 7,19 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Quantité échangée : 0,30 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 4,72 MDH, contre 6,46 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -2280,55 +1587,45 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 12223.5,
-          "median_turnover_mad_estimated": 7194336.0,
-          "median_turnover_ex_top5_mad_estimated": 5480240.0,
-          "capacity_shares_per_session_at_10pct": 1222.35,
+          "median_shares": 10829.0,
+          "median_turnover_mad_estimated": 6456343.0,
+          "median_turnover_ex_top5_mad_estimated": 4717200.0,
+          "capacity_shares_per_session_at_10pct": 1082.9,
           "exit_days_at_10pct": 1,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 4497165.5
+        "turnover_mad": 2111328.7
       },
       "publications": []
     },
     {
       "symbol": "CMGP",
       "name": "CMGP Group",
-      "price": 260.0,
-      "asof": "2026-10-20",
+      "price": 258.0,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
-      "score": 37.5,
+      "score": 32.5,
       "score_state": "CALCULABLE",
       "support": 257.0,
-      "resistance": 306.0,
-      "rsi": 33.49,
-      "activity": 1.09,
+      "resistance": 304.0,
+      "rsi": 32.4,
+      "activity": 0.43,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 263.3,
-        "asof": "2026-10-21",
-        "open": 260.3,
-        "high": 263.9,
-        "low": 260.0,
-        "shares": 1136,
-        "turnover_mad": 295679.15,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": -2.8,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": -0.77,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": -1.2,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre sous-performe le MASI de 1,20 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le cours reste entre le plancher 257,00 et la borne haute 306,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 33,49 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 1,09 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,24 MDH, contre 1,87 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Le cours reste entre le plancher 257,00 et la borne haute 304,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 32,40 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 0,43 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,20 MDH, contre 1,81 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -2507,7 +1804,7 @@
           "eps_mad": null,
           "book_value_per_share_mad": 164.01,
           "pe": null,
-          "pb": 1.59,
+          "pb": 1.57,
           "revenue_growth_pct": 25.65,
           "roe_pct": 8.75,
           "dividend_yield_pct": null,
@@ -2702,54 +1999,44 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 6723.0,
-          "median_turnover_mad_estimated": 1871783.0,
-          "median_turnover_ex_top5_mad_estimated": 1239160.0,
-          "capacity_shares_per_session_at_10pct": 672.3,
+          "median_shares": 6486.0,
+          "median_turnover_mad_estimated": 1811500.5,
+          "median_turnover_ex_top5_mad_estimated": 1198004.5,
+          "capacity_shares_per_session_at_10pct": 648.6,
           "exit_days_at_10pct": 2,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1904707.65
+        "turnover_mad": 747953.15
       },
       "publications": []
     },
     {
       "symbol": "MSA",
       "name": "Sodep-Marsa Maroc",
-      "price": 760.0,
-      "asof": "2026-10-20",
+      "price": 766.1,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
       "score": 52.5,
       "score_state": "CALCULABLE",
       "support": 737.0,
-      "resistance": 840.0,
-      "rsi": 34.77,
-      "activity": 0.39,
+      "resistance": 839.0,
+      "rsi": 39.22,
+      "activity": 0.14,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 761.0,
-        "asof": "2026-10-21",
-        "open": 760.0,
-        "high": 765.0,
-        "low": 752.0,
-        "shares": 1335,
-        "turnover_mad": 1014552.2,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": 1.33,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 0.8,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 0.37,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre surperforme le MASI de 0,37 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le cours reste entre le plancher 737,00 et la borne haute 840,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 34,77 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,39 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Le cours reste entre le plancher 737,00 et la borne haute 839,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 39,22 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 0,14 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 12,77 MDH, contre 15,27 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
@@ -2886,8 +2173,8 @@
           },
           "eps_mad": 21.65,
           "book_value_per_share_mad": 55.16,
-          "pe": 35.11,
-          "pb": 13.78,
+          "pe": 35.39,
+          "pb": 13.89,
           "revenue_growth_pct": null,
           "roe_pct": 39.25,
           "dividend_yield_pct": null,
@@ -3074,46 +2361,36 @@
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 5933883.2
+        "turnover_mad": 2084793.9
       },
       "publications": []
     },
     {
       "symbol": "SMI",
       "name": "Société Métallurgique d'Imiter",
-      "price": 5752.0,
-      "asof": "2026-10-20",
+      "price": 5790.0,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
       "score": 42.5,
       "score_state": "CALCULABLE",
       "support": 5605.0,
-      "resistance": 6720.0,
-      "rsi": 36.33,
-      "activity": 0.58,
+      "resistance": 6719.0,
+      "rsi": 38.28,
+      "activity": 0.22,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 5799.0,
-        "asof": "2026-10-21",
-        "open": 5800.0,
-        "high": 5800.0,
-        "low": 5790.0,
-        "shares": 75,
-        "turnover_mad": 434985.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": 0.89,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 0.66,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 0.23,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre surperforme le MASI de 0,23 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
-          "Le cours reste entre le plancher 5 605,00 et la borne haute 6 720,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 36,33 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,58 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,64 MDH, contre 2,66 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Le cours reste entre le plancher 5 605,00 et la borne haute 6 719,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 38,28 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 0,22 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,62 MDH, contre 2,18 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -3249,8 +2526,8 @@
           },
           "eps_mad": 241.39,
           "book_value_per_share_mad": 1009.2,
-          "pe": 23.83,
-          "pb": 5.7,
+          "pe": 23.99,
+          "pb": 5.74,
           "revenue_growth_pct": 48.76,
           "roe_pct": 23.92,
           "dividend_yield_pct": null,
@@ -3419,55 +2696,45 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 422.0,
-          "median_turnover_mad_estimated": 2655960.0,
-          "median_turnover_ex_top5_mad_estimated": 1635420.0,
-          "capacity_shares_per_session_at_10pct": 42.2,
-          "exit_days_at_10pct": 24,
+          "median_shares": 349.0,
+          "median_turnover_mad_estimated": 2178760.0,
+          "median_turnover_ex_top5_mad_estimated": 1622064.0,
+          "capacity_shares_per_session_at_10pct": 34.9,
+          "exit_days_at_10pct": 29,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1631325.0
+        "turnover_mad": 539205.0
       },
       "publications": []
     },
     {
       "symbol": "T2S",
       "name": "T2S Group Holding",
-      "price": 211.8,
-      "asof": "2026-10-20",
+      "price": 214.6,
+      "asof": "2026-10-21",
       "data_status": "OBSERVABLE",
-      "score": 75.0,
+      "score": 67.0,
       "score_state": "CALCULABLE",
       "support": 190.1,
       "resistance": 225.0,
-      "rsi": 46.73,
-      "activity": 0.96,
+      "rsi": 50.04,
+      "activity": 4.37,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
-      "intraday_quote": {
-        "price": 212.0,
-        "asof": "2026-10-21",
-        "open": 212.0,
-        "high": 215.0,
-        "low": 206.6,
-        "shares": 33215,
-        "turnover_mad": 7050208.3,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": 1.39,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 1.32,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 0.89,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre surperforme le MASI de 0,89 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.",
           "Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.",
           "Le cours reste entre le plancher 190,10 et la borne haute 225,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 46,73 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,96 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "RSI 14 à 50,04 : momentum au-dessus du seuil neutre de 50.",
+          "Quantité échangée : 4,37 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,49 MDH, contre 1,66 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
@@ -3761,46 +3028,36 @@
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1575235.3
+        "turnover_mad": 7264808.3
       },
       "publications": []
     },
     {
       "symbol": "CMT",
       "name": "Minière Touissit",
-      "price": 4030.0,
-      "asof": "2026-10-20",
+      "price": 4100.0,
+      "asof": "2026-10-21",
       "data_status": "LIMITÉ",
       "score": null,
       "score_state": "PARTIEL",
-      "support": 3243.0,
+      "support": 3567.0,
       "resistance": 4573.0,
-      "rsi": 71.99,
-      "activity": 0.23,
+      "rsi": 73.11,
+      "activity": 2.15,
       "scenario": "Attendre des séances comparables après la reprise",
       "issues": [
-        "Reprise récente : 24 séances ; tendance antérieure non comparable"
+        "Reprise récente : 25 séances ; tendance antérieure non comparable"
       ],
-      "intraday_quote": {
-        "price": 3955.0,
-        "asof": "2026-10-21",
-        "open": 3955.0,
-        "high": 3955.0,
-        "low": 3955.0,
-        "shares": 4,
-        "turnover_mad": 15820.0,
-        "provisional": true,
-        "source": "https://www.cdgcapitalbourse.ma/api/"
-      },
+      "intraday_quote": null,
       "reading": {
-        "change_pct": -0.49,
-        "previous_session": "2026-10-19",
-        "relative_masi_pp": null,
+        "change_pct": 1.74,
+        "previous_session": "2026-10-20",
+        "relative_masi_pp": 1.31,
         "paragraphs": [
-          "Variation journalière comparable non disponible : aucun pourcentage n’est reconstruit depuis une séance plus ancienne.",
+          "Le titre surperforme le MASI de 1,31 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "La reprise change le régime de comparaison. Les tendances et niveaux antérieurs restent écartés ; observer la fréquence des échanges et l’offre réellement disponible.",
-          "Quantité échangée : 0,23 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 0,34 MDH, contre 1,16 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Quantité échangée : 2,15 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 0,43 MDH, contre 1,51 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -3922,8 +3179,8 @@
           },
           "eps_mad": 116.86,
           "book_value_per_share_mad": 536.0,
-          "pe": 34.49,
-          "pb": 7.52,
+          "pe": 35.09,
+          "pb": 7.65,
           "revenue_growth_pct": null,
           "roe_pct": 21.8,
           "dividend_yield_pct": 0.0,
@@ -4093,16 +3350,16 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 281.0,
-          "median_turnover_mad_estimated": 1164739.5,
-          "median_turnover_ex_top5_mad_estimated": 336200.0,
-          "capacity_shares_per_session_at_10pct": 28.1,
-          "exit_days_at_10pct": 36,
+          "median_shares": 363.5,
+          "median_turnover_mad_estimated": 1510944.0,
+          "median_turnover_ex_top5_mad_estimated": 425280.0,
+          "capacity_shares_per_session_at_10pct": 36.35,
+          "exit_days_at_10pct": 28,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": true
         },
-        "turnover_mad": 258540.0
+        "turnover_mad": 2479920.0
       },
       "publications": []
     }
@@ -4349,11 +3606,11 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "193f4b0291bda03427",
-      "title": "India’s Top State Refiner to Reduce Middle East Term Oil Purchases",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Indias-Top-State-Refiner-to-Reduce-Middle-East-Term-Oil-Purchases.html",
+      "id": "bdb1a553315fbfdee2",
+      "title": "U.S. Energy Red Tape Gives China an Edge",
+      "url": "https://oilprice.com/Energy/Energy-General/US-Energy-Red-Tape-Gives-China-an-Edge.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T15:30:00+00:00",
+      "published_at": "2026-10-21T22:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4366,11 +3623,11 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "db7a13483cd9e54dc5",
-      "title": "Afrique-Asie : la BIDC et Global Markets préparent une opération de financement de plus d’un milliard de dollars",
-      "url": "https://www.financialafrik.com/2026/10/21/afrique-asie-la-bidc-et-global-markets-preparent-une-operation-de-financement-de-plus-dun-milliard-de-dollars/",
+      "id": "94a1f836de6dfd0210",
+      "title": "Cameroun : le président du GECAM impliqué dans un litige foncier qui fragilise l’investissement privé",
+      "url": "https://www.financialafrik.com/2026/10/21/cameroun-le-president-du-gecam-implique-dans-un-litige-foncier-qui-fragilise-linvestissement-prive/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T15:08:48+00:00",
+      "published_at": "2026-10-21T21:57:16+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4383,11 +3640,28 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "07e7f77974faac3536",
-      "title": "Faut-il repenser le modèle des  sociétés publiques [1] au Sénégal?",
-      "url": "https://www.financialafrik.com/2026/10/21/faut-il-repenser-le-modele-des-societes-publiques-1-au-senegal/",
+      "id": "8ebb2f2de90641c13e",
+      "title": "Immobilier : AEDGE Partners gère 3 milliards de dirhams d’actifs au Maroc",
+      "url": "https://www.financialafrik.com/2026/10/21/immobilier-aedge-partners-gere-3-milliards-de-dirhams-dactifs-au-maroc/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T14:52:43+00:00",
+      "published_at": "2026-10-21T21:39:11+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "2edfef59ddc22eafa2",
+      "title": "AFINHAB : 100 milliards de FCFA de Social Bonds pour élargir l’accès des ménages au crédit immobilier",
+      "url": "https://www.financialafrik.com/2026/10/21/afinhab-100-milliards-de-fcfa-de-social-bonds-pour-elargir-lacces-des-menages-au-credit-immobilier/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-21T21:34:38+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4400,11 +3674,28 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "21a435f5ddbcd3b372",
-      "title": "EIA Says US Crude Inventories Sink Further",
-      "url": "https://oilprice.com/Energy/Crude-Oil/EIA-Says-US-Crude-Inventories-Sink-Further.html",
+      "id": "0462aae70c8335fe26",
+      "title": "Après l’Égypte et le Kenya, Zilla Capital pose ses valises au Maroc",
+      "url": "https://www.financialafrik.com/2026/10/21/apres-legypte-et-le-kenya-zilla-capital-pose-ses-valises-au-maroc/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-21T21:15:46+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "c4ad789cb1b31ddad7",
+      "title": "S&P Global Warns Hormuz Energy Shock Could Become a Global Food Crisis",
+      "url": "https://oilprice.com/Energy/Energy-General/SP-Global-Warns-Hormuz-Energy-Shock-Could-Become-a-Global-Food-Crisis.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T14:39:00+00:00",
+      "published_at": "2026-10-21T21:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4417,45 +3708,28 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "a2ac16591e3fe41b45",
-      "title": "Higher Oil Availability Pressures Middle East Crude Benchmarks",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Higher-Oil-Availability-Pressures-Middle-East-Crude-Benchmarks.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-21T14:30:00+00:00",
+      "id": "bb9396036847272aaf",
+      "title": "Meta doit verser 25 milliards de dollars au Nouveau-Mexique pour avoir trompé ses utilisateurs de Facebook",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261021-meta-doit-verser-25-milliards-de-dollars-au-nouveau-mexique-pour-avoir-tromp%C3%A9-ses-utilisateurs-de-facebook",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-21T20:43:54+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
       "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
+      "category": "economie",
       "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
-      "id": "a296bf9df0e352ae43",
-      "title": "Japan’s Trade Deficit Doubles as Hormuz Crisis Hikes Energy Import Costs",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Japans-Trade-Deficit-Doubles-as-Hormuz-Crisis-Hikes-Energy-Import-Costs.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-21T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "920e9f8bd01113e066",
-      "title": "Nigeria: Infinity Trust Mortgage Bank prévoit une levée de 50 milliards de nairas",
-      "url": "https://www.financialafrik.com/2026/10/21/nigeria-infinity-trust-mortgage-bank-prevoit-une-levee-de-50-milliards-de-nairas/",
+      "id": "7f2a5fd617c580f99b",
+      "title": "Cameroun : la justice française maintient la saisie conservatoire de 20 millions USD dans l’affaire Garoubé",
+      "url": "https://www.financialafrik.com/2026/10/21/cameroun-la-justice-francaise-maintient-la-saisie-conservatoire-de-20-millions-usd-dans-laffaire-garoube/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:26:03+00:00",
+      "published_at": "2026-10-21T20:33:47+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4468,45 +3742,11 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "18232f6983e7ccd43a",
-      "title": "Gabon : Félix Mabende Issembé (Ogar) prend la présidence de la Fegasa",
-      "url": "https://www.financialafrik.com/2026/10/21/gabon-felix-mabende-issembe-ogar-prend-la-presidence-de-la-fegasa/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:15:10+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "a1819fe51ce07fe41d",
-      "title": "Plan Mattei : 639 millions d’euros mobilisés pour la Côte d’Ivoire",
-      "url": "https://www.financialafrik.com/2026/10/21/plan-mattei-639-millions-deuros-mobilises-pour-la-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:08:48+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "6b906568091c3a0f26",
-      "title": "Ukraine Welcomes Restored U.S. Intelligence Amid Russian Attacks",
-      "url": "https://oilprice.com/Geopolitics/Europe/Ukraine-Welcomes-Restored-US-Intelligence-Amid-Russian-Attacks.html",
+      "id": "9c26e5aa6aad6d292e",
+      "title": "As BP Leaves the North Sea, These Independents Are Buying In",
+      "url": "https://oilprice.com/Energy/Energy-General/As-BP-Leaves-the-North-Sea-These-Independents-Are-Buying-In.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T13:00:00+00:00",
+      "published_at": "2026-10-21T20:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4517,67 +3757,271 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "083aa64c1af1f08f6c",
+      "title": "Le taux d'emprunt de la France à 10 ans franchit les 5 %",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261021-le-taux-d-emprunt-de-la-france-%C3%A0-10-ans-franchit-les-5",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-21T19:59:32+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     }
   ],
   "news_role": "veille uniquement",
   "editorial": {
-    "paragraphs": [],
-    "levels": {},
-    "previous_session": "2026-10-19",
-    "provisional": true,
-    "sector_paragraphs": [
-      "Indices sectoriels non disponibles à la date considérée."
+    "paragraphs": [
+      "Le MASI termine à 17 007,86 points (0,43 %). La direction de cette séance est haussière.",
+      "30 valeurs baissent, 29 progressent et 3 sont inchangées sur 62 traitées. Les baisses représentent 48,39 % de cette couverture. La largeur de marché reste partagée.",
+      "L’indice se situe à 100,00 % de l’amplitude au-dessus du plus bas (16 925,90), pour un plus haut de 17 007,86 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.",
+      "Le relevé de marché totalise 244,87 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
+      "Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–18 040,73 points. Ce sont des bornes observées, pas des objectifs de cours."
     ],
-    "sectors": [],
-    "leaders": [],
-    "laggards": [],
-    "ranking_coverage": 0,
-    "flows": [
+    "levels": {
+      "support_close20": 16749.1756,
+      "resistance_close20": 18040.7282,
+      "since": "2026-09-23",
+      "until": "2026-10-20"
+    },
+    "previous_session": "2026-10-20",
+    "provisional": false,
+    "sector_paragraphs": [
+      "9 indices sectoriels reculent sur 23 renseignés. Ces variations décrivent les prix, pas la qualité des résultats des entreprises.",
+      "Secteurs les plus résistants : PARTICIPATION ET PROMOTION IMMOBILIERES (2,66 %) ; DISTRIBUTEURS (2,15 %) ; AGROALIMENTAIRE / PRODUCTION (1,30 %).",
+      "Secteurs les plus faibles : CHIMIE (-4,68 %) ; SYLVICULTURE ET PAPIER (-3,07 %) ; SOCIETES DE PORTEFEUILLES - HOLDINGS (-2,18 %)."
+    ],
+    "sectors": [
       {
-        "symbol": "ADH",
-        "amount": 19315286.29
+        "code": "IMMOB",
+        "libelle": "PARTICIPATION ET PROMOTION IMMOBILIERES",
+        "variation_pct": 2.66
       },
       {
-        "symbol": "ATW",
-        "amount": 18905273.6
+        "code": "DISTR",
+        "libelle": "DISTRIBUTEURS",
+        "variation_pct": 2.15
       },
       {
-        "symbol": "MNG",
-        "amount": 17446368.0
+        "code": "AGRO",
+        "libelle": "AGROALIMENTAIRE / PRODUCTION",
+        "variation_pct": 1.3
       },
       {
-        "symbol": "JET",
-        "amount": 14994075.0
+        "code": "SDT",
+        "libelle": "SERVICES DE TRANSPORT",
+        "variation_pct": 0.8
       },
       {
-        "symbol": "VCNE",
-        "amount": 10696960.9
+        "code": "BANK",
+        "libelle": "BANQUES",
+        "variation_pct": 0.71
+      },
+      {
+        "code": "L&SI",
+        "libelle": "MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES",
+        "variation_pct": 0.47
+      },
+      {
+        "code": "TCOM",
+        "libelle": "TELECOMMUNICATIONS",
+        "variation_pct": 0.45
+      },
+      {
+        "code": "SANTE",
+        "libelle": "SANTE",
+        "variation_pct": 0.35
+      },
+      {
+        "code": "ELEC",
+        "libelle": "ELECTRICITE",
+        "variation_pct": 0.12
+      },
+      {
+        "code": "SF&AF",
+        "libelle": "SOCIETE DE FINANCEMENT ET AUTRES ACTIVITES FINANCI",
+        "variation_pct": 0.11
+      },
+      {
+        "code": "B&MC",
+        "libelle": "BATIMENT ET MATERIAUX DE CONSTRUCTION",
+        "variation_pct": 0.06
+      },
+      {
+        "code": "MINES",
+        "libelle": "MINES",
+        "variation_pct": 0.05
+      },
+      {
+        "code": "SPI",
+        "libelle": "SOCIETES DE PLACEMENT IMMOBILIER",
+        "variation_pct": 0.01
+      },
+      {
+        "code": "BOISS",
+        "libelle": "BOISSONS",
+        "variation_pct": 0.0
+      },
+      {
+        "code": "I&BEI",
+        "libelle": "INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS",
+        "variation_pct": -0.53
+      },
+      {
+        "code": "TRANS",
+        "libelle": "TRANSPORT",
+        "variation_pct": -0.63
+      },
+      {
+        "code": "P&G",
+        "libelle": "PETROLE ET GAZ",
+        "variation_pct": -0.7
+      },
+      {
+        "code": "L&H",
+        "libelle": "LOISIRS ET HOTELS",
+        "variation_pct": -1.19
+      },
+      {
+        "code": "ASSUR",
+        "libelle": "ASSURANCES",
+        "variation_pct": -1.58
+      },
+      {
+        "code": "PHARM",
+        "libelle": "INDUSTRIE PHARMACEUTIQUE",
+        "variation_pct": -1.7
+      },
+      {
+        "code": "SP&H",
+        "libelle": "SOCIETES DE PORTEFEUILLES - HOLDINGS",
+        "variation_pct": -2.18
+      },
+      {
+        "code": "S&P",
+        "libelle": "SYLVICULTURE ET PAPIER",
+        "variation_pct": -3.07
+      },
+      {
+        "code": "CHIM",
+        "libelle": "CHIMIE",
+        "variation_pct": -4.68
       }
     ],
-    "scenarios": [],
-    "vigilance": [
-      "Attendre une clôture confirmée et un historique suffisant avant de publier des scénarios chiffrés sur le MASI.",
-      "ADI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 321.2 / 410.0 MAD).",
-      "RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 150.0 / 175.0 MAD).",
-      "TGCC : Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future (références 615.0 / 695.0 MAD).",
-      "SGTM : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 575.0 / 650.9 MAD).",
-      "CMGP : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 257.0 / 306.0 MAD).",
-      "MSA : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 737.0 / 840.0 MAD).",
-      "SMI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 5605.0 / 6720.0 MAD).",
-      "T2S : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 190.1 / 225.0 MAD).",
-      "CMT : Attendre des séances comparables après la reprise (références 3243.0 / 4573.0 MAD)."
+    "leaders": [
+      {
+        "symbol": "CSR",
+        "change_pct": 4.09
+      },
+      {
+        "symbol": "RDS",
+        "change_pct": 3.16
+      },
+      {
+        "symbol": "ADI",
+        "change_pct": 2.81
+      },
+      {
+        "symbol": "LBV",
+        "change_pct": 2.63
+      },
+      {
+        "symbol": "STK",
+        "change_pct": 2.4
+      }
     ],
-    "source_url": null,
-    "source": null,
-    "observed_at": null
+    "laggards": [
+      {
+        "symbol": "INV",
+        "change_pct": -4.71
+      },
+      {
+        "symbol": "SNP",
+        "change_pct": -3.87
+      },
+      {
+        "symbol": "MDP",
+        "change_pct": -3.07
+      },
+      {
+        "symbol": "CAR",
+        "change_pct": -2.99
+      },
+      {
+        "symbol": "IBM",
+        "change_pct": -2.9
+      }
+    ],
+    "ranking_coverage": 59,
+    "flows": [
+      {
+        "symbol": "HPS",
+        "amount": 58386621.3
+      },
+      {
+        "symbol": "BCP",
+        "amount": 54528453.1
+      },
+      {
+        "symbol": "GAZ",
+        "amount": 21725190.0
+      },
+      {
+        "symbol": "ADH",
+        "amount": 18427199.76
+      },
+      {
+        "symbol": "RDS",
+        "amount": 12426669.15
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "Dégradation",
+        "condition": "Clôture sous 16 749,18 accompagnée d’une largeur négative.",
+        "reading": "La sortie par le bas invaliderait la tenue de l’intervalle."
+      },
+      {
+        "name": "Consolidation",
+        "condition": "Maintien entre 16 749,18 et 18 040,73.",
+        "reading": "Surveiller la largeur et la persistance des échanges."
+      },
+      {
+        "name": "Amélioration",
+        "condition": "Clôture au-dessus de 18 040,73 et hausse partagée.",
+        "reading": "Une sortie par le haut doit tenir lors des séances suivantes."
+      }
+    ],
+    "vigilance": [
+      "MASI : tenue de 16 749,18 ; franchissement confirmé de 18 040,73 pour sortir de l’intervalle observé.",
+      "ADI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 321.2 / 403.0 MAD).",
+      "RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 150.0 / 175.0 MAD).",
+      "TGCC : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 614.0 / 687.0 MAD).",
+      "SGTM : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 570.5 / 650.9 MAD).",
+      "CMGP : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 257.0 / 304.0 MAD).",
+      "MSA : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 737.0 / 839.0 MAD).",
+      "SMI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 5605.0 / 6719.0 MAD).",
+      "T2S : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 190.1 / 225.0 MAD).",
+      "CMT : Attendre des séances comparables après la reprise (références 3567.0 / 4573.0 MAD)."
+    ],
+    "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
+    "source": "CDG Capital Bourse",
+    "observed_at": "2026-10-21T22:49:10.940023+00:00"
   },
   "context_news": [
     {
-      "id": "193f4b0291bda03427",
-      "title": "India’s Top State Refiner to Reduce Middle East Term Oil Purchases",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Indias-Top-State-Refiner-to-Reduce-Middle-East-Term-Oil-Purchases.html",
+      "id": "bdb1a553315fbfdee2",
+      "title": "U.S. Energy Red Tape Gives China an Edge",
+      "url": "https://oilprice.com/Energy/Energy-General/US-Energy-Red-Tape-Gives-China-an-Edge.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T15:30:00+00:00",
+      "published_at": "2026-10-21T22:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4590,11 +4034,11 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "db7a13483cd9e54dc5",
-      "title": "Afrique-Asie : la BIDC et Global Markets préparent une opération de financement de plus d’un milliard de dollars",
-      "url": "https://www.financialafrik.com/2026/10/21/afrique-asie-la-bidc-et-global-markets-preparent-une-operation-de-financement-de-plus-dun-milliard-de-dollars/",
+      "id": "94a1f836de6dfd0210",
+      "title": "Cameroun : le président du GECAM impliqué dans un litige foncier qui fragilise l’investissement privé",
+      "url": "https://www.financialafrik.com/2026/10/21/cameroun-le-president-du-gecam-implique-dans-un-litige-foncier-qui-fragilise-linvestissement-prive/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T15:08:48+00:00",
+      "published_at": "2026-10-21T21:57:16+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4607,11 +4051,28 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "07e7f77974faac3536",
-      "title": "Faut-il repenser le modèle des  sociétés publiques [1] au Sénégal?",
-      "url": "https://www.financialafrik.com/2026/10/21/faut-il-repenser-le-modele-des-societes-publiques-1-au-senegal/",
+      "id": "8ebb2f2de90641c13e",
+      "title": "Immobilier : AEDGE Partners gère 3 milliards de dirhams d’actifs au Maroc",
+      "url": "https://www.financialafrik.com/2026/10/21/immobilier-aedge-partners-gere-3-milliards-de-dirhams-dactifs-au-maroc/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T14:52:43+00:00",
+      "published_at": "2026-10-21T21:39:11+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "2edfef59ddc22eafa2",
+      "title": "AFINHAB : 100 milliards de FCFA de Social Bonds pour élargir l’accès des ménages au crédit immobilier",
+      "url": "https://www.financialafrik.com/2026/10/21/afinhab-100-milliards-de-fcfa-de-social-bonds-pour-elargir-lacces-des-menages-au-credit-immobilier/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-21T21:34:38+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4624,11 +4085,28 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "21a435f5ddbcd3b372",
-      "title": "EIA Says US Crude Inventories Sink Further",
-      "url": "https://oilprice.com/Energy/Crude-Oil/EIA-Says-US-Crude-Inventories-Sink-Further.html",
+      "id": "0462aae70c8335fe26",
+      "title": "Après l’Égypte et le Kenya, Zilla Capital pose ses valises au Maroc",
+      "url": "https://www.financialafrik.com/2026/10/21/apres-legypte-et-le-kenya-zilla-capital-pose-ses-valises-au-maroc/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-21T21:15:46+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "c4ad789cb1b31ddad7",
+      "title": "S&P Global Warns Hormuz Energy Shock Could Become a Global Food Crisis",
+      "url": "https://oilprice.com/Energy/Energy-General/SP-Global-Warns-Hormuz-Energy-Shock-Could-Become-a-Global-Food-Crisis.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T14:39:00+00:00",
+      "published_at": "2026-10-21T21:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4641,45 +4119,28 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "a2ac16591e3fe41b45",
-      "title": "Higher Oil Availability Pressures Middle East Crude Benchmarks",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Higher-Oil-Availability-Pressures-Middle-East-Crude-Benchmarks.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-21T14:30:00+00:00",
+      "id": "bb9396036847272aaf",
+      "title": "Meta doit verser 25 milliards de dollars au Nouveau-Mexique pour avoir trompé ses utilisateurs de Facebook",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261021-meta-doit-verser-25-milliards-de-dollars-au-nouveau-mexique-pour-avoir-tromp%C3%A9-ses-utilisateurs-de-facebook",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-21T20:43:54+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
       "usable_for_score": false,
       "ticker_matching": "unmatched",
       "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
+      "category": "economie",
       "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
-      "id": "a296bf9df0e352ae43",
-      "title": "Japan’s Trade Deficit Doubles as Hormuz Crisis Hikes Energy Import Costs",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Japans-Trade-Deficit-Doubles-as-Hormuz-Crisis-Hikes-Energy-Import-Costs.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-21T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "920e9f8bd01113e066",
-      "title": "Nigeria: Infinity Trust Mortgage Bank prévoit une levée de 50 milliards de nairas",
-      "url": "https://www.financialafrik.com/2026/10/21/nigeria-infinity-trust-mortgage-bank-prevoit-une-levee-de-50-milliards-de-nairas/",
+      "id": "7f2a5fd617c580f99b",
+      "title": "Cameroun : la justice française maintient la saisie conservatoire de 20 millions USD dans l’affaire Garoubé",
+      "url": "https://www.financialafrik.com/2026/10/21/cameroun-la-justice-francaise-maintient-la-saisie-conservatoire-de-20-millions-usd-dans-laffaire-garoube/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:26:03+00:00",
+      "published_at": "2026-10-21T20:33:47+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4692,45 +4153,11 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
-      "id": "18232f6983e7ccd43a",
-      "title": "Gabon : Félix Mabende Issembé (Ogar) prend la présidence de la Fegasa",
-      "url": "https://www.financialafrik.com/2026/10/21/gabon-felix-mabende-issembe-ogar-prend-la-presidence-de-la-fegasa/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:15:10+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "a1819fe51ce07fe41d",
-      "title": "Plan Mattei : 639 millions d’euros mobilisés pour la Côte d’Ivoire",
-      "url": "https://www.financialafrik.com/2026/10/21/plan-mattei-639-millions-deuros-mobilises-pour-la-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T13:08:48+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "6b906568091c3a0f26",
-      "title": "Ukraine Welcomes Restored U.S. Intelligence Amid Russian Attacks",
-      "url": "https://oilprice.com/Geopolitics/Europe/Ukraine-Welcomes-Restored-US-Intelligence-Amid-Russian-Attacks.html",
+      "id": "9c26e5aa6aad6d292e",
+      "title": "As BP Leaves the North Sea, These Independents Are Buying In",
+      "url": "https://oilprice.com/Energy/Energy-General/As-BP-Leaves-the-North-Sea-These-Independents-Are-Buying-In.html",
       "publisher": "OilPrice",
-      "published_at": "2026-10-21T13:00:00+00:00",
+      "published_at": "2026-10-21T20:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4743,11 +4170,45 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "b7b9734341487614da",
-      "title": "Centrafrique : un nouveau rachat de près de 13 millions USD de titres publics sur le marché de la BEAC",
-      "url": "https://www.financialafrik.com/2026/10/21/centrafrique-un-nouveau-rachat-de-pres-de-13-millions-usd-de-titres-publics-sur-le-marche-de-la-beac/",
+      "id": "083aa64c1af1f08f6c",
+      "title": "Le taux d'emprunt de la France à 10 ans franchit les 5 %",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261021-le-taux-d-emprunt-de-la-france-%C3%A0-10-ans-franchit-les-5",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-10-21T19:59:32+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "3b12bc7d591117fba7",
+      "title": "Maroc : les autorités financières adoptent une feuille de route anticorruption pour 2027-2028",
+      "url": "https://www.financialafrik.com/2026/10/21/maroc-les-autorites-financieres-adoptent-une-feuille-de-route-anticorruption-pour-2027-2028/",
       "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T12:32:48+00:00",
+      "published_at": "2026-10-21T19:15:57+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "1647685a55ff776f6d",
+      "title": "CEMAC : les nationaux contrôlent près de 43% de banques commerciales",
+      "url": "https://www.financialafrik.com/2026/10/21/cemac-les-nationaux-controlent-pres-de-43-de-banques-commerciales/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-21T19:06:56+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4758,30 +4219,13 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "b0a049ad2557e37919",
-      "title": "Russia to Send First Diesel Tanker to U.S. on Thursday",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Russia-to-Send-First-Diesel-Tanker-to-US-on-Thursday.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-21T12:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-21T15:38:00.124307+00:00",
-    "checked_at": "2026-10-21T15:37:50.601350+00:00",
-    "status": "ok",
+    "cutoff": "2026-10-21T22:49:23.294206+00:00",
+    "checked_at": "2026-10-21T22:49:12.001346+00:00",
+    "status": "partial",
     "groups": [
       {
         "title": "Indices actions",
@@ -4790,34 +4234,34 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7743.44,
-            "change_pct": 0.4002556864961989,
+            "value": 7757.17,
+            "change_pct": 0.5782767611833716,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:43+00:00",
+            "observed_at": "2026-10-21T20:31:21+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 52601.01,
-            "change_pct": 0.20026333495124696,
+            "value": 52856.09,
+            "change_pct": 0.6861681335754332,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:43+00:00",
+            "observed_at": "2026-10-21T20:36:48+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
@@ -4826,8 +4270,8 @@
             "unit": "points",
             "value": 7915.58,
             "change_pct": 0.9834802366272094,
-            "state": "observed",
-            "notice": "Dernière observation source",
+            "state": "cached",
+            "notice": "Archive conservée après collecte incomplète",
             "observed_at": "2026-10-21T15:35:30+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
@@ -4835,7 +4279,7 @@
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
             "collected_at": "2026-10-21T15:37:50.601350+00:00",
-            "collection_state": "collected"
+            "collection_state": "cached"
           },
           {
             "ticker": "TVC:NI225",
@@ -4851,7 +4295,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4863,68 +4307,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.7885,
-            "change_pct": 0.08486534017709449,
+            "value": 9.7838,
+            "change_pct": 0,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:40+00:00",
+            "observed_at": "2026-10-21T22:45:52+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.979,
-            "change_pct": -0.02731742851939641,
+            "value": 10.98,
+            "change_pct": -0.009106638739636151,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:29:29+00:00",
+            "observed_at": "2026-10-21T22:44:28+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 16.61,
-            "change_pct": -4.043905257076831,
+            "value": 16.68,
+            "change_pct": -3.639514731369145,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:31+00:00",
+            "observed_at": "2026-10-21T20:14:31+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 101.769,
-            "change_pct": 0.03932015452821344,
+            "value": 101.691,
+            "change_pct": -0.03735414680179369,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:42+00:00",
+            "observed_at": "2026-10-21T22:04:47+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4936,74 +4380,76 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4154.5,
-            "change_pct": 0.28725920919228587,
+            "value": 4151.8,
+            "change_pct": 0.043373493975908,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:39+00:00",
+            "observed_at": "2026-10-21T22:48:52+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 108.76,
-            "change_pct": -0.027576063976469466,
+            "value": 108.82,
+            "change_pct": 0.027576063976456407,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:40+00:00",
+            "observed_at": "2026-10-21T22:25:53+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.57,
-            "change_pct": -0.5073067312788685,
+            "value": 6.555,
+            "change_pct": -0.3723687210274433,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T15:37:32+00:00",
+            "observed_at": "2026-10-21T22:48:40+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 145.5,
-            "change_pct": 0,
+            "value": 145.3,
+            "change_pct": -0.1374570446735317,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-21T14:22:21+00:00",
+            "observed_at": "2026-10-21T22:23:15+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-21T15:37:50.601350+00:00",
+            "collected_at": "2026-10-21T22:49:12.001346+00:00",
             "collection_state": "collected"
           }
         ]
       }
     ],
-    "errors": {},
+    "errors": {
+      "EURONEXT:PX1": "Régression ou contradiction au même horodatage ; archive conservée"
+    },
     "role": "Contexte seulement ; NLP 0 %, aucun impact sur les scores"
   },
   "fundamental_coverage": {
