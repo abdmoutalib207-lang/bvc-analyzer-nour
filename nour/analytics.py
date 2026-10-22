@@ -69,13 +69,14 @@ def technical(record):
         except (AttributeError, TypeError, ValueError, OverflowError):
             continue
         if (all(math.isfinite(v) for v in b.values())
-                and b["c"] > 0 and b["h"] >= max(b["o"], b["c"], b["l"])
+                and min(b[k] for k in ('o', 'h', 'l', 'c')) > 0
+                and b["h"] >= max(b["o"], b["c"], b["l"])
                 and b["l"] <= min(b["o"], b["c"]) and b["v"] >= 0):
             clean.append(b)
     resumed = bool(record.get("resumed_recently"))
     if resumed:
         n = record.get("sessions_since_resume")
-        clean = clean[-n:] if isinstance(n, int) and n > 0 else []
+        clean = clean[-n:] if isinstance(n, int) and not isinstance(n, bool) and n > 0 else []
     closes = [float(b["c"]) for b in clean]
     volumes = [float(b["v"]) for b in clean]
     n = len(clean)

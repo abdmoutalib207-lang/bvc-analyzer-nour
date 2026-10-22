@@ -75,8 +75,15 @@ class RiskTailTests(unittest.TestCase):
         before = copy.deepcopy(report['results'])
         enrich(report, fixture)
         for a,b in zip(before, report['results']):
-            for key in ('canonical_score', 'fundamental', 'technical', 'historical_statistics', 'decision'):
+            for key in ('canonical_score', 'fundamental', 'technical', 'decision'):
                 self.assertEqual(a[key], b[key])
+            # Enrichment now aligns the frequency grid to the MASI calendar.
+            # On this complete sample all numeric windows must remain exact;
+            # only the explicitly documented horizon basis/note may change.
+            self.assertEqual(a['historical_statistics']['horizons'], b['historical_statistics']['horizons'])
+            self.assertEqual(a['historical_statistics']['first_session'], b['historical_statistics']['first_session'])
+            self.assertEqual(a['historical_statistics']['last_session'], b['historical_statistics']['last_session'])
+            self.assertEqual(b['historical_statistics']['horizon_basis'], 'market_calendar')
         self.assertEqual(report['results'][0]['market_risk']['tail_risk']['horizon_sessions'], 1)
 
 

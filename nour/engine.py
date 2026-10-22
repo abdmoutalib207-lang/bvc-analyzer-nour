@@ -59,7 +59,7 @@ def analyze(record, asof, quantity=1000):
     if age_days is None or age_days < 0 or age_days > 4 or record.get("stale"):
         issues.append("Cours absent, futur ou périmé à la date du rapport")
     try:
-        price = float(record.get("price"))
+        price = None if isinstance(record.get('price'), bool) else float(record.get("price"))
     except (TypeError, ValueError, OverflowError):
         price = None
     if price is not None and (not isfinite(price) or price <= 0):
@@ -75,14 +75,19 @@ def analyze(record, asof, quantity=1000):
     # Do not mix pre-suspension volumes with post-resumption execution capacity.
     resumed = bool(record.get("resumed_recently"))
     since_resume = record.get("sessions_since_resume")
-    liquidity_bars = valid[-min(int(since_resume), len(valid)):] if resumed and isinstance(since_resume, int) and since_resume > 0 else valid[-20:]
+    resume_count_valid = (isinstance(since_resume, int)
+                          and not isinstance(since_resume, bool) and since_resume > 0)
+    if resumed:
+        liquidity_bars = valid[-min(since_resume, len(valid)):] if resume_count_valid else []
+    else:
+        liquidity_bars = valid[-20:]
     window = liquidity_bars[-20:]
     active = [bar for bar in window if bar["v"] > 0]
     estimated = [bar["c"] * bar["v"] for bar in active]
     excluding_top5 = sorted(estimated)[:-5] if len(estimated) >= 10 else []
     integrity_block = bool(invalid_close or any("Ligne" in issue or "Dates" in issue for issue in issues))
     trust_block = any("périmé" in issue or "Désaccord" in issue for issue in issues)
-    liquidity_ready = len(active) >= 10 and len(window) >= 10 and not record.get("suspended") and not integrity_block and not trust_block and not (resumed and not isinstance(since_resume, int))
+    liquidity_ready = len(active) >= 10 and len(window) >= 10 and not record.get("suspended") and not integrity_block and not trust_block and not (resumed and not resume_count_valid)
     shares_median = median([bar["v"] for bar in active]) if active else None
     turnover_median = median(estimated) if estimated else None
     capacity = .10 * shares_median if liquidity_ready and shares_median else None

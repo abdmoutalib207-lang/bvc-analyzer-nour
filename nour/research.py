@@ -6,12 +6,10 @@ import math
 from statistics import median, stdev, mean
 from .peer_groups import group_for
 from .risk_tail import historical_tail
+from .statistics import describe
+from .events import EVENTS
 
 VERSION = 'nour-research-v1'
-# Conservative boundaries copied in read-only consultation of bvc_config.py,
-# principal commit eb744940faf3ddc27064819b41a190bfa7c69dfc.
-# No second split adjustment. Historical segments crossing these dates excluded.
-EVENTS = {'MNG': '2026-07-27', 'SOT': '2026-05-05', 'CMT': '2026-09-16'}
 
 
 def finite(value):
@@ -245,8 +243,12 @@ def lab(fixture, history, asof):
 
 def enrich(report, fixture):
     history = report.get('masi_history', {})
+    sessions = list(calendar(history, report['analysis_date']))
     for r in report['results']:
         r['market_risk'] = risk(fixture['records'][r['symbol']], history, report['analysis_date'])
+        r['historical_statistics'] = describe(fixture['records'][r['symbol']],
+            sessions=sessions if sessions else None, asof=report['analysis_date'],
+            event_boundary=EVENTS.get(r['symbol']))
     peers(report['results'], fixture['records'])
     report['research'] = lab(fixture, history, report['analysis_date'])
 
