@@ -26,6 +26,7 @@ def main():
     commands.append([sys.executable, 'tools/audit_site.py'])
     commands.append([sys.executable, 'tools/audit_market_integrity.py'])
     commands.append([sys.executable, 'tools/audit_readiness.py'])
+    commands.append([sys.executable, 'tools/audit_calculations.py'])
     commands.append([sys.executable, 'tools/audit_sector_readiness.py'])
     for command in commands:
         subprocess.run(command, cwd=ROOT, check=True)

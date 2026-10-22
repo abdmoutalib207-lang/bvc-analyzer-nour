@@ -52,6 +52,8 @@ def audit(report):
 
         eps = quotient(net * 1000000 if net is not None else None, eps_shares)
         book = quotient(equity * 1000000 if equity is not None else None, book_shares)
+        compare(s, 'earnings_mmad', f.get('earnings_mmad'), net)
+        compare(s, 'pnb_mmad', f.get('pnb_mmad'), value('produit_net_bancaire'))
         compare(s, 'eps_mad', f.get('eps_mad'), eps)
         compare(s, 'book_value_per_share_mad', f.get('book_value_per_share_mad'), book)
         compare(s, 'pe', f.get('pe'), quotient(price, eps))

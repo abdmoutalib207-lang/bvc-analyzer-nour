@@ -2,6 +2,7 @@ import copy
 import json
 import math
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 from nour.fundamentals import calculate
 from nour.news import merge_news
@@ -80,7 +81,8 @@ class NewContracts(unittest.TestCase):
         self.assertEqual(synchronize_market({}, {})['market']['status'],'unavailable')
 
     def test_empirical_nonoverlapping_counts_and_wilson_not_forecast(self):
-        bars=[dict(d=f'session-{i}',c=100+i,l=99+i,h=101+i) for i in range(601)]
+        bars=[dict(d=(date(2023,1,1)+timedelta(days=i)).isoformat(),
+                   c=100+i,l=99+i,h=101+i,v=10) for i in range(601)]
         result=describe({'candles':bars})
         self.assertEqual([x['observations'] for x in result['horizons']],[600,120,30])
         for h in result['horizons']:

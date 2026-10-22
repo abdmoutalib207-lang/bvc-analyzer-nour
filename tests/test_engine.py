@@ -37,6 +37,24 @@ class EngineContract(unittest.TestCase):
         self.assertIsNone(cmt["liquidity"]["exit_days_at_10pct"])
         self.assertFalse(cmt["trend"]["ready"])
 
+    def test_invalid_resume_count_cannot_borrow_pre_suspension_liquidity(self):
+        for count in (None, True, 0, -1, '26'):
+            with self.subTest(count=count):
+                rec = deepcopy(FIXTURE['records']['ADI'])
+                rec.update(resumed_recently=True, sessions_since_resume=count)
+                item = analyze(rec, ASOF)
+                self.assertEqual(item['liquidity']['window_sessions'], 0)
+                self.assertFalse(item['liquidity']['ready'])
+                self.assertIsNone(item['liquidity']['capacity_shares_per_session_at_10pct'])
+
+    def test_boolean_snapshot_price_is_never_a_one_dirham_quote(self):
+        rec = deepcopy(FIXTURE['records']['ADI'])
+        for bar in rec['candles']:
+            bar.update(o=1, h=1, l=1, c=1)
+        rec['price'] = True
+        item = analyze(rec, ASOF)
+        self.assertEqual(item['decision'], 'INDISPONIBLE')
+
     def test_stale_or_inconsistent_snapshot_blocks_capacity_and_direction(self):
         stale = deepcopy(FIXTURE["records"]["ADI"])
         stale["price_asof"] = "2026-09-10"

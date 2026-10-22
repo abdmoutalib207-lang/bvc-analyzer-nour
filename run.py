@@ -23,6 +23,7 @@ from nour.research import enrich, archive_scores
 from tools.audit_readiness import publication_health
 from nour.sector_audit import audit_sector_report
 from nour.publication import collection_view, provenance
+from nour.calculation_audit import audit_calculations
 
 ROOT = Path(__file__).resolve().parent
 
@@ -143,6 +144,13 @@ def main():
         key: financial_health[key] for key in
         ('version', 'status', 'arithmetic_checks', 'documents_certified')
     }
+    calculations = audit_calculations(fixture, report)
+    if calculations['failures']:
+        raise ValueError('Publication refusée : écart de calcul indépendant : '
+                         + json.dumps(calculations['failures'], ensure_ascii=False))
+    atomic_json(ROOT/'web/calculation-health.json', calculations)
+    report['calculation_health'] = {key: calculations[key] for key in
+        ('version', 'status', 'universe', 'issuers_checked', 'arithmetic_checks', 'sources_certified')}
     atomic_json(ROOT/'web/financial-health.json', financial_health)
     sector_health = audit_sector_report(report)
     if sector_health['violations']:
