@@ -204,8 +204,20 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
             audit["notices"].append("Second fournisseur indisponible : aucun rapprochement multisource validé ; aucune correction autorisée.")
             if isinstance(secondary, dict):
                 audit["providers"].append({k: secondary.get(k) for k in ("provider", "status", "source_url")})
+                audit['notices'].extend(n for n in secondary.get('notices', []) if isinstance(n, str))
             if proposed:
                 audit["refusals"].append({"reason": "Écarts retenus non corrigés faute de seconde source"})
+            if audit['publication_safe']:
+                # This is NOT a multisource validation. Only unchanged primary
+                # rows, already checked individually and against both totals,
+                # may be published with an explicit degraded quality level.
+                audit.update(status='primary_checked', publication_scope='primary_only', aggregate_match=True,
+                    secondary_status=secondary.get('status') if isinstance(secondary, dict) else 'unavailable',
+                    validated_symbols=sorted(candidates),
+                    validated_lines={s:{'price':str(c['price']), 'shares':int(c['shares']),
+                                       'turnover_mad':str(c['amount'])} for s,c in candidates.items()})
+                audit['totals']['retained_after']=copy.deepcopy(totals)
+                audit['notices'].append('Source principale contrôlée ligne par ligne et par ses agrégats ; recoupement externe indisponible. Aucun volume corrigé et aucun incident résolu.')
             return updated, audit
         provider = str(secondary.get("provider") or "").strip()
         source_url = str(secondary.get("source_url") or "")

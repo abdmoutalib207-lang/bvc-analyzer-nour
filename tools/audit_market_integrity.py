@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 from urllib.request import Request,urlopen
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from nour.report_contracts import volume_reconciliation
-from nour.market_integrity import validated_detail_scope
+from nour.market_integrity import validated_detail_scope, validated_primary_scope
 from nour.market_reference import reviewed_reference
 
 
@@ -17,6 +17,7 @@ def audit_market_integrity(report):
     internal=volume_reconciliation(report,overview)
     cross=report.get('cross_source_volume_audit') or {}
     detail_valid=validated_detail_scope(report,cross)
+    primary_valid=validated_primary_scope(report,cross)
     failures=[]
     official=overview.get('official_reference')
     if official and not reviewed_reference(overview,{'schema_version':1,'sessions':{overview.get('asof'):official}}):
@@ -51,7 +52,9 @@ def audit_market_integrity(report):
             failures.append('Preuve de rapprochement incomplète.')
     if cross.get('publication_scope')=='validated_title_lines' and not detail_valid:
         failures.append('La preuve de publication limitée aux lignes est invalide.')
-    return {'status':'blocked' if failures else 'checked_with_reservations' if detail_valid else 'checked','failures':failures,
+    if (cross.get('publication_scope')=='primary_only' or cross.get('status')=='primary_checked') and not primary_valid:
+        failures.append('La preuve de publication sur source principale est invalide.')
+    return {'status':'blocked' if failures else 'checked_with_reservations' if detail_valid or primary_valid else 'checked','failures':failures,
             'internal':internal,'cross_source_status':cross.get('status','not_observed')}
 
 

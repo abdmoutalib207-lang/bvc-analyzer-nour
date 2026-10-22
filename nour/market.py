@@ -77,8 +77,13 @@ def normalized_quote(line, ticker):
     # A wildly divergent monetary turnover usually means a field mapping error.
     if not l * shares * .95 <= amount <= h * shares * 1.05:
         raise ValueError(f"{ticker} {day}: montant incompatible avec les transactions")
+    try:
+        stamp = datetime.strptime(str(line.get('DateDernierCours')), '%d/%m/%Y %H:%M:%S')
+        source_datetime = stamp.strftime('%d/%m/%Y %H:%M:%S') if stamp.date().isoformat() == day else None
+    except (TypeError, ValueError):
+        source_datetime = None
     return {"bar": {"d": day, "o": o, "h": h, "l": l, "c": c, "v": int(shares),
-                    "turnover_mad": amount}, "source": SOURCE_URL}
+                    "turnover_mad": amount}, "source": SOURCE_URL, 'source_datetime': source_datetime}
 
 
 def import_session(fixture, lines, code_map, now=None, minimum=20):
@@ -113,6 +118,7 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
     fresh = {s: q for s, q in quote_by_ticker.items() if q["bar"]["d"] == session}
     updated = copy.deepcopy(fixture)
     changed = 0
+    observations_refreshed = 0
     conflicts = []
     for ticker, quote in fresh.items():
         rec = updated["records"][ticker]
@@ -142,8 +148,11 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
             rec["candles"].append(bar)
             changed += 1
         rec.update(price=bar["c"], price_asof=session, price_source="CDG Capital Bourse",
+                   price_source_datetime=quote.get('source_datetime'),
+                   price_collected_at=now.astimezone(CASABLANCA).isoformat(),
                    day_turnover_mad=bar["turnover_mad"], day_shares=bar["v"],
                    stale=False, suspended=False, full_history_count_reported=len(rec["candles"]))
+        observations_refreshed += 1
         if ticker == "CMT":
             count = sum(b["d"] >= "2026-09-16" for b in rec["candles"])
             rec["sessions_since_resume"] = count
@@ -155,6 +164,7 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
         updated["market"]["masi"]["stale"] = (
             updated["market"]["masi"].get("asof") != session)
     return updated, {"session": session, "active_quotes": len(fresh), "new_bars": changed,
+                     'observations_refreshed': observations_refreshed,
                      "source": SOURCE_URL, "ignored_old_quotes": len(quote_by_ticker)-len(fresh),
                      "conflicts": conflicts}
 
@@ -189,6 +199,7 @@ def capture_intraday(fixture, lines, code_map, now=None):
         if quote:
             bar = quote["bar"]
             quotes[ticker] = {"price": bar["c"], "asof": bar["d"], "open": bar["o"],
+                              'source_datetime': quote.get('source_datetime'),
                               "high": bar["h"], "low": bar["l"], "shares": bar["v"],
                               "turnover_mad": bar["turnover_mad"], "provisional": True,
                               "source": SOURCE_URL}

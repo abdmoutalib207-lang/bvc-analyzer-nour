@@ -45,7 +45,7 @@ class IssuerPresentationTests(unittest.TestCase):
             {'d': '2026-10-01', 'c': 100}, {'d': '2026-10-16', 'c': 110}]}
         output = issuer_heading(item, record)
         self.assertIn('+10,00 %', output)
-        self.assertIn('clôture disponible du 2026-10-01', output)
+        self.assertIn('clôture disponible du 01/10/2026', output)
         self.assertIn('&lt;Titre&gt;', output)
         for key in ['graphique', 'technique', 'fondamentaux', 'risques', 'historique']:
             self.assertIn(f'href="#{key}"', output)

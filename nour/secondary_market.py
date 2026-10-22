@@ -96,6 +96,9 @@ def parse_wafabourse(payload, *, observed_at=None, expected_session=None):
                     r'\d{2}/\d{2}/\d{4} \d{2}:\d{2}:\d{2}', raw_date):
                 raise ValueError('missing_or_invalid_transaction_date')
             session_date = datetime.strptime(raw_date, '%d/%m/%Y %H:%M:%S').date()
+            if session_date.year == 1900:
+                result['notices'].append(f'{symbol}: date de transaction {session_date:%d/%m/%Y} non exploitable ; aucune date de remplacement déduite.')
+                raise ValueError('placeholder_transaction_session')
             if session_date.weekday() >= 5 or session_date > observed_date:
                 raise ValueError('invalid_transaction_session')
             session = session_date.isoformat()

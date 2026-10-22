@@ -56,7 +56,7 @@ def persist_result(data, fixture, candidate, audit):
         health.setdefault('details', {})['conflicts'] = remaining
         atomic_json(data/'health.json',health)
     history = load(data/'market_integrity_log.json', {'schema_version':1,'events':{}})
-    if audit.get('corrections') or audit.get('refusals') or not audit.get('publication_safe'):
+    if audit.get('corrections') or audit.get('refusals') or not audit.get('publication_safe') or audit.get('status')=='primary_checked':
         # Provider observation time must not create a new event for every retry.
         identity = fingerprint({'session':audit.get('session'),'status':audit.get('status'),
             'totals':audit.get('totals'),'corrections':audit.get('corrections'),'refusals':audit.get('refusals')})

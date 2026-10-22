@@ -37,6 +37,16 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok(!(await page.locator('.market-hero').innerText()).includes('CDG'));
           const report=await (await context.request.get(new URL('report.json',base).href)).json();
           marketReport=report;
+          if(report.cross_source_volume_audit?.publication_scope==='primary_only'){
+            const warning=await page.locator('[data-market-integrity="primary-only"]').innerText();
+            assert.ok(warning.includes('ne constitue pas une validation entre deux fournisseurs'));
+            assert.equal(report.cross_source_volume_audit.cross_source_verified,false);
+          }
+          assert.equal(await page.locator('[data-market-row] [data-quote-clocks]').count(),80);
+          const adi=report.results.find(r=>r.symbol==='ADI');
+          const shown=adi.intraday_quote?.price??adi.price;
+          const primary=page.locator('[data-quote-symbol="ADI"] [data-primary-price]');
+          assert.ok((await primary.innerText()).replace(/\s/g,'').includes(shown.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).replace(/\s/g,'')));
           if(report.market_overview?.official_reference){
             const counters=await page.locator('[data-market-counter-quality]').innerText();
             assert.ok(counters.replace(/\s/g,'').includes(String(report.market_overview.official_reference.contracts)+'contrats'));
@@ -74,11 +84,16 @@ const shots=process.env.NOUR_SCREENSHOTS;
           await page.getByText('Suivi des mises à jour',{exact:true}).click();
         }
         if(route.startsWith('titres/')){
+          const symbol=route.split('/').pop().replace('.html','');
+          const row=marketReport.results.find(r=>r.symbol===symbol);
+          const shown=row.intraday_quote?.price??row.price;
+          assert.equal(await page.locator('.issuer-quote [data-quote-clocks]').count(),1);
+          assert.ok((await page.locator('.issuer-quote [data-primary-price]').innerText()).replace(/\s/g,'').includes(shown.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).replace(/\s/g,'')));
           assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
           if(marketReport.health?.checked_at){
-            const stamp=page.locator('.issuer-quote .collection-stamp time');
+            const stamp=page.locator('.issuer-quote .quote-collector-check .collection-stamp time');
             assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(marketReport.health.checked_at).getTime());
             assert.ok((await stamp.innerText()).includes('Casablanca'));
           }

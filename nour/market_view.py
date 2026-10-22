@@ -115,6 +115,12 @@ def market_panel(report):
             + ('Quantités également concordantes entre les deux fournisseurs.' if external.get('quantities_cross_source_verified') else 'Quantités non recoupées sur toutes les lignes.')
             + f'</p><p class="fineprint">Contrôle du {esc(external.get("observed_at"))}. L’indépendance des flux amont n’est pas attestée.</p>'
             '<a href="market-integrity.json">Détail du rapprochement</a> · <a href="error-memory.json">Journal des erreurs et corrections</a></section>')
+    elif external.get('publication_scope')=='primary_only':
+        summary += ('<section class="panel banner" data-market-integrity="primary-only"><h2>Cours actualisés · recoupement externe incomplet</h2>'
+            '<p>Chaque ligne conservée retrouve la source principale, ainsi que ses totaux en montants et en quantités. '
+            'Ce contrôle ne constitue pas une validation entre deux fournisseurs. Aucune correction de volume n’est autorisée dans ce mode.</p>'
+            + ''.join(f'<p>{esc(n)}</p>' for n in external.get('notices',[]))
+            + '<a href="market-integrity.json">Preuves et réserves</a> · <a href="error-memory.json">Journal des incidents</a></section>')
     elif external.get('status') not in (None,'not_observed'):
         summary += (f'<div class="banner" data-market-integrity="degraded"><strong>Recoupement externe non confirmé</strong> · '
             f'séance {esc(external.get("session"))} · dernier contrôle {esc(external.get("observed_at"))}. '

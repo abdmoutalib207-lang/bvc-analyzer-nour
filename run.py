@@ -104,6 +104,7 @@ def main():
     report["intraday"] = visible_intraday(live, now)
     for item in report["results"]:
         item["intraday_quote"] = report["intraday"]["quotes"].get(item["symbol"])
+        item['intraday_status'] = report['intraday']['status']
         item["intraday_observed_at"] = report["intraday"].get("observed_at") if item["intraday_quote"] else None
     briefing=create_briefing(report)
     archive = ROOT/"data/briefings"

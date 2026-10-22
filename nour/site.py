@@ -17,6 +17,7 @@ from .company_identity import company_logo, logo_credits, validate_catalog
 from .macro_view import markets_html, radar_html, feed_health_html
 from .research_view import panels as research_panels, teaser as research_teaser, page_body as research_body
 from .assistant import panel as assistant_panel, export as export_assistant
+from .quote_view import quote_view, quote_clocks, date_label
 
 
 def esc(value):
@@ -192,10 +193,10 @@ def runtime_panel(runtime, intraday=None):
 def intraday_line(quote, observed=None):
     if not quote:
         return ''
-    return (f'<p class="source-age">Point de séance provisoire : <strong>{number(quote["price"])} MAD</strong>'
-            f' · {esc(quote["asof"])}{ " · observé " + esc(observed) if observed else ""}'
-            f' · {number(quote["shares"],0)} titres · {number(quote["turnover_mad"],0)} MAD échangés.'
-            ' Ne remplace pas la clôture ni le score.</p>')
+    return (f'<div class="source-age">Point de séance provisoire : <strong>{number(quote["price"])} MAD</strong>'
+            + quote_clocks({'session':quote.get('asof'),'source_datetime':quote.get('source_datetime'),'collected_at':observed})
+            + f' · {number(quote["shares"],0)} titres · {number(quote["turnover_mad"],0)} MAD échangés.'
+            ' Ne remplace pas la clôture ni le score.</div>')
 
 
 def recent_table(bars, count=40):
@@ -382,14 +383,14 @@ def home_page(fixture, report, style, script):
         search = ''.join(c for c in __import__('unicodedata').normalize('NFD', search) if __import__('unicodedata').category(c) != 'Mn')
         score=r.get('canonical_score',{})
         score_text = number(score.get('value'), 0) if score.get('value') is not None else '—'
-        quote = r.get('intraday_quote')
-        live_price = f'{number(quote["price"])} MAD · provisoire' if quote else '—'
+        view = quote_view(r, record)
         bars = record['candles']
-        change = ((bars[-1]['c']/bars[-2]['c']-1)*100 if len(bars)>1 and bars[-2]['c'] else None)
+        close_reference = f'{number(r["price"])} MAD<br><small>{date_label(r.get("asof"))}</small>'
+        change = view['change_pct']
         tone = 'gain' if change is not None and change>0 else 'loss' if change is not None and change<0 else 'muted'
         history_link = (f'<a class="csv-button" href="historique/{esc(symbol)}.csv" download aria-label="Historique CSV de {esc(symbol)}">CSV</a>'
                         if bars else '<span class="muted">Cotation suspendue</span>' if r.get('decision') == 'SUSPENDU' else '<span class="muted">Indisponible</span>')
-        rows.append(f'<tr data-market-row data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a class="company-cell" href="titres/{esc(symbol)}.html">{company_logo(symbol)}<span>{esc(symbol)}</span></a></td><td>{esc(record["name"])}</td><td>{number(r["price"])} MAD</td><td class="{tone}">{number(change)} %</td><td class="nowrap">{esc(r["asof"])}</td><td>{live_price}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
+        rows.append(f'<tr data-market-row data-quote-symbol="{esc(symbol)}" data-quote-mode="{"provisional" if view["provisional"] else "close"}" data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a class="company-cell" href="titres/{esc(symbol)}.html">{company_logo(symbol)}<span>{esc(symbol)}</span></a></td><td>{esc(record["name"])}</td><td><strong data-primary-price>{number(view["price"])} MAD</strong><small class="quote-kind">{view["label"]}</small></td><td class="{tone}">{number(change)} %</td><td>{quote_clocks(view)}</td><td>{close_reference}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
     body = (header('index.html', (report.get('market_overview') or {}).get('asof') or fixture["snapshot_updated"])
@@ -401,7 +402,7 @@ def home_page(fixture, report, style, script):
             + fundamental_summary
             + fundamental_explorer(report)
             + '<section class="panel"><div class="section-heading"><div><span class="eyebrow">Univers complet</span><h2>Choisir une valeur</h2></div><div class="filters"><input id="search" class="search" type="search" aria-label="Rechercher une valeur" placeholder="Rechercher un code ou une société"><select id="sector" aria-label="Filtrer par secteur"><option value="">Tous les secteurs</option>'+sector_options+'</select><button type="button" id="sort-score">Trier par score</button></div></div>'
-            + f'<p class="panel-sub">{len(items)} valeurs suivies · cliquez sur le code pour le graphique et les indicateurs, sur CSV pour l’historique. La variation compare les deux dernières clôtures disponibles de chaque titre.</p><div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernière clôture</th><th>Variation</th><th>Date clôture</th><th>Point de séance</th><th>Score</th><th>État des données</th><th>Historique</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
+            + f'<p class="panel-sub">{len(items)} valeurs suivies · le dernier cours collecté en séance apparaît en premier, avec le libellé provisoire. La variation le compare à la dernière clôture ; hors séance, elle compare les deux dernières clôtures. Cotation et collecte ont leurs dates propres. Scores, ratios et graphiques restent calculés sur les clôtures.</p><div class="tablewrap"><table><thead><tr><th>Code</th><th>Société</th><th>Dernier cours disponible</th><th>Variation</th><th>Cotation & collecte</th><th>Clôture de référence</th><th>Score</th><th>État des données</th><th>Historique</th></tr></thead><tbody id="market-body">{"".join(rows)}</tbody></table></div>'
             + '<p class="fineprint">Les états décrivent la disponibilité des données, jamais une recommandation. Un historique peut rester indisponible tant qu’aucune séance validée n’a été importée.</p></section>'
             + '<details class="panel"><summary>Suivi des mises à jour</summary>' + runtime_panel(report.get('runtime'), report.get('intraday')) + '</details></main>'
             + '<footer>BVC Analyzer Nour · moteur indépendant · aucune écriture vers le moteur principal.</footer>')

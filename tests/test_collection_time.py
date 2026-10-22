@@ -24,6 +24,7 @@ class CollectionTime(unittest.TestCase):
         text=issuer_heading(item,{'name':'Alliances','candles':[]},
                             {'checked_at':'2026-10-19T15:30:00Z','result':'error'})
         self.assertIn('Dernière tentative de collecte',text)
-        self.assertIn('Séance 2026-10-16',text)
-        self.assertIn('Dernière clôture attestée',text)
-        self.assertNotIn('Séance 2026-10-19',text)
+        self.assertIn('datetime="2026-10-16">16/10/2026',text)
+        self.assertIn('Clôture disponible',text)
+        self.assertIn('data-quote-mode="close"',text)
+        self.assertNotIn('Cotation : <time datetime="2026-10-19',text)
