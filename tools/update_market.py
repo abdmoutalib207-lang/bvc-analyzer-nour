@@ -38,8 +38,9 @@ def main():
         candidate,details=import_session(fixture,raw,mapping,now=now)
         status.update(last_session=details["session"],details=details)
         conflicting = len(details["conflicts"])
-        if details["new_bars"]:
+        if details["new_bars"] or details.get('observations_refreshed'):
             atomic_json(data/"market_snapshot.json",candidate)
+        if details["new_bars"]:
             status.update(result="partial" if conflicting else "updated",
                           message=f"{details['new_bars']} bougies validées ; {conflicting} conflit(s) conservés")
         else:

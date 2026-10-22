@@ -120,6 +120,8 @@ def analyze(record, asof, quantity=1000):
         "decision_type": "data_readiness_only",
         "asof": record.get("price_asof"), "age_calendar_days": age_days,
         "price": record.get("price"), "price_source": record.get("price_source"),
+        'price_source_datetime': record.get('price_source_datetime'),
+        'price_collected_at': record.get('price_collected_at'),
         "day_turnover_mad_actual": record.get("day_turnover_mad"),
         "day_shares": record.get("day_shares"),
         "quality": {

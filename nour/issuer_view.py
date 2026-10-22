@@ -2,19 +2,18 @@
 from .bi_view import esc, finite, number
 from .company_identity import company_logo
 from .collection_view import collection_stamp
+from .quote_view import quote_view, quote_clocks, date_label
 
 
 def issuer_heading(item, record, collection=None):
     history = item.get('history_readiness') or {}
-    bars = record.get('candles') or []
     change = ''
-    if (len(bars) > 1 and bars[-1].get('d') == item.get('asof')
-            and finite(bars[-2].get('c')) and bars[-2]['c'] > 0
-            and finite(item.get('price'))):
-        delta = 100 * (item['price'] / bars[-2]['c'] - 1)
+    view = quote_view(item, record)
+    if view['change_pct'] is not None:
+        delta = view['change_pct']
         change = (f'<span class="quote-change {"gain" if delta >= 0 else "loss"}">'
                   f'{"+" if delta >= 0 else ""}{number(delta)} %</span>'
-                  f'<small>Depuis la clôture disponible du {esc(bars[-2]["d"])}</small>')
+                  f'<small>Depuis la clôture disponible du {date_label(view["reference_session"])}</small>')
     links = ''.join(f'<a href="#{key}">{label}</a>' for key, label in (
         ('graphique', 'Graphique'), ('technique', 'Technique'),
         ('fondamentaux', 'Comptes & ratios'), ('risques', 'Risques'),
@@ -24,10 +23,12 @@ def issuer_heading(item, record, collection=None):
             f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div><p>{esc(history.get("label"))}</p>'
             f'<span class="status {esc(item["decision"])}">{esc(item["decision"])}</span>'
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
-            '<div class="issuer-quote"><span>Dernière clôture attestée</span>'
-            f'<strong>{number(item.get("price"))} <small>MAD</small></strong>{change}'
-            f'<p>Séance {esc(item.get("asof"))}<br><a href="../sources.html#marche">Sources du cours</a></p>'
-            + collection_stamp((collection or {}).get('checked_at'), 'Dernière tentative de collecte' if (collection or {}).get('result')=='error' else 'Dernier passage du collecteur')
+            f'<div class="issuer-quote" data-quote-mode="{"provisional" if view["provisional"] else "close"}"><span>{view["label"]}</span>'
+            f'<strong data-primary-price>{number(view["price"])} <small>MAD</small></strong>{change}'
+            + quote_clocks(view)
+            + (f'<p class="quote-reference">Clôture de référence : {number(item.get("price"))} MAD · {date_label(item.get("asof"))}. Les indicateurs et ratios restent liés à cette clôture.</p>' if view['provisional'] else '')
+            + '<p><a href="../sources.html#marche">Sources du cours</a></p><div class="quote-collector-check">'
+            + collection_stamp((collection or {}).get('checked_at'), 'Dernière tentative de collecte' if (collection or {}).get('result')=='error' else 'Dernière vérification des sources') + '</div>'
             + '</div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
 
