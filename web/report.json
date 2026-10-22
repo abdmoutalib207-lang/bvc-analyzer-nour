@@ -95,24 +95,41 @@
     "last_session": "2026-10-22",
     "status": "intraday",
     "masi": {
-      "value": 17021.2808,
+      "value": 17029.6489,
       "asof": "2026-10-22",
       "veille": 17007.8597,
-      "change_pct": 0.08,
-      "variation_points": 13.42,
-      "ytd_pct": -9.68
+      "change_pct": 0.13,
+      "variation_points": 21.79,
+      "ytd_pct": -9.64
     },
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-22T14:10:18.113079+00:00",
-    "turnover_mad": 91585134.53,
+    "observed_at": "2026-10-22T14:47:47.746960+00:00",
+    "turnover_mad": 96613533.19,
     "breadth": {
       "up": 29,
-      "down": 18,
+      "down": 19,
       "flat": 7,
-      "quoted": 54
+      "quoted": 55
     }
   },
   "news": [
+    {
+      "id": "1aa58474d491cb0b7d",
+      "title": "European Natural Gas Prices Rise on Middle East Escalation",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/European-Natural-Gas-Prices-Rise-on-Middle-East-Escalation.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-22T14:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "f176ca1d9c543a376f",
       "title": "What Jackdaw’s Approval Means for the Future of North Sea Drilling",
@@ -1388,7 +1405,7 @@
     },
     {
       "id": "774fdb4193f8da9325",
-      "title": "Projet de Loi de Finances 2027 – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية",
+      "title": "- وزارة الاقتصاد والمالية",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA2SjlJZ0hhQzE5Q1k4STNHMVhoRndHYlhmS2h0YTIzQmE4QVNhN0pFVFNKbzR1SjQwdzh2SXBPal82LUs4a0xiSFBBVUZ6dmZhYVQ1TktLSE9iYk1tWm55UzI3bF9UUlRCem9iYVUtaWlkTTh5eElhZA?oc=5",
       "publisher": "Finances Maroc · relais presse",
       "published_at": "2026-10-21T00:29:45+00:00",
@@ -1572,6 +1589,23 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "e06a72ea155bfccf41",
+      "title": "Rapports accompagnant le projet de Loi de Finances - وزارة الاقتصاد والمالية",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPamxzajZndmdwelVOdnJ4OHpPRm1QNXc1LVRZMzZ0Vy1kbUJyWGl0LVBHT01VQXdOZ1pERDlyeU1GRWpPczlIUkhxbG83ZWg0Y1VWZU9TQ2tycFBmUTBDQmx6a0NzcWpEV0NsbmRmSkQxNUVSdzRDaDlmZmw5UlN1Nk9Zc2EzcUwwYWk5cXpXQUhMX2hMMmtSOXdLWk9UMm9PcHQwMjlWU1JoV0ZVSUZMdS1jU0VfZFpDU0lSbFdPenNTQjd4c3Z1Nkl6OA?oc=5",
+      "publisher": "Finances Maroc · relais presse",
+      "published_at": "2026-10-20T18:55:14+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "MAROC",
+      "feed_id": "mef",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "413db774558668e3d8",
@@ -3665,40 +3699,6 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "2404ff40cffc34236a",
-      "title": "« Panafricanisme oui, xénophobie non » : le message de l’avocat NJ Ayuk",
-      "url": "https://www.financialafrik.com/2026/10/16/panafricanisme-oui-xenophobie-non-le-message-de-lavocat-nj-ayuk/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-16T17:02:57+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "1e647bc834720c007a",
-      "title": "Equatorial Guinea Rewrites Oil Law After Production Collapses 85%",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Equatorial-Guinea-Rewrites-Oil-Law-After-Production-Collapses-85.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-16T16:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "4f0e959c9a3fb0c76c",
@@ -5874,17 +5874,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 36.2,
+        "price": 36.6,
         "asof": "2026-10-22",
         "open": 35.4,
         "high": 36.89,
         "low": 35.4,
-        "shares": 203520,
-        "turnover_mad": 7397816.39,
+        "shares": 233516,
+        "turnover_mad": 8491870.1,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ADI",
@@ -6678,17 +6678,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 363.9,
+        "price": 360.15,
         "asof": "2026-10-22",
         "open": 368.9,
         "high": 368.9,
         "low": 360.0,
-        "shares": 303,
-        "turnover_mad": 111074.75,
+        "shares": 370,
+        "turnover_mad": 135208.7,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "AFI",
@@ -7439,7 +7439,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "AFM",
@@ -9472,17 +9472,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 1036.0,
+        "price": 1038.0,
         "asof": "2026-10-22",
         "open": 1038.0,
         "high": 1039.0,
-        "low": 1036.0,
-        "shares": 337,
-        "turnover_mad": 349798.0,
+        "low": 1035.0,
+        "shares": 367,
+        "turnover_mad": 380878.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ALU",
@@ -10183,7 +10183,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ARD",
@@ -10892,7 +10892,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ATL",
@@ -11560,17 +11560,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 120.4,
+        "price": 119.5,
         "asof": "2026-10-22",
         "open": 120.4,
         "high": 120.4,
         "low": 119.0,
-        "shares": 37,
-        "turnover_mad": 4434.0,
+        "shares": 202,
+        "turnover_mad": 24284.5,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ATW",
@@ -12327,12 +12327,12 @@
         "open": 673.2,
         "high": 676.1,
         "low": 672.5,
-        "shares": 26742,
-        "turnover_mad": 18037668.0,
+        "shares": 27502,
+        "turnover_mad": 18550420.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "BAL",
@@ -13762,17 +13762,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 247.8,
+        "price": 249.0,
         "asof": "2026-10-22",
         "open": 247.5,
         "high": 249.0,
-        "low": 247.0,
-        "shares": 4569,
-        "turnover_mad": 1131615.85,
+        "low": 246.65,
+        "shares": 6918,
+        "turnover_mad": 1715834.2,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "BMC",
@@ -14550,7 +14550,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "BOA",
@@ -15319,17 +15319,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 180.5,
+        "price": 181.0,
         "asof": "2026-10-22",
         "open": 187.5,
         "high": 187.5,
         "low": 180.0,
-        "shares": 147888,
-        "turnover_mad": 26982980.45,
+        "shares": 148477,
+        "turnover_mad": 27090400.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CAR",
@@ -16050,17 +16050,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 19.0,
+        "price": 18.8,
         "asof": "2026-10-22",
         "open": 18.99,
         "high": 19.0,
         "low": 18.8,
-        "shares": 12903,
-        "turnover_mad": 242826.52,
+        "shares": 14807,
+        "turnover_mad": 278649.62,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CASH",
@@ -16789,12 +16789,12 @@
         "open": 207.0,
         "high": 207.1,
         "low": 206.3,
-        "shares": 800,
-        "turnover_mad": 165250.25,
+        "shares": 840,
+        "turnover_mad": 173515.05,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CDM",
@@ -17597,17 +17597,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 927.0,
+        "price": 921.0,
         "asof": "2026-10-22",
         "open": 927.0,
         "high": 927.0,
-        "low": 927.0,
-        "shares": 3,
-        "turnover_mad": 2781.0,
+        "low": 921.0,
+        "shares": 853,
+        "turnover_mad": 785631.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CFGB",
@@ -18449,12 +18449,12 @@
         "open": 192.0,
         "high": 197.0,
         "low": 192.0,
-        "shares": 30642,
-        "turnover_mad": 5944940.0,
+        "shares": 30648,
+        "turnover_mad": 5946104.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CIH",
@@ -19243,12 +19243,12 @@
         "open": 300.0,
         "high": 303.0,
         "low": 298.1,
-        "shares": 759,
-        "turnover_mad": 227645.35,
+        "shares": 789,
+        "turnover_mad": 236735.35,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CIM",
@@ -19965,17 +19965,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 1395.0,
+        "price": 1400.0,
         "asof": "2026-10-22",
         "open": 1396.0,
         "high": 1400.0,
         "low": 1391.0,
-        "shares": 1792,
-        "turnover_mad": 2507346.0,
+        "shares": 1821,
+        "turnover_mad": 2547946.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CMGP",
@@ -20805,17 +20805,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 260.0,
+        "price": 258.4,
         "asof": "2026-10-22",
         "open": 263.3,
         "high": 263.5,
         "low": 258.0,
-        "shares": 869,
-        "turnover_mad": 225122.4,
+        "shares": 1226,
+        "turnover_mad": 317361.95,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CMT",
@@ -22212,17 +22212,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 73.2,
+        "price": 73.55,
         "asof": "2026-10-22",
         "open": 77.0,
         "high": 77.0,
         "low": 73.16,
-        "shares": 171,
-        "turnover_mad": 12594.78,
+        "shares": 271,
+        "turnover_mad": 19982.98,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CSR",
@@ -22993,17 +22993,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 175.0,
+        "price": 177.0,
         "asof": "2026-10-22",
         "open": 177.9,
         "high": 177.9,
         "low": 175.0,
-        "shares": 242,
-        "turnover_mad": 42914.2,
+        "shares": 260,
+        "turnover_mad": 46100.2,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "CTM",
@@ -23720,8 +23720,18 @@
         "note": "Au moins quatre autres titres observables, même groupe, date de cours, exercice, clôture comptable, monnaie, périmètre et norme identifiée. Le titre est exclu de sa médiane de comparaison. Aucun repli international ou marché entier. Comparaison descriptive, non utilisée dans le score ; ROE sur capitaux propres de clôture. Secteur large : métiers non entièrement harmonisés."
       },
       "collection_conflicts": [],
-      "intraday_quote": null,
-      "intraday_observed_at": null
+      "intraday_quote": {
+        "price": 797.4,
+        "asof": "2026-10-22",
+        "open": 780.1,
+        "high": 797.4,
+        "low": 780.1,
+        "shares": 8,
+        "turnover_mad": 6275.4,
+        "provisional": true,
+        "source": "https://www.cdgcapitalbourse.ma/api/"
+      },
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "DAR",
@@ -25059,12 +25069,12 @@
         "open": 48.0,
         "high": 48.0,
         "low": 46.8,
-        "shares": 639,
-        "turnover_mad": 30339.5,
+        "shares": 692,
+        "turnover_mad": 32878.2,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "DIS",
@@ -26701,7 +26711,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "DTT",
@@ -27522,7 +27532,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ENK",
@@ -28207,12 +28217,12 @@
         "open": 46.75,
         "high": 47.8,
         "low": 46.75,
-        "shares": 313,
-        "turnover_mad": 14811.61,
+        "shares": 604,
+        "turnover_mad": 28488.61,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "EQD",
@@ -31110,17 +31120,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 59.3,
+        "price": 59.98,
         "asof": "2026-10-22",
         "open": 59.51,
         "high": 59.99,
         "low": 59.0,
-        "shares": 1201,
-        "turnover_mad": 70983.28,
+        "shares": 1342,
+        "turnover_mad": 79440.46,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "HPS",
@@ -31886,17 +31896,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 530.0,
+        "price": 535.0,
         "asof": "2026-10-22",
         "open": 540.0,
         "high": 540.0,
         "low": 530.0,
-        "shares": 15436,
-        "turnover_mad": 8181636.0,
+        "shares": 15486,
+        "turnover_mad": 8208386.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "IAM",
@@ -32542,17 +32552,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 88.4,
+        "price": 88.2,
         "asof": "2026-10-22",
         "open": 88.4,
         "high": 88.6,
-        "low": 88.2,
-        "shares": 17161,
-        "turnover_mad": 1516701.35,
+        "low": 88.19,
+        "shares": 23294,
+        "turnover_mad": 2057760.77,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "IBM",
@@ -33859,17 +33869,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 91.0,
+        "price": 90.95,
         "asof": "2026-10-22",
         "open": 91.3,
         "high": 91.3,
         "low": 90.55,
-        "shares": 412,
-        "turnover_mad": 37436.25,
+        "shares": 512,
+        "turnover_mad": 46536.45,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "INV",
@@ -35372,17 +35382,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 1470.0,
+        "price": 1490.0,
         "asof": "2026-10-22",
         "open": 1459.0,
         "high": 1500.0,
         "low": 1451.0,
-        "shares": 255,
-        "turnover_mad": 375517.0,
+        "shares": 259,
+        "turnover_mad": 381477.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "LBV",
@@ -36088,7 +36098,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "LES",
@@ -36883,7 +36893,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "LHM",
@@ -37586,7 +37596,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "M2M",
@@ -38310,12 +38320,12 @@
         "open": 390.0,
         "high": 390.0,
         "low": 390.0,
-        "shares": 5,
-        "turnover_mad": 1950.0,
+        "shares": 10,
+        "turnover_mad": 3900.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "MDP",
@@ -39058,7 +39068,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "MGL",
@@ -41319,17 +41329,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 1513.0,
+        "price": 1500.0,
         "asof": "2026-10-22",
         "open": 1519.0,
         "high": 1519.0,
         "low": 1495.0,
-        "shares": 576,
-        "turnover_mad": 864599.0,
+        "shares": 644,
+        "turnover_mad": 966599.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "MOX",
@@ -42052,7 +42062,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "MRL",
@@ -43473,12 +43483,12 @@
         "open": 766.5,
         "high": 768.0,
         "low": 765.0,
-        "shares": 432,
-        "turnover_mad": 330596.4,
+        "shares": 463,
+        "turnover_mad": 354334.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "MUT",
@@ -44297,12 +44307,12 @@
         "open": 225.0,
         "high": 225.0,
         "low": 219.8,
-        "shares": 261,
-        "turnover_mad": 57467.8,
+        "shares": 364,
+        "turnover_mad": 80127.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "NEJ",
@@ -47148,17 +47158,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 171.95,
+        "price": 171.5,
         "asof": "2026-10-22",
         "open": 171.5,
         "high": 172.25,
         "low": 169.0,
-        "shares": 6686,
-        "turnover_mad": 1144332.75,
+        "shares": 8686,
+        "turnover_mad": 1484483.95,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "REB",
@@ -48519,17 +48529,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 292.0,
+        "price": 295.95,
         "asof": "2026-10-22",
         "open": 290.5,
         "high": 299.0,
         "low": 290.5,
-        "shares": 1024,
-        "turnover_mad": 297867.2,
+        "shares": 1057,
+        "turnover_mad": 307545.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "S2M",
@@ -49283,12 +49293,12 @@
         "open": 461.0,
         "high": 461.0,
         "low": 460.0,
-        "shares": 119,
-        "turnover_mad": 54748.15,
+        "shares": 120,
+        "turnover_mad": 55208.15,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SAF",
@@ -51464,12 +51474,12 @@
         "open": 572.3,
         "high": 580.0,
         "low": 572.0,
-        "shares": 1568,
-        "turnover_mad": 902557.3,
+        "shares": 1801,
+        "turnover_mad": 1036546.4,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SLM",
@@ -52884,12 +52894,12 @@
         "open": 5690.0,
         "high": 5795.0,
         "low": 5673.0,
-        "shares": 22,
-        "turnover_mad": 125169.0,
+        "shares": 33,
+        "turnover_mad": 187573.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SNA",
@@ -53631,7 +53641,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SNP",
@@ -54380,17 +54390,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 273.1,
+        "price": 273.4,
         "asof": "2026-10-22",
         "open": 272.0,
-        "high": 273.1,
+        "high": 273.5,
         "low": 272.0,
-        "shares": 177,
-        "turnover_mad": 48318.6,
+        "shares": 256,
+        "turnover_mad": 69901.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SOT",
@@ -55117,17 +55127,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 315.0,
+        "price": 309.0,
         "asof": "2026-10-22",
         "open": 315.0,
         "high": 315.0,
-        "low": 315.0,
-        "shares": 2,
-        "turnover_mad": 630.0,
+        "low": 309.0,
+        "shares": 7,
+        "turnover_mad": 2175.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "SRM",
@@ -56569,17 +56579,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 47.8,
+        "price": 47.99,
         "asof": "2026-10-22",
         "open": 47.8,
         "high": 48.49,
         "low": 47.6,
-        "shares": 930,
-        "turnover_mad": 44503.72,
+        "shares": 985,
+        "turnover_mad": 47142.77,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "STR",
@@ -57347,7 +57357,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "T2S",
@@ -58072,17 +58082,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 215.4,
+        "price": 215.0,
         "asof": "2026-10-22",
         "open": 215.0,
         "high": 221.0,
         "low": 212.5,
-        "shares": 26495,
-        "turnover_mad": 5751701.9,
+        "shares": 27411,
+        "turnover_mad": 5950122.7,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "TGCC",
@@ -58838,17 +58848,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 614.0,
+        "price": 614.5,
         "asof": "2026-10-22",
         "open": 610.2,
         "high": 620.0,
         "low": 610.2,
-        "shares": 781,
-        "turnover_mad": 480150.5,
+        "shares": 899,
+        "turnover_mad": 552511.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "TMA",
@@ -59597,7 +59607,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "TQA",
@@ -60287,17 +60297,17 @@
       },
       "collection_conflicts": [],
       "intraday_quote": {
-        "price": 1626.0,
+        "price": 1611.0,
         "asof": "2026-10-22",
         "open": 1611.0,
         "high": 1626.0,
         "low": 1611.0,
-        "shares": 140,
-        "turnover_mad": 225582.0,
+        "shares": 148,
+        "turnover_mad": 238470.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "UNI",
@@ -61709,12 +61719,12 @@
         "open": 295.0,
         "high": 308.0,
         "low": 295.0,
-        "shares": 1100,
-        "turnover_mad": 330390.15,
+        "shares": 1280,
+        "turnover_mad": 384390.15,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "WAF",
@@ -62392,7 +62402,7 @@
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
-      "intraday_observed_at": "2026-10-22T14:10:12.619621+00:00"
+      "intraday_observed_at": "2026-10-22T14:47:41.927924+00:00"
     },
     {
       "symbol": "ZLD",
@@ -63107,17 +63117,17 @@
   "market_overview": {
     "schema_version": 1,
     "asof": "2026-10-22",
-    "observed_at": "2026-10-22T14:10:18.113079+00:00",
+    "observed_at": "2026-10-22T14:47:47.746960+00:00",
     "status": "intraday",
     "source": "CDG Capital Bourse",
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "masi": {
-      "value": 17021.2808,
+      "value": 17029.6489,
       "asof": "2026-10-22",
       "veille": 17007.8597,
-      "change_pct": 0.08,
-      "variation_points": 13.42,
-      "ytd_pct": -9.68
+      "change_pct": 0.13,
+      "variation_points": 21.79,
+      "ytd_pct": -9.64
     },
     "high": 17057.1422,
     "low": 16997.4023,
@@ -63240,14 +63250,14 @@
     ],
     "breadth": {
       "up": 29,
-      "down": 18,
+      "down": 19,
       "flat": 7,
-      "quoted": 54
+      "quoted": 55
     },
-    "turnover_mad": 91585134.53,
-    "shares": 513323.0,
+    "turnover_mad": 96613533.19,
+    "shares": 561239.0,
     "transactions": null,
-    "transactions_reported": 1565.0,
+    "transactions_reported": 1837.0,
     "transactions_quality": {
       "status": "session_not_independently_attested",
       "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
@@ -63257,14 +63267,14 @@
   "market_volume_audit": {
     "status": "incomplete",
     "asof": "2026-10-22",
-    "observed_at": "2026-10-22T14:10:18.113079+00:00",
-    "expected_lines": 54,
+    "observed_at": "2026-10-22T14:47:47.746960+00:00",
+    "expected_lines": 55,
     "observed_lines": 0,
     "coverage_complete": false,
-    "cdg_turnover_mad": 91585134.53,
+    "cdg_turnover_mad": 96613533.19,
     "lines_turnover_mad": null,
     "difference_mad": null,
-    "cdg_shares": 513323,
+    "cdg_shares": 561239,
     "lines_shares": null,
     "difference_shares": null
   },
@@ -127955,13 +127965,13 @@
   },
   "overview_health": {
     "result": "updated",
-    "checked_at": "2026-10-22T14:10:18.113079+00:00",
+    "checked_at": "2026-10-22T14:47:47.746960+00:00",
     "asof": "2026-10-22"
   },
   "news_health": {
-    "checked_at": "2026-10-22T14:10:17.795112+00:00",
+    "checked_at": "2026-10-22T14:47:47.382677+00:00",
     "status": "partial",
-    "fetched_items": 82,
+    "fetched_items": 90,
     "errors": [
       "Mining.com: HTTP Error 403: Forbidden"
     ],
@@ -128003,8 +128013,8 @@
       },
       {
         "name": "Finances Maroc · relais presse",
-        "status": "empty",
-        "items": 0
+        "status": "ok",
+        "items": 7
       },
       {
         "name": "Financial Afrik",
@@ -128024,7 +128034,7 @@
       {
         "name": "Inflation US / zone euro · presse",
         "status": "ok",
-        "items": 1
+        "items": 2
       },
       {
         "name": "Le Matin",
@@ -128215,55 +128225,55 @@
     "scope": "indexation seulement; aucun chiffre extrait ni certifié"
   },
   "health": {
-    "checked_at": "2026-10-22T14:10:12.619621+00:00",
+    "checked_at": "2026-10-22T14:47:41.927924+00:00",
     "source": "CDG Capital Bourse",
     "result": "intraday",
     "last_session": "2026-10-21",
-    "message": "54 observations provisoires ; clôtures et scores historiques inchangés",
+    "message": "55 observations provisoires ; clôtures et scores historiques inchangés",
     "intraday_session": "2026-10-22",
     "rejected": []
   },
   "macro_source": {
     "schema_version": 1,
-    "checked_at": "2026-10-22T14:10:19.074177+00:00",
+    "checked_at": "2026-10-22T14:47:48.968679+00:00",
     "quotes": {
       "SP:SPX": {
         "ticker": "SP:SPX",
-        "value": 7695.27,
-        "change_pct": -0.7979714251460215,
-        "observed_at": "2026-10-22T13:41:49+00:00",
+        "value": 7649.54,
+        "change_pct": -1.387490541009158,
+        "observed_at": "2026-10-22T14:47:38+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "S&P 500",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "DJ:DJI": {
         "ticker": "DJ:DJI",
-        "value": 52789.13,
-        "change_pct": -0.12668360448152546,
-        "observed_at": "2026-10-22T13:42:33+00:00",
+        "value": 52521.79,
+        "change_pct": -0.6324720576190854,
+        "observed_at": "2026-10-22T14:47:38+00:00",
         "currency": null,
         "mode": "delayed_streaming_600",
         "description": "Dow Jones Industrial Average",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "EURONEXT:PX1": {
         "ticker": "EURONEXT:PX1",
-        "value": 7840.94,
-        "change_pct": -1.0192282445137988,
-        "observed_at": "2026-10-22T14:10:00+00:00",
+        "value": 7815.54,
+        "change_pct": -1.339867300875576,
+        "observed_at": "2026-10-22T14:21:30+00:00",
         "currency": null,
         "mode": "delayed_streaming_900",
         "description": "CAC 40 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "TVC:NI225": {
@@ -128276,111 +128286,111 @@
         "description": "Japan 225 Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:USDMAD": {
         "ticker": "FX_IDC:USDMAD",
-        "value": 9.8264,
-        "change_pct": 0.43541364296081475,
-        "observed_at": "2026-10-22T14:10:09+00:00",
+        "value": 9.8188,
+        "change_pct": 0.35773421370019975,
+        "observed_at": "2026-10-22T14:47:37+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "FX_IDC:EURMAD": {
         "ticker": "FX_IDC:EURMAD",
-        "value": 10.989,
-        "change_pct": 0.07285310991713774,
-        "observed_at": "2026-10-22T14:09:28+00:00",
+        "value": 10.992,
+        "change_pct": 0.10017302613606237,
+        "observed_at": "2026-10-22T14:34:28+00:00",
         "currency": "MAD",
         "mode": "streaming",
         "description": "EURO / MOROCCAN DIRHAM",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "CBOE:VIX": {
         "ticker": "CBOE:VIX",
-        "value": 18.18,
-        "change_pct": 8.992805755395683,
-        "observed_at": "2026-10-22T13:42:16+00:00",
+        "value": 19.3,
+        "change_pct": 15.7074340527578,
+        "observed_at": "2026-10-22T14:47:31+00:00",
         "currency": null,
         "mode": "delayed_streaming_900",
         "description": "CBOE Volatility Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "TVC:DXY": {
         "ticker": "TVC:DXY",
-        "value": 101.845,
-        "change_pct": 0.15143916374113378,
-        "observed_at": "2026-10-22T14:02:13+00:00",
+        "value": 101.838,
+        "change_pct": 0.14455556538925898,
+        "observed_at": "2026-10-22T14:47:37+00:00",
         "currency": "USD",
         "mode": "streaming",
         "description": "U.S. Dollar Currency Index",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "COMEX:GC1!": {
         "ticker": "COMEX:GC1!",
-        "value": 4072.5,
-        "change_pct": -1.8674698795180724,
-        "observed_at": "2026-10-22T14:10:11+00:00",
+        "value": 4066.7,
+        "change_pct": -2.007228915662655,
+        "observed_at": "2026-10-22T14:47:39+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Gold Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:BRN1!": {
         "ticker": "ICEEUR:BRN1!",
-        "value": 111.75,
-        "change_pct": 2.6925197573975437,
-        "observed_at": "2026-10-22T14:10:11+00:00",
+        "value": 111.56,
+        "change_pct": 2.5179195000919035,
+        "observed_at": "2026-10-22T14:47:38+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Brent Crude Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "COMEX:HG1!": {
         "ticker": "COMEX:HG1!",
-        "value": 6.4425,
-        "change_pct": -2.082225093092187,
-        "observed_at": "2026-10-22T14:10:09+00:00",
+        "value": 6.4145,
+        "change_pct": -2.5077893456949623,
+        "observed_at": "2026-10-22T14:47:38+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "Copper Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       },
       "ICEEUR:ATW1!": {
         "ticker": "ICEEUR:ATW1!",
         "value": 145.3,
         "change_pct": -0.1374570446735317,
-        "observed_at": "2026-10-22T00:22:26+00:00",
+        "observed_at": "2026-10-22T14:46:00+00:00",
         "currency": "USD",
         "mode": "delayed_streaming_600",
         "description": "API2 Rotterdam Coal Futures",
         "source": "TradingView — scanner public",
         "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-        "collected_at": "2026-10-22T14:10:19.074177+00:00",
+        "collected_at": "2026-10-22T14:47:48.968679+00:00",
         "collection_state": "collected"
       }
     },
@@ -128390,8 +128400,8 @@
   },
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-22T14:10:28.832750+00:00",
-    "checked_at": "2026-10-22T14:10:19.074177+00:00",
+    "cutoff": "2026-10-22T14:47:58.399527+00:00",
+    "checked_at": "2026-10-22T14:47:48.968679+00:00",
     "status": "ok",
     "groups": [
       {
@@ -128401,51 +128411,51 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7695.27,
-            "change_pct": -0.7979714251460215,
+            "value": 7649.54,
+            "change_pct": -1.387490541009158,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T13:41:49+00:00",
+            "observed_at": "2026-10-22T14:47:38+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 52789.13,
-            "change_pct": -0.12668360448152546,
+            "value": 52521.79,
+            "change_pct": -0.6324720576190854,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T13:42:33+00:00",
+            "observed_at": "2026-10-22T14:47:38+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
             "name": "CAC 40",
             "unit": "points",
-            "value": 7840.94,
-            "change_pct": -1.0192282445137988,
+            "value": 7815.54,
+            "change_pct": -1.339867300875576,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:10:00+00:00",
+            "observed_at": "2026-10-22T14:21:30+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
@@ -128462,7 +128472,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           }
         ]
@@ -128474,68 +128484,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8264,
-            "change_pct": 0.43541364296081475,
+            "value": 9.8188,
+            "change_pct": 0.35773421370019975,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:10:09+00:00",
+            "observed_at": "2026-10-22T14:47:37+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.989,
-            "change_pct": 0.07285310991713774,
+            "value": 10.992,
+            "change_pct": 0.10017302613606237,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:09:28+00:00",
+            "observed_at": "2026-10-22T14:34:28+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 18.18,
-            "change_pct": 8.992805755395683,
+            "value": 19.3,
+            "change_pct": 15.7074340527578,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T13:42:16+00:00",
+            "observed_at": "2026-10-22T14:47:31+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 101.845,
-            "change_pct": 0.15143916374113378,
+            "value": 101.838,
+            "change_pct": 0.14455556538925898,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:02:13+00:00",
+            "observed_at": "2026-10-22T14:47:37+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           }
         ]
@@ -128547,51 +128557,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4072.5,
-            "change_pct": -1.8674698795180724,
+            "value": 4066.7,
+            "change_pct": -2.007228915662655,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:10:11+00:00",
+            "observed_at": "2026-10-22T14:47:39+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 111.75,
-            "change_pct": 2.6925197573975437,
+            "value": 111.56,
+            "change_pct": 2.5179195000919035,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:10:11+00:00",
+            "observed_at": "2026-10-22T14:47:38+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.4425,
-            "change_pct": -2.082225093092187,
+            "value": 6.4145,
+            "change_pct": -2.5077893456949623,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T14:10:09+00:00",
+            "observed_at": "2026-10-22T14:47:38+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           },
           {
@@ -128602,13 +128612,13 @@
             "change_pct": -0.1374570446735317,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T00:22:26+00:00",
+            "observed_at": "2026-10-22T14:46:00+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-22T14:10:19.074177+00:00",
+            "collected_at": "2026-10-22T14:47:48.968679+00:00",
             "collection_state": "collected"
           }
         ]
@@ -128620,32 +128630,32 @@
   "runtime": {
     "timezone": "Africa/Casablanca",
     "event": "schedule",
-    "slot": "morning",
-    "label": "Briefing du matin",
-    "target_time": "09:45",
-    "schedule": "45 9 * * 1-5",
-    "scheduled_at": "2026-10-22T09:45:00+00:00",
+    "slot": "refresh",
+    "label": "Actualisation horaire",
+    "target_time": "10:45",
+    "schedule": "45 10 * * 1-5",
+    "scheduled_at": "2026-10-22T10:45:00+00:00",
     "scheduled_at_basis": "most_recent_weekday_cron_occurrence",
     "edition_for": "2026-10-22",
-    "started_at": "2026-10-22T14:10:10+00:00",
-    "built_at": "2026-10-22T14:10:28.832750+00:00",
-    "delay_minutes": 265.2,
+    "started_at": "2026-10-22T14:47:41+00:00",
+    "built_at": "2026-10-22T14:47:58.399527+00:00",
+    "delay_minutes": 242.7,
     "late": true,
-    "run_id": "39792999810",
-    "commit": "5cea70f1f455160b0a7038efa2bcf83068adbd52",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39792999810",
+    "run_id": "39797873458",
+    "commit": "eda47d4dcfe8912fbf65110c965d3271fa864480",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39797873458",
     "collection": {
       "result": "intraday",
       "label": "Observation provisoire · aucune clôture intégrée",
-      "checked_at": "2026-10-22T14:10:12.619621+00:00",
+      "checked_at": "2026-10-22T14:47:41.927924+00:00",
       "last_session": "2026-10-21",
-      "message": "54 observations provisoires ; clôtures et scores historiques inchangés",
+      "message": "55 observations provisoires ; clôtures et scores historiques inchangés",
       "conflicts": [],
       "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "5cea70f1f455160b0a7038efa2bcf83068adbd52",
+      "generator_commit": "eda47d4dcfe8912fbf65110c965d3271fa864480",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -128655,13 +128665,13 @@
     "market_integrity": {
       "status": "intraday",
       "session": "2026-10-22",
-      "observed_at": "2026-10-22T14:10:19.350843+00:00",
+      "observed_at": "2026-10-22T14:47:49.151494+00:00",
       "cross_source_verified": false
     }
   },
   "provenance": {
     "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-    "generator_commit": "5cea70f1f455160b0a7038efa2bcf83068adbd52",
+    "generator_commit": "eda47d4dcfe8912fbf65110c965d3271fa864480",
     "publication_commit": null,
     "publication_manifest": "publication.json",
     "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -128671,7 +128681,7 @@
   "cross_source_volume_audit": {
     "schema_version": 1,
     "session": "2026-10-22",
-    "observed_at": "2026-10-22T14:10:19.350843+00:00",
+    "observed_at": "2026-10-22T14:47:49.151494+00:00",
     "status": "intraday",
     "publication_safe": true,
     "internal_match": false,
@@ -128694,7 +128704,7 @@
     "open": 7,
     "resolved": 12,
     "lessons": 11,
-    "last_update": "2026-10-22T14:10:19.350843+00:00",
+    "last_update": "2026-10-22T14:47:49.151494+00:00",
     "url": "error-memory.json",
     "lessons_catalog": [
       {
@@ -128757,9 +128767,9 @@
   "collection": {
     "result": "intraday",
     "label": "Observation provisoire · aucune clôture intégrée",
-    "checked_at": "2026-10-22T14:10:12.619621+00:00",
+    "checked_at": "2026-10-22T14:47:41.927924+00:00",
     "last_session": "2026-10-21",
-    "message": "54 observations provisoires ; clôtures et scores historiques inchangés",
+    "message": "55 observations provisoires ; clôtures et scores historiques inchangés",
     "conflicts": [],
     "fully_validated": false
   },
@@ -128773,28 +128783,28 @@
   "intraday": {
     "schema_version": 1,
     "session": "2026-10-22",
-    "observed_at": "2026-10-22T14:10:12.619621+00:00",
+    "observed_at": "2026-10-22T14:47:41.927924+00:00",
     "source": "https://www.cdgcapitalbourse.ma/api/",
     "quotes": {
       "ADH": {
-        "price": 36.2,
+        "price": 36.6,
         "asof": "2026-10-22",
         "open": 35.4,
         "high": 36.89,
         "low": 35.4,
-        "shares": 203520,
-        "turnover_mad": 7397816.39,
+        "shares": 233516,
+        "turnover_mad": 8491870.1,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "ADI": {
-        "price": 363.9,
+        "price": 360.15,
         "asof": "2026-10-22",
         "open": 368.9,
         "high": 368.9,
         "low": 360.0,
-        "shares": 303,
-        "turnover_mad": 111074.75,
+        "shares": 370,
+        "turnover_mad": 135208.7,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128810,13 +128820,13 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "AKD": {
-        "price": 1036.0,
+        "price": 1038.0,
         "asof": "2026-10-22",
         "open": 1038.0,
         "high": 1039.0,
-        "low": 1036.0,
-        "shares": 337,
-        "turnover_mad": 349798.0,
+        "low": 1035.0,
+        "shares": 367,
+        "turnover_mad": 380878.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128843,24 +128853,24 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "HAL": {
-        "price": 59.3,
+        "price": 59.98,
         "asof": "2026-10-22",
         "open": 59.51,
         "high": 59.99,
         "low": 59.0,
-        "shares": 1201,
-        "turnover_mad": 70983.28,
+        "shares": 1342,
+        "turnover_mad": 79440.46,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "ATL": {
-        "price": 120.4,
+        "price": 119.5,
         "asof": "2026-10-22",
         "open": 120.4,
         "high": 120.4,
         "low": 119.0,
-        "shares": 37,
-        "turnover_mad": 4434.0,
+        "shares": 202,
+        "turnover_mad": 24284.5,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128870,8 +128880,8 @@
         "open": 673.2,
         "high": 676.1,
         "low": 672.5,
-        "shares": 26742,
-        "turnover_mad": 18037668.0,
+        "shares": 27502,
+        "turnover_mad": 18550420.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128887,24 +128897,24 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "BCP": {
-        "price": 247.8,
+        "price": 249.0,
         "asof": "2026-10-22",
         "open": 247.5,
         "high": 249.0,
-        "low": 247.0,
-        "shares": 4569,
-        "turnover_mad": 1131615.85,
+        "low": 246.65,
+        "shares": 6918,
+        "turnover_mad": 1715834.2,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "BOA": {
-        "price": 180.5,
+        "price": 181.0,
         "asof": "2026-10-22",
         "open": 187.5,
         "high": 187.5,
         "low": 180.0,
-        "shares": 147888,
-        "turnover_mad": 26982980.45,
+        "shares": 148477,
+        "turnover_mad": 27090400.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128914,19 +128924,19 @@
         "open": 207.0,
         "high": 207.1,
         "low": 206.3,
-        "shares": 800,
-        "turnover_mad": 165250.25,
+        "shares": 840,
+        "turnover_mad": 173515.05,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "CDM": {
-        "price": 927.0,
+        "price": 921.0,
         "asof": "2026-10-22",
         "open": 927.0,
         "high": 927.0,
-        "low": 927.0,
-        "shares": 3,
-        "turnover_mad": 2781.0,
+        "low": 921.0,
+        "shares": 853,
+        "turnover_mad": 785631.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128936,8 +128946,8 @@
         "open": 192.0,
         "high": 197.0,
         "low": 192.0,
-        "shares": 30642,
-        "turnover_mad": 5944940.0,
+        "shares": 30648,
+        "turnover_mad": 5946104.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -128947,63 +128957,74 @@
         "open": 300.0,
         "high": 303.0,
         "low": 298.1,
-        "shares": 759,
-        "turnover_mad": 227645.35,
+        "shares": 789,
+        "turnover_mad": 236735.35,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "CIM": {
-        "price": 1395.0,
+        "price": 1400.0,
         "asof": "2026-10-22",
         "open": 1396.0,
         "high": 1400.0,
         "low": 1391.0,
-        "shares": 1792,
-        "turnover_mad": 2507346.0,
+        "shares": 1821,
+        "turnover_mad": 2547946.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "CMGP": {
-        "price": 260.0,
+        "price": 258.4,
         "asof": "2026-10-22",
         "open": 263.3,
         "high": 263.5,
         "low": 258.0,
-        "shares": 869,
-        "turnover_mad": 225122.4,
+        "shares": 1226,
+        "turnover_mad": 317361.95,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "COL": {
-        "price": 73.2,
+        "price": 73.55,
         "asof": "2026-10-22",
         "open": 77.0,
         "high": 77.0,
         "low": 73.16,
-        "shares": 171,
-        "turnover_mad": 12594.78,
+        "shares": 271,
+        "turnover_mad": 19982.98,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "CAR": {
-        "price": 19.0,
+        "price": 18.8,
         "asof": "2026-10-22",
         "open": 18.99,
         "high": 19.0,
         "low": 18.8,
-        "shares": 12903,
-        "turnover_mad": 242826.52,
+        "shares": 14807,
+        "turnover_mad": 278649.62,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "CSR": {
-        "price": 175.0,
+        "price": 177.0,
         "asof": "2026-10-22",
         "open": 177.9,
         "high": 177.9,
         "low": 175.0,
-        "shares": 242,
-        "turnover_mad": 42914.2,
+        "shares": 260,
+        "turnover_mad": 46100.2,
+        "provisional": true,
+        "source": "https://www.cdgcapitalbourse.ma/api/"
+      },
+      "CTM": {
+        "price": 797.4,
+        "asof": "2026-10-22",
+        "open": 780.1,
+        "high": 797.4,
+        "low": 780.1,
+        "shares": 8,
+        "turnover_mad": 6275.4,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129013,8 +129034,8 @@
         "open": 48.0,
         "high": 48.0,
         "low": 46.8,
-        "shares": 639,
-        "turnover_mad": 30339.5,
+        "shares": 692,
+        "turnover_mad": 32878.2,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129046,52 +129067,52 @@
         "open": 572.3,
         "high": 580.0,
         "low": 572.0,
-        "shares": 1568,
-        "turnover_mad": 902557.3,
+        "shares": 1801,
+        "turnover_mad": 1036546.4,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "HPS": {
-        "price": 530.0,
+        "price": 535.0,
         "asof": "2026-10-22",
         "open": 540.0,
         "high": 540.0,
         "low": 530.0,
-        "shares": 15436,
-        "turnover_mad": 8181636.0,
+        "shares": 15486,
+        "turnover_mad": 8208386.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "IAM": {
-        "price": 88.4,
+        "price": 88.2,
         "asof": "2026-10-22",
         "open": 88.4,
         "high": 88.6,
-        "low": 88.2,
-        "shares": 17161,
-        "turnover_mad": 1516701.35,
+        "low": 88.19,
+        "shares": 23294,
+        "turnover_mad": 2057760.77,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "IMI": {
-        "price": 91.0,
+        "price": 90.95,
         "asof": "2026-10-22",
         "open": 91.3,
         "high": 91.3,
         "low": 90.55,
-        "shares": 412,
-        "turnover_mad": 37436.25,
+        "shares": 512,
+        "turnover_mad": 46536.45,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "JET": {
-        "price": 1470.0,
+        "price": 1490.0,
         "asof": "2026-10-22",
         "open": 1459.0,
         "high": 1500.0,
         "low": 1451.0,
-        "shares": 255,
-        "turnover_mad": 375517.0,
+        "shares": 259,
+        "turnover_mad": 381477.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129134,8 +129155,8 @@
         "open": 390.0,
         "high": 390.0,
         "low": 390.0,
-        "shares": 5,
-        "turnover_mad": 1950.0,
+        "shares": 10,
+        "turnover_mad": 3900.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129151,13 +129172,13 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "MNG": {
-        "price": 1513.0,
+        "price": 1500.0,
         "asof": "2026-10-22",
         "open": 1519.0,
         "high": 1519.0,
         "low": 1495.0,
-        "shares": 576,
-        "turnover_mad": 864599.0,
+        "shares": 644,
+        "turnover_mad": 966599.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129178,8 +129199,8 @@
         "open": 766.5,
         "high": 768.0,
         "low": 765.0,
-        "shares": 432,
-        "turnover_mad": 330596.4,
+        "shares": 463,
+        "turnover_mad": 354334.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129189,8 +129210,8 @@
         "open": 225.0,
         "high": 225.0,
         "low": 219.8,
-        "shares": 261,
-        "turnover_mad": 57467.8,
+        "shares": 364,
+        "turnover_mad": 80127.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129200,30 +129221,30 @@
         "open": 46.75,
         "high": 47.8,
         "low": 46.75,
-        "shares": 313,
-        "turnover_mad": 14811.61,
+        "shares": 604,
+        "turnover_mad": 28488.61,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "RDS": {
-        "price": 171.95,
+        "price": 171.5,
         "asof": "2026-10-22",
         "open": 171.5,
         "high": 172.25,
         "low": 169.0,
-        "shares": 6686,
-        "turnover_mad": 1144332.75,
+        "shares": 8686,
+        "turnover_mad": 1484483.95,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "RIS": {
-        "price": 292.0,
+        "price": 295.95,
         "asof": "2026-10-22",
         "open": 290.5,
         "high": 299.0,
         "low": 290.5,
-        "shares": 1024,
-        "turnover_mad": 297867.2,
+        "shares": 1057,
+        "turnover_mad": 307545.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129233,8 +129254,8 @@
         "open": 461.0,
         "high": 461.0,
         "low": 460.0,
-        "shares": 119,
-        "turnover_mad": 54748.15,
+        "shares": 120,
+        "turnover_mad": 55208.15,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129255,41 +129276,41 @@
         "open": 5690.0,
         "high": 5795.0,
         "low": 5673.0,
-        "shares": 22,
-        "turnover_mad": 125169.0,
+        "shares": 33,
+        "turnover_mad": 187573.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "STK": {
-        "price": 47.8,
+        "price": 47.99,
         "asof": "2026-10-22",
         "open": 47.8,
         "high": 48.49,
         "low": 47.6,
-        "shares": 930,
-        "turnover_mad": 44503.72,
+        "shares": 985,
+        "turnover_mad": 47142.77,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "SNP": {
-        "price": 273.1,
+        "price": 273.4,
         "asof": "2026-10-22",
         "open": 272.0,
-        "high": 273.1,
+        "high": 273.5,
         "low": 272.0,
-        "shares": 177,
-        "turnover_mad": 48318.6,
+        "shares": 256,
+        "turnover_mad": 69901.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "SOT": {
-        "price": 315.0,
+        "price": 309.0,
         "asof": "2026-10-22",
         "open": 315.0,
         "high": 315.0,
-        "low": 315.0,
-        "shares": 2,
-        "turnover_mad": 630.0,
+        "low": 309.0,
+        "shares": 7,
+        "turnover_mad": 2175.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129305,24 +129326,24 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "T2S": {
-        "price": 215.4,
+        "price": 215.0,
         "asof": "2026-10-22",
         "open": 215.0,
         "high": 221.0,
         "low": 212.5,
-        "shares": 26495,
-        "turnover_mad": 5751701.9,
+        "shares": 27411,
+        "turnover_mad": 5950122.7,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "TGCC": {
-        "price": 614.0,
+        "price": 614.5,
         "asof": "2026-10-22",
         "open": 610.2,
         "high": 620.0,
         "low": 610.2,
-        "shares": 781,
-        "turnover_mad": 480150.5,
+        "shares": 899,
+        "turnover_mad": 552511.8,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129338,13 +129359,13 @@
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
       "TQA": {
-        "price": 1626.0,
+        "price": 1611.0,
         "asof": "2026-10-22",
         "open": 1611.0,
         "high": 1626.0,
         "low": 1611.0,
-        "shares": 140,
-        "turnover_mad": 225582.0,
+        "shares": 148,
+        "turnover_mad": 238470.0,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
@@ -129354,8 +129375,8 @@
         "open": 295.0,
         "high": 308.0,
         "low": 295.0,
-        "shares": 1100,
-        "turnover_mad": 330390.15,
+        "shares": 1280,
+        "turnover_mad": 384390.15,
         "provisional": true,
         "source": "https://www.cdgcapitalbourse.ma/api/"
       },
