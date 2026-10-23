@@ -1,4 +1,4 @@
-Filet de sécurité de fin de journée — séance 2026-10-23
+Point de marché à la demande — séance 2026-10-23
 Préparé le 2026-10-23
 
 Lecture de séanceL’essentiel
@@ -15,7 +15,7 @@ Le relevé de marché totalise 328,52 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–17 818,09 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-23T19:21:44.829695+00:00.
+Sources du marché · relevé 2026-10-23T23:23:23.389803+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -407,25 +407,21 @@ AMMC · 2026-10-20 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-23T19:21:45.797970+00:00 · état partial. Horodatages en UTC.
-
-Détails de collecte macro
-
-ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
+Collecte tentée : 2026-10-23T23:23:24.317722+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 631,68points · -0,41 %
+7 623,68points · -0,52 %
 
-Dernière observation source2026-10-23T19:21:38+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-23T20:38:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 271,39points · -1,13 %
+52 215,16points · -1,23 %
 
-Dernière observation source2026-10-23T19:21:38+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-23T20:42:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -443,57 +439,77 @@ Risque et devises
 
 USD/MAD
 
-9,8208MAD / USD · 0,14 %
+9,8006MAD / USD · -0,06 %
 
-Dernière observation source2026-10-23T19:21:37+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-23T21:01:01+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9760MAD / EUR · -0,26 %
+10,9720MAD / EUR · -0,30 %
 
-Dernière observation source2026-10-23T19:19:30+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-23T21:04:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-19,69points · 3,47 %
+19,45points · 2,21 %
 
-Dernière observation source2026-10-23T19:21:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-23T20:14:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,80points · 0,18 %
+101,75points · 0,13 %
 
-Dernière observation source2026-10-23T19:21:37+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-23T20:59:58+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 008,90USD / once troy · -1,27 %
+4 007,90USD / once troy · -1,29 %
 
-Dernière observation source2026-10-23T19:21:23+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-23T22:32:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
 116,72USD / baril · 3,14 %
 
-Dernière observation source2026-10-23T19:21:38+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-23T22:38:10+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,50USD / livre · 1,60 %
+6,51USD / livre · 1,71 %
 
-Dernière observation source2026-10-23T19:20:29+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-23T22:25:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
-146,00USD / tonne · 0,48 %
+147,00USD / tonne · 0,68 %
 
-Archive conservée après collecte incomplète2026-10-23T00:26:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Dernière observation source2026-10-23T22:32:56+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Trumps-Reverse-Nixon-Strategy-Bring-Russia-In-Shut-China-Out.html] Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out ↗
+
+OilPrice · 2026-10-23T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/Why-Trump-and-Carney-Havent-Touched-Energy-in-Their-Tariff-War.html] Why Trump and Carney Haven’t Touched Energy in Their Tariff War ↗
+
+OilPrice · 2026-10-23T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative] France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative ↗
+
+RFI · économie · 2026-10-23T21:26:18+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://news.google.com/rss/articles/CBMieEFVX3lxTE9WNjI5d21TTy0wVEE1TG1rcEZSVFVSX2VlbzV5OTlwYUk5V0d2OFllbDdVX0ItZVFLazljSHRaNC1ycWRfa2hJLVNqdHdKWkMyN09HTzY5MXdQampkMGF0aXg0eVlYdms0RHY1Z1lidWFBVDdtbGEwbg?oc=5] M. Fouzi LEKJAA présente le Projet de Loi de Finances 2027 devant les deux Chambres du Parlement – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية ↗
+
+Finances Maroc · relais presse · 2026-10-23T20:09:06+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/NASAs-Freeze-Resistant-Moon-Battery-Could-Eventually-Reach-EVs.html] NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs ↗
+
+OilPrice · 2026-10-23T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/10/23/la-quotidienne-des-marches-financiers-africains-5/] La quotidienne des marchés financiers africains ↗
 
@@ -506,26 +522,6 @@ Financial Afrik · 2026-10-23T18:27:38+00:00 · Périmètre non établi · Écon
  [https://www.financialafrik.com/2026/10/23/tunisie-assurances-maghrebia-depasse-86-millions-de-dollars-de-primes-a-fin-septembre-2026/] Tunisie : Assurances Maghrebia dépasse 86 millions de dollars de primes à fin septembre 2026 ↗
 
 Financial Afrik · 2026-10-23T18:21:08+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/23/xenophobie-petrole-et-decrochage-le-senegal-scie-la-branche-sur-laquelle-il-est-assis/] Xénophobie, pétrole et décrochage : le Sénégal scie la branche sur laquelle il est assis ↗
-
-Financial Afrik · 2026-10-23T18:13:47+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/23/rencontre-avec-moussa-camara-specialiste-du-suivi-evaluation-du-projet-de-restauration-des-terres-degradees-au-mali-prtd-mali/] Rencontre avec Moussa Camara, spécialiste du suivi-évaluation du Projet de Restauration des Terres Dégradées au Mali (PRTD-Mali) ↗
-
-Financial Afrik · 2026-10-23T18:08:11+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/23/afrique-europe-batir-des-ponts-plaide-pour-une-nouvelle-dynamique-dinvestissements/] Afrique-Europe : « Bâtir des ponts » plaide pour une nouvelle dynamique d’investissements ↗
-
-Financial Afrik · 2026-10-23T17:56:04+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/23/charlotte-libog-pas-de-developpement-de-lafrique-sans-lagriculture/] Charlotte Libog : « pas de développement de l’Afrique sans l’agriculture » ↗
-
-Financial Afrik · 2026-10-23T17:50:35+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/6-Million-Barrels-in-Two-Minutes-Draws-CFTC-Scrutiny.html] 6 Million Barrels in Two Minutes Draws CFTC Scrutiny ↗
-
-OilPrice · 2026-10-23T17:20:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -583,23 +579,23 @@ Radar de presse — alertes à recouper
 
 Financial Afrik · 2026-10-21T10:33:41+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/23/la-quotidienne-des-marches-financiers-africains-5/] La quotidienne des marchés financiers africains ↗
+ [https://oilprice.com/Energy/Energy-General/Trumps-Reverse-Nixon-Strategy-Bring-Russia-In-Shut-China-Out.html] Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out ↗
 
-Financial Afrik · 2026-10-23T18:46:27+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-23T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/23/cemac-la-baisse-du-cout-du-credit-a-1099-a-fin-juin-2026-beneficie-aux-grandes-entreprises/] CEMAC : la baisse du coût du crédit à 10,99% à fin juin 2026 bénéficie aux grandes entreprises ↗
+ [https://oilprice.com/Energy/Energy-General/Why-Trump-and-Carney-Havent-Touched-Energy-in-Their-Tariff-War.html] Why Trump and Carney Haven’t Touched Energy in Their Tariff War ↗
 
-Financial Afrik · 2026-10-23T18:27:38+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-23T22:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/23/tunisie-assurances-maghrebia-depasse-86-millions-de-dollars-de-primes-a-fin-septembre-2026/] Tunisie : Assurances Maghrebia dépasse 86 millions de dollars de primes à fin septembre 2026 ↗
+ [https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative] France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative ↗
 
-Financial Afrik · 2026-10-23T18:21:08+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+RFI · économie · 2026-10-23T21:26:18+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/23/xenophobie-petrole-et-decrochage-le-senegal-scie-la-branche-sur-laquelle-il-est-assis/] Xénophobie, pétrole et décrochage : le Sénégal scie la branche sur laquelle il est assis ↗
+ [https://news.google.com/rss/articles/CBMieEFVX3lxTE9WNjI5d21TTy0wVEE1TG1rcEZSVFVSX2VlbzV5OTlwYUk5V0d2OFllbDdVX0ItZVFLazljSHRaNC1ycWRfa2hJLVNqdHdKWkMyN09HTzY5MXdQampkMGF0aXg0eVlYdms0RHY1Z1lidWFBVDdtbGEwbg?oc=5] M. Fouzi LEKJAA présente le Projet de Loi de Finances 2027 devant les deux Chambres du Parlement – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية ↗
 
-Financial Afrik · 2026-10-23T18:13:47+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+Finances Maroc · relais presse · 2026-10-23T20:09:06+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/23/rencontre-avec-moussa-camara-specialiste-du-suivi-evaluation-du-projet-de-restauration-des-terres-degradees-au-mali-prtd-mali/] Rencontre avec Moussa Camara, spécialiste du suivi-évaluation du Projet de Restauration des Terres Dégradées au Mali (PRTD-Mali) ↗
+ [https://oilprice.com/Energy/Energy-General/NASAs-Freeze-Resistant-Moon-Battery-Could-Eventually-Reach-EVs.html] NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs ↗
 
-Financial Afrik · 2026-10-23T18:08:11+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-23T20:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
