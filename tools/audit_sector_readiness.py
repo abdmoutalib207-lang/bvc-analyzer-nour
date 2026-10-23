@@ -28,7 +28,10 @@ def main():
             "violations": result["violations"],
             "documents_certified": False,
         }, ensure_ascii=False))
-    if result["violations"]:
+    from nour.sector_validation import audit_sector_calculations
+    arithmetic=audit_sector_calculations(report)
+    print(json.dumps(arithmetic,ensure_ascii=False))
+    if result["violations"] or arithmetic['failures']:
         raise SystemExit(1)
 
 

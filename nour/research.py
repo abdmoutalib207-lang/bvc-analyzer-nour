@@ -8,6 +8,7 @@ from .peer_groups import group_for
 from .risk_tail import historical_tail
 from .statistics import describe
 from .events import EVENTS
+from .resilience import guarded
 
 VERSION = 'nour-research-v1'
 
@@ -19,7 +20,12 @@ def finite(value):
 def prices(record, asof):
     """Duplicates and invalid rows remain holes on the common market calendar."""
     out, seen = {}, set()
-    for b in record.get('candles', []):
+    if record.get('quarantined_market'):
+        return out
+    raw = record.get('candles')
+    for b in raw if isinstance(raw,list) else []:
+        if not isinstance(b,dict):
+            continue
         d = b.get('d')
         try:
             date.fromisoformat(d)
@@ -195,44 +201,55 @@ def net_return(entry, exit_price, buy_pct, sell_pct, slippage_pct=0):
 def lab(fixture, history, asof):
     market = calendar(history, asof)
     days, rows, audit = list(market), [], []
-    universe = {'MASI': market, **{s: prices(fixture['records'][s], asof) for s in fixture['symbols']}}
+    universe={'MASI':market};local_errors=[]
+    for s in fixture['symbols']:
+        try:universe[s]=prices(fixture['records'].get(s) or {},asof)
+        except (MemoryError,):raise
+        except Exception as exc:local_errors.append({'symbol':s,'reason':'Laboratoire suspendu : '+type(exc).__name__})
     # A single fixed grid shared by every title for each horizon. Intervals
     # [entry, exit] never overlap within a title/horizon. No stock-specific grid.
     for s, p in universe.items():
-        rec = fixture['records'].get(s, {})
-        boundary = EVENTS.get(s)
-        for h in (5, 20, 60):
-            counts = {'symbol': s, 'horizon': h, 'candidates': 0, 'observed': 0, 'missing': 0,
-                      'event_boundary': 0, 'inactive': 0, 'no_trend': 0}
-            for i in range(199, len(days)-h-1, h+1):
-                counts['candidates'] += 1
-                signal, entry, exit_day = days[i], days[i+1], days[i+1+h]
-                window = days[i-49:i+2+h]
-                if boundary and window[0] < boundary <= exit_day:
-                    counts['event_boundary'] += 1
-                    continue
-                if rec.get('suspended'):
-                    counts['inactive'] += 1
-                    continue
-                # Reject missing intervening sessions too: no stale fills.
-                if any(d not in p for d in window):
-                    counts['missing'] += 1
-                    continue
-                trend = p[signal] > mean(p[d] for d in days[i-19:i+1]) and p[signal] > mean(p[d] for d in days[i-49:i+1])
-                if not trend:
-                    counts['no_trend'] += 1
-                    continue
-                counts['observed'] += 1
-                rows.append({'symbol': s, 'horizon': h, 'signal_date': signal, 'entry_date': entry,
-                             'exit_date': exit_day, 'entry': p[entry], 'exit': p[exit_day],
-                             'gross_pct': round(100*(p[exit_day]/p[entry]-1), 6),
-                             'masi_pct': round(100*(market[exit_day]/market[entry]-1), 6),
-                             'regime': 'above' if market[signal] > mean(market[d] for d in days[i-199:i+1]) else 'below',
-                             'period': '2023-2024' if signal < '2025-01-01' else '2025+'})
-            audit.append(counts)
+        start_rows=len(rows);start_audit=len(audit)
+        try:
+            rec = fixture['records'].get(s, {})
+            boundary = EVENTS.get(s)
+            for h in (5, 20, 60):
+                counts = {'symbol': s, 'horizon': h, 'candidates': 0, 'observed': 0, 'missing': 0,
+                          'event_boundary': 0, 'inactive': 0, 'no_trend': 0}
+                for i in range(199, len(days)-h-1, h+1):
+                    counts['candidates'] += 1
+                    signal, entry, exit_day = days[i], days[i+1], days[i+1+h]
+                    window = days[i-49:i+2+h]
+                    if boundary and window[0] < boundary <= exit_day:
+                        counts['event_boundary'] += 1
+                        continue
+                    if rec.get('suspended'):
+                        counts['inactive'] += 1
+                        continue
+                    # Reject missing intervening sessions too: no stale fills.
+                    if any(d not in p for d in window):
+                        counts['missing'] += 1
+                        continue
+                    trend = p[signal] > mean(p[d] for d in days[i-19:i+1]) and p[signal] > mean(p[d] for d in days[i-49:i+1])
+                    if not trend:
+                        counts['no_trend'] += 1
+                        continue
+                    counts['observed'] += 1
+                    rows.append({'symbol': s, 'horizon': h, 'signal_date': signal, 'entry_date': entry,
+                                 'exit_date': exit_day, 'entry': p[entry], 'exit': p[exit_day],
+                                 'gross_pct': round(100*(p[exit_day]/p[entry]-1), 6),
+                                 'masi_pct': round(100*(market[exit_day]/market[entry]-1), 6),
+                                 'regime': 'above' if market[signal] > mean(market[d] for d in days[i-199:i+1]) else 'below',
+                                 'period': '2023-2024' if signal < '2025-01-01' else '2025+'})
+                audit.append(counts)
+        except MemoryError:raise
+        except Exception as exc:
+            del rows[start_rows:];del audit[start_audit:]
+            if s=='MASI':raise
+            local_errors.append({'symbol':s,'reason':'Laboratoire suspendu : '+type(exc).__name__})
     return {'version': VERSION, 'asof': asof, 'masi_first': days[0] if days else None,
             'masi_last': days[-1] if days else None, 'masi_sessions': len(days),
-            'universe_size': len(fixture['symbols']), 'rows': rows, 'audit': audit,
+            'universe_size': len(fixture['symbols']), 'rows': rows, 'audit': audit, 'local_errors':local_errors,
             'protocol': 'Clôture > MM20 et MM50 passées. Observation au signal ; entrée au cours de clôture suivant, sortie 5/20/60 séances MASI après entrée. Grille fixe, fenêtres non chevauchantes par titre et horizon. Aucune pondération optimisée.',
             'limitations': ['Étude exploratoire rétrospective, pas un test hors échantillon intact ni un portefeuille exécutable.',
                 'Univers actuel : biais de sélection et de survie. Séances absentes, titres suspendus et frontières de capital/reprise exclus, jamais imputés.',
@@ -245,12 +262,28 @@ def enrich(report, fixture):
     history = report.get('masi_history', {})
     sessions = list(calendar(history, report['analysis_date']))
     for r in report['results']:
-        r['market_risk'] = risk(fixture['records'][r['symbol']], history, report['analysis_date'])
-        r['historical_statistics'] = describe(fixture['records'][r['symbol']],
+        record = fixture['records'].get(r['symbol']) or {'symbol':r['symbol'],'candles':[]}
+        r['market_risk'] = guarded(r, 'market_risk',
+            lambda: risk(record, history, report['analysis_date']),
+            lambda: {'status':'unavailable','reason':'Erreur locale de calcul du risque.',
+                     'tail_risk':{'status':'unavailable','reason':'Calcul suspendu.'}})
+        r['historical_statistics'] = guarded(r, 'historical_statistics', lambda: describe(record,
             sessions=sessions if sessions else None, asof=report['analysis_date'],
-            event_boundary=EVENTS.get(r['symbol']))
-    peers(report['results'], fixture['records'])
+            event_boundary=EVENTS.get(r['symbol'])),
+            lambda: {'status':'unavailable','horizons':[],'reason':'Erreur locale de calcul.'})
+        if record.get('quarantined_market'):
+            from .resilience import issue
+            r['historical_statistics'] = {'status':'unavailable','horizons':[],
+                'reason':'Cotation contestée ; statistiques suspendues.'}
+            issue(r,'historical_statistics','market_line_quarantined',
+                  'Cotation contestée ; statistiques suspendues.', ['historical_statistics'])
+    peer_records={s:fixture['records'].get(s) or {} for s in fixture['symbols']}
+    peers(report['results'], peer_records)
     report['research'] = lab(fixture, history, report['analysis_date'])
+    from .resilience import issue
+    for error in report['research'].get('local_errors',[]):
+        row=next(r for r in report['results'] if r['symbol']==error['symbol'])
+        issue(row,'research','research_exception',error['reason'],['research'])
 
 
 def archive_scores(report, folder, now):

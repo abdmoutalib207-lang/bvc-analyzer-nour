@@ -16,7 +16,12 @@ def audit(report):
         if actual is None:
             return  # Availability is inventoried separately, never filled here.
         checks.append((symbol, metric))
-        if expected is None or abs(Decimal(str(actual)) - expected) > Decimal('0.005001'):
+        try:
+            observed = Decimal(str(actual))
+            good = expected is not None and observed.is_finite() and abs(observed - expected) <= Decimal('0.005001')
+        except (ArithmeticError, ValueError, TypeError):
+            good = False
+        if not good:
             failures.append(dict(symbol=symbol, metric=metric, actual=actual,
                                  expected=str(expected)))
 
@@ -112,6 +117,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('report', nargs='?', default=str(ROOT/'web/report.json'))
     args = parser.parse_args()
-    result = audit(json.loads(Path(args.report).read_text()))
+    sys.path.insert(0,str(ROOT))
+    from nour.resilience import health_with_quarantines
+    report=json.loads(Path(args.report).read_text())
+    result=health_with_quarantines(publication_health(report),report,'financial')
     print(json.dumps(result, ensure_ascii=False, indent=2))
     sys.exit(bool(result['failures']))

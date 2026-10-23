@@ -57,8 +57,8 @@ def publication_manifest(web, commit, run_id='', generated_at=''):
     if len(commit) != 40 or any(c not in '0123456789abcdef' for c in commit):
         raise ValueError('Publication commit must be an exact Git SHA')
     web = Path(web)
-    files = ('report.json', 'assistant-data.json', 'assistant-context.json', 'runtime.json', 'index.html')
-    hashes = {p: hashlib.sha256((web/p).read_bytes()).hexdigest() for p in files}
+    files = ('report.json', 'assistant-data.json', 'assistant-context.json', 'runtime.json', 'index.html', 'anomalies.json', 'couverture.json', 'financial-health.json', 'calculation-health.json', 'sector-calculation-health.json')
+    hashes = {p: hashlib.sha256((web/p).read_bytes()).hexdigest() for p in files if p in files[:5] or (web/p).exists()}
     report = json.loads((web/'report.json').read_text())
     return {'schema_version': 'nour-publication-v1', **report.get('provenance', {}),
             'publication_commit': commit, 'publication_commit_status': 'artifact_recorded',

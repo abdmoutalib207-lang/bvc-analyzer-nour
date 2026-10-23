@@ -25,7 +25,7 @@ def source_commit(environment):
 
 
 def run_context(now=None, schedule="", event="local", slot="auto", started_at=None,
-                run_id="", commit=""):
+                run_id="", commit="", scheduled_for=None):
     now = (now or datetime.now(ZONE)).astimezone(ZONE)
     started = datetime.fromisoformat(started_at).astimezone(ZONE) if started_at else now
     target = None
@@ -48,11 +48,27 @@ def run_context(now=None, schedule="", event="local", slot="auto", started_at=No
         selected, clock, label = choices[slot]
     else:
         selected, clock, label = "adhoc", None, "Point de marché à la demande"
+    if scheduled_for:
+        if event != 'workflow_dispatch' or slot not in (*EDITIONS, 'refresh'):
+            raise ValueError('Rattrapage réservé aux éditions explicites')
+        planned_target = datetime.fromisoformat(scheduled_for)
+        if planned_target.tzinfo is None:
+            raise ValueError('Fuseau de rattrapage requis')
+        planned_target = planned_target.astimezone(ZONE)
+        allowed = {value[1] for value in SLOTS.values()} if slot != 'refresh' else {v[1] for v in (*CONTROL_SLOTS.values(), *HOURLY_SLOTS.values())}
+        expected_clock = {v[0]:v[1] for v in SLOTS.values()}.get(slot)
+        if (planned_target > started or planned_target.weekday() >= 5
+                or planned_target.strftime('%H:%M') not in allowed
+                or expected_clock and planned_target.strftime('%H:%M') != expected_clock
+                or started-planned_target > timedelta(days=3)):
+            raise ValueError('Cible de rattrapage incompatible')
+        target = planned_target
+        clock = target.strftime('%H:%M')
     delay = round(max(0, (started-target).total_seconds()/60), 1) if target else None
     return {"timezone": "Africa/Casablanca", "event": event, "slot": selected,
             "label": label, "target_time": clock, "schedule": schedule or None,
             "scheduled_at": target.isoformat() if target else None,
-            "scheduled_at_basis": "most_recent_weekday_cron_occurrence" if target else None,
+            "scheduled_at_basis": "watchdog_requested_occurrence" if scheduled_for else "most_recent_weekday_cron_occurrence" if target else None,
             "edition_for": (target or now).date().isoformat(),
             "started_at": started.isoformat(), "built_at": now.isoformat(),
             "delay_minutes": delay, "late": delay is not None and delay > 15,

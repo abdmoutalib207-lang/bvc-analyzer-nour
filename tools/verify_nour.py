@@ -13,13 +13,13 @@ def main():
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--asof', default=date.today().isoformat())
     args = parser.parse_args()
-    commands = [[sys.executable, 'tools/ecc.py', 'verify']]
+    commands = [[sys.executable, 'tools/assert_nour_scope.py'],[sys.executable, 'tools/ecc.py', 'verify']]
     if args.build:
         commands.append([sys.executable, 'run.py', '--asof', args.asof, '--slot', 'refresh'])
     commands.append([sys.executable, 'tools/record_publication.py'])
     commands.append([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'])
     commands.extend(['node', '--check', f'web/{name}.js'] for name in
-                    ('nour', 'bi', 'chart', 'chart-controls', 'market', 'research', 'assistant-domains', 'assistant-query', 'assistant'))
+                    ('diagnostics', 'nour', 'bi', 'chart', 'chart-controls', 'market', 'research', 'assistant-domains', 'assistant-query', 'assistant'))
     commands.extend(['node', f'tools/{name}.cjs'] for name in
                     ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_volume', 'test_assistant_volume_isolation', 'test_assistant_domains', 'test_assistant_conversation', 'test_assistant_query'))
     commands.append(['node', 'tools/test_worker.mjs'])

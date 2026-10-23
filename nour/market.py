@@ -28,7 +28,7 @@ def request_body():
                          "PARAMS": [dict(NAME=n, TYPE=t, VALUE=v) for n, t, v in params]}]}
 
 
-def fetch_cdg(timeout=30):
+def _fetch_cdg_once(timeout=30):
     req = Request(SOURCE_URL, data=json.dumps(request_body()).encode(),
                   headers={"Content-Type": "application/json",
                            "User-Agent": "BVCAnalyzerNour/1.0 (+public research)",
@@ -47,10 +47,16 @@ def fetch_cdg(timeout=30):
     return lines
 
 
+def fetch_cdg(timeout=30):
+    from .transactions import retry_transient
+    return retry_transient(lambda: _fetch_cdg_once(timeout))
+
+
 def numeric(value):
+    if isinstance(value,bool):return None
     try:
         v = float(value)
-    except (ValueError, TypeError):
+    except (ValueError, TypeError, OverflowError):
         return None
     return v if math.isfinite(v) else None
 
@@ -94,18 +100,34 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
         raise ValueError("Codes officiels en collision")
     inverse = {code: ticker for ticker, code in code_map.items()}
     quote_by_ticker = {}
+    rejected, seen = [], set()
+    def reject(ticker, reason, line):
+        quote_by_ticker.pop(ticker, None)
+        rejected.append({'symbol':ticker,'domain':'source','code':'invalid_source_row',
+            'reason':reason,'observed_at':now.isoformat(),'source':SOURCE_URL,
+            'observed':{k:line.get(k) for k in ('Symbol','DateDernierCours','Cours','Volumes','QteEchangee')},
+            'resolution':'pending_review'})
     for line in lines:
+        if not isinstance(line, dict):
+            raise ValueError('Schéma général CDG invalide')
         ticker = inverse.get(str(line.get("Symbol") or "").strip().upper())
         if ticker not in fixture["records"]:
             continue
-        quote = normalized_quote(line, ticker)
+        if ticker in seen:
+            reject(ticker, 'Lignes source dupliquées pour ce titre', line)
+            continue
+        seen.add(ticker)
+        try:
+            quote = normalized_quote(line, ticker)
+        except (ValueError, TypeError, OverflowError) as exc:
+            reject(ticker, str(exc), line)
+            continue
         if quote is None:
             continue
         day = quote["bar"]["d"]
         if day > today:
-            raise ValueError("Cotation future refusée")
-        if ticker in quote_by_ticker:
-            raise ValueError(f"{ticker}: collision de lignes CDG")
+            reject(ticker, 'Cotation future refusée pour ce titre', line)
+            continue
         quote_by_ticker[ticker] = quote
     dates = Counter(q["bar"]["d"] for q in quote_by_ticker.values())
     eligible = [d for d, n in dates.items() if n >= minimum]
@@ -117,46 +139,64 @@ def import_session(fixture, lines, code_map, now=None, minimum=20):
     # Old rows from thinly traded instruments cannot move the snapshot backwards.
     fresh = {s: q for s, q in quote_by_ticker.items() if q["bar"]["d"] == session}
     updated = copy.deepcopy(fixture)
+    for ticker in seen:
+        updated['records'][ticker]['source_checked_at'] = now.isoformat()
+        updated['records'][ticker]['source_check_status'] = ('rejected' if any(x['symbol']==ticker for x in rejected) else 'checked')
     changed = 0
     observations_refreshed = 0
-    conflicts = []
+    conflicts = list(rejected)
     for ticker, quote in fresh.items():
-        rec = updated["records"][ticker]
-        bar = quote["bar"]
-        old_date = rec.get("price_asof") or ""
-        if old_date > session:
-            raise ValueError(f"{ticker}: date source antérieure à l'instantané")
-        existing = next((b for b in rec["candles"] if b["d"] == session), None)
-        if existing:
-            differing = [k for k in ("o", "h", "l", "c", "v")
-                         if float(existing[k]) != float(bar[k])]
-            if differing:
-                # Never revise historical candles based on a live response. Flag
-                # the discrepancy without preventing other tickers from updating.
-                conflicts.append({"symbol": ticker, "session": session,
-                                  "fields": differing,
-                                  "retained": {k: existing.get(k) for k in differing},
-                                  "observed": {k: bar.get(k) for k in differing},
-                                  "observed_at": now.astimezone(CASABLANCA).isoformat(),
-                                  "source": quote["source"],
-                                  "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
-                                  "resolution": "pending_review"})
+        before=copy.deepcopy(updated['records'][ticker]);before_counts=(changed,observations_refreshed)
+        try:
+            rec = updated["records"][ticker]
+            bar = quote["bar"]
+            old_date = rec.get("price_asof") or ""
+            if old_date > session:
+                conflicts.append({'symbol':ticker,'reason':'Date source antérieure à l’instantané',
+                                  'source':SOURCE_URL,'session':session,'resolution':'pending_review'})
                 continue
-        else:
-            if rec["candles"] and rec["candles"][-1]["d"] > session:
-                raise ValueError(f"{ticker}: historique désordonné")
-            rec["candles"].append(bar)
-            changed += 1
-        rec.update(price=bar["c"], price_asof=session, price_source="CDG Capital Bourse",
-                   price_source_datetime=quote.get('source_datetime'),
-                   price_collected_at=now.astimezone(CASABLANCA).isoformat(),
-                   day_turnover_mad=bar["turnover_mad"], day_shares=bar["v"],
-                   stale=False, suspended=False, full_history_count_reported=len(rec["candles"]))
-        observations_refreshed += 1
-        if ticker == "CMT":
-            count = sum(b["d"] >= "2026-09-16" for b in rec["candles"])
-            rec["sessions_since_resume"] = count
-            rec["resumed_recently"] = count < 50
+            existing = next((b for b in rec["candles"] if b["d"] == session), None)
+            if existing:
+                differing = [k for k in ("o", "h", "l", "c", "v")
+                             if float(existing[k]) != float(bar[k])]
+                if differing:
+                    # Never revise historical candles based on a live response. Flag
+                    # the discrepancy without preventing other tickers from updating.
+                    conflicts.append({"symbol": ticker, "session": session,
+                                      "fields": differing,
+                                      "retained": {k: existing.get(k) for k in differing},
+                                      "observed": {k: bar.get(k) for k in differing},
+                                      "observed_at": now.astimezone(CASABLANCA).isoformat(),
+                                      "source": quote["source"],
+                                      "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+                                      "resolution": "pending_review"})
+                    continue
+            else:
+                if rec["candles"] and rec["candles"][-1]["d"] > session:
+                    conflicts.append({'symbol':ticker,'reason':'Historique désordonné',
+                                      'source':SOURCE_URL,'session':session,'resolution':'pending_review'})
+                    continue
+                rec["candles"].append(bar)
+                changed += 1
+            rec.update(price=bar["c"], price_asof=session, price_source="CDG Capital Bourse",
+                       price_source_datetime=quote.get('source_datetime'),
+                       price_collected_at=now.astimezone(CASABLANCA).isoformat(),
+                       price_validated_at=now.astimezone(CASABLANCA).isoformat(),
+                       day_turnover_mad=bar["turnover_mad"], day_shares=bar["v"],
+                       stale=False, suspended=False, full_history_count_reported=len(rec["candles"]))
+            observations_refreshed += 1
+            if ticker == "CMT":
+                count = sum(b["d"] >= "2026-09-16" for b in rec["candles"])
+                rec["sessions_since_resume"] = count
+                rec["resumed_recently"] = count < 50
+        except MemoryError:raise
+        except Exception as exc:
+            updated['records'][ticker]=before
+            changed,observations_refreshed=before_counts
+            conflicts.append({'symbol':ticker,'session':session,'source':SOURCE_URL,'observed_at':now.isoformat(),
+                'reason':'Import local suspendu : '+type(exc).__name__,'resolution':'pending_review'})
+    for problem in conflicts:
+        updated['records'][problem['symbol']]['source_check_status']='retained_conflict'
     updated["snapshot_updated"] = now.astimezone(CASABLANCA).isoformat()
     updated["market"]["last_session"] = session
     # The index is not present in MARKET-RESUME. Never relabel the old MASI.
@@ -184,11 +224,14 @@ def capture_intraday(fixture, lines, code_map, now=None):
         if ticker not in fixture["records"]:
             continue
         if ticker in seen:
-            raise ValueError(f"{ticker}: collision de lignes CDG")
+            quotes.pop(ticker,None)
+            rejected.append({'symbol':ticker,'reason':'Lignes source dupliquées ; titre isolé'})
+            continue
         seen.add(ticker)
         day = session_date(line.get("DateDernierCours"))
         if day and day > today:
-            raise ValueError("Cotation future refusée")
+            rejected.append({'symbol':ticker,'reason':'Cotation future refusée ; titre isolé'})
+            continue
         if day != today:
             continue
         try:
@@ -211,5 +254,5 @@ def capture_intraday(fixture, lines, code_map, now=None):
 def atomic_json(path, data):
     path = Path(path)
     temp = path.with_suffix(path.suffix + ".tmp")
-    temp.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    temp.write_text(json.dumps(data, ensure_ascii=False, allow_nan=False, separators=(",", ":")) + "\n", encoding="utf-8")
     temp.replace(path)

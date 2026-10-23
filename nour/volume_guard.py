@@ -46,7 +46,7 @@ def _totals(rows):
             "shares": sum(int(r["shares"]) for r in rows.values()), "quoted": len(rows)}
 
 
-def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=None, minimum=20, allow_detail_only=False):
+def _strict_reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=None, minimum=20, allow_detail_only=False):
     """Return ``(deepcopy(fixture), audit)``; corrections are all-or-nothing.
 
     Inputs are observations, not instructions. ``overview`` is the current CDG
@@ -303,3 +303,27 @@ def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=Non
         return updated, audit
     except (ValueError, TypeError, KeyError, InvalidOperation, OverflowError) as exc:
         return refuse(f"Contrôle incomplet ou invalide : {exc}", "incomplete")
+
+
+def reconcile_volumes(fixture, cdg_lines, overview, secondary, code_map, now=None,
+                      minimum=20, allow_detail_only=False, allow_local_isolation=False):
+    candidate, audit = _strict_reconcile_volumes(fixture, cdg_lines, overview, secondary,
+        code_map, now=now, minimum=minimum, allow_detail_only=allow_detail_only)
+    pending=[]
+    if audit.get('publication_safe'):
+        for symbol,rec in candidate['records'].items():
+            problem=rec.get('quarantined_market')
+            if not problem:continue
+            if (audit.get('cross_source_verified') and symbol in (audit.get('validated_symbols') or [])
+                    and problem.get('session')==audit.get('session')):
+                rec.pop('quarantined_market',None)
+            else:pending.append(symbol)
+        if not pending:return candidate,audit
+    if not allow_local_isolation:return candidate,audit
+    from .local_market import isolate_market_lines
+    try:
+        return isolate_market_lines(fixture, cdg_lines, overview, secondary, code_map,
+                                    now or datetime.now(CASABLANCA), minimum)
+    except (ValueError, TypeError, KeyError, ArithmeticError):
+        # A failed partial proof never turns into a global green light.
+        return candidate, audit

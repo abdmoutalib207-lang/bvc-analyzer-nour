@@ -12,3 +12,6 @@ __pycache__/
 web/publication.json
 backend/.dev.vars
 backend/.wrangler/
+
+# Incomplete isolated build generations are never publication inputs.
+.nour-stage-*/

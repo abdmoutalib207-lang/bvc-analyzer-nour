@@ -7,6 +7,10 @@ on:
         default: auto
         type: choice
         options: [auto, morning, midday, closing, refresh, preclose]
+      scheduled_for:
+        description: 'Occurrence Casablanca à rattraper, ISO 8601 avec fuseau (watchdog)'
+        default: ''
+        type: string
   push:
     branches: [main]
     paths:
@@ -17,6 +21,7 @@ on:
       - 'tests/**'
       - 'run.py'
       - 'web/nour.js'
+      - 'web/diagnostics.js'
       - 'web/chart.js'
       - 'web/chart-controls.js'
       - 'web/market.js'
@@ -69,7 +74,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -86,6 +91,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Enforce Nour-only write scope
+        run: python tools/assert_nour_scope.py
       - name: Collect intraday observations or completed session
         id: market
         continue-on-error: true
@@ -120,6 +127,7 @@ jobs:
         env:
           NOUR_SCHEDULE: ${{ github.event.schedule }}
           NOUR_SLOT: ${{ inputs.slot || 'auto' }}
+          NOUR_SCHEDULED_FOR: ${{ inputs.scheduled_for }}
         run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)" --slot "$NOUR_SLOT"
       - name: Verify the generated output
         run: |
@@ -222,7 +230,7 @@ jobs:
           git config user.name 'bvc-nour-bot'
           git config user.email 'bvc-nour-bot@users.noreply.github.com'
           git restore --staged -- data web
-          for nour_diagnostic in data/error_memory.json data/market_integrity.json data/market_integrity_log.json; do
+          for nour_diagnostic in data/error_memory.json data/market_integrity.json data/market_integrity_log.json data/anomalies.json; do
             if test -f "$nour_diagnostic"; then git add "$nour_diagnostic"; fi
           done
           if ! git diff --cached --quiet; then

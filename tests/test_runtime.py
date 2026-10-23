@@ -108,8 +108,10 @@ class RuntimeContracts(unittest.TestCase):
         self.assertNotIn('ADI',point['quotes'])
         self.assertEqual(len(point['rejected']),1)
         for lines in [[self.row('ADI',day='06/10/2026')],[self.row('ADI'),self.row('ADI')]]:
-            with self.assertRaises(ValueError):
-                capture_intraday(self.fixture,lines,self.codes,datetime(2026,10,5,9,45,tzinfo=ZONE))
+            point=capture_intraday(self.fixture,lines+[self.row('STK')],self.codes,datetime(2026,10,5,9,45,tzinfo=ZONE))
+            self.assertNotIn('ADI',point['quotes'])
+            self.assertIn('STK',point['quotes'])
+            self.assertTrue(point['rejected'])
         with self.assertRaises(ValueError):
             capture_intraday(self.fixture,[],self.codes,datetime(2026,9,17,9,45,tzinfo=ZONE))
 
@@ -145,7 +147,7 @@ class RuntimeContracts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary)
             (target/'data').mkdir(); (target/'web').mkdir()
-            for filename in ('market_snapshot.json','news.json','facts_reference.json','issuer_status.json'):
+            for filename in ('market_snapshot.json','news.json','facts_reference.json','issuer_status.json','source_codes.json'):
                 shutil.copyfile(ROOT/'data'/filename,target/'data'/filename)
             with patch.object(run,'ROOT',target), patch.dict('os.environ',{},clear=True), redirect_stdout(io.StringIO()):
                 for slot in ('morning','midday','closing'):

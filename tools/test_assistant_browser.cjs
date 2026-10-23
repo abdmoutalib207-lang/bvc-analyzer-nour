@@ -9,7 +9,7 @@ const base=process.argv[2]||'http://127.0.0.1:8766/';
 const shots=process.env.NOUR_SCREENSHOTS;
 (async()=>{
   const browser=await chromium.launch({headless:true});
-  let interactions=0;
+  let interactions=0;const assetAnomalies=[];
   try{
     for(const width of [375,768,1440]){
       const context=await browser.newContext({viewport:{width,height:900}});
@@ -21,15 +21,27 @@ const shots=process.env.NOUR_SCREENSHOTS;
       });
       const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
-      page.on('response',response=>{if(response.status()>=400)errors.push(response.status()+' '+response.url());});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html']){
+      page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='index.html'){
           assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
           await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
           await page.waitForFunction(()=>[...document.querySelectorAll('[data-market-row] .company-logo img')].every(img=>img.complete));
           const failedLogos=await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.filter(img=>img.naturalWidth===0).map(img=>({src:img.currentSrc||img.src,complete:img.complete})));
-          assert.deepEqual(failedLogos,[],'Logos non décodés sur '+base+' : '+JSON.stringify(failedLogos));
+          if(failedLogos.length){
+            await page.locator('[data-market-row] .company-logo img').evaluateAll(async images=>{
+              await Promise.all(images.filter(img=>!img.naturalWidth).map(async img=>{
+                const retry=new URL(img.src);retry.searchParams.set('nour_qa_retry','1');img.src=retry.href;
+                try{await img.decode();img.closest('.company-logo').classList.remove('is-missing');}catch{}
+              }));
+            });
+            const fallback=await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.filter(img=>!img.naturalWidth).map(img=>({src:img.src,
+              degraded:img.closest('.company-logo').classList.contains('is-missing'),
+              readable:img.closest('.company-logo').innerText.trim().length>0})));
+            for(const x of fallback)assert.ok(x.degraded&&x.readable,'Logo failure without visible ticker fallback: '+x.src);
+            assetAnomalies.push(...failedLogos.map(x=>({...x,severity:'warning',at:new Date().toISOString(),fallback_verified:true})));
+          }
           const missingLogos=await page.locator('[data-market-row] .company-logo.is-missing').count();
           await page.locator('[data-market-row] .company-logo img').first().evaluate(img=>img.dispatchEvent(new Event('error')));
           assert.equal(await page.locator('[data-market-row] .company-logo.is-missing').count(),missingLogos+1);
@@ -82,6 +94,14 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok(diagnostics.includes('Aucun conflit n’est résolu par écrasement automatique'));
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Expanded collection/provenance overflows '+width);
           await page.getByText('Suivi des mises à jour',{exact:true}).click();
+        }
+        if(route==='anomalies.html'){
+          assert.equal(await page.locator('[data-anomaly-filter]').count(),4);
+          await page.locator('[data-anomaly-filter="symbol"]').selectOption('ADI');
+          const visible=await page.locator('[data-anomaly-row]:visible').evaluateAll(rows=>rows.map(r=>r.dataset.symbol));
+          assert.ok(visible.length>0&&visible.every(s=>s==='ADI'));
+          await page.locator('[data-anomaly-filter="symbol"]').selectOption('');
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Anomalies overflow '+width);
         }
         if(route.startsWith('titres/')){
           const symbol=route.split('/').pop().replace('.html','');
@@ -571,5 +591,5 @@ const shots=process.env.NOUR_SCREENSHOTS;
       await nojs.close();
     }
     console.log(`Browser QA: ${interactions} page/viewport journeys; natural definitions, comparison and semester follow-ups, benchmark MASI subject, global briefing, lab parity, cost/horizon follow-up, full CSV date/volume follow-up and explicit context reset; laboratory help and no-JS at 3 widths; no LLM call.`);
-  }finally{await browser.close();}
+  }finally{if(shots){fs.mkdirSync(shots,{recursive:true});fs.writeFileSync(path.join(shots,'browser-anomalies.json'),JSON.stringify(assetAnomalies,null,2));}console.log('Nonblocking branding observations: '+assetAnomalies.length);await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});

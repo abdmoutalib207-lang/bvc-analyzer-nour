@@ -129,6 +129,13 @@ def validated_detail_scope(report, audit):
 
 
 def visible_integrity(audit,report):
+    if audit.get('status') == 'retained_validated':
+        return deepcopy(audit) if retained_proof(report,audit) else {**deepcopy(audit),'status':'stale','publication_safe':False}
+    if audit.get('publication_scope') == 'isolated_issuer_lines':
+        from .local_market import validated_local_scope
+        return deepcopy(audit) if validated_local_scope(report,audit) else {
+            **deepcopy(audit),'status':'stale','publication_safe':False,
+            'notice':'Preuve partielle invalide ; publication refusée.'}
     result=deepcopy(audit or {'status':'not_observed','cross_source_verified':False})
     current=(report.get('market_overview') or {}).get('asof')
     snapshot=(report.get('provenance') or {}).get('market_snapshot_sha256')
@@ -163,3 +170,17 @@ def integrity_summary(audit):
         'providers','notices','notice','publication_scope','aggregate_match','secondary_status')}
     result['totals']={k:deepcopy((audit or {}).get('totals',{}).get(k)) for k in ('cdg_overview','cdg_lines','secondary','retained_after')}
     return result
+
+
+def retained_proof(report, audit):
+    """Validate the original dated proof again; a failed fetch creates no proof."""
+    from tools.audit_market_integrity import audit_market_integrity
+    try:
+        proof=audit['last_valid_proof']
+        if (audit.get('status')!='retained_validated' or audit.get('publication_safe') is not True
+                or proof.get('status') not in ('matched','reconciled','primary_checked','detail_matched','partial')
+                or proof.get('validated_snapshot_sha256')!=report['provenance']['market_snapshot_sha256']
+                or proof.get('session')!=report['market_overview']['asof']):
+            return False
+        return not audit_market_integrity({**report,'cross_source_volume_audit':proof})['failures']
+    except (KeyError,ValueError,TypeError):return False

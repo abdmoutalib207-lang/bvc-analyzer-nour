@@ -14,6 +14,8 @@ if __name__ == '__main__':
     parser.add_argument('--report', type=Path, default=ROOT/'web/report.json')
     parser.add_argument('--snapshot', type=Path, default=ROOT/'data/market_snapshot.json')
     args = parser.parse_args()
-    result = audit_calculations(json.loads(args.snapshot.read_text()), json.loads(args.report.read_text()))
+    from nour.resilience import health_with_quarantines
+    report=json.loads(args.report.read_text())
+    result = health_with_quarantines(audit_calculations(json.loads(args.snapshot.read_text()),report),report)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     sys.exit(bool(result['failures']))

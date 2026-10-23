@@ -102,24 +102,27 @@ def main():
         try:
             lines=primary.result();secondary=secondary_future.result()
             now=datetime.now(CASABLANCA)
-            candidate,audit=reconcile_volumes(fixture,lines,overview,secondary,load(data/'source_codes.json'),now=now,allow_detail_only=True)
+            candidate,audit=reconcile_volumes(fixture,lines,overview,secondary,load(data/'source_codes.json'),
+                now=now,allow_detail_only=True,allow_local_isolation=True)
             for provider,payload in zip(audit['providers'],[lines,secondary]):
                 provider['raw_sha256']=fingerprint(payload)
                 provider['hash_kind']='canonical_observation_json_sha256'
         except Exception as exc:
             now=datetime.now(CASABLANCA)
             previous=load(data/'market_integrity.json',{})
+            previous=previous.get('last_valid_proof') or previous
             old_hash=hashlib.sha256((data/'market_snapshot.json').read_bytes()).hexdigest()
             reusable=bool(previous.get('publication_safe') and previous.get('validated_snapshot_sha256')==old_hash
                           and previous.get('session')==overview.get('asof'))
             candidate=fixture
             audit={'schema_version':1,'session':overview.get('asof'),'observed_at':now.isoformat(),
-                'status':'unavailable','publication_safe':reusable,'internal_match':False,
+                'status':'retained_validated' if reusable else 'unavailable','publication_safe':reusable,'internal_match':False,
                 'cross_source_verified':False,'quantities_cross_source_verified':False,
                 'providers':[{'provider':'CDG Capital Bourse','source_url':SOURCE_URL}],
                 'totals':{},'corrections':[],'refusals':[{'reason':'Source de contrôle indisponible','code':'source_unavailable'}],
                 'notices':['Dernier snapshot validé conservé ; aucun rapprochement actuel attesté.'],
-                'failure_type':type(exc).__name__,'reused_last_validated_snapshot':reusable}
+                'failure_type':type(exc).__name__,'reused_last_validated_snapshot':reusable,
+                'last_valid_proof':deepcopy(previous) if reusable else None}
     persist_result(data,fixture,candidate,audit)
     print(json.dumps({k:audit.get(k) for k in ('status','session','publication_safe','cross_source_verified','quantities_cross_source_verified','totals')},ensure_ascii=False))
     return 0 if audit.get('publication_safe') else 1
