@@ -267,7 +267,18 @@ async function assertQuote(locator,value){
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
         if(route==='sources.html'){
-          assert.ok((await page.locator('#marche').innerText()).includes('CDG Capital Bourse'));
+          const provenance=page.locator('#marche');
+          const source=marketReport.market_overview?.source||'Non renseignée';
+          assert.ok((await provenance.innerText()).includes(source));
+          if(marketReport.market_overview?.source_url){
+            assert.equal(await provenance.locator('p a').first().getAttribute('href'),marketReport.market_overview.source_url);
+          }
+          const providers=provenance.getByText('Recoupement des volumes et mémoire des corrections',{exact:true});
+          await providers.click();
+          for(const provider of marketReport.cross_source_volume_audit?.providers||[]){
+            assert.ok((await provenance.innerText()).includes(provider.provider||'Fournisseur non renseigné'));
+          }
+          await providers.click();
           assert.ok((await page.locator('#logos summary').innerText()).includes('Logos des sociétés'));
           const body=await page.locator('main').innerText();
           for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','Autorité de contrôle des assurances','Office des Changes']){
