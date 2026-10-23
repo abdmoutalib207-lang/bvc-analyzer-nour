@@ -8,8 +8,9 @@ from urllib.parse import urlsplit
 from urllib.request import Request,urlopen
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from nour.report_contracts import volume_reconciliation
-from nour.market_integrity import validated_detail_scope, validated_primary_scope
+from nour.market_integrity import validated_detail_scope, validated_primary_scope, retained_proof
 from nour.market_reference import reviewed_reference
+from nour.local_market import validated_local_scope
 
 
 def audit_market_integrity(report):
@@ -18,13 +19,19 @@ def audit_market_integrity(report):
     cross=report.get('cross_source_volume_audit') or {}
     detail_valid=validated_detail_scope(report,cross)
     primary_valid=validated_primary_scope(report,cross)
+    local_valid=validated_local_scope(report,cross)
+    if cross.get('status')=='retained_validated':
+        valid=retained_proof(report,cross)
+        return {'status':'retained_with_reservations' if valid else 'blocked',
+            'failures':[] if valid else ['Ancienne preuve non applicable au snapshot conservé.'],
+            'internal':internal,'cross_source_status':'retained_validated'}
     failures=[]
     official=overview.get('official_reference')
     if official and not reviewed_reference(overview,{'schema_version':1,'sessions':{overview.get('asof'):official}}):
         failures.append('Référence officielle non applicable à cette séance ou à ces chiffres.')
     if overview.get('transactions_quality') and overview.get('transactions') is not None:
         failures.append('Compteur de transactions sans date propre présenté comme chiffre de séance.')
-    if overview.get('status')=='closed' and internal['status']!='matched' and not detail_valid:
+    if overview.get('status')=='closed' and internal['status']!='matched' and not detail_valid and not local_valid:
         failures.append('Les montants, quantités ou lignes de la clôture ne retrouvent pas le total daté.')
     if cross.get('status') in ('conflict','incomplete','stale') or cross.get('publication_safe') is False:
         failures.append('Rapprochement externe contradictoire ou non applicable à ce snapshot.')
@@ -54,7 +61,9 @@ def audit_market_integrity(report):
         failures.append('La preuve de publication limitée aux lignes est invalide.')
     if (cross.get('publication_scope')=='primary_only' or cross.get('status')=='primary_checked') and not primary_valid:
         failures.append('La preuve de publication sur source principale est invalide.')
-    return {'status':'blocked' if failures else 'checked_with_reservations' if detail_valid or primary_valid else 'checked','failures':failures,
+    if cross.get('publication_scope')=='isolated_issuer_lines' and not local_valid:
+        failures.append('La preuve de publication par société est invalide.')
+    return {'status':'blocked' if failures else 'checked_with_reservations' if detail_valid or primary_valid or local_valid else 'checked','failures':failures,
             'internal':internal,'cross_source_status':cross.get('status','not_observed')}
 
 

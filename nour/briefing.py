@@ -100,8 +100,8 @@ def create_briefing(report, watch=("ADI","RDS","TGCC","SGTM","CMGP","MSA","SMI",
             "runtime":runtime, "title":runtime.get("label", "Point de séance"),
             "intraday":report.get("intraday") or {},
             "edition_status":"closing_pending" if closing_pending else "published",
-            "edition_notice":("Clôture du jour non confirmée par la collecte : dernières données datées conservées."
-                              if closing_pending else None),
+            "edition_notice":(f"Édition exécutée en retard de {runtime.get('delay_minutes')} minutes ; données observées au démarrage réel, pas reconstitution de l’heure programmée. " if runtime.get("late") else "")+("Clôture du jour non confirmée par la collecte : dernières données datées conservées."
+                              if closing_pending else "") or None,
             "snapshot_updated":report["snapshot_updated"],"market_status":market.get("status"),
             "coverage": {"titles":len(report["results"]), "quoted_session":len(active),
                          "observable":sum(x["decision"]=="OBSERVABLE" for x in active)},

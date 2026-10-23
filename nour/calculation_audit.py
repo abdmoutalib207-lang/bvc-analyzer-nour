@@ -38,7 +38,8 @@ def _median(values):
 
 def _observations(record, asof):
     bars, issues, seen = [], [], set()
-    for raw in record.get('candles') or []:
+    candles = record.get('candles')
+    for raw in candles if isinstance(candles,list) else []:
         if not isinstance(raw, dict) or not _day(raw.get('d')):
             issues.append('invalid_date')
             continue
@@ -120,7 +121,8 @@ def _technical(bars):
 
 def _statistical_samples(record, sessions, asof, horizon):
     """Independent fixed-date windows; all duplicate observations are rejected."""
-    dated = [b for b in record.get('candles', []) if isinstance(b, dict)
+    candles = record.get('candles')
+    dated = [b for b in (candles if isinstance(candles,list) else []) if isinstance(b, dict)
              and _day(b.get('d')) and b['d'] <= asof]
     counts = Counter(b['d'] for b in dated)
     dates = sorted(counts)

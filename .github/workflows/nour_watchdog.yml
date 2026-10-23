@@ -1,0 +1,42 @@
+name: Nour continuity watchdog
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Nour market, news and public site']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '5,35 9-18 * * 1-5'
+      timezone: 'Africa/Casablanca'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: nour-publication
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enforce Nour-only write scope
+        run: python tools/assert_nour_scope.py
+      - name: Observe actual editions and request bounded catch-ups
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/watch_continuity.py
+      - name: Preserve watchdog observations without rebuilding the site
+        run: |
+          git config user.name 'bvc-nour-bot'
+          git config user.email 'bvc-nour-bot@users.noreply.github.com'
+          git add data/continuity_state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Nour continuity observations"
+            git push
+          fi

@@ -67,7 +67,7 @@ def market_panel(report):
     total = sum(v or 0 for v in (up,down,flat))
     bars = ''.join(f'<span class="breadth-{kind}" style="width:{(value or 0)*100/max(1,total):.2f}%"></span>'
                    for kind,value in (('up',up),('flat',flat),('down',down)))
-    detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope')=='validated_title_lines'
+    detail_only=(report.get('cross_source_volume_audit') or {}).get('publication_scope') in ('validated_title_lines','isolated_issuer_lines')
     official=overview.get('official_reference') or {}
     historical=report.get('volume_history_check') or {}
     if historical:
@@ -96,7 +96,18 @@ def market_panel(report):
                 f'<span>{fmt(flat,0)} inchangées</span><span class="loss">{fmt(down,0)} baisses</span></div></section>')
     audit = volume_reconciliation(report, overview)
     external = report.get('cross_source_volume_audit') or {}
-    if external.get('publication_scope')=='validated_title_lines' and external.get('cross_source_verified'):
+    if external.get('publication_scope')=='isolated_issuer_lines':
+        summary += ('<section class="panel banner" data-market-integrity="isolated-titles"><h2>Publication partielle par société</h2>'
+            f'<p>{len(external.get("validated_symbols",[]))} lignes disposent d’une preuve primaire applicable. '
+            f'{len(external.get("quarantined_symbols",[]))} titre(s) en conflit sont isolés : '+esc(', '.join(external.get('quarantined_symbols',[])))+'. '
+            'Aucun total global ni rapprochement multisource global n’est attesté. Les cotations contradictoires ne sont pas publiées comme valides.</p>'
+            '<a href="anomalies.html">Anomalies et historique</a> · <a href="market-integrity.json">Preuves par titre</a></section>')
+    elif external.get('status')=='retained_validated':
+        summary += ('<section class="panel banner" data-market-integrity="retained"><h2>Source momentanément inaccessible</h2>'
+            f'<p>Dernier snapshot contrôlé conservé, séance {esc(external.get("session"))}. '
+            f'Dernière preuve positive : {esc((external.get("last_valid_proof") or {}).get("observed_at"))}. '
+            'Cette conservation ne constitue pas une nouvelle cotation ni un nouveau recoupement de sources.</p></section>')
+    elif external.get('publication_scope')=='validated_title_lines' and external.get('cross_source_verified'):
         total=(external.get('totals') or {}).get('retained_after') or {}
         summary += (f'<section class="panel banner" data-market-integrity="detail-only"><h2>{"Total global corroboré · détail à rapprocher" if official else "Total global non confirmé · titres recoupés séparément"}</h2>'
             f'<p>Les {esc(total.get("quoted"))} titres détaillés concordent entre deux fournisseurs : '

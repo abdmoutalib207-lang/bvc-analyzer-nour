@@ -46,7 +46,10 @@ def chart_data(bars):
     for b in bars:
         if isinstance(b, (tuple, list)) and len(b) == 3:
             output.append(b)
-        elif isinstance(b, dict) and b.get("c") is not None and not quality(b).startswith("Clôture"):
+        elif (isinstance(b, dict) and b.get("d") and b.get("v") is not None
+              and b.get("c") is not None and not quality(b)
+              and all(isinstance(b[k],(int,float)) and not isinstance(b[k],bool) and math.isfinite(b[k]) for k in ("c","v"))
+              and b["c"] > 0 and b["v"] >= 0):
             output.append([b["d"], b["c"], b["v"]])
     return output
 
@@ -79,6 +82,7 @@ def shell(title, body, style, script):
             f'<link rel="stylesheet" href="{prefix}assistant.css">{bi_style}</head><body>'
             f'{body}{assistant_panel(prefix)}<script>{script}</script>'
             f'<script src="{prefix}research.js" defer></script>'
+            f'<script src="{prefix}diagnostics.js" defer></script>'
             f'<script src="{prefix}assistant-domains.js" defer></script>'
             f'<script src="{prefix}assistant-query.js" defer></script>'
             f'<script src="{prefix}assistant.js" defer></script></body></html>')
@@ -87,7 +91,7 @@ def shell(title, body, style, script):
 def header(back, snapshot):
     prefix='../' if back.startswith('../') else ''
     return (f'<header class="top"><a class="brand" href="{back}"><span class="mark">N</span><span>BVC Analyzer Nour<small>MOTEUR INDÉPENDANT · SANS NLP</small></span></a>'
-            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}sources.html">Sources</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a></nav>'
+            f'<nav class="topnav" aria-label="Navigation"><a href="{prefix}index.html">Marché</a><a href="{prefix}briefing.html">Briefing</a><a href="{prefix}recherche.html">Laboratoire</a><a href="{prefix}metiers.html">Métiers</a><a href="{prefix}sources.html">Sources</a><a href="{prefix}macro.html">Macro / International</a><a href="{prefix}actualites.html">Actualités</a><a href="{prefix}anomalies.html">Surveillance</a></nav>'
             f'<span class="topbadge">Dernières données · {esc(snapshot[:10])}</span></header>')
 
 
@@ -210,6 +214,7 @@ def recent_table(bars, count=40):
 
 
 def detail_page(item, record, fixture, style, script, collection=None):
+    from .sector_view import sector_card, quality_card
     symbol = item["symbol"]
     bars = record["candles"]
     first = bars[0]["d"] if bars else "—"
@@ -348,6 +353,7 @@ def detail_page(item, record, fixture, style, script, collection=None):
             for k,v in evidence.items())+'</ul></details>')
     body = (header('../index.html', fixture["snapshot_updated"])
             + '<main class="issuer-page">' + issuer_heading(item, record, collection)
+            + quality_card(item) + sector_card(item)
             + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
             + f'<section class="panel chart-workspace" id="graphique" data-chart-symbol="{esc(symbol)}"><div class="section-heading"><div><span class="eyebrow">Historique graphique · {esc(symbol)}</span><h2>Prix & volumes</h2></div><span class="chart-frequency">1 jour · MAD · cours non ajustés</span></div><p class="panel-sub">Historique {esc(first)} → {esc(last)} · {len(bars)} séances. Pointez une séance ou choisissez un outil de tracé.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<div class="detail-grid">{cards}</div>{caveat}'
@@ -555,17 +561,32 @@ def sector_page(report, style, script):
     return shell('Métiers et fiabilité', body, style, script)
 
 
+def write_diagnostics(report,output,style=None,script=None):
+    output=Path(output)
+    assets=Path(__file__).resolve().parents[1]/'web'
+    if style is None:style=(assets/'nour.css').read_text()
+    if script is None:script='\n'.join((assets/name).read_text() for name in ('nour.js','chart-controls.js','chart.js','market.js','bi.js'))
+    from .diagnostics import dashboard
+    from .sector_view import coverage_report
+    journal = report.get('anomaly_journal') or {'entries':{}}
+    (output/'anomalies.html').write_text(shell('Surveillance des anomalies',
+        header('index.html',report['snapshot_updated'])+dashboard(journal,report),style,script),encoding='utf-8')
+    (output/'anomalies.json').write_text(json.dumps(journal,ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8')
+    (output/'couverture.json').write_text(json.dumps(coverage_report(report),ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8')
+
+
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
     validate_catalog(fixture['symbols'])
-    fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in rec.get('candles', [])
-        if isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']]}
-        for s,rec in fixture['records'].items()}}
+    fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in (rec.get('candles') if isinstance(rec.get('candles'),list) else [])
+        if isinstance(b,dict) and isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']
+        and b['d'] != (rec.get('quarantined_market') or {}).get('session')]}
+        for s in fixture['symbols'] for rec in [fixture['records'].get(s) or {'symbol':s,'candles':[]}]}}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     (output / "titres").mkdir(exist_ok=True)
     (output / "historique").mkdir(exist_ok=True)
     assets = Path(__file__).resolve().parents[1] / "web"
-    for asset in ('assistant.js', 'assistant-domains.js', 'assistant-query.js', 'research.js', 'assistant.css', 'bi.css', 'assistant-config.json'):
+    for asset in ('assistant.js', 'assistant-domains.js', 'assistant-query.js', 'research.js', 'diagnostics.js', 'assistant.css', 'bi.css', 'assistant-config.json'):
         source=assets.parent/'backend/query.cjs' if asset=='assistant-query.js' else assets/asset
         if (output / asset).resolve() != source.resolve():
             (output / asset).write_bytes(source.read_bytes())
@@ -578,11 +599,28 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
         (output/'company-logos.json').write_bytes(logo_manifest.read_bytes())
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
+    from .resilience import guarded
+    pages={}
+    for row in report['results']:
+        symbol=row['symbol'];rec=fixture['records'][symbol]
+        pages[symbol]=guarded(row,'presentation',
+            lambda row=row,rec=rec:detail_page(row,rec,fixture,style,script,report.get('health')),
+            lambda symbol=symbol:shell(symbol,header('../index.html',report['snapshot_updated'])+
+                '<main><section class="panel"><h1>'+esc(symbol)+'</h1><p>Fiche indisponible : erreur locale de présentation. '
+                'Les données validées restent accessibles dans le rapport JSON.</p><a href="../report.json">Rapport</a> · '
+                '<a href="../anomalies.html">Anomalies</a></section></main>',style,script))
+        row['page_render_status']='unavailable' if any(x['domain']=='presentation' for x in row.get('resilience',{}).get('anomalies',[])) else 'available'
+    # Renderer faults are visible in the persistent journal and report as well.
+    from .diagnostics import update_journal
+    report['anomaly_journal']=update_journal(report.get('anomaly_journal'),report,
+        report.get('runtime',{}).get('built_at') or report['analysis_date'])
+    (output/'report.json').write_text(json.dumps(report,ensure_ascii=False,allow_nan=False,indent=2)+'\n',encoding='utf-8')
     (output / "index.html").write_text(home_page(fixture, report, style, script), encoding="utf-8")
     export_fundamentals_csv(report, output / 'fondamentaux.csv')
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
+    write_diagnostics(report,output,style,script)
     from .economic_sources import load_catalog, catalog_page, catalog_summary
     from .sector_sources import monitor_html, validate_state
     economic_catalog = load_catalog()
@@ -623,7 +661,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
         if not re.fullmatch(r"[A-Z0-9]{2,5}", symbol):
             raise ValueError(f"Unsafe symbol: {symbol!r}")
         rec = fixture["records"][symbol]
-        (output / "titres" / f"{symbol}.html").write_text(detail_page(by_symbol[symbol], rec, fixture, style, script, report.get('health')), encoding="utf-8")
+        (output / "titres" / f"{symbol}.html").write_text(pages[symbol], encoding="utf-8")
         with (output / "historique" / f"{symbol}.csv").open("w", encoding="utf-8-sig", newline="") as out:
             writer = csv.writer(out, delimiter=";")
             writer.writerow(["Séance", "Ticker", "Ouverture", "Plus Haut", "Plus Bas", "Clôture", "Titres Échangés", "Contrôle OHLC"])

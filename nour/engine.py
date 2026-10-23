@@ -7,6 +7,8 @@ from .fundamentals import coverage
 from .statistics import describe
 from .sector_methods import guidance
 from .publication import history_readiness
+from .resilience import validate_fixture, guarded, issue
+from .sector_calculators import calculate_sector
 
 
 def _mean(items):
@@ -124,9 +126,12 @@ def analyze(record, asof, quantity=1000):
         "decision": verdict,
         "decision_type": "data_readiness_only",
         "asof": record.get("price_asof"), "age_calendar_days": age_days,
-        "price": record.get("price"), "price_source": record.get("price_source"),
+        "price": price, "price_source": record.get("price_source"),
         'price_source_datetime': record.get('price_source_datetime'),
         'price_collected_at': record.get('price_collected_at'),
+        'source_checked_at': record.get('source_checked_at'),
+        'source_check_status': record.get('source_check_status'),
+        'price_validated_at': record.get('price_validated_at'),
         "day_turnover_mad_actual": record.get("day_turnover_mad"),
         "day_shares": record.get("day_shares"),
         "quality": {
@@ -154,16 +159,41 @@ def analyze(record, asof, quantity=1000):
     }
 
 
+_fallback_analyze = analyze
+_fallback_technical = technical
+
+
 def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
     asof = asof or date.today().isoformat()
     facts = facts or {}
+    validate_fixture(fixture)
     results = []
     for symbol in fixture["symbols"]:
-        rec = fixture["records"][symbol]
-        item = analyze(rec, asof, quantity)
-        dated = {**rec, 'candles': [b for b in rec.get('candles', [])
-                                  if isinstance(b.get('d'), str) and b['d'] <= asof]}
-        item["technical"] = technical(dated)
+        rec = fixture['records'].get(symbol) or {'symbol':symbol, 'candles':[]}
+        control = {'symbol':symbol}
+        item = guarded(control, 'analysis', lambda: analyze(rec, asof, quantity),
+            lambda: _fallback_analyze({'symbol':symbol,'name':rec.get('name'),
+                'sector':rec.get('sector'),'candles':[]}, asof, quantity))
+        if control.get('resilience'):
+            item['resilience'] = control['resilience']
+            issue(item, 'price', 'issuer_analysis_unavailable', 'Analyse du titre suspendue.',
+                  ['liquidity','trend'])
+        raw_bars = rec.get('candles') if isinstance(rec.get('candles'), list) else []
+        dated = {**rec, 'candles': [b for b in raw_bars
+                                  if isinstance(b, dict) and isinstance(b.get('d'), str) and b['d'] <= asof]}
+        item["technical"] = guarded(item, 'technical', lambda: technical(dated),
+                                    lambda: _fallback_technical({'candles':[]}))
+        market_problem = rec.get('quarantined_market')
+        if market_problem:
+            item.update(price=None, day_shares=None, day_turnover_mad_actual=None,
+                        decision='INDISPONIBLE', price_source_datetime=None)
+            item['technical'] = _fallback_technical({'candles':[]})
+            item['liquidity'].update(ready=False, capacity_shares_per_session_at_10pct=None,
+                                    exit_days_at_10pct=None, median_shares=None,
+                                    median_turnover_mad_estimated=None,median_turnover_ex_top5_mad_estimated=None)
+            issue(item,'source','market_line_quarantined',market_problem['reason'],
+                  ['market','technical','liquidity'],source=market_problem.get('source'),evidence=market_problem)
+            item['quality']['issues'].append(market_problem['reason'])
         item["history_readiness"] = history_readiness(item)
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
@@ -171,21 +201,34 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         # A quote can have a numeric price yet be rejected by the market
         # integrity checks (stale, future, or inconsistent with last close).
         # It must never be used to price annual EPS/book value in that case.
-        quote_for_valuation = ({**rec, 'stale': True}
+        quote_for_valuation = ({**rec, 'stale': True, 'price':None if market_problem else rec.get('price')}
                                if item['decision'] in ('INDISPONIBLE', 'SUSPENDU')
                                else rec)
-        item["fundamental"] = fundamentals(
-            quote_for_valuation, None if historical else facts.get(symbol), asof=asof)
+        item["fundamental"] = guarded(item, 'fundamental', lambda: fundamentals(
+            quote_for_valuation, None if historical else facts.get(symbol), asof=asof),
+            lambda: _empty_fundamentals(asof))
         status = item.get('issuer_status') or {}
         if status and not item['fundamental'].get('document_url'):
             item['fundamental']['warnings'].append(status['reason'])
         if historical:
             item['fundamental']['warnings'].append('Reconstruction historique : fondamentaux actuels exclus faute de disponibilité datée vérifiée.')
-        item["historical_statistics"] = describe(dated)
-        item["canonical_score"] = canonical_score(item, item["technical"], item["fundamental"])
+        item["historical_statistics"] = guarded(item, 'historical_statistics', lambda: describe(dated),
+            lambda: {'status':'unavailable','horizons':[], 'reason':'Erreur locale de calcul.'})
+        if market_problem:
+            item['historical_statistics']={'status':'unavailable','horizons':[],'reason':'Cotation ou volume en conflit ; historique courant non validé.'}
+            issue(item,'historical_statistics','market_line_quarantined',market_problem['reason'],['historical_statistics'])
+        item["canonical_score"] = guarded(item, 'canonical_score',
+            lambda: canonical_score(item, item["technical"], item["fundamental"]),
+            lambda: {'value':None,'state':'NON_CALCULABLE','version':SCORE_VERSION,
+                     'coverage_pct':0,'contributors':{},'nlp_weight':0})
         # Descriptive industry-specific review prompts only; not a financial fact
         # and not an input to the score or to the technical indicators.
         item["sector_guidance"] = guidance(symbol, {"sector": rec.get("sector")})
+        item['sector_indicators'] = guarded(item,'sector_indicators',
+            lambda: calculate_sector(symbol,rec,None if historical else facts.get(symbol),asof),
+            lambda: {'version':'nour-sector-calculators-v1','symbol':symbol,
+                     'family':item['sector_guidance']['family'],'metrics':{},'status':'unavailable',
+                     'used_for_score':False,'documents_certified':False})
         results.append(item)
     return {
         "project": fixture["project"], "schema_version": 2, "analysis_date": asof,
@@ -196,3 +239,8 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         "market": fixture.get("market", {}), "news": news or [], "results": results,
         "fundamental_coverage": coverage(results),
     }
+
+
+def _empty_fundamentals(asof):
+    from .fundamentals import calculate
+    return calculate({}, None, asof=asof)
