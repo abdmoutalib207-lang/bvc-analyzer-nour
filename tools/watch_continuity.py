@@ -9,7 +9,7 @@ from urllib.request import Request,urlopen
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from nour.continuity import assess,record_dispatch
+from nour.continuity import assess,record_dispatch,publisher_failures
 from nour.market import atomic_json
 from nour.runtime import ZONE
 from nour.transactions import retry_transient
@@ -89,6 +89,16 @@ def main():
     successful=next((x for x in runs if x.get('conclusion')=='success' and x.get('status')=='completed'),{})
     if successful.get('id') and publication.get('run_id') and int(successful['id'])>int(publication['run_id']):
         state['publication_anomaly']='newer_successful_run_not_visible'
+    failures,latest_failed=publisher_failures(now,runs,publication.get('run_id'),(previous or {}).get('publisher_failures'))
+    state['publisher_failures']=failures
+    if latest_failed:
+        state['publication_anomaly']='latest_publisher_workflow_failed'
+        failed=runs[0];event=failures[str(failed['id'])]
+        if 'failed_steps' not in event:
+            try:
+                jobs=github('actions/runs/'+str(failed['id'])+'/jobs')['jobs']
+                event['failed_steps']=[s['name'] for j in jobs for s in j.get('steps',[]) if s.get('conclusion')=='failure']
+            except (OSError,ValueError,KeyError):event['step_details_status']='unavailable'
     # GitHub concurrency keeps only one pending run: request one catch-up at a time.
     requests=requests[:1]
     for request in requests:

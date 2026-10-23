@@ -59,3 +59,22 @@ def record_dispatch(state, request, now, accepted):
     event['attempts']+=1;event['last_attempt_at']=now.isoformat()
     event['status']='catch_up_requested' if accepted else 'catch_up_request_failed'
     event.setdefault('attempt_history',[]).append(dict(at=now.isoformat(),accepted=accepted))
+
+
+def publisher_failures(now, runs, published_run_id, previous=None):
+    """A failed new deployment workflow is visible even if old Pages is healthy."""
+    history=deepcopy(previous or {})
+    for run in runs:
+        if run.get('status')=='completed' and run.get('conclusion') in ('failure','timed_out','cancelled','action_required'):
+            key=str(run['id'])
+            event=history.setdefault(key,{'run_id':key,'first_detected':now.isoformat(),'state':'new'})
+            event.update(last_detected=now.isoformat(),conclusion=run['conclusion'],url=run.get('html_url'))
+    latest=runs[0] if runs else {}
+    success=bool(latest.get('status')=='completed' and latest.get('conclusion')=='success'
+                 and str(latest.get('id'))==str(published_run_id))
+    if success:
+        for event in history.values():
+            if int(event['run_id'])<int(latest['id']) and event['state']!='resolved':
+                event.update(state='resolved',resolved_at=now.isoformat(),resolution_run_id=str(latest['id']))
+    latest_failed=bool(latest.get('status')=='completed' and latest.get('conclusion') in ('failure','timed_out','cancelled','action_required'))
+    return history,latest_failed

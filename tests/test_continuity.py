@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime,timezone,timedelta
 from nour.runtime import ZONE,run_context
-from nour.continuity import assess,record_dispatch,expected_runs
+from nour.continuity import assess,record_dispatch,expected_runs,publisher_failures
 
 class ContinuityTests(unittest.TestCase):
     def test_missed_is_not_executed_and_retries_are_bounded(self):
@@ -47,3 +47,16 @@ class ContinuityTests(unittest.TestCase):
         state,req=assess(datetime(2026,10,23,18,10,tzinfo=ZONE),{},{},[])
         self.assertEqual(sum(r['slot']=='refresh' for r in req),1)
         self.assertEqual(sum(e['status']=='missed_superseded' for e in state['events'].values()),7)
+
+    def test_failed_new_publication_is_detected_despite_healthy_old_pages(self):
+        now=datetime(2026,10,23,10,10,tzinfo=ZONE)
+        failed={'id':20,'status':'completed','conclusion':'failure'}
+        old={'id':19,'status':'completed','conclusion':'success'}
+        history,bad=publisher_failures(now,[failed,old],'19')
+        self.assertTrue(bad);self.assertEqual(history['20']['state'],'new')
+        healthy={'id':21,'status':'completed','conclusion':'success'}
+        retained,_=publisher_failures(now,[healthy,failed],'19',history)
+        self.assertNotEqual(retained['20']['state'],'resolved')
+        resolved,bad=publisher_failures(now,[healthy,failed],'21',history)
+        self.assertFalse(bad);self.assertEqual(resolved['20']['state'],'resolved')
+        self.assertEqual(resolved['20']['first_detected'],history['20']['first_detected'])
