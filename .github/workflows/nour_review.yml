@@ -51,6 +51,11 @@ jobs:
                   time.sleep(.2)
           PY
           node tools/test_assistant_browser.cjs
+      - name: Exercise all browser routes with ADI deliberately quarantined (temporary site only)
+        env:
+          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
+          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/stress
+        run: python tools/test_quarantined_browser.py
       - name: Preserve browser review evidence
         uses: actions/upload-artifact@v4
         if: always()

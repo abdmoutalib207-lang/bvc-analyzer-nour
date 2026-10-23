@@ -45,3 +45,21 @@ par les tests headless existants. Les 36 parcours et les contrôles sur le site
 servi restent obligatoires ; une bibliothèque réellement manquante fait échouer
 le lancement du navigateur. Aucun contrôle n'est placé en continue-on-error.
 Référence : https://playwright.dev/docs/browsers (Chromium headless shell).
+
+## Contrat navigateur en mode dégradé
+
+La revue finale a également relevé des appels `null.toLocaleString` dans les
+assertions de cours/PER/MM50/RSI/Bollinger/bêta du navigateur. Ces valeurs
+canoniques peuvent légitimement être absentes. Les assertions exigent maintenant
+exactement le tiret du cours et « indisponible » pour l'indicateur concerné ;
+les nombres disponibles restent comparés à leur valeur canonique, sans zéro
+substitué. Les réponses combinées sont contrôlées avec leur libellé propre.
+
+`tools/test_quarantined_browser.py` fabrique deux sites exclusivement temporaires
+à partir du même univers synthétique de tests : base saine, puis volume ADI
+contradictoire. Il utilise les calculateurs et contrôles de publication réels,
+exige 80 fiches, ADI sans cours/PER/MM50 valide et l'égalité exacte des techniques,
+fondamentaux, scores et 79 CSV sains. Il exécute ensuite les 36 parcours Chromium
+sur le site temporaire dégradé. Aucun fichier simulé ne rejoint `data/`, `web/`,
+un commit de données ou GitHub Pages. La revue et chaque publication exécutent
+ce stress test en plus des 36 parcours normaux ; leurs échecs restent bloquants.
