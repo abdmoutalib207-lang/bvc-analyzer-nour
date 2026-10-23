@@ -15,7 +15,7 @@ import run
 from nour.briefing import create_briefing
 from nour.engine import build_report
 from nour.market import capture_intraday, import_session
-from nour.runtime import CONTROL_SLOTS, EDITIONS, HOURLY_SLOTS, SLOTS, ZONE, run_context, visible_intraday
+from nour.runtime import CONTROL_SLOTS, EDITIONS, EXTRA_WAKE_SCHEDULES, HOURLY_SLOTS, SLOTS, ZONE, run_context, visible_intraday
 from nour.site import briefing_page, home_page
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,8 +35,8 @@ class RuntimeContracts(unittest.TestCase):
     def test_hourly_local_collection_and_three_preserved_editions(self):
         workflow = (ROOT/'.github/workflows/nour_daily.yml').read_text()
         pairs = re.findall(r"cron: '([^']+)'\s+timezone: '([^']+)'", workflow)
-        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in (*SLOTS, *CONTROL_SLOTS, *HOURLY_SLOTS)])
-        self.assertEqual(len(pairs), 11)
+        self.assertEqual(pairs, [(cron, 'Africa/Casablanca') for cron in (*SLOTS, *CONTROL_SLOTS, *HOURLY_SLOTS, *EXTRA_WAKE_SCHEDULES)])
+        self.assertEqual(len(pairs), 13)
         clocks=[value[1] for value in (*SLOTS.values(), *CONTROL_SLOTS.values(), *HOURLY_SLOTS.values())]
         self.assertEqual(len(clocks),len(set(clocks)))
         self.assertEqual(sorted(clock for clock in clocks if clock.endswith(':45')),
@@ -48,11 +48,11 @@ class RuntimeContracts(unittest.TestCase):
             self.assertEqual(ctx['delay_minutes'],0)
             self.assertNotIn(ctx['slot'],EDITIONS)
         delayed=run_context(datetime(2026,10,19,12,30,tzinfo=ZONE),'45 10 * * 1-5','schedule')
-        self.assertEqual(delayed['target_time'],'10:45')
-        self.assertEqual(delayed['delay_minutes'],105)
+        self.assertEqual(delayed['target_time'],'11:45')
+        self.assertEqual(delayed['delay_minutes'],45)
         self.assertTrue(delayed['late'])
         overnight=run_context(datetime(2026,10,19,1,0,tzinfo=ZONE),'45 17 * * 1-5','schedule')
-        self.assertEqual(overnight['edition_for'],'2026-10-16')
+        self.assertEqual(overnight['edition_for'],'2026-10-19')
         control=run_context(datetime(2026,10,19,17,15,tzinfo=ZONE),'15 17 * * 1-5','schedule')
         self.assertEqual(control['slot'],'refresh')
         self.assertNotIn(control['slot'],EDITIONS)
@@ -71,15 +71,16 @@ class RuntimeContracts(unittest.TestCase):
             expected = local.astimezone(timezone.utc)
             self.assertEqual(datetime.fromisoformat(ctx['scheduled_at']).astimezone(timezone.utc),expected)
 
-    def test_late_run_keeps_original_slot_and_actual_time(self):
+    def test_late_run_updates_current_slot_and_actual_time(self):
         ctx = run_context(datetime(2026,10,5,14,0,tzinfo=ZONE), '45 9 * * 1-5','schedule')
-        self.assertEqual(ctx['slot'],'morning')
-        self.assertEqual(ctx['delay_minutes'],255)
-        self.assertTrue(ctx['late'])
-        self.assertIn('09:45',ctx['scheduled_at'])
+        self.assertEqual(ctx['slot'],'refresh')
+        self.assertEqual(ctx['delay_minutes'],15)
+        self.assertFalse(ctx['late'])
+        self.assertIn('13:45',ctx['scheduled_at'])
         overnight = run_context(datetime(2026,10,6,1,0,tzinfo=ZONE), '0 16 * * 1-5','schedule')
-        self.assertEqual(overnight['edition_for'],'2026-10-05')
-        self.assertEqual(overnight['delay_minutes'],540)
+        self.assertEqual(overnight['edition_for'],'2026-10-06')
+        self.assertIsNone(overnight['delay_minutes'])
+        self.assertIsNone(overnight['scheduled_at'])
         with self.assertRaises(ValueError):
             run_context(schedule='unexpected',event='schedule')
         self.assertEqual(run_context(event='push')['slot'],'adhoc')
@@ -132,7 +133,7 @@ class RuntimeContracts(unittest.TestCase):
         # must explicitly simulate an absent closing, not depend on its age.
         for item in report['results']:
             item['asof'] = '2026-10-02'
-        report['runtime'] = run_context(datetime(2026,10,5,19,0,tzinfo=ZONE), '0 16 * * 1-5','schedule')
+        report['runtime'] = run_context(datetime(2026,10,5,16,25,tzinfo=ZONE), '0 16 * * 1-5','schedule')
         brief = create_briefing(report)
         self.assertEqual(brief['edition_status'],'closing_pending')
         page = briefing_page(self.fixture,brief,'','')

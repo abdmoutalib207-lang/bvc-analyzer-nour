@@ -50,6 +50,8 @@ on:
       timezone: 'Africa/Casablanca'
     - cron: '15 17 * * 1-5'
       timezone: 'Africa/Casablanca'
+    - cron: '0 19 * * 1-5'
+      timezone: 'Africa/Casablanca'
     - cron: '45 10 * * 1-5'
       timezone: 'Africa/Casablanca'
     - cron: '45 11 * * 1-5'
@@ -64,15 +66,44 @@ on:
       timezone: 'Africa/Casablanca'
     - cron: '45 17 * * 1-5'
       timezone: 'Africa/Casablanca'
+    # Redundant opening wake; the gate retries an empty early source once.
+    - cron: '55 9 * * 1-5'
+      timezone: 'Africa/Casablanca'
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 concurrency:
   group: nour-publication
   cancel-in-progress: false
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+      slot: ${{ steps.gate.outputs.slot }}
+      scheduled_for: ${{ steps.gate.outputs.scheduled_for }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enforce Nour-only write scope
+        run: python tools/assert_nour_scope.py
+      - name: Resolve current-day slot and avoid duplicate verified publications
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NOUR_REQUESTED_SLOT: ${{ inputs.slot || 'auto' }}
+          NOUR_REQUESTED_FOR: ${{ inputs.scheduled_for }}
+        run: python tools/plan_market_run.py
   update:
+    needs: plan
+    if: needs.plan.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     environment:
@@ -126,8 +157,8 @@ jobs:
       - name: Build dashboard and briefing
         env:
           NOUR_SCHEDULE: ${{ github.event.schedule }}
-          NOUR_SLOT: ${{ inputs.slot || 'auto' }}
-          NOUR_SCHEDULED_FOR: ${{ inputs.scheduled_for }}
+          NOUR_SLOT: ${{ needs.plan.outputs.slot }}
+          NOUR_SCHEDULED_FOR: ${{ needs.plan.outputs.scheduled_for }}
         run: python run.py --asof "$(TZ=Africa/Casablanca date +%F)" --slot "$NOUR_SLOT"
       - name: Verify the generated output
         run: |
@@ -230,7 +261,9 @@ jobs:
           git config user.name 'bvc-nour-bot'
           git config user.email 'bvc-nour-bot@users.noreply.github.com'
           git restore --staged -- data web
-          for nour_diagnostic in data/error_memory.json data/market_integrity.json data/market_integrity_log.json data/anomalies.json; do
+          # Active market_integrity.json belongs to the snapshot transaction.
+          # Failure evidence remains in the audit journal and uploaded diagnostics.
+          for nour_diagnostic in data/error_memory.json data/market_integrity_log.json data/anomalies.json; do
             if test -f "$nour_diagnostic"; then git add "$nour_diagnostic"; fi
           done
           if ! git diff --cached --quiet; then

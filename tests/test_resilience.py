@@ -137,7 +137,7 @@ class ResilienceTests(unittest.TestCase):
             root=Path(d)
             shutil.copytree(ROOT/'data',root/'data')
             target=root/'web';target.mkdir();(target/'index.html').write_text('previous healthy site')
-            with patch.object(run,'ROOT',root),patch('nour.engine.technical',side_effect=fault):
+            with patch.object(run,'ROOT',root),patch.dict('os.environ',{},clear=True),patch('nour.engine.technical',side_effect=fault):
                 with site_transaction(target) as output:
                     run._build(argparse.Namespace(asof=ASOF,slot='refresh'),output)
             actual=json.loads((target/'report.json').read_text())

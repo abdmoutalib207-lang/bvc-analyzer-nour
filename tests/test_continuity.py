@@ -5,7 +5,8 @@ from nour.continuity import assess,record_dispatch,expected_runs,publisher_failu
 
 class ContinuityTests(unittest.TestCase):
     def test_missed_is_not_executed_and_retries_are_bounded(self):
-        now=datetime(2026,10,23,10,10,tzinfo=ZONE)
+        # The 19h safety slot remains current long enough for three bounded retries.
+        now=datetime(2026,10,23,19,10,tzinfo=ZONE)
         state,requests=assess(now,{}, {}, [])
         self.assertEqual(len(requests),1)
         req=requests[0]
@@ -14,13 +15,12 @@ class ContinuityTests(unittest.TestCase):
         self.assertEqual(state['events'][req['key']]['status'],'catch_up_requested')
         self.assertFalse(assess(now+timedelta(minutes=1),{},{},[],state)[1])
         for n in range(2):
-            now+=timedelta(minutes=31)
+            now+=timedelta(minutes=30)
             state,requests=assess(now,{},{},[],state)
-            req=next(r for r in requests if r['slot']=='morning')
+            self.assertEqual(len(requests),1)
+            self.assertEqual(requests[0]['key'],req['key'])
             record_dispatch(state,req,now,True)
-        now+=timedelta(minutes=31)
-        state,requests=assess(now,{},{},[],state)
-        self.assertFalse(any(r['slot']=='morning' for r in requests))
+        self.assertFalse(assess(now+timedelta(minutes=1),{},{},[],state)[1])
 
     def test_only_actual_successful_published_edition_counts(self):
         now=datetime(2026,10,23,10,10,tzinfo=ZONE)
@@ -52,7 +52,8 @@ class ContinuityTests(unittest.TestCase):
     def test_refreshes_are_observed_but_only_latest_is_caught_up(self):
         state,req=assess(datetime(2026,10,23,18,10,tzinfo=ZONE),{},{},[])
         self.assertEqual(sum(r['slot']=='refresh' for r in req),1)
-        self.assertEqual(sum(e['status']=='missed_superseded' for e in state['events'].values()),7)
+        self.assertEqual(sum(e['status']=='missed_superseded' for e in state['events'].values()),10)
+        self.assertEqual(req[0]['scheduled_for'],datetime(2026,10,23,17,45,tzinfo=ZONE).isoformat())
 
     def test_failed_new_publication_is_detected_despite_healthy_old_pages(self):
         now=datetime(2026,10,23,10,10,tzinfo=ZONE)
