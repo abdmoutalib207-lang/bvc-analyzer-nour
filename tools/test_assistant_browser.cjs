@@ -22,7 +22,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
       const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='index.html'){
           assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
@@ -134,6 +134,36 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.deepEqual(await cards.locator('strong').allTextContents(),before);
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await dashboard.screenshot({path:path.join(shots,`bi-${route.split('/')[1].split('.')[0]}-${width}.png`)});}
+        }
+        if(route==='titres/ENK.html'||route==='titres/CFGB.html'){
+          const symbol=route.includes('ENK')?'ENK':'CFGB';
+          const row=marketReport.results.find(r=>r.symbol===symbol);
+          const key=symbol==='ENK'?'group_margin_pct':'cost_income_pct';
+          const metric=row.sector_indicators.metrics[key];
+          assert.equal(metric.status,'available');
+          assert.equal(row.fundamental.pe,null,'Documentary restriction must remain');
+          const item=page.locator(`[data-sector-metric="${key}"]`);
+          assert.ok((await item.innerText()).includes(String(metric.value)));
+          await item.locator('summary').click();
+          assert.ok(await item.locator('a').count()>=3,'Primary inputs and method links');
+          if(symbol==='ENK'){
+            assert.ok((await item.innerText()).includes('sans conversion de change'));
+            const nativeRoe=row.sector_indicators.metrics.native_group_roe_average_pct;
+            assert.equal(nativeRoe.value,22.6412);
+            assert.ok((await page.locator('[data-sector-metric="native_group_roe_average_pct"]').innerText()).includes('22.6412'));
+          }
+          else{
+            const text=await item.innerText();
+            assert.ok(text.includes('-513422')&&text.includes('-100560'),'Actual expense components retained');
+          }
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Sector evidence overflow '+symbol+' '+width);
+          if(width===375){
+            for(const column of [0,1]){
+              const box=await item.locator('td').nth(column).boundingBox();
+              assert.ok(box&&box.x>=0&&box.x+box.width<=width+1,'Ratio label/value hidden by evidence scrolling '+symbol);
+            }
+          }
+          if(shots)await page.locator('[data-sector-calculators]').screenshot({path:path.join(shots,`sector-${symbol}-${width}.png`)});
         }
         if(route==='titres/ADI.html'){
           const body=await page.locator('main').innerText();

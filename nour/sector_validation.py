@@ -12,6 +12,29 @@ def audit_sector_calculations(report):
             checks+=1
             try:
                 v=[Fraction(str(m['inputs'][f]['valeur'])) for f in m['input_fields']]
+                if any(m['inputs'][f].get('devise', m.get('currency', 'MAD')) != m.get('currency', 'MAD')
+                       for f in m['input_fields']):
+                    raise ValueError('Input/output currency mismatch')
+                for field in m['input_fields']:
+                    fact=m['inputs'][field]
+                    if fact.get('derivation') == 'negated_sum_of_reported_expenses':
+                        parts=fact['components']
+                        if (len(parts) != 2 or any(p.get('unite_au_rapport') != 'KMAD' for p in parts)
+                                or -sum(Fraction(str(p['valeur_au_rapport'])) for p in parts)/1000
+                                   != Fraction(str(fact['valeur']))):
+                            raise ValueError('Expense component arithmetic mismatch')
+                # Independent currency boundary: TND may cancel in a monetary
+                # ratio, but must never be exported as a MAD amount or mixed
+                # with another currency/scale, even with plausible arithmetic.
+                if m.get('currency') == 'TND':
+                    if (m.get('unit') not in ('%', '×')
+                            or m.get('currency_method') != 'same_currency_ratio_no_fx'
+                            or m.get('currency_conversion_applied') is not False
+                            or m.get('operation') not in ('ratio', 'ratio100', 'ratio_average', 'ratio_average100', 'working_capital_ratio', 'sum_ratio100')
+                            or any(m['inputs'][f].get('devise') != 'TND'
+                                   or m['inputs'][f].get('unite') != 'MTND'
+                                   for f in m['input_fields'])):
+                        raise ValueError('Foreign monetary ratio contract mismatch')
                 op=m['operation']
                 if op=='ratio':expected=v[0]/v[1]
                 elif op=='ratio100':expected=100*v[0]/v[1]
