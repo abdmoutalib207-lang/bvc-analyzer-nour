@@ -447,7 +447,7 @@ async function assertQuote(locator,value){
             return NourResearch.summary(NourResearch.select(data.rows,{symbol:'ADI',horizon:20,period:'all',regime:'all'}),1,1,0);
           });
           assert.ok(lab.includes(expectedLab.count+' observations'));
-          assert.ok(lab.includes('médiane nette '+expectedLab.median.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(lab.includes('médiane nette '+answerNumber(expectedLab.median)));
           const follow=await ask('Et sur 60 séances avec glissement 0,2 % ?');
           assert.ok(follow.includes('ADI · laboratoire 60 séances'));
           assert.ok(follow.includes('achat 1 %, vente 1 %, glissement 0,2 %'));
