@@ -181,3 +181,34 @@ def retained_market_context(snapshot_sha256, cache, health):
             or proof.get('session')!=(prior.get('overview') or {}).get('asof')):
         return None
     return deepcopy(prior)
+
+
+def detached_intraday_proof(snapshot_sha256, overview, cache, audit):
+    """Recover an unchanged intraday state after a detached proof was saved.
+
+    Never override a refusal bound to this snapshot, import a new observation,
+    restore a closing claim from a weak intraday proof, or change any clock.
+    """
+    prior=(cache or {}).get('market') or {}
+    proof=prior.get('proof') or {}
+    detached=audit.get('validated_snapshot_sha256')
+    if (not snapshot_sha256 or len(snapshot_sha256)!=64 or audit.get('schema_version')!=1
+            or audit.get('publication_safe') is not True
+            or audit.get('status') not in ('matched','reconciled','primary_checked','detail_matched','partial')
+            or not isinstance(detached,str) or len(detached)!=64 or detached==snapshot_sha256
+            or audit.get('canonical_snapshot_sha256')!=detached
+            or prior.get('snapshot_sha256')!=snapshot_sha256
+            or proof.get('schema_version')!=1 or proof.get('status')!='intraday'
+            or proof.get('publication_safe') is not True
+            or proof.get('validated_snapshot_sha256')!=snapshot_sha256
+            or overview!=prior.get('overview') or overview.get('status')!='intraday'
+            or proof.get('session')!=overview.get('asof') or audit.get('session')!=overview.get('asof')):
+        return None
+    restored=deepcopy(proof)
+    restored['restoration']={'reason':'detached_active_proof','retained_snapshot_sha256':snapshot_sha256,
+        'detached_snapshot_sha256':detached,'detached_observed_at':audit.get('observed_at'),
+        'proof_source':'last_healthy.market.proof','new_source_verification':False}
+    notice='Preuve active étrangère au snapshot conservé : dernière preuve intrajournalière cohérente reprise avec ses dates originales, sans validation de clôture nouvelle. Observation écartée conservée dans le journal de contrôle.'
+    if notice not in restored.setdefault('notices',[]):
+        restored['notices'].append(notice)
+    return restored

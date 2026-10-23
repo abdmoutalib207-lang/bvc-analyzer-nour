@@ -14,10 +14,11 @@ DAY='2026-10-22';NOW=datetime(2026,10,23,19,tzinfo=timezone.utc)
 
 def universe():
     fixture=json.loads((ROOT/'data/market_snapshot.json').read_text());codes=json.loads((ROOT/'data/source_codes.json').read_text())
+    fixture['market']['last_session']=DAY
     raw=[];secondary=[]
     for i,s in enumerate(fixture['symbols']):
         price=i+100;bar=dict(d=DAY,o=price,h=price+1,l=price-1,c=price,v=100,turnover_mad=price*100)
-        rec=fixture['records'][s];rec.update(price=price,price_asof=DAY,day_shares=100,day_turnover_mad=price*100,stale=False,suspended=False)
+        rec=fixture['records'][s];rec.pop('quarantined_market',None);rec.update(price=price,price_asof=DAY,day_shares=100,day_turnover_mad=price*100,stale=False,suspended=False)
         rec['candles']=[b for b in rec['candles'] if b['d']<DAY]+[bar]
         raw.append(dict(Symbol=codes[s],DateDernierCours='22/10/2026 15:30:00',Cours=price,Ouverture=price,PlusHaut=price+1,PlusBas=price-1,QteEchangee=100,Volumes=price*100))
         secondary.append(dict(symbol=codes[s],session=DAY,price=price,shares=100,amount_mad=price*100))
@@ -66,7 +67,7 @@ class LocalMarketTests(unittest.TestCase):
             atomic_json(root/'data/market_integrity.json',proof)
             atomic_json(root/'data/market_overview.json',{'current':inp[2],'last_closed':inp[2]})
             atomic_json(root/'data/issuer_status.json',{'observed_asof':'2026-10-23','records':{}})
-            with patch.object(run,'ROOT',root):run._build(argparse.Namespace(asof='2026-10-23',slot='refresh'),output)
+            with patch.object(run,'ROOT',root),patch.dict('os.environ',{},clear=True):run._build(argparse.Namespace(asof='2026-10-23',slot='refresh'),output)
             actual=json.loads((output/'report.json').read_text())
             self.assertEqual(len(list((output/'titres').glob('*.html'))),80)
             self.assertFalse(audit_market_integrity(actual)['failures'])

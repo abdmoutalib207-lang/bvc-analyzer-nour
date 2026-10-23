@@ -3,13 +3,12 @@ import argparse
 import json
 from datetime import datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 
-from nour.market import CANCELLED_SESSIONS, atomic_json, capture_intraday, fetch_cdg, import_session
+from nour.market import CASABLANCA, CANCELLED_SESSIONS, atomic_json, capture_intraday, fetch_cdg, import_session
 
 
 def main():
@@ -17,7 +16,7 @@ def main():
     parser.add_argument("--input", type=Path, help="Previously captured raw CDG JSON array (offline test)")
     args=parser.parse_args()
     data=ROOT/"data"
-    now=datetime.now(ZoneInfo("Africa/Casablanca"))
+    now=datetime.now(CASABLANCA)
     status={"checked_at":now.isoformat(),"source":"CDG Capital Bourse",
             "result":"error", "last_session":None, "message":""}
     try:

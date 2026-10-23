@@ -95,6 +95,14 @@ def _build(args, output):
     integrity_path=ROOT/'data/market_integrity.json'
     memory_path=ROOT/'data/error_memory.json'
     integrity=json.loads(integrity_path.read_text()) if integrity_path.exists() else {}
+    from nour.resilience import detached_intraday_proof
+    recovered_proof=detached_intraday_proof(report['provenance']['market_snapshot_sha256'],
+        report.get('market_overview') or {},
+        json.loads(cache_file.read_text()) if cache_file.exists() else {},integrity)
+    if recovered_proof and not retained:
+        integrity=recovered_proof
+        report['health']={**report['health'], 'proof_recovery':integrity['restoration'],
+            'message':report['health'].get('message','')+' ; dernière preuve cohérente reprise, aucune nouvelle clôture attestée'}
     if retained:
         integrity={'schema_version':1,'status':'retained_validated','publication_safe':True,
             'session':retained['proof']['session'],'last_valid_proof':retained['proof'],
