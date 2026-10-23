@@ -233,6 +233,9 @@ jobs:
           path: |
             ${{ runner.temp }}/nour-verification.log
             data/health.json
+            data/market_snapshot.json
+            data/market_overview.json
+            data/last_healthy.json
             data/overview_health.json
             data/official_sources_health.json
             data/market_integrity.json

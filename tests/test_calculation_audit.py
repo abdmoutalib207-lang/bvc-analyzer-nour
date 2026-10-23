@@ -9,6 +9,7 @@ from nour.calculation_audit import audit_calculations
 from nour.engine import build_report
 from nour.research import enrich
 from nour.statistics import describe
+from nour.resilience import isolate_audit_failures, health_with_quarantines
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -124,15 +125,45 @@ class CalculationAudit(unittest.TestCase):
 
     def test_all_eighty_issuers_on_the_repository_snapshot(self):
         f = json.loads((ROOT/'data/market_snapshot.json').read_text())
+        self.assert_market_oracle(f)
+
+    def test_five_source_quarantines_keep_healthy_arithmetic_strict(self):
+        f=json.loads((ROOT/'data/market_snapshot.json').read_text())
+        for symbol in ('ADH','ADI','IAM','MNG','STK'):
+            f['records'][symbol]['quarantined_market']={
+                'session':f['records'][symbol]['price_asof'],
+                'reason':'Injected source contradiction'}
+        report=self.assert_market_oracle(f)
+        next(row for row in report['results'] if row['symbol']=='ADI')['technical']['sma20']=99999
+        self.assertTrue(health_with_quarantines(audit_calculations(f,report),report)['failures'])
+
+    def assert_market_oracle(self,f):
         # Financial arithmetic is separately controlled by publication_health;
-        # this test recomputes every issuer's market calculations independently.
-        r = build_report(f, f['snapshot_updated'][:10])
+        # every issuer's market arithmetic and every absence remain checked.
+        asof=max(r.get('price_asof') or '' for r in f['records'].values())
+        r = build_report(f, asof)
         r['masi_history'] = json.loads((ROOT/'data/masi_history.json').read_text())['seances']
         enrich(r, f)
+        blocked={s for s,record in f['records'].items() if record.get('quarantined_market')}
+        rows={row['symbol']:row for row in r['results']}
+        healthy={s:deepcopy(row) for s,row in rows.items() if s not in blocked}
+        for symbol in blocked:
+            self.assertIsNone(rows[symbol]['price'])
+            self.assertIsNone(rows[symbol]['technical']['sma20'])
         result = audit_calculations(f, r)
         self.assertEqual(result['universe'], 80)
         self.assertEqual(result['issuers_checked'], 80)
-        self.assertEqual(result['failures'], [])
+        # No healthy issuer's arithmetic may be excused by another quarantine.
+        self.assertEqual([failure for failure in result['failures'] if failure['symbol'] not in blocked],[])
+        isolate_audit_failures(r,result)
+        checked=health_with_quarantines(audit_calculations(f,r),r)
+        self.assertEqual(checked['failures'],[])
+        for symbol,before in healthy.items():self.assertEqual(rows[symbol],before,symbol)
+        if blocked:
+            self.assertEqual(checked['status'],'degraded')
+            self.assertTrue(checked['quarantined_failures'])
+        return r
+
 
 
 if __name__ == '__main__':
