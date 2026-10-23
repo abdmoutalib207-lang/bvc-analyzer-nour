@@ -170,7 +170,9 @@ jobs:
       - name: Install pinned browser QA runtime
         run: |
           npm install --prefix "$RUNNER_TEMP/nour-browser-qa" --ignore-scripts --no-audit --no-fund playwright@1.62.1
-          "$RUNNER_TEMP/nour-browser-qa/node_modules/.bin/playwright" install --with-deps chromium
+          # Runner already carries Chromium libraries and Latin/emoji fonts.
+          # Launch/tests still fail if a required dependency is missing.
+          "$RUNNER_TEMP/nour-browser-qa/node_modules/.bin/playwright" install --only-shell chromium
       - name: Exercise generated assistant in real Chromium
         env:
           NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules

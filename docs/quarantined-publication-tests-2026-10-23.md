@@ -34,3 +34,14 @@ Les artefacts d'échec incluent désormais le snapshot, le contexte de marché e
 le cache de dernier état sain, en plus du rapport, pour reproduire exactement
 un défaut sur les données collectées. Les références des validations et du
 déploiement réel seront ajoutées à la PR.
+
+## Préparation du navigateur
+
+Le run 40006810299 a attendu plus de dix minutes des paquets APT de polices
+complémentaires, tandis que ses bibliothèques Chromium, Liberation et Noto Emoji
+étaient déjà installées. La revue et la publication installent maintenant
+uniquement le headless shell associé à Playwright 1.62.1, moteur déjà utilisé
+par les tests headless existants. Les 36 parcours et les contrôles sur le site
+servi restent obligatoires ; une bibliothèque réellement manquante fait échouer
+le lancement du navigateur. Aucun contrôle n'est placé en continue-on-error.
+Référence : https://playwright.dev/docs/browsers (Chromium headless shell).
