@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-22",
+  "scope": "Pages annuelles 2025 sélectionnées lues visuellement ; aucun semestre modifié, aucun cours importé, aucun PDF intégral certifié.",
+  "records": {
+    "AKD": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
+      "document_hash": "sha256:82b9d050c7275c416b70116fc17d4d6e7187997b22e12029c83d639340d04d5f",
+      "basis": "consolidé (normes marocaines, avis CNC n°5)",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 443680156,
+          "original_unit": "MAD",
+          "pdf_page": 78,
+          "printed_page": 155,
+          "period_end": "2025-12-31",
+          "note": "Ligne explicite RNPG ; intérêts minoritaires 50 651 435 MAD. Aucun remplacement par le total."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 2853529135,
+          "original_unit": "MAD",
+          "pdf_page": 78,
+          "printed_page": 154,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres part du groupe ; total consolidé distinct 2 925 562 585 MAD."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 2583560166,
+          "original_unit": "MAD",
+          "pdf_page": 78,
+          "printed_page": 154,
+          "period_end": "2024-12-31",
+          "note": "Comparatif 2024 des fonds propres groupe, colonne de droite."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 14159207,
+          "original_unit": "actions",
+          "pdf_page": 78,
+          "printed_page": 154,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 141 592 070 MAD / nominal officiel 10 MAD ; titres de clôture indicatifs."
+        }
+      },
+      "pages": [
+        78
+      ],
+      "reservations": [],
+      "conclusion": "RNPG explicite 443,680156 MMAD, distinct du total 494,331591 ; fonds propres groupe relus.",
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://www.casablanca-bourse.com/live-market/instruments/AKT?pwa=1",
+          "note": "Nominal 10 MAD ; 14 159 207 titres concordent avec le capital exact annuel. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    },
+    "ARD": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
+      "document_hash": "sha256:272fdb3d9d6ead47bee49030106ae671774421580c0e7f4f44cf8d8fe354e658",
+      "basis": "consolidé IFRS",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 534413,
+          "original_unit": "KMAD",
+          "pdf_page": 6,
+          "printed_page": 6,
+          "period_end": "2025-12-31",
+          "note": "Part des propriétaires de la société mère explicitement publiée ; participations ne donnant pas le contrôle nulles."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 5444531,
+          "original_unit": "KMAD",
+          "pdf_page": 6,
+          "printed_page": 6,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres groupe au 31/12/2025, distincts des colonnes 2024/2023."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 5191827,
+          "original_unit": "KMAD",
+          "pdf_page": 6,
+          "printed_page": 6,
+          "period_end": "2024-12-31",
+          "note": "Fonds propres groupe comparatifs 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 12568130,
+          "original_unit": "actions",
+          "pdf_page": 6,
+          "printed_page": 6,
+          "period_end": "2025-12-31",
+          "note": "Note 1 : 12 568 130 actions au 13 mai 2025 ; capital inchangé 2024/2025 dans le bilan et le tableau de variation. Dénominateur de clôture, non moyenne pondérée."
+        }
+      },
+      "pages": [
+        6
+      ],
+      "reservations": [],
+      "conclusion": "RNPG et fonds propres groupe explicites ; effet de juste valeur conservé dans les réserves."
+    },
+    "CTM": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
+      "document_hash": "sha256:025e124fb8b931715d81e66c70bb987a93c600f65c268dd936a6136e2307d3c4",
+      "basis": "consolidé (normes marocaines)",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 56204,
+          "original_unit": "KMAD",
+          "pdf_page": 66,
+          "printed_page": 130,
+          "period_end": "2025-12-31",
+          "note": "RNPG 56 204 et minoritaires -40 121 = résultat consolidé 16 083 KMAD."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 243479,
+          "original_unit": "KMAD",
+          "pdf_page": 65,
+          "printed_page": 129,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres groupe 243 479 KMAD ; ne pas substituer le total 342 031."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 362360,
+          "original_unit": "KMAD",
+          "pdf_page": 65,
+          "printed_page": 129,
+          "period_end": "2024-12-31",
+          "note": "Fonds propres groupe comparatifs 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 1225978,
+          "original_unit": "actions",
+          "pdf_page": 66,
+          "printed_page": 130,
+          "period_end": "2025-12-31",
+          "note": "Nombre d’actions 2025 et 2024 explicitement publié ; BPA 45,84 recoupé sans utiliser le total consolidé."
+        }
+      },
+      "pages": [
+        65,
+        66
+      ],
+      "reservations": [],
+      "conclusion": "RNPG 56,204 MMAD distinct du total 16,083 ; minoritaires -40,121 ; nombre de titres explicitement publié."
+    },
+    "DSW": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
+      "document_hash": "sha256:feb9d97611e4f893e308a79bc9137a300a5900d97e7f63c8212862fc741960ce",
+      "basis": "consolidé (normes marocaines)",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 85457931.76,
+          "original_unit": "MAD",
+          "pdf_page": 19,
+          "printed_page": 19,
+          "period_end": "2025-12-31",
+          "note": "RNPG explicitement publié ; résultat minoritaire vide sur la page."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 685851758.64,
+          "original_unit": "MAD",
+          "pdf_page": 18,
+          "printed_page": 18,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres part du groupe explicites, en dirhams."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 675926208.81,
+          "original_unit": "MAD",
+          "pdf_page": 18,
+          "printed_page": 18,
+          "period_end": "2024-12-31",
+          "note": "Fonds propres groupe comparatifs 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 1885762,
+          "original_unit": "actions",
+          "pdf_page": 18,
+          "printed_page": 18,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 188 576 200 MAD / nominal officiel 100 MAD ; titres de clôture indicatifs."
+        }
+      },
+      "pages": [
+        18,
+        19
+      ],
+      "reservations": [],
+      "conclusion": "Ligne RNPG explicite 85,45793176 MMAD ; elle égale ici le total publié, sans substitution automatique.",
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://v8.ammc.ma/fr/instruments-financiers/actions/action-disway",
+          "note": "Nominal 100 MAD, ISIN MA0000011637 ; 1 885 762 titres recoupés sur la fiche Bourse DWY. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    },
+    "GAZ": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
+      "document_hash": "sha256:b0e3de08e71a00a055441efbc7720887e0324988581b2994c7149e88f043ab02",
+      "basis": "consolidé IFRS",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 750500,
+          "original_unit": "KMAD",
+          "pdf_page": 172,
+          "printed_page": 172,
+          "period_end": "2025-12-31",
+          "note": "Ligne Résultat net-Part du groupe 750 500 KMAD ; résultat par action publié arrondi à 218 MAD."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 3387007,
+          "original_unit": "KMAD",
+          "pdf_page": 172,
+          "printed_page": 172,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres groupe 3 387 007 KMAD, total 3 387 010 distinct."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 3238070,
+          "original_unit": "KMAD",
+          "pdf_page": 172,
+          "printed_page": 172,
+          "period_end": "2024-12-31",
+          "note": "Comparatif groupe 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 3437500,
+          "original_unit": "actions",
+          "pdf_page": 172,
+          "printed_page": 172,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 343 750 KMAD / nominal officiel 100 MAD ; titres de clôture indicatifs."
+        }
+      },
+      "pages": [
+        172
+      ],
+      "reservations": [],
+      "conclusion": "RNPG explicite du communiqué annuel inclus au RFA ; comptes sociaux et consolidés restent distincts.",
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://www.ammc.ma/fr/instruments-financiers/actions/action-afriquia-gaz",
+          "note": "Nominal 100 MAD ; calcul à partir du capital annuel, jamais de la capitalisation. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    },
+    "IMI": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
+      "document_hash": "sha256:a17430459e934288da9b28fe7c7a59f550bd4ecc28b74cb6af80515f0714b2b4",
+      "basis": "consolidé IFRS",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 41486,
+          "original_unit": "KMAD",
+          "pdf_page": 21,
+          "printed_page": 21,
+          "period_end": "2025-12-31",
+          "note": "Résultat de la période attribué à la colonne groupe dans le tableau de variation ; minoritaires 0. Les points séparent les milliers."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 822320,
+          "original_unit": "KMAD",
+          "pdf_page": 21,
+          "printed_page": 21,
+          "period_end": "2025-12-31",
+          "note": "Total capitaux propres part du groupe 822 320 KMAD, comparatif et ouverture non confondus."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 9007000,
+          "original_unit": "actions",
+          "pdf_page": 79,
+          "printed_page": 79,
+          "period_end": "2025-12-31",
+          "note": "Tableau C3 social de l’émetteur : 9 007 000 titres en 2023/2024/2025 ; le BPA social -0,27 n’est pas le BPA consolidé."
+        }
+      },
+      "pages": [
+        21,
+        79
+      ],
+      "reservations": [
+        "Le bilan comparatif 2024 donne 827,116 MMAD de fonds propres groupe, mais l’ouverture 2025 du tableau de variation donne 827,083. Aucun ROE moyen ajouté sans rapprochement.",
+        "Le nombre de titres est celui de l’émetteur, relevé dans les annexes sociales ; il ne transforme pas le résultat social négatif en résultat consolidé."
+      ],
+      "conclusion": "Résultat 41,486 MMAD attribué au groupe dans le tableau de variation ; minoritaires nuls."
+    },
+    "LES": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
+      "document_hash": "sha256:c6b658c29b0f2210414acc78511aab70bac1061b3a407581d14d47312c6a5b35",
+      "basis": "consolidé IFRS",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": 8,
+          "original_unit": "MMAD",
+          "pdf_page": 82,
+          "printed_page": 162,
+          "period_end": "2025-12-31",
+          "note": "Part du groupe 8 = total 5 moins minoritaires -3 ; millions arrondis, aucune précision supplémentaire inventée."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 1672,
+          "original_unit": "MMAD",
+          "pdf_page": 81,
+          "printed_page": 161,
+          "period_end": "2025-12-31",
+          "note": "Capitaux propres attribuables aux actionnaires ordinaires de la société mère ; total consolidé 1 661 distinct."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 1768,
+          "original_unit": "MMAD",
+          "pdf_page": 81,
+          "printed_page": 161,
+          "period_end": "2024-12-31",
+          "note": "Comparatif 2024 part groupe, en millions arrondis."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 27631510,
+          "original_unit": "actions",
+          "pdf_page": 70,
+          "printed_page": 139,
+          "period_end": "2025-12-31",
+          "note": "Capital exact de la société mère 276 315 100 MAD / nominal officiel 10 MAD = 27 631 510 titres ; remplace 27 600 000 déduits du capital consolidé arrondi à 276 MMAD."
+        }
+      },
+      "pages": [
+        70,
+        81,
+        82
+      ],
+      "reservations": [
+        "RNPG et fonds propres consolidés publiés en millions arrondis : BPA et PER indicatifs, particulièrement sensibles à cette précision limitée. Le BPA publié arrondi à 0 MAD ne signifie pas résultat nul."
+      ],
+      "conclusion": "RNPG 8 MMAD distinct du total 5 et des minoritaires -3 ; correction des titres précédemment déduits d’un capital arrondi.",
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://www.casablanca-bourse.com/fr/live-market/instruments/LES",
+          "note": "Nominal 10 MAD et 27 631 510 titres ; ISIN MA0000012031. Capital annuel exact p.70, et non capital arrondi p.81. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    },
+    "SNP": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
+      "document_hash": "sha256:7c7fc52eb87321ed626d57d37dccb9cc7fc06e021441b2e33f4fea927d202f42",
+      "basis": "consolidé (normes marocaines)",
+      "facts": {
+        "resultat_net_part_groupe": {
+          "original_value": -185186,
+          "original_unit": "KMAD",
+          "pdf_page": 51,
+          "printed_page": 100,
+          "period_end": "2025-12-31",
+          "note": "Résultat net Part du groupe explicitement publié -185 186 KMAD ; aucune transformation de perte en PER positif."
+        },
+        "capitaux_propres_part_groupe": {
+          "original_value": 487051,
+          "original_unit": "KMAD",
+          "pdf_page": 50,
+          "printed_page": 99,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres part groupe, colonne 2025, et non variation -185 185."
+        },
+        "capitaux_propres_part_groupe_2024": {
+          "original_value": 672236,
+          "original_unit": "KMAD",
+          "pdf_page": 50,
+          "printed_page": 99,
+          "period_end": "2024-12-31",
+          "note": "Comparatif groupe 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 2400000,
+          "original_unit": "actions",
+          "pdf_page": 50,
+          "printed_page": 99,
+          "period_end": "2025-12-31",
+          "note": "Capital 240 000 KMAD / nominal officiel 100 MAD ; titres de clôture indicatifs."
+        }
+      },
+      "pages": [
+        50,
+        51
+      ],
+      "reservations": [],
+      "conclusion": "Perte part groupe explicitement publiée ; BPA négatif conservé, PER positif indisponible.",
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://v8.ammc.ma/fr/instruments-financiers/actions/action-snep",
+          "note": "Nominal 100 MAD, ISIN MA0000011728. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    },
+    "SRM": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
+      "document_hash": "sha256:0e5ff6641162ea73dfb21fe6001f83f6cfac7d74f3c8c10b72dd9a32dbc827d4",
+      "basis": "social (normes marocaines)",
+      "facts": {
+        "resultat_net_social": {
+          "original_value": 12066216.42,
+          "original_unit": "MAD",
+          "pdf_page": 104,
+          "printed_page": "4/34",
+          "period_end": "2025-12-31",
+          "note": "CPC social, totaux de l’exercice 2025 ; ne pas retenir la seule colonne opérations propres 13 213 421,48 MAD."
+        },
+        "capitaux_propres_sociaux": {
+          "original_value": 177784941.01,
+          "original_unit": "MAD",
+          "pdf_page": 103,
+          "printed_page": "3/34",
+          "period_end": "2025-12-31",
+          "note": "Total capitaux propres sociaux A ; fonds propres assimilés distincts."
+        },
+        "capitaux_propres_sociaux_2024": {
+          "original_value": 165718724.59,
+          "original_unit": "MAD",
+          "pdf_page": 103,
+          "printed_page": "3/34",
+          "period_end": "2024-12-31",
+          "note": "Comparatif social 2024."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 320000,
+          "original_unit": "actions",
+          "pdf_page": 18,
+          "printed_page": 18,
+          "period_end": "2025-12-31",
+          "note": "État de répartition annuel : total explicite 320 000 titres aux deux exercices, nominal 100 MAD ; recoupé p.128 (28/34)."
+        }
+      },
+      "pages": [
+        18,
+        103,
+        104,
+        128
+      ],
+      "reservations": [
+        "Reclassement documentaire : l’ancien champ resultat_net_consolide contenait un résultat social. La clé consolidée est retirée des faits actifs et conservée dans l’archive avant correction."
+      ],
+      "conclusion": "Résultat social reclassé sous sa vraie clé ; capital et fonds propres sociaux relevés.",
+      "remove_keys": [
+        "resultat_net_consolide"
+      ]
+    },
+    "STR": {
+      "exercise": 2025,
+      "url": "https://www.ammc.ma/sites/default/files/Stroc_RFA_2025.pdf",
+      "document_hash": "sha256:694046731cc6e8e43b72ee7a777c727393af72269d9643d31b68ebe3174666ee",
+      "basis": "social (normes marocaines)",
+      "facts": {
+        "resultat_net_social": {
+          "original_value": 476019.82,
+          "original_unit": "MAD",
+          "pdf_page": 17,
+          "printed_page": 17,
+          "period_end": "2025-12-31",
+          "note": "CPC social : retenir la colonne totaux 476 019,82, pas 599 777,59 avant opérations sur exercices antérieurs."
+        },
+        "capitaux_propres_sociaux": {
+          "original_value": -340892435.83,
+          "original_unit": "MAD",
+          "pdf_page": 15,
+          "printed_page": 15,
+          "period_end": "2025-12-31",
+          "note": "Fonds propres sociaux négatifs ; ne pas utiliser comme dénominateur positif."
+        },
+        "nombre_actions_au_rapport": {
+          "original_value": 1248515,
+          "original_unit": "actions",
+          "pdf_page": 15,
+          "printed_page": 15,
+          "period_end": "2025-12-31",
+          "note": "Capital exact 62 425 750 MAD / nominal officiel 50 MAD ; titres de clôture indicatifs."
+        }
+      },
+      "pages": [
+        15,
+        17,
+        27
+      ],
+      "reservations": [
+        "Rapport des commissaires aux comptes p.27 : opinion avec réserve et limites liées au redressement/à la continuité ; la société ne consolide pas ses comptes malgré ses participations. Lecture de pages sélectionnées, aucune certification par Nour.",
+        "Fonds propres sociaux -340,89243583 MMAD : aucun P/B positif ni ROE économiquement pertinent. Le bénéfice social publié 0,47601982 MMAD ne lève pas ces réserves.",
+        "L’ancien champ resultat_net_consolide contenait le résultat social ; il est retiré des faits actifs et conservé dans l’archive avant correction."
+      ],
+      "conclusion": "Résultat social reclassé ; fonds propres négatifs conservés, P/B et ROE indisponibles.",
+      "remove_keys": [
+        "resultat_net_consolide"
+      ],
+      "external_references": [
+        {
+          "name": "Contrôle officiel du nominal / des titres",
+          "url": "https://www.ammc.ma/fr/instruments-financiers/actions/action-stroc-industrie",
+          "note": "Nominal 50 MAD ; 1 248 515 titres recoupés sur la fiche Bourse STR, ISIN MA0000012056. Contrôle du 22/10/2026 ; dénominateur annuel de clôture, pas moyenne pondérée."
+        }
+      ]
+    }
+  }
+}
