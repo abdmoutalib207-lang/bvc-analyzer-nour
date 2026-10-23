@@ -7,6 +7,12 @@ const fs=require('node:fs');
 const path=require('node:path');
 const base=process.argv[2]||'http://127.0.0.1:8766/';
 const shots=process.env.NOUR_SCREENSHOTS;
+// An absent canonical number must be visibly absent, never coerced to zero.
+const answerNumber=value=>Number.isFinite(value)?value.toLocaleString('fr-FR',{maximumFractionDigits:2}):'indisponible';
+async function assertQuote(locator,value){
+  const expected=Number.isFinite(value)?value.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
+  assert.equal((await locator.innerText()).replace(/\s/g,''),expected.replace(/\s/g,'')+'MAD');
+}
 (async()=>{
   const browser=await chromium.launch({headless:true});
   let interactions=0;const assetAnomalies=[];
@@ -58,7 +64,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
           const adi=report.results.find(r=>r.symbol==='ADI');
           const shown=adi.intraday_quote?.price??adi.price;
           const primary=page.locator('[data-quote-symbol="ADI"] [data-primary-price]');
-          assert.ok((await primary.innerText()).replace(/\s/g,'').includes(shown.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).replace(/\s/g,'')));
+          await assertQuote(primary,shown);
           if(report.market_overview?.official_reference){
             const counters=await page.locator('[data-market-counter-quality]').innerText();
             assert.ok(counters.replace(/\s/g,'').includes(String(report.market_overview.official_reference.contracts)+'contrats'));
@@ -108,7 +114,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
           const row=marketReport.results.find(r=>r.symbol===symbol);
           const shown=row.intraday_quote?.price??row.price;
           assert.equal(await page.locator('.issuer-quote [data-quote-clocks]').count(),1);
-          assert.ok((await page.locator('.issuer-quote [data-primary-price]').innerText()).replace(/\s/g,'').includes(shown.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).replace(/\s/g,'')));
+          await assertQuote(page.locator('.issuer-quote [data-primary-price]'),shown);
           assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
@@ -261,7 +267,18 @@ const shots=process.env.NOUR_SCREENSHOTS;
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
         if(route==='sources.html'){
-          assert.ok((await page.locator('#marche').innerText()).includes('CDG Capital Bourse'));
+          const provenance=page.locator('#marche');
+          const source=marketReport.market_overview?.source||'Non renseignée';
+          assert.ok((await provenance.innerText()).includes(source));
+          if(marketReport.market_overview?.source_url){
+            assert.equal(await provenance.locator('p a').first().getAttribute('href'),marketReport.market_overview.source_url);
+          }
+          const providers=provenance.getByText('Recoupement des volumes et mémoire des corrections',{exact:true});
+          await providers.click();
+          for(const provider of marketReport.cross_source_volume_audit?.providers||[]){
+            assert.ok((await provenance.innerText()).includes(provider.provider||'Fournisseur non renseigné'));
+          }
+          await providers.click();
           assert.ok((await page.locator('#logos summary').innerText()).includes('Logos des sociétés'));
           const body=await page.locator('main').innerText();
           for(const name of ['Sources officielles marocaines','Bank Al-Maghrib','Maroclear','Autorité de contrôle des assurances','Office des Changes']){
@@ -355,7 +372,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
         const report=await (await context.request.get(new URL('report.json',base).href)).json();
         const jet=report.results.find(row=>row.symbol==='JET');
         const messages=await page.locator('#assistant-messages').innerText();
-        assert.ok(messages.includes(jet.fundamental.pe.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+        assert.ok(messages.includes(answerNumber(jet.fundamental.pe)));
         assert.ok(messages.includes('2026-06-30'));
         assert.ok(messages.includes('Réserves à lire'));
         assert.ok(messages.includes(jet.fundamental.latest_report.note));
@@ -378,11 +395,11 @@ const shots=process.env.NOUR_SCREENSHOTS;
         await page.locator('#assistant-question').fill('MM50 ADI');
         await page.getByRole('button',{name:'Envoyer',exact:true}).click();
         const adi=report.results.find(row=>row.symbol==='ADI');
-        await page.getByText('MM50 : '+adi.technical.sma50.toLocaleString('fr-FR',{maximumFractionDigits:2}),{exact:false}).last().waitFor();
+        await page.getByText('MM50 : '+answerNumber(adi.technical.sma50),{exact:false}).last().waitFor();
         assert.equal(await page.locator('#assistant-symbol').inputValue(),'ADI');
         await page.locator('#assistant-question').fill('Et son RSI ?');
         await page.getByRole('button',{name:'Envoyer',exact:true}).click();
-        await page.getByText('RSI 14 : '+adi.technical.rsi14.toLocaleString('fr-FR',{maximumFractionDigits:2}),{exact:false}).last().waitFor();
+        await page.getByText('RSI 14 : '+answerNumber(adi.technical.rsi14),{exact:false}).last().waitFor();
         const last=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
         assert.ok(last.includes('ADI · Alliances'));
         assert.ok(!last.includes('PER :'));
@@ -402,20 +419,20 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok(screening.includes('ne constitue pas une comparaison sectorielle validée'));
           const combined=await ask('Cours, PER, RSI et VaR ADI');
           for(const heading of ['fondamentaux','technique','risques','cours'])assert.ok(combined.includes(heading));
-          for(const n of [adi.price,adi.fundamental.pe,adi.technical.rsi14,adi.market_risk.tail_risk.var95_loss_pct])assert.ok(combined.includes(n.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          for(const [label,n] of [['Clôture : ',adi.price],['PER : ',adi.fundamental.pe],['RSI 14 : ',adi.technical.rsi14],['VaR historique 95 % · 1 séance : ',adi.market_risk.tail_risk.var95_loss_pct]])assert.ok(combined.includes(label+answerNumber(n)),label+combined);
           const bands=await ask('Bandes de Bollinger ADI');
-          assert.ok(bands.includes(adi.technical.bollinger_upper.toLocaleString('fr-FR',{maximumFractionDigits:2})));
-          assert.ok(bands.includes(adi.technical.bollinger_lower.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(bands.includes(answerNumber(adi.technical.bollinger_upper)));
+          assert.ok(bands.includes(answerNumber(adi.technical.bollinger_lower)));
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Assistant queries overflow '+width);
           const risk=await ask('Quels risques pour ADI face au MASI ?');
-          assert.ok(risk.includes('Bêta : '+adi.market_risk.beta.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(risk.includes('Bêta : '+answerNumber(adi.market_risk.beta)));
           assert.equal(await page.locator('#assistant-symbol').inputValue(),'ADI');
           const definition=await ask('Que veut dire bêta ?');
           assert.ok(definition.includes(facts.knowledge.definitions.beta));
           assert.ok(definition.includes('ADI · Alliances'));
           const tailAnswer=await ask('Quelle VaR historique pour ADI ?');
           const tail=adi.market_risk.tail_risk;
-          const value=tail.var95_loss_pct===null?'indisponible':tail.var95_loss_pct.toLocaleString('fr-FR',{maximumFractionDigits:2});
+          const value=answerNumber(tail.var95_loss_pct);
           assert.ok(tailAnswer.includes('VaR historique 95 % · 1 séance : '+value));
           assert.ok(tailAnswer.includes('pas une perte maximale'));
           await ask('Compare le PER d’ADI et RDS');
@@ -423,7 +440,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
           for(const s of ['ADI','RDS']){
             assert.ok(comparison.includes(s+' ·'));
             const eps=facts.symbols[s].fundamental.eps_mad;
-            assert.ok(comparison.includes('BPA : '+(eps===null?'indisponible':eps.toLocaleString('fr-FR',{maximumFractionDigits:2}))));
+            assert.ok(comparison.includes('BPA : '+(answerNumber(eps))));
           }
           await ask('Quel est le RNPG de JET au premier semestre 2026 ?');
           const total=await ask('Et le résultat total ?');
@@ -441,7 +458,7 @@ const shots=process.env.NOUR_SCREENSHOTS;
             return NourResearch.summary(NourResearch.select(data.rows,{symbol:'ADI',horizon:20,period:'all',regime:'all'}),1,1,0);
           });
           assert.ok(lab.includes(expectedLab.count+' observations'));
-          assert.ok(lab.includes('médiane nette '+expectedLab.median.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+          assert.ok(lab.includes('médiane nette '+answerNumber(expectedLab.median)));
           const follow=await ask('Et sur 60 séances avec glissement 0,2 % ?');
           assert.ok(follow.includes('ADI · laboratoire 60 séances'));
           assert.ok(follow.includes('achat 1 %, vente 1 %, glissement 0,2 %'));

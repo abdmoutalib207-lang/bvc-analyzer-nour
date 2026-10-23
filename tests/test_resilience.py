@@ -24,6 +24,10 @@ class ResilienceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.fixture=json.loads((ROOT/'data/market_snapshot.json').read_text())
+        # Controlled numeric baseline for single-fault injection. Real source
+        # quarantines are tested separately; never edit the production snapshot.
+        for record in cls.fixture['records'].values():
+            record.pop('quarantined_market',None)
         cls.facts=json.loads((ROOT/'data/facts_reference.json').read_text())['records']
         cls.baseline=build_report(cls.fixture,ASOF,facts=cls.facts)
         cls.original={r['symbol']:r for r in cls.baseline['results']}

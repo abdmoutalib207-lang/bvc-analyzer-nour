@@ -1,4 +1,5 @@
 import csv
+from copy import deepcopy
 import json
 import re
 import tempfile
@@ -21,6 +22,7 @@ class VisibleMarketSite(unittest.TestCase):
         cls.asof = max(date.today().isoformat(), *(r.get("price_asof") or ""
                       for r in cls.fixture["records"].values()))
         facts = json.loads((ROOT / "data/facts_reference.json").read_text()).get("records", {})
+        cls.facts=facts
         cls.report = build_report(cls.fixture, cls.asof, facts=facts)
         cls.report['market_overview'] = json.loads((ROOT/'data/market_overview.json').read_text())['current']
         cls.report['masi_history'] = json.loads((ROOT/'data/masi_history.json').read_text())['seances']
@@ -29,6 +31,11 @@ class VisibleMarketSite(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.temporary.cleanup()
+
+    def expected_history(self, symbol):
+        record=self.fixture['records'][symbol]
+        rejected=(record.get('quarantined_market') or {}).get('session')
+        return [bar for bar in record['candles'] if bar['d']<=self.asof and bar['d']!=rejected]
 
     def test_main_page_is_visible_with_scripts_disabled(self):
         page = (self.output / "index.html").read_text()
@@ -56,7 +63,7 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn("Historique de cours indisponible", (self.output / "titres/DIS.html").read_text())
         with (self.output / "historique/ADI.csv").open(encoding="utf-8-sig") as fp:
             rows = list(csv.reader(fp, delimiter=";"))
-        candles = self.fixture["records"]["ADI"]["candles"]
+        candles = self.expected_history("ADI")
         self.assertEqual(len(rows) - 1, len(candles))
         self.assertEqual(rows[-1][0], candles[-1]["d"])
 
@@ -72,7 +79,7 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertNotIn("Dernières 40 séances", static)
         self.assertNotIn('<th>Ouverture</th>', static)
         self.assertIn('Historique à la demande', static)
-        self.assertIn(self.fixture["records"]["ADI"]["candles"][-1]["d"], static)
+        self.assertIn(self.expected_history("ADI")[-1]["d"], static)
         self.assertIn('href="../historique/ADI.csv"', static)
 
     def test_interactive_chart_carries_real_ohlcv_and_resumption_boundary(self):
@@ -80,7 +87,7 @@ class VisibleMarketSite(unittest.TestCase):
         payload = re.search(r'<script type="application/json" id="history-data">(.*?)</script>', page)
         self.assertIsNotNone(payload)
         bars = json.loads(payload.group(1))
-        latest = self.fixture["records"]["ADI"]["candles"][-1]
+        latest = self.expected_history("ADI")[-1]
         self.assertEqual(bars[-1], [latest[k] for k in ('d','o','h','l','c','v')])
         self.assertLessEqual(len(bars), len(self.fixture["records"]["ADI"]["candles"]))
         cmt = self.fixture["records"]["CMT"]
@@ -130,7 +137,7 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertEqual(set(self.fixture["records"]), set(self.fixture["symbols"]))
         by_symbol = {r["symbol"]: r for r in self.report["results"]}
         for symbol in self.fixture["symbols"]:
-            candles = self.fixture["records"][symbol]["candles"]
+            candles = self.expected_history(symbol)
             with (self.output / "historique" / f"{symbol}.csv").open(encoding="utf-8-sig") as fp:
                 rows = list(csv.DictReader(fp, delimiter=";"))
             self.assertEqual(len(rows), len(candles), symbol)
@@ -141,6 +148,32 @@ class VisibleMarketSite(unittest.TestCase):
                              by_symbol[symbol]["quality"]["invalid_open_count"], symbol)
             self.assertEqual(sum(r["Contrôle OHLC"] == "Clôture hors fourchette" for r in rows),
                              by_symbol[symbol]["quality"]["invalid_close_count"], symbol)
+
+    def test_quarantined_session_is_absent_and_other_79_csvs_unchanged(self):
+        fixture=deepcopy(self.fixture)
+        rejected=fixture['records']['ADI']['candles'][-1]['d']
+        fixture['records']['ADI']['quarantined_market']={
+            'session':rejected,'reason':'Injected source contradiction',
+            'source':'https://www.cdgcapitalbourse.ma/Bourse/market'}
+        report=build_report(fixture,self.asof,facts=self.facts)
+        report['market_overview']=deepcopy(self.report['market_overview'])
+        report['masi_history']=deepcopy(self.report['masi_history'])
+        with tempfile.TemporaryDirectory() as d:
+            output=Path(d);build_site(fixture,report,output)
+            for symbol in fixture['symbols']:
+                path=output/'historique'/f'{symbol}.csv'
+                if symbol!='ADI':
+                    self.assertEqual(path.read_bytes(),(self.output/'historique'/f'{symbol}.csv').read_bytes(),symbol)
+                    continue
+                with path.open(encoding='utf-8-sig') as fp:
+                    dates=[row['Séance'] for row in csv.DictReader(fp,delimiter=';')]
+                self.assertNotIn(rejected,dates)
+                page=(output/'titres'/f'{symbol}.html').read_text()
+                payload=re.search(r'<script type="application/json" id="history-data">(.*?)</script>',page)
+                self.assertIsNotNone(payload)
+                self.assertNotIn(rejected,[bar[0] for bar in json.loads(payload.group(1))])
+        adi=next(row for row in report['results'] if row['symbol']=='ADI')
+        self.assertIsNone(adi['price']);self.assertIsNone(adi['technical']['sma20'])
 
     def test_news_lists_official_documents_before_secondary_off_topic_alerts(self):
         report = {"news": [
