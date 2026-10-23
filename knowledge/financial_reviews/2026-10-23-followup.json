@@ -462,6 +462,38 @@
           "reviewed_at": "2026-10-23",
           "note": "Décaissements corporels et incorporels ; cessions 4 480 520 TND distinctes, non déduites du CAPEX brut.",
           "normalization": "cash_outflow_to_positive_capex"
+        },
+        "capitaux_propres_groupe_cloture": {
+          "valeur": 279.606768,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 279606768,
+          "unite_au_rapport": "TND",
+          "page": 77,
+          "printed_page": 77,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Part de la société consolidante, minoritaires exclus ; recoupement note A-8 page 89. Comparatif du bilan annuel SCE, distinct du semestre IFRS 2026."
+        },
+        "capitaux_propres_groupe_ouverture": {
+          "valeur": 247.378976,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 247378976,
+          "unite_au_rapport": "TND",
+          "page": 77,
+          "printed_page": 77,
+          "period_end": "2024-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Part de la société consolidante, minoritaires exclus ; recoupement note A-8 page 89. Comparatif du bilan annuel SCE, distinct du semestre IFRS 2026."
         }
       }
     }

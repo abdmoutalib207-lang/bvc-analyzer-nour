@@ -46,7 +46,9 @@ class FinancialFollowupTests(unittest.TestCase):
             capex_revenue_pct=100*Fraction(12182432,717159964),
             operating_cash_margin_pct=100*Fraction(37007597,717159964),
             asset_turnover=2*Fraction(717159964,512318302+443518793),
-            inventory_turnover=2*Fraction(580013991,195008393+154485171))
+            inventory_turnover=2*Fraction(580013991,195008393+154485171),
+            native_group_roe_closing_pct=100*Fraction(59657964,279606768),
+            native_group_roe_average_pct=200*Fraction(59657964,247378976+279606768))
         self.assertEqual({k for k,v in m.items() if v['value'] is not None}, set(expected))
         for k,v in expected.items():
             self.assertAlmostEqual(m[k]['value'], float(v), delta=.00005001)
@@ -66,6 +68,15 @@ class FinancialFollowupTests(unittest.TestCase):
         f=deepcopy(self.payload['records']['ENK']);f['sector_faits']['chiffre_affaires'].pop('devise')
         self.assertIsNone(self.sector('ENK',f)['metrics']['group_margin_pct']['value'])
 
+    def test_native_roe_rejects_only_the_incompatible_denominator(self):
+        for field,value in [('valeur',0),('valeur',-1),('period_end','2025-12-31'),('base','social SCE tunisien')]:
+            f=deepcopy(self.payload['records']['ENK'])
+            f['sector_faits']['capitaux_propres_groupe_ouverture'][field]=value
+            m=self.sector('ENK',f)['metrics']
+            self.assertIsNone(m['native_group_roe_average_pct']['value'],field)
+            self.assertEqual(m['native_group_roe_closing_pct']['value'],21.3364)
+            self.assertEqual(m['group_margin_pct']['value'],8.3186)
+
     def test_cfg_cost_income_includes_depreciation_and_excludes_credit_risk(self):
         f = deepcopy(self.payload['records']['CFGB'])
         self.assertEqual(self.sector('CFGB',f)['metrics']['cost_income_pct']['value'],49.2277)
@@ -80,7 +91,7 @@ class FinancialFollowupTests(unittest.TestCase):
     def test_independent_auditor_rejects_foreign_ratio_mislabelling(self):
         block = self.sector('ENK')
         report = {'results':[{'symbol':'ENK','sector_indicators':block}]}
-        self.assertEqual(audit_sector_calculations(report)['arithmetic_checks'],6)
+        self.assertEqual(audit_sector_calculations(report)['arithmetic_checks'],8)
         self.assertFalse(audit_sector_calculations(report)['failures'])
         for field,value in [('devise','MAD'),('unite','MMAD')]:
             bad=deepcopy(report)

@@ -26,6 +26,7 @@ NATIVE_MONETARY_RATIOS = frozenset({
     'loss_ratio_pct', 'expense_ratio_pct', 'combined_ratio_pct',
     'insurance_solvency_coverage_pct', 'client_concentration_pct',
     'recurring_revenue_pct', 'epra_ltv_pct',
+    'native_group_roe_closing_pct', 'native_group_roe_average_pct',
 })
 REFERENCES = {
  'cfa':'https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/financial-analysis-techniques',
@@ -47,6 +48,8 @@ def rule(label, inputs, expression, unit='%', reference='cfa', note='', contract
 
 # Explicit operations, no eval or executable expression from a document.
 RULES = {
+ 'native_group_roe_closing_pct':rule('ROE groupe de clôture en devise native', ['resultat_net_part_groupe','capitaux_propres_groupe_cloture'],'ratio100',note='ROE descriptif hors score ; aucun montant ni multiple au cours MAD déduit.'),
+ 'native_group_roe_average_pct':rule('ROE groupe sur capitaux propres moyens en devise native', ['resultat_net_part_groupe','capitaux_propres_groupe_ouverture','capitaux_propres_groupe_cloture'],'ratio_average100',note='Deux capitaux propres attribuables positifs et compatibles ; hors score, sans conversion FX.'),
  'operating_margin_pct':rule('Marge opérationnelle', ['resultat_exploitation','chiffre_affaires'],'ratio100'),
  'group_margin_pct':rule('RNPG / chiffre d’affaires', ['resultat_net_part_groupe','chiffre_affaires'],'ratio100',note='Part groupe explicitement distinguée de la marge nette consolidée totale.'),
  'ebe_margin_pct':rule('Marge d’EBE publié', ['excedent_brut_exploitation','chiffre_affaires'],'ratio100',note='EBE publié, jamais automatiquement assimilé à un EBITDA IFRS.'),
@@ -186,6 +189,8 @@ def calculate_sector(symbol, record, facts, asof):
     common=() if family in FINANCIAL or family=='Holdings et participations' else COMMON
     if family=='Immobilier - foncières':common=tuple(k for k in COMMON if k in ('operating_margin_pct','group_margin_pct','operating_cash_margin_pct','capex_revenue_pct','free_cash_after_capex_mmad','ebe_margin_pct'))
     selected = common + BY_FAMILY.get(family,())
+    if f.get('devise') in MONETARY_UNITS and f.get('devise') != 'MAD':
+        selected += ('native_group_roe_closing_pct', 'native_group_roe_average_pct')
     metrics = {}
     for key in selected:
         spec = RULES[key]

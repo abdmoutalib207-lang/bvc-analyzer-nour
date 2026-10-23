@@ -146,7 +146,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
           assert.ok((await item.innerText()).includes(String(metric.value)));
           await item.locator('summary').click();
           assert.ok(await item.locator('a').count()>=3,'Primary inputs and method links');
-          if(symbol==='ENK')assert.ok((await item.innerText()).includes('sans conversion de change'));
+          if(symbol==='ENK'){
+            assert.ok((await item.innerText()).includes('sans conversion de change'));
+            const nativeRoe=row.sector_indicators.metrics.native_group_roe_average_pct;
+            assert.equal(nativeRoe.value,22.6412);
+            assert.ok((await page.locator('[data-sector-metric="native_group_roe_average_pct"]').innerText()).includes('22.6412'));
+          }
           else{
             const text=await item.innerText();
             assert.ok(text.includes('-513422')&&text.includes('-100560'),'Actual expense components retained');
