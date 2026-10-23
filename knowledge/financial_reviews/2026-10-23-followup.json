@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-23",
+  "method": "Pages PDF sélectionnées rendues et lues ; aucune certification comptable par Nour. Semestres et faits historiques conservés.",
+  "reviewed_dossiers": {
+    "ADI": {
+      "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "document_hash": "sha256:0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "pages": [
+        17,
+        21,
+        23,
+        27
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "Dette bilan 2 114,079 moins trésorerie 752,590 = 1 361,489 MMAD ; résumé publié 1 303, écart 58,489 non rapproché. Le crédit-bail 60,916 ne ferme pas le pont. Ratios concernés suspendus."
+    },
+    "MUT": {
+      "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+      "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+      "pages": [
+        40,
+        54,
+        55,
+        62
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "Dette bilan 1 248,950 moins trésorerie/placements 259,728 = 989,222 MMAD ; dette nette bancaire publiée 828, écart 161,222 non rapproché. La note dette totalise 1 248,949 (arrondi de 0,001). Ratios de dette suspendus ; marges indépendantes ajoutées."
+    },
+    "CFGB": {
+      "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+      "pages": [
+        39,
+        44
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "RNPG 370,445 MMAD distinct du total 381,362. BPA publié 10,89 contre RNPG / 35 007 960 titres = 10,581737 MAD. Aucun remplacement du RNPG ; BPA/PER suspendus. Coefficient des charges, amortissements inclus, calculé séparément."
+    },
+    "CMGP": {
+      "url": "https://www.ammc.ma/sites/default/files/CMGP_RFA_2025.pdf",
+      "document_hash": "sha256:148b8aa41b858c54702c7ea94f98494ed4f7dcf498d57102275e662f3b3fb1fa",
+      "pages": [
+        68,
+        76
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "RNPG 244,010766 MMAD et BPA 14,35 p.68 ; note 17 p.76 attribue 252,754943 MMAD et BPA 14,87 à la mère, avec 17 000 900 actions moyennes. Contradiction non résolue ; BPA/PER suspendus."
+    },
+    "SGTM": {
+      "url": "https://www.ammc.ma/sites/default/files/SGTM_RFA_2025.pdf",
+      "document_hash": "sha256:d83efa5c40b3c77547eaac6105c3a6555379f7b48fda1687e04ad22e5b249a13",
+      "pages": [
+        88
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "RNPG 1 341,942 MMAD p.88 ; BPA publié 37 MAD contre 22,3657 par titre de clôture (60 millions). Dénominateur ajusté/moyen non rapproché ; BPA/PER suspendus."
+    },
+    "ENK": {
+      "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+      "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+      "pages": [
+        76,
+        77,
+        78,
+        79,
+        89
+      ],
+      "status": "restriction_retained",
+      "publication_date": null,
+      "publication_date_status": "not_independently_verified",
+      "conclusion": "Comptes annuels SCE en TND. Ratios monétaires homogènes autorisés dans le compartiment sectoriel ; aucun taux de change, montant MAD, BPA MAD, PER ou P/B déduit. Semestre IFRS 2026 distinct."
+    }
+  },
+  "records": {
+    "MUT": {
+      "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+      "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+      "exercise": 2025,
+      "pages": [
+        40,
+        54,
+        55,
+        62
+      ],
+      "reservations": [
+        "Dette bilan 1 248,950 moins trésorerie/placements 259,728 = 989,222 MMAD ; dette nette bancaire publiée 828, écart 161,222 non rapproché. La note dette totalise 1 248,949 (arrondi de 0,001). Ratios de dette suspendus ; marges indépendantes ajoutées."
+      ],
+      "facts": {
+        "chiffre_affaires": {
+          "valeur": 2021.823,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 2021823,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": "106–107",
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de droite 31/12/2025 ; EBE publié distinct d’un EBITDA normalisé."
+        },
+        "resultat_net_part_groupe": {
+          "valeur": 126.161,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 126161,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": "106–107",
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de droite 31/12/2025 ; EBE publié distinct d’un EBITDA normalisé."
+        },
+        "resultat_exploitation": {
+          "valeur": 181.834,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 181834,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": "106–107",
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de droite 31/12/2025 ; EBE publié distinct d’un EBITDA normalisé."
+        },
+        "excedent_brut_exploitation": {
+          "valeur": 315.384,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 315384,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": "106–107",
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de droite 31/12/2025 ; EBE publié distinct d’un EBITDA normalisé."
+        },
+        "actif_total_cloture": {
+          "valeur": 3382.884,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 3382884,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": "106–107",
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de droite 31/12/2025 ; EBE publié distinct d’un EBITDA normalisé."
+        },
+        "actif_total_ouverture": {
+          "valeur": 3702.79,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 3702790,
+          "unite_au_rapport": "KMAD",
+          "page": 54,
+          "printed_page": 106,
+          "period_end": "2024-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "flux_tresorerie_exploitation": {
+          "valeur": 262.726,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 262726,
+          "unite_au_rapport": "KMAD",
+          "page": 55,
+          "printed_page": 108,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
+          "document_hash": "sha256:3bf8f03a9f054642164ac8c2b1eead5ef4729411b6e3fd89dfa2bc963e46f342",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Colonne de gauche 31/12/2025, à l’inverse du bilan. CAPEX brut absent : acquisitions publiées nettes, non assimilées à un décaissement brut."
+        }
+      }
+    },
+    "CFGB": {
+      "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+      "exercise": 2025,
+      "pages": [
+        39,
+        44
+      ],
+      "reservations": [
+        "RNPG 370,445 MMAD distinct du total 381,362. BPA publié 10,89 contre RNPG / 35 007 960 titres = 10,581737 MAD. Aucun remplacement du RNPG ; BPA/PER suspendus. Coefficient des charges, amortissements inclus, calculé séparément."
+      ],
+      "facts": {
+        "produit_net_bancaire": {
+          "valeur": 1247.229,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "valeur_au_rapport": 1247229,
+          "unite_au_rapport": "KMAD",
+          "page": 39,
+          "printed_page": 76,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+          "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "",
+          "definition_contract": "bank_cost_income"
+        },
+        "charges_generales_exploitation": {
+          "valeur": 613.982,
+          "unite": "MMAD",
+          "devise": "MAD",
+          "page": 39,
+          "printed_page": 76,
+          "period_end": "2025-12-31",
+          "base": "consolidé IFRS",
+          "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+          "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Charges du coefficient : 513 422 de charges générales + 100 560 de dotations aux amortissements/dépréciations corporelles et incorporelles. Coût du risque 45 653 exclu. Montants de charges positifs pour le ratio.",
+          "definition_contract": "bank_cost_income",
+          "components": [
+            {
+              "label": "Charges générales d’exploitation",
+              "valeur_au_rapport": -513422,
+              "unite_au_rapport": "KMAD",
+              "field": "general_expenses",
+              "devise": "MAD",
+              "base": "consolidé IFRS",
+              "period_end": "2025-12-31",
+              "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+              "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+              "page": 39,
+              "unite": "MMAD"
+            },
+            {
+              "label": "Dotations amortissements/dépréciations corporelles et incorporelles",
+              "valeur_au_rapport": -100560,
+              "unite_au_rapport": "KMAD",
+              "field": "tangible_intangible_depreciation",
+              "devise": "MAD",
+              "base": "consolidé IFRS",
+              "period_end": "2025-12-31",
+              "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+              "document_hash": "sha256:0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+              "page": 39,
+              "unite": "MMAD"
+            }
+          ],
+          "derivation": "negated_sum_of_reported_expenses"
+        }
+      }
+    },
+    "ENK": {
+      "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+      "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+      "exercise": 2025,
+      "pages": [
+        76,
+        77,
+        78,
+        79,
+        89
+      ],
+      "reservations": [
+        "Comptes annuels SCE en TND. Ratios monétaires homogènes autorisés dans le compartiment sectoriel ; aucun taux de change, montant MAD, BPA MAD, PER ou P/B déduit. Semestre IFRS 2026 distinct."
+      ],
+      "facts": {
+        "chiffre_affaires": {
+          "valeur": 717.159964,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 717159964,
+          "unite_au_rapport": "TND",
+          "page": 78,
+          "printed_page": 78,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "resultat_exploitation": {
+          "valeur": 78.487051,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 78487051,
+          "unite_au_rapport": "TND",
+          "page": 78,
+          "printed_page": 78,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "resultat_net_part_groupe": {
+          "valeur": 59.657964,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 59657964,
+          "unite_au_rapport": "TND",
+          "page": 78,
+          "printed_page": 78,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "flux_tresorerie_exploitation": {
+          "valeur": 37.007597,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 37007597,
+          "unite_au_rapport": "TND",
+          "page": 79,
+          "printed_page": 79,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "actif_total_cloture": {
+          "valeur": 512.318302,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 512318302,
+          "unite_au_rapport": "TND",
+          "page": 76,
+          "printed_page": 76,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "stocks_cloture": {
+          "valeur": 195.008393,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 195008393,
+          "unite_au_rapport": "TND",
+          "page": 76,
+          "printed_page": 76,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "actif_total_ouverture": {
+          "valeur": 443.518793,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 443518793,
+          "unite_au_rapport": "TND",
+          "page": 76,
+          "printed_page": 76,
+          "period_end": "2024-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": ""
+        },
+        "stocks_ouverture": {
+          "valeur": 154.485171,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": 154485171,
+          "unite_au_rapport": "TND",
+          "page": 76,
+          "printed_page": 76,
+          "period_end": "2024-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Stocks nets des provisions, même convention à l’ouverture et à la clôture."
+        },
+        "cout_des_ventes": {
+          "valeur": 580.013991,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": -580013991,
+          "unite_au_rapport": "TND",
+          "page": 78,
+          "printed_page": 78,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Charge publiée négative, coût positif pour la rotation des stocks nets. Ce ratio ne mesure pas une durée exacte des achats.",
+          "normalization": "expense_to_positive_cost"
+        },
+        "capex_decaisse": {
+          "valeur": 12.182432,
+          "unite": "MTND",
+          "devise": "TND",
+          "valeur_au_rapport": -12182432,
+          "unite_au_rapport": "TND",
+          "page": 79,
+          "printed_page": 79,
+          "period_end": "2025-12-31",
+          "base": "consolidé SCE tunisien",
+          "url": "https://www.ammc.ma/sites/default/files/Ennakl_Automobiles_RFA_2025.pdf",
+          "document_hash": "sha256:4ba8d87b62b17455facd729b2b64f008062ea7dd21585867f518ee9ed5e00bec",
+          "validation_status": "selected_pages_visually_checked",
+          "reviewed_at": "2026-10-23",
+          "note": "Décaissements corporels et incorporels ; cessions 4 480 520 TND distinctes, non déduites du CAPEX brut.",
+          "normalization": "cash_outflow_to_positive_capex"
+        }
+      }
+    }
+  }
+}

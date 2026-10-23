@@ -1,6 +1,7 @@
 """Readable formula/input coverage; missing business data stays missing."""
 from html import escape
 from collections import Counter
+from urllib.parse import urlsplit
 from .financial_audit import METRICS
 
 
@@ -28,11 +29,23 @@ def sector_card(row):
     for key,m in sector.get('metrics',{}).items():
         value=e(m['value'])+' '+e(m['unit']) if m['value'] is not None else 'Indisponible'
         reason=' ; '.join(x['reason'] for x in m['reasons'])
-        sources=''.join(f'<li>{e(k)} · {e(v.get("valeur"))} {e(v.get("unite"))} · page {e(v.get("page"))} · {e(v.get("period_end"))}</li>'
-                        for k,v in m.get('inputs',{}).items())
+        sources=''
+        for field, fact in m.get('inputs',{}).items():
+            url = fact.get('url')
+            link = (f'<a href="{e(url)}" rel="noopener noreferrer">Document primaire</a>'
+                    if isinstance(url,str) and urlsplit(url).scheme == 'https' else 'Source non vérifiée')
+            original = (f' · publié {e(fact["valeur_au_rapport"])} {e(fact.get("unite_au_rapport"))}'
+                        if fact.get('valeur_au_rapport') is not None else '')
+            pieces = ''.join(f'<li>{e(c.get("label"))} : {e(c.get("valeur_au_rapport"))} {e(c.get("unite_au_rapport"))}</li>'
+                             for c in fact.get('components',[]) if isinstance(c,dict))
+            sources += (f'<li>{e(field)} · {e(fact.get("valeur"))} {e(fact.get("unite"))}{original}'
+                        f' · page {e(fact.get("page"))} · {e(fact.get("period_end"))} · {link}'
+                        +(f'<ul>{pieces}</ul>' if pieces else '')+f'<p>{e(fact.get("note",""))}</p></li>')
         rows.append(f'<tr data-sector-metric="{e(key)}"><td>{e(m["label"])}</td><td>{value}</td>'
             f'<td><details><summary>Formule, pièces et limites</summary><p>{e(m["formula"])}</p>'
             f'<p>{e(m["formula_version"])} · {e(m.get("period_end"))} · {e(m.get("accounting_basis"))}</p>'
+            +(f'<p>Entrées en {e(m.get("currency"))} ; ratio sans conversion de change. Aucun montant en MAD déduit.</p>'
+              if m.get('currency_method') == 'same_currency_ratio_no_fx' and m.get('currency') != 'MAD' else '')+
             f'<ul>{sources}</ul><p>{e(reason)} {e(m.get("notes"))}</p>'
             f'<a href="{e(m["methodology_url"])}" rel="noopener noreferrer">Référence méthodologique</a>'
             '</details></td></tr>')

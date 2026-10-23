@@ -6,7 +6,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from nour.sector_view import coverage_report
-from nour.sector_calculators import RULES,REFERENCES,formula_text
+from nour.sector_calculators import RULES,REFERENCES,VERSION,formula_text
 
 
 def main():
@@ -46,9 +46,11 @@ Formules : BPA = résultat attribuable / actions documentées pertinentes ; PER 
 
 ## 4. Nouvelles méthodes réellement implémentées
 
-Version `nour-sector-calculators-v1` : {len(RULES)} formules explicites ; {available} sorties numériques disponibles dans ce snapshot, plus {kpis} indicateurs métier directement documentés. La sélection dépend du métier ; les banques, assurances, crédits et holdings ne reçoivent pas la grille industrielle. Les définitions bancaires, non-vie, EPRA, ROIC, EBITDA publié et physiques exigent des contrats de définition supplémentaires. Les segments fournis sont calculés séparément, sans sommer automatiquement leurs revenus.
+Version `{VERSION}` : {len(RULES)} formules explicites ; {available} sorties numériques disponibles dans ce snapshot, plus {kpis} indicateurs métier directement documentés. La sélection dépend du métier ; les banques, assurances, crédits et holdings ne reçoivent pas la grille industrielle. Les définitions bancaires, non-vie, EPRA, ROIC, EBITDA publié et physiques exigent des contrats de définition supplémentaires. Les segments fournis sont calculés séparément, sans sommer automatiquement leurs revenus.
 
 Les nouveaux faits sont dans `sector_faits`, ajoutés par un import rejouable ; les `faits` historiques et les paramètres des scores sont préservés. Les pages sélectionnées des neuf dossiers AKD, ARD, CTM, DSW, GAZ, IMI, LES, SNP et SRM ont été rendues et lues. `knowledge/financial_reviews/2026-10-23-sector.json` conserve les pages PDF, unités originales, montants, bases, dates d’exercice, URL, empreintes et réserves. La date de publication du document reste explicitement non documentée lorsqu’elle ne peut pas être vérifiée ; ce n’est jamais la date de revue ou de génération.
+
+Le lot complémentaire `2026-10-23-followup.json` réexamine ADI, MUT, CFGB, CMGP, SGTM et ENK : les contradictions ou limites ne sont pas levées sans preuve nouvelle. Il ajoute douze calculs indépendants des blocages : six ratios Ennakl sur entrées MTND/TND homogènes (sans conversion de change), cinq marges/rotation Mutandis, un coefficient d’exploitation CFG incluant les amortissements. Aucun résultat en MAD ni multiple au cours MAD n’est déduit des TND. Les acquisitions nettes Mutandis ne deviennent pas un CAPEX brut. Les 80 résultats historiques, techniques et scores restent identiques à données égales ; voir `tests/test_finance_followup_oct23.py` et [rapprochement détaillé](financial-followup-2026-10-23.md).
 
 | Méthode | Formule | Condition / limite |
 |---|---|---|

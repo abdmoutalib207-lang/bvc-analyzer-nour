@@ -12,7 +12,21 @@ from urllib.parse import urlsplit
 from .sector_methods import guidance
 from .financial_audit import REVIEWED, _basis
 
-VERSION = 'nour-sector-calculators-v1'
+VERSION = 'nour-sector-calculators-v2'
+# Same-currency monetary ratios are invariant to the currency scale. This is
+# deliberately narrower than FX support: amounts and MAD/physical outputs must
+# not acquire a foreign value under a MAD-labelled key.
+MONETARY_UNITS = {'MAD': 'MMAD', 'TND': 'MTND'}
+NATIVE_MONETARY_RATIOS = frozenset({
+    'operating_margin_pct', 'group_margin_pct', 'ebe_margin_pct',
+    'ebitda_margin_pct', 'capex_revenue_pct', 'operating_cash_margin_pct',
+    'working_capital_revenue_pct', 'asset_turnover', 'inventory_turnover',
+    'roic_pct', 'cost_income_pct', 'cost_risk_average_loans_pct',
+    'npl_ratio_pct', 'npl_coverage_pct', 'capital_adequacy_pct',
+    'loss_ratio_pct', 'expense_ratio_pct', 'combined_ratio_pct',
+    'insurance_solvency_coverage_pct', 'client_concentration_pct',
+    'recurring_revenue_pct', 'epra_ltv_pct',
+})
 REFERENCES = {
  'cfa':'https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/financial-analysis-techniques',
  'institutions':'https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/analysis-of-financial-institutions',
@@ -176,6 +190,11 @@ def calculate_sector(symbol, record, facts, asof):
     for key in selected:
         spec = RULES[key]
         values, inputs, problems = [], {}, []
+        currency = f.get('devise', 'MAD')
+        native = currency in MONETARY_UNITS and key in NATIVE_MONETARY_RATIOS
+        permitted_currency = currency if native else 'MAD'
+        if currency != 'MAD' and not native:
+            problems.append({'reason':'Sortie monétaire MAD ou unité métier : conversion documentée requise'})
         for field in spec['inputs']:
             fact = data.get(field)
             if not isinstance(fact,dict):
@@ -190,15 +209,42 @@ def calculate_sector(symbol, record, facts, asof):
                     and isinstance(fact.get('page'),int) and not isinstance(fact['page'],bool) and fact['page']>0
                     and urlsplit(str(fact.get('url',''))).scheme == 'https'
                     and fact.get('period_end') == expected and expected <= asof
-                    and fact.get('devise',f.get('devise','MAD')) == 'MAD'
+                    and fact.get('devise',f.get('devise','MAD')) == permitted_currency
+                    and (currency == 'MAD' or fact.get('devise') == currency)
                     and bool(fact.get('base')) and bool(fact.get('unite')))
             except (TypeError,ValueError,OverflowError):
                 valid = False
             if not valid: problems.append({'field':field,'reason':'Preuve primaire, date, devise ou valeur non vérifiée'})
             if valid and field in ('capex_decaisse','stocks','creances_exploitation','dettes_exploitation') and value<0:
                 problems.append({'field':field,'reason':'Poste attendu positif ou nul ; signe à rapprocher'})
+            if valid and fact.get('derivation') is not None:
+                try:
+                    parts = fact.get('components')
+                    if (field != 'charges_generales_exploitation'
+                            or fact['derivation'] != 'negated_sum_of_reported_expenses'
+                            or not isinstance(parts, list) or len(parts) != 2
+                            or not all(isinstance(x, dict) for x in parts)
+                            or {x.get('field') for x in parts} != {'general_expenses', 'tangible_intangible_depreciation'}):
+                        raise ValueError('Décomposition de charges inconnue')
+                    total = Decimal(0)
+                    for part in parts:
+                        if (any(part.get(k) != fact.get(k) for k in
+                                ('devise','base','period_end','url','document_hash','page','unite'))
+                                or part.get('unite_au_rapport') != 'KMAD'
+                                or isinstance(part.get('valeur_au_rapport'), bool)):
+                            raise ValueError('Pièces des composantes non homogènes')
+                        raw = Decimal(str(part['valeur_au_rapport']))
+                        if not raw.is_finite() or raw > 0:
+                            raise ValueError('Charges publiées négatives requises')
+                        total -= raw / 1000
+                    if fact.get('devise') != 'MAD' or abs(total-Decimal(str(value))) > Decimal('0.000000001'):
+                        raise ValueError('Somme des charges non rapprochée')
+                except (KeyError, TypeError, ValueError, ArithmeticError):
+                    problems.append({'field':field,'reason':'Composantes des charges et somme non rapprochées'})
             if valid and fact.get('valeur_au_rapport') is not None:
                 money={'MAD':1,'DH':1,'KMAD':1000,'kMAD':1000,'MMAD':1000000,'MDH':1000000}
+                if currency == 'TND' and native:
+                    money = {'TND':1, 'KTND':1000, 'MTND':1000000}
                 original,target=fact.get('unite_au_rapport'),fact.get('unite')
                 scale=(Decimal(money[target])/money[original] if target in money and original in money else Decimal(1) if original==target else None)
                 try:
@@ -207,6 +253,11 @@ def calculate_sector(symbol, record, facts, asof):
                     if fact.get('normalization')=='cash_outflow_to_positive_capex':
                         if field!='capex_decaisse' or raw>0:raise ValueError('Convention de signe incompatible')
                         raw=-raw
+                    elif fact.get('normalization')=='expense_to_positive_cost':
+                        if field!='cout_des_ventes' or raw>0:raise ValueError('Convention de coût incompatible')
+                        raw=-raw
+                    elif fact.get('normalization') is not None:
+                        raise ValueError('Normalisation inconnue')
                     if abs(raw/scale-Decimal(str(value)))>Decimal('0.000000001'):
                         raise ValueError('Conversion non concordante')
                 except (ValueError,ArithmeticError):
@@ -216,12 +267,13 @@ def calculate_sector(symbol, record, facts, asof):
             values.append(Decimal(str(value)) if valid else Decimal(0))
         bases = {_basis(x.get('base')) for x in inputs.values()}
         if len(bases)>1: problems.append({'reason':'Périmètres ou normes non identiques'})
-        # Monetary ratios may mix only MMAD. Dimensional business formulas have
-        # their explicit units, never a global "all numbers are comparable" rule.
+        # Monetary inputs must share one explicit currency and scale. Physical
+        # formulas and MAD-labelled outputs retain their dimensional contracts.
         dimensional = {'hotel_adr_mad':['MAD','chambres'], 'hotel_revpar_mad':['MAD','chambres'],
             'hotel_occupancy_pct':['chambres','chambres'], 'mine_unit_cost':['MAD','unites'],
             'port_utilization_pct':['unites','unites'], 'electric_capacity_factor_pct':['MWh','MW','heures']}
-        units = dimensional.get(key,['MMAD']*len(spec['inputs']))
+        monetary_unit = MONETARY_UNITS.get(currency, 'MMAD') if native else 'MMAD'
+        units = dimensional.get(key,[monetary_unit]*len(spec['inputs']))
         for field,unit in zip(spec['inputs'],units):
             if field in inputs and inputs[field].get('unite') != unit:
                 problems.append({'field':field,'reason':'Unité attendue : '+unit})
@@ -235,7 +287,9 @@ def calculate_sector(symbol, record, facts, asof):
         metrics[key] = dict(value=value,status='available' if value is not None else 'unavailable',
             formula_version=VERSION,formula=formula_text(spec),operation=spec['expression'],label=spec['label'],unit=spec['unit'],
             input_fields=spec['inputs'],inputs=inputs,period_end=period,exercise=f.get('exercice'),
-            currency=f.get('devise','MAD'),accounting_basis=f.get('accounting_basis'),
+            currency=currency,accounting_basis=f.get('accounting_basis'),
+            currency_method='same_currency_ratio_no_fx' if native else 'MAD_or_physical_units',
+            currency_conversion_applied=False,
             document_date=f.get('document_date'),document_date_status='documented' if f.get('document_date') else 'not_documented',
             methodology_url=REFERENCES[spec['reference']],notes=spec['note'],reasons=problems,
             used_for_score=False,certified=False)
