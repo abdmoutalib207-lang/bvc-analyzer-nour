@@ -24,7 +24,7 @@ class ContinuityTests(unittest.TestCase):
 
     def test_only_actual_successful_published_edition_counts(self):
         now=datetime(2026,10,23,10,10,tzinfo=ZONE)
-        rt=run_context(now,event='workflow_dispatch',slot='morning',scheduled_for='2026-10-23T09:45:00+01:00',run_id='9')
+        rt=run_context(now,event='workflow_dispatch',slot='morning',scheduled_for=now.replace(hour=9,minute=45).isoformat(),run_id='9')
         self.assertTrue(rt['late']);self.assertEqual(rt['delay_minutes'],25)
         self.assertEqual(rt['scheduled_at_basis'],'watchdog_requested_occurrence')
         runs=[dict(id=9,status='completed',conclusion='success')]
@@ -37,8 +37,14 @@ class ContinuityTests(unittest.TestCase):
     def test_casablanca_ramadan_offset_and_weekend(self):
         feb=datetime(2026,2,20,9,45,tzinfo=ZONE)
         octo=datetime(2026,10,23,9,45,tzinfo=ZONE)
-        self.assertEqual(feb.utcoffset(),timedelta(0))
-        self.assertEqual(octo.utcoffset(),timedelta(hours=1))
+        # Installed IANA releases can differ after a Moroccan clock-policy change.
+        # Test the local-clock/UTC conversion, never impose a historical offset.
+        for local in (feb,octo):
+            context=run_context(local,'45 9 * * 1-5','schedule')
+            observed=datetime.fromisoformat(context['scheduled_at'])
+            self.assertEqual(observed.hour,9);self.assertEqual(observed.minute,45)
+            self.assertEqual(observed.astimezone(timezone.utc),local.astimezone(timezone.utc))
+            self.assertEqual(observed.utcoffset(),local.utcoffset())
         self.assertFalse(expected_runs(datetime(2026,10,24,20,tzinfo=ZONE)))
         for target in ('2026-10-23T11:45:00+01:00','2026-10-24T09:45:00+01:00','2026-10-23T09:45:00'):
             with self.assertRaises(ValueError):run_context(octo,event='workflow_dispatch',slot='morning',scheduled_for=target)
