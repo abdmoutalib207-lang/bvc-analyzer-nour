@@ -153,6 +153,20 @@ class ResilienceTests(unittest.TestCase):
             self.assertEqual(json.loads((target/'calculation-health.json').read_text())['status'],'degraded')
             self.assertNotIn('previous healthy site',(target/'index.html').read_text())
 
+    def test_peer_comparison_exception_is_local_and_preserves_79(self):
+        from nour.research import peers,peer_comparison,accounting_cohort
+        baseline=deepcopy(self.baseline);peers(baseline['results'],self.fixture['records'])
+        report=deepcopy(self.baseline)
+        def broken(item,*args):
+            if item['symbol']=='ADI':raise RuntimeError('peer injection')
+            return peer_comparison(item,*args)
+        with patch('nour.research.peer_comparison',side_effect=broken):peers(report['results'],self.fixture['records'])
+        expected={r['symbol']:r for r in baseline['results']}
+        for row in report['results']:
+            if row['symbol']!='ADI':self.assertEqual(row,expected[row['symbol']])
+            else:self.assertEqual(row['sector_comparison']['status'],'unavailable')
+        self.assertIsNone(accounting_cohort({'accounting_basis':{'scope':'invalid'}}))
+
     def test_retry_is_limited_and_never_retries_validation_failure(self):
         attempts=[]
         def transient():
