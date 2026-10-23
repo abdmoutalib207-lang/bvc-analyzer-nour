@@ -50,6 +50,9 @@ avec le seul jeton éphémère du dépôt. Il s'arrête après 19h ou le week-en
 il ne programme pas de séance du lendemain. Ses logs distinguent attente,
 demande acceptée et publication, cette dernière restant à vérifier séparément.
 Le dépôt est public et utilise les runners standards existants.
+Les appels automatiques du relais et du watchdog ne relancent pas les scans
+financiers PDF à chaque heure : leur découverte reste liée au créneau de
+16h, aux changements de code et aux demandes manuelles explicites.
 
 Une porte commune compare la cible à la publication réellement servie :
 manifest, SHA-256 du runtime, même run GitHub et conclusion `success`.

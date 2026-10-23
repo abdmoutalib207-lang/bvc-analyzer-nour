@@ -134,12 +134,12 @@ jobs:
         run: python tools/update_news.py
       - name: Discover official financial documents at the 16h edition (candidates only)
         id: official_sources
-        if: github.event_name != 'schedule' || github.event.schedule == '0 16 * * 1-5'
+        if: needs.plan.outputs.slot == 'closing' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.slot != 'auto' && inputs.scheduled_for == '')
         continue-on-error: true
         run: python tools/update_official_sources.py
       - name: Discover sector publications from official Moroccan institutions
         id: sector_sources
-        if: github.event_name != 'schedule' || github.event.schedule == '0 16 * * 1-5'
+        if: needs.plan.outputs.slot == 'closing' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.slot != 'auto' && inputs.scheduled_for == '')
         continue-on-error: true
         run: python tools/update_sector_sources.py
       - name: Refresh MASI and market overview directly from CDG
