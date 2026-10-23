@@ -74,3 +74,11 @@ ne justifient pas un multiple positif fabriqué. La revue de pages sélectionné
 et la réussite des tests arithmétiques ne sont pas une certification des comptes.
 Les références effectives de CI, de fusion et du site servi sont données dans
 la PR et le compte rendu de livraison ; ce document ne les anticipe pas.
+
+La revue des captures Chromium a également identifié un défaut mobile : ouvrir
+la colonne des pièces masquait le nom et la valeur dans le défilement horizontal.
+À 375 px, chaque indicateur devient une carte avec sa valeur et ses justificatifs
+empilés. Le parcours navigateur vérifie désormais les coordonnées visibles des
+deux premiers champs après ouverture, en plus de l’absence de débordement global.
+Un audit WCAG complet et une comparaison avec un référentiel visuel approuvé
+ne sont pas mesurés.

@@ -157,6 +157,12 @@ const shots=process.env.NOUR_SCREENSHOTS;
             assert.ok(text.includes('-513422')&&text.includes('-100560'),'Actual expense components retained');
           }
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Sector evidence overflow '+symbol+' '+width);
+          if(width===375){
+            for(const column of [0,1]){
+              const box=await item.locator('td').nth(column).boundingBox();
+              assert.ok(box&&box.x>=0&&box.x+box.width<=width+1,'Ratio label/value hidden by evidence scrolling '+symbol);
+            }
+          }
           if(shots)await page.locator('[data-sector-calculators]').screenshot({path:path.join(shots,`sector-${symbol}-${width}.png`)});
         }
         if(route==='titres/ADI.html'){

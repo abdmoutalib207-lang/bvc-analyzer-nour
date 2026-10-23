@@ -166,3 +166,16 @@ html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
 [data-issuer-diagnostics] p,[data-sector-calculators] p,[data-sector-calculators] li{overflow-wrap:anywhere}
 [data-sector-calculators] td{white-space:normal;min-width:130px;vertical-align:top}
 [data-anomaly-row] td{white-space:normal;min-width:130px;overflow-wrap:anywhere;vertical-align:top}
+/* Keep a business ratio and its evidence together on narrow issuer pages. */
+@media(max-width:640px){
+  [data-sector-calculators] .tablewrap{overflow:visible;border:0;background:transparent}
+  [data-sector-calculators] table,[data-sector-calculators] tbody{display:block;min-width:0;width:100%;table-layout:auto}
+  [data-sector-calculators] thead{display:none}
+  [data-sector-calculators] tr{display:block;margin:0 0 12px;border:1px solid #2a464f;border-radius:12px;overflow:hidden;background:#152b34}
+  [data-sector-calculators] td{display:block;min-width:0;width:auto;padding:12px 14px;overflow-wrap:anywhere;border:0}
+  [data-sector-calculators] td:first-child{font-weight:700;font-size:14px;padding-bottom:6px}
+  [data-sector-calculators] td:nth-child(2){font-size:16px;padding-top:0;color:#d0eab7}
+  [data-sector-calculators] td:last-child{border-top:1px solid #2a464f;background:#10252e}
+  [data-sector-calculators] summary{min-height:24px;line-height:1.5}
+  [data-sector-calculators] details ul{padding-left:20px}
+}
