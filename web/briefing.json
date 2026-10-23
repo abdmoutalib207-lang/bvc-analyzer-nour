@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-22",
+  "generated_for": "2026-10-23",
   "market_session": "2026-10-22",
   "runtime": {
     "timezone": "Africa/Casablanca",
@@ -12,26 +12,26 @@
     "schedule": null,
     "scheduled_at": null,
     "scheduled_at_basis": null,
-    "edition_for": "2026-10-22",
-    "started_at": "2026-10-22T23:23:11+00:00",
-    "built_at": "2026-10-22T23:23:55.943425+00:00",
+    "edition_for": "2026-10-23",
+    "started_at": "2026-10-23T01:41:32+00:00",
+    "built_at": "2026-10-23T01:42:16.827693+00:00",
     "delay_minutes": null,
     "late": false,
-    "run_id": "39871404100",
-    "commit": "117d346f1c113575237136dc749396d330f2c433",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39871404100",
+    "run_id": "39885411415",
+    "commit": "cbc1a6966a45e18791a809695f19a629f6255e3c",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/39885411415",
     "collection": {
-      "result": "unchanged",
-      "label": "Aucune nouveauté",
-      "checked_at": "2026-10-22T23:23:12.291007+00:00",
+      "result": "awaiting_quotes",
+      "label": "En attente de transactions",
+      "checked_at": "2026-10-23T01:41:32.856207+00:00",
       "last_session": "2026-10-22",
-      "message": "Aucune nouvelle séance vérifiée",
+      "message": "0 observations provisoires ; clôtures et scores historiques inchangés",
       "conflicts": [],
-      "fully_validated": true
+      "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "117d346f1c113575237136dc749396d330f2c433",
+      "generator_commit": "cbc1a6966a45e18791a809695f19a629f6255e3c",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
@@ -39,23 +39,23 @@
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
-      "status": "primary_checked",
+      "status": "intraday",
       "session": "2026-10-22",
-      "observed_at": "2026-10-22T23:23:46.109280+00:00",
+      "observed_at": "2026-10-23T01:42:07.295809+00:00",
       "cross_source_verified": false
     }
   },
   "title": "Point de marché à la demande",
   "intraday": {
     "schema_version": 1,
-    "session": "2026-10-22",
-    "observed_at": "2026-10-22T15:40:20.361761+00:00",
+    "session": "2026-10-23",
+    "observed_at": "2026-10-23T01:41:32.856207+00:00",
     "source": "https://www.cdgcapitalbourse.ma/api/",
     "quotes": {},
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
-    "status": "stale",
-    "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
+    "status": "provisional",
+    "notice": "Observation CDG provisoire, pas un flux temps réel ni une clôture."
   },
   "edition_status": "published",
   "edition_notice": null,
@@ -417,7 +417,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "ADI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -463,7 +463,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -786,7 +786,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "RDS",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -805,7 +805,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1137,7 +1137,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "TGCC",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1167,7 +1167,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1520,7 +1520,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "SGTM",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1567,7 +1567,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1933,7 +1933,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "CMGP",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1979,7 +1979,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2288,7 +2288,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "MSA",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2333,7 +2333,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2642,7 +2642,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "SMI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2677,7 +2677,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2968,7 +2968,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "T2S",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3000,7 +3000,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3297,7 +3297,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-22",
+            "asof": "2026-10-23",
             "symbol": "CMT",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3331,7 +3331,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 295,
+              "annual_age_calendar_days": 296,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3602,6 +3602,23 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "015aaaf6b27f47fefa",
+      "title": "LNG Canada Doubles Capacity as Asia Looks Beyond the Gulf",
+      "url": "https://oilprice.com/Energy/Natural-Gas/LNG-Canada-Doubles-Capacity-as-Asia-Looks-Beyond-the-Gulf.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-23T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "1e706684b9a32fc99b",
       "title": "Au Nigeria, les chauffeurs sont toujours en colère un mois après le départ d'Uber",
       "url": "https://www.rfi.fr/fr/podcasts/afrique-%C3%A9conomie/20261022-au-nigeria-les-chauffeurs-sont-toujours-en-cole%CC%80re-un-mois-apre%CC%80s-le-de%CC%81part-d-uber",
@@ -3753,23 +3770,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "926f42f3ec27c675df",
-      "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch",
-      "url": "https://oilprice.com/Energy/Energy-General/Electric-Giants-Say-They-Already-Have-the-Tools-to-Fix-the-AI-Power-Crunch.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-22T21:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
@@ -4009,9 +4009,26 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-22T23:23:44.223931+00:00"
+    "observed_at": "2026-10-23T01:42:05.841768+00:00"
   },
   "context_news": [
+    {
+      "id": "015aaaf6b27f47fefa",
+      "title": "LNG Canada Doubles Capacity as Asia Looks Beyond the Gulf",
+      "url": "https://oilprice.com/Energy/Natural-Gas/LNG-Canada-Doubles-Capacity-as-Asia-Looks-Beyond-the-Gulf.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-23T00:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "1e706684b9a32fc99b",
       "title": "Au Nigeria, les chauffeurs sont toujours en colère un mois après le départ d'Uber",
@@ -4198,29 +4215,12 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "44c87d4c9736531d4e",
-      "title": "Why Fossil Fuel Demand Can Rise Even as Clean Energy Wins Terrain",
-      "url": "https://oilprice.com/Energy/Energy-General/Why-Fossil-Fuel-Demand-Can-Rise-Even-as-Clean-Energy-Wins-Terrain.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-22T20:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-22T23:23:55.943425+00:00",
-    "checked_at": "2026-10-22T23:23:44.959029+00:00",
+    "cutoff": "2026-10-23T01:42:16.827693+00:00",
+    "checked_at": "2026-10-23T01:42:07.114720+00:00",
     "status": "partial",
     "groups": [
       {
@@ -4240,7 +4240,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
@@ -4257,7 +4257,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
@@ -4281,17 +4281,17 @@
             "ticker": "TVC:NI225",
             "name": "Nikkei 225",
             "unit": "points",
-            "value": 62907.84,
-            "change_pct": -2.651118784568861,
+            "value": 61895.09,
+            "change_pct": -1.6098947285425793,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T06:30:01+00:00",
+            "observed_at": "2026-10-23T01:41:55+00:00",
             "currency": "JPY",
             "mode": "streaming",
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4303,34 +4303,34 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8068,
-            "change_pct": -0.001019690218109361,
+            "value": 9.8077,
+            "change_pct": 0.008157521744893002,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T23:23:40+00:00",
+            "observed_at": "2026-10-23T01:41:58+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.994,
-            "change_pct": -0.09995456610632446,
+            "value": 10.992,
+            "change_pct": -0.1181281235801899,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T23:19:29+00:00",
+            "observed_at": "2026-10-23T01:39:27+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
@@ -4347,24 +4347,24 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 101.616,
-            "change_pct": -0.07375283948432294,
+            "value": 101.593,
+            "change_pct": -0.02263423082978678,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T22:04:39+00:00",
+            "observed_at": "2026-10-23T01:41:59+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4376,51 +4376,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4040.9,
-            "change_pct": -0.4802482514038026,
+            "value": 4032.7,
+            "change_pct": -0.6821987981479725,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T23:23:36+00:00",
+            "observed_at": "2026-10-23T01:41:55+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 113.17,
-            "change_pct": 3.9974269435765564,
+            "value": 113.57,
+            "change_pct": 0.3534505611027582,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T23:22:58+00:00",
+            "observed_at": "2026-10-23T01:41:25+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.402,
-            "change_pct": 0.06251953735543057,
+            "value": 6.405,
+            "change_pct": 0.10940919037200003,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T23:20:20+00:00",
+            "observed_at": "2026-10-23T01:41:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           },
           {
@@ -4431,13 +4431,13 @@
             "change_pct": 0.4817618719889804,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-22T22:25:52+00:00",
+            "observed_at": "2026-10-23T00:26:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-22T23:23:44.959029+00:00",
+            "collected_at": "2026-10-23T01:42:07.114720+00:00",
             "collection_state": "collected"
           }
         ]

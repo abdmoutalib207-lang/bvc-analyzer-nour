@@ -1,6 +1,6 @@
 {
   "version": "nour-sector-evidence-v2",
-  "analysis_date": "2026-10-22",
+  "analysis_date": "2026-10-23",
   "universe": 80,
   "families": {
     "Agriculture et intrants": 1,
@@ -41,15 +41,15 @@
     "Télécommunications": 1
   },
   "review_states": {
-    "additional_review_required": 4,
+    "additional_review_required": 12,
     "archived_suspension": 2,
-    "financial_audit_blocked": 19,
+    "financial_audit_blocked": 11,
     "known_reporting_gap": 1,
     "primary_page_check_required": 48,
     "selected_pages_checked": 6
   },
   "curated": 78,
-  "selected_pages_reviewed_issuers": 15,
+  "selected_pages_reviewed_issuers": 25,
   "violations": [],
   "review_queue": [
     {
@@ -90,56 +90,6 @@
           "field": "endettement_net",
           "page_hint": 17,
           "status": "selected_pages_visually_checked"
-        }
-      ]
-    },
-    {
-      "symbol": "AKD",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 78,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
-      "symbol": "ARD",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé IFRS, 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 6,
-          "status": "referenced_import"
         }
       ]
     },
@@ -204,56 +154,6 @@
           "field": "resultat_note_bpa_a_rapprocher",
           "page_hint": 76,
           "status": "selected_pages_visually_checked"
-        }
-      ]
-    },
-    {
-      "symbol": "CTM",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 66,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
-      "symbol": "DSW",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 19,
-          "status": "referenced_import"
         }
       ]
     },
@@ -338,81 +238,6 @@
       "source_pages_to_check": []
     },
     {
-      "symbol": "GAZ",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé IFRS, 31/12/2025 — états consolidés complets (p.104-106, pages image rendues et lues) ; communiqué p.172",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 172,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
-      "symbol": "IMI",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé IFRS, 31/12/2025 (KMAD, point séparateur de milliers)",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 21,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
-      "symbol": "LES",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé IFRS, 31/12/2025 (publié en millions de dirhams, arrondis)",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 82,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
       "symbol": "MUT",
       "priority": "P1",
       "code": "debt_arithmetic_mismatch",
@@ -489,56 +314,6 @@
       ]
     },
     {
-      "symbol": "SNP",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 51,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
-      "symbol": "SRM",
-      "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-      "fields": [
-        "resultat_net_consolide"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_pct",
-        "roe_average_equity_pct"
-      ],
-      "document_url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "accounting_basis": "SOCIAL (SRM n'a ni titres de participation ni comptes consolidés), 31/12/2025",
-      "source_pages_to_check": [
-        {
-          "field": "resultat_net_consolide",
-          "page_hint": 105,
-          "status": "referenced_import"
-        }
-      ]
-    },
-    {
       "symbol": "STK",
       "priority": "P1",
       "code": "nonpositive_denominator",
@@ -565,25 +340,24 @@
     {
       "symbol": "STR",
       "priority": "P1",
-      "code": "group_earnings_missing_total_not_substituted",
-      "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+      "code": "nonpositive_denominator",
+      "instruction": "Vérifier le dénominateur et expliquer pourquoi le ratio est non significatif.",
       "fields": [
-        "resultat_net_consolide"
+        "capitaux_propres_sociaux"
       ],
       "blocked_metrics": [
-        "eps_mad",
-        "pe",
+        "pb",
         "roe_pct",
         "roe_average_equity_pct"
       ],
       "document_url": "https://www.ammc.ma/sites/default/files/Stroc_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "accounting_basis": "SOCIAL (normes marocaines), 31/12/2025 — STROC ne consolide pas ses comptes malgré ses participations (CAC p.27, « Autres points »)",
+      "accounting_basis": "social (normes marocaines)",
       "source_pages_to_check": [
         {
-          "field": "resultat_net_consolide",
-          "page_hint": 17,
-          "status": "referenced_import"
+          "field": "capitaux_propres_sociaux",
+          "page_hint": 15,
+          "status": "selected_pages_visually_checked"
         }
       ]
     },
@@ -610,6 +384,28 @@
       ]
     },
     {
+      "symbol": "SNP",
+      "priority": "P2",
+      "code": "nonpositive_earnings_per_not_meaningful",
+      "instruction": "Conserver le résultat négatif et le PER indisponible ; aucune correction à inventer.",
+      "fields": [
+        "resultat_net_part_groupe"
+      ],
+      "blocked_metrics": [
+        "pe"
+      ],
+      "document_url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "accounting_basis": "consolidé (normes marocaines)",
+      "source_pages_to_check": [
+        {
+          "field": "resultat_net_part_groupe",
+          "page_hint": 51,
+          "status": "selected_pages_visually_checked"
+        }
+      ]
+    },
+    {
       "symbol": "UNI",
       "priority": "P2",
       "code": "nonpositive_earnings_per_not_meaningful",
@@ -632,9 +428,67 @@
       ]
     }
   ],
-  "blocking_issuers": 19,
-  "blocking_actions": 22,
+  "blocking_issuers": 11,
+  "blocking_actions": 14,
   "issuers": [
+    {
+      "symbol": "AKD",
+      "family": "Santé - hôpitaux",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 7,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "capacité lits",
+        "taux d'occupation si publié",
+        "activité par spécialité",
+        "marge opérationnelle",
+        "capex",
+        "dette"
+      ],
+      "accounting_exclusions": [
+        "rotation des stocks comme indicateur principal",
+        "PNB bancaire"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "ARD",
+      "family": "Immobilier - foncières",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 8,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "revenus locatifs",
+        "taux d'occupation",
+        "valeur des actifs",
+        "rendement locatif",
+        "dette",
+        "cash-flow"
+      ],
+      "accounting_exclusions": [
+        "préventes immobilières comme revenu locatif",
+        "carnet de commandes BTP"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
     {
       "symbol": "CDM",
       "family": "Banque",
@@ -666,6 +520,86 @@
       "review_actions": []
     },
     {
+      "symbol": "CTM",
+      "family": "Transport routier",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 8,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "voyageurs",
+        "taux de remplissage si publié",
+        "prix moyen",
+        "coût carburant",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "EVP portuaires",
+        "RevPAR hôtelier"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "DSW",
+      "family": "Distribution informatique",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 7,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "chiffre d'affaires par segment",
+        "marge de distribution",
+        "stocks",
+        "créances",
+        "BFR"
+      ],
+      "accounting_exclusions": [
+        "revenus SaaS récurrents supposés",
+        "PNB bancaire"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "GAZ",
+      "family": "Distribution de carburants et gaz",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 8,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "volumes distribués",
+        "marge unitaire si publiée",
+        "stocks",
+        "BFR",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "production pétrolière amont supposée",
+        "PNB bancaire"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
       "symbol": "HAL",
       "family": "Distribution",
       "classification": "broad_only",
@@ -679,6 +613,65 @@
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [],
       "accounting_exclusions": [],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "IMI",
+      "family": "Immobilier - foncières",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 6,
+      "selected_page_evidence_count": 3,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "revenus locatifs",
+        "taux d'occupation",
+        "valeur des actifs",
+        "rendement locatif",
+        "dette",
+        "cash-flow"
+      ],
+      "accounting_exclusions": [
+        "préventes immobilières comme revenu locatif",
+        "carnet de commandes BTP"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "LES",
+      "family": "Agroalimentaire et boissons",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 8,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "volumes",
+        "prix/mix",
+        "coûts des intrants",
+        "marge",
+        "stocks",
+        "BFR",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "PNB bancaire",
+        "carnet de commandes BTP"
+      ],
       "blocked_metrics": [],
       "review_actions": []
     },
@@ -706,6 +699,34 @@
       ],
       "accounting_exclusions": [
         "tonnage portuaire comme production minière",
+        "PNB bancaire"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "SRM",
+      "family": "Industrie - équipements et métallurgie",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 7,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "volumes",
+        "marge industrielle",
+        "carnet de commandes si publié",
+        "BFR",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "commandes assimilées à un bénéfice réalisé",
         "PNB bancaire"
       ],
       "blocked_metrics": [],
@@ -852,126 +873,6 @@
               "field": "endettement_net",
               "page_hint": 17,
               "status": "selected_pages_visually_checked"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "AKD",
-      "family": "Santé - hôpitaux",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 5,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "capacité lits",
-        "taux d'occupation si publié",
-        "activité par spécialité",
-        "marge opérationnelle",
-        "capex",
-        "dette"
-      ],
-      "accounting_exclusions": [
-        "rotation des stocks comme indicateur principal",
-        "PNB bancaire"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "AKD",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines, avis CNC n°5), 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 78,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "ARD",
-      "family": "Immobilier - foncières",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "revenus locatifs",
-        "taux d'occupation",
-        "valeur des actifs",
-        "rendement locatif",
-        "dette",
-        "cash-flow"
-      ],
-      "accounting_exclusions": [
-        "préventes immobilières comme revenu locatif",
-        "carnet de commandes BTP"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "ARD",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé IFRS, 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 6,
-              "status": "referenced_import"
             }
           ]
         }
@@ -1159,122 +1060,6 @@
       ]
     },
     {
-      "symbol": "CTM",
-      "family": "Transport routier",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "voyageurs",
-        "taux de remplissage si publié",
-        "prix moyen",
-        "coût carburant",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "EVP portuaires",
-        "RevPAR hôtelier"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "CTM",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 66,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "DSW",
-      "family": "Distribution informatique",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 5,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "chiffre d'affaires par segment",
-        "marge de distribution",
-        "stocks",
-        "créances",
-        "BFR"
-      ],
-      "accounting_exclusions": [
-        "revenus SaaS récurrents supposés",
-        "PNB bancaire"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "DSW",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 19,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "symbol": "ENK",
       "family": "Distribution automobile",
       "classification": "curated",
@@ -1395,184 +1180,6 @@
           "annual_exercise": 2025,
           "accounting_basis": "consolidé, DINARS TUNISIENS (TND), système comptable des entreprises tunisien (SCE), 31/12/2025 ; `valeur` = MILLIONS DE TND (MTND), PAS des MMAD : aucune conversion en dirhams",
           "source_pages_to_check": []
-        }
-      ]
-    },
-    {
-      "symbol": "GAZ",
-      "family": "Distribution de carburants et gaz",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "volumes distribués",
-        "marge unitaire si publiée",
-        "stocks",
-        "BFR",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "production pétrolière amont supposée",
-        "PNB bancaire"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "GAZ",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé IFRS, 31/12/2025 — états consolidés complets (p.104-106, pages image rendues et lues) ; communiqué p.172",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 172,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "IMI",
-      "family": "Immobilier - foncières",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 3,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "revenus locatifs",
-        "taux d'occupation",
-        "valeur des actifs",
-        "rendement locatif",
-        "dette",
-        "cash-flow"
-      ],
-      "accounting_exclusions": [
-        "préventes immobilières comme revenu locatif",
-        "carnet de commandes BTP"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "IMI",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé IFRS, 31/12/2025 (KMAD, point séparateur de milliers)",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 21,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "LES",
-      "family": "Agroalimentaire et boissons",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "volumes",
-        "prix/mix",
-        "coûts des intrants",
-        "marge",
-        "stocks",
-        "BFR",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "PNB bancaire",
-        "carnet de commandes BTP"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "LES",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "consolidé IFRS, 31/12/2025 (publié en millions de dirhams, arrondis)",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 82,
-              "status": "referenced_import"
-            }
-          ]
         }
       ]
     },
@@ -1725,8 +1332,8 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 5,
-      "selected_page_evidence_count": 0,
+      "evidence_count": 7,
+      "selected_page_evidence_count": 4,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
       ],
@@ -1744,93 +1351,28 @@
         "PNB bancaire"
       ],
       "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
+        "pe"
       ],
       "review_actions": [
         {
           "symbol": "SNP",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+          "priority": "P2",
+          "code": "nonpositive_earnings_per_not_meaningful",
+          "instruction": "Conserver le résultat négatif et le PER indisponible ; aucune correction à inventer.",
           "fields": [
-            "resultat_net_consolide"
+            "resultat_net_part_groupe"
           ],
           "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
+            "pe"
           ],
           "document_url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
           "annual_exercise": 2025,
-          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "accounting_basis": "consolidé (normes marocaines)",
           "source_pages_to_check": [
             {
-              "field": "resultat_net_consolide",
+              "field": "resultat_net_part_groupe",
               "page_hint": 51,
-              "status": "referenced_import"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "symbol": "SRM",
-      "family": "Industrie - équipements et métallurgie",
-      "classification": "curated",
-      "status": "financial_audit_blocked",
-      "financial_audit_status": "blocked",
-      "document_url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 4,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "volumes",
-        "marge industrielle",
-        "carnet de commandes si publié",
-        "BFR",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "commandes assimilées à un bénéfice réalisé",
-        "PNB bancaire"
-      ],
-      "blocked_metrics": [
-        "eps_mad",
-        "pe",
-        "roe_average_equity_pct",
-        "roe_pct"
-      ],
-      "review_actions": [
-        {
-          "symbol": "SRM",
-          "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
-          "fields": [
-            "resultat_net_consolide"
-          ],
-          "blocked_metrics": [
-            "eps_mad",
-            "pe",
-            "roe_pct",
-            "roe_average_equity_pct"
-          ],
-          "document_url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
-          "annual_exercise": 2025,
-          "accounting_basis": "SOCIAL (SRM n'a ni titres de participation ni comptes consolidés), 31/12/2025",
-          "source_pages_to_check": [
-            {
-              "field": "resultat_net_consolide",
-              "page_hint": 105,
-              "status": "referenced_import"
+              "status": "selected_pages_visually_checked"
             }
           ]
         }
@@ -1901,8 +1443,8 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Stroc_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 4,
-      "selected_page_evidence_count": 0,
+      "evidence_count": 6,
+      "selected_page_evidence_count": 3,
       "missing_annual_fact_groups": [
         "chiffre_affaires"
       ],
@@ -1919,8 +1461,7 @@
         "PNB bancaire"
       ],
       "blocked_metrics": [
-        "eps_mad",
-        "pe",
+        "pb",
         "roe_average_equity_pct",
         "roe_pct"
       ],
@@ -1928,25 +1469,24 @@
         {
           "symbol": "STR",
           "priority": "P1",
-          "code": "group_earnings_missing_total_not_substituted",
-          "instruction": "Rechercher le résultat net part du groupe dans les états consolidés ; ne pas utiliser le résultat consolidé total.",
+          "code": "nonpositive_denominator",
+          "instruction": "Vérifier le dénominateur et expliquer pourquoi le ratio est non significatif.",
           "fields": [
-            "resultat_net_consolide"
+            "capitaux_propres_sociaux"
           ],
           "blocked_metrics": [
-            "eps_mad",
-            "pe",
+            "pb",
             "roe_pct",
             "roe_average_equity_pct"
           ],
           "document_url": "https://www.ammc.ma/sites/default/files/Stroc_RFA_2025.pdf",
           "annual_exercise": 2025,
-          "accounting_basis": "SOCIAL (normes marocaines), 31/12/2025 — STROC ne consolide pas ses comptes malgré ses participations (CAC p.27, « Autres points »)",
+          "accounting_basis": "social (normes marocaines)",
           "source_pages_to_check": [
             {
-              "field": "resultat_net_consolide",
-              "page_hint": 17,
-              "status": "referenced_import"
+              "field": "capitaux_propres_sociaux",
+              "page_hint": 15,
+              "status": "selected_pages_visually_checked"
             }
           ]
         }
