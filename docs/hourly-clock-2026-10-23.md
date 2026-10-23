@@ -43,6 +43,14 @@ de trente minutes et s'arrête à 20:15. Un nouveau créneau ne reste pas bloqu�
 par une édition plus ancienne. Une demande acceptée ne prouve pas son exécution.
 Le passage de 19h est donc également rattrapable à 19:25 et 19:55.
 
+Un relais réel `nour_relay.yml` est déclenché après chaque workflow principal
+terminé. Sur un verrou distinct, il attend le prochain créneau du jour
+(au maximum 75 minutes) puis appelle le workflow Nour via `workflow_dispatch`
+avec le seul jeton éphémère du dépôt. Il s'arrête après 19h ou le week-end ;
+il ne programme pas de séance du lendemain. Ses logs distinguent attente,
+demande acceptée et publication, cette dernière restant à vérifier séparément.
+Le dépôt est public et utilise les runners standards existants.
+
 Une porte commune compare la cible à la publication réellement servie :
 manifest, SHA-256 du runtime, même run GitHub et conclusion `success`.
 Les réveils redondants ne reconstruisent pas un créneau déjà publié et vérifié.
@@ -68,9 +76,10 @@ auto-relais ; aucun step de self-dispatch n'apparaît dans le workflow lu.
 Nour reprend la sélection de séance et les réveils redondants, sans copier
 une garantie d'auto-relais non démontrée ni modifier le principal.
 
-Limite : les crons GitHub peuvent être retardés ou omis. Le watchdog est un
-workflow séparé mais utilise le même ordonnanceur GitHub : ce n'est pas un
-service externe indépendant. L'accès à la configuration cron-job.org du
+Limite : les crons GitHub peuvent être retardés ou omis. Le relais évite d'attendre un nouveau cron pendant la séance après le premier
+réveil, mais dépend toujours de la disponibilité des runners et de l'API GitHub.
+Le démarrage du matin reste assuré par les crons redondants et le watchdog ;
+aucun service externe indépendant n'est configuré. L'accès à la configuration cron-job.org du
 principal n'est pas disponible ici ; aucun réveil externe Nour n'est déclaré
 configuré. Son raccordement peut appeler le workflow Nour `nour_daily.yml`
 avec `slot=auto` à 09:55 puis chaque heure et à 19:00, sans toucher au principal

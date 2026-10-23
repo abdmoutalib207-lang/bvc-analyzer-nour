@@ -19,6 +19,8 @@ Le workflow quotidien contrôle les éditions de 09h45, 12h45 et 16h00 et ajoute
 une vérification de clôture à 17h15, heure de Casablanca, les jours ouvrés.
 Il ajoute un filet de sécurité à 19h00. Un réveil tardif est réaffecté au
 dernier créneau dû du jour, sans recréer une édition de la veille.
+Un relais GitHub séparé attend le prochain créneau puis relance Nour après
+le premier réveil du jour, sans immobiliser le verrou de publication.
 Le watchdog dispose de réveils à :05, :25 et :55 de 09h à 19h et après
 chaque publication ; il rattrape seulement le créneau courant.
 Il actualise aussi la consultation chaque heure de 09h45 à 17h45, sans

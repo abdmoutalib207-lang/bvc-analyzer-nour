@@ -1,0 +1,31 @@
+name: Nour hourly clock relay
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Nour market, news and public site']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+  actions: write
+# Never hold the publication/watchdog lock while waiting for the next hour.
+concurrency:
+  group: nour-hourly-relay
+  cancel-in-progress: false
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enforce Nour-only dispatch scope
+        run: python tools/assert_nour_scope.py
+      - name: Wait for the next local slot and dispatch Nour only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -u tools/relay_market_clock.py
