@@ -19,17 +19,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Build and verify Nour without refreshing market sources
-        run: python tools/verify_nour.py --build --asof "$(TZ=Africa/Casablanca date +%F)"
-      # External-sector probes were validated separately. Do not let a slow
-      # institution website delay financial calculation and browser review.
-      # The daily published workflow retains its scheduled source discovery.
       - name: Install pinned browser QA runtime
         run: |
           npm install --prefix "$RUNNER_TEMP/nour-browser-qa" --ignore-scripts --no-audit --no-fund playwright@1.62.1
           # Runner already carries Chromium libraries and Latin/emoji fonts.
           # Launch/tests still fail if a required dependency is missing.
           "$RUNNER_TEMP/nour-browser-qa/node_modules/.bin/playwright" install --only-shell chromium
+      - name: Exercise all browser routes with ADI deliberately quarantined (temporary site only)
+        env:
+          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
+          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/stress
+        run: python tools/test_quarantined_browser.py
+      - name: Build and verify Nour without refreshing market sources
+        run: python tools/verify_nour.py --build --asof "$(TZ=Africa/Casablanca date +%F)"
+      # External-sector probes were validated separately. Do not let a slow
+      # institution website delay financial calculation and browser review.
+      # The daily published workflow retains its scheduled source discovery.
       - name: Check mobile and desktop interactions before merging
         env:
           NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
@@ -51,11 +56,6 @@ jobs:
                   time.sleep(.2)
           PY
           node tools/test_assistant_browser.cjs
-      - name: Exercise all browser routes with ADI deliberately quarantined (temporary site only)
-        env:
-          NODE_PATH: ${{ runner.temp }}/nour-browser-qa/node_modules
-          NOUR_SCREENSHOTS: ${{ runner.temp }}/nour-browser-qa-shots/stress
-        run: python tools/test_quarantined_browser.py
       - name: Preserve browser review evidence
         uses: actions/upload-artifact@v4
         if: always()

@@ -43,11 +43,16 @@ def prepare(root, inputs):
     atomic_json(root/'data/market_integrity.json', proof)
     atomic_json(root/'data/market_overview.json', {'current':inputs[2], 'last_closed':inputs[2]})
     atomic_json(root/'data/issuer_status.json', {'observed_asof':'2026-10-23', 'records':{}})
-    with patch.object(run, 'ROOT', root), patch.dict(os.environ, {}, clear=True):
-        run._build(argparse.Namespace(asof='2026-10-23', slot='refresh'), root/'web')
     commit = subprocess.check_output(['git','rev-parse','HEAD'], cwd=ROOT, text=True).strip()
-    atomic_json(root/'web/publication.json', publication_manifest(root/'web', commit))
-    return json.loads((root/'web/report.json').read_text())
+    # Keep a genuine code identity while isolating GitHub's scheduled-run env.
+    with patch.object(run, 'ROOT', root), patch.dict(os.environ, {'NOUR_CODE_COMMIT':commit}, clear=True):
+        run._build(argparse.Namespace(asof='2026-10-23', slot='refresh'), root/'web')
+    manifest=publication_manifest(root/'web', commit)
+    atomic_json(root/'web/publication.json', manifest)
+    report=json.loads((root/'web/report.json').read_text())
+    assert manifest['generator_commit']==report['runtime']['commit']==commit
+    assert ('data-generator="'+commit+'"') in (root/'web/index.html').read_text()
+    return report
 
 
 def main():
