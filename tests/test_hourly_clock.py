@@ -5,7 +5,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 from nour.runtime import ZONE, current_target, planned_runs, run_context, visible_intraday
-from nour.continuity import assess
+from nour.continuity import assess, skipped_publication
 from tools.plan_market_run import decide
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -72,6 +72,17 @@ class HourlyClockTests(unittest.TestCase):
         state,_=assess(self.local(15,10),{'runtime':rt2},{},runs,state)
         self.assertEqual(len([e for e in state['events'].values() if e['status']=='executed']),2)
         self.assertFalse(requests)
+
+    def test_successful_wake_without_update_is_not_a_deployment(self):
+        jobs=[{'name':'plan','status':'completed','conclusion':'success'},
+              {'name':'update','status':'completed','conclusion':'skipped'}]
+        self.assertTrue(skipped_publication(jobs))
+        for conclusion in ('success','failure','cancelled'):
+            changed=[dict(j) for j in jobs];changed[1]['conclusion']=conclusion
+            self.assertFalse(skipped_publication(changed))
+        self.assertFalse(skipped_publication(jobs[:1]))
+        self.assertFalse(skipped_publication(jobs+[{'name':'unknown'}]))
+        jobs[0]['conclusion']='failure';self.assertFalse(skipped_publication(jobs))
 
     def test_empty_opening_is_retried_once_after_0955(self):
         now=self.local(9,55)

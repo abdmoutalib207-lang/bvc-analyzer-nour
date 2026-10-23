@@ -86,3 +86,13 @@ def publisher_failures(now, runs, published_run_id, previous=None):
                 event.update(state='resolved',resolved_at=now.isoformat(),resolution_run_id=str(latest['id']))
     latest_failed=bool(latest.get('status')=='completed' and latest.get('conclusion') in ('failure','timed_out','cancelled','action_required'))
     return history,latest_failed
+
+
+def skipped_publication(jobs):
+    """A successful wake-only gate is not a newly deployed artifact."""
+    by_name={job.get('name'):job for job in jobs}
+    return bool(len(by_name)==len(jobs) and set(by_name)=={'plan','update'}
+                and by_name['plan'].get('status')=='completed'
+                and by_name['plan'].get('conclusion')=='success'
+                and by_name['update'].get('status')=='completed'
+                and by_name['update'].get('conclusion')=='skipped')

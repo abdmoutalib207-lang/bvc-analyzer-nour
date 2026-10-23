@@ -46,6 +46,9 @@ Le passage de 19h est donc également rattrapable à 19:25 et 19:55.
 Une porte commune compare la cible à la publication réellement servie :
 manifest, SHA-256 du runtime, même run GitHub et conclusion `success`.
 Les réveils redondants ne reconstruisent pas un créneau déjà publié et vérifié.
+Le watchdog identifie sur les conclusions des jobs les réveils dont le job
+`update` a été sauté par la porte ; ils ne sont pas pris pour un déploiement
+réussi absent du site. Leur preuve est conservée dans `nonpublishing_wakes`.
 Les reconstructions explicitement demandées et les changements de code restent possibles.
 Les anciens événements `executed` de l'ancien algorithme sont conservés avec
 leur statut historique, puis réévalués ; ils ne sont pas repris aveuglément.

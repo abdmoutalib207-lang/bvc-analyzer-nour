@@ -9,7 +9,7 @@ from urllib.request import Request,urlopen
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from nour.continuity import assess,record_dispatch,publisher_failures
+from nour.continuity import assess,record_dispatch,publisher_failures,skipped_publication
 from nour.market import atomic_json
 from nour.runtime import ZONE
 from nour.transactions import retry_transient
@@ -53,7 +53,29 @@ def main():
               [('morning','matin'),('midday','midi'),('closing','cloture')]}
     path=ROOT/'data/continuity_state.json'
     previous=json.loads(path.read_text()) if path.exists() else None
+    # A redundant wake can correctly skip the update job. Its successful
+    # workflow must not be mistaken for a deployment missing from Pages.
+    nonpublishing=dict((previous or {}).get('nonpublishing_wakes') or {})
+    publishing=[]
+    for run in runs:
+        key=str(run['id']);cached=nonpublishing.get(key) or {}
+        same_attempt=cached.get('run_attempt')==run.get('run_attempt',1)
+        skipped=bool(cached and same_attempt)
+        if (not skipped and run.get('status')=='completed' and run.get('conclusion')=='success'
+                and key!=str(publication.get('run_id'))
+                and int(key)>int(publication.get('run_id') or 0)):
+            try:
+                jobs=github('actions/runs/'+key+'/jobs')['jobs']
+                skipped=skipped_publication(jobs)
+                if skipped:
+                    nonpublishing[key]={'first_detected':now.isoformat(),'run_attempt':run.get('run_attempt',1),
+                        'reason':'current_slot_already_verified_or_outside_window',
+                        'job_conclusions':{j['name']:j.get('conclusion') for j in jobs},'url':run.get('html_url')}
+            except (OSError,ValueError,KeyError):pass
+        if not skipped:publishing.append(run)
+    runs=publishing
     state,requests=assess(now,{'runtime':runtime,'publication':publication},editions,runs,previous)
+    state['nonpublishing_wakes']=nonpublishing
     state.pop('publication_anomaly',None)
     state['public_manifest_observed']=bool(publication)
     state['artifact_hash_checks']={}
