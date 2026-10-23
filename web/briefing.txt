@@ -13,7 +13,7 @@ Le relevé de marché totalise 196,65 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–17 869,06 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-23T01:42:05.841768+00:00.
+Sources du marché · relevé 2026-10-23T02:52:47.532823+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -369,7 +369,7 @@ AMMC · 2026-10-20 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-23T01:42:07.114720+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-23T02:52:48.460880+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
@@ -397,23 +397,23 @@ Archive conservée après collecte incomplète2026-10-22T15:35:30+00:00Différé
 
 Nikkei 225
 
-61 895,09points · -1,61 %
+61 825,04points · -1,72 %
 
-Dernière observation source2026-10-23T01:41:55+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-NI225/] Source ↗
+Dernière observation source2026-10-23T02:30:01+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-NI225/] Source ↗
 
 Risque et devises
 
 USD/MAD
 
-9,8077MAD / USD · 0,01 %
+9,7939MAD / USD · -0,13 %
 
-Dernière observation source2026-10-23T01:41:58+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-23T02:45:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9920MAD / EUR · -0,12 %
+10,9770MAD / EUR · -0,25 %
 
-Dernière observation source2026-10-23T01:39:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-23T02:49:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -423,29 +423,29 @@ Dernière observation source2026-10-22T20:15:01+00:00Différé source : 15 min �
 
 Indice dollar
 
-101,59points · -0,02 %
+101,64points · 0,02 %
 
-Dernière observation source2026-10-23T01:41:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-23T02:52:38+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 032,70USD / once troy · -0,68 %
+4 029,70USD / once troy · -0,76 %
 
-Dernière observation source2026-10-23T01:41:55+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-23T02:52:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-113,57USD / baril · 0,35 %
+113,87USD / baril · 0,62 %
 
-Dernière observation source2026-10-23T01:41:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-23T02:52:38+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,41USD / livre · 0,11 %
+6,42USD / livre · 0,34 %
 
-Dernière observation source2026-10-23T01:41:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-23T02:52:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -456,6 +456,10 @@ Dernière observation source2026-10-23T00:26:27+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Why-Trump-Cant-Afford-to-Lose-The-Rare-Earth-Race.html] Why Trump Can't Afford to Lose The Rare Earth Race ↗
+
+OilPrice · 2026-10-23T02:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Natural-Gas/LNG-Canada-Doubles-Capacity-as-Asia-Looks-Beyond-the-Gulf.html] LNG Canada Doubles Capacity as Asia Looks Beyond the Gulf ↗
 
@@ -484,10 +488,6 @@ Financial Afrik · 2026-10-22T21:51:28+00:00 · Périmètre non établi · Écon
  [https://www.financialafrik.com/2026/10/22/allegria-ntumba-luaba-nommee-directrice-du-developpement-des-affaires-dafcra/] Allegria Ntumba Luaba nommée directrice du développement des affaires d’AfCRA ↗
 
 Financial Afrik · 2026-10-22T21:47:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/22/lettre-ouverte-a-kristalina-georgieva-directrice-generale-du-fmi-et-a-ajay-banga-president-de-la-banque-mondiale/] Lettre ouverte à Kristalina Georgieva, directrice générale du FMI, et à Ajay Banga, président de la Banque mondiale ↗
-
-Financial Afrik · 2026-10-22T21:39:57+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -547,6 +547,10 @@ Financial Afrik · 2026-10-21T10:33:41+00:00 · Maroc · Économie · alerte non
 
 Financial Afrik · 2026-10-19T12:17:19+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/Why-Trump-Cant-Afford-to-Lose-The-Rare-Earth-Race.html] Why Trump Can't Afford to Lose The Rare Earth Race ↗
+
+OilPrice · 2026-10-23T02:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Natural-Gas/LNG-Canada-Doubles-Capacity-as-Asia-Looks-Beyond-the-Gulf.html] LNG Canada Doubles Capacity as Asia Looks Beyond the Gulf ↗
 
 OilPrice · 2026-10-23T00:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -558,8 +562,4 @@ RFI · économie · 2026-10-22T23:06:09+00:00 · International · Économie · a
  [https://www.rfi.fr/fr/podcasts/chronique-des-mati%C3%A8res-premi%C3%A8res/20261022-au-kenya-la-fili%C3%A8re-lait-bient%C3%B4t-fournie-par-les-bufflonnes] Au Kenya, la filière lait bientôt fournie par les bufflonnes? ↗
 
 RFI · économie · 2026-10-22T23:00:26+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Rising-Crude-Oil-Imports-Reduce-Chinas-Need-to-Draw-from-Stocks.html] Rising Crude Oil Imports Reduce China’s Need to Draw from Stocks ↗
-
-OilPrice · 2026-10-22T23:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

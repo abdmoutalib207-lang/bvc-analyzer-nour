@@ -63396,6 +63396,7 @@
       "no_trend": 0
     }
   ],
+  "local_errors": [],
   "protocol": "Clôture > MM20 et MM50 passées. Observation au signal ; entrée au cours de clôture suivant, sortie 5/20/60 séances MASI après entrée. Grille fixe, fenêtres non chevauchantes par titre et horizon. Aucune pondération optimisée.",
   "limitations": [
     "Étude exploratoire rétrospective, pas un test hors échantillon intact ni un portefeuille exécutable.",
