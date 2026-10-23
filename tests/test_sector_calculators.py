@@ -60,6 +60,25 @@ class SectorCalculatorTests(unittest.TestCase):
         f['faits']['resultat_exploitation']['valeur']=-10
         self.assertEqual(calculate_sector('AKD',{},f,'2026-10-23')['metrics']['operating_margin_pct']['value'],-10)
 
+    def test_original_amount_and_cash_sign_must_reconcile(self):
+        f=inputs({'flux_tresorerie_exploitation':10,'capex_decaisse':3,'chiffre_affaires':100})
+        f['faits']['capex_decaisse'].update(valeur_au_rapport=-3000000,unite_au_rapport='MAD',normalization='cash_outflow_to_positive_capex')
+        self.assertEqual(calculate_sector('AKD',{},f,'2026-10-23')['metrics']['free_cash_after_capex_mmad']['value'],7)
+        f['faits']['capex_decaisse']['valeur_au_rapport']=3000000
+        self.assertIsNone(calculate_sector('AKD',{},f,'2026-10-23')['metrics']['free_cash_after_capex_mmad']['value'])
+        f['faits']['capex_decaisse']['valeur_au_rapport']=-3000
+        self.assertIsNone(calculate_sector('AKD',{},f,'2026-10-23')['metrics']['free_cash_after_capex_mmad']['value'])
+
+    def test_hotel_money_and_room_nights_keep_their_dimensions(self):
+        f=inputs({'revenu_chambres_mad':1200,'nuitees_chambres_vendues':10,'nuitees_chambres_disponibles':20},'hotel_room_nights')
+        f['faits']['revenu_chambres_mad'].update(unite='MAD',valeur_au_rapport=1.2,unite_au_rapport='KMAD')
+        for name in ('nuitees_chambres_vendues','nuitees_chambres_disponibles'):
+            f['faits'][name].update(unite='chambres',valeur_au_rapport=f['faits'][name]['valeur'],unite_au_rapport='chambres')
+        m=calculate_sector('RIS',{},f,'2026-10-23')['metrics']
+        self.assertEqual(m['hotel_adr_mad']['value'],120)
+        self.assertEqual(m['hotel_revpar_mad']['value'],60)
+        self.assertEqual(m['hotel_occupancy_pct']['value'],50)
+
     def test_primary_replay_preserves_legacy_facts_and_scores_inputs(self):
         payload=json.loads((ROOT/'data/facts_reference.json').read_text())
         review=json.loads((ROOT/'knowledge/financial_reviews/2026-10-23-sector.json').read_text())
@@ -70,6 +89,8 @@ class SectorCalculatorTests(unittest.TestCase):
         f=changed['records']['AKD'];m=calculate_sector('AKD',{},f,'2026-10-23')['metrics']
         self.assertAlmostEqual(m['operating_cash_margin_pct']['value'],3.4482)
         self.assertEqual(m['free_cash_after_capex_mmad']['value'],-2066.1245)
+        self.assertEqual(f['sector_faits']['capex_decaisse']['valeur_au_rapport'],-2218304904)
+        self.assertEqual(f['sector_faits']['capex_decaisse']['normalization'],'cash_outflow_to_positive_capex')
         audit=audit_sector_calculations({'results':[{'symbol':'AKD','sector_indicators':{'metrics':m}}]})
         self.assertFalse(audit['failures']);self.assertGreater(audit['arithmetic_checks'],4)
         m['operating_margin_pct']['value']=999

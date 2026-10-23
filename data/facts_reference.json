@@ -2867,7 +2867,7 @@
         },
         "capex_decaisse": {
           "valeur": 2218.304904,
-          "valeur_au_rapport": 2218304904,
+          "valeur_au_rapport": -2218304904,
           "unite": "MMAD",
           "unite_au_rapport": "MAD",
           "page": 79,
@@ -2878,7 +2878,8 @@
           "document_hash": "sha256:82b9d050c7275c416b70116fc17d4d6e7187997b22e12029c83d639340d04d5f",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "Acquisitions d’immobilisations tirées du tableau de flux ; variation des dettes fournisseurs d’immobilisation séparée au financement."
+          "note": "Acquisitions d’immobilisations tirées du tableau de flux ; variation des dettes fournisseurs d’immobilisation séparée au financement. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex"
         }
       }
     },
@@ -4192,7 +4193,7 @@
         },
         "capex_decaisse": {
           "valeur": 61.0,
-          "valeur_au_rapport": 61,
+          "valeur_au_rapport": -61,
           "unite": "MMAD",
           "unite_au_rapport": "MMAD",
           "page": 82,
@@ -4203,7 +4204,8 @@
           "document_hash": "sha256:c6b658c29b0f2210414acc78511aab70bac1061b3a407581d14d47312c6a5b35",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "Valeurs publiées en millions arrondis. Résultat des activités opérationnelles 121 MMAD, distinct du résultat courant 99 MMAD."
+          "note": "Valeurs publiées en millions arrondis. Résultat des activités opérationnelles 121 MMAD, distinct du résultat courant 99 MMAD. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex"
         }
       }
     },
@@ -5754,7 +5756,7 @@
         },
         "capex_decaisse": {
           "valeur": 37.412,
-          "valeur_au_rapport": 37412,
+          "valeur_au_rapport": -37412,
           "unite": "MMAD",
           "unite_au_rapport": "KMAD",
           "page": 51,
@@ -5765,7 +5767,21 @@
           "document_hash": "sha256:7c7fc52eb87321ed626d57d37dccb9cc7fc06e021441b2e33f4fea927d202f42",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "CAPEX 37,412 MMAD = acquisitions corporelles 36,647 + incorporelles 0,765 ; perte conservée, sans PER négatif."
+          "note": "CAPEX 37,412 MMAD = acquisitions corporelles 36,647 + incorporelles 0,765 ; perte conservée, sans PER négatif. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex",
+          "source_components": [
+            {
+              "label": "Acquisitions corporelles",
+              "value": -36647,
+              "unit": "KMAD"
+            },
+            {
+              "label": "Acquisitions incorporelles",
+              "value": -765,
+              "unit": "KMAD"
+            }
+          ],
+          "value_origin": "opposite_of_sum_of_disclosed_acquisition_outflows"
         }
       }
     },
@@ -7317,7 +7333,7 @@
         },
         "capex_decaisse": {
           "valeur": 96.434,
-          "valeur_au_rapport": 96434,
+          "valeur_au_rapport": -96434,
           "unite": "MMAD",
           "unite_au_rapport": "KMAD",
           "page": 66,
@@ -7328,7 +7344,8 @@
           "document_hash": "sha256:025e124fb8b931715d81e66c70bb987a93c600f65c268dd936a6136e2307d3c4",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "RNPG 56,204 MMAD distinct du résultat total 16,083 MMAD. CAPEX acquisitions d’immobilisations, distinct des acquisitions de titres."
+          "note": "RNPG 56,204 MMAD distinct du résultat total 16,083 MMAD. CAPEX acquisitions d’immobilisations, distinct des acquisitions de titres. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex"
         }
       }
     },
@@ -7635,7 +7652,7 @@
         },
         "capex_decaisse": {
           "valeur": 16.753432,
-          "valeur_au_rapport": 16753432,
+          "valeur_au_rapport": -16753432,
           "unite": "MMAD",
           "unite_au_rapport": "MAD",
           "page": 20,
@@ -7646,7 +7663,8 @@
           "document_hash": "sha256:feb9d97611e4f893e308a79bc9137a300a5900d97e7f63c8212862fc741960ce",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "Acquisitions d’immobilisations présentées nettes d’impôts. La comparaison CAPEX exige de tenir compte de cette définition."
+          "note": "Acquisitions d’immobilisations présentées nettes d’impôts. La comparaison CAPEX exige de tenir compte de cette définition. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex"
         }
       }
     },
@@ -10525,7 +10543,7 @@
         },
         "capex_decaisse": {
           "valeur": 54.102,
-          "valeur_au_rapport": 54102,
+          "valeur_au_rapport": -54102,
           "unite": "MMAD",
           "unite_au_rapport": "KMAD",
           "page": 21,
@@ -10536,7 +10554,8 @@
           "document_hash": "sha256:a17430459e934288da9b28fe7c7a59f550bd4ecc28b74cb6af80515f0714b2b4",
           "validation_status": "selected_pages_visually_checked",
           "reviewed_at": "2026-10-23",
-          "note": "Résultat opérationnel final 55,289 MMAD, distinct de la première ligne résultat d’exploitation 60,228 MMAD. Aucun ROE moyen déduit de l’ouverture contradictoire."
+          "note": "Résultat opérationnel final 55,289 MMAD, distinct de la première ligne résultat d’exploitation 60,228 MMAD. Aucun ROE moyen déduit de l’ouverture contradictoire. CAPEX positif = opposé du flux d’acquisition décaissé, publié avec un signe négatif.",
+          "normalization": "cash_outflow_to_positive_capex"
         },
         "ffo_publie": {
           "valeur": 48.409,

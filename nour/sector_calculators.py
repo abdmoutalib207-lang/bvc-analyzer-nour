@@ -197,6 +197,20 @@ def calculate_sector(symbol, record, facts, asof):
             if not valid: problems.append({'field':field,'reason':'Preuve primaire, date, devise ou valeur non vérifiée'})
             if valid and field in ('capex_decaisse','stocks','creances_exploitation','dettes_exploitation') and value<0:
                 problems.append({'field':field,'reason':'Poste attendu positif ou nul ; signe à rapprocher'})
+            if valid and fact.get('valeur_au_rapport') is not None:
+                money={'MAD':1,'DH':1,'KMAD':1000,'kMAD':1000,'MMAD':1000000,'MDH':1000000}
+                original,target=fact.get('unite_au_rapport'),fact.get('unite')
+                scale=(Decimal(money[target])/money[original] if target in money and original in money else Decimal(1) if original==target else None)
+                try:
+                    raw=Decimal(str(fact['valeur_au_rapport']))
+                    if scale is None or not raw.is_finite():raise ValueError('Unité originale inconnue')
+                    if fact.get('normalization')=='cash_outflow_to_positive_capex':
+                        if field!='capex_decaisse' or raw>0:raise ValueError('Convention de signe incompatible')
+                        raw=-raw
+                    if abs(raw/scale-Decimal(str(value)))>Decimal('0.000000001'):
+                        raise ValueError('Conversion non concordante')
+                except (ValueError,ArithmeticError):
+                    problems.append({'field':field,'reason':'Montant original, signe et unité normalisée non rapprochés'})
             if spec['definition_contract'] and fact.get('definition_contract') != spec['definition_contract']:
                 problems.append({'field':field,'reason':'Définition métier non rapprochée : '+spec['definition_contract']})
             values.append(Decimal(str(value)) if valid else Decimal(0))
