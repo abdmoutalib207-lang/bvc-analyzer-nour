@@ -12,10 +12,18 @@ La sauvegarde `always()` pouvait commiter `data/market_integrity.json` sans le
 snapshot candidat correspondant après un échec. Constat : preuve liée au SHA
 `a366bc0ddc2cdcaa42cf91e0501937679ee05d97feebbacad3fa8a2e593c3097`, alors que
 le snapshot conservé porte `b2d07d5462041ad543863bfcce6709de6bdf7c5811e963ea2e68f2f96e823e02`.
-La preuve active cohérente du dernier export a été restaurée, sans modifier
-un prix. L'observation écartée reste dans `knowledge/incidents/2026-10-23-proof-transaction.json`
-et le journal de contrôle. Désormais, une sauvegarde d'échec n'écrit que les
-journaux ; la preuve active appartient à la transaction normale avec les données.
+La construction peut reprendre exclusivement la dernière preuve intrajournalière
+cohérente du cache : mêmes SHA-256 du snapshot, même observation de marché
+normalisée et même séance. Ses heures restent celles de la preuve initiale,
+sans nouvelle clôture ni vérification de source prétendue. Cette récupération
+n'est jamais permise face à un refus lié au snapshot courant, une observation
+modifiée, un schéma inconnu ou un cache de clôture ; les autres garde-fous
+financiers, statistiques et de marché restent bloquants.
+L'observation détachée reste dans `knowledge/incidents/2026-10-23-proof-transaction.json`
+et le journal de contrôle. La récupération est identifiée dans le rapport.
+Aucun cours n'est modifié par cette récupération. Le fichier actif de contrôle
+est ensuite renouvelé uniquement par la transaction normale réussie avec son
+snapshot ; une sauvegarde d'échec ne commite plus que les journaux.
 
 L'ancien rattrapage privilégiait des éditions du matin manquées et pouvait
 considérer plusieurs heures antérieures comme exécutées après une seule
