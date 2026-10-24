@@ -53,7 +53,7 @@ for(const metric of data.knowledge.metric_catalog){
   for(const row of r.rows)assert.equal(row.values[metric.id],read(data.symbols[row.symbol]),metric.id);
 }
 const multi=localAnswer('Cours, PER, RSI et VaR ADI',data,'MASI');
-for(const number of [data.symbols.ADI.price,data.symbols.ADI.fundamental.pe,data.symbols.ADI.technical.rsi14,data.symbols.ADI.market_risk.tail_risk.var95_loss_pct])assert.ok(multi.text.includes(fmt(number)));
+for(const [label,value] of [['Clôture : ',data.symbols.ADI.price],['PER : ',data.symbols.ADI.fundamental.pe],['RSI 14 : ',data.symbols.ADI.technical.rsi14],['VaR historique 95 % · 1 séance : ',data.symbols.ADI.market_risk.tail_risk.var95_loss_pct]])assert.ok(multi.text.includes(label+fmt(value)),label+multi.text);
 for(const label of ['fondamentaux','technique','risques','cours'])assert.ok(multi.text.includes(label));
 for(const warning of data.symbols.ADI.fundamental.warnings)assert.ok(multi.text.includes(warning));
 assert.ok(multi.sources.some(s=>s.url.includes('ADI_RFA_2025.pdf')));
