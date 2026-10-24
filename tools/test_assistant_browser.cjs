@@ -279,6 +279,21 @@ async function answerAfter(page,action){
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
+        if(route.startsWith('titres/')){
+          const symbol=route.split('/')[1].split('.')[0];
+          const rows=marketReport.results.find(r=>r.symbol===symbol).sector_indicators.reported_facts?.records||[];
+          if(rows.length){
+            const facts=page.locator('[data-reported-facts]');
+            assert.equal(await facts.locator('[data-reported-id]').count(),rows.length);
+            await facts.locator(':scope > summary').click();
+            const first=facts.locator('[data-reported-id]').first();
+            assert.ok((await first.innerText()).includes(rows[0].unit));
+            await first.locator('summary').click();
+            assert.equal(await first.locator('a').count(),1);
+            assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Reported facts overflow '+symbol+' '+width);
+            await facts.locator(':scope > summary').click();
+          }
+        }
         if(route==='titres/MNG.html'){
           const block=page.locator('[data-business-disclosures]');
           const reviewed=marketReport.results.find(r=>r.symbol==='MNG').sector_indicators.business_disclosures;

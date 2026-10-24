@@ -185,3 +185,7 @@ if(data.symbols.MNG.business_disclosures?.records?.length){
   check('CAPEX MNG semestre 2025',r=>r.domain==='business'&&r.text.includes('-2 885,5 MDH')&&!r.text.includes('-5 950 MDH'),'MNG');
   check('AISC MNG 2025',r=>r.domain==='business'&&r.text.includes('aucune valeur vérifiée')&&r.text.includes('ne constituent pas un coût unitaire'),'MNG');
 }
+
+for(const symbol of ['ADI','ATW','ENK','SMI','MSA']){
+  check('Relevés '+symbol,r=>r.domain==='business'&&r.text.includes(symbol)&&r.sources.some(s=>s.url.endsWith('#releves-disponibles')),symbol);
+}

@@ -58,6 +58,20 @@
     const link=(label,url)=>sources.push({label,url});
     const definition=key=>{if(defs[key])lines.push(defs[key]);};
     const rows=symbols.filter(s=>data.symbols?.[s]).map(s=>data.symbols[s]);
+    if(/releves|chiffres documentes|donnees publiees/.test(q)){
+      for(const row of rows){
+        const block=row.reported_facts||{},records=block.records||[];
+        lines.push(`${row.symbol} · ${records.length} relevés disponibles. ${block.notice||''}`);
+        for(const r of records.slice(0,20)){
+          lines.push(`${r.label} : ${fmt(r.value,r.unit)} · ${r.period_end||'période propre à préciser (dossier '+(r.period_context||'non daté')+')'} · ${r.scope}. ${r.status==='page_checked'?'Page contrôlée dans le relevé existant.':r.notice} ${r.note||''}`);
+          if(r.source?.url)link(`${row.symbol} · ${r.label}`,r.source.url+(Number.isInteger(r.source.page)?'#page='+r.source.page:''));
+        }
+        if(records.length>20)lines.push('Les autres relevés sont consultables dans la fiche, rubrique Chiffres documentés disponibles.');
+        lines.push(...(block.reservations||[]));link('Tous les relevés '+row.symbol,row.url+'#releves-disponibles');
+      }
+      if(!rows.length)lines.push('Précisez le titre pour lire ses relevés documentés.');
+      return result('business');
+    }
     if(/production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
       const categories=[];
       if(/production/.test(q)&&!/cout.*production/.test(q))categories.push('production');

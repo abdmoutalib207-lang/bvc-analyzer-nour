@@ -52,7 +52,7 @@ def sector_card(row):
     kpis=''.join('<li>'+e(k['label'])+((' · '+e(k['source'].get('period_end'))) if k.get('value') is not None and isinstance(k.get('source'),dict) else '')+' : '+(e(k['value'])+' '+e(k['unit']) if k['value'] is not None else e(k['reason']) if k.get('status')=='published_breakdown' else 'Indisponible — '+e(k['reason']))+'</li>' for k in sector.get('published_kpis',{}).values())
     return ('<section class="panel" data-sector-calculators><h2>Calculs du métier</h2>'
         f'<p>{e(sector.get("family"))} · Méthodes séparées du score. Les chiffres publiés sont présentés séparément des ratios calculables.</p>'
-        +('<h3>Indicateurs publiés du métier</h3><ul>'+kpis+'</ul>' if kpis else '')+business_disclosures_card(sector.get('business_disclosures') or {})+'<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Traçabilité</th></tr></thead><tbody>'
+        +('<h3>Indicateurs publiés du métier</h3><ul>'+kpis+'</ul>' if kpis else '')+reported_facts_card(sector.get('reported_facts') or {})+business_disclosures_card(sector.get('business_disclosures') or {})+'<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Traçabilité</th></tr></thead><tbody>'
         +''.join(rows)+'</tbody></table></div><p><a href="../couverture.json">Entrées et état de couverture des 80 sociétés</a></p></section>')
 
 
@@ -117,3 +117,30 @@ def business_disclosures_card(block):
         + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
         + ''.join('<li>' + e(note) + '</li>' for note in block.get('reservations', [])) + '</ul></details>'
         + f'<p>Relevé contrôlé le {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')
+
+
+def reported_facts_card(block):
+    from decimal import Decimal
+    e=lambda x:escape(str(x if x is not None else 'À préciser'))
+    rows=block.get('records') or []
+    if not rows:
+        return '<p data-reported-empty>Les relevés chiffrés restent à compléter dans Nour. Les documents référencés peuvent contenir d’autres informations.</p>'
+    items=[]
+    for r in rows:
+        n=format(Decimal(str(r['value'])),',f')
+        if '.' in n:n=n.rstrip('0').rstrip('.')
+        value=n.replace(',',' ').replace('.',',')
+        source=r['source'];url=source['url'];page=source.get('page')
+        if isinstance(page,int) and not isinstance(page,bool) and page>0:url+='#page='+str(page)
+        status='Page contrôlée dans le relevé existant' if r['status']=='page_checked' else 'Lecture à confirmer'
+        period=r.get('period_end') or ('Dossier '+str(r.get('period_context') or 'non daté')+' ; période propre à préciser')
+        items.append(f'<tr data-reported-id="{e(r["id"])}"><td>{e(r["label"])}<small class="quote-kind">{e(r["scope"])}</small></td>'
+            f'<td>{e(value)} {e(r["unit"])}<small class="quote-kind">{e(period)}</small></td>'
+            f'<td><details><summary>{e(status)} · source et réserves</summary>'
+            f'<a href="{e(url)}" rel="noopener noreferrer">Document référencé</a>'
+            + (f'<p>Page PDF {e(page)}</p>' if page is not None else f'<p>{e(source.get("page_hint") or "Page exacte à préciser")}</p>')
+            + f'<p>{e(r.get("notice") or "Le contrôle de cette pièce ne certifie pas tout le rapport.")}</p><p>{e(r.get("note") or "")}</p></details></td></tr>')
+    return ('<details id="releves-disponibles" data-reported-facts class="business-disclosures"><summary>'
+        f'Chiffres documentés disponibles · {len(rows)} relevés</summary><p>{e(block.get("notice"))}</p>'
+        '<div class="tablewrap"><table><thead><tr><th>Indicateur et périmètre</th><th>Valeur et période</th><th>Source et niveau de lecture</th></tr></thead><tbody>'
+        +''.join(items)+'</tbody></table></div><ul>'+''.join('<li>'+e(x)+'</li>' for x in block.get('reservations',[]))+'</ul></details>')
