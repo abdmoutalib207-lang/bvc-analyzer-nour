@@ -111,9 +111,15 @@ def business_disclosures_card(block):
             parts.append(f'<details data-business-group="{e(category)}-{e(end)}"{opened}><summary>{e(labels[category])} · {e(period)} · {len(rows)} chiffres</summary>'
                 '<div class="tablewrap"><table><thead><tr><th>Indicateur et périmètre</th><th>Valeur publiée</th><th>Traçabilité</th></tr></thead><tbody>'
                 + ''.join(body) + '</tbody></table></div></details>')
+    meanings={'TC':'tonnes de concentré','kg':'kilogrammes','TM':'tonnes métriques','MDH':'millions de dirhams',
+              'EVP':'équivalent vingt pieds','USD/oz':'dollars par once','t':'tonnes',
+              'g Ag/t':'grammes d’argent par tonne','%':'pourcentage','millions de tonnes':'millions de tonnes'}
+    units=list(dict.fromkeys(r.get('unit') for r in records if r.get('unit')))
+    intro='Unités publiées : '+' ; '.join(str(u)+' = '+meanings.get(u,str(u)) for u in units)+'.'
+    if any(r.get('approximate') for r in records):intro+=' ≈ indique une valeur approximative publiée.'
+    if any(r.get('category')=='cash_flows' for r in records):intro+=' Les flux conservent le signe du tableau de trésorerie.'
     return ('<div id="chiffres-metier" class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
-        '<p>Valeurs publiées conservées avec leur unité et leur signe. TC = tonnes de concentré ; kg = kilogrammes ; TM = tonnes métriques ; MDH = millions de dirhams. '
-        'Aucun total entre métaux. Les charges comptables ne constituent pas un AISC. Un décaissement est négatif dans le tableau de trésorerie.</p>'
+        '<p>'+e(intro)+'</p>'
         + ('<p>Dernière collecte partielle : les chiffres datés déjà disponibles sont conservés.</p>' if block.get('collection_status')=='partial' else '<p>Des éléments de la dernière collecte restent à vérifier.</p>' if block.get('collection_status')=='needs_review' else '') + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
         + ''.join('<li>' + e(note) + '</li>' for note in block.get('reservations', [])) + '</ul></details>'
         + f'<p>Relevé daté du {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')
