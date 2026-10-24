@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-10-23",
+  "generated_for": "2026-10-24",
   "market_session": "2026-10-23",
   "runtime": {
     "timezone": "Africa/Casablanca",
@@ -13,19 +13,19 @@
     "scheduled_at": null,
     "scheduled_at_basis": null,
     "requested_scheduled_at": null,
-    "edition_for": "2026-10-23",
-    "started_at": "2026-10-23T23:22:52+00:00",
-    "built_at": "2026-10-23T23:23:35.314808+00:00",
+    "edition_for": "2026-10-24",
+    "started_at": "2026-10-24T03:42:27+00:00",
+    "built_at": "2026-10-24T03:43:15.725352+00:00",
     "utc_offset_minutes": 0,
     "delay_minutes": null,
     "late": false,
-    "run_id": "40039309745",
-    "commit": "f0235c12e2fa1e4f54ab2657a96fd3f04685ed0c",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40039309745",
+    "run_id": "40059373386",
+    "commit": "a3fc33fa2d8f728c5e3c35a93e54bb07ac94d151",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40059373386",
     "collection": {
       "result": "unchanged",
       "label": "Aucune nouveauté",
-      "checked_at": "2026-10-23T23:22:53.241606+00:00",
+      "checked_at": "2026-10-24T03:42:28.693611+00:00",
       "last_session": "2026-10-23",
       "message": "Aucune nouvelle séance vérifiée",
       "conflicts": [],
@@ -33,17 +33,17 @@
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "f0235c12e2fa1e4f54ab2657a96fd3f04685ed0c",
+      "generator_commit": "a3fc33fa2d8f728c5e3c35a93e54bb07ac94d151",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "cf3a7f0ccc011cfb4563eb7f96027ba11d50f7154387768035c93a6e6d2a5074",
+      "market_snapshot_sha256": "28c96c744dad70008eab997419f49838d6c13dbab70792bbb2c09c0b9b8bf61e",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
       "status": "detail_matched",
       "session": "2026-10-23",
-      "observed_at": "2026-10-23T23:23:25.168694+00:00",
+      "observed_at": "2026-10-24T03:43:05.574052+00:00",
       "cross_source_verified": true
     }
   },
@@ -57,12 +57,12 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 470.2,
+    "age_minutes": 729.9,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-23T23:22:53.241606+00:00",
+  "snapshot_updated": "2026-10-24T03:42:28.693611+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
@@ -420,7 +420,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "ADI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -466,7 +466,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -789,7 +789,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "RDS",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -808,7 +808,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1140,7 +1140,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "TGCC",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1170,7 +1170,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1523,7 +1523,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "SGTM",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1570,7 +1570,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1936,7 +1936,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "CMGP",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1982,7 +1982,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2291,7 +2291,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "MSA",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2336,7 +2336,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2645,7 +2645,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "SMI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2680,7 +2680,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2971,7 +2971,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "T2S",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3003,7 +3003,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3300,7 +3300,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-10-23",
+            "asof": "2026-10-24",
             "symbol": "CMT",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3334,7 +3334,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 296,
+              "annual_age_calendar_days": 297,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3633,6 +3633,23 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
+      "id": "7e3e17ba1d4aef8489",
+      "title": "U.S. Dips Into Strategic Oil Reserve Again Amid Supply Disruptions",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Dips-Into-Strategic-Oil-Reserve-Again-Amid-Supply-Disruptions.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-23T22:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "c468411d975b133312",
       "title": "Why Trump and Carney Haven’t Touched Energy in Their Tariff War",
       "url": "https://oilprice.com/Energy/Energy-General/Why-Trump-and-Carney-Havent-Touched-Energy-in-Their-Tariff-War.html",
@@ -3740,23 +3757,6 @@
       "url": "https://www.financialafrik.com/2026/10/23/tunisie-assurances-maghrebia-depasse-86-millions-de-dollars-de-primes-a-fin-septembre-2026/",
       "publisher": "Financial Afrik",
       "published_at": "2026-10-23T18:21:08+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "0a9eecd63f6714ccf1",
-      "title": "Xénophobie, pétrole et décrochage : le Sénégal scie la branche sur laquelle il est assis",
-      "url": "https://www.financialafrik.com/2026/10/23/xenophobie-petrole-et-decrochage-le-senegal-scie-la-branche-sur-laquelle-il-est-assis/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-23T18:13:47+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4008,7 +4008,7 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-23T23:23:23.389803+00:00"
+    "observed_at": "2026-10-24T03:43:03.643566+00:00"
   },
   "context_news": [
     {
@@ -4017,6 +4017,23 @@
       "url": "https://oilprice.com/Energy/Energy-General/Trumps-Reverse-Nixon-Strategy-Bring-Russia-In-Shut-China-Out.html",
       "publisher": "OilPrice",
       "published_at": "2026-10-23T23:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "7e3e17ba1d4aef8489",
+      "title": "U.S. Dips Into Strategic Oil Reserve Again Amid Supply Disruptions",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Dips-Into-Strategic-Oil-Reserve-Again-Amid-Supply-Disruptions.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-23T22:30:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4197,29 +4214,12 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "c69d8bc9761c3d8be1",
-      "title": "Charlotte Libog : « pas de développement de l’Afrique sans l’agriculture »",
-      "url": "https://www.financialafrik.com/2026/10/23/charlotte-libog-pas-de-developpement-de-lafrique-sans-lagriculture/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-23T17:50:35+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-23T23:23:35.314808+00:00",
-    "checked_at": "2026-10-23T23:23:24.317722+00:00",
+    "cutoff": "2026-10-24T03:43:15.725352+00:00",
+    "checked_at": "2026-10-24T03:43:04.308662+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4239,7 +4239,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4256,7 +4256,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4273,7 +4273,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4290,7 +4290,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4312,7 +4312,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4329,7 +4329,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4346,7 +4346,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4363,7 +4363,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4379,13 +4379,13 @@
             "change_pct": -1.292976061471776,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-23T22:32:36+00:00",
+            "observed_at": "2026-10-23T23:34:12+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4396,13 +4396,13 @@
             "change_pct": 3.1368737297870437,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-23T22:38:10+00:00",
+            "observed_at": "2026-10-24T00:25:53+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4413,13 +4413,13 @@
             "change_pct": 1.7114723351047296,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-23T22:25:28+00:00",
+            "observed_at": "2026-10-23T23:27:56+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           },
           {
@@ -4430,13 +4430,13 @@
             "change_pct": 0.684931506849315,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-23T22:32:56+00:00",
+            "observed_at": "2026-10-24T00:23:23+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-23T23:23:24.317722+00:00",
+            "collected_at": "2026-10-24T03:43:04.308662+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4462,9 +4462,9 @@
       "url": "briefing-midi.html"
     },
     {
-      "label": "Briefing de clôture (confirmation requise)",
-      "date": "2026-10-20",
-      "url": "briefing-cloture.html"
+      "label": "Dernière clôture disponible",
+      "date": "2026-10-23",
+      "url": "cloture.html"
     }
   ],
   "text_url": "briefing.txt"
