@@ -17,11 +17,23 @@ from nour.engine import build_report
 from nour.market import capture_intraday, import_session
 from nour.runtime import CONTROL_SLOTS, EDITIONS, EXTRA_WAKE_SCHEDULES, HOURLY_SLOTS, SLOTS, ZONE, run_context, visible_intraday
 from nour.site import briefing_page, home_page
+from nour.runtime import briefing_links
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class RuntimeContracts(unittest.TestCase):
+    def test_latest_closing_digest_replaces_stale_link_without_rewriting_edition(self):
+        editions={'closing':{'title':'Édition de clôture',
+                            'runtime':{'edition_for':'2026-10-20','run_id':'old'}}}
+        before=copy.deepcopy(editions)
+        links=briefing_links(editions,{'asof':'2026-10-23'})
+        self.assertEqual(links,[{'label':'Dernière clôture disponible',
+                                'date':'2026-10-23','url':'cloture.html'}])
+        self.assertEqual(editions,before)
+        self.assertEqual(briefing_links({}, {'asof':'2026-10-23'}),links)
+        self.assertEqual(briefing_links(editions,{'asof':'bad'})[0]['date'],'2026-10-20')
+
     @classmethod
     def setUpClass(cls):
         cls.fixture = json.loads((ROOT/'data/market_snapshot.json').read_text())

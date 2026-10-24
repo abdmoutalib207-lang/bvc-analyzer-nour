@@ -8,7 +8,7 @@ from datetime import date
 from pathlib import Path
 
 from nour.engine import build_report
-from nour.site import build_site, news_page
+from nour.site import build_site, news_page, home_page
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,6 +52,19 @@ class VisibleMarketSite(unittest.TestCase):
         self.assertIn('aria-label="Comprendre le laboratoire"', static)
         self.assertIn('Le laboratoire, en langage simple', static)
         self.assertIn('Cela ne prédit pas demain', static)
+
+    def test_old_reference_date_is_next_to_percentage_and_reference_amount(self):
+        report=deepcopy(self.report)
+        ppm=next(r for r in report['results'] if r['symbol']=='PPM')
+        ppm.update(price=1480,asof='2026-09-28',intraday_status='provisional',
+                   intraday_quote={'price':1395,'asof':'2026-10-23','provisional':True})
+        page=home_page(self.fixture,report,'','')
+        row=re.search(r'<tr data-market-row data-quote-symbol="PPM".*?</tr>',page).group()
+        cells=re.findall(r'<td\b[^>]*>(.*?)</td>',row)
+        self.assertIn('-5,74 %',cells[3])
+        self.assertIn('data-change-reference>Depuis le 28/09/2026',cells[3])
+        self.assertIn('1 480,00 MAD',cells[5])
+        self.assertIn('28/09/2026',cells[5])
 
     def test_each_ticker_has_a_real_page_and_csv_including_missing_histories(self):
         for symbol in self.fixture["symbols"]:

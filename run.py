@@ -227,8 +227,8 @@ def _build(args, output):
         if candidates:
             editions[key] = json.loads(candidates[-1].read_text())
     if slot in EDITIONS: editions[slot]=briefing
-    links = [{"label": b["title"], "date": b["runtime"]["edition_for"],
-              "url": f"briefing-{EDITIONS[key]}.html"} for key,b in editions.items()]
+    from nour.runtime import briefing_links
+    links = briefing_links(editions, overview.get('last_closed'))
     briefing["edition_links"] = links
     briefing['text_url'] = 'briefing.txt'
     (output/'briefing.txt').write_text(briefing_text(briefing),encoding='utf-8')
