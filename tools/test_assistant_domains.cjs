@@ -20,7 +20,6 @@ const cases=[
   ['Quelle activité et variation sur 20 séances ADI ?','technical','Variation sur 20'],
   ['BPA JET','fundamentals','BPA :'],
   ['Comment est calculé le score ADI ?','score','couverture'],
-  ['Statistiques ADI sur 5 séances et Wilson','statistics','Wilson 95'],
   ['Liquidité ADI','liquidity','capacité à 10'],
   ['Risques ADI face au MASI','risk','Corrélation MASI'],
   ['Compare ADI aux titres du même secteur','sector','autres pairs'],
@@ -32,6 +31,15 @@ const cases=[
   ['À quoi sert ECC et y a-t-il une IA générative ?','assistant','ECC'],
 ];
 for(const [q,domain,term] of cases)check(q,r=>r.domain===domain&&r.text.toLowerCase().includes(term.toLowerCase())&&r.sources.length>0);
+{
+  const h=(data.symbols.ADI.historical_statistics?.horizons||[]).find(h=>h.horizon_sessions===5);
+  const r=check('Statistiques ADI sur 5 séances et Wilson',r=>r.domain==='statistics'&&r.sources.length>0);
+  if(h){assert.ok(r.text.includes(`${h.observations} observations`));assert.ok(r.text.includes('Wilson 95'));}
+  else assert.ok(r.text.includes('Aucune statistique de fiche disponible'));
+  const absent=structuredClone(data),reason='Statistiques suspendues après divergence indépendante.';
+  absent.symbols.ADI.historical_statistics={horizons:[],reason};
+  check('Statistiques ADI sur 5 séances et Wilson',r=>r.text.includes('Aucune statistique de fiche disponible')&&r.text.includes(reason)&&!r.text.includes('Wilson 95 %'), 'MASI',{},absent);
+}
 for(const [s,row] of Object.entries(data.symbols)){
   for(const [q,domain,term] of [['Risques','risk','Bêta : '+fmt(row.market_risk?.beta)],['Liquidité','liquidity','Scénario publié : '+fmt(row.liquidity?.scenario_shares)],['Comparables','sector','Secteur '+(row.sector_comparison?.sector||'indisponible')]]){
     check(q+' '+s,r=>r.domain===domain&&r.text.includes(term)&&r.sources.some(x=>x.url===row.url));

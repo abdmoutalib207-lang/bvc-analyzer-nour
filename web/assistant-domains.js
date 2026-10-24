@@ -213,6 +213,7 @@
       for(const row of rows){title(row);const stat=row.historical_statistics||{};let hs=stat.horizons||[];
         if(horizon)hs=hs.filter(h=>h.horizon_sessions===Number(horizon[1]));
         if(!hs.length)lines.push('Aucune statistique de fiche disponible pour cet horizon. Les horizons implémentés sont 1, 5 et 20 observations; le laboratoire utilise une autre méthode.');
+        if(!hs.length&&stat.reason)lines.push(stat.reason);
         for(const h of hs)lines.push(`${h.horizon_sessions} séance(s) : ${h.observations} observations · fréquence positive ${fmt(h.positive_frequency_pct,'%')} · médiane ${fmt(h.median_return_pct,'%')} · percentiles 10 / 90 ${fmt(h.p10_return_pct,'%')} / ${fmt(h.p90_return_pct,'%')} · Wilson 95 % ${h.wilson95_pct?h.wilson95_pct.map(x=>fmt(x,'%')).join(' à '):'indisponible'} · état ${stateLabel(h.state)}.`);
         lines.push(stat.note||defs.statistics);}
       if(!rows.length)lines.push('La fiche de fréquences inconditionnelles n’est pas calculée pour le MASI; ses études de tendances sont dans le laboratoire.');

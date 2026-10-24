@@ -4,7 +4,7 @@ const {localAnswer}=require('../web/assistant.js');
 const query=require('../web/assistant-query.js');
 assert.equal(fs.readFileSync('web/assistant-query.js','utf8'),fs.readFileSync('backend/query.cjs','utf8'),'browser and Worker share the same generated module');
 const data=JSON.parse(fs.readFileSync('web/assistant-data.json','utf8'));
-const before=JSON.stringify(data),fmt=x=>x.toLocaleString('fr-FR',{maximumFractionDigits:2});
+const before=JSON.stringify(data),fmt=x=>Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2}):'indisponible';
 const ranking=query.select(data,'Les 5 PER les plus faibles en 2025');
 const expected=Object.values(data.symbols).filter(r=>r.fundamental.exercise===2025&&Number.isFinite(r.fundamental.pe)).sort((a,b)=>a.fundamental.pe-b.fundamental.pe||a.symbol.localeCompare(b.symbol));
 assert.equal(ranking.matched,expected.length);
