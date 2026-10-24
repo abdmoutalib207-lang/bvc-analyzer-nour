@@ -26,3 +26,15 @@ visible à côté du pourcentage ; référence de la précédente clôture hors
 séance ; lien vers la dernière synthèse malgré une édition de clôture
 ancienne ou absente ; archives inchangées. Les références de mise en service
 de ce lot sont consignées dans sa PR après validation.
+
+## Cause confirmée du scénario navigateur après la collecte du 24 octobre
+
+Le scénario temporaire imposait le 23 octobre à un instantané dont
+`snapshot_updated` était passé au 24. La protection anti-anticipation du moteur
+retirait alors les fondamentaux courants : PER absents, semestre JET nul.
+Cette retenue était correcte ; modifier les calculs ou la protection aurait
+introduit une fuite temporelle. Le scénario conserve maintenant la date de
+connaissance de son instantané pour les deux constructions, saine et dégradée.
+La reproduction sur l'artefact réel confirme que le semestre JET redevient
+disponible au 24, tandis qu'il reste exclu au 23. Les tests complémentaires
+des absences, filtres vides et réponses achevées restent utiles et conservés.
