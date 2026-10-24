@@ -63,6 +63,15 @@ class JetSemester(unittest.TestCase):
                 self.assertEqual(updated['fundamental']['latest_report']['reported_net_millions'], 91.50954252)
                 self.assertEqual(updated['fundamental']['eps_mad'], 73.39)
                 updated['fundamental']['latest_report'] = item['fundamental']['latest_report']
+                new_rows=updated['sector_indicators']['reported_facts']['records']
+                old_rows=item['sector_indicators']['reported_facts']['records']
+                self.assertEqual([r for r in new_rows if not r['id'].startswith('latest-')],
+                                 [r for r in old_rows if not r['id'].startswith('latest-')])
+                net=next(r for r in new_rows if r['id']=='latest-reported_net_millions')
+                self.assertEqual(net['value'],91.50954252)
+                self.assertEqual(net['period_end'],'2026-06-30')
+                self.assertEqual(net['source']['url'],URL)
+                updated['sector_indicators']['reported_facts']=item['sector_indicators']['reported_facts']
             self.assertEqual(updated, item)
 
     def test_page_explains_group_result_comparison_and_source_reservations(self):
