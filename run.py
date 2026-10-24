@@ -40,6 +40,17 @@ def _build(args, output):
     facts=attach_business_facts(facts, load_catalogue(ROOT/'knowledge/business_disclosures'), args.asof)
     news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
+    fact_coverage=[]
+    for row in report['results']:
+        entries=(row.get('sector_indicators',{}).get('reported_facts') or {}).get('records',[])
+        fact_coverage.append(dict(symbol=row['symbol'],records=len(entries),
+            page_checked=sum(e['status']=='page_checked' for e in entries),
+            referenced_to_review=sum(e['status']=='referenced_to_review' for e in entries)))
+    report['reported_fact_coverage']=dict(universe=len(fact_coverage),issuers=fact_coverage,
+        records=sum(r['records'] for r in fact_coverage),
+        issuers_with_records=sum(r['records']>0 for r in fact_coverage),
+        notice='Relevés existants rendus visibles ; aucune nouvelle revue primaire prétendue. Couverture métier à compléter.')
+    atomic_json(output/'releves-couverture.json',report['reported_fact_coverage'])
     overview_path = ROOT/'data/market_overview.json'
     overview = json.loads(overview_path.read_text()) if overview_path.exists() else {}
     from nour.resilience import retained_market_context

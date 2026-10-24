@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
 
 from .sector_methods import guidance
 from .business_disclosures import disclosure_view
+from .reported_facts import reported_facts
 from .financial_audit import REVIEWED, _basis
 
 VERSION = 'nour-sector-calculators-v2'
@@ -145,7 +146,7 @@ def published_kpis(data,family,period,asof):
             except (TypeError,ValueError,OverflowError):valid=False
         out[field]=dict(label=label,value=fact['valeur'] if valid else None,unit=unit,
             status='primary_page_checked' if valid else 'unavailable',source=fact,
-            reason=None if valid else 'Donnée métier primaire ou définition/unité compatible non vérifiée.',
+            reason=None if valid else 'À compléter dans Nour : chiffre, unité ou définition à rapprocher. Consulter les relevés disponibles ci-dessous.',
             used_for_score=False,certified=False)
     return out
 
@@ -314,5 +315,5 @@ def calculate_sector(symbol, record, facts, asof):
         if isinstance(segment,dict) and not segment.get('segments'):
             segments[name] = calculate_sector(symbol,record,{**segment,'segments':{}},asof)
     return dict(version=VERSION,symbol=symbol,family=family,period_end=period,metrics=metrics,
-        segments=segments,published_kpis=kpis,business_disclosures=disclosures,used_for_score=False,documents_certified=False,
+        segments=segments,published_kpis=kpis,business_disclosures=disclosures,reported_facts=reported_facts(f,asof),used_for_score=False,documents_certified=False,
         published_business_kpis_to_collect=guidance(symbol,record)['metrics_to_verify'])
