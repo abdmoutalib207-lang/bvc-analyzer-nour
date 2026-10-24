@@ -14,18 +14,18 @@
     "scheduled_at_basis": null,
     "requested_scheduled_at": null,
     "edition_for": "2026-10-24",
-    "started_at": "2026-10-24T15:43:49+00:00",
-    "built_at": "2026-10-24T15:44:36.679620+00:00",
+    "started_at": "2026-10-24T19:45:43+00:00",
+    "built_at": "2026-10-24T19:48:11.903244+00:00",
     "utc_offset_minutes": 0,
     "delay_minutes": null,
     "late": false,
-    "run_id": "40108280767",
-    "commit": "de4db77b8288edb91f00dcc4fcf6f32ce1fd1a86",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40108280767",
+    "run_id": "40126730886",
+    "commit": "02f1d480014f0a6937337c85605c40feab0bf6b0",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40126730886",
     "collection": {
       "result": "unchanged",
       "label": "Aucune nouveauté",
-      "checked_at": "2026-10-24T15:43:50.192556+00:00",
+      "checked_at": "2026-10-24T19:45:44.244803+00:00",
       "last_session": "2026-10-23",
       "message": "Aucune nouvelle séance vérifiée",
       "conflicts": [],
@@ -33,17 +33,17 @@
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "de4db77b8288edb91f00dcc4fcf6f32ce1fd1a86",
+      "generator_commit": "02f1d480014f0a6937337c85605c40feab0bf6b0",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "fdf9c42037a3649084cf1a905a01b960361eaee63bbccbbce8e65a6d0c749602",
+      "market_snapshot_sha256": "100f7036fd5f851b6724cc2143000eb824c8301553effc2731660c25addecdf1",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
       "status": "detail_matched",
       "session": "2026-10-23",
-      "observed_at": "2026-10-24T15:44:26.783305+00:00",
+      "observed_at": "2026-10-24T19:48:01.996742+00:00",
       "cross_source_verified": true
     }
   },
@@ -57,12 +57,12 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 1451.2,
+    "age_minutes": 1694.8,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-24T15:43:50.192556+00:00",
+  "snapshot_updated": "2026-10-24T19:45:44.244803+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
@@ -3633,6 +3633,40 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "ba4f67cc3985931f4d",
+      "title": "Syria's Energy Comeback Could Reshape Middle East Oil and Gas",
+      "url": "https://oilprice.com/Energy/Energy-General/Syrias-Energy-Comeback-Could-Reshape-Middle-East-Oil-and-Gas.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "2ecb57eaabc25e52f2",
+      "title": "Can Undersea Volcanoes Power Cities? A Seattle Startup Just Took the First Step",
+      "url": "https://oilprice.com/Energy/Energy-General/Can-Undersea-Volcanoes-Power-Cities-A-Seattle-Startup-Just-Took-the-First-Step.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "bf3dc702d5a7e69904",
       "title": "Trump Targets $6.2 Billion Offshore Wind Project Nearing Completion",
       "url": "https://oilprice.com/Alternative-Energy/Wind-Power/Trump-Targets-62-Billion-Offshore-Wind-Project-Nearing-Completion.html",
@@ -3733,40 +3767,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "a4ddf4d90b6adbf9a3",
-      "title": "Trump's Reverse Nixon Strategy: Bring Russia In, Shut China Out",
-      "url": "https://oilprice.com/Energy/Energy-General/Trumps-Reverse-Nixon-Strategy-Bring-Russia-In-Shut-China-Out.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-23T23:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "7e3e17ba1d4aef8489",
-      "title": "U.S. Dips Into Strategic Oil Reserve Again Amid Supply Disruptions",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Dips-Into-Strategic-Oil-Reserve-Again-Amid-Supply-Disruptions.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-23T22:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
@@ -4008,9 +4008,43 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-24T15:44:25.104650+00:00"
+    "observed_at": "2026-10-24T19:47:59.836127+00:00"
   },
   "context_news": [
+    {
+      "id": "ba4f67cc3985931f4d",
+      "title": "Syria's Energy Comeback Could Reshape Middle East Oil and Gas",
+      "url": "https://oilprice.com/Energy/Energy-General/Syrias-Energy-Comeback-Could-Reshape-Middle-East-Oil-and-Gas.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "2ecb57eaabc25e52f2",
+      "title": "Can Undersea Volcanoes Power Cities? A Seattle Startup Just Took the First Step",
+      "url": "https://oilprice.com/Energy/Energy-General/Can-Undersea-Volcanoes-Power-Cities-A-Seattle-Startup-Just-Took-the-First-Step.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "bf3dc702d5a7e69904",
       "title": "Trump Targets $6.2 Billion Offshore Wind Project Nearing Completion",
@@ -4180,46 +4214,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "7d1947f5111676c069",
-      "title": "France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-23T21:26:18+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "f0458d9540b601b8f1",
-      "title": "M. Fouzi LEKJAA présente le Projet de Loi de Finances 2027 devant les deux Chambres du Parlement – MEF – Royaume du Maroc - وزارة الاقتصاد والمالية",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WNjI5d21TTy0wVEE1TG1rcEZSVFVSX2VlbzV5OTlwYUk5V0d2OFllbDdVX0ItZVFLazljSHRaNC1ycWRfa2hJLVNqdHdKWkMyN09HTzY5MXdQampkMGF0aXg0eVlYdms0RHY1Z1lidWFBVDdtbGEwbg?oc=5",
-      "publisher": "Finances Maroc · relais presse",
-      "published_at": "2026-10-23T20:09:06+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "MAROC",
-      "feed_id": "mef",
-      "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-24T15:44:36.679620+00:00",
-    "checked_at": "2026-10-24T15:44:25.856936+00:00",
+    "cutoff": "2026-10-24T19:48:11.903244+00:00",
+    "checked_at": "2026-10-24T19:48:00.926563+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4239,7 +4239,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4256,7 +4256,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4273,7 +4273,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4290,7 +4290,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4312,7 +4312,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4329,7 +4329,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4346,7 +4346,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4363,7 +4363,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4385,7 +4385,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4402,7 +4402,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4419,7 +4419,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           },
           {
@@ -4436,7 +4436,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-24T15:44:25.856936+00:00",
+            "collected_at": "2026-10-24T19:48:00.926563+00:00",
             "collection_state": "collected"
           }
         ]
