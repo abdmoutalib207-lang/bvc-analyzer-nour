@@ -4,7 +4,7 @@ const {localAnswer}=require('../web/assistant.js');
 const query=require('../web/assistant-query.js');
 assert.equal(fs.readFileSync('web/assistant-query.js','utf8'),fs.readFileSync('backend/query.cjs','utf8'),'browser and Worker share the same generated module');
 const data=JSON.parse(fs.readFileSync('web/assistant-data.json','utf8'));
-const before=JSON.stringify(data),fmt=x=>x.toLocaleString('fr-FR',{maximumFractionDigits:2});
+const before=JSON.stringify(data),fmt=x=>Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2}):'indisponible';
 const ranking=query.select(data,'Les 5 PER les plus faibles en 2025');
 const expected=Object.values(data.symbols).filter(r=>r.fundamental.exercise===2025&&Number.isFinite(r.fundamental.pe)).sort((a,b)=>a.fundamental.pe-b.fundamental.pe||a.symbol.localeCompare(b.symbol));
 assert.equal(ranking.matched,expected.length);
@@ -53,7 +53,7 @@ for(const metric of data.knowledge.metric_catalog){
   for(const row of r.rows)assert.equal(row.values[metric.id],read(data.symbols[row.symbol]),metric.id);
 }
 const multi=localAnswer('Cours, PER, RSI et VaR ADI',data,'MASI');
-for(const number of [data.symbols.ADI.price,data.symbols.ADI.fundamental.pe,data.symbols.ADI.technical.rsi14,data.symbols.ADI.market_risk.tail_risk.var95_loss_pct])assert.ok(multi.text.includes(fmt(number)));
+for(const [label,value] of [['Clôture : ',data.symbols.ADI.price],['PER : ',data.symbols.ADI.fundamental.pe],['RSI 14 : ',data.symbols.ADI.technical.rsi14],['VaR historique 95 % · 1 séance : ',data.symbols.ADI.market_risk.tail_risk.var95_loss_pct]])assert.ok(multi.text.includes(label+fmt(value)),label+multi.text);
 for(const label of ['fondamentaux','technique','risques','cours'])assert.ok(multi.text.includes(label));
 for(const warning of data.symbols.ADI.fundamental.warnings)assert.ok(multi.text.includes(warning));
 assert.ok(multi.sources.some(s=>s.url.includes('ADI_RFA_2025.pdf')));

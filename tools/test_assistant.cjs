@@ -14,8 +14,22 @@ assert.ok(!answer.text.includes('selected_pages_reconciled_'));
 assert.ok(answer.text.includes('pages sélectionnées rapprochées, avec réserves'));
 answer=api.localAnswer('Quelle probabilité pour ADI demain ?',data,'MASI');
 assert.ok(answer.text.includes('n’est pas une probabilité de prochaine séance'));
-assert.ok(answer.text.includes('observations'));
+const currentHorizons=data.symbols.ADI.historical_statistics?.horizons||[];
+if(currentHorizons.length){
+  for(const h of currentHorizons)assert.ok(answer.text.includes(`${h.horizon_sessions} séance(s) : ${h.observations} observations`));
+}else{
+  assert.ok(answer.text.includes('Statistiques historiques indisponibles'));
+  if(data.symbols.ADI.historical_statistics?.reason)assert.ok(answer.text.includes(data.symbols.ADI.historical_statistics.reason));
+}
 assert.ok(!answer.text.includes('ACHETER'));
+for(const populated of [false,true]){
+  const fixture=structuredClone(data),reason='Statistiques suspendues après divergence indépendante.';
+  fixture.symbols.ADI.historical_statistics={reason,horizons:populated?[{horizon_sessions:1,observations:17,positive_frequency_pct:60,median_return_pct:1,state:'limited'}]:[]};
+  const response=api.localAnswer('Quelle probabilité pour ADI demain ?',fixture,'MASI').text;
+  if(populated)assert.ok(response.includes('1 séance(s) : 17 observations'));
+  else{assert.ok(response.includes('Statistiques historiques indisponibles : '+reason));assert.ok(!response.includes('fréquence de rendements positifs'));}
+  assert.ok(response.includes('n’est pas une probabilité de prochaine séance'));
+}
 answer=api.localAnswer('MASI le 31/03/26',data,'MASI');
 assert.ok(answer.text.includes('2026-03-31'));
 assert.ok(answer.text.includes(data.masi_history['2026-03-31'].toLocaleString('fr-FR',{maximumFractionDigits:2})));
