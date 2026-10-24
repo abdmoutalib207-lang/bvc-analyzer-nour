@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "max_documents_per_issuer": 2,
+  "profiles": [
+    {
+      "symbol": "TGCC",
+      "scope": "Groupe TGCC",
+      "title": "TGCC — communiqué de résultats semestriels",
+      "issuer_pattern": "\\btgcc\\b",
+      "period_kind": "semester",
+      "hosts": [
+        "www.ammc.ma",
+        "ammc.ma",
+        "tgcc.ma",
+        "www.tgcc.ma"
+      ],
+      "url_pattern": "CP_TGCC_S1_\\d{2}\\.pdf$",
+      "seeds": [
+        "https://www.ammc.ma/sites/default/files/CP_TGCC_S1_26.pdf"
+      ],
+      "fields": [
+        {
+          "id": "backlog",
+          "label": "Carnet de commandes",
+          "pattern": "^\\s*Carnet de commandes \\(M MAD\\)\\s+(?P<value>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)\\s{2,}(?P<previous>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)",
+          "unit": "MDH",
+          "category": "backlog",
+          "definition": "Stock de commandes à la date de clôture ; pas un chiffre d’affaires acquis ni un bénéfice futur.",
+          "number_style": "integer",
+          "currency": "MAD"
+        }
+      ],
+      "reservations": [
+        "Montant précis du tableau conservé ; le texte présente 28,4 milliards sous forme arrondie. Aucun ratio carnet / CA semestriel annualisé."
+      ],
+      "visually_reviewed_hashes": [
+        "c523108f36c3b7889b998099f173c6751def5fd2fef4b219fba144e7f1fb4b0b"
+      ],
+      "discovery_pages": [
+        "https://tgcc.ma/informations-financieres/communiques-de-presse/"
+      ],
+      "link_title_pattern": "resultats.*semestriels.*20\\d{2}",
+      "comparison_header_pattern": "S1\\s*20\\d{2}\\s+S1\\s*20\\d{2}",
+      "comparison_header_template": "S1\\s*{year}\\s+S1\\s*{previous}"
+    },
+    {
+      "symbol": "MSA",
+      "scope": "Groupe Marsa Maroc",
+      "title": "Marsa Maroc — résultats semestriels",
+      "issuer_pattern": "marsa\\s+maroc",
+      "period_kind": "semester",
+      "hosts": [
+        "www.ammc.ma",
+        "ammc.ma",
+        "www.marsamaroc.co.ma",
+        "marsamaroc.co.ma"
+      ],
+      "url_pattern": "(?:Marsa_S1_\\d{2}|[^/]*(?:S1|semestriel)[^/]*)\\.pdf$",
+      "seeds": [
+        "https://www.ammc.ma/sites/default/files/Marsa_S1_26.pdf"
+      ],
+      "fields": [
+        {
+          "id": "traffic-total",
+          "label": "Trafic consolidé",
+          "pattern": "^\\s*(?P<value>\\d+,\\d+)\\s+MILLIONS DE TONNES[^\\n]*\\n\\s*TRAFIC CONSOLIDÉ",
+          "unit": "millions de tonnes",
+          "category": "activity",
+          "definition": "Trafic manutentionné du semestre, unité publiée. Ne pas additionner aux EVP."
+        },
+        {
+          "id": "containers",
+          "label": "Conteneurs — total",
+          "pattern": "^\\s*(?P<value>[\\d.]+)\\s+EVP\\(\\*\\)",
+          "unit": "EVP",
+          "category": "activity",
+          "definition": "Équivalent vingt pieds ; distinct des tonnes.",
+          "number_style": "integer"
+        },
+        {
+          "id": "transshipment",
+          "label": "Conteneurs — transbordement",
+          "pattern": "TRAFIC DE TRANSBORDEMENT\\s*:\\s*(?P<value>[\\d.]+)\\s+EVP",
+          "unit": "EVP",
+          "category": "activity",
+          "definition": "Composante du trafic conteneurs total, pas un total supplémentaire.",
+          "number_style": "integer"
+        },
+        {
+          "id": "import-export",
+          "label": "Conteneurs — import-export",
+          "pattern": "TRAFIC IMPORT-EXPORT\\s*:\\s*(?P<value>[\\d.]+)\\s+EVP",
+          "unit": "EVP",
+          "category": "activity",
+          "definition": "Composante du trafic conteneurs total, pas un total supplémentaire.",
+          "number_style": "integer"
+        },
+        {
+          "id": "liquids",
+          "label": "Vracs liquides",
+          "pattern": "(?P<value>\\d+,\\d+)\\s+MILLIONS DE TONNES\\s*\\n[^\\n]*TRAFIC VRACS LIQUIDES",
+          "unit": "millions de tonnes",
+          "category": "activity",
+          "definition": "Sous-ensemble du trafic manutentionné."
+        },
+        {
+          "id": "solids",
+          "label": "Vracs solides et divers",
+          "pattern": "^\\s*(?P<value>\\d+,\\d+)\\s+MILLIONS DE TONNES[^\\n]*\\n\\s*TRAFIC VRACS SOLIDES",
+          "unit": "millions de tonnes",
+          "category": "activity",
+          "definition": "Sous-ensemble du trafic manutentionné."
+        }
+      ],
+      "sum_checks": [
+        {
+          "total": "containers",
+          "parts": [
+            "transshipment",
+            "import-export"
+          ]
+        }
+      ],
+      "reservations": [
+        "EVP et tonnes restent distincts. Les véhicules et TIR portant le libellé ambigu « milliers d’unités » ne sont pas intégrés automatiquement."
+      ],
+      "visually_reviewed_hashes": [
+        "7462fd671abeb79b3ceb87945962f17f940333de5cc5185ea390276af2aa56ad"
+      ],
+      "discovery_pages": [
+        "https://www.marsamaroc.co.ma/fr/publications-financieres"
+      ],
+      "link_title_pattern": "(?:resultats.*s1|semestriel|s1.*20\\d{2})"
+    },
+    {
+      "symbol": "SMI",
+      "scope": "SMI — mine d’Imiter",
+      "title": "SMI — rapport financier annuel",
+      "issuer_pattern": "\\bsmi\\b",
+      "period_kind": "annual",
+      "hosts": [
+        "www.ammc.ma",
+        "ammc.ma",
+        "www.managemgroup.com",
+        "managemgroup.com"
+      ],
+      "url_pattern": "SMI_RFA_20\\d{2}\\.pdf$",
+      "seeds": [
+        "https://www.ammc.ma/sites/default/files/SMI_RFA_2025.pdf"
+      ],
+      "fields": [
+        {
+          "id": "silver-production",
+          "label": "Argent produit",
+          "pattern": "^\\s*Métal produit \\(Kg\\)\\s+(?P<value>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)\\s{2,}(?P<previous>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)",
+          "unit": "kg",
+          "category": "production",
+          "definition": "Métal produit ; distinct des quantités vendues et des tonnes de minerai.",
+          "number_style": "integer",
+          "metal": "Argent",
+          "quantity_basis": "published_metal"
+        },
+        {
+          "id": "ore-treated",
+          "label": "Minerai traité",
+          "pattern": "^\\s*Minerai traité \\(T\\)\\s+(?P<value>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)\\s{2,}(?P<previous>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)",
+          "unit": "t",
+          "category": "activity",
+          "definition": "Tonnes de minerai traité, pas tonnes d’argent.",
+          "number_style": "integer",
+          "metal": "Argent"
+        },
+        {
+          "id": "silver-grade",
+          "label": "Teneur du minerai",
+          "pattern": "^\\s*Teneur \\(g Ag/t\\)\\s+(?P<value>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)\\s{2,}(?P<previous>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)",
+          "unit": "g Ag/t",
+          "category": "activity",
+          "definition": "Grammes d’argent par tonne de minerai, pas une quantité produite.",
+          "metal": "Argent"
+        },
+        {
+          "id": "metal-recovery",
+          "label": "Rendement métal",
+          "pattern": "^\\s*Rendement métal \\(%\\)\\s+(?P<value>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)\\s{2,}(?P<previous>\\d+(?:[ .]\\d{3})*(?:[.,]\\d+)?)",
+          "unit": "%",
+          "category": "activity",
+          "definition": "Rendement métal publié, pas une marge financière.",
+          "metal": "Argent",
+          "max": 100
+        },
+        {
+          "id": "aisc",
+          "label": "AISC publié, approximatif",
+          "pattern": "AISC\\s+RESSOURCES M&I\\s+~\\s*(?P<value>\\d+)\\s+\\$/Oz",
+          "unit": "USD/oz",
+          "category": "unit_cost",
+          "definition": "AISC approximatif publié par SMI pour sa mine ; ne représente pas le coût du groupe Managem.",
+          "currency": "USD",
+          "metal": "Argent",
+          "approximate": true
+        },
+        {
+          "id": "capex-reported",
+          "label": "CAPEX publié — chiffre clé",
+          "pattern": "CHIFFRE D.AFFAIRES\\s+CAPEX\\s+(?:[\\d.,]+%\\s+)?[\\d ]+MMAD\\s+(?P<value>\\d+)\\s+MMAD",
+          "unit": "MDH",
+          "category": "investments",
+          "definition": "CAPEX du tableau des chiffres clés ; pas automatiquement assimilé à un décaissement TFT.",
+          "currency": "MAD"
+        }
+      ],
+      "reservations": [
+        "L’AISC est publié sous forme approximative (~22 USD/oz pour 2025). Aucun coût unitaire du groupe Managem n’en est déduit. Le CAPEX des chiffres clés reste distinct du CAPEX décaissé."
+      ],
+      "visually_reviewed_hashes": [
+        "bc2bb4e05cc46a60f1ebb13b7cd0ad276219700b6c70d98852ce4b4295cf4f3a"
+      ],
+      "discovery_pages": [
+        "https://www.managemgroup.com/investisseurs/smi/rapports-annuels"
+      ],
+      "link_title_pattern": "smi.*annuel.*20\\d{2}",
+      "comparison_header_pattern": "31/12/20\\d{2}\\s+31/12/20\\d{2}",
+      "comparison_header_template": "31/12/{year}\\s+31/12/{previous}"
+    }
+  ]
+}

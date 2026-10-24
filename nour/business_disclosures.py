@@ -11,8 +11,8 @@ import re
 from urllib.parse import urlsplit
 
 VERSION = 'nour-business-disclosures-v1'
-CATEGORIES = {'production', 'expenses', 'investments', 'cash_flows'}
-OFFICIAL_HOSTS = {'www.managemgroup.com', 'managemgroup.com', 'www.ammc.ma', 'ammc.ma'}
+CATEGORIES = {'production', 'expenses', 'investments', 'cash_flows', 'activity', 'backlog', 'unit_cost'}
+OFFICIAL_HOSTS = {'www.managemgroup.com', 'managemgroup.com', 'www.ammc.ma', 'ammc.ma', 'www.marsamaroc.co.ma', 'marsamaroc.co.ma', 'tgcc.ma', 'www.tgcc.ma'}
 
 
 def load_catalogue(directory):
@@ -29,7 +29,7 @@ def disclosure_view(catalogue, asof):
         reviewed = date.fromisoformat(catalogue['reviewed_on'])
         current = date.fromisoformat(asof)
         valid = (catalogue['schema_version'] == VERSION
-                 and catalogue['validation_status'] == 'selected_pages_visually_checked'
+                 and catalogue['validation_status'] in ('selected_pages_visually_checked', 'automatic_text_extraction')
                  and reviewed <= available <= current)
     except (KeyError, TypeError, ValueError):
         valid = False
@@ -52,7 +52,7 @@ def disclosure_view(catalogue, asof):
             url = urlsplit(source.get('url', ''))
             ok = (isinstance(row['id'], str) and row['id'] not in seen and bool(row['label']) and bool(row['scope'])
                   and bool(row['definition']) and row['category'] in CATEGORIES
-                  and start <= end <= current
+                  and start <= end <= current and date.fromisoformat(row.get('available_from',catalogue['available_from']))<=current
                   and ((row['period_kind'] == 'annual' and start.month == 1 and start.day == 1
                         and end.month == 12 and end.day == 31 and start.year == end.year)
                        or (row['period_kind'] == 'semester' and start.month == 1 and start.day == 1
@@ -67,19 +67,23 @@ def disclosure_view(catalogue, asof):
                   and ((physical and unit in ('TC', 'kg', 'TM') and row['value'] >= 0
                         and bool(row.get('metal')) and row.get('quantity_basis') ==
                         ('concentrate' if unit == 'TC' else 'published_metal'))
-                       or (not physical and unit == 'MDH' and row.get('currency') == 'MAD')))
+                       or (not physical and unit == 'MDH' and row.get('currency') == 'MAD')
+                       or (row['category']=='activity' and unit in ('millions de tonnes','EVP','t','g Ag/t','%') and row['value']>=0)
+                       or (row['category']=='unit_cost' and unit=='USD/oz' and row.get('currency')=='USD' and row.get('metal') and row['value']>=0)))
             if not ok:
                 reason = 'Valeur, unité, période, périmètre ou preuve primaire non vérifiée.'
         except (KeyError, TypeError, ValueError, OverflowError):
             reason = 'Valeur, unité, période, périmètre ou preuve primaire non vérifiée.'
         if isinstance(row.get('id'), str):
             seen.add(row['id'])
-        row.update(source=deepcopy(source), status='primary_page_checked' if reason is None else 'unavailable',
+        extraction = catalogue['validation_status']=='automatic_text_extraction' and source.get('review_status')!='selected_pages_visually_checked'
+        row.update(source=deepcopy(source), status=('automatic_text_extracted' if extraction else 'primary_page_checked') if reason is None else 'unavailable',
                    reason=reason, value=row.get('value') if reason is None else None,
                    used_for_score=False, certified=False)
         records.append(row)
     return {'version': VERSION, 'records': records, 'reservations': deepcopy(catalogue.get('reservations', [])),
             'reviewed_on': catalogue['reviewed_on'], 'available_from': catalogue['available_from'],
+            'collection_status':catalogue.get('collection_status'),
             'used_for_score': False, 'certified': False}
 
 

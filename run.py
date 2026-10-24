@@ -37,7 +37,12 @@ def _build(args, output):
     validate_fixture(fixture, json.loads((ROOT/'data/source_codes.json').read_text()))
     fixture = apply_status(fixture, json.loads((ROOT/'data/issuer_status.json').read_text()), args.asof)
     facts=json.loads((ROOT/"data/facts_reference.json").read_text(encoding="utf-8")).get("records",{})
-    facts=attach_business_facts(facts, load_catalogue(ROOT/'knowledge/business_disclosures'), args.asof)
+    catalogues=load_catalogue(ROOT/'knowledge/business_disclosures')
+    ingestion_path=ROOT/'data/sector_disclosures.json'
+    ingestion=json.loads(ingestion_path.read_text()) if ingestion_path.exists() else {}
+    # Static reviewed catalogues (including MNG) are never overwritten by a feed.
+    catalogues={**ingestion.get('catalogues',{}),**catalogues}
+    facts=attach_business_facts(facts,catalogues,args.asof)
     news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
     fact_coverage=[]
@@ -51,6 +56,7 @@ def _build(args, output):
         issuers_with_records=sum(r['records']>0 for r in fact_coverage),
         notice='Relevés existants rendus visibles ; aucune nouvelle revue primaire prétendue. Couverture métier à compléter.')
     atomic_json(output/'releves-couverture.json',report['reported_fact_coverage'])
+    atomic_json(output/'collecte-metiers.json',ingestion)
     overview_path = ROOT/'data/market_overview.json'
     overview = json.loads(overview_path.read_text()) if overview_path.exists() else {}
     from nour.resilience import retained_market_context

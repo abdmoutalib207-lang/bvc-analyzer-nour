@@ -189,3 +189,7 @@ if(data.symbols.MNG.business_disclosures?.records?.length){
 for(const symbol of ['ADI','ATW','ENK','SMI','MSA']){
   check('Relevés '+symbol,r=>r.domain==='business'&&r.text.includes(symbol)&&r.sources.some(s=>s.url.endsWith('#releves-disponibles')),symbol);
 }
+
+check('Carnet de commandes TGCC S1 2026',r=>r.domain==='business'&&r.text.includes('28 360 MDH'),'TGCC');
+check('Trafic MSA S1 2026',r=>r.domain==='business'&&r.text.includes('34,5 millions de tonnes')&&r.text.includes('1 520 260 EVP'),'MSA');
+check('AISC SMI 2025',r=>r.domain==='business'&&r.text.includes('≈ 22 USD/oz')&&!r.text.includes('aucune valeur vérifiée'),'SMI');
