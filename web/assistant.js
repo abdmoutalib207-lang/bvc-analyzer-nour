@@ -393,6 +393,7 @@
         lines.push('Un ratio absent reste indisponible. Le semestre n’est pas annualisé; PNB et chiffre d’affaires restent distincts.');
       }else if(probability){
         const stats=row.historical_statistics||{}, horizons=stats.horizons||[];
+        if(!horizons.length)lines.push('Statistiques historiques indisponibles : '+(stats.reason||'aucun horizon statistique validé dans cet export.'));
         for(const h of horizons)lines.push(`${h.horizon_sessions} séance(s) : ${h.observations} observations · fréquence de rendements positifs ${fmt(h.positive_frequency_pct,'%')} · médiane ${fmt(h.median_return_pct,'%')} · état ${h.state}.`);
         lines.push(stats.note||data.definitions.probability);
       }else if(score){
