@@ -49,10 +49,10 @@ def sector_card(row):
             f'<ul>{sources}</ul><p>{e(reason)} {e(m.get("notes"))}</p>'
             f'<a href="{e(m["methodology_url"])}" rel="noopener noreferrer">Référence méthodologique</a>'
             '</details></td></tr>')
-    kpis=''.join('<li>'+e(k['label'])+' : '+(e(k['value'])+' '+e(k['unit']) if k['value'] is not None else 'Indisponible — '+e(k['reason']))+'</li>' for k in sector.get('published_kpis',{}).values())
+    kpis=''.join('<li>'+e(k['label'])+((' · '+e(k['source'].get('period_end'))) if k.get('value') is not None and isinstance(k.get('source'),dict) else '')+' : '+(e(k['value'])+' '+e(k['unit']) if k['value'] is not None else e(k['reason']) if k.get('status')=='published_breakdown' else 'Indisponible — '+e(k['reason']))+'</li>' for k in sector.get('published_kpis',{}).values())
     return ('<section class="panel" data-sector-calculators><h2>Calculs du métier</h2>'
-        f'<p>{e(sector.get("family"))} · Méthodes séparées du score. Une formule implémentée ne signifie pas que ses données sont publiées.</p>'
-        +('<h3>Indicateurs publiés du métier</h3><ul>'+kpis+'</ul>' if kpis else '')+'<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Traçabilité</th></tr></thead><tbody>'
+        f'<p>{e(sector.get("family"))} · Méthodes séparées du score. Les chiffres publiés sont présentés séparément des ratios calculables.</p>'
+        +('<h3>Indicateurs publiés du métier</h3><ul>'+kpis+'</ul>' if kpis else '')+business_disclosures_card(sector.get('business_disclosures') or {})+'<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Traçabilité</th></tr></thead><tbody>'
         +''.join(rows)+'</tbody></table></div><p><a href="../couverture.json">Entrées et état de couverture des 80 sociétés</a></p></section>')
 
 
@@ -68,3 +68,52 @@ def quality_card(row):
         +(f'<p>Dernier état sain conservé : séance {e(old.get("asof"))}, contrôlé {e(old.get("validated_at"))}. '
           'Archive distincte ; aucune nouvelle cotation attestée.</p>' if old else '')
         +f'<a href="../anomalies.html">Historique des anomalies de {e(row["symbol"])}</a></section>')
+
+
+def business_disclosures_card(block):
+    """Display raw published figures even when no compatible ratio exists."""
+    from decimal import Decimal
+    e = lambda x: escape(str(x if x is not None else 'Non communiqué'))
+    records = block.get('records', [])
+    if not records:
+        return ''
+    labels = {'production': 'Production par métal et filiale', 'expenses': 'Charges comptables publiées',
+              'investments': 'Investissements de gestion', 'cash_flows': 'Décaissements et flux de trésorerie'}
+    groups = {}
+    for row in records:
+        groups.setdefault((row.get('category'), row.get('period_end'), row.get('period_kind')), []).append(row)
+    parts = []
+    for category in labels:
+        for (cat, end, kind), rows in sorted(groups.items(), key=lambda x: str(x[0][1]), reverse=True):
+            if cat != category:
+                continue
+            period = ('S1 ' if kind == 'semester' else 'Année ') + str(end)[:4]
+            body = []
+            for row in rows:
+                value = 'Indisponible'
+                if row['value'] is not None:
+                    number = format(Decimal(str(row['value'])), ',f')
+                    if '.' in number:
+                        number = number.rstrip('0').rstrip('.')
+                    value = e(number.replace(',', ' ').replace('.', ',')) + ' ' + e(row['unit'])
+                source = row.get('source') or {}
+                url = source.get('url', '')
+                link = (f'<a href="{e(url)}#page={e(row.get("page"))}" rel="noopener noreferrer">{e(source.get("title"))} · page PDF {e(row.get("page"))}</a>'
+                        if row.get('status') == 'primary_page_checked' else 'Preuve non vérifiée')
+                body.append(f'<tr data-business-id="{e(row.get("id"))}" data-business-value="{e(row.get("value"))}">'
+                    f'<td>{e(row.get("label"))}<small class="quote-kind">{e(row.get("scope"))}</small></td>'
+                    f'<td>{value}</td><td><details><summary>Source et définition</summary>{link}'
+                    f'<p>Page imprimée {e(row.get("printed_page"))} · {e(row.get("period_start"))} → {e(end)}</p>'
+                    f'<p>{e(row.get("definition"))}</p><p>{e(row.get("note", ""))}</p>'
+                    +(f'<p>{e(row["reason"])}</p>' if row.get('reason') else '')
+                    +f'<small class="source-hash">{e(source.get("document_hash"))}</small></details></td></tr>')
+            opened = ' open' if category in ('production', 'cash_flows') and end == max(str(r.get('period_end')) for r in records if r.get('category') == category) else ''
+            parts.append(f'<details data-business-group="{e(category)}-{e(end)}"{opened}><summary>{e(labels[category])} · {e(period)} · {len(rows)} chiffres</summary>'
+                '<div class="tablewrap"><table><thead><tr><th>Indicateur et périmètre</th><th>Valeur publiée</th><th>Traçabilité</th></tr></thead><tbody>'
+                + ''.join(body) + '</tbody></table></div></details>')
+    return ('<div id="chiffres-metier" class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
+        '<p>Valeurs publiées conservées avec leur unité et leur signe. TC = tonnes de concentré ; kg = kilogrammes ; TM = tonnes métriques ; MDH = millions de dirhams. '
+        'Aucun total entre métaux. Les charges comptables ne constituent pas un AISC. Un décaissement est négatif dans le tableau de trésorerie.</p>'
+        + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
+        + ''.join('<li>' + e(note) + '</li>' for note in block.get('reservations', [])) + '</ul></details>'
+        + f'<p>Relevé contrôlé le {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')

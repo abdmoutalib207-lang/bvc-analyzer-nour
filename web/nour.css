@@ -179,3 +179,11 @@ html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
   [data-sector-calculators] summary{min-height:24px;line-height:1.5}
   [data-sector-calculators] details ul{padding-left:20px}
 }
+
+.business-disclosures{min-width:0;margin-block:1.25rem}
+.business-disclosures>details{margin-block:.75rem}
+.business-disclosures summary{cursor:pointer;padding-block:.4rem}
+.business-disclosures td:first-child{min-width:12rem}
+.business-disclosures td:nth-child(2){white-space:nowrap}
+.business-disclosures .source-hash{overflow-wrap:anywhere;word-break:break-all}
+.business-disclosures td p{max-width:36rem;white-space:normal}

@@ -39,6 +39,9 @@ def prepare(root, inputs):
     analysis_date = inputs[0]['snapshot_updated'][:10]
     shutil.copytree(ROOT/'data', root/'data')
     shutil.copytree(ROOT/'web', root/'web')
+    # The publication consumes reviewed business documents as well as data/.
+    # Keep those exact inputs in both the healthy and quarantined builds.
+    shutil.copytree(ROOT/'knowledge', root/'knowledge')
     fixture, proof = reconcile_volumes(*inputs, now=NOW, allow_local_isolation=True)
     atomic_json(root/'data/market_snapshot.json', fixture)
     proof['validated_snapshot_sha256'] = hashlib.sha256((root/'data/market_snapshot.json').read_bytes()).hexdigest()
@@ -55,6 +58,10 @@ def prepare(root, inputs):
     atomic_json(root/'web/publication.json', manifest)
     report=json.loads((root/'web/report.json').read_text())
     assert report['analysis_date']==fixture['snapshot_updated'][:10]
+    expected=json.loads((ROOT/'knowledge/business_disclosures/MNG.json').read_text())
+    if analysis_date >= expected['available_from']:
+        mng=next(r for r in report['results'] if r['symbol']=='MNG')
+        assert len(mng['sector_indicators']['business_disclosures']['records']) == len(expected['records'])
     assert manifest['generator_commit']==report['runtime']['commit']==commit
     assert ('data-generator="'+commit+'"') in (root/'web/index.html').read_text()
     return report

@@ -10,6 +10,7 @@ import re
 from urllib.parse import urlsplit
 
 from .sector_methods import guidance
+from .business_disclosures import disclosure_view
 from .financial_audit import REVIEWED, _basis
 
 VERSION = 'nour-sector-calculators-v2'
@@ -298,11 +299,20 @@ def calculate_sector(symbol, record, facts, asof):
             document_date=f.get('document_date'),document_date_status='documented' if f.get('document_date') else 'not_documented',
             methodology_url=REFERENCES[spec['reference']],notes=spec['note'],reasons=problems,
             used_for_score=False,certified=False)
+    disclosures = disclosure_view(f.get('business_disclosures'), asof)
+    kpis = published_kpis(data,family,period,asof)
+    if family == 'Mines' and any(r['status'] == 'primary_page_checked' and r['category'] == 'production' for r in disclosures['records']):
+        kpis['production_miniere'].update(status='published_breakdown', reason='Quantités publiées détaillées ci-dessous par métal, filiale et période ; aucun total d’unités hétérogènes.')
+    if family == 'Mines' and disclosures['records']:
+        for problem in metrics['mine_unit_cost']['reasons']:
+            if problem.get('field') == 'production_miniere':
+                problem['reason'] = 'Productions publiées par métal et unité distincts ; aucun dénominateur unique compatible pour un coût unitaire du groupe.'
+        kpis['cout_production_mad']['reason'] = 'Coût unitaire minier du groupe non vérifié ; charges comptables publiées détaillées ci-dessous, distinctes du cash cost et de l’AISC.'
     # Segments stay separate; never sum their revenue without eliminations.
     segments = {}
     for name,segment in (f.get('segments') or {}).items():
         if isinstance(segment,dict) and not segment.get('segments'):
             segments[name] = calculate_sector(symbol,record,{**segment,'segments':{}},asof)
     return dict(version=VERSION,symbol=symbol,family=family,period_end=period,metrics=metrics,
-        segments=segments,published_kpis=published_kpis(data,family,period,asof),used_for_score=False,documents_certified=False,
+        segments=segments,published_kpis=kpis,business_disclosures=disclosures,used_for_score=False,documents_certified=False,
         published_business_kpis_to_collect=guidance(symbol,record)['metrics_to_verify'])

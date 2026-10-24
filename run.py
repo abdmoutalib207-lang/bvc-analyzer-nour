@@ -7,6 +7,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 from nour.engine import build_report
+from nour.business_disclosures import attach_business_facts, load_catalogue
 from nour.issuer_status import apply_status
 from nour.market_integrity import visible_integrity, memory_summary
 from nour.market_reference import apply_market_reference
@@ -36,6 +37,7 @@ def _build(args, output):
     validate_fixture(fixture, json.loads((ROOT/'data/source_codes.json').read_text()))
     fixture = apply_status(fixture, json.loads((ROOT/'data/issuer_status.json').read_text()), args.asof)
     facts=json.loads((ROOT/"data/facts_reference.json").read_text(encoding="utf-8")).get("records",{})
+    facts=attach_business_facts(facts, load_catalogue(ROOT/'knowledge/business_disclosures'), args.asof)
     news=json.loads((ROOT/"data/news.json").read_text(encoding="utf-8"))
     report = build_report(fixture, args.asof, facts=facts, news=news.get("articles",[]))
     overview_path = ROOT/'data/market_overview.json'

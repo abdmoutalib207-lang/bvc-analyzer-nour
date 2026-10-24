@@ -73,6 +73,7 @@ def build_data(report, briefings=None, history_files=None):
         row = {k: deepcopy(item.get(k)) for k in SYMBOL_FIELDS}
         f = item.get('fundamental') or {}
         row['fundamental'] = {k: deepcopy(f.get(k)) for k in FUNDAMENTAL_FIELDS}
+        row['business_disclosures'] = deepcopy((item.get('sector_indicators') or {}).get('business_disclosures') or {})
         row['url'] = f"titres/{item['symbol']}.html"
         symbols[item['symbol']] = row
     result = clean({'schema_version': VERSION, 'analysis_date': report['analysis_date'],
