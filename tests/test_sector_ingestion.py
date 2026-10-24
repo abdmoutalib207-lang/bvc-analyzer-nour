@@ -114,3 +114,19 @@ TRAFIC IMPORT-EXPORT : 697.595 EVP
                 with self.assertRaises(subprocess.CalledProcessError):download(url,profile,cache)
             self.assertEqual(tag.read_text(),'old-etag')
             self.assertEqual(target.read_bytes(),b'%PDF- old complete document')
+
+    def test_batches_rotate_with_a_hard_bound_and_keep_pending_candidates(self):
+        profiles=[]
+        for i in range(5):
+            p=deepcopy(self.config['profiles'][0]);p['symbol']='T'+str(i);profiles.append(p)
+        calls=[]
+        def offline(url,p,cache):calls.append(p['symbol']);raise OSError('offline')
+        def no_page(*a,**k):raise OSError('offline')
+        pending={'symbol':'T4','field':'backlog','reason':'published_value_conflict','url':profiles[0]['seeds'][0]}
+        state={'candidates':[pending]}
+        a=collect({'profiles':profiles},state,{},Path('/tmp/unused'),now='2026-10-24',fetch=offline,page_fetch=no_page)
+        self.assertEqual(set(calls),{'T0','T1','T2'});self.assertIn(pending,a['candidates'])
+        calls.clear()
+        b=collect({'profiles':profiles},a,{},Path('/tmp/unused'),now='2026-10-25',fetch=offline,page_fetch=no_page)
+        self.assertEqual(set(calls),{'T3','T4','T0'});self.assertEqual(set(b['health']),{'T0','T1','T2','T3','T4'})
+        self.assertIn(pending,b['candidates'])

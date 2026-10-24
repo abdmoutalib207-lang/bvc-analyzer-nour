@@ -133,7 +133,10 @@ def download(url,profile,cache):
 
 def collect(config,previous,discovered,cache,now=None,fetch=download,page_fetch=fetch_page):
     observed=now or datetime.now(timezone.utc).isoformat();out=deepcopy(previous or {})
-    out.update(version=VERSION,checked_at=observed);out.setdefault('catalogues',{});out['health']={};out['candidates']=[];out.setdefault('incidents',{})
+    out.update(version=VERSION,checked_at=observed);out.setdefault('catalogues',{});out.setdefault('health',{});out.setdefault('candidates',[]);out.setdefault('incidents',{})
+    profiles=config['profiles'];cursor=int(out.get('cursor',0))%max(1,len(profiles))
+    count=min(3,len(profiles));batch=[profiles[(cursor+i)%len(profiles)] for i in range(count)] if profiles else []
+    out['cursor']=(cursor+count)%max(1,len(profiles));out['batch_symbols']=[p['symbol'] for p in batch]
     def issuer(profile):
         urls=list(profile['seeds']);titles={};page_failures=[]
         origins=['https://'+h for h in profile['hosts']]
@@ -166,7 +169,7 @@ def collect(config,previous,discovered,cache,now=None,fetch=download,page_fetch=
                 failures.append(dict(url=url,reason='source_or_contract_unavailable'))
         return profile,results,failures
     with ThreadPoolExecutor(max_workers=3) as pool:
-        for profile,results,failures in pool.map(issuer,config['profiles']):
+        for profile,results,failures in pool.map(issuer,batch):
             symbol=profile['symbol'];old=out['catalogues'].get(symbol)
             catalogue=deepcopy(old) if old else dict(schema_version='nour-business-disclosures-v1',symbol=symbol,
                 available_from=observed[:10],reviewed_on=observed[:10],validation_status='automatic_text_extraction',documents={},records=[],
@@ -193,4 +196,5 @@ def collect(config,previous,discovered,cache,now=None,fetch=download,page_fetch=
                 key=hashlib.sha256((symbol+'|'+incident['url']+'|'+incident['reason']).encode()).hexdigest()
                 prior=out['incidents'].get(key,{**incident,'symbol':symbol,'first_seen':observed,'occurrences':0})
                 out['incidents'][key]={**prior,'last_seen':observed,'occurrences':prior['occurrences']+1}
+    out['candidates']=list({hashlib.sha256(json.dumps(c,sort_keys=True).encode()).hexdigest():c for c in out['candidates']}.values())
     return out

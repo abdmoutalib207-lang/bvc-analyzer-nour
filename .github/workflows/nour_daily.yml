@@ -32,6 +32,7 @@ on:
       - 'web/assistant-config.json'
       - 'web/nour.css'
       - 'web/logos/**'
+      - 'data/sector_disclosures.json'
       - 'data/company_logos.json'
       - 'data/market_reference.json'
       - 'data/volume_history.json'
