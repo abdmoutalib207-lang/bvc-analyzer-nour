@@ -35,7 +35,7 @@ async function answerAfter(page,action){
       const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
         if(route==='index.html'){
           assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
@@ -293,6 +293,21 @@ async function answerAfter(page,action){
             assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Reported facts overflow '+symbol+' '+width);
             await facts.locator(':scope > summary').click();
           }
+        }
+        if(['titres/TGCC.html','titres/MSA.html','titres/SMI.html'].includes(route)){
+          const symbol=route.split('/')[1].split('.')[0];
+          const records=marketReport.results.find(r=>r.symbol===symbol).sector_indicators.business_disclosures.records;
+          const block=page.locator('[data-business-disclosures]');
+          assert.ok(records.length>0);
+          assert.equal(await block.locator('[data-business-id]').count(),records.length);
+          const id=symbol==='TGCC'?'backlog-2026-06-30':symbol==='MSA'?'traffic-total-2026-06-30':'aisc-2025-12-31';
+          const line=block.locator(`[data-business-id="${id}"]`);
+          await line.evaluate(el=>{for(let n=el.parentElement;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;});
+          assert.ok((await line.innerText()).includes(symbol==='TGCC'?'28 360 MDH':symbol==='MSA'?'34,5 millions de tonnes':'≈ 22 USD/oz'));
+          await line.locator('summary').click();
+          assert.ok(await line.locator('a').count());
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Business collector overflow '+symbol+' '+width);
+          if(shots){fs.mkdirSync(shots,{recursive:true});await block.screenshot({path:path.join(shots,`business-${symbol}-${width}.png`)});}
         }
         if(route==='titres/MNG.html'){
           const block=page.locator('[data-business-disclosures]');

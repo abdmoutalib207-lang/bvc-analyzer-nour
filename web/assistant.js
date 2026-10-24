@@ -417,7 +417,7 @@
     const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
     if(guard)return guard;
     const q=normalize(question),dates=datesIn(question);
-    if(!dates.length&&/releves|chiffres documentes|donnees publiees|production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
+    if(!dates.length&&/releves|chiffres documentes|donnees publiees|trafic|carnet.*command|production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
       const business=domains?.answer(question,data,symbols,state);if(business?.domain==='business')return business;
     }
     for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]],[/\bema\s*(\d+)\b/,[20,50]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes simples : 20, 50 et 200 séances; EMA : 20 et 50 séances.',sources:[],symbols,mode:'local'};}

@@ -302,13 +302,18 @@ def calculate_sector(symbol, record, facts, asof):
             used_for_score=False,certified=False)
     disclosures = disclosure_view(f.get('business_disclosures'), asof)
     kpis = published_kpis(data,family,period,asof)
-    if family == 'Mines' and any(r['status'] == 'primary_page_checked' and r['category'] == 'production' for r in disclosures['records']):
+    if family == 'Mines' and any(r['status'] in ('primary_page_checked','automatic_text_extracted') and r['category'] == 'production' for r in disclosures['records']):
         kpis['production_miniere'].update(status='published_breakdown', reason='Quantités publiées détaillées ci-dessous par métal, filiale et période ; aucun total d’unités hétérogènes.')
     if family == 'Mines' and disclosures['records']:
         for problem in metrics['mine_unit_cost']['reasons']:
             if problem.get('field') == 'production_miniere':
                 problem['reason'] = 'Productions publiées par métal et unité distincts ; aucun dénominateur unique compatible pour un coût unitaire du groupe.'
         kpis['cout_production_mad']['reason'] = 'Coût unitaire minier du groupe non vérifié ; charges comptables publiées détaillées ci-dessous, distinctes du cash cost et de l’AISC.'
+    if family=='Mines' and any(r['value'] is not None and r['category']=='unit_cost' for r in disclosures['records']):
+        kpis['cout_production_mad'].update(status='published_breakdown',reason='AISC publié détaillé ci-dessous dans sa devise et son unité ; aucun coût total en MAD déduit.')
+    for field,category in (('trafic_portuaire','activity'),('carnet_commandes','backlog')):
+        if field in kpis and any(r['value'] is not None and r['category']==category for r in disclosures['records']):
+            kpis[field].update(status='published_breakdown',reason='Chiffres publiés détaillés ci-dessous avec leur unité et leur période ; lecture automatique identifiée comme telle.')
     # Segments stay separate; never sum their revenue without eliminations.
     segments = {}
     for name,segment in (f.get('segments') or {}).items():

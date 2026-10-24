@@ -72,10 +72,13 @@
       if(!rows.length)lines.push('Précisez le titre pour lire ses relevés documentés.');
       return result('business');
     }
-    if(/production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
+    if(/trafic|carnet.*command|production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
       const categories=[];
       if(/production/.test(q)&&!/cout.*production/.test(q))categories.push('production');
       if(/charges?|cout|cash.cost|aisc/.test(q))categories.push('expenses');
+      if(/aisc|cout.*minier/.test(q))categories.push('unit_cost');
+      if(/trafic/.test(q))categories.push('activity');
+      if(/carnet.*command/.test(q))categories.push('backlog');
       if(/investissement/.test(q)&&!/flux.*investissement/.test(q))categories.push('investments');
       if(/capex|decaisse|flux|tresorerie/.test(q))categories.push('cash_flows');
       const years=[...q.matchAll(/\b20\d{2}\b/g)].map(m=>m[0]);
@@ -92,10 +95,10 @@
         lines.push(`${row.symbol} · chiffres publiés du métier · ${second?'S2':semester?'S1':'annuel'} · ${years.join(', ')||year||'période indisponible'}.`);
         if(!records.length)lines.push('Aucun chiffre vérifié pour cette rubrique et cette période dans Nour. Cela ne signifie pas que la société ne le publie pas.');
         for(const r of records){
-          lines.push(`${r.label} · ${r.scope} · ${r.period_start} → ${r.period_end} : ${fmt(r.value,r.unit)} · page PDF ${r.page}. ${r.definition}${r.note?' '+r.note:''}${r.reason?' '+r.reason:''}`);
+          lines.push(`${r.label} · ${r.scope} · ${r.period_start} → ${r.period_end} : ${r.approximate?'≈ ':''}${fmt(r.value,r.unit)} · page PDF ${r.page}. ${r.definition}${r.note?' '+r.note:''}${r.reason?' '+r.reason:''}`);
           if(r.status==='primary_page_checked'&&r.source?.url)link(`${r.source.title} · page PDF ${r.page}`,r.source.url+'#page='+r.page);
         }
-        if(/aisc|cash.cost|cout.*(?:minier|production)/.test(q))lines.push('AISC / cash cost du groupe : aucune valeur vérifiée dans ce relevé. Les charges IFRS ci-dessus ne constituent pas un coût unitaire de production.');
+        if(/aisc|cash.cost|cout.*(?:minier|production)/.test(q)&&!records.some(r=>r.category==='unit_cost'))lines.push('AISC / cash cost du groupe : aucune valeur vérifiée dans ce relevé. Les charges IFRS ci-dessus ne constituent pas un coût unitaire de production.');
         lines.push(...(block.reservations||[]));link(`Fiche ${row.symbol} · chiffres et réserves`,row.url);
       }
       lines.push('Lecture locale des publications ; aucun effet sur le score.');

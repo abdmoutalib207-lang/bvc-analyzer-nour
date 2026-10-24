@@ -78,7 +78,7 @@ def business_disclosures_card(block):
     if not records:
         return ''
     labels = {'production': 'Production par métal et filiale', 'expenses': 'Charges comptables publiées',
-              'investments': 'Investissements de gestion', 'cash_flows': 'Décaissements et flux de trésorerie'}
+              'investments': 'Investissements de gestion', 'cash_flows': 'Décaissements et flux de trésorerie', 'activity':'Indicateurs opérationnels publiés', 'backlog':'Carnet de commandes publié', 'unit_cost':'Coûts unitaires publiés'}
     groups = {}
     for row in records:
         groups.setdefault((row.get('category'), row.get('period_end'), row.get('period_kind')), []).append(row)
@@ -95,15 +95,15 @@ def business_disclosures_card(block):
                     number = format(Decimal(str(row['value'])), ',f')
                     if '.' in number:
                         number = number.rstrip('0').rstrip('.')
-                    value = e(number.replace(',', ' ').replace('.', ',')) + ' ' + e(row['unit'])
+                    value = ('≈ ' if row.get('approximate') else '') + e(number.replace(',', ' ').replace('.', ',')) + ' ' + e(row['unit'])
                 source = row.get('source') or {}
                 url = source.get('url', '')
                 link = (f'<a href="{e(url)}#page={e(row.get("page"))}" rel="noopener noreferrer">{e(source.get("title"))} · page PDF {e(row.get("page"))}</a>'
-                        if row.get('status') == 'primary_page_checked' else 'Preuve non vérifiée')
+                        if row.get('status') in ('primary_page_checked','automatic_text_extracted') else 'Preuve non vérifiée')
                 body.append(f'<tr data-business-id="{e(row.get("id"))}" data-business-value="{e(row.get("value"))}">'
                     f'<td>{e(row.get("label"))}<small class="quote-kind">{e(row.get("scope"))}</small></td>'
                     f'<td>{value}</td><td><details><summary>Source et définition</summary>{link}'
-                    f'<p>Page imprimée {e(row.get("printed_page"))} · {e(row.get("period_start"))} → {e(end)}</p>'
+                    f'<p>{"Lecture automatique, à confirmer si le document change." if row.get("status")=="automatic_text_extracted" else "Page contrôlée pour cette version du document."}</p><p>Page imprimée {e(row.get("printed_page"))} · {e(row.get("period_start"))} → {e(end)}</p>'
                     f'<p>{e(row.get("definition"))}</p><p>{e(row.get("note", ""))}</p>'
                     +(f'<p>{e(row["reason"])}</p>' if row.get('reason') else '')
                     +f'<small class="source-hash">{e(source.get("document_hash"))}</small></details></td></tr>')
@@ -111,12 +111,18 @@ def business_disclosures_card(block):
             parts.append(f'<details data-business-group="{e(category)}-{e(end)}"{opened}><summary>{e(labels[category])} · {e(period)} · {len(rows)} chiffres</summary>'
                 '<div class="tablewrap"><table><thead><tr><th>Indicateur et périmètre</th><th>Valeur publiée</th><th>Traçabilité</th></tr></thead><tbody>'
                 + ''.join(body) + '</tbody></table></div></details>')
+    meanings={'TC':'tonnes de concentré','kg':'kilogrammes','TM':'tonnes métriques','MDH':'millions de dirhams',
+              'EVP':'équivalent vingt pieds','USD/oz':'dollars par once','t':'tonnes',
+              'g Ag/t':'grammes d’argent par tonne','%':'pourcentage','millions de tonnes':'millions de tonnes'}
+    units=list(dict.fromkeys(r.get('unit') for r in records if r.get('unit')))
+    intro='Unités publiées : '+' ; '.join(str(u)+' = '+meanings.get(u,str(u)) for u in units)+'.'
+    if any(r.get('approximate') for r in records):intro+=' ≈ indique une valeur approximative publiée.'
+    if any(r.get('category')=='cash_flows' for r in records):intro+=' Les flux conservent le signe du tableau de trésorerie.'
     return ('<div id="chiffres-metier" class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
-        '<p>Valeurs publiées conservées avec leur unité et leur signe. TC = tonnes de concentré ; kg = kilogrammes ; TM = tonnes métriques ; MDH = millions de dirhams. '
-        'Aucun total entre métaux. Les charges comptables ne constituent pas un AISC. Un décaissement est négatif dans le tableau de trésorerie.</p>'
-        + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
+        '<p>'+e(intro)+'</p>'
+        + ('<p>Dernière collecte partielle : les chiffres datés déjà disponibles sont conservés.</p>' if block.get('collection_status')=='partial' else '<p>Des éléments de la dernière collecte restent à vérifier.</p>' if block.get('collection_status')=='needs_review' else '') + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
         + ''.join('<li>' + e(note) + '</li>' for note in block.get('reservations', [])) + '</ul></details>'
-        + f'<p>Relevé contrôlé le {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')
+        + f'<p>Relevé daté du {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')
 
 
 def reported_facts_card(block):
