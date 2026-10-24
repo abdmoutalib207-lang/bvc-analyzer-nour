@@ -33,6 +33,10 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 
 def prepare(root, inputs):
+    # Keep the knowledge date of the source snapshot. Backdating a current
+    # snapshot intentionally removes financial facts in build_report; that is
+    # a correct anti-lookahead guard, not a browser availability failure.
+    analysis_date = inputs[0]['snapshot_updated'][:10]
     shutil.copytree(ROOT/'data', root/'data')
     shutil.copytree(ROOT/'web', root/'web')
     fixture, proof = reconcile_volumes(*inputs, now=NOW, allow_local_isolation=True)
@@ -42,14 +46,15 @@ def prepare(root, inputs):
         provider['raw_sha256'] = hashlib.sha256(json.dumps(payload).encode()).hexdigest()
     atomic_json(root/'data/market_integrity.json', proof)
     atomic_json(root/'data/market_overview.json', {'current':inputs[2], 'last_closed':inputs[2]})
-    atomic_json(root/'data/issuer_status.json', {'observed_asof':'2026-10-23', 'records':{}})
+    atomic_json(root/'data/issuer_status.json', {'observed_asof':analysis_date, 'records':{}})
     commit = subprocess.check_output(['git','rev-parse','HEAD'], cwd=ROOT, text=True).strip()
     # Keep a genuine code identity while isolating GitHub's scheduled-run env.
     with patch.object(run, 'ROOT', root), patch.dict(os.environ, {'NOUR_CODE_COMMIT':commit}, clear=True):
-        run._build(argparse.Namespace(asof='2026-10-23', slot='refresh'), root/'web')
+        run._build(argparse.Namespace(asof=analysis_date, slot='refresh'), root/'web')
     manifest=publication_manifest(root/'web', commit)
     atomic_json(root/'web/publication.json', manifest)
     report=json.loads((root/'web/report.json').read_text())
+    assert report['analysis_date']==fixture['snapshot_updated'][:10]
     assert manifest['generator_commit']==report['runtime']['commit']==commit
     assert ('data-generator="'+commit+'"') in (root/'web/index.html').read_text()
     return report
