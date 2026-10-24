@@ -13,6 +13,13 @@ async function assertQuote(locator,value){
   const expected=Number.isFinite(value)?value.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
   assert.equal((await locator.innerText()).replace(/\s/g,''),expected.replace(/\s/g,'')+'MAD');
 }
+async function answerAfter(page,action){
+  const before=await page.locator('.assistant-message[data-role="assistant"]').count();
+  await action();
+  await page.waitForFunction(n=>document.querySelectorAll('.assistant-message[data-role="assistant"]').length>n,before);
+  await page.locator('#assistant-send:not([disabled])').waitFor();
+  return page.locator('.assistant-message[data-role="assistant"]').last().innerText();
+}
 (async()=>{
   const browser=await chromium.launch({headless:true});
   let interactions=0;const assetAnomalies=[];
@@ -373,13 +380,11 @@ async function assertQuote(locator,value){
         const expected=route.startsWith('titres/')?route.split('/')[1].split('.')[0]:'MASI';
         assert.equal(await page.locator('#assistant-symbol').inputValue(),expected);
         await page.locator('#assistant-symbol').selectOption('JET');
-        await page.locator('[data-assistant-question="Quels fondamentaux sont disponibles ?"]').click();
-        await page.getByText('PER :',{exact:false}).last().waitFor();
+        const messages=await answerAfter(page,()=>page.locator('[data-assistant-question="Quels fondamentaux sont disponibles ?"]').click());
         const report=await (await context.request.get(new URL('report.json',base).href)).json();
         const jet=report.results.find(row=>row.symbol==='JET');
-        const messages=await page.locator('#assistant-messages').innerText();
         assert.ok(messages.includes(answerNumber(jet.fundamental.pe)));
-        assert.ok(messages.includes('2026-06-30'));
+        assert.ok(messages.includes(jet.fundamental.latest_report.period_end),messages);
         assert.ok(messages.includes('Réserves à lire'));
         assert.ok(messages.includes(jet.fundamental.latest_report.note));
         assert.ok(!messages.includes('selected_pages_reconciled_'));
@@ -389,7 +394,7 @@ async function assertQuote(locator,value){
         // Check the actual exported state, never assume every daily run matches.
         const exportFacts=await (await context.request.get(new URL('assistant-data.json',base).href)).json();
         await page.locator('#assistant-question').fill('Quel volume global MASI ?');
-        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        await answerAfter(page,()=>page.getByRole('button',{name:'Envoyer',exact:true}).click());
         await page.locator('#assistant-send:not([disabled])').waitFor();
         const volumeAnswer=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
         const amount=exportFacts.market.turnover_mad;
@@ -399,12 +404,12 @@ async function assertQuote(locator,value){
         assert.ok(volumeAnswer.includes(volumeLabel),volumeAnswer);
         assert.equal(volumeAnswer.includes('totaux concordants'),volumeState==='matched');
         await page.locator('#assistant-question').fill('MM50 ADI');
-        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        await answerAfter(page,()=>page.getByRole('button',{name:'Envoyer',exact:true}).click());
         const adi=report.results.find(row=>row.symbol==='ADI');
         await page.getByText('MM50 : '+answerNumber(adi.technical.sma50),{exact:false}).last().waitFor();
         assert.equal(await page.locator('#assistant-symbol').inputValue(),'ADI');
         await page.locator('#assistant-question').fill('Et son RSI ?');
-        await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+        await answerAfter(page,()=>page.getByRole('button',{name:'Envoyer',exact:true}).click());
         await page.getByText('RSI 14 : '+answerNumber(adi.technical.rsi14),{exact:false}).last().waitFor();
         const last=await page.locator('.assistant-message[data-role="assistant"]').last().innerText();
         assert.ok(last.includes('ADI · Alliances'));
@@ -412,7 +417,7 @@ async function assertQuote(locator,value){
         if(route==='recherche.html'){
           async function ask(question){
             await page.locator('#assistant-question').fill(question);
-            await page.getByRole('button',{name:'Envoyer',exact:true}).click();
+            await answerAfter(page,()=>page.getByRole('button',{name:'Envoyer',exact:true}).click());
             await page.locator('#assistant-send:not([disabled])').waitFor();
             return page.locator('.assistant-message[data-role="assistant"]').last().innerText();
           }
