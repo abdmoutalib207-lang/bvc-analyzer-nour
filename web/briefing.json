@@ -14,18 +14,18 @@
     "scheduled_at_basis": null,
     "requested_scheduled_at": null,
     "edition_for": "2026-10-24",
-    "started_at": "2026-10-24T13:06:42+00:00",
-    "built_at": "2026-10-24T13:07:28.335641+00:00",
+    "started_at": "2026-10-24T15:43:49+00:00",
+    "built_at": "2026-10-24T15:44:36.679620+00:00",
     "utc_offset_minutes": 0,
     "delay_minutes": null,
     "late": false,
-    "run_id": "40096705884",
-    "commit": "a729b1feb27db899fb647da68495142f55611f12",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40096705884",
+    "run_id": "40108280767",
+    "commit": "de4db77b8288edb91f00dcc4fcf6f32ce1fd1a86",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40108280767",
     "collection": {
       "result": "unchanged",
       "label": "Aucune nouveauté",
-      "checked_at": "2026-10-24T13:06:44.343445+00:00",
+      "checked_at": "2026-10-24T15:43:50.192556+00:00",
       "last_session": "2026-10-23",
       "message": "Aucune nouvelle séance vérifiée",
       "conflicts": [],
@@ -33,17 +33,17 @@
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "a729b1feb27db899fb647da68495142f55611f12",
+      "generator_commit": "de4db77b8288edb91f00dcc4fcf6f32ce1fd1a86",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "e33f949af28e5b9bf07e1810d7e34feece0e3505bd6609e17f684f00ec2bc357",
+      "market_snapshot_sha256": "fdf9c42037a3649084cf1a905a01b960361eaee63bbccbbce8e65a6d0c749602",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
       "status": "detail_matched",
       "session": "2026-10-23",
-      "observed_at": "2026-10-24T13:07:20.607019+00:00",
+      "observed_at": "2026-10-24T15:44:26.783305+00:00",
       "cross_source_verified": true
     }
   },
@@ -57,12 +57,12 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 1294.1,
+    "age_minutes": 1451.2,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-24T13:06:44.343445+00:00",
+  "snapshot_updated": "2026-10-24T15:43:50.192556+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
@@ -3633,6 +3633,23 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "bf3dc702d5a7e69904",
+      "title": "Trump Targets $6.2 Billion Offshore Wind Project Nearing Completion",
+      "url": "https://oilprice.com/Alternative-Energy/Wind-Power/Trump-Targets-62-Billion-Offshore-Wind-Project-Nearing-Completion.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T15:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "53613afc27ae771998",
       "title": "Guinée : raz-de-marée sur l’emprunt obligataire de l’État, 4 579 milliards GNF mobilisés",
       "url": "https://www.financialafrik.com/2026/10/24/guinee-raz-de-maree-sur-lemprunt-obligataire-de-letat-4-579-milliards-gnf-mobilises/",
@@ -3740,23 +3757,6 @@
       "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Dips-Into-Strategic-Oil-Reserve-Again-Amid-Supply-Disruptions.html",
       "publisher": "OilPrice",
       "published_at": "2026-10-23T22:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "c468411d975b133312",
-      "title": "Why Trump and Carney Haven’t Touched Energy in Their Tariff War",
-      "url": "https://oilprice.com/Energy/Energy-General/Why-Trump-and-Carney-Havent-Touched-Energy-in-Their-Tariff-War.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-23T22:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4008,9 +4008,26 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-24T13:07:18.857001+00:00"
+    "observed_at": "2026-10-24T15:44:25.104650+00:00"
   },
   "context_news": [
+    {
+      "id": "bf3dc702d5a7e69904",
+      "title": "Trump Targets $6.2 Billion Offshore Wind Project Nearing Completion",
+      "url": "https://oilprice.com/Alternative-Energy/Wind-Power/Trump-Targets-62-Billion-Offshore-Wind-Project-Nearing-Completion.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-24T15:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "53613afc27ae771998",
       "title": "Guinée : raz-de-marée sur l’emprunt obligataire de l’État, 4 579 milliards GNF mobilisés",
@@ -4197,29 +4214,12 @@
       "scope": "MAROC",
       "feed_id": "mef",
       "feed_url": "https://news.google.com/rss/search?q=site%3Afinances.gov.ma&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "3edfbe66f46440e39a",
-      "title": "NASA's Freeze-Resistant Moon Battery Could Eventually Reach EVs",
-      "url": "https://oilprice.com/Energy/Energy-General/NASAs-Freeze-Resistant-Moon-Battery-Could-Eventually-Reach-EVs.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-23T20:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-24T13:07:28.335641+00:00",
-    "checked_at": "2026-10-24T13:07:19.767934+00:00",
+    "cutoff": "2026-10-24T15:44:36.679620+00:00",
+    "checked_at": "2026-10-24T15:44:25.856936+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4239,7 +4239,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4256,7 +4256,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4273,7 +4273,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4290,7 +4290,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4312,7 +4312,7 @@
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4329,7 +4329,7 @@
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4346,7 +4346,7 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4363,7 +4363,7 @@
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4385,7 +4385,7 @@
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4402,7 +4402,7 @@
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4419,7 +4419,7 @@
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           },
           {
@@ -4436,7 +4436,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-24T13:07:19.767934+00:00",
+            "collected_at": "2026-10-24T15:44:25.856936+00:00",
             "collection_state": "collected"
           }
         ]
