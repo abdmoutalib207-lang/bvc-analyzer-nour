@@ -65,16 +65,17 @@
       if(/investissement/.test(q)&&!/flux.*investissement/.test(q))categories.push('investments');
       if(/capex|decaisse|flux|tresorerie/.test(q))categories.push('cash_flows');
       const years=[...q.matchAll(/\b20\d{2}\b/g)].map(m=>m[0]);
-      const semester=/\bs1\b|premier semestre|semestriel/.test(q);
+      const semester=/\bs[12]\b|semestre|semestriel/.test(q), second=/\bs2\b|second semestre|deuxieme semestre/.test(q);
       if(!rows.length)lines.push('Précisez un titre pour consulter ses chiffres officiels du métier.');
       for(const row of rows){
         const block=row.business_disclosures||{};
         let records=(block.records||[]).filter(r=>categories.includes(r.category)&&r.period_kind===(semester?'semester':'annual'));
+        if(second)records=[];
         const year=years.length?null:records.map(r=>r.period_end.slice(0,4)).sort().at(-1);
         records=records.filter(r=>years.length?years.includes(r.period_end.slice(0,4)):r.period_end.startsWith(year||'absent'));
         const metals=['cuivre','zinc','plomb','argent','or','cobalt'].filter(m=>new RegExp('\\b'+m+'\\b').test(q));
         if(metals.length)records=records.filter(r=>r.category!=='production'||metals.includes(normalize(r.metal)));
-        lines.push(`${row.symbol} · chiffres publiés du métier · ${semester?'S1':'annuel'} · ${years.join(', ')||year||'période indisponible'}.`);
+        lines.push(`${row.symbol} · chiffres publiés du métier · ${second?'S2':semester?'S1':'annuel'} · ${years.join(', ')||year||'période indisponible'}.`);
         if(!records.length)lines.push('Aucun chiffre vérifié pour cette rubrique et cette période dans Nour. Cela ne signifie pas que la société ne le publie pas.');
         for(const r of records){
           lines.push(`${r.label} · ${r.scope} · ${r.period_start} → ${r.period_end} : ${fmt(r.value,r.unit)} · page PDF ${r.page}. ${r.definition}${r.note?' '+r.note:''}${r.reason?' '+r.reason:''}`);

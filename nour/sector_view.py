@@ -111,7 +111,7 @@ def business_disclosures_card(block):
             parts.append(f'<details data-business-group="{e(category)}-{e(end)}"{opened}><summary>{e(labels[category])} · {e(period)} · {len(rows)} chiffres</summary>'
                 '<div class="tablewrap"><table><thead><tr><th>Indicateur et périmètre</th><th>Valeur publiée</th><th>Traçabilité</th></tr></thead><tbody>'
                 + ''.join(body) + '</tbody></table></div></details>')
-    return ('<div class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
+    return ('<div id="chiffres-metier" class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
         '<p>Valeurs publiées conservées avec leur unité et leur signe. TC = tonnes de concentré ; kg = kilogrammes ; TM = tonnes métriques ; MDH = millions de dirhams. '
         'Aucun total entre métaux. Les charges comptables ne constituent pas un AISC. Un décaissement est négatif dans le tableau de trésorerie.</p>'
         + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'

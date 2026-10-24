@@ -181,5 +181,7 @@ if(data.symbols.MNG.business_disclosures?.records?.length){
   check('CAPEX MNG S1 2025',r=>r.domain==='business'&&r.text.includes('-2 885,5 MDH')&&!r.text.includes('-5 950 MDH'),'MNG');
   check('CAPEX MNG 2024',r=>r.domain==='business'&&r.text.includes('-7 254,4 MDH'),'MNG');
   check('Production MNG 2022',r=>r.domain==='business'&&r.text.includes('Aucun chiffre vérifié')&&!r.text.includes('110 721 TC'),'MNG');
+  check('CAPEX MNG S2 2025',r=>r.domain==='business'&&r.text.includes('Aucun chiffre vérifié')&&!r.text.includes('-5 950 MDH'),'MNG');
+  check('CAPEX MNG semestre 2025',r=>r.domain==='business'&&r.text.includes('-2 885,5 MDH')&&!r.text.includes('-5 950 MDH'),'MNG');
   check('AISC MNG 2025',r=>r.domain==='business'&&r.text.includes('aucune valeur vérifiée')&&r.text.includes('ne constituent pas un coût unitaire'),'MNG');
 }
