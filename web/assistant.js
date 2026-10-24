@@ -117,7 +117,7 @@
     const q=normalize(question), sources=[],lines=[`Données Nour · analyse du ${data.analysis_date}.`];
     const result=()=>({text:lines.join('\n\n'),sources,symbols,mode:'local'});
     if(symbols.length>2){lines.push('Comparez au maximum deux titres par question.');return result();}
-    const ignored=new Set(['MASI','PER','PE','PB','BPA','ROE','ROIC','ROI','RSI','MACD','ATR','PNB','CA','RNPG','EBITDA','EBE','MAD','DH','MDH','MMAD','MM','USD','EUR','VIX','DXY','CAC','API','LLM','IA','S1','S2','PDF','TVA','ECC','CSV','JSON','OHLC','OHLCV','IFRS','CGNC','CNC','BAM','AMMC','HCP','FED','BCE','NLP','PEA','EMA','SMA','TTM','FY']);
+    const ignored=new Set(['MASI','PER','PE','PB','BPA','ROE','ROIC','ROI','RSI','MACD','ATR','PNB','CA','RNPG','EBITDA','EBE','MAD','DH','MDH','MMAD','MM','USD','EUR','VIX','DXY','CAC','API','LLM','IA','S1','S2','PDF','TVA','ECC','CSV','JSON','OHLC','OHLCV','IFRS','CGNC','CNC','BAM','AMMC','HCP','FED','BCE','NLP','PEA','EMA','SMA','TTM','FY','CAPEX','AISC','OPEX','TC','TM','CMG','CTT','SMM','MANUB','BOTO','TIZERT','SOMIFER']);
     const unknown=(question.match(/\b[A-Z][A-Z0-9]{1,5}\b/g)||[]).filter(s=>!ignored.has(s)&&!/^(MM|SMA|EMA|RSI)\d+$/.test(s)&&!data.symbols?.[s]&&!Object.values(data.symbols||{}).some(row=>normalize(row.name).split(/\W+/).includes(normalize(s))));
     if(unknown.length){lines.push(`Titre ou abréviation non reconnu : ${[...new Set(unknown)].join(', ')}. Précisez le nom ou le symbole; le contexte sélectionné n’a pas été utilisé à sa place.`);return result();}
     const dates=datesIn(question);
@@ -417,6 +417,9 @@
     const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
     if(guard)return guard;
     const q=normalize(question),dates=datesIn(question);
+    if(!dates.length&&/production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
+      const business=domains?.answer(question,data,symbols,state);if(business?.domain==='business')return business;
+    }
     for(const [p,allowed] of [[/\brsi\s*(\d+)\b/,[14]],[/\b(?:mm|sma)\s*(\d+)\b/,[20,50,200]],[/\bema\s*(\d+)\b/,[20,50]]]){const m=q.match(p);if(m&&!allowed.includes(Number(m[1])))return {text:'Cette période d’indicateur n’est pas implémentée dans les fiches Nour. RSI : 14; moyennes simples : 20, 50 et 200 séances; EMA : 20 et 50 séances.',sources:[],symbols,mode:'local'};}
     if(/\b(?:le|au|du)\s+\d{1,2}\s+[a-z]+\s+20\d{2}\b/.test(q)&&!dates.length)return {text:'Utilisez la date au format JJ/MM/AAAA ou AAAA-MM-JJ pour une lecture historique précise.',sources:[],symbols,mode:'local'};
     if(dates.length&&/risque|beta|correlation|volatil|drawdown|\bc?var(?:95)?\b|value at risk|expected shortfall|score|\bper\b|\brsi\b|\b(?:mm|sma|ema)\s*\d+|macd|bollinger|\batr\b|laboratoire|backtest/.test(q)&&!/publication|actualite|radar/.test(q))return {text:`Données Nour · analyse du ${data.analysis_date}.\n\nCette mesure n’est pas reconstruite aux dates demandées. Les valeurs actuelles ne remplacent pas un indicateur historique absent.`,sources:[],symbols,mode:'local'};

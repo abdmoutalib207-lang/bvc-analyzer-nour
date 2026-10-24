@@ -171,3 +171,15 @@ check('PER ADI',r=>!r.text.includes('source '+data.symbols.ADI.price_source));
 check('Fais une synthèse complète ADI : marché, technique, fondamentaux, qualité et sources',r=>r.domain!=='quality'||r.text.includes('RSI'));
 assert.ok(domains.labFilters('laboratoire 20 seances 1 % a l’achat 2 % a la vente').filters.buy===1);
 console.log(`Assistant domains: ${checked} checked answers across all ${data.knowledge.capabilities.length} capabilities, 108 lab filter/cost combinations, financial scopes, dated publications, full CSV history and follow-ups passed.`);
+
+// Business disclosures are read from the reviewed export; physical units are
+// never replaced by a macro commodity quote or a fictitious unit cost.
+if(data.symbols.MNG.business_disclosures?.records?.length){
+  const r=check('Production cuivre MNG 2025',r=>r.domain==='business'&&r.text.includes('110 721 TC'),'MNG');
+  assert.ok(r.sources.some(s=>s.url.endsWith('#page=66')));
+  assert.ok(!r.text.includes('5 326 kg'));
+  check('CAPEX MNG S1 2025',r=>r.domain==='business'&&r.text.includes('-2 885,5 MDH')&&!r.text.includes('-5 950 MDH'),'MNG');
+  check('CAPEX MNG 2024',r=>r.domain==='business'&&r.text.includes('-7 254,4 MDH'),'MNG');
+  check('Production MNG 2022',r=>r.domain==='business'&&r.text.includes('Aucun chiffre vérifié')&&!r.text.includes('110 721 TC'),'MNG');
+  check('AISC MNG 2025',r=>r.domain==='business'&&r.text.includes('aucune valeur vérifiée')&&r.text.includes('ne constituent pas un coût unitaire'),'MNG');
+}

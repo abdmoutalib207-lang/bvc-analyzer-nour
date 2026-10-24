@@ -58,6 +58,34 @@
     const link=(label,url)=>sources.push({label,url});
     const definition=key=>{if(defs[key])lines.push(defs[key]);};
     const rows=symbols.filter(s=>data.symbols?.[s]).map(s=>data.symbols[s]);
+    if(/production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){
+      const categories=[];
+      if(/production/.test(q)&&!/cout.*production/.test(q))categories.push('production');
+      if(/charges?|cout|cash.cost|aisc/.test(q))categories.push('expenses');
+      if(/investissement/.test(q)&&!/flux.*investissement/.test(q))categories.push('investments');
+      if(/capex|decaisse|flux|tresorerie/.test(q))categories.push('cash_flows');
+      const years=[...q.matchAll(/\b20\d{2}\b/g)].map(m=>m[0]);
+      const semester=/\bs1\b|premier semestre|semestriel/.test(q);
+      if(!rows.length)lines.push('Précisez un titre pour consulter ses chiffres officiels du métier.');
+      for(const row of rows){
+        const block=row.business_disclosures||{};
+        let records=(block.records||[]).filter(r=>categories.includes(r.category)&&r.period_kind===(semester?'semester':'annual'));
+        const year=years.length?null:records.map(r=>r.period_end.slice(0,4)).sort().at(-1);
+        records=records.filter(r=>years.length?years.includes(r.period_end.slice(0,4)):r.period_end.startsWith(year||'absent'));
+        const metals=['cuivre','zinc','plomb','argent','or','cobalt'].filter(m=>new RegExp('\\b'+m+'\\b').test(q));
+        if(metals.length)records=records.filter(r=>r.category!=='production'||metals.includes(normalize(r.metal)));
+        lines.push(`${row.symbol} · chiffres publiés du métier · ${semester?'S1':'annuel'} · ${years.join(', ')||year||'période indisponible'}.`);
+        if(!records.length)lines.push('Aucun chiffre vérifié pour cette rubrique et cette période dans Nour. Cela ne signifie pas que la société ne le publie pas.');
+        for(const r of records){
+          lines.push(`${r.label} · ${r.scope} · ${r.period_start} → ${r.period_end} : ${fmt(r.value,r.unit)} · page PDF ${r.page}. ${r.definition}${r.note?' '+r.note:''}${r.reason?' '+r.reason:''}`);
+          if(r.status==='primary_page_checked'&&r.source?.url)link(`${r.source.title} · page PDF ${r.page}`,r.source.url+'#page='+r.page);
+        }
+        if(/aisc|cash.cost|cout.*(?:minier|production)/.test(q))lines.push('AISC / cash cost du groupe : aucune valeur vérifiée dans ce relevé. Les charges IFRS ci-dessus ne constituent pas un coût unitaire de production.');
+        lines.push(...(block.reservations||[]));link(`Fiche ${row.symbol} · chiffres et réserves`,row.url);
+      }
+      lines.push('Lecture locale des publications ; aucun effet sur le score.');
+      return result('business');
+    }
     if(!/synthese|resume|complet|fondament|compare|comparaison/.test(q)&&/(?:source|origine|provenance|fournisseur).*(?:cours|marche|masi|cotation)|(?:cours|marche|masi).*(?:source|origine|provenance|fournisseur)|d.ou viennent.*cours/.test(q)){
       if(rows.length)for(const row of rows)lines.push(`${row.symbol} · cours du ${row.asof||'non daté'} · origine : ${row.price_source||'non renseignée'}.`);
       else lines.push(`Marché · séance ${data.market?.asof||'non datée'} · origine : ${data.market?.source||'non renseignée'}.`);

@@ -279,6 +279,24 @@ async function answerAfter(page,action){
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`debt-${symbol}-${width}.png`),fullPage:true});}
         }
+        if(route==='titres/MNG.html'){
+          const block=page.locator('[data-business-disclosures]');
+          const reviewed=marketReport.results.find(r=>r.symbol==='MNG').sector_indicators.business_disclosures;
+          assert.equal(await block.locator('[data-business-id]').count(),reviewed.records.length);
+          assert.equal(reviewed.records.length,74);
+          const copper=block.locator('[data-business-id="copper-group-2025"]');
+          assert.ok((await copper.innerText()).includes('110 721 TC'));
+          await copper.locator('summary').click();
+          assert.ok((await copper.locator('a').getAttribute('href')).endsWith('#page=66'));
+          const semester=block.locator('[data-business-group="cash_flows-2025-06-30"]');
+          await semester.locator(':scope > summary').click();
+          assert.ok((await semester.innerText()).includes('-2 885,5 MDH'));
+          assert.ok((await semester.innerText()).includes('-567,5 MDH'));
+          await block.locator('[data-business-reservations] > summary').click();
+          assert.ok((await block.innerText()).includes('+41 %'));
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Business disclosures overflow '+width);
+          if(shots){fs.mkdirSync(shots,{recursive:true});await block.screenshot({path:path.join(shots,`MNG-business-${width}.png`)});}
+        }
         if(route==='sources.html'){
           const provenance=page.locator('#marche');
           const source=marketReport.market_overview?.source||'Non renseignée';
