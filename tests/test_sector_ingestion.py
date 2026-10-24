@@ -47,13 +47,14 @@ TRAFIC IMPORT-EXPORT : 697.595 EVP
         self.assertTrue(out['incidents'])
         self.assertTrue(all(h['retained_previous'] for h in out['health'].values()))
     def test_review_is_bound_to_the_pdf_hash_and_approximation_is_retained(self):
-        c=json.loads((ROOT/'data/sector_disclosures.json').read_text())['catalogues']['SMI']
-        view=disclosure_view(c,'2026-10-24');aisc=next(r for r in view['records'] if r['category']=='unit_cost')
+        state=json.loads((ROOT/'data/sector_disclosures.json').read_text())
+        c=state['catalogues']['SMI'];asof=max('2026-10-24',state['checked_at'][:10])
+        view=disclosure_view(c,asof);aisc=next(r for r in view['records'] if r['category']=='unit_cost')
         self.assertEqual((aisc['value'],aisc['unit'],aisc['approximate']),(22,'USD/oz',True))
         self.assertEqual(aisc['status'],'primary_page_checked')
         c=deepcopy(c)
         for d in c['documents'].values():d['review_status']='automatic_text_extraction'
-        self.assertTrue(all(r['status']=='automatic_text_extracted' for r in disclosure_view(c,'2026-10-24')['records']))
+        self.assertTrue(all(r['status']=='automatic_text_extracted' for r in disclosure_view(c,asof)['records']))
 
     def test_new_publications_are_discovered_from_official_titles_including_native_downloads(self):
         p=DiscoveryLinks();p.feed('<li>Résultats Semestriels au 30 Juin 2027<a href="/?jet_download='+'a'*40+'">Télécharger</a></li><li>Autre document<a href="x.pdf">Télécharger</a></li>')
@@ -67,7 +68,9 @@ TRAFIC IMPORT-EXPORT : 697.595 EVP
         for profile in self.config['profiles']:
             rows,_,candidates=extract(profile,fixtures[profile['symbol']],profile['seeds'][0],'a'*64,'2026-10-24')
             self.assertFalse(candidates)
-            expected={r['id']:(r['value'],r['unit'],r.get('approximate',False)) for r in state['catalogues'][profile['symbol']]['records']}
+            fixture_ids={r['id'] for r in rows}
+            # New automatic periods must not break a replay of the reviewed historical tables.
+            expected={r['id']:(r['value'],r['unit'],r.get('approximate',False)) for r in state['catalogues'][profile['symbol']]['records'] if r['id'] in fixture_ids}
             self.assertEqual({r['id']:(r['value'],r['unit'],r.get('approximate',False)) for r in rows},expected)
 
     def test_new_official_download_enters_automatic_reading_without_backdating(self):
