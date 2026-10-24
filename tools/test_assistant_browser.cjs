@@ -86,9 +86,12 @@ async function assertQuote(locator,value){
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),report.results.filter(r=>!r.fundamental.exercise).length);
           await page.locator('#fundamental-reset').click();
           await page.locator('#fundamental-pe-max').fill('25');
-          const selected=await page.locator('[data-fundamental-row]:visible').evaluateAll(rows=>rows.map(row=>JSON.parse(row.dataset.facts)));
-          assert.ok(selected.length>0);
-          assert.ok(selected.every(row=>Number.isFinite(row.pe)&&row.pe<=25));
+          const selected=await page.locator('[data-fundamental-row]:visible').evaluateAll(rows=>rows.map(row=>({symbol:row.querySelector('td a').textContent,facts:JSON.parse(row.dataset.facts)})));
+          const expected=report.results.filter(row=>Number.isFinite(row.fundamental.pe)&&row.fundamental.pe<=25).map(row=>row.symbol).sort();
+          assert.deepEqual(selected.map(row=>row.symbol).sort(),expected,'PER filter must match the canonical report, including an empty result');
+          assert.ok(selected.every(row=>Number.isFinite(row.facts.pe)&&row.facts.pe<=25));
+          await page.locator('#fundamental-pe-max').fill('0');
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),report.results.filter(row=>Number.isFinite(row.fundamental.pe)&&row.fundamental.pe<=0).length);
           await page.locator('#fundamental-reset').click();
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Fundamental explorer overflow '+width);
