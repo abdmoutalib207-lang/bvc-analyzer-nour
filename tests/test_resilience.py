@@ -143,7 +143,9 @@ class ResilienceTests(unittest.TestCase):
             target=root/'web';target.mkdir();(target/'index.html').write_text('previous healthy site')
             with patch.object(run,'ROOT',root),patch.dict('os.environ',{},clear=True),patch('nour.engine.technical',side_effect=fault):
                 with site_transaction(target) as output:
-                    run._build(argparse.Namespace(asof=ASOF,slot='refresh'),output)
+                    # Compare the same analysis date as the generated baseline,
+                    # including after midnight and later market sessions.
+                    run._build(argparse.Namespace(asof=baseline['analysis_date'],slot='refresh'),output)
             actual=json.loads((target/'report.json').read_text())
             self.assertEqual(len(list((target/'titres').glob('*.html'))),80)
             self.assertEqual(len(actual['results']),80)
