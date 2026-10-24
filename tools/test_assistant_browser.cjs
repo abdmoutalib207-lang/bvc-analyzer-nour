@@ -65,6 +65,9 @@ async function assertQuote(locator,value){
           const shown=adi.intraday_quote?.price??adi.price;
           const primary=page.locator('[data-quote-symbol="ADI"] [data-primary-price]');
           await assertQuote(primary,shown);
+          const datedChanges=page.locator('[data-change-reference]');
+          assert.ok(await datedChanges.count()>0);
+          for(const text of await datedChanges.allTextContents())assert.match(text,/^Depuis le \d{2}\/\d{2}\/\d{4}$/);
           if(report.market_overview?.official_reference){
             const counters=await page.locator('[data-market-counter-quality]').innerText();
             assert.ok(counters.replace(/\s/g,'').includes(String(report.market_overview.official_reference.contracts)+'contrats'));

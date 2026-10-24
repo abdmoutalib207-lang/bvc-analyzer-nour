@@ -391,12 +391,15 @@ def home_page(fixture, report, style, script):
         score_text = number(score.get('value'), 0) if score.get('value') is not None else '—'
         view = quote_view(r, record)
         bars = record['candles']
-        close_reference = f'{number(r["price"])} MAD<br><small>{date_label(r.get("asof"))}</small>'
+        close_reference = (f'{number(view["reference_price"])} MAD<br><small>{date_label(view["reference_session"])}</small>'
+                           if view['reference_session'] else '<span class="muted">Indisponible</span>')
         change = view['change_pct']
+        change_reference = (f'<small class="quote-kind" data-change-reference>Depuis le {date_label(view["reference_session"])}</small>'
+                            if change is not None else '')
         tone = 'gain' if change is not None and change>0 else 'loss' if change is not None and change<0 else 'muted'
         history_link = (f'<a class="csv-button" href="historique/{esc(symbol)}.csv" download aria-label="Historique CSV de {esc(symbol)}">CSV</a>'
                         if bars else '<span class="muted">Cotation suspendue</span>' if r.get('decision') == 'SUSPENDU' else '<span class="muted">Indisponible</span>')
-        rows.append(f'<tr data-market-row data-quote-symbol="{esc(symbol)}" data-quote-mode="{"provisional" if view["provisional"] else "close"}" data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a class="company-cell" href="titres/{esc(symbol)}.html">{company_logo(symbol)}<span>{esc(symbol)}</span></a></td><td>{esc(record["name"])}</td><td><strong data-primary-price>{number(view["price"])} MAD</strong><small class="quote-kind">{view["label"]}</small></td><td class="{tone}">{number(change)} %</td><td>{quote_clocks(view)}</td><td>{close_reference}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
+        rows.append(f'<tr data-market-row data-quote-symbol="{esc(symbol)}" data-quote-mode="{"provisional" if view["provisional"] else "close"}" data-search="{esc(search)}" data-sector="{esc(record.get("sector") or "Autre")}" data-score="{esc(score.get("value") if score.get("value") is not None else -1)}"><td><a class="company-cell" href="titres/{esc(symbol)}.html">{company_logo(symbol)}<span>{esc(symbol)}</span></a></td><td>{esc(record["name"])}</td><td><strong data-primary-price>{number(view["price"])} MAD</strong><small class="quote-kind">{view["label"]}</small></td><td class="{tone}">{number(change)} %{change_reference}</td><td>{quote_clocks(view)}</td><td>{close_reference}</td><td>{score_text}</td><td><span class="status {esc(r["decision"])}">{esc(r["decision"])}</span><small class="muted"> {esc((r.get("history_readiness") or {}).get("label"))}</small></td><td>{history_link}</td></tr>')
     sectors=sorted(set((fixture['records'][s].get('sector') or 'Autre') for s in fixture['symbols']))
     sector_options=''.join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in sectors)
     body = (header('index.html', (report.get('market_overview') or {}).get('asof') or fixture["snapshot_updated"])

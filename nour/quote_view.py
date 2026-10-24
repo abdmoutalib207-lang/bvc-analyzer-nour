@@ -42,7 +42,8 @@ def quote_view(item, record):
             'source_checked_at': collected if provisional else item.get('source_checked_at'),
             'price_validated_at': item.get('price_validated_at'),
             'source_check_status': item.get('source_check_status'),
-            'change_pct': change, 'reference_session': reference[1] if reference else None}
+            'change_pct': change, 'reference_session': reference[1] if reference else None,
+            'reference_price': reference[0] if reference else None}
 
 
 def quote_clocks(view):

@@ -24,6 +24,26 @@ MANUAL_ONLY = {
 }
 
 
+def briefing_links(editions, last_closed=None):
+    """Link the dated closing digest without inventing a scheduled edition."""
+    closed = (last_closed or {}).get('asof')
+    try:
+        datetime.strptime(closed, '%Y-%m-%d')
+    except (TypeError, ValueError):
+        closed = None
+    links = []
+    for key, slug in EDITIONS.items():
+        if key == 'closing' and closed:
+            links.append({'label':'Dernière clôture disponible', 'date':closed,
+                          'url':'cloture.html'})
+        elif key in editions:
+            edition = editions[key]
+            links.append({'label':edition['title'],
+                          'date':edition['runtime']['edition_for'],
+                          'url':f'briefing-{slug}.html'})
+    return links
+
+
 def source_commit(environment):
     """Report checked-out code identity, not a possibly stale queued event SHA."""
     return environment.get('NOUR_CODE_COMMIT') or environment.get('GITHUB_SHA', '')

@@ -33,6 +33,17 @@ class QuoteClocks(unittest.TestCase):
             self.assertFalse(view['provisional']);self.assertEqual(view['price'],366)
             self.assertIn('21/10/2026 à 15h30',quote_clocks(view))
 
+    def test_variation_keeps_its_old_reference_price_and_date(self):
+        item={**self.item,'price':1480,'asof':'2026-09-28',
+              'intraday_quote':{**self.live,'price':1395,'asof':'2026-10-23'}}
+        view=quote_view(item,self.record)
+        self.assertAlmostEqual(view['change_pct'],100*(1395/1480-1))
+        self.assertEqual(view['reference_session'],'2026-09-28')
+        self.assertEqual(view['reference_price'],1480)
+        closed=quote_view(self.item,self.record)
+        self.assertEqual(closed['reference_price'],360)
+        self.assertEqual(closed['reference_session'],'2026-10-20')
+
     def test_missing_or_different_source_clock_never_uses_collection_as_cotation(self):
         for source in [None,'bad','22/10/2026 14:00:00','21/10/2026']:
             view=quote_view({**self.item,'price_source_datetime':source},self.record)
