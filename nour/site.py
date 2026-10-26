@@ -11,7 +11,7 @@ from .briefing import market_relevant
 from .market_view import market_panel, closing_summary
 from .chart_view import navigation, explorer_footer
 from .fundamental_view import panel as fundamental_explorer, export_csv as export_fundamentals_csv
-from .issuer_view import issuer_heading, financial_history, documentary_status
+from .issuer_view import issuer_heading, issuer_snapshot, financial_history, documentary_status
 from .source_view import market_sources
 from .company_identity import company_logo, logo_credits, validate_catalog
 from .macro_view import markets_html, radar_html, feed_health_html
@@ -302,6 +302,7 @@ def detail_page(item, record, fixture, style, script, collection=None):
         financial_details += (f'<section class="panel"><h3>Rapprochement documentaire · {esc(review.get("reviewed_at"))}</h3>'
             f'<p>{esc(review.get("conclusion"))}</p><p class="fineprint">{esc(review.get("method"))}</p>'
             '<p class="fineprint">Contrôle de pages sélectionnées, pas certification du rapport complet.</p></section>')
+    semester_details = ''
     recent = calculated.get('latest_report') or {}
     if str(recent.get('document_url','')).startswith('https://'):
         comparison = ''
@@ -313,14 +314,14 @@ def detail_page(item, record, fixture, style, script, collection=None):
             comparison = (f'<p>Même semestre au {esc(recent["reported_net_previous_period_end"])} : '
                 f'{number(previous_net)} millions de {esc(recent.get("currency"))} ; '
                 f'variation du résultat part du groupe : {number((current_net / previous_net - 1) * 100)} %.</p>')
-        financial_details += (f'<section class="panel" id="publication-semestrielle"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
+        semester_details = (f'<section class="panel" id="publication-semestrielle"><h3>Publication semestrielle · {esc(recent.get("period_end"))}</h3>'
             f'<p>{esc(calculated.get("semester_activity_label", "CA"))} : {number(recent.get("revenue_millions"))} millions de {esc(recent.get("currency"))} ; '
             f'{esc(recent.get("reported_net_label", "résultat selon le périmètre du document"))} : {number(recent.get("reported_net_millions"))} millions.</p>'
             f'{semester_chart(recent)}{comparison}'
-            f'<p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
+            f'<details class="reading-details"><summary>Source et périmètre du semestre</summary><p class="fineprint">{esc(recent.get("accounting_basis"))}. Référence : {esc(recent.get("pages"))}. '
             f'{esc(recent.get("note") or "")}</p>'
             f'<a href="{esc(recent["document_url"])}" target="_blank" rel="noopener noreferrer">Document semestriel référencé</a>'
-            '<p class="fineprint">Relevé importé, non recertifié. Présenté séparément des ratios annuels : aucun doublement du semestre, aucun mélange des périmètres.</p></section>')
+            '<p class="fineprint">Relevé importé, non recertifié. Présenté séparément des ratios annuels : aucun doublement du semestre, aucun mélange des périmètres.</p></details></section>')
     statistics = item.get('historical_statistics') or {}
     statistic_rows = ''.join(
         f'<tr><td>{h["horizon_sessions"]} séances</td><td>{h["observations"]}</td>'
@@ -338,8 +339,6 @@ def detail_page(item, record, fixture, style, script, collection=None):
         f'<div class="score-factor"><div class="score-factor-heading"><span>{esc(key)}</span><strong>{number(value["points"],0)} / {number(value["weight"],0)}</strong></div>'
         f'<div class="factor-track"><span class="factor-fill {"factor-high" if value["points"] / value["weight"] >= .7 else "factor-mid" if value["points"] / value["weight"] >= .35 else "factor-low"}" style="width:{max(0,min(100,100*value["points"]/value["weight"])):.0f}%"></span></div></div>'
         for key,value in contributors.items() if value.get('weight',0)>0)
-    fundamental_status=('Exercice historique · à actualiser' if calculated.get('exercise') else 'Aucun exercice documenté')
-    fundamental_age = f'{fundamental_status} · {calculated["exercise"]}' if calculated.get('exercise') else fundamental_status
     evidence=calculated.get('evidence') or {}
     doc=calculated.get('document_url')
     evidence_html=(f'<a href="{esc(doc)}" rel="noopener noreferrer" target="_blank">Rapport référencé · exercice {esc(calculated.get("exercise"))}</a> · '
@@ -353,19 +352,20 @@ def detail_page(item, record, fixture, style, script, collection=None):
             for k,v in evidence.items())+'</ul></details>')
     body = (header('../index.html', fixture["snapshot_updated"])
             + '<main class="issuer-page">' + issuer_heading(item, record, collection)
-            + quality_card(item) + sector_card(item)
-            + intraday_line(item.get('intraday_quote'), item.get('intraday_observed_at'))
+            + issuer_snapshot(item)
             + f'<section class="panel chart-workspace" id="graphique" data-chart-symbol="{esc(symbol)}"><div class="section-heading"><div><span class="eyebrow">Historique graphique · {esc(symbol)}</span><h2>Prix & volumes</h2></div><span class="chart-frequency">1 jour · MAD · cours non ajustés</span></div><p class="panel-sub">Historique {esc(first)} → {esc(last)} · {len(bars)} séances. Pointez une séance ou choisissez un outil de tracé.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
-            + f'<div class="detail-grid">{cards}</div>{caveat}'
+            + f'<details class="reading-details"><summary>Liquidité et profondeur de l’historique</summary><div class="detail-grid">{cards}</div>{caveat}</details>'
+            + f'<section class="panel" id="fondamentaux"><span class="eyebrow">Comptes annuels · {esc(calculated.get("exercise") or "non documentés")}</span><h2>Résultats & ratios</h2>{financial_dashboard(item)}{financial_history(item)}{semester_details}'
+            + f'<details class="reading-details" id="verifications"><summary>Sources, méthodes et réserves financières</summary><p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge indiquent le signe du ROE et de la croissance ; PER et P/B restent neutres.</p></details></section>'
+            + sector_card(item)
             + f'<section class="panel" id="technique"><span class="eyebrow">Indicateurs calculés</span><h2>Tendance, momentum et risque</h2><div class="detail-grid">{tech_cards}{tech_extended}</div><p class="fineprint">Niveaux sur 20 séances précédentes, sans la séance du jour. Après reprise, seules les séances postérieures sont comparées.</p></section>'
-            + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Le score est descriptif, jamais un ordre d’achat ou de vente. NLP : 0 %.</p><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></section>'
+            + f'<section class="panel"><span class="eyebrow">Score canonique · {esc(score.get("version"))}</span><h2>{number(score.get("value"),0) if score.get("value") is not None else "Non calculable"} / 100 · {esc(score.get("state"))}</h2><p>Couverture des facteurs : {number(score.get("coverage_pct"),0)} %. Score descriptif, sans prévision de cours.</p><details class="reading-details"><summary>Composition du score</summary><div class="score-factors">{score_factors or "Aucun facteur admissible"}</div><p class="fineprint">Couleurs : proportion de points obtenus dans chaque facteur, sans prévision de rendement.</p></details></section>'
             + '<div id="risques">' + statistics_html
             + research_panels(item)
             + '</div>'
-            + f'<section class="panel" id="fondamentaux"><span class="eyebrow">Fondamentaux</span><h2>Calculs et provenance</h2><p class="source-age">{esc(fundamental_age)}</p>{financial_history(item)}{financial_dashboard(item)}<p class="fineprint">{evidence_html}</p>{financial_details}<p class="fineprint">Vert et rouge qualifient seulement le signe du ROE et de la croissance ; PER et P/B restent neutres. Les chiffres source proviennent de rapports historiques référencés et nécessitent un recoupement. Le cours est celui daté en haut de cette fiche.</p></section>'
             + f'<section class="panel" id="historique"><div class="section-heading"><div><span class="eyebrow">Historique à la demande</span><h2>{len(bars)} séances disponibles</h2><p class="panel-sub">Les données détaillées sont accessibles dans le fichier CSV.</p></div><a class="btnlink" href="../historique/{esc(symbol)}.csv" download>CSV · {esc(symbol)}</a></div><p class="fineprint">Les volumes sont exprimés en nombre de titres. Les anomalies OHLC sont signalées dans le CSV.</p></section>'
-            + documentary_status(item)
-            + '<section class="panel"><span class="eyebrow">Provenance</span><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source initial des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></section></main>'
+            + quality_card(item) + documentary_status(item)
+            + '<details class="panel reading-details"><summary>Provenance de l’archive</summary><p class="fineprint">Archive initiale copiée en lecture seule du moteur précédent. ' + f'Commit source initial des données historiques {esc(fixture["source_commit"])} ; snapshot {esc(fixture["snapshot_updated"])}. Ancien moteur : {esc(item["legacy_comparison"]["sig"])} / {esc(item["legacy_comparison"]["sigBvc"])}. Ces champs ne pilotent aucun calcul Nour.</p></details></main>'
             + '<footer>BVC Analyzer Nour · données et documents datés ; valider les sources avant toute décision financière.</footer>')
     return shell(f'{symbol} · {record["name"]}', body, style, script)
 

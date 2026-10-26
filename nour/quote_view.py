@@ -46,7 +46,7 @@ def quote_view(item, record):
             'reference_price': reference[0] if reference else None}
 
 
-def quote_clocks(view):
+def quote_clocks(view, compact=False):
     try:
         day = date.fromisoformat(view.get('session'))
         day_text = day.strftime('%d/%m/%Y')
@@ -60,8 +60,12 @@ def quote_clocks(view):
                     '<small>Heure indiquée par la source</small>')
     except (TypeError, ValueError):
         cotation = f'<time datetime="{escape(view.get("session") or "")}">{day_text}</time><small>Heure de cotation non communiquée</small>'
+    checks = ('<div data-title-source-check>' + (collection_stamp(view['source_checked_at'], 'Source contrôlée pour ce titre') if view.get('source_checked_at') else '<p>Dernier contrôle de source pour ce titre : heure non communiquée.</p>') + '</div>'
+            + '<div data-title-validated>' + (collection_stamp(view['price_validated_at'], 'Dernière cotation validée') if view.get('price_validated_at') else '<p>Dernière cotation validée : heure non communiquée.</p>') + '</div>')
+    if compact:
+        checks = '<details class="quote-clock-details"><summary>Contrôle et validation du cours</summary>' + checks + '</details>'
+        cotation = cotation.replace('<small>Heure indiquée par la source</small>', '')
     return ('<div class="quote-clocks" data-quote-clocks><p class="quote-source-time">Cotation : '
             + cotation + '</p><div data-quote-collected>'
             + collection_stamp(view.get('collected_at'), 'Cours recueilli') + '</div>'
-            + '<div data-title-source-check>' + (collection_stamp(view['source_checked_at'], 'Source contrôlée pour ce titre') if view.get('source_checked_at') else '<p>Dernier contrôle de source pour ce titre : heure non communiquée.</p>') + '</div>'
-            + '<div data-title-validated>' + (collection_stamp(view['price_validated_at'], 'Dernière cotation validée') if view.get('price_validated_at') else '<p>Dernière cotation validée : heure non communiquée.</p>') + '</div></div>')
+            + checks + '</div>')

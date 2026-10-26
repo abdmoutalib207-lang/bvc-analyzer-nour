@@ -187,3 +187,20 @@ html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
 .business-disclosures td:nth-child(2){white-space:nowrap}
 .business-disclosures .source-hash{overflow-wrap:anywhere;word-break:break-all}
 .business-disclosures td p{max-width:36rem;white-space:normal}
+
+/* Shared quiet reading hierarchy for every issuer, including no-JS pages. */
+.issuer-keyfigures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:4px 0 10px}
+.issuer-keyfigure{display:flex;flex-direction:column;gap:7px;padding:17px 20px;border:1px solid #2d4852;border-radius:12px;background:#10232d;text-decoration:none;min-width:0;min-height:112px}
+.issuer-keyfigure>span{font-size:12px;color:#b7c9ce}.issuer-keyfigure>strong{font-size:30px;font-weight:650;letter-spacing:-.6px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.issuer-keyfigure>small{font-size:11px;color:#a8bec5}.issuer-keyfigure:hover{border-color:#8ab9b2;background:#152d36}.issuer-keyfigure:focus-visible{outline:2px solid #b4e283;outline-offset:3px}
+.issuer-period{font-size:12px;color:#a6bdc5;margin:0 0 16px}.issuer-attention{font-size:12px;line-height:1.7;padding:12px 16px;background:#272a23;border-left:3px solid #c3ac72;border-radius:6px;margin-bottom:20px;overflow-wrap:anywhere}.issuer-attention>span{font-weight:700;margin-right:8px}.issuer-attention a{white-space:nowrap}
+.issuer-page .reading-details{margin-block:14px;border-top:1px solid #2c4650;padding-top:8px}.issuer-page .reading-details>summary{min-height:44px;padding:12px 0;font-size:13px;color:#b7cdd0}.issuer-page .reading-details[open]>summary{color:#d8edc2}
+.issuer-page :is(h1,h2,h3){text-wrap:balance}.issuer-page>section.panel{margin-top:22px}
+.issuer-page .reading-details .panel{box-shadow:none}.issuer-page .score-factors{margin-top:16px}
+.business-highlights{padding-left:20px;line-height:1.8}
+@media(max-width:650px){.issuer-keyfigures{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.issuer-keyfigure{padding:14px;min-height:102px}.issuer-keyfigure>strong{font-size:26px}.issuer-keyfigure>span{font-size:11px}.issuer-attention{padding:10px 12px}}
+
+.issuer-hero{align-items:start}.issuer-hero .issuer-ask{margin-top:14px}
+.quote-clock-details{font-size:12px;margin-top:5px}.quote-clock-details>summary{min-height:40px;padding:10px 0;font-size:12px;color:#a7bfc6;font-weight:500}.quote-clock-details .quote-collector-check{border-top:0;margin-top:0;padding-top:0}
+.issuer-quote .quote-clocks .collection-stamp{margin-block:5px}
+@media(max-width:650px){.issuer-hero .eyebrow{margin-top:14px}.issuer-hero .issuer-ask{margin-top:8px}.issuer-hero{gap:8px}.issuer-hero .status{margin-right:8px}.issuer-quote{padding-top:12px}.quote-clock-details>summary{min-height:36px;padding:8px 0}}
