@@ -106,15 +106,15 @@ absence de mutation des données. Aucun appel LLM n'est nécessaire.
 Le contrôle complet requis reste `python tools/verify_nour.py --build --asof
 2026-10-26`. Les parcours navigateur incluent le guide et des questions HPS,
 RDS et Wafa Assurance à trois largeurs, avec leurs liens de sources, y compris
-sur une génération où ADI est volontairement mis en quarantaine. Le statut
-définitif des contrôles et de la publication sera consigné après observation.
+sur une génération où ADI est volontairement mis en quarantaine. Les résultats observés sont consignés ci-dessous.
 
 ## Limites à reprendre
 
 Les autres méthodes détaillées doivent être revues par lots d'émetteurs.
 Le référentiel déjà relevé sur 66 dossiers n'est pas une revue de toutes leurs
-notes comptables. Les trois dossiers sans publication annuelle restent à
-compléter. Aucune promesse de répondre correctement à toute question possible.
+notes comptables. Les trois dossiers sans publication annuelle renseignée dans Nour (DIS, DLM
+et IBM) restent à compléter ; aucune absence de publication officielle n’est
+affirmée. Aucune promesse de répondre correctement à toute question possible.
 Les réponses doivent distinguer faits, règles générales et hypothèses, et
 demander la période lorsqu'elle manque. Aucune normalisation IFRS/CGNC, aucun
 backtest point-in-time nouveau et aucune causalité économique ne sont inventés.
@@ -122,3 +122,44 @@ Le vrai fournisseur LLM, le typage, le taux de couverture et un audit complet
 d'accessibilité restent non mesurés. L'intégration de contexte comptable utilise
 le sélecteur de politique déjà déployé, sans changement du binaire Worker ;
 sa transmission est vérifiée par les tests Python/JS, sans appel commercial.
+
+## Preuves complémentaires et exécution du lot
+
+Le tableau de retraitement RDS, page PDF 18 du même RFA (empreinte du
+registre), a aussi été rendu et contrôlé visuellement. Son chiffre d’affaires
+2024 ajusté est de 233,682 MMAD contre 135,909 MMAD publié à l’origine. La base
+de croissance déjà présente dans Nour est bien 233,682 MMAD ; aucun remplacement
+par l’ancienne base n’a été effectué. Ce contrôle complémentaire ne certifie
+pas les autres postes de cette page.
+
+La vérification locale complète est passée : 473 tests Python, 106 réponses
+comptables, contrôles JS/Worker et audits des exports, pages, marché et calculs.
+Le contrôle arithmétique publié par cette construction contient 4 184 contrôles
+sans échec. La révision JET du test de préservation vérifie maintenant que le
+libellé semestriel importé est transmis au profil, tout en exigeant l’identité
+de tous les autres champs.
+
+La [PR 39](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/pull/39)
+a passé la [revue 40416119748](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40416119748) :
+473 tests Python et 96 parcours navigateur, 48 avec ADI en quarantaine et
+48 sur la génération normale. Les deux ensembles incluent le guide et les
+réponses comptables aux trois largeurs. Aucun appel à un vrai fournisseur LLM.
+Fusion : `d104fff84f85f5924d839b775e31397e1401409f` ; arbre de code revu
+`1f87bc8dd974be0986cffadcb5ea1dd539305364`.
+
+La [publication 40417297600](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40417297600)
+a terminé avec succès le 26 octobre 2026 à 23:22:28 UTC. Elle a reproduit
+les 473 tests Python et les 106 réponses, puis 144 parcours Chromium :
+48 sur la génération normale, 48 avec ADI en quarantaine, 48 sur les pages
+réellement servies après déploiement. Ces parcours publics incluent
+`comptabilite.html`, ses 80 lignes et ses sources, ainsi que les questions
+HPS/RDS/Wafa Assurance à trois largeurs. L’artefact préparé après sauvegarde
+est identifié par le commit `84fbb4621e75179bc099a552febe8c15540d135a`.
+Son export de couverture contient 80 titres, 11 revues primaires de méthodes,
+66 déclarations à approfondir, 3 dossiers à compléter et aucun conflit.
+
+Le contrôle public a été exécuté par Chromium dans le workflow. Aucun contrôle
+manuel supplémentaire de l’interface publique, aucun appel commercial à un
+modèle et aucune activation d’agent permanent ne sont prétendus réalisés.
+Les instructions de reprise et les trois leçons relues sont enregistrées avec
+ce lot ; les anciens incidents restent conservés.
