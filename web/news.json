@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T18:43:43.422007+00:00",
+  "updated_at": "2026-10-26T19:00:30.951080+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "255ea8e6b36a35aa01",
+      "title": "Brussels Takes Aim at Chinese Imports as Europe's Industrial Crisis Deepens",
+      "url": "https://oilprice.com/Energy/Energy-General/Brussels-Takes-Aim-at-Chinese-Imports-as-Europes-Industrial-Crisis-Deepens.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-26T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "74d6fa484a16a52bed",
       "title": "Polar Train LNG : pourquoi la Russie a financé \"en secret\" un projet gazier made in USA",
@@ -3515,23 +3532,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "db7a13483cd9e54dc5",
-      "title": "Afrique-Asie : la BIDC et Global Markets préparent une opération de financement de plus d’un milliard de dollars",
-      "url": "https://www.financialafrik.com/2026/10/21/afrique-asie-la-bidc-et-global-markets-preparent-une-operation-de-financement-de-plus-dun-milliard-de-dollars/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-21T15:08:48+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
       "id": "c30103e0dae5fb8993",
