@@ -174,7 +174,9 @@ def retained_market_context(snapshot_sha256, cache, health):
     """Restore a dated market context only when the canonical file is unchanged."""
     prior=(cache or {}).get('market') or {}
     proof=prior.get('proof') or {}
-    if (health.get('result')!='error' or prior.get('snapshot_sha256')!=snapshot_sha256
+    # With zero new quotes the previous closed snapshot is still the active
+    # dataset. Keep only its exact, already validated proof, as on an outage.
+    if (health.get('result') not in ('error', 'awaiting_quotes') or prior.get('snapshot_sha256')!=snapshot_sha256
             or not snapshot_sha256 or proof.get('validated_snapshot_sha256')!=snapshot_sha256
             or proof.get('status') not in ('matched','reconciled','primary_checked','detail_matched','partial')
             or proof.get('publication_safe') is not True

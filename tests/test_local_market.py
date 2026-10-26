@@ -101,5 +101,12 @@ class LocalMarketTests(unittest.TestCase):
         self.assertIsNotNone(retained_market_context('a'*64,cache,{'result':'error'}))
         self.assertIsNone(retained_market_context('c'*64,cache,{'result':'error'}))
         self.assertIsNone(retained_market_context('a'*64,cache,{'result':'updated'}))
+        retained=retained_market_context('a'*64,cache,{'result':'awaiting_quotes'})
+        self.assertEqual(retained,cache['market'])
+        self.assertIsNone(retained_market_context('c'*64,cache,{'result':'awaiting_quotes'}))
+        bad=deepcopy(cache);bad['market']['proof']['publication_safe']=False
+        self.assertIsNone(retained_market_context('a'*64,bad,{'result':'awaiting_quotes'}))
+        bad=deepcopy(cache);bad['market']['proof']['session']='1900-01-01'
+        self.assertIsNone(retained_market_context('a'*64,bad,{'result':'awaiting_quotes'}))
         report['provenance']['market_snapshot_sha256']='c'*64
         self.assertTrue(audit_market_integrity(report)['failures'])
