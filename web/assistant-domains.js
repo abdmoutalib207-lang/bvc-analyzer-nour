@@ -51,6 +51,57 @@
     if(['buy','sell','slip'].some(k=>!finite(filters[k])||filters[k]<0||filters[k]>10))return {error:'Les coûts acceptés sont de 0 à 10 % par côté, comme dans le laboratoire.'};
     return {filters};
   }
+  function accountingAnswer(question,data,symbols,state={}){
+    const book=data.knowledge?.accounting;
+    if(!book)return null;
+    const q=normalize(question),direct=new RegExp(book.question_pattern).test(q);
+    const follow=state.domain==='accounting'&&/^et\s+(?:pour|chez|en|[a-z0-9]+\s*\??$)/.test(q)&&!/\bper\b|bpa|roe|cours|volume|rsi/.test(q);
+    if(!direct&&!follow)return null;
+    const lookup=follow?normalize((state.accountingQuestion||'normes comptables')+' '+question):q;
+    const lines=[`Méthodes comptables · bibliothèque Nour au ${data.analysis_date}.`],sources=[];
+    const add=s=>{if(s?.url&&!sources.some(v=>v.url===s.url))sources.push({label:s.title||s.label||'Publication primaire',url:s.url});};
+    const outside=/\b(?:ocp|onee|ram)\b/.test(q);
+    const topics=Object.entries(book.topics).filter(([id,t])=>new RegExp(t.pattern).test(lookup));
+    if(outside)topics.sort(([a],[b])=>Number(b==='nonlisted')-Number(a==='nonlisted'));
+    if(!topics.length)topics.push(['general',book.topics.general]);
+    for(const [id,t] of topics.slice(0,5)){lines.push(t.title+' — '+t.text);for(const s of t.sources)add(s);}
+    const years=[...q.matchAll(/\b20\d{2}\b/g)].map(m=>Number(m[0]));
+    const semester=/\bs[12]\b|semestre|semestriel/.test(q);
+    const selected=outside?[]:symbols.filter(s=>data.symbols?.[s]).map(s=>data.symbols[s]);
+    for(const row of selected){
+      const p=row.accounting_profile||{},f=row.fundamental||{};
+      if(semester){
+        const r=p.latest_publication||{};
+        if(r.period_end&&(!years.length||years.includes(Number(r.period_end.slice(0,4))))){
+          lines.push(`${row.symbol} · publication distincte au ${r.period_end} : ${r.accounting_basis||'référentiel à préciser'}. Les méthodes annuelles ne sont pas automatiquement reportées sur ce semestre.`);
+          add({title:row.symbol+' · publication semestrielle',url:r.document_url});
+        }else lines.push(`${row.symbol} · aucune méthode semestrielle contrôlée pour cette période dans la bibliothèque.`);
+        continue;
+      }
+      if(years.length&&!years.includes(p.exercise)){
+        lines.push(`${row.symbol} · profil annuel disponible pour ${p.exercise||'une période non précisée'}, pas de revue primaire distincte pour ${years.join(', ')}. Le comparatif historique doit être lu dans sa publication propre ou dans le tableau de retraitement sourcé.`);continue;
+      }
+      lines.push(`${row.symbol} · ${row.name} · clôture comptable ${p.period_end||'à préciser'} : ${p.declared_basis||'référentiel à compléter'}.`);
+      if(p.basis_detail)lines.push(p.basis_detail);
+      lines.push(p.notice||'Les méthodes détaillées de ce titre restent à documenter.');
+      for(const s of p.evidence||[])add(s);
+      for(const v of p.policies||[]){lines.push(v.text);add(v.source);}
+      if(p.comparability)lines.push(p.comparability.summary);
+      for(const [pattern,key,label,unit] of [[/\bper\b/,'pe','PER canonique','×'],[/\bbpa\b/,'eps_mad','BPA retenu','MAD'],[/\broe\b/,'roe_pct','ROE de clôture','%']]){
+        if(pattern.test(q))lines.push(`${label} : ${fmt(f[key],unit)} · exercice ${f.exercise||'non précisé'} · cours de référence ${row.asof||'non daté'}.`);
+      }
+      if(/pourquoi.*(?:benefice|resultat)|baisse.*benefice/.test(q)){
+        lines.push(`Résultat annuel attribuable retenu : ${fmt(f.earnings_mmad,'MMAD')} · exercice ${f.exercise||'non précisé'}. La méthode décrite ne démontre pas à elle seule la cause de sa variation.`);
+      }
+      add({title:row.symbol+' · comptes annuels',url:f.document_url});
+      add({title:'Méthodes '+row.symbol,url:row.url+'#verifications'});
+    }
+    if(!selected.length&&!outside)lines.push('Précisez un titre et une période pour distinguer une règle générale du choix effectivement publié par la société.');
+    if(/secteurs?|metiers?/.test(q)&&!selected.length)lines.push('Banques : PCEC et consolidation publiée ; assureurs : adoption IFRS 17 à vérifier ; promoteurs : reconnaissance du revenu et PCSI ; foncières : choix IAS 40 si IFRS ; BTP : méthode des contrats ; technologie : charges ou actifs de développement selon les notes. Les autres familles sont accessibles dans le guide.');
+    add({title:'Guide et référentiels par titre',url:'comptabilite.html'});
+    return {text:lines.join('\n\n'),sources,symbols:outside?['MASI']:symbols,mode:'local',domain:'accounting',
+      context:{domain:'accounting',symbols:outside?['MASI']:symbols,accountingQuestion:direct?question:state.accountingQuestion}};
+  }
   function answer(question,data,symbols,state={}){
     const q=normalize(question),lines=[`Données Nour · analyse du ${data.analysis_date}.`],sources=[];
     const defs=data.knowledge?.definitions||{};
@@ -304,7 +355,7 @@
       if(selected.length&&!rows.length){for(const [,key] of selected.slice(0,5))definition(key);link('Méthodes et données','index.html');return result('navigation');}}
     return null;
   }
-  const api={answer,decorate,labFilters,officialReference};
+  const api={answer,decorate,labFilters,officialReference,accountingAnswer};
   if(typeof module==='object'&&module.exports)module.exports=api;
   root.NourAssistantDomains=api;
 })(typeof window==='undefined'?globalThis:window);

@@ -21,7 +21,7 @@ def main():
     commands.extend(['node', '--check', f'web/{name}.js'] for name in
                     ('diagnostics', 'nour', 'bi', 'chart', 'chart-controls', 'market', 'research', 'assistant-domains', 'assistant-query', 'assistant'))
     commands.extend(['node', f'tools/{name}.cjs'] for name in
-                    ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_volume', 'test_assistant_volume_isolation', 'test_assistant_domains', 'test_assistant_conversation', 'test_assistant_query'))
+                    ('test_research', 'test_chart_controls', 'test_news_filters', 'test_assistant', 'test_assistant_volume', 'test_assistant_volume_isolation', 'test_assistant_domains', 'test_assistant_accounting', 'test_assistant_conversation', 'test_assistant_query'))
     commands.append(['node', 'tools/test_worker.mjs'])
     commands.append([sys.executable, 'tools/audit_site.py'])
     commands.append([sys.executable, 'tools/audit_market_integrity.py'])

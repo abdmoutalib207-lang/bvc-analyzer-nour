@@ -11,7 +11,7 @@ function check(q,predicate,context='MASI',state={},facts=data){
   const r=api.localAnswer(q,facts,context,state);assert.ok(predicate(r),q+'\n'+r.text);checked++;return r;
 }
 const menu=check('Quelles fonctions peux-tu expliquer ?',r=>r.domain==='navigation');
-assert.equal(data.knowledge.capabilities.length,17);
+assert.equal(data.knowledge.capabilities.length,18);
 for(const capability of data.knowledge.capabilities)assert.ok(menu.text.includes(capability.label));
 const cases=[
   ['Comment télécharger les données ADI ?','chart','CSV'],

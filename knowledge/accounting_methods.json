@@ -1,0 +1,590 @@
+{
+  "version": "nour-accounting-v1",
+  "reviewed_at": "2026-10-26",
+  "sources": {
+    "ADI": {
+      "title": "ADI · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "sha256": "0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        14,
+        24,
+        25
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "ADH": {
+      "title": "ADH · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        59
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "RDS": {
+      "title": "RDS · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+      "sha256": "af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        17,
+        21
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "ATL": {
+      "title": "ATL · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/AtlantaSanad_RFA_2025.pdf",
+      "sha256": "5c700bd201146a3c38b60b962b1ef0cbba75f338917087e36842f49f8880b67e",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        146
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "ARD": {
+      "title": "ARD · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
+      "sha256": "272fdb3d9d6ead47bee49030106ae671774421580c0e7f4f44cf8d8fe354e658",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        7,
+        8
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "HPS": {
+      "title": "HPS · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/HPS_RFA_2025.pdf",
+      "sha256": "d50b7fda92170c16ace9e1f649286333a0175f74c2051fc7856b179351b88ee2",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        61
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "TGCC": {
+      "title": "TGCC · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/TGCC_RFA_2025.pdf",
+      "sha256": "68186ab90906052a10d96579b10446c9e3b889e8017c5e53edeab291df5efaa1",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        98
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "EQD": {
+      "title": "EQD · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Eqdom_RFA_2025.pdf",
+      "sha256": "a0b6f48f3391a3428f98a6b5ff21e924a692bdb838416d96594d1b677d7002d6",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        64
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "SLM": {
+      "title": "SLM · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Salafin_RFA_2025.pdf",
+      "sha256": "0f26aed96bc94fb23438c439b0de8a941cd61b6ee3ed0d7b4e5f7cb1cbb003cb",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        83
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "WAF": {
+      "title": "WAF · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Wafa_Assurance_RFA_2025.pdf",
+      "sha256": "162f0a480d639cd9e19b6e44304d6170bd47f5c5ab899dc3260d7db0fc3b8ec6",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        20
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "ATW": {
+      "title": "ATW · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/AWB_RFA_2025.pdf",
+      "sha256": "766da5ac174bfd22e1a9aac59fd5465bb51b2249ed8143268afba5235f1e3afb",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        57,
+        83
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "AMMC2026": {
+      "title": "AMMC · recueil réglementaire, mars 2026",
+      "url": "https://www.ammc.ma/sites/default/files/pieces-jointes/Recueil_AMMC_VF_%20Mars%202026.pdf",
+      "sha256": "88448b1e781657ec25a793f1ff3e41ad425b7b13b04fe529bc5485b1bbac7303",
+      "reviewed_at": "2026-10-26",
+      "checked_pages": [
+        102,
+        762
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "IAS38": {
+      "title": "IAS 38 · immobilisations incorporelles",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IAS40": {
+      "title": "IAS 40 · immeubles de placement",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-40-investment-property/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IFRS9": {
+      "title": "IFRS 9 · instruments financiers",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IFRS17": {
+      "title": "IFRS 17 · contrats d’assurance",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-17-insurance-contracts/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IAS2": {
+      "title": "IAS 2 · stocks",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IAS37": {
+      "title": "IAS 37 · provisions",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IFRS16": {
+      "title": "IFRS 16 · contrats de location",
+      "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_standard_summary_read"
+    },
+    "IFRS15": {
+      "title": "IFRS Interpretations Committee · immobilier et transfert du contrôle",
+      "url": "https://www.ifrs.org/news-and-events/updates/ifric/2018/ifric-update-march-2018/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_guidance_read"
+    },
+    "PCSI": {
+      "title": "MEF · avis CNC n°21, PCSI applicable au 1er janvier 2025",
+      "url": "https://www.finances.gov.ma/fr/Pages/detail-actualite.aspx?fiche=6310",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_guidance_read"
+    },
+    "IFRS15_AGENT": {
+      "title": "IASB · IFRS 15, analyse principal/agent",
+      "url": "https://www.ifrs.org/news-and-events/news/2016/04/amendment-issued-ifrs-revenue-from-contracts-with-customers/",
+      "reviewed_at": "2026-10-26",
+      "review_kind": "official_guidance_read"
+    }
+  },
+  "topics": {
+    "general": {
+      "title": "Référentiel de chaque publication",
+      "pattern": "normes?|referentiel|ifrs|cgnc|methodes? comptables|secteurs?",
+      "text": "La cotation à Casablanca ne signifie pas IFRS pour tous les groupes. La circulaire AMMC n°03/19, article 2.7, prévoit des comptes consolidés selon les normes en vigueur au Maroc ou IAS/IFRS ; des règles sectorielles particulières peuvent s’appliquer. L’option IFRS devient définitive selon l’article 2.8. Nour lit le référentiel du document et sa période. Un secteur ou un ratio ne suffit pas à le déterminer.",
+      "sources": [
+        {
+          "id": "AMMC2026",
+          "page": 762
+        }
+      ]
+    },
+    "social": {
+      "title": "Comptes sociaux et comptes consolidés",
+      "pattern": "social|consolide|cgnc|perimetre|minoritaire|fiscal|impot",
+      "text": "Les comptes sociaux portent sur une entité juridique ; les comptes consolidés décrivent le groupe après retraitements et éliminations. Les comptes sociaux suivent le référentiel légal de l’activité : le CGNC n’est pas un libellé universel, notamment pour les établissements de crédit. Ne pas substituer un résultat social au RNPG ni le résultat total au résultat attribuable. Nour conserve aussi le référentiel propre du semestre, sans l’hériter automatiquement de l’annuel. Le calcul fiscal détaillé n’est pas reconstitué par cette bibliothèque.",
+      "sources": [
+        {
+          "id": "AMMC2026",
+          "page": 762
+        },
+        {
+          "id": "SLM",
+          "page": 83
+        }
+      ]
+    },
+    "credit": {
+      "title": "Banques, crédit à la consommation et crédit-bail",
+      "pattern": "banqu|pcec|etablissement.*credit|salafin|eqdom|credit.bail|leasing|cout du risque",
+      "text": "Distinguer les comptes sociaux selon le plan comptable des établissements de crédit (PCEC), les comptes consolidés selon leur référentiel effectivement publié et les exigences prudentielles BAM. EQDOM et Salafin ne sont pas automatiquement assimilés à une banque en IFRS. Les encours de crédits ne sont pas le PNB ; les emprunts d’un établissement financier ne s’analysent pas avec dette nette/EBITDA industriel. Lire séparément coût du risque, créances en souffrance et règles de provisionnement.",
+      "sources": [
+        {
+          "id": "SLM",
+          "page": 83
+        },
+        {
+          "id": "EQD",
+          "page": 64
+        },
+        {
+          "id": "ATW",
+          "page": 83
+        }
+      ]
+    },
+    "ifrs9": {
+      "title": "IFRS 9 : risque de crédit et instruments financiers",
+      "pattern": "ifrs\\s*9\\b|ecl|stage|bucket|pertes? attendues?|cout du risque|banqu",
+      "text": "Si IFRS 9 est appliquée, distinguer coût amorti, juste valeur par résultat et juste valeur par les autres éléments du résultat global, selon le modèle de gestion et les flux contractuels. Le modèle général de dépréciation distingue les pertes attendues à 12 mois (stage 1) et à maturité (stages 2 et 3), avec des approches simplifiées pour certains postes. Une hausse du coût du risque peut aussi venir des volumes, migrations, paramètres ou reprises : elle ne prouve pas à elle seule l’anticipation d’une crise au Maroc.",
+      "sources": [
+        {
+          "id": "IFRS9"
+        },
+        {
+          "id": "ATW",
+          "page": 57
+        }
+      ]
+    },
+    "insurance": {
+      "title": "Assureurs : adoption datée d’IFRS 17",
+      "pattern": "assur|ifrs\\s*17|csm|paa|bba|vfa|primes?|sinistr",
+      "text": "Vérifier l’adoption effective par assureur et par période : Wafa Assurance applique IFRS 17 et IFRS 9 dans sa publication consolidée 2025, avec comparatifs retraités ; AtlantaSanad publie en référentiel marocain dans le rapport revu. Sous IFRS 17, les produits des activités d’assurance, les charges de services et le résultat des services d’assurance sont distincts. Les primes encaissées ne deviennent pas simplement un résultat. La CSM représente un profit non encore reconnu ; le modèle général, la VFA et la PAA répondent à des conditions différentes. Ne pas appliquer ce régime aux courtiers par leur seul secteur.",
+      "sources": [
+        {
+          "id": "IFRS17"
+        },
+        {
+          "id": "WAF",
+          "page": 20
+        },
+        {
+          "id": "ATL",
+          "page": 146
+        }
+      ]
+    },
+    "revenue": {
+      "title": "Reconnaissance du chiffre d’affaires",
+      "pattern": "ifrs\\s*15|revenu|chiffre d.affaires|avancement|achevement|livraison|contrats?|btp|telecom",
+      "text": "Sous IFRS 15, examiner les obligations de prestation et le transfert du contrôle. La reconnaissance à l’avancement exige au moins un des critères du paragraphe 35 ; sinon elle intervient à un instant donné. Une prévente, une réservation ou un encaissement ne constitue pas automatiquement un revenu. Dans les normes marocaines, lire la méthode effectivement publiée et les plans sectoriels. Séparer les prestations de construction des ventes de ciment : un chantier et une livraison de matériaux n’ont pas le même cycle.",
+      "sources": [
+        {
+          "id": "IFRS15"
+        },
+        {
+          "id": "ADI",
+          "page": 25
+        }
+      ]
+    },
+    "pcsi": {
+      "title": "Immobilier : changement de méthode en 2025",
+      "pattern": "pcsi|immobili|promotion|retrait|comparab|changement|methode constante|notari",
+      "text": "L’avis CNC n°21 reporte au 1er janvier 2025 l’application du PCSI mis à jour. L’effet dépend de l’émetteur et du périmètre. ADI signale un écart entre chiffre d’affaires publié et lecture à règles 2024 constantes. RDS décrit une reconnaissance à l’acte notarié et un retraitement rétrospectif en consolidé, tandis que le changement social est prospectif. Conserver le publié et le retraité avec leur source ; une simulation de l’émetteur ne remplace pas le chiffre canonique et ne résout pas un écart de dette.",
+      "sources": [
+        {
+          "id": "PCSI"
+        },
+        {
+          "id": "ADI",
+          "page": 14
+        },
+        {
+          "id": "RDS",
+          "page": 17
+        }
+      ]
+    },
+    "research": {
+      "title": "Recherche, développement et logiciels",
+      "pattern": "ias\\s*38|r\\s*&\\s*d|recherche|developpement|activation|capitalis|logiciel|hps",
+      "text": "Sous IAS 38, les dépenses de recherche sont des charges ; les dépenses de développement ne deviennent un actif que si les critères requis sont remplis. Une capitalisation conforme n’est pas, en soi, une manipulation du bénéfice. Vérifier le référentiel, les montants activés, les amortissements et les dépréciations. HPS indique dans sa publication 2025 en normes marocaines que ses frais de recherche et développement sont comptabilisés en charges : ne pas lui attribuer une activation automatique sous IAS 38.",
+      "sources": [
+        {
+          "id": "IAS38"
+        },
+        {
+          "id": "HPS",
+          "page": 61
+        }
+      ]
+    },
+    "property": {
+      "title": "Foncières et juste valeur",
+      "pattern": "ias\\s*40|foncier|aradei|juste valeur|revenus? locatifs?|loyers?|ffo|anr",
+      "text": "Sous IAS 40, l’entité choisit une méthode au coût ou à la juste valeur dans les conditions de la norme. La juste valeur n’est donc pas automatique pour toute foncière. Chez Aradei dans le document 2025 revu, les immeubles de placement sont à la valeur de marché, et les immeubles en construction restent au coût jusqu’à achèvement. Une variation de juste valeur comptabilisée en résultat n’est pas un encaissement locatif. Le FFO et l’ANR sont à lire avec la définition et le périmètre publiés ; ne pas les inventer.",
+      "sources": [
+        {
+          "id": "IAS40"
+        },
+        {
+          "id": "ARD",
+          "page": 8
+        }
+      ]
+    },
+    "dividends": {
+      "title": "Résultat distribuable et dividendes",
+      "pattern": "distribuable|distribution|dividende.*(?:depend|consolide|social|benefice)|(?:benefice|resultat).*(?:dividende|distribu)",
+      "text": "Le RNPG consolidé ne détermine pas mécaniquement le dividende de la société mère. Pour une SA marocaine, examiner les comptes sociaux approuvés, le bénéfice après pertes antérieures et réserves obligatoires, le report bénéficiaire, les contraintes de situation nette et la décision de l’assemblée. Un rendement calculé avec un dividende publié ne garantit pas sa reconduction. Le montant distribué exige une proposition ou une décision effectivement sourcée ; Nour ne le déduit pas d’un bénéfice consolidé.",
+      "sources": [
+        {
+          "id": "AMMC2026",
+          "page": 102
+        }
+      ]
+    },
+    "inventories": {
+      "title": "Stocks, industries, agriculture et distribution",
+      "pattern": "stocks?|cout.*revient|ciment|industri|agric|intrants?|distribution|mines?|production|sante",
+      "text": "Les méthodes de stocks, amortissements, frais de développement et provisions sont celles du référentiel et des notes de la société. Sous IAS 2, les stocks concernés sont évalués au plus faible du coût et de la valeur nette de réalisation ; distinguer FIFO, coût moyen et identification spécifique selon les cas. Ne pas déprécier systématiquement un stock sans perte de valeur étayée. Les volumes produits, vendus, le CAPEX investi et le CAPEX décaissé restent distincts. Les actifs biologiques, concessions ou dépenses d’exploration exigent leurs règles particulières, non déduites du secteur.",
+      "sources": [
+        {
+          "id": "IAS2"
+        }
+      ]
+    },
+    "provisions": {
+      "title": "Provisions et pertes sur contrats",
+      "pattern": "ias\\s*37|provision|pertes?.*terminaison|contrats?.*deficitaire|chantier|depreciation",
+      "text": "Sous IAS 37, une provision suppose une obligation actuelle, une sortie probable de ressources et une estimation fiable ; distinguer passif éventuel et charge comptabilisée. Un contrat déficitaire peut entraîner une provision : vérifier sa mesure et les actifs concernés. Ne pas appliquer cette règle générale aux pertes de crédit IFRS 9 ou aux contrats d’assurance IFRS 17 sans vérifier leur champ. Dans les comptes marocains, reprendre le traitement déclaré par l’émetteur.",
+      "sources": [
+        {
+          "id": "IAS37"
+        }
+      ]
+    },
+    "leases": {
+      "title": "Crédit-bail et locations",
+      "pattern": "ifrs\\s*16|credit.bail|leasing|location|loyers?|dette.*locat",
+      "text": "Distinguer bailleur et preneur. Sous IFRS 16, le preneur comptabilise généralement un droit d’utilisation et une dette locative, avec notamment des exceptions de courte durée ou de faible valeur. Le traitement comptable du bailleur et le PCEC ne se remplacent pas par cette seule règle du preneur. Les différences de dette, EBITDA et flux entre définitions avec ou sans loyers exigent un pont chiffré publié ; aucune assimilation automatique.",
+      "sources": [
+        {
+          "id": "IFRS16"
+        },
+        {
+          "id": "EQD",
+          "page": 64
+        }
+      ]
+    },
+    "principal_agent": {
+      "title": "Courtiers, intermédiaires et services de paiement",
+      "pattern": "courtier|courtage|intermediaire|paiement|commission|principal|agent|volume.*affaires",
+      "text": "Distinguer le service propre de l’entreprise et les sommes qui transitent pour compte de tiers. Un volume de primes intermédiées ou de transferts n’est pas automatiquement le chiffre d’affaires propre. Dans IFRS 15, l’analyse principal/agent détermine notamment une présentation brute ou nette selon le contrôle du service ; reprendre la présentation effectivement publiée. Un courtier n’est pas traité comme un assureur porteur du risque.",
+      "sources": [
+        {
+          "id": "IFRS15_AGENT"
+        }
+      ]
+    },
+    "changes": {
+      "title": "Lire les variations sans inventer leur cause",
+      "pattern": "pourquoi.*(?:benefice|resultat|marge|chiffre)|variation|baisse.*benefice|methode.*compt",
+      "text": "Avant d’expliquer une variation, rapprocher période, devise, périmètre, part du groupe, référentiel, méthode de revenu et comparatif publié ou retraité. Distinguer effet de méthode, changement de périmètre et éléments exceptionnels. Une hausse ou baisse ne prouve pas une cause économique. Nour expose les méthodes documentées et les commentaires disponibles ; une causalité non étayée reste une hypothèse. Un changement de norme ne justifie pas une conversion IFRS/CGNC calculée sans tableau de passage.",
+      "sources": [
+        {
+          "id": "AMMC2026",
+          "page": 762
+        },
+        {
+          "id": "RDS",
+          "page": 17
+        }
+      ]
+    },
+    "nonlisted": {
+      "title": "Périmètre boursier et obligations de publication",
+      "pattern": "\\bocp\\b|\\bonee\\b|\\bram\\b|non cote|titres? de creance|obligataire",
+      "text": "OCP, ONEE et RAM ne figurent pas dans le référentiel de 80 actions de Nour ; l’application ne leur attribue donc aucun cours d’action ou ratio boursier. L’absence de cotation en actions n’implique pas l’absence d’obligations d’information : un émetteur de titres de créance faisant appel public à l’épargne peut aussi être soumis à l’AMMC. Ne pas bloquer la consultation de publications utiles au seul motif que l’entité ne figure pas dans la cote suivie.",
+      "sources": [
+        {
+          "id": "AMMC2026",
+          "page": 762
+        }
+      ]
+    }
+  },
+  "issuers": {
+    "ADI": {
+      "source": "ADI",
+      "framework": "moroccan",
+      "scope": "consolidated",
+      "basis_page": 24,
+      "basis_detail": "Normes nationales, méthodologie CNC avis n°5.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "recognition",
+          "page": 25,
+          "text": "Promotion immobilière : méthode de l’achèvement. Prestations de services (MOD, contractant général) : avancement des travaux."
+        },
+        {
+          "id": "pcsi",
+          "page": 14,
+          "text": "Le commentaire de gestion publie un CA 2025 arrondi de 2,432 milliards MAD (+3 %) et une simulation à règles 2024 constantes de 2,7 milliards MAD (+14 %). La simulation est un indicateur distinct du CA canonique."
+        }
+      ],
+      "comparability": {
+        "status": "method_change_disclosed",
+        "summary": "ADI : lecture 2024/2025 affectée par le changement de règles de comptabilisation du revenu.",
+        "page": 14
+      }
+    },
+    "ADH": {
+      "source": "ADH",
+      "framework": "ifrs",
+      "scope": "consolidated",
+      "basis_page": 59,
+      "basis_detail": "IAS/IFRS telles qu’adoptées par l’Union européenne ; transition du groupe au 1er janvier 2012.",
+      "period_end": "2025-12-31",
+      "policies": [],
+      "comparability": null
+    },
+    "RDS": {
+      "source": "RDS",
+      "framework": "ifrs",
+      "scope": "consolidated",
+      "basis_page": 21,
+      "basis_detail": "Comptes consolidés IFRS ; comptes sociaux marocains présentés séparément.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "pcsi",
+          "page": 17,
+          "text": "À compter de 2025, la reconnaissance du chiffre d’affaires de promotion est à la signature de l’acte notarié. Les comptes consolidés appliquent le changement rétrospectivement ; les comptes sociaux l’appliquent prospectivement. Ne pas mélanger leurs comparatifs."
+        }
+      ],
+      "comparability": {
+        "status": "restated_comparative",
+        "summary": "RDS : comparatif consolidé retraité après changement de reconnaissance du revenu en 2025.",
+        "page": 17
+      }
+    },
+    "ATL": {
+      "source": "ATL",
+      "framework": "moroccan",
+      "scope": "consolidated",
+      "basis_page": 146,
+      "basis_detail": "Le rapport d’audit consolidé se réfère au référentiel comptable en vigueur au Maroc. IFRS 17 ne peut pas être imposée par le seul secteur.",
+      "period_end": "2025-12-31",
+      "policies": [],
+      "comparability": null
+    },
+    "ARD": {
+      "source": "ARD",
+      "framework": "ifrs",
+      "scope": "consolidated",
+      "basis_page": 7,
+      "basis_detail": "Référentiel IFRS adopté dans l’Union européenne et applicable à la clôture.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "property",
+          "page": 8,
+          "text": "Immeubles de placement à la valeur de marché selon IAS 40 ; immeubles en construction au coût jusqu’à achèvement. Revenus locatifs et variations de juste valeur restent distincts."
+        }
+      ],
+      "comparability": null
+    },
+    "HPS": {
+      "source": "HPS",
+      "framework": "moroccan",
+      "scope": "consolidated",
+      "basis_page": 61,
+      "basis_detail": "Méthodologie CNC relative aux comptes consolidés, avis n°5.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "research",
+          "page": 61,
+          "text": "Les frais de recherche et développement du groupe sont comptabilisés en charges. Le rapport mentionne 143,7 MMAD de R&D en charges de l’exercice 2025 ; aucune activation générale de ces frais sous IAS 38 ne peut être affirmée."
+        },
+        {
+          "id": "recognition",
+          "page": 61,
+          "text": "Le chiffre d’affaires est enregistré au service rendu ; les contrats en cours sont comptabilisés selon la méthode du bénéfice net partiel. Distinguer ce traitement de la reconnaissance des seules ventes de matériel."
+        }
+      ],
+      "comparability": null
+    },
+    "TGCC": {
+      "source": "TGCC",
+      "framework": "moroccan",
+      "scope": "consolidated",
+      "basis_page": 98,
+      "basis_detail": "Méthodologie relative aux comptes consolidés du CNC, avis n°5 ; ne pas remplacer cette base par IFRS 15 sans preuve.",
+      "period_end": "2025-12-31",
+      "policies": [],
+      "comparability": null
+    },
+    "EQD": {
+      "source": "EQD",
+      "framework": "moroccan_credit",
+      "scope": "consolidated",
+      "basis_page": 64,
+      "basis_detail": "Consolidation selon la méthodologie CNC au Maroc ; créances de l’établissement régies par les règles BAM publiées.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "credit",
+          "page": 64,
+          "text": "Le rapport distingue créances pré-douteuses, douteuses et compromises et le provisionnement BAM 19/G/2002. La LOA fait aussi l’objet d’une comptabilité financière : ne pas importer les stages IFRS 9 ou une dette/EBITDA industriel automatiquement."
+        }
+      ],
+      "comparability": null
+    },
+    "SLM": {
+      "source": "SLM",
+      "framework": "moroccan_credit",
+      "scope": "social",
+      "basis_page": 83,
+      "basis_detail": "Comptes sociaux : nouveau plan comptable des établissements de crédit (PCEC).",
+      "period_end": "2025-12-31",
+      "policies": [],
+      "comparability": null
+    },
+    "WAF": {
+      "source": "WAF",
+      "framework": "ifrs",
+      "scope": "consolidated",
+      "basis_page": 20,
+      "basis_detail": "Comptes consolidés IAS/IFRS 2025 : première application IFRS 17 et IFRS 9.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "insurance",
+          "page": 20,
+          "text": "Le référentiel transitoire poursuivait IFRS 4 et IAS 39 en 2023 et 2024. La publication 2025 applique IFRS 17/IFRS 9 et présente des comparatifs retraités, avec bilan de transition au 1er janvier 2024."
+        }
+      ],
+      "comparability": {
+        "status": "restated_comparative",
+        "summary": "Wafa Assurance : transition IFRS 17/IFRS 9 en 2025 et comparatifs retraités.",
+        "page": 20
+      }
+    },
+    "ATW": {
+      "source": "ATW",
+      "framework": "ifrs",
+      "scope": "consolidated",
+      "basis_page": 83,
+      "basis_detail": "Comptes consolidés IFRS ; le rapport décrit le modèle de risque de crédit IFRS 9.",
+      "period_end": "2025-12-31",
+      "policies": [
+        {
+          "id": "ifrs9",
+          "page": 57,
+          "text": "Le groupe décrit les pertes de crédit attendues (ECL), avec PD, LGD et EAD, et un classement des actifs en trois phases ou buckets. Une variation du coût du risque ne démontre pas seule une crise future."
+        }
+      ],
+      "comparability": null
+    }
+  },
+  "limitation": "Bibliothèque de méthodes et revues de pages sélectionnées, pas un moteur de conversion de comptes ni un avis fiscal. Les déclarations importées non relues restent explicitement distinctes des revues primaires.",
+  "question_pattern": "\\bnormes?\\b|referentiel|ifrs|ias\\s*\\d|cgnc|pcec|pcsi|pcaa|methodes? comptables?|changement.*compt|r\\s*&\\s*d|activation.*(?:frais|recherche|developp)|frais.*(?:recherche|developp)|juste valeur|(?:pourquoi|explique).*?(?:benefice|resultat).*?(?:baiss|vari|diminu)|(?:benefice|resultat).*distribu|dividende.*(?:depend|consolide|social)|comptes sociaux.*(?:consolide|difference)|comptes consolides.*(?:sociaux|difference)|\\b(?:ocp|onee|ram)\\b"
+}

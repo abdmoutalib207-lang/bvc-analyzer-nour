@@ -35,8 +35,16 @@ async function answerAfter(page,action){
       const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','sources.html','macro.html','anomalies.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','comptabilite.html','sources.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='comptabilite.html'){
+          assert.equal(await page.locator('tbody tr').count(),80);
+          assert.equal(await page.locator('details[open]').count(),0);
+          await page.locator('details summary').filter({hasText:'Recherche, développement et logiciels'}).click();
+          assert.ok((await page.locator('details[open]').innerText()).includes('HPS'));
+          assert.ok(await page.locator('details[open] a[href*="HPS_RFA_2025.pdf#page=61"]').count());
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Accounting guide overflows '+width);
+        }
         if(route==='index.html'){
           assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
           await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
@@ -490,6 +498,14 @@ async function answerAfter(page,action){
           const menu=await ask('Quelles fonctions peux-tu expliquer ?');
           const facts=await (await context.request.get(new URL('assistant-data.json',base).href)).json();
           for(const c of facts.knowledge.capabilities)assert.ok(menu.includes(c.label));
+          const accountingHps=await ask('HPS active-t-il sa R&D en 2025 ?');
+          assert.ok(accountingHps.includes('comptabilisés en charges'));
+          assert.ok(await page.locator('.assistant-message[data-role="assistant"]').last().locator('a[href*="HPS_RFA_2025.pdf#page=61"]').count());
+          const accountingRds=await ask('Et pour RDS ?');
+          assert.ok(accountingRds.includes('RDS')&&accountingRds.includes('rétrospectivement'));
+          assert.ok(!accountingRds.includes('143,7 MMAD'));
+          const accountingWaf=await ask('IFRS 17 Wafa Assurance en 2025');
+          assert.ok(accountingWaf.includes('IFRS 4 et IAS 39'));
           const screening=await ask('Les 5 PER les plus faibles en 2025');
           assert.ok(screening.includes('titre(s) correspondant(s) sur 80'));
           assert.ok(screening.includes('PER annuel :'));

@@ -414,7 +414,10 @@
     if(state.queryQuestion&&/^\s*et\b/i.test(normalize(question))&&!symbolsFor(question,data,null,false).length)question=state.queryQuestion+' '+question;
     const prepared=prepareQuestion(question,data,fallback,state);
     question=prepared.question;
-    const symbols=prepared.symbols,guard=preciseAnswer(question,data,symbols,true);
+    const symbols=prepared.symbols;
+    const accounting=domains?.accountingAnswer?.(question,data,symbols,state);
+    if(accounting)return {...accounting,resolvedQuestion:question};
+    const guard=preciseAnswer(question,data,symbols,true);
     if(guard)return guard;
     const q=normalize(question),dates=datesIn(question);
     if(!dates.length&&/releves|chiffres documentes|donnees publiees|trafic|carnet.*command|production|capex|investissement|cash.cost|aisc|cout.*(?:minier|production)|charges? (?:comptables|externes)|flux.*(?:investissement|tresorerie)/.test(q)){

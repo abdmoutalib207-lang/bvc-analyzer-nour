@@ -9,6 +9,7 @@ from .sector_methods import guidance
 from .publication import history_readiness
 from .resilience import validate_fixture, guarded, issue
 from .sector_calculators import calculate_sector
+from .accounting import profile as accounting_profile
 
 
 def _mean(items):
@@ -224,6 +225,12 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         # Descriptive industry-specific review prompts only; not a financial fact
         # and not an input to the score or to the technical indicators.
         item["sector_guidance"] = guidance(symbol, {"sector": rec.get("sector")})
+        item['accounting_profile'] = guarded(item, 'accounting_profile',
+            lambda: accounting_profile(symbol, item['fundamental'], rec.get('sector'), asof),
+            lambda: {'version':'nour-accounting-v1', 'symbol':symbol,
+                     'status':'unavailable', 'policies':[], 'evidence':[],
+                     'notice':'Méthodes comptables à consulter dans le document primaire.',
+                     'used_for_score':False, 'documents_certified':False})
         item['sector_indicators'] = guarded(item,'sector_indicators',
             lambda: calculate_sector(symbol,rec,None if historical else facts.get(symbol),asof),
             lambda: {'version':'nour-sector-calculators-v1','symbol':symbol,

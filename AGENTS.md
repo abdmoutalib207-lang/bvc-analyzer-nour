@@ -54,3 +54,20 @@ Ne jamais présenter un JSON construit avant déploiement comme preuve de public
 Les exports `web/assistant-data.json` sont dérivés du rapport sans recalcul du
 score. Le serveur optionnel utilise exclusivement ses propres données et un
 modèle configuré par l'administrateur; le navigateur ne fournit aucun fait libre.
+
+## Méthodes partagées et apprentissage après chaque tâche
+
+Lire `docs/agent-learning.md` et `docs/accounting-methods-2026-10-26.md` pour
+les travaux financiers ou d'assistance. Le registre
+`knowledge/accounting_methods.json` distingue règles générales et choix
+documentés par société, période et périmètre. Ne pas déduire IFRS du secteur,
+ni convertir des comptes en changeant seulement leur libellé.
+
+À la fin de chaque tâche, consigner la conclusion, les preuves, les contrôles
+effectivement exécutés et les limites dans le document de reprise concerné.
+Toute erreur réutilisable devient une leçon relue via
+`nour.error_memory.record_lesson` et un contrôle anti-récidive quand pertinent.
+Conserver les anciennes leçons et incidents ; mettre à jour la mémoire commune
+dans le même lot Git. Une observation non vérifiée reste candidate.
+Cette mémoire partagée est une procédure de travail, pas un réentraînement de
+modèle ni la preuve qu'un agent permanent est installé ou actif.
