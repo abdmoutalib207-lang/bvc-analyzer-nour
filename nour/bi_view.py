@@ -92,7 +92,7 @@ def financial_dashboard(item):
         cards.append(f'<button type="button" class="kpi fundamental-card bi-metric tone-{tone}" '
             f'data-bi-metric="{key}" data-bi-group="{group}" aria-pressed="{str(selected).lower()}" '
             f'aria-controls="bi-explain-{key}"><span>{esc(title)}</span><strong>{number(value)}</strong>'
-            f'<small>{unit}</small><em>{label}</em></button>')
+            f'<small>{unit}</small>'+('' if known else f'<em>{label}</em>')+'</button>')
         period = f'Exercice {f.get("exercise") or "non documenté"} · clôture {f.get("period_end") or "non documentée"}'
         if key in ('pe', 'pb'):
             period += f' · cours au {item.get("asof") or "date non documentée"}'
@@ -109,15 +109,15 @@ def financial_dashboard(item):
     available = sum(finite(f.get(m[0])) for m in metrics)
     return ('<div class="bi-dashboard" data-bi-dashboard>'
         '<div class="bi-heading"><div><h3>Chiffres et lecture</h3>'
-        '<p class="panel-sub">Sélectionnez un chiffre pour comprendre sa lecture.</p></div>'
+        '</div>'
         f'<span class="bi-count">{available} / {len(metrics)} indicateurs affichables</span></div>'
         '<div class="bi-filters" data-bi-filters hidden><label for="bi-group">Voir</label>'
         '<select id="bi-group"><option value="all">Tous les indicateurs</option>'
         '<option value="valorisation">Valorisation</option><option value="rentabilite">Activité et rentabilité</option>'
         '<option value="dette">Dette</option></select></div>'
         f'<div class="bi-layout"><div class="bi-cards">{"".join(cards)}</div>'
-        f'<div class="bi-insight">{"".join(explanations)}<div class="bi-source">{source}</div></div></div>'
-        '<p class="fineprint" data-bi-status role="status" aria-live="polite">Les absences restent affichées ; aucun chiffre n’est remplacé.</p></div>')
+        f'<details class="bi-guide reading-details" data-bi-guide><summary>Comprendre un chiffre</summary><div class="bi-insight">{"".join(explanations)}<div class="bi-source">{source}</div></div></details></div>'
+        '<p class="fineprint" data-bi-status role="status" aria-live="polite">Sélectionnez un chiffre pour en savoir plus.</p></div>')
 
 
 def semester_chart(recent):

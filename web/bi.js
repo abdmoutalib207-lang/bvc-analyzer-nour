@@ -5,7 +5,8 @@
     const panels=[...root.querySelectorAll('[data-bi-explanation]')];
     const filter=root.querySelector('#bi-group');
     const status=root.querySelector('[data-bi-status]');
-    function select(card){
+    function select(card,explain=true){
+      const guide=root.querySelector('[data-bi-guide]');if(guide&&explain)guide.open=true;
       cards.forEach(c=>c.setAttribute('aria-pressed',String(c===card)));
       panels.forEach(p=>{
         const chosen=p.dataset.biExplanation===card.dataset.biMetric;
@@ -21,6 +22,6 @@
       const selected=cards.find(c=>c.getAttribute('aria-pressed')==='true'&&!c.hidden)||cards.find(c=>!c.hidden);
       if(selected)select(selected);
     });
-    select(cards.find(c=>c.getAttribute('aria-pressed')==='true')||cards[0]);
+    select(cards.find(c=>c.getAttribute('aria-pressed')==='true')||cards[0],false);
   });
 })();

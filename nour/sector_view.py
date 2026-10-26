@@ -24,7 +24,7 @@ def coverage_report(report):
 
 
 def sector_card(row):
-    sector=row.get('sector_indicators') or {};rows=[]
+    sector=row.get('sector_indicators') or {};rows=[];missing_rows=[]
     e=lambda x:escape(str(x if x is not None else 'Non communiqué'))
     for key,m in sector.get('metrics',{}).items():
         value=e(m['value'])+' '+e(m['unit']) if m['value'] is not None else 'Indisponible'
@@ -41,7 +41,8 @@ def sector_card(row):
             sources += (f'<li>{e(field)} · {e(fact.get("valeur"))} {e(fact.get("unite"))}{original}'
                         f' · page {e(fact.get("page"))} · {e(fact.get("period_end"))} · {link}'
                         +(f'<ul>{pieces}</ul>' if pieces else '')+f'<p>{e(fact.get("note",""))}</p></li>')
-        rows.append(f'<tr data-sector-metric="{e(key)}"><td>{e(m["label"])}</td><td>{value}</td>'
+        target = rows if m['value'] is not None else missing_rows
+        target.append(f'<tr data-sector-metric="{e(key)}"><td>{e(m["label"])}</td><td>{value}</td>'
             f'<td><details><summary>Formule, pièces et limites</summary><p>{e(m["formula"])}</p>'
             f'<p>{e(m["formula_version"])} · {e(m.get("period_end"))} · {e(m.get("accounting_basis"))}</p>'
             +(f'<p>Entrées en {e(m.get("currency"))} ; ratio sans conversion de change. Aucun montant en MAD déduit.</p>'
@@ -49,25 +50,38 @@ def sector_card(row):
             f'<ul>{sources}</ul><p>{e(reason)} {e(m.get("notes"))}</p>'
             f'<a href="{e(m["methodology_url"])}" rel="noopener noreferrer">Référence méthodologique</a>'
             '</details></td></tr>')
-    kpis=''.join('<li>'+e(k['label'])+((' · '+e(k['source'].get('period_end'))) if k.get('value') is not None and isinstance(k.get('source'),dict) else '')+' : '+(e(k['value'])+' '+e(k['unit']) if k['value'] is not None else e(k['reason']) if k.get('status')=='published_breakdown' else 'Indisponible — '+e(k['reason']))+'</li>' for k in sector.get('published_kpis',{}).values())
-    return ('<section class="panel" data-sector-calculators><h2>Calculs du métier</h2>'
-        f'<p>{e(sector.get("family"))} · Méthodes séparées du score. Les chiffres publiés sont présentés séparément des ratios calculables.</p>'
-        +('<h3>Indicateurs publiés du métier</h3><ul>'+kpis+'</ul>' if kpis else '')+reported_facts_card(sector.get('reported_facts') or {})+business_disclosures_card(sector.get('business_disclosures') or {})+'<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Traçabilité</th></tr></thead><tbody>'
-        +''.join(rows)+'</tbody></table></div><p><a href="../couverture.json">Entrées et état de couverture des 80 sociétés</a></p></section>')
+    published = sector.get('published_kpis', {}).values()
+    kpis = ''.join('<li>'+e(k['label'])+' : '+e(k['value'])+' '+e(k['unit'])
+                   +(' · '+e(k['source'].get('period_end')) if isinstance(k.get('source'),dict) else '')+'</li>'
+                   for k in published if k.get('value') is not None)
+    missing_kpis = ''.join('<li>'+e(k['label'])+' : '+e(k.get('reason'))+'</li>'
+                           for k in published if k.get('value') is None)
+    def table(content):
+        return ('<div class="tablewrap"><table><thead><tr><th>Indicateur</th><th>Valeur</th><th>Sources et méthode</th></tr></thead><tbody>'
+                + ''.join(content)+'</tbody></table></div>')
+    unavailable = ('<details class="reading-details" data-sector-missing><summary>Indicateurs à compléter</summary>'
+                   + ('<ul>'+missing_kpis+'</ul>' if missing_kpis else '') + table(missing_rows)+'</details>') if missing_kpis or missing_rows else ''
+    return ('<section class="panel" id="metier" data-sector-calculators><span class="eyebrow">'+e(sector.get('family'))+'</span><h2>Activité & métier</h2>'
+        +('<ul class="business-highlights">'+kpis+'</ul>' if kpis else '')
+        +business_disclosures_card(sector.get('business_disclosures') or {})
+        +(table(rows) if rows else '')+unavailable+reported_facts_card(sector.get('reported_facts') or {})
+        +'<details class="reading-details"><summary>Couverture et méthode sectorielle</summary><p>Les indicateurs métier restent distincts du score.</p>'
+        '<a href="../couverture.json">Entrées et état de couverture des 80 sociétés</a></details></section>')
+
 
 
 def quality_card(row):
     e=lambda x:escape(str(x if x is not None else 'Non communiqué'))
     issues=row.get('resilience',{}).get('anomalies',[])
     old=row.get('last_healthy')
-    return ('<section class="panel" data-issuer-diagnostics><h2>Qualité et fraîcheur</h2>'
+    return ('<details class="panel reading-details" id="qualite-donnees" data-issuer-diagnostics><summary>Qualité des données et fraîcheur</summary>'
         f'<p>État : {e(row["decision"])} · Source utilisée : {e(row.get("price_source"))}.</p>'
         f'<p>Dernier traitement validé du titre : {e(row.get("last_validated_at"))}. La date de cotation ci-dessus conserve sa valeur réelle.</p>'
         '<p>Une cotation inchangée ne prouve pas une panne. Les heures inconnues restent non communiquées.</p>'
         +''.join(f'<p class="banner">{e(x["reason"])}</p>' for x in issues)
         +(f'<p>Dernier état sain conservé : séance {e(old.get("asof"))}, contrôlé {e(old.get("validated_at"))}. '
           'Archive distincte ; aucune nouvelle cotation attestée.</p>' if old else '')
-        +f'<a href="../anomalies.html">Historique des anomalies de {e(row["symbol"])}</a></section>')
+        +f'<a href="../anomalies.html">Historique des anomalies de {e(row["symbol"])}</a></details>')
 
 
 def business_disclosures_card(block):
@@ -119,10 +133,10 @@ def business_disclosures_card(block):
     if any(r.get('approximate') for r in records):intro+=' ≈ indique une valeur approximative publiée.'
     if any(r.get('category')=='cash_flows' for r in records):intro+=' Les flux conservent le signe du tableau de trésorerie.'
     return ('<div id="chiffres-metier" class="business-disclosures" data-business-disclosures><h3>Chiffres officiels du métier</h3>'
-        '<p>'+e(intro)+'</p>'
+        '<details class="reading-details"><summary>Unités et définitions</summary><p>'+e(intro)+'</p></details>'
         + ('<p>Dernière collecte partielle : les chiffres datés déjà disponibles sont conservés.</p>' if block.get('collection_status')=='partial' else '<p>Des éléments de la dernière collecte restent à vérifier.</p>' if block.get('collection_status')=='needs_review' else '') + ''.join(parts) + '<details data-business-reservations><summary>Réserves et points restant à vérifier</summary><ul>'
         + ''.join('<li>' + e(note) + '</li>' for note in block.get('reservations', [])) + '</ul></details>'
-        + f'<p>Relevé daté du {e(block.get("reviewed_on"))} · disponible dans Nour depuis le {e(block.get("available_from"))} · hors score.</p></div>')
+        + f'<p class="fineprint">Relevé du {e(block.get("reviewed_on"))}</p></div>')
 
 
 def reported_facts_card(block):

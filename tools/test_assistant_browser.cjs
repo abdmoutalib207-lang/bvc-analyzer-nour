@@ -136,6 +136,16 @@ async function answerAfter(page,action){
             assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(marketReport.health.checked_at).getTime());
             assert.ok((await stamp.innerText()).includes('Casablanca'));
           }
+          assert.equal(await page.locator('[data-issuer-snapshot] .issuer-keyfigure').count(),4);
+          assert.equal(await page.locator('#verifications').evaluate(el=>el.open),false);
+          assert.equal(await page.locator('[data-issuer-diagnostics]').evaluate(el=>el.open),false);
+          assert.equal(await page.locator('[data-bi-guide]').evaluate(el=>el.open),false);
+          const order=await page.locator('main').evaluate(el=>[el.querySelector('#graphique'),el.querySelector('#fondamentaux'),el.querySelector('#metier')].map(n=>n.getBoundingClientRect().top));
+          assert.ok(order[0]<order[1]&&order[1]<order[2],'Chart must precede accounts and business details');
+          if(row.fundamental.debt_reconciliation?.status==='unresolved')assert.ok((await page.locator('[data-issuer-attention]').innerText()).includes('Dette publiée et calcul Nour à rapprocher'));
+          if(shots&&['ADI','MNG','ENK','TGCC'].includes(symbol)){
+            fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`issuer-first-${symbol}-${width}.png`)});
+          }
           const dashboard=page.locator('[data-bi-dashboard]');
           await dashboard.locator('[data-bi-filters]').waitFor();
           const cards=dashboard.locator('[data-bi-metric]');
@@ -248,9 +258,12 @@ async function answerAfter(page,action){
           assert.equal(await page.locator('#fondamentaux').isVisible(),true);
           assert.ok(await page.locator('.financial-history').count()>0);
           if(shots)await page.locator('.financial-history-grid').screenshot({path:path.join(shots,`financial-history-${width}.png`)});
-          if(currentAdi.debt_reconciliation?.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));
-          if(currentAdi.roe_average_equity_pct!==null)assert.ok(body.includes('ROE sur fonds propres moyens : '+currentAdi.roe_average_equity_pct.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' %'));
+          await page.locator('#verifications > summary').click();
+          const financialDetails=await page.locator('#verifications').innerText();
+          if(currentAdi.debt_reconciliation?.status==='unresolved')assert.ok(financialDetails.includes('Dette nette à rapprocher — ratios suspendus'));
+          if(currentAdi.roe_average_equity_pct!==null)assert.ok(financialDetails.includes('ROE sur fonds propres moyens : '+currentAdi.roe_average_equity_pct.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' %'));
           assert.ok(body.includes('Groupe de comparaison : Promoteurs immobiliers'));
+          await page.locator('#verifications > summary').click();
           const riskHelp=page.locator('#risk-help');
           assert.equal(await riskHelp.evaluate(el=>el.open),false);
           await page.getByRole('button',{name:'Assistant Nour',exact:true}).waitFor();
@@ -269,6 +282,7 @@ async function answerAfter(page,action){
           const symbol=route.split('/')[1].split('.')[0];
           const currentReport=await (await context.request.get(new URL('report.json',base).href)).json();
           const f=currentReport.results.find(r=>r.symbol===symbol).fundamental;
+          await page.locator('#verifications > summary').click();
           const body=await page.locator('main').innerText();
           if(f.debt_reconciliation.status==='scope_reconciled')assert.ok(body.includes('Dette : périmètres rapprochés'));
           if(f.debt_reconciliation.status==='unresolved')assert.ok(body.includes('Dette nette à rapprocher — ratios suspendus'));

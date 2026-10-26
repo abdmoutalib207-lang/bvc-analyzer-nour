@@ -5,6 +5,45 @@ from .collection_view import collection_stamp
 from .quote_view import quote_view, quote_clocks, date_label
 
 
+def issuer_snapshot(item):
+    """A short first reading of existing outputs; never calculate a new ratio."""
+    f = item.get('fundamental') or {}
+    cards = []
+    for key, label, unit in (('pe', 'PER annuel', '×'), ('pb', 'Cours / fonds propres', '×'),
+                             ('roe_pct', 'ROE annuel', '%'), ('earnings_mmad', 'Résultat attribuable', 'MMAD')):
+        value = f.get(key)
+        missing = 'Non disponible'
+        if key == 'pe' and finite(f.get('earnings_mmad')) and f['earnings_mmad'] <= 0:
+            missing = 'Non significatif'
+        cards.append(f'<a class="issuer-keyfigure" href="#fondamentaux"><span>{label}</span>'
+                     f'<strong>{number(value) if finite(value) else "—"}</strong>'
+                     f'<small>{unit if finite(value) else missing}</small></a>')
+    warnings = f.get('warnings') or []
+    alerts = []
+    if (f.get('debt_reconciliation') or {}).get('status') == 'unresolved':
+        alerts.append('Dette publiée et calcul Nour à rapprocher')
+    if (f.get('financial_audit') or {}).get('blocked_metrics'):
+        alerts.append('Certains ratios restent non disponibles')
+    if any(any(word in str(w).lower() for word in ('pcsi', 'reconnaissance', 'méthode constante')) for w in warnings):
+        alerts.append('Comparabilité comptable à vérifier')
+    if warnings:
+        alerts.append(f'{len(warnings)} réserve(s) financière(s)')
+    if item.get('decision') in ('SUSPENDU', 'INDISPONIBLE', 'LIMITÉ'):
+        alerts.insert(0, 'Données ' + item['decision'].lower())
+    market_issue = bool(item.get('resilience', {}).get('anomalies') or (item.get('quality') or {}).get('issues'))
+    if market_issue:
+        alerts.append('Historique : points de vigilance')
+    links = (' <a href="#verifications">Réserves financières</a>' if warnings or (f.get('financial_audit') or {}).get('blocked_metrics') or (f.get('debt_reconciliation') or {}).get('status') == 'unresolved' else '')
+    if market_issue or item.get('decision') in ('SUSPENDU', 'INDISPONIBLE', 'LIMITÉ'):
+        links += ' <a href="#qualite-donnees">État des données</a>'
+    notice = ('<div class="issuer-attention" data-issuer-attention><span>À noter</span> '
+              + ' · '.join(esc(x) for x in alerts)
+              + links + '</div>') if alerts else ''
+    return ('<div class="issuer-keyfigures" data-issuer-snapshot>' + ''.join(cards) + '</div>'
+            f'<p class="issuer-period">Comptes annuels {esc(f.get("exercise") or "non documentés")} · '
+            f'cours de référence du {date_label(item.get("asof"))}</p>' + notice)
+
+
 def issuer_heading(item, record, collection=None):
     history = item.get('history_readiness') or {}
     change = ''
@@ -15,7 +54,7 @@ def issuer_heading(item, record, collection=None):
                   f'{"+" if delta >= 0 else ""}{number(delta)} %</span>'
                   f'<small>Depuis la clôture disponible du {date_label(view["reference_session"])}</small>')
     links = ''.join(f'<a href="#{key}">{label}</a>' for key, label in (
-        ('graphique', 'Graphique'), ('technique', 'Technique'),
+        ('graphique', 'Graphique'), ('metier', 'Métier'), ('technique', 'Technique'),
         ('fondamentaux', 'Comptes & ratios'), ('risques', 'Risques'),
         ('historique', 'Historique & sources')))
     return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
