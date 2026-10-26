@@ -5,6 +5,7 @@ CAPABILITIES = [
     ('chart', 'Graphiques et indicateurs visuels', 'Comment zoomer et lire les bougies ?'),
     ('technical', 'Indicateurs techniques', 'Quelle activité et quelle variation sur 20 séances pour ADI ?'),
     ('fundamentals', 'Comptes annuels et semestriels', 'Quel chiffre d’affaires et quel résultat pour JET ?'),
+    ('accounting', 'Méthodes comptables par société', 'Quelles méthodes comptables applique HPS en 2025 ?'),
     ('screener', 'Filtres et classements de la cote', 'Les 5 PER les plus faibles en 2025'),
     ('score', 'Score et facteurs', 'Comment est calculé le score de ADI ?'),
     ('statistics', 'Fréquences historiques', 'Statistiques ADI sur 20 séances et intervalle de Wilson ?'),
@@ -62,5 +63,7 @@ DEFINITIONS = {
 
 
 def knowledge():
+    from .accounting import knowledge as accounting_knowledge, definitions as accounting_definitions
     return {'version': 'nour-help-v1', 'capabilities': [dict(id=i, label=l, example=e) for i,l,e in CAPABILITIES],
-            'definitions': dict(DEFINITIONS)}
+            'definitions': {**DEFINITIONS, **accounting_definitions()},
+            'accounting': accounting_knowledge()}

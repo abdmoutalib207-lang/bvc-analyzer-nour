@@ -251,6 +251,8 @@ def detail_page(item, record, fixture, style, script, collection=None):
                          f'BPA : {esc(calculated.get("eps_denominator"))}. '
                          f'P/B : {esc(calculated.get("book_denominator"))}.</p>'
                          f'<p class="fineprint">{esc(calculated.get("net_debt_method"))}</p>')
+    from .accounting import details_html as accounting_details
+    financial_details += accounting_details(item.get('accounting_profile'))
     if calculated.get('roe_average_equity_pct') is not None:
         financial_details += (f'<p><strong>ROE sur fonds propres moyens : {number(calculated["roe_average_equity_pct"])} %.</strong> '
             'Résultat annuel rapporté à la moyenne des fonds propres de début et fin d’exercice contrôlés. '
@@ -548,6 +550,7 @@ def sector_page(report, style, script):
         + '<h1>Analyse par métier et fiabilité documentaire</h1>'
         + '<p>Chaque société est examinée selon son activité, sans comparer mécaniquement banques, BTP, tourisme ou santé. '
         + 'Les indicateurs cités sont des points à vérifier, pas des résultats observés.</p>'
+        + '<p><a class="btnlink" href="comptabilite.html">Méthodes comptables par société et métier</a></p>'
         + f'<div class="stamp">{audit["universe"]} sociétés · {audit["curated"]} avec grille métier spécifique · '
         + f'{audit["selected_pages_reviewed_issuers"]} avec au moins un fait appuyé par une page contrôlée</div></div>'
         + priority_table
@@ -623,6 +626,10 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "actualites.html").write_text(news_page(fixture, report, style, script), encoding="utf-8")
     (output / "macro.html").write_text(macro_page(fixture, report, style, script), encoding="utf-8")
     (output / "metiers.html").write_text(sector_page(report, style, script), encoding="utf-8")
+    from .accounting_view import body as accounting_body
+    from .accounting import coverage as accounting_coverage
+    (output/'comptabilite.html').write_text(shell('Méthodes comptables', accounting_body(report), style, script), encoding='utf-8')
+    (output/'accounting-coverage.json').write_text(json.dumps(accounting_coverage(report['results']),ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8')
     write_diagnostics(report,output,style,script)
     from .economic_sources import load_catalog, catalog_page, catalog_summary
     from .sector_sources import monitor_html, validate_state

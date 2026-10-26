@@ -86,7 +86,11 @@ class Consolidation(unittest.TestCase):
                  (['ATW'], 'Synthèse complète de cette banque et ses fondamentaux'),
                  (['ADI','RDS'], 'Compare ces titres'), (['MASI'], 'MASI au 2026-03-31'),
                  (['MASI'], 'Brent et actualités macro'), (['ADI'], 'Résume le briefing'),
-                 (['ADI'], 'Quel RSI au 31/03/26 ?')]
+                 (['ADI'], 'Quel RSI au 31/03/26 ?'),
+                 (['HPS'], 'HPS active-t-il sa R&D en 2025 ?'),
+                 (['ADI','RDS'], 'Normes comptables ADI RDS et PCSI 2025'),
+                 (['WAF'], 'IFRS 17 Wafa Assurance en 2025'),
+                 (['EQD'], 'EQDOM en IFRS 9 automatiquement ?')]
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp)/'cases.json'
             path.write_text(json.dumps({'index':self.index,'cases':[

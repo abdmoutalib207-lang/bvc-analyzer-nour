@@ -18,6 +18,15 @@ Date : 2026-10-06. État de reprise observé : commit Nour
 - Code canonique du score : `nour-quant-v1`; aucune validation prédictive.
 - Questions au LLM : explication seule, aucune modification de calcul ni ordre.
 
+- Lot comptable du 26 octobre 2026 : voir `docs/accounting-methods-2026-10-26.md`
+  et `knowledge/accounting_methods.json`. Les comptes consolidés ne sont pas
+  tous IFRS. HPS 2025 comptabilise sa R&D en charges ; ADI est en normes
+  marocaines ; RDS et Wafa Assurance décrivent des changements de méthode et
+  des comparatifs à distinguer. Les preuves portent sur des pages et périodes
+  sélectionnées, pas sur une certification de tout le dossier.
+- Après chaque tâche : appliquer `docs/agent-learning.md`, conserver les preuves
+  et les régressions dans Git, puis relire ces leçons à la prochaine reprise.
+
 Cette mémoire est un aide-mémoire, jamais une preuve autonome. Lire les tests,
 sources et réserves actuels avant d'utiliser un chiffre. Ne pas y stocker des
 conversations privées, identifiants ou clés API.

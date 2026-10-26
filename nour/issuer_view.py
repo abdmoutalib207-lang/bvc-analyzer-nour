@@ -20,6 +20,9 @@ def issuer_snapshot(item):
                      f'<small>{unit if finite(value) else missing}</small></a>')
     warnings = f.get('warnings') or []
     alerts = []
+    comparability = (item.get('accounting_profile') or {}).get('comparability')
+    if comparability:
+        alerts.append(comparability['summary'])
     if (f.get('debt_reconciliation') or {}).get('status') == 'unresolved':
         alerts.append('Dette publiée et calcul Nour à rapprocher')
     if (f.get('financial_audit') or {}).get('blocked_metrics'):
@@ -33,7 +36,7 @@ def issuer_snapshot(item):
     market_issue = bool(item.get('resilience', {}).get('anomalies') or (item.get('quality') or {}).get('issues'))
     if market_issue:
         alerts.append('Historique : points de vigilance')
-    links = (' <a href="#verifications">Réserves financières</a>' if warnings or (f.get('financial_audit') or {}).get('blocked_metrics') or (f.get('debt_reconciliation') or {}).get('status') == 'unresolved' else '')
+    links = (' <a href="#verifications">Méthodes et réserves financières</a>' if comparability or warnings or (f.get('financial_audit') or {}).get('blocked_metrics') or (f.get('debt_reconciliation') or {}).get('status') == 'unresolved' else '')
     if market_issue or item.get('decision') in ('SUSPENDU', 'INDISPONIBLE', 'LIMITÉ'):
         links += ' <a href="#qualite-donnees">État des données</a>'
     notice = ('<div class="issuer-attention" data-issuer-attention><span>À noter</span> '

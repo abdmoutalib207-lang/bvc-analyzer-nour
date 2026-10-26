@@ -62,6 +62,9 @@ class JetSemester(unittest.TestCase):
             if symbol == 'JET':
                 self.assertEqual(updated['fundamental']['latest_report']['reported_net_millions'], 91.50954252)
                 self.assertEqual(updated['fundamental']['eps_mad'], 73.39)
+                self.assertEqual(updated['accounting_profile']['latest_publication'],
+                    {k: reference().get(k) for k in ('period_end','accounting_basis','document_url')})
+                updated['accounting_profile']['latest_publication'] = item['accounting_profile']['latest_publication']
                 updated['fundamental']['latest_report'] = item['fundamental']['latest_report']
                 new_rows=updated['sector_indicators']['reported_facts']['records']
                 old_rows=item['sector_indicators']['reported_facts']['records']

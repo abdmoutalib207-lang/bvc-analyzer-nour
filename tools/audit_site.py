@@ -17,6 +17,13 @@ def audit(web):
     web = Path(web)
     report = json.loads((web/'report.json').read_text())
     actual = json.loads((web/'assistant-data.json').read_text())
+    from nour.accounting import coverage as accounting_coverage
+    if json.loads((web/'accounting-coverage.json').read_text()) != accounting_coverage(report['results']):
+        raise ValueError('Accounting coverage diverges from the published report')
+    accounting_page = (web/'comptabilite.html').read_text()
+    for row in report['results']:
+        if f'href="titres/{row["symbol"]}.html#verifications"' not in accounting_page:
+            raise ValueError('Missing issuer in accounting guide: '+row['symbol'])
     if actual != build_data(report,read_briefings(web,report['analysis_date']),
                             read_history_files(web,[r['symbol'] for r in report['results']])):
         raise ValueError('Assistant facts diverge from the published report')
