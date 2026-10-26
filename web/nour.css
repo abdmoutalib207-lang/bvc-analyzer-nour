@@ -199,3 +199,8 @@ html{-webkit-font-smoothing:antialiased;scroll-padding-top:78px}
 .issuer-page .reading-details .panel{box-shadow:none}.issuer-page .score-factors{margin-top:16px}
 .business-highlights{padding-left:20px;line-height:1.8}
 @media(max-width:650px){.issuer-keyfigures{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.issuer-keyfigure{padding:14px;min-height:102px}.issuer-keyfigure>strong{font-size:26px}.issuer-keyfigure>span{font-size:11px}.issuer-attention{padding:10px 12px}}
+
+.issuer-hero{align-items:start}.issuer-hero .issuer-ask{margin-top:14px}
+.quote-clock-details{font-size:12px;margin-top:5px}.quote-clock-details>summary{min-height:40px;padding:10px 0;font-size:12px;color:#a7bfc6;font-weight:500}.quote-clock-details .quote-collector-check{border-top:0;margin-top:0;padding-top:0}
+.issuer-quote .quote-clocks .collection-stamp{margin-block:5px}
+@media(max-width:650px){.issuer-hero .eyebrow{margin-top:14px}.issuer-hero .issuer-ask{margin-top:8px}.issuer-hero{gap:8px}.issuer-hero .status{margin-right:8px}.issuer-quote{padding-top:12px}.quote-clock-details>summary{min-height:36px;padding:8px 0}}

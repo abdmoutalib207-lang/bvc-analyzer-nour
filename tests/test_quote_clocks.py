@@ -52,6 +52,19 @@ class QuoteClocks(unittest.TestCase):
             self.assertIn('21/10/2026',text)
             self.assertNotIn('Cotation : <time datetime="2026-10-21T16:10',text)
 
+    def test_compact_clocks_keep_quote_collection_and_hidden_checks_distinct(self):
+        view=quote_view(self.item,self.record)
+        view.update(source_checked_at='2026-10-22T16:00:00Z',price_validated_at='2026-10-22T16:10:00Z')
+        page=quote_clocks(view,compact=True)
+        self.assertIn('21/10/2026 à 15h30',page)
+        self.assertIn('Cours recueilli',page)
+        self.assertIn('<details class="quote-clock-details"><summary>',page)
+        self.assertIn('data-title-source-check',page)
+        self.assertIn('data-title-validated',page)
+        self.assertNotIn(' open',page)
+        self.assertNotIn('Heure indiquée par la source',page)
+        self.assertIn('Heure indiquée par la source',quote_clocks(view))
+
     def row(self,stamp='22/10/2026 13:24:10'):
         return {'Symbol':'ADI','DateDernierCours':stamp,'Cours':357.35,'Ouverture':368,
                 'PlusHaut':370,'PlusBas':350,'QteEchangee':10,'Volumes':3600}

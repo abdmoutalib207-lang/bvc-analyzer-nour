@@ -132,9 +132,13 @@ async function answerAfter(page,action){
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
           if(marketReport.health?.checked_at){
+            const clock=page.locator('.issuer-quote > .quote-clock-details');
+            assert.equal(await clock.evaluate(el=>el.open),false);
+            await clock.locator(':scope > summary').click();
             const stamp=page.locator('.issuer-quote .quote-collector-check .collection-stamp time');
             assert.equal(new Date(await stamp.getAttribute('datetime')).getTime(),new Date(marketReport.health.checked_at).getTime());
             assert.ok((await stamp.innerText()).includes('Casablanca'));
+            await clock.locator(':scope > summary').click();
           }
           assert.equal(await page.locator('[data-issuer-snapshot] .issuer-keyfigure').count(),4);
           assert.equal(await page.locator('#verifications').evaluate(el=>el.open),false);

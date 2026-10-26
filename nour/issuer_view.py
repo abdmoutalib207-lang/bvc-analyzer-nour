@@ -59,14 +59,14 @@ def issuer_heading(item, record, collection=None):
         ('historique', 'Historique & sources')))
     return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
             f'<div class="eyebrow">{esc(record.get("sector") or "Action cotée")} · {esc(item["symbol"])}</div>'
-            f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div><p>{esc(history.get("label"))}</p>'
+            f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div>'
             f'<span class="status {esc(item["decision"])}">{esc(item["decision"])}</span>'
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
             f'<div class="issuer-quote" data-quote-mode="{"provisional" if view["provisional"] else "close"}"><span>{view["label"]}</span>'
             f'<strong data-primary-price>{number(view["price"])} <small>MAD</small></strong>{change}'
-            + quote_clocks(view)
+            + quote_clocks(view, compact=True)
             + (f'<p class="quote-reference">Clôture de référence : {number(item.get("price"))} MAD · {date_label(item.get("asof"))}. Les indicateurs et ratios restent liés à cette clôture.</p>' if view['provisional'] else '')
-            + '<p><a href="../sources.html#marche">Sources du cours</a></p><div class="quote-collector-check">'
+            + '<p><a href="../sources.html#marche">Sources du cours</a></p><details class="quote-clock-details"><summary>Vérification de la collecte</summary><div class="quote-collector-check">'
             + collection_stamp((collection or {}).get('checked_at'), 'Dernière tentative de collecte' if (collection or {}).get('result')=='error' else 'Dernière vérification des sources') + '</div>'
             + '</div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
