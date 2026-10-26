@@ -50,3 +50,27 @@ Aucune formule, donnée source, règle de fraîcheur, quarantaine ou condition d
 rapprochement n'est assouplie. La suite complète et les contrôles navigateur
 restent bloquants. La preuve finale de disponibilité reste le workflow de
 publication et les fichiers réellement servis après déploiement.
+
+## Publication vérifiée
+
+La [publication 40377767635](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40377767635)
+a terminé avec succès le 26 octobre à 18:42:53 UTC. Générateur :
+`b0e6fe7765914f91c40b042561f4f2e95583ca75` ; commit des données publiées :
+`6c20ad2d4962d61b4c452af325cb60e57e09ef14`.
+
+Les 461 tests Python, la porte de validation complète et 135 parcours
+navigateur (45 normaux, 45 avec ADI en quarantaine temporaire, 45 sur le site
+public) passent. Le contrôle final des montants et quantités réellement servis
+passe également.
+
+Une lecture indépendante de `publication.json`, `runtime.json`, `report.json`,
+`index.html`, `market-integrity.json` et `calculation-health.json` confirme :
+collecte à 18:27:01 UTC, clôture du 26 intégrée, 80 émetteurs dont 65 cours datés
+du 26, rapprochement `matched` des 65 instruments actifs et aucune défaillance
+arithmétique bloquante. Les empreintes servies du runtime, du rapport et de
+l'accueil correspondent exactement au manifeste. ADI affiche 364,90 DH au
+26 octobre ; les anciennes dates des titres sans nouvel échange sont conservées.
+
+Cette publication établit la résolution de ce blocage. Elle ne prouve pas que
+tous les futurs créneaux seront ponctuels : leur exécution et leur publication
+restent à contrôler séparément.
