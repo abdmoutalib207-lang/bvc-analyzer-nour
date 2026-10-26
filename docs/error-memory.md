@@ -33,3 +33,13 @@ aucun calcul ; ses règles anti-récidive doivent avoir un contrôle exécutable
 Les contrôles planifiés du workflow et les tests en PR constituent la
 surveillance persistante. Les profils de spécialistes facilitent la revue
 lors du développement ; ce ne sont pas des processus IA actifs en continu.
+
+Le 26 octobre 2026, un test d'injection a reproduit la classe d'erreur
+`fixture_relative_test_clock` : date d'analyse au 23 octobre, mais volume nul
+injecté dans la dernière bougie collectée, désormais datée du 26. Le moteur
+excluait correctement cette bougie future ; l'assertion bloquait la publication.
+Injecter le défaut dans une séance effectivement incluse dans la fenêtre testée,
+vérifier exactement l'exclusion supplémentaire et conserver un cas avec une
+séance collectée postérieure à l'analyse. Ne pas retirer le filtre temporel ni
+désactiver la suite de publication. Voir la
+[preuve avant/après](refresh-test-window-2026-10-26.md).

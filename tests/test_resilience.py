@@ -1,6 +1,6 @@
 """Fault injection over the actual 80-title universe and atomic publication."""
 from copy import deepcopy
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 import json
 from pathlib import Path
 import tempfile
@@ -121,13 +121,28 @@ class ResilienceTests(unittest.TestCase):
         self.check_others(report,{'ADI'})
         adi=next(r for r in report['results'] if r['symbol']=='ADI')
         self.assertEqual(adi['decision'],'SUSPENDU');self.assertIsNone(adi['fundamental']['pe'])
-        fixture=deepcopy(self.fixture)
-        # A zero-transaction row is not a new observed close and stays explicit.
-        fixture['records']['ADI']['candles'][-1]['v']=0
-        report=build_report(fixture,ASOF,facts=self.facts)
-        self.check_others(report,{'ADI'})
-        self.assertEqual(fixture['records']['ADI']['candles'][-1]['v'],0)
-        self.assertGreaterEqual(next(r for r in report['results'] if r['symbol']=='ADI')['historical_statistics']['excluded_no_exchange_or_missing_sessions'],1)
+        for newer_session in (False,True):
+            with self.subTest(newer_session=newer_session):
+                fixture=deepcopy(self.fixture)
+                bars=fixture['records']['ADI']['candles']
+                if newer_session:
+                    # The collected snapshot moves beyond this historical
+                    # analysis date. The fault must still lie inside its window.
+                    future=deepcopy(max(bars,key=lambda b:b['d']))
+                    future['d']=(date.fromisoformat(max(future['d'],ASOF))
+                                 +timedelta(days=7)).isoformat()
+                    bars.append(future)
+                target=max((b for b in bars if b['d']<=ASOF and b['v']>0),
+                           key=lambda b:b['d'])
+                target['v']=0
+                report=build_report(fixture,ASOF,facts=self.facts)
+                self.check_others(report,{'ADI'})
+                self.assertEqual(target['v'],0)
+                stats=next(r for r in report['results'] if r['symbol']=='ADI')['historical_statistics']
+                baseline=self.original['ADI']['historical_statistics']
+                self.assertEqual(stats['excluded_no_exchange_or_missing_sessions'],
+                                 baseline['excluded_no_exchange_or_missing_sessions']+1)
+                self.assertEqual(stats['last_session'],baseline['last_session'])
 
     def test_full_atomic_build_publishes_all_80_with_adi_exception(self):
         import argparse,shutil
