@@ -24,6 +24,7 @@ import run
 from nour.market import atomic_json
 from nour.publication import publication_manifest
 from nour.volume_guard import reconcile_volumes
+from nour.accounting import catalog as accounting_catalog
 from test_local_market import universe, NOW
 
 
@@ -33,10 +34,10 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 
 def prepare(root, inputs):
-    # Keep the knowledge date of the source snapshot. Backdating a current
-    # snapshot intentionally removes financial facts in build_report; that is
-    # a correct anti-lookahead guard, not a browser availability failure.
-    analysis_date = inputs[0]['snapshot_updated'][:10]
+    # Exercise current reviewed methods as well as this source snapshot.
+    # Keep the quote/session timestamps unchanged; a method reviewed tomorrow
+    # must remain unavailable when the actual analysis is backdated.
+    analysis_date = max(inputs[0]['snapshot_updated'][:10], accounting_catalog()['reviewed_at'])
     shutil.copytree(ROOT/'data', root/'data')
     shutil.copytree(ROOT/'web', root/'web')
     # The publication consumes reviewed business documents as well as data/.
@@ -57,7 +58,8 @@ def prepare(root, inputs):
     manifest=publication_manifest(root/'web', commit)
     atomic_json(root/'web/publication.json', manifest)
     report=json.loads((root/'web/report.json').read_text())
-    assert report['analysis_date']==fixture['snapshot_updated'][:10]
+    assert report['analysis_date']==max(fixture['snapshot_updated'][:10], accounting_catalog()['reviewed_at'])
+    assert report['snapshot_updated']==fixture['snapshot_updated']
     expected=json.loads((ROOT/'knowledge/business_disclosures/MNG.json').read_text())
     if analysis_date >= expected['available_from']:
         mng=next(r for r in report['results'] if r['symbol']=='MNG')

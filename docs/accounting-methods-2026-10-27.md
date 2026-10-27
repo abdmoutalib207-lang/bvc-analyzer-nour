@@ -84,3 +84,10 @@ La vérification complète, la revue CI et le résultat de publication seront
 consignés après leur exécution. Le fournisseur LLM réel, le taux de couverture,
 le typage et un audit complet d'accessibilité restent non mesurés. Les 56
 dossiers restants ne sont pas décrits comme intégralement vérifiés.
+
+La première revue navigateur a reproduit une erreur de scénario : l'analyse
+était fixée au 26 octobre, excluant correctement les revues du 27. Le scénario
+prend désormais le maximum entre la date du snapshot et la date du registre
+comptable. Les horodatages des sources restent inchangés et sont contrôlés
+séparément. Les tests d'analyse antérieure continuent à exiger l'exclusion des
+nouvelles méthodes. La préparation du stress est rejouée avant la nouvelle CI.
