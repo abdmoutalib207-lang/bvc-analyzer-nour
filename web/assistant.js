@@ -31,7 +31,7 @@
   const validURL=(url,prefix='')=>{
     if(typeof url!=='string')return null;
     if(/^https:\/\//i.test(url)){try{const u=new URL(url);return u.username||u.password?null:u.href;}catch{return null;}}
-    return /^sources\.html(?:#marche)?$/.test(url)?prefix+url:/^(?:index|recherche|macro|briefing(?:-(?:matin|midi|cloture))?|cloture|actualites)\.html$/.test(url)||/^titres\/[A-Z0-9]{2,5}\.html$/.test(url)||/^historique\/[A-Z0-9]{2,5}\.csv$/.test(url)||/^(?:report|recherche|news|macro|runtime|market-integrity|error-memory)\.json$|^recherche\.csv$|^(?:briefing(?:-(?:matin|midi|cloture))?|cloture)\.txt$/.test(url)?prefix+url:null;
+    return /^sources\.html(?:#marche)?$/.test(url)?prefix+url:/^(?:index|recherche|macro|briefing(?:-(?:matin|midi|cloture))?|cloture|actualites|comptabilite)\.html$/.test(url)||/^titres\/[A-Z0-9]{2,5}\.html(?:#verifications)?$/.test(url)||/^historique\/[A-Z0-9]{2,5}\.csv$/.test(url)||/^(?:report|recherche|news|macro|runtime|market-integrity|error-memory)\.json$|^recherche\.csv$|^(?:briefing(?:-(?:matin|midi|cloture))?|cloture)\.txt$/.test(url)?prefix+url:null;
   };
   function symbolsFor(question,data,fallback,allowFallback=true){
     let q=' '+normalize(question).replace(/[^a-z0-9]+/g,' ').trim()+' ';
@@ -41,7 +41,7 @@
     const entries=Object.entries(data.symbols||{}).sort((a,b)=>b[1].name.length-a[1].name.length);
     for(const [s,row] of entries){const name=normalize(row.name).replace(/[^a-z0-9]+/g,' ').trim();
       if(name.length>=5&&q.includes(' '+name+' ')){found.push(s);q=q.replace(' '+name+' ',' ');}}
-    const aliases={adi:'alliances',rds:'dar saada',msa:'marsa maroc',cash:'cash plus',mgl:'maghrebail',mrl:'maroc leasing',mdp:'med paper'};
+    const aliases={adi:'alliances',rds:'dar saada',msa:'marsa maroc',cash:'cash plus',mgl:'maghrebail',mrl:'maroc leasing',mdp:'med paper',bmc:'bmci',afm:'afma',agm:'agma',cfgb:'cfg bank',imi:'immorente',bal:'balima',saf:'sanlam'};
     for(const [s,name] of Object.entries(aliases))if(data.symbols?.[s.toUpperCase()]&&q.includes(' '+name+' ')){
       found.push(s.toUpperCase());q=q.replace(' '+name+' ',' ');
     }

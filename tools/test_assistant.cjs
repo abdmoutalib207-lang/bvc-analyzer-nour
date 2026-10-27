@@ -38,6 +38,8 @@ assert.ok(answer.text.includes('Aucune clôture MASI disponible'));
 answer=api.localAnswer('Quel support demain pour le MASI ?',data,'MASI');
 assert.ok(answer.text.includes('pas ici d’une probabilité validée'));
 assert.deepEqual(api.symbolsFor('Compare Alliances et Résidences Dar Saada',data,'MASI').sort(),['ADI','RDS']);
+assert.deepEqual(api.symbolsFor('Compare BMCI et CFG Bank',data,'MASI').sort(),['BMC','CFGB']);
+assert.deepEqual(api.symbolsFor('Compare AFMA et AGMA',data,'MASI').sort(),['AFM','AGM']);
 assert.deepEqual(api.symbolsFor('Dis moi les probabilités car je veux comprendre',data,'MASI'),['MASI']);
 assert.deepEqual(api.symbolsFor('Explique LES',data,'MASI'),['LES']);
 for(const s of Object.keys(data.symbols)){

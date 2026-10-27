@@ -506,9 +506,15 @@ async function answerAfter(page,action){
           assert.ok(!accountingRds.includes('143,7 MMAD'));
           const accountingWaf=await ask('IFRS 17 Wafa Assurance en 2025');
           assert.ok(accountingWaf.includes('IFRS 4 et IAS 39'));
+          const accountingImi=await ask('Méthodes comptables Immorente en 2025');
+          assert.ok(accountingImi.includes('réévaluée annuellement'));
+          const accountingBal=await ask('Méthodes comptables Balima en 2025');
+          assert.ok(accountingBal.includes('reste au coût historique'));
           const screening=await ask('Les 5 PER les plus faibles en 2025');
           assert.ok(screening.includes('titre(s) correspondant(s) sur 80'));
-          assert.ok(screening.includes('PER annuel :'));
+          const eligiblePer=Object.values(facts.symbols).filter(row=>row.fundamental.exercise===2025&&Number.isFinite(row.fundamental.pe));
+          assert.ok(screening.includes(eligiblePer.length+' titre(s) correspondant(s) sur 80 ; '+Math.min(5,eligiblePer.length)+' affiché(s).'));
+          assert.equal(screening.includes('PER annuel :'),eligiblePer.length>0);
           assert.ok(screening.includes('ne constitue pas une comparaison sectorielle validée'));
           const combined=await ask('Cours, PER, RSI et VaR ADI');
           for(const heading of ['fondamentaux','technique','risques','cours'])assert.ok(combined.includes(heading));

@@ -26,10 +26,21 @@ const cases=[
  ['Pourquoi le bénéfice HPS a baissé ?',/ne démontre pas à elle seule la cause/],
  ['Quel PER OCP ?',/absence de cotation en actions n’implique pas/],
  ['Normes comptables ONEE',/référentiel de 80 actions/],
+ ['Normes comptables BCP 2025',/trois stages/,'BCP'],
+ ['Normes comptables BOA 2025',/test SPPI/,'BOA'],
+ ['IFRS 17 BMCI en 2025 ?',/non applicable au contexte de la BMCI/,'BMC'],
+ ['Normes comptables CDM 2025 et couverture',/conserver IAS 39/,'CDM'],
+ ['Normes comptables CIH 2025',/depuis le 1er janvier 2022/,'CIH'],
+ ['Normes comptables CFGB 2025',/ne pas disposer d’immeubles de placement/,'CFGB'],
+ ['IFRS 17 Sanlam 2025',/PAA pour le décès et la non-vie/,'SAF'],
+ ['Méthodes comptables AFMA 2025',/Les logiciels acquis/,'AFM'],
+ ['Méthodes comptables Immorente 2025',/réévaluée annuellement/,'IMI'],
+ ['Méthodes comptables Balima 2025',/reste au coût historique/,'BAL'],
 ];
 let checked=0;
-for(const [question,pattern] of cases){
+for(const [question,pattern,symbol] of cases){
  const r=api.localAnswer(question,data,'MASI');assert.equal(r.domain,'accounting',question);
+ if(symbol)assert(r.symbols.includes(symbol),question+' selected wrong issuer');
  assert.match(r.text,pattern,question+'\n'+r.text);assert(r.sources.length,question);checked++;
 }
 for(const [symbol,row] of Object.entries(data.symbols)){
@@ -50,4 +61,15 @@ assert.equal(r.domain,'accounting');assert(r.text.includes('RDS'));assert(!r.tex
 const actual=api.localAnswer('Normes comptables ADI 2025 et PER',data,'MASI');
 assert(actual.text.includes('PER canonique : '+data.symbols.ADI.fundamental.pe.toLocaleString('fr-FR',{maximumFractionDigits:2})));
 assert.equal(JSON.stringify(data),original);
-console.log('Accounting assistant: '+(checked+5)+' sourced answers and period/follow-up/immutability regressions passed; no LLM call.');
+
+assert.equal(api.validURL('comptabilite.html','../'),'../comptabilite.html');
+assert.equal(api.validURL('titres/IMI.html#verifications','../'),'../titres/IMI.html#verifications');
+assert.equal(api.validURL('titres/IMI.html#unknown','../'),null);
+// Stale quotes may legitimately leave no market-valued ratios in a dated fixture.
+const stale=structuredClone(data);
+for(const row of Object.values(stale.symbols))row.fundamental.pe=null;
+const empty=api.localAnswer('Les 5 PER les plus faibles en 2025',stale,'BAL');
+assert(empty.text.includes('0 titre(s) correspondant(s) sur 80 ; 0 affiché(s).'));
+assert(!empty.text.includes('PER annuel :'));
+
+console.log('Accounting assistant: '+(checked+6)+' sourced answers and period/follow-up/immutability regressions passed; no LLM call.');

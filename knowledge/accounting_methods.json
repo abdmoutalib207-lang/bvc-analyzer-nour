@@ -1,6 +1,6 @@
 {
   "version": "nour-accounting-v1",
-  "reviewed_at": "2026-10-26",
+  "reviewed_at": "2026-10-27",
   "sources": {
     "ADI": {
       "title": "ADI · rapport financier annuel 2025",
@@ -187,6 +187,113 @@
       "url": "https://www.ifrs.org/news-and-events/news/2016/04/amendment-issued-ifrs-revenue-from-contracts-with-customers/",
       "reviewed_at": "2026-10-26",
       "review_kind": "official_guidance_read"
+    },
+    "BCP": {
+      "title": "BCP · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/BCP_RFA_2025_compressed.pdf",
+      "sha256": "f5cc9b4a00d4d3a2ab9022c98e31ea03898234f496acadffa5bdac75254cf34e",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        25
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "BOA": {
+      "title": "BOA · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/BOA_RFA_2025_0.pdf",
+      "sha256": "efa362d596424de1f676a12e047384de9a4ab4277bc030b21753d37c9326b347",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        122,
+        123
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "BMC": {
+      "title": "BMC · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/BMCI_RFA_2025_def.pdf",
+      "sha256": "03698726cef97d5dab8fbd13a9707cd3d1e5110f12a2ea11e3cf8f1415b924e6",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        9,
+        10
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "CDM": {
+      "title": "CDM · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/CDM_RFA_2025.pdf",
+      "sha256": "11af272b57e92d54cc077b1d943ecff26c24c61972ca2a0c0464ab3c8796f692",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        8
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "CIH": {
+      "title": "CIH · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/CIH_Bank_RFA_2025.pdf",
+      "sha256": "fe67f5488c79c339dc40a61d4cba8b54f675849a6dc6a80db146ec9ef27fac96",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        6,
+        9
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "CFGB": {
+      "title": "CFGB · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/CFG_RFA_2025.pdf",
+      "sha256": "0f33a6ec10bf1e0204978786d359e78fe1a4f07df958e3e0b8f06f1de314dd85",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        35,
+        36
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "SAF": {
+      "title": "SAF · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Sanlam_RFA_2025.pdf",
+      "sha256": "77cd2b4d50e2094e4f9a7f55a4a383f48ec6d05b64583a9016855a39767fd327",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        10,
+        11
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "AFM": {
+      "title": "AFM · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Afma_RFA_2025.pdf",
+      "sha256": "bcc6aa26ed9b131582b0db9d3fb4c3f5b474dd528b69bbb962da7c7305d8eb03",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        60,
+        61
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "IMI": {
+      "title": "IMI · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
+      "sha256": "a17430459e934288da9b28fe7c7a59f550bd4ecc28b74cb6af80515f0714b2b4",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        22
+      ],
+      "review_kind": "selected_pages_visually_checked"
+    },
+    "BAL": {
+      "title": "BAL · rapport financier annuel 2025",
+      "url": "https://www.ammc.ma/sites/default/files/Balima_RFA_2025_0.pdf",
+      "sha256": "b81d7f5f74da6f29c27e25f04b696c3cc7c7b52a9dae7f66a93291cfcdd7c8e6",
+      "reviewed_at": "2026-10-27",
+      "checked_pages": [
+        46,
+        47
+      ],
+      "review_kind": "selected_pages_visually_checked"
     }
   },
   "topics": {
@@ -252,7 +359,7 @@
     "insurance": {
       "title": "Assureurs : adoption datée d’IFRS 17",
       "pattern": "assur|ifrs\\s*17|csm|paa|bba|vfa|primes?|sinistr",
-      "text": "Vérifier l’adoption effective par assureur et par période : Wafa Assurance applique IFRS 17 et IFRS 9 dans sa publication consolidée 2025, avec comparatifs retraités ; AtlantaSanad publie en référentiel marocain dans le rapport revu. Sous IFRS 17, les produits des activités d’assurance, les charges de services et le résultat des services d’assurance sont distincts. Les primes encaissées ne deviennent pas simplement un résultat. La CSM représente un profit non encore reconnu ; le modèle général, la VFA et la PAA répondent à des conditions différentes. Ne pas appliquer ce régime aux courtiers par leur seul secteur.",
+      "text": "Vérifier l’adoption effective par assureur et par période : Wafa Assurance applique IFRS 17 et IFRS 9 dans sa publication consolidée 2025, avec comparatifs retraités ; AtlantaSanad publie en référentiel marocain dans le rapport revu. Sous IFRS 17, les produits des activités d’assurance, les charges de services et le résultat des services d’assurance sont distincts. Les primes encaissées ne deviennent pas simplement un résultat. La CSM représente un profit non encore reconnu ; le modèle général, la VFA et la PAA répondent à des conditions différentes. Ne pas appliquer ce régime aux courtiers par leur seul secteur. Sanlam documente IFRS 17 à partir de 2025 avec PAA pour le décès et la non-vie, VFA pour la retraite.",
       "sources": [
         {
           "id": "IFRS17"
@@ -264,6 +371,10 @@
         {
           "id": "ATL",
           "page": 146
+        },
+        {
+          "id": "SAF",
+          "page": 11
         }
       ]
     },
@@ -316,7 +427,7 @@
     "property": {
       "title": "Foncières et juste valeur",
       "pattern": "ias\\s*40|foncier|aradei|juste valeur|revenus? locatifs?|loyers?|ffo|anr",
-      "text": "Sous IAS 40, l’entité choisit une méthode au coût ou à la juste valeur dans les conditions de la norme. La juste valeur n’est donc pas automatique pour toute foncière. Chez Aradei dans le document 2025 revu, les immeubles de placement sont à la valeur de marché, et les immeubles en construction restent au coût jusqu’à achèvement. Une variation de juste valeur comptabilisée en résultat n’est pas un encaissement locatif. Le FFO et l’ANR sont à lire avec la définition et le périmètre publiés ; ne pas les inventer.",
+      "text": "Sous IAS 40, l’entité choisit une méthode au coût ou à la juste valeur dans les conditions de la norme. La juste valeur n’est donc pas automatique pour toute foncière. Chez Aradei dans le document 2025 revu, les immeubles de placement sont à la valeur de marché, et les immeubles en construction restent au coût jusqu’à achèvement. Une variation de juste valeur comptabilisée en résultat n’est pas un encaissement locatif. Le FFO et l’ANR sont à lire avec la définition et le périmètre publiés ; ne pas les inventer. Immorente publie une juste valeur revue annuellement ; Balima conserve un patrimoine au coût historique en normes marocaines. Ces deux bases ne sont pas interchangeables.",
       "sources": [
         {
           "id": "IAS40"
@@ -324,6 +435,14 @@
         {
           "id": "ARD",
           "page": 8
+        },
+        {
+          "id": "IMI",
+          "page": 22
+        },
+        {
+          "id": "BAL",
+          "page": 47
         }
       ]
     },
@@ -583,6 +702,179 @@
         }
       ],
       "comparability": null
+    },
+    "BCP": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "BCP",
+      "basis_page": 25,
+      "basis_detail": "Comptes consolidés IFRS au 31 décembre 2025 ; application documentée du modèle de pertes attendues IFRS 9.",
+      "policies": [
+        {
+          "page": 25,
+          "text": "Le groupe répartit les crédits en trois stages : pertes attendues à 12 mois en stage 1 et à maturité en stages 2 et 3. Le calcul mobilise PD, LGD et EAD lorsque les données le permettent. Une variation du coût du risque ne révèle pas à elle seule sa cause macroéconomique."
+        }
+      ]
+    },
+    "BOA": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "BOA",
+      "basis_page": 122,
+      "basis_detail": "Consolidé IFRS tel qu’approuvé par l’IASB ; adoption déclarée depuis juin 2008.",
+      "policies": [
+        {
+          "page": 122,
+          "text": "Le classement des instruments financiers dépend du modèle de gestion et du test SPPI : coût amorti, juste valeur par capitaux propres ou par résultat."
+        },
+        {
+          "page": 123,
+          "text": "La dépréciation IFRS 9 est segmentée en trois buckets. Les pertes attendues sont à un an pour le bucket 1 et à maturité pour les buckets 2 et 3 ; le rapport détaille les paramètres PD, LGD et EAD."
+        }
+      ]
+    },
+    "BMC": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "BMC",
+      "basis_page": 9,
+      "basis_detail": "Consolidé IFRS au 31 décembre 2025 ; méthodes et périmètre du groupe BMCI publiés séparément des règles prudentielles.",
+      "policies": [
+        {
+          "page": 9,
+          "text": "La BMCI classe ses actifs selon IFRS 9 à partir du modèle de gestion et des flux SPPI. Le rapport indique qu’IFRS 17 est non applicable au contexte de la BMCI ; ne pas l’imposer parce qu’une filiale exerce du courtage."
+        },
+        {
+          "page": 10,
+          "text": "Le modèle de dépréciation distingue les buckets 1, 2 et 3, avec pertes attendues à 12 mois ou à maturité. Les mouvements de provisions doivent être lus avec les migrations de risque et les paramètres publiés."
+        }
+      ]
+    },
+    "CDM": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "CDM",
+      "basis_page": 8,
+      "basis_detail": "Consolidé IFRS ; présentation selon les formats du chapitre 4 du PCEC.",
+      "policies": [
+        {
+          "page": 8,
+          "text": "Le classement IFRS 9 croise modèle de gestion et test SPPI. Crédit du Maroc utilise l’option autorisée de conserver IAS 39 pour la comptabilité de couverture ; cela ne signifie pas que ses comptes consolidés abandonnent IFRS 9."
+        }
+      ]
+    },
+    "CIH": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "CIH",
+      "basis_page": 6,
+      "basis_detail": "Consolidé IAS/IFRS, avec le chapitre 4 du PCEC pour les états consolidés et le référentiel de l’IASB.",
+      "policies": [
+        {
+          "page": 6,
+          "text": "Les immeubles de placement sont à la juste valeur selon IAS 40 depuis le 1er janvier 2022. Cette méthode est distincte de celle des immeubles d’exploitation et ne constitue pas un nouveau changement intervenu en 2025."
+        },
+        {
+          "page": 9,
+          "text": "Le portefeuille IFRS 9 est segmenté en trois buckets : dépréciation à 12 mois pour le bucket 1 et pertes attendues sur la durée résiduelle pour les buckets 2 et 3."
+        }
+      ]
+    },
+    "CFGB": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "CFGB",
+      "basis_page": 35,
+      "basis_detail": "Comptes consolidés IFRS tel qu’adopté par l’IASB au 31 décembre 2025.",
+      "policies": [
+        {
+          "page": 35,
+          "text": "Les immobilisations corporelles suivent le modèle du coût amorti et l’approche par composants. Le rapport indique ne pas disposer d’immeubles de placement à la date d’arrêté ; ne pas lui attribuer une réévaluation immobilière par analogie."
+        },
+        {
+          "page": 36,
+          "text": "IFRS 9 remplace le modèle des pertes avérées par les pertes attendues. Le document distingue trois buckets et deux horizons de dépréciation : 12 mois et durée de vie de l’actif."
+        }
+      ]
+    },
+    "SAF": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "SAF",
+      "basis_page": 10,
+      "basis_detail": "Consolidé IFRS adopté par l’Union Européenne ; IFRS 17 appliquée à compter du 1er janvier 2025.",
+      "policies": [
+        {
+          "page": 10,
+          "text": "Les contrats d’assurance relèvent d’IFRS 17 ; les contrats d’investissement sans participation discrétionnaire relèvent d’IFRS 9. Le tableau de transition distingue le bilan publié au 31 décembre 2023 de l’ouverture retraitée au 1er janvier 2024."
+        },
+        {
+          "page": 11,
+          "text": "Sanlam publie ses choix par branche : PAA pour le décès et la non-vie, VFA pour la retraite. Pour la transition des contrats participatifs modélisés en VFA, le groupe retient l’approche de juste valeur FVA. Ces choix ne sont pas des règles uniformes pour tous les assureurs."
+        }
+      ],
+      "comparability": {
+        "status": "method_change_disclosed",
+        "summary": "Sanlam : adoption IFRS 17 en 2025 ; situations avant transition et retraitées à distinguer.",
+        "page": 10
+      }
+    },
+    "AFM": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "AFM",
+      "basis_page": 60,
+      "basis_detail": "Consolidé IFRS adopté par l’Union Européenne ; méthodes 2025 déclarées identiques à celles de 2024.",
+      "policies": [
+        {
+          "page": 60,
+          "text": "AFMA est un courtier : la consolidation décrite porte sur les filiales contrôlées et élimine les opérations réciproques. Le volume de primes intermédiées ne remplace pas son chiffre d’affaires propre."
+        },
+        {
+          "page": 61,
+          "text": "Les logiciels acquis à durée de vie définie sont amortis linéairement sur 5 à 7 ans. IFRS 16 conduit à distinguer droit d’utilisation, dette locative et services ; le rapport retient notamment 21 ans pour certains contrats immobiliers. Ne pas en déduire une durée normative pour toutes les sociétés."
+        }
+      ]
+    },
+    "IMI": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "ifrs",
+      "source": "IMI",
+      "basis_page": 22,
+      "basis_detail": "Consolidé IFRS adopté par l’Union Européenne au 31 décembre 2025.",
+      "policies": [
+        {
+          "page": 22,
+          "text": "Les immeubles de placement sont évalués à la juste valeur, réévaluée annuellement sur la base d’un expert indépendant. Les loyers constituent le chiffre d’affaires ; une variation de juste valeur est distincte d’un encaissement locatif. Ne pas comparer mécaniquement cette base à une foncière au coût historique."
+        }
+      ]
+    },
+    "BAL": {
+      "period_end": "2025-12-31",
+      "scope": "consolidated",
+      "framework": "moroccan",
+      "source": "BAL",
+      "basis_page": 46,
+      "basis_detail": "Consolidé en normes marocaines telles que prescrites par le Conseil National de Comptabilité.",
+      "policies": [
+        {
+          "page": 46,
+          "text": "Le périmètre est consolidé par intégration globale. La fusion intragroupe décrite en 2025 est enregistrée à la valeur nette comptable ; le rapport indique l’absence d’incidence sur les comptes consolidés."
+        },
+        {
+          "page": 47,
+          "text": "Le patrimoine immobilier n’a pas été réévalué et reste au coût historique. Les constructions sont amorties linéairement sur 20 à 25 ans. Ne pas attribuer à Balima la juste valeur IAS 40 appliquée par d’autres foncières."
+        }
+      ]
     }
   },
   "limitation": "Bibliothèque de méthodes et revues de pages sélectionnées, pas un moteur de conversion de comptes ni un avis fiscal. Les déclarations importées non relues restent explicitement distinctes des revues primaires.",

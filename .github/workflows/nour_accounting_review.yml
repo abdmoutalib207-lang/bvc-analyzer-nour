@@ -1,0 +1,43 @@
+name: Nour accounting evidence preparation
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: 'Titres Nour séparés par des virgules, douze au maximum'
+        default: 'BCP,BOA,BMC,CDM,CIH,CFGB,SAF,AFM,AGM,IMI,BAL'
+permissions:
+  contents: read
+jobs:
+  prepare:
+    if: github.repository == 'abdmoutalib207-lang/bvc-analyzer-nour'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check Nour scope
+        run: python tools/assert_nour_scope.py
+      - name: Install PDF text reader if missing
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/sector-pdf
+          key: nour-sector-pdf-${{ runner.os }}-accounting
+          restore-keys: nour-sector-pdf-${{ runner.os }}-
+      - name: Prepare candidate evidence without changing published facts
+        env:
+          NOUR_REVIEW_SYMBOLS: ${{ inputs.symbols || 'BCP,BOA,BMC,CDM,CIH,CFGB,SAF,AFM,AGM,IMI,BAL' }}
+        run: python tools/prepare_accounting_review.py --symbols "$NOUR_REVIEW_SYMBOLS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nour-accounting-evidence
+          path: .cache/accounting-review
+          retention-days: 7
+          if-no-files-found: warn
