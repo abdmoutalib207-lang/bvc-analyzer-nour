@@ -67,9 +67,10 @@ Les alias usuels BMCI, AFMA, AGMA, CFG Bank, Sanlam, Immorente et Balima sont
 reconnus. Les liens du guide et des méthodes dans les réponses sont autorisés
 explicitement par le filtre de liens ; les chemins non prévus restent refusés.
 
-Deux leçons relues sont ajoutées par `record_lesson` en conservant toutes les
+Trois leçons relues sont ajoutées par `record_lesson` en conservant toutes les
 anciennes entrées : une occurrence candidate n'est pas une méthode comptable,
-et la méthode immobilière dépend de l'émetteur. Les agents lisent l'index de
+la méthode immobilière dépend de l'émetteur et la date d'analyse du scénario
+doit inclure la revue comptable testée sans redater les cours. Les agents lisent l'index de
 reprise partagé ; cette mémoire ne réentraîne aucun modèle.
 
 ## Validation et livraison
@@ -80,8 +81,8 @@ sur 80 titres, les alias et les liens. Le jeu de réponses comptables compte
 117 scénarios. Les parcours navigateur ajoutent les questions Immorente et
 Balima aux trois largeurs pour contrôler la distinction de méthode.
 
-La vérification complète, la revue CI et le résultat de publication seront
-consignés après leur exécution. Le fournisseur LLM réel, le taux de couverture,
+Les résultats observés de la vérification complète, de la revue CI et de la
+publication sont consignés ci-dessous. Le fournisseur LLM réel, le taux de couverture,
 le typage et un audit complet d'accessibilité restent non mesurés. Les 56
 dossiers restants ne sont pas décrits comme intégralement vérifiés.
 
@@ -99,3 +100,53 @@ candidats calculables dans l'export ; elle exige des PER affichés seulement
 lorsqu'il en existe et l'absence de faux PER lorsque la sélection est vide.
 Ce cas est aussi reproduit par le test JS. Aucun cours n'a été redaté et aucun
 garde-fou financier n'a été retiré.
+
+## Vérification observée avant fusion
+
+Le contrôle local complet a passé 478 tests Python, les réponses comptables
+et les audits. Le scénario complémentaire de sélection vide porte désormais
+le jeu comptable à 117 scénarios. La préparation de quarantaine a été rejouée
+avec succès en conservant les 79 autres titres et leurs CSV identiques.
+
+La [PR 40](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/pull/40)
+a passé la [revue 40440613043](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40440613043) :
+478 tests Python, 117 réponses et 96 parcours navigateur (48 dégradés et
+48 normaux). Les questions Immorente/Balima sont incluses aux trois largeurs.
+Les deux erreurs de scénarios précédentes sont expliquées ci-dessus et
+leurs protections anti-récidive sont conservées ; aucun test financier n'est
+désactivé. La fusion est `599a44506ce5ff87855b9c0c9be70b90ec7d1299`, pour
+l'arbre de source revu `c0de901fca7d45eecf0d484a0a93a4a68e9ea0a7`.
+
+## Prochain lot préparé pour la reprise
+
+Douze titres restant à documenter, avec une référence annuelle déjà présente
+dans Nour : MNG, SMI, CMT, JET, SGTM, COL, CIM, LHM, IAM, MIC, M2M et S2M.
+La présence de ces URL ne vaut pas contrôle des méthodes. Le workflow manuel
+peut préparer leurs PDF avec cette liste de symboles ; reprendre les règles
+de source, période, périmètre et validation visuelle avant toute promotion.
+Ce lot suivant n'est ni exécuté ni déclaré vérifié par ce dossier.
+
+## Publication réellement observée
+
+La [publication 40441830954](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40441830954)
+a terminé avec succès le 27 octobre 2026 à 03:17:45 UTC (04:17:45 à Casablanca).
+Elle a passé 478 tests Python et les 117 scénarios comptables, puis 144
+parcours Chromium : 48 normaux, 48 avec ADI en quarantaine et 48 après
+le déploiement sur le site réellement servi. Les nouveaux cas comptables sont
+inclus aux trois largeurs. Aucun appel à un fournisseur LLM réel.
+
+Une lecture HTTP indépendante des fichiers publics `accounting-coverage.json`,
+`comptabilite.html` et `publication.json` a confirmé : 80 titres, 21 revues,
+56 déclarations à approfondir, 3 dossiers à renseigner et aucun conflit.
+Le manifeste public identifie le run 40441830954, le générateur
+`599a44506ce5ff87855b9c0c9be70b90ec7d1299` et l’artefact
+`07dc87186a881ce1f7fd240d9aaf1d1c56b7a442`.
+SHA-256 du guide public observé :
+`9c6a266c7f41fc825b29363374f50f55f2b29b3e0822cdf38ff202e391412080`.
+Les indicateurs de certification et d’usage dans le score restent faux.
+
+Les trois leçons et le dossier de reprise sont versionnés. Les chiffres
+canoniques restent ceux des sources financières déjà retenues ; aucune
+modification du moteur principal, aucune activation d’agent permanent ou
+de service IA payant supplémentaire. La revue détaillée des 56 déclarations
+et les trois dossiers à renseigner constituent la suite du travail.
