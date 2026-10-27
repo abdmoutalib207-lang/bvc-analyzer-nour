@@ -77,7 +77,7 @@ reprise partagé ; cette mémoire ne réentraîne aucun modèle.
 Les contrôles ciblés vérifient les dix nouveaux dossiers, la limite temporelle
 de la revue du 27 octobre, l'absence de promotion AGMA, l'identité des calculs
 sur 80 titres, les alias et les liens. Le jeu de réponses comptables compte
-116 scénarios. Les parcours navigateur ajoutent les questions Immorente et
+117 scénarios. Les parcours navigateur ajoutent les questions Immorente et
 Balima aux trois largeurs pour contrôler la distinction de méthode.
 
 La vérification complète, la revue CI et le résultat de publication seront
@@ -91,3 +91,11 @@ prend désormais le maximum entre la date du snapshot et la date du registre
 comptable. Les horodatages des sources restent inchangés et sont contrôlés
 séparément. Les tests d'analyse antérieure continuent à exiger l'exclusion des
 nouvelles méthodes. La préparation du stress est rejouée avant la nouvelle CI.
+
+Le rejeu a ensuite confirmé qu'au 27 les cours synthétiques du 22 deviennent
+périmés pour le PER. Le moteur retire correctement ces ratios, sans valeur
+nulle imputée. L'assertion navigateur impose désormais le nombre exact de
+candidats calculables dans l'export ; elle exige des PER affichés seulement
+lorsqu'il en existe et l'absence de faux PER lorsque la sélection est vide.
+Ce cas est aussi reproduit par le test JS. Aucun cours n'a été redaté et aucun
+garde-fou financier n'a été retiré.
