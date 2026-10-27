@@ -7,47 +7,82 @@
     "timezone": "Africa/Casablanca",
     "event": "workflow_dispatch",
     "slot": "refresh",
-    "label": "Actualisation horaire",
-    "target_time": "16:45",
+    "label": "Contrôle de clôture entre fournisseurs",
+    "target_time": "17:15",
     "schedule": null,
-    "scheduled_at": "2026-10-27T16:45:00+00:00",
+    "scheduled_at": "2026-10-27T17:15:00+00:00",
     "scheduled_at_basis": "watchdog_requested_occurrence",
-    "requested_scheduled_at": "2026-10-27T16:45:00+00:00",
+    "requested_scheduled_at": "2026-10-27T17:15:00+00:00",
     "edition_for": "2026-10-27",
-    "started_at": "2026-10-27T16:45:29+00:00",
-    "built_at": "2026-10-27T16:45:54.222558+00:00",
+    "started_at": "2026-10-27T17:15:29+00:00",
+    "built_at": "2026-10-27T17:15:48.561275+00:00",
     "utc_offset_minutes": 0,
     "delay_minutes": 0.5,
     "late": false,
-    "run_id": "40543960567",
-    "commit": "81f64c64871c5ab0e1e8a910a650635ced7ffd4c",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40543960567",
+    "run_id": "40548774072",
+    "commit": "697da99f294730dd429a8ea03b9872dba60da5f0",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40548774072",
     "collection": {
-      "result": "unchanged",
-      "label": "Aucune nouveauté",
-      "checked_at": "2026-10-27T16:45:37.241326+00:00",
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-27T17:15:29.676306+00:00",
       "last_session": "2026-10-27",
-      "message": "Aucune nouvelle séance vérifiée",
-      "conflicts": [],
-      "fully_validated": true
+      "message": "2 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "ARD",
+          "session": "2026-10-27",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 39
+          },
+          "observed": {
+            "v": 29
+          },
+          "observed_at": "2026-10-27T17:15:29.676306+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MNG",
+          "session": "2026-10-27",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 5284
+          },
+          "observed": {
+            "v": 5283
+          },
+          "observed_at": "2026-10-27T17:15:29.676306+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "81f64c64871c5ab0e1e8a910a650635ced7ffd4c",
+      "generator_commit": "697da99f294730dd429a8ea03b9872dba60da5f0",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "ad912f371f1c2f4fd9eb99605be6cfe65a86e01415f095a81d5f51378577a33b",
+      "market_snapshot_sha256": "d3fef532f16eb6e55173ec1dd3b04bdf400ee854e890939e421ef7e077fe81c2",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
-      "status": "detail_matched",
+      "status": "partial",
       "session": "2026-10-27",
-      "observed_at": "2026-10-27T16:45:45.024331+00:00",
-      "cross_source_verified": true
+      "observed_at": "2026-10-27T17:15:38.173514+00:00",
+      "cross_source_verified": false
     }
   },
-  "title": "Actualisation horaire",
+  "title": "Contrôle de clôture entre fournisseurs",
   "intraday": {
     "schema_version": 1,
     "session": "2026-10-27",
@@ -57,17 +92,17 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 109.1,
+    "age_minutes": 139.0,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-27T16:45:37.241326+00:00",
+  "snapshot_updated": "2026-10-27T17:15:29.676306+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
-    "quoted_session": 66,
-    "observable": 65
+    "quoted_session": 64,
+    "observable": 63
   },
   "index": {
     "value": 17020.2839,
@@ -77,7 +112,7 @@
     "variation_points": 20.73,
     "ytd_pct": -9.69
   },
-  "market_summary": "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte. Le MASI clôture à 17 020,28 points (0,12 %), soit 20,73 points par rapport à la clôture précédente. Fourchette de séance : 16 927,44 à 17 074,30 points. 28 valeurs en baisse, 30 en hausse et 9 inchangées parmi les 67 valeurs échangées recensées. Volume échangé : 166,97 MDH.",
+  "market_summary": "Le MASI clôture à 17 020,28 points (0,12 %), soit 20,73 points par rapport à la clôture précédente. Fourchette de séance : 16 927,44 à 17 074,30 points. 28 valeurs en baisse, 30 en hausse et 9 inchangées parmi les 67 valeurs échangées recensées. Volume échangé : 166,97 MDH.",
   "index_notice": null,
   "focus": [
     {
@@ -3570,6 +3605,23 @@
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
+      "id": "9b6fd22afdefc88408",
+      "title": "45,000 Nvidia Blackwell GPUs Cleared for Kazakhstan Data Center",
+      "url": "https://oilprice.com/Energy/Energy-General/45000-Nvidia-Blackwell-GPUs-Cleared-for-Kazakhstan-Data-Center.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-27T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
       "id": "3aebfe0e0fef727c7c",
       "title": "Oil Markets Brace for a New Iran Escalation After U.S. Midterms",
       "url": "https://oilprice.com/Energy/Crude-Oil/Oil-Markets-Brace-for-a-New-Iran-Escalation-After-US-Midterms.html",
@@ -3755,29 +3807,11 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "c51b748990b6688727",
-      "title": "Investors From 119 Countries Pile Into Dangote’s Record Refinery IPO",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Investors-From-119-Countries-Pile-Into-Dangotes-Record-Refinery-IPO.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-27T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "news_role": "veille uniquement",
   "editorial": {
     "paragraphs": [
-      "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.",
       "Le MASI termine à 17 020,28 points (0,12 %). La direction de cette séance est haussière.",
       "28 valeurs baissent, 30 progressent et 9 sont inchangées sur 67 traitées. Les baisses représentent 41,79 % de cette couverture. La largeur de marché reste partagée.",
       "L’indice se situe à 63,22 % de l’amplitude au-dessus du plus bas (16 927,44), pour un plus haut de 17 074,30 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.",
@@ -3950,15 +3984,15 @@
         "change_pct": -2.67
       },
       {
-        "symbol": "ARD",
-        "change_pct": -2.09
-      },
-      {
         "symbol": "RDS",
         "change_pct": -1.79
+      },
+      {
+        "symbol": "LES",
+        "change_pct": -1.69
       }
     ],
-    "ranking_coverage": 63,
+    "ranking_coverage": 61,
     "flows": [
       {
         "symbol": "ATW",
@@ -3977,8 +4011,8 @@
         "amount": 19540776.0
       },
       {
-        "symbol": "MNG",
-        "amount": 7959234.0
+        "symbol": "MSA",
+        "amount": 6716643.5
       }
     ],
     "scenarios": [
@@ -3999,7 +4033,6 @@
       }
     ],
     "vigilance": [
-      "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.",
       "MASI : tenue de 16 749,18 ; franchissement confirmé de 17 754,91 pour sortir de l’intervalle observé.",
       "ADI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 321.2 / 396.0 MAD).",
       "RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 150.0 / 179.15 MAD).",
@@ -4013,9 +4046,26 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-27T16:45:43.156916+00:00"
+    "observed_at": "2026-10-27T17:15:35.814306+00:00"
   },
   "context_news": [
+    {
+      "id": "9b6fd22afdefc88408",
+      "title": "45,000 Nvidia Blackwell GPUs Cleared for Kazakhstan Data Center",
+      "url": "https://oilprice.com/Energy/Energy-General/45000-Nvidia-Blackwell-GPUs-Cleared-for-Kazakhstan-Data-Center.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-27T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "3aebfe0e0fef727c7c",
       "title": "Oil Markets Brace for a New Iran Escalation After U.S. Midterms",
@@ -4202,29 +4252,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "c51b748990b6688727",
-      "title": "Investors From 119 Countries Pile Into Dangote’s Record Refinery IPO",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Investors-From-119-Countries-Pile-Into-Dangotes-Record-Refinery-IPO.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-27T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-27T16:45:54.222558+00:00",
-    "checked_at": "2026-10-27T16:45:43.976195+00:00",
+    "cutoff": "2026-10-27T17:15:48.561275+00:00",
+    "checked_at": "2026-10-27T17:15:36.867050+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4234,51 +4267,51 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7724.69,
-            "change_pct": 0.6242208637226224,
+            "value": 7718.21,
+            "change_pct": 0.5398103629521218,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:40+00:00",
+            "observed_at": "2026-10-27T17:15:28+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 52381.54,
-            "change_pct": 0.03811955254214851,
+            "value": 52329.12,
+            "change_pct": -0.06199201781153114,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:40+00:00",
+            "observed_at": "2026-10-27T17:15:28+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
             "name": "CAC 40",
             "unit": "points",
-            "value": 7898.21,
-            "change_pct": 0.6485016540678898,
+            "value": 7887.14,
+            "change_pct": 0.5074343852423582,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:22:00+00:00",
+            "observed_at": "2026-10-27T16:35:30+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
@@ -4295,7 +4328,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4307,68 +4340,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8506,
-            "change_pct": 0.15658044574588859,
+            "value": 9.8519,
+            "change_pct": 0.16979827558158614,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:40+00:00",
+            "observed_at": "2026-10-27T17:15:26+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.968,
-            "change_pct": -0.11838630361533467,
+            "value": 10.967,
+            "change_pct": -0.12749294235497083,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:41:42+00:00",
+            "observed_at": "2026-10-27T17:06:42+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 17.55,
-            "change_pct": -4.567699836867862,
+            "value": 17.74,
+            "change_pct": -3.534529635671572,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:43:46+00:00",
+            "observed_at": "2026-10-27T17:13:46+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.268,
-            "change_pct": 0.23424712581717388,
+            "value": 102.275,
+            "change_pct": 0.24110792029717956,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:39+00:00",
+            "observed_at": "2026-10-27T17:15:27+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4380,51 +4413,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4072.9,
-            "change_pct": 0.8542987321711569,
+            "value": 4074,
+            "change_pct": 0.881537242472264,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:38+00:00",
+            "observed_at": "2026-10-27T17:15:28+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 109.51,
-            "change_pct": -1.1107097706339082,
+            "value": 109.59,
+            "change_pct": -1.0384684847390206,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:35+00:00",
+            "observed_at": "2026-10-27T17:15:23+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.6525,
-            "change_pct": 1.6890859064506274,
+            "value": 6.657,
+            "change_pct": 1.7578722103332347,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-27T16:45:36+00:00",
+            "observed_at": "2026-10-27T17:15:27+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           },
           {
@@ -4441,7 +4474,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-27T16:45:43.976195+00:00",
+            "collected_at": "2026-10-27T17:15:36.867050+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4454,7 +4487,7 @@
     "referenced": 77,
     "titles": 80
   },
-  "limitations": "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte. Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
+  "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
   "edition_links": [
     {
       "label": "Briefing du matin",
