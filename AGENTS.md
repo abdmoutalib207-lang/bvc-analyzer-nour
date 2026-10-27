@@ -62,6 +62,8 @@ les travaux financiers ou d'assistance. Le registre
 `knowledge/accounting_methods.json` distingue règles générales et choix
 documentés par société, période et périmètre. Ne pas déduire IFRS du secteur,
 ni convertir des comptes en changeant seulement leur libellé.
+Les lots suivants et leurs résultats sont indexés dans `.ecc/memory/project.md` ;
+lire le dernier dossier de reprise applicable avant une nouvelle revue.
 
 À la fin de chaque tâche, consigner la conclusion, les preuves, les contrôles
 effectivement exécutés et les limites dans le document de reprise concerné.

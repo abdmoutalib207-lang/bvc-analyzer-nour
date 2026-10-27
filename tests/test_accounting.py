@@ -40,7 +40,7 @@ class AccountingMethods(unittest.TestCase):
     def test_each_review_is_scoped_to_its_company_and_annual_document(self):
         for symbol,review in catalog()['issuers'].items():
             with self.subTest(symbol=symbol):
-                p = profile(symbol,self.annual(symbol),'', '2026-10-26')
+                p = profile(symbol,self.annual(symbol),'', catalog()['sources'][review['source']]['reviewed_at'])
                 self.assertEqual(p['status'],'primary_scoped_review')
                 self.assertEqual(p['scope'],review['scope'])
                 self.assertEqual(p['framework'],review['framework'])
@@ -133,6 +133,25 @@ class AccountingMethods(unittest.TestCase):
         for name in ('AGENTS.md','CLAUDE.md','.ecc/memory/project.md'):
             self.assertIn('docs/agent-learning.md',(ROOT/name).read_text())
         self.assertTrue((ROOT/'docs/agent-learning.md').exists())
+
+    def test_second_batch_keeps_insurers_and_property_methods_distinct(self):
+        p={s:profile(s,self.annual(s),'','2026-10-27') for s in
+           ('BCP','BOA','BMC','CDM','CIH','CFGB','SAF','AFM','IMI','BAL')}
+        for s,r in p.items():self.assertEqual(r['status'],'primary_scoped_review',s)
+        self.assertEqual(p['BAL']['framework'],'moroccan')
+        self.assertIn('coût historique',p['BAL']['policies'][1]['text'])
+        self.assertIn('juste valeur',p['IMI']['policies'][0]['text'])
+        self.assertIn('non applicable au contexte de la BMCI',p['BMC']['policies'][0]['text'])
+        self.assertIn('PAA',p['SAF']['policies'][1]['text'])
+        self.assertIn('VFA',p['SAF']['policies'][1]['text'])
+        self.assertIn('IFRS 9',p['CDM']['policies'][0]['text'])
+        self.assertNotIn('AGM',catalog()['issuers'])
+
+    def test_second_batch_review_does_not_backdate_to_first_batch(self):
+        for s in ('BCP','BOA','BMC','CDM','CIH','CFGB','SAF','AFM','IMI','BAL'):
+            p=profile(s,self.annual(s),'','2026-10-26')
+            self.assertEqual(p['status'],'declared_to_review',s)
+            self.assertFalse(p['policies'])
 
 
 if __name__ == '__main__':

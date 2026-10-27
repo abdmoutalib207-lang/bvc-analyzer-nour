@@ -506,6 +506,10 @@ async function answerAfter(page,action){
           assert.ok(!accountingRds.includes('143,7 MMAD'));
           const accountingWaf=await ask('IFRS 17 Wafa Assurance en 2025');
           assert.ok(accountingWaf.includes('IFRS 4 et IAS 39'));
+          const accountingImi=await ask('Méthodes comptables Immorente en 2025');
+          assert.ok(accountingImi.includes('réévaluée annuellement'));
+          const accountingBal=await ask('Méthodes comptables Balima en 2025');
+          assert.ok(accountingBal.includes('reste au coût historique'));
           const screening=await ask('Les 5 PER les plus faibles en 2025');
           assert.ok(screening.includes('titre(s) correspondant(s) sur 80'));
           assert.ok(screening.includes('PER annuel :'));

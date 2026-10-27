@@ -1,10 +1,5 @@
 name: Nour accounting evidence preparation
 on:
-  push:
-    branches: [nour-accounting-lot2]
-    paths:
-      - 'tools/prepare_accounting_review.py'
-      - '.github/workflows/nour_accounting_review.yml'
   workflow_dispatch:
     inputs:
       symbols:

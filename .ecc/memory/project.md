@@ -26,6 +26,13 @@ Date : 2026-10-06. État de reprise observé : commit Nour
   sélectionnées, pas sur une certification de tout le dossier.
 - Après chaque tâche : appliquer `docs/agent-learning.md`, conserver les preuves
   et les régressions dans Git, puis relire ces leçons à la prochaine reprise.
+- Lot du 27 octobre 2026 : `docs/accounting-methods-2026-10-27.md`. Dix revues
+  supplémentaires : six banques, Sanlam, AFMA, Immorente et Balima. Distinguer
+  IFRS 17 par assureur, juste valeur et coût historique par foncière. AGMA reste
+  à approfondir : son PDF recueilli ne fournit pas la note recherchée.
+  `tools/prepare_accounting_review.py` prépare les sources par lots de douze
+  maximum, sans promotion de faits. Le workflow dédié est manuel, en lecture
+  seule et sans modèle IA ; aucune récurrence payante n'est activée.
 
 Cette mémoire est un aide-mémoire, jamais une preuve autonome. Lire les tests,
 sources et réserves actuels avant d'utiliser un chiffre. Ne pas y stocker des

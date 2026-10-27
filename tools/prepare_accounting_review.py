@@ -18,7 +18,7 @@ PATTERN = re.compile(r'referentiel|normes (?:comptables|ifrs|internationales)|pr
 
 
 def selected_records(facts, symbols):
-    selected = list(dict.fromkeys(symbols))
+    selected = list(dict.fromkeys(s.strip() for s in symbols))
     if not selected or len(selected) > 12 or any(s not in facts for s in selected):
         raise ValueError('Choisir de un à douze titres du référentiel Nour')
     return [(s, facts[s]) for s in selected]
@@ -45,6 +45,8 @@ def prepare(symbol, record, output, cache, fetch=download, reader=pdf_pages):
             raise ValueError('not_pdf')
         result['sha256'] = sha256(raw).hexdigest()
         pages = reader(target)
+        while pages and not pages[-1].strip():
+            pages.pop()
         (output/(symbol+'.txt')).write_text('\f'.join(pages), encoding='utf-8')
         result.update(status='candidate_only', pages=len(pages), candidates=candidate_pages(pages))
     except Exception as error:
