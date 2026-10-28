@@ -7,47 +7,150 @@
     "timezone": "Africa/Casablanca",
     "event": "workflow_dispatch",
     "slot": "refresh",
-    "label": "Actualisation horaire",
-    "target_time": "16:45",
+    "label": "Contrôle de clôture entre fournisseurs",
+    "target_time": "17:15",
     "schedule": null,
-    "scheduled_at": "2026-10-28T16:45:00+00:00",
+    "scheduled_at": "2026-10-28T17:15:00+00:00",
     "scheduled_at_basis": "watchdog_requested_occurrence",
-    "requested_scheduled_at": "2026-10-28T16:45:00+00:00",
+    "requested_scheduled_at": "2026-10-28T17:15:00+00:00",
     "edition_for": "2026-10-28",
-    "started_at": "2026-10-28T16:45:33+00:00",
-    "built_at": "2026-10-28T16:45:49.845011+00:00",
+    "started_at": "2026-10-28T17:15:29+00:00",
+    "built_at": "2026-10-28T17:15:49.079655+00:00",
     "utc_offset_minutes": 0,
-    "delay_minutes": 0.6,
+    "delay_minutes": 0.5,
     "late": false,
-    "run_id": "40729022069",
-    "commit": "c308dd99e33dfdbe8514f8e136ca56c9f9cc76b5",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40729022069",
+    "run_id": "40733886931",
+    "commit": "5eb86a245c670900066b476a3af661fdadda486b",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/40733886931",
     "collection": {
-      "result": "unchanged",
-      "label": "Aucune nouveauté",
-      "checked_at": "2026-10-28T16:45:34.410510+00:00",
+      "result": "conflict",
+      "label": "Nouvelle observation refusée pour conflit",
+      "checked_at": "2026-10-28T17:15:30.032360+00:00",
       "last_session": "2026-10-28",
-      "message": "Aucune nouvelle séance vérifiée",
-      "conflicts": [],
-      "fully_validated": true
+      "message": "6 bougie(s) divergente(s) non remplacée(s)",
+      "conflicts": [
+        {
+          "symbol": "ATL",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 1010
+          },
+          "observed": {
+            "v": 997
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "COL",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 13795
+          },
+          "observed": {
+            "v": 13145
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "IMI",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 5111
+          },
+          "observed": {
+            "v": 5001
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "MNG",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 687
+          },
+          "observed": {
+            "v": 587
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "ENK",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 29899
+          },
+          "observed": {
+            "v": 29866
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        },
+        {
+          "symbol": "TQA",
+          "session": "2026-10-28",
+          "fields": [
+            "v"
+          ],
+          "retained": {
+            "v": 85
+          },
+          "observed": {
+            "v": 84
+          },
+          "observed_at": "2026-10-28T17:15:30.032360+00:00",
+          "source": "https://www.cdgcapitalbourse.ma/api/",
+          "reason": "Écrasement automatique interdit ; rapprochement documentaire requis",
+          "resolution": "pending_review"
+        }
+      ],
+      "fully_validated": false
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "c308dd99e33dfdbe8514f8e136ca56c9f9cc76b5",
+      "generator_commit": "5eb86a245c670900066b476a3af661fdadda486b",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "3b33f65f12905756cb31e014b2171fb8c15d2228ede2f518712aac286d7dce5b",
+      "market_snapshot_sha256": "1a0e0302c78a385acd49554d3b07581d27847d823dac1aa99dba76252447c9de",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
-      "status": "detail_matched",
+      "status": "partial",
       "session": "2026-10-28",
-      "observed_at": "2026-10-28T16:45:42.403302+00:00",
-      "cross_source_verified": true
+      "observed_at": "2026-10-28T17:15:38.916739+00:00",
+      "cross_source_verified": false
     }
   },
-  "title": "Actualisation horaire",
+  "title": "Contrôle de clôture entre fournisseurs",
   "intraday": {
     "schema_version": 1,
     "session": "2026-10-28",
@@ -57,17 +160,17 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 105.7,
+    "age_minutes": 135.7,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
   "edition_notice": null,
-  "snapshot_updated": "2026-10-28T16:45:34.410510+00:00",
+  "snapshot_updated": "2026-10-28T17:15:30.032360+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
-    "quoted_session": 62,
-    "observable": 61
+    "quoted_session": 56,
+    "observable": 55
   },
   "index": {
     "value": 16926.6059,
@@ -77,7 +180,7 @@
     "variation_points": -93.68,
     "ytd_pct": -10.19
   },
-  "market_summary": "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte. Le MASI clôture à 16 926,61 points (-0,55 %), soit -93,68 points par rapport à la clôture précédente. Fourchette de séance : 16 926,55 à 17 102,32 points. 37 valeurs en baisse, 19 en hausse et 8 inchangées parmi les 64 valeurs échangées recensées. Volume échangé : 121,26 MDH.",
+  "market_summary": "Le MASI clôture à 16 926,61 points (-0,55 %), soit -93,68 points par rapport à la clôture précédente. Fourchette de séance : 16 926,55 à 17 102,32 points. 37 valeurs en baisse, 19 en hausse et 8 inchangées parmi les 64 valeurs échangées recensées. Volume échangé : 121,05 MDH.",
   "index_notice": null,
   "focus": [
     {
@@ -3469,6 +3572,91 @@
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
+      "id": "e2de62038de5748810",
+      "title": "Tunisie : la STAR porte ses primes émises à plus de 126 millions de dollars à fin septembre 2026",
+      "url": "https://www.financialafrik.com/2026/10/28/tunisie-la-star-porte-ses-primes-emises-a-plus-de-126-millions-de-dollars-a-fin-septembre-2026/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:14:45+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "5b9b14a14e50279bff",
+      "title": "La quotidienne des marchés financiers africains : Dangote clôture son offre, Ecobank fait parler",
+      "url": "https://www.financialafrik.com/2026/10/28/la-quotidienne-des-marches-financiers-africains-dangote-cloture-son-offre-ecobank-fait-parler/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:05:21+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "58d19cab98cddb9325",
+      "title": "Namibie : la Banque centrale relève son taux directeur à 7 %",
+      "url": "https://www.financialafrik.com/2026/10/28/namibie-la-banque-centrale-releve-son-taux-directeur-a-7/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:03:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "f059e14a56d371ad48",
+      "title": "Energy Crisis Shapes UK Budget as Chancellor Faces Pressure Over Defence Spendin",
+      "url": "https://oilprice.com/Energy/Energy-General/Energy-Crisis-Shapes-UK-Budget-as-Chancellor-Faces-Pressure-Over-Defence-Spendin.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "caf5f7bb3006aff30a",
+      "title": "Ghana: GCB Bank émet avec des cartes de paiement en renminbi (RMB)",
+      "url": "https://www.financialafrik.com/2026/10/28/ghana-gcb-bank-emet-avec-des-cartes-de-paiement-en-renminbi-rmb/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T16:56:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
       "id": "b360bda3709dcec580",
       "title": "SEIP 2026 : NSIA Asset Management plaide pour une épargne accessible à tous",
       "url": "https://www.financialafrik.com/2026/10/28/seip-2026-nsia-asset-management-plaide-pour-une-epargne-accessible-a-tous/",
@@ -3501,6 +3689,23 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "9c631b2dd83910565d",
+      "title": "Equinor Raises Oil and Gas Output Forecast as Operating Profit Doubles",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Equinor-Raises-Oil-and-Gas-Output-Forecast-as-Operating-Profit-Doubles.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-28T16:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "7322e64a06b66dc03d",
@@ -3671,118 +3876,15 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "6755bad06d1d73816e",
-      "title": "Guerre en Iran et tensions au Moyen-Orient : quels bouleversements pour les marchés pétroliers - IRIS - Institut de relations internationales et stratégiques",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWTRoMVhMTnplb0pwaXFKMkVyREhNSkNMSUtHVVRZWnBLNjdjV1h4MVBhbWNma0x6dGRZTWhJOVQxN0hRbVpFX1RIc0I4Y3RBLUlVRWJsZUtNRzhjeDlKR0NUZzdLQjJja0x3a2tweGp3NzE2OWtPN0NqazB1OUN4ZWFOSHZEME9IMzVvWC1FUmd5Q0V6ZDU3dmVZMjYyMU5qcnpnNUNtcm85NlU5WHp6WktFNk9pVzhxdE9sM1V3?oc=5",
-      "publisher": "Proche-Orient · presse",
-      "published_at": "2026-10-28T13:52:43+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "geopolitique",
-      "scope": "INTL",
-      "feed_id": "proche_orient",
-      "feed_url": "https://news.google.com/rss/search?q=Proche-Orient%20Moyen-Orient%20tensions%20march%C3%A9s%20p%C3%A9trole&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "bd70f4b3559c9d5ede",
-      "title": "États-Unis | Taux directeurs : la Fed tentée par le statu quo avant les élections de mi-mandat - La Presse",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQNHM3NmtvRzlkV0ZCcTJfQ1pjbHIwVjdnYjB5S1VuaWVlSVphOTA0NlhydG9IcVo3Y1NVa0NVckZiMWRsWmlVUV91X1NaX2tpTGVIUzZKelJOdmMtazRfUlBQQ1NKb19rbnRRWnZpUkZpNHJYV00tdzdJZVg5SnlPUmNLOFFRelEzZ21WUGhPekJCdTdsLUI5YTNYVnBPeFhEemJQTGFtVUFQaWVDdzlRVGlIdnAzaEk2UUlBSC1RVmdqeDh6ZXRyekZfRzdJUXV4TnJZYVJSZWM5NjllNmN0dw?oc=5",
-      "publisher": "Fed · presse francophone",
-      "published_at": "2026-10-28T13:44:06+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed_presse",
-      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "531c0628b6d1949259",
-      "title": "QatarEnergy Extends LNG Force Majeure to End of 2026",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/QatarEnergy-Extends-LNG-Force-Majeure-to-End-of-2026.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "6b5cdcdf08f2babb5c",
-      "title": "Le président de la BIDC appelle à un renforcement du financement régional pour bâtir une Afrique de l’Ouest plus résiliente, intégrée et prospère lors du RAF 2026",
-      "url": "https://www.financialafrik.com/2026/10/28/le-president-de-la-bidc-appelle-a-un-renforcement-du-financement-regional-pour-batir-une-afrique-de-louest-plus-resiliente-integree-et-prospere-lors-du-raf-2026/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-28T13:09:29+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "5e784cf11e35e738c0",
-      "title": "U.S. Lawmakers Warn Banks Against Trump's Russian Diesel Deal",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Lawmakers-Warn-Banks-Against-Trumps-Russian-Diesel-Deal.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T13:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "f12748810a1405e691",
-      "title": "Afreximbank approuve un financement de 975 millions de dollars pour le rachat d’Oryx Energies par son équipe dirigeante",
-      "url": "https://www.financialafrik.com/2026/10/28/afreximbank-approuve-un-financement-de-975-millions-de-dollars-pour-le-rachat-doryx-energies-par-son-equipe-dirigeante/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-28T12:56:15+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     }
   ],
   "news_role": "veille uniquement",
   "editorial": {
     "paragraphs": [
-      "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.",
       "Le MASI termine à 16 926,61 points (-0,55 %). La direction de cette séance est baissière.",
       "37 valeurs baissent, 19 progressent et 8 sont inchangées sur 64 traitées. Les baisses représentent 57,81 % de cette couverture. La largeur de marché reste partagée.",
       "L’indice se situe à 0,03 % de l’amplitude au-dessus du plus bas (16 926,55), pour un plus haut de 17 102,32 points. Une clôture proche du bas de séance traduit une pression persistante jusqu’à la fin des échanges.",
-      "Le relevé de marché totalise 121,26 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
+      "Le relevé de marché totalise 121,05 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
       "Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–17 733,06 points. Ce sont des bornes observées, pas des objectifs de cours."
     ],
     "levels": {
@@ -3947,19 +4049,19 @@
         "change_pct": -7.59
       },
       {
-        "symbol": "COL",
-        "change_pct": -4.41
-      },
-      {
-        "symbol": "ENK",
-        "change_pct": -4.26
-      },
-      {
         "symbol": "CMT",
         "change_pct": -3.46
+      },
+      {
+        "symbol": "MUT",
+        "change_pct": -3.13
+      },
+      {
+        "symbol": "SMI",
+        "change_pct": -2.97
       }
     ],
-    "ranking_coverage": 59,
+    "ranking_coverage": 53,
     "flows": [
       {
         "symbol": "WAF",
@@ -4000,7 +4102,6 @@
       }
     ],
     "vigilance": [
-      "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte.",
       "MASI : tenue de 16 749,18 ; franchissement confirmé de 17 733,06 pour sortir de l’intervalle observé.",
       "ADI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 321.2 / 391.95 MAD).",
       "RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 150.0 / 179.15 MAD).",
@@ -4014,9 +4115,94 @@
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-10-28T16:45:40.291727+00:00"
+    "observed_at": "2026-10-28T17:15:36.557658+00:00"
   },
   "context_news": [
+    {
+      "id": "e2de62038de5748810",
+      "title": "Tunisie : la STAR porte ses primes émises à plus de 126 millions de dollars à fin septembre 2026",
+      "url": "https://www.financialafrik.com/2026/10/28/tunisie-la-star-porte-ses-primes-emises-a-plus-de-126-millions-de-dollars-a-fin-septembre-2026/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:14:45+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "5b9b14a14e50279bff",
+      "title": "La quotidienne des marchés financiers africains : Dangote clôture son offre, Ecobank fait parler",
+      "url": "https://www.financialafrik.com/2026/10/28/la-quotidienne-des-marches-financiers-africains-dangote-cloture-son-offre-ecobank-fait-parler/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:05:21+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "58d19cab98cddb9325",
+      "title": "Namibie : la Banque centrale relève son taux directeur à 7 %",
+      "url": "https://www.financialafrik.com/2026/10/28/namibie-la-banque-centrale-releve-son-taux-directeur-a-7/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T17:03:50+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "f059e14a56d371ad48",
+      "title": "Energy Crisis Shapes UK Budget as Chancellor Faces Pressure Over Defence Spendin",
+      "url": "https://oilprice.com/Energy/Energy-General/Energy-Crisis-Shapes-UK-Budget-as-Chancellor-Faces-Pressure-Over-Defence-Spendin.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "caf5f7bb3006aff30a",
+      "title": "Ghana: GCB Bank émet avec des cartes de paiement en renminbi (RMB)",
+      "url": "https://www.financialafrik.com/2026/10/28/ghana-gcb-bank-emet-avec-des-cartes-de-paiement-en-renminbi-rmb/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-10-28T16:56:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
     {
       "id": "b360bda3709dcec580",
       "title": "SEIP 2026 : NSIA Asset Management plaide pour une épargne accessible à tous",
@@ -4050,6 +4236,23 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "9c631b2dd83910565d",
+      "title": "Equinor Raises Oil and Gas Output Forecast as Operating Profit Doubles",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Equinor-Raises-Oil-and-Gas-Output-Forecast-as-Operating-Profit-Doubles.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-10-28T16:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "7322e64a06b66dc03d",
@@ -4118,114 +4321,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "240a8cdbe0e44bc6a0",
-      "title": "Agenda hebdomadaire économique International du jeudi 29 octobre 2026 au jeudi 5 novembre 2026 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE94Y1ZzVnZoRE5iSjZRSld2a281eXJuSFZqdmpTcW9PVVpBSEFiZW02dmpBWVl4VzIycXRJcHRza3VHamN6RXJWdkYyeEs5N3ljd29MMjRMdDBtNG9JQ1BFTVN3?oc=5",
-      "publisher": "Inflation US / zone euro · presse",
-      "published_at": "2026-10-28T15:21:59+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "inflation",
-      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "e74bbd840a39f5f661",
-      "title": "Après la Fed, au tour de la BCE, de nombreuses publications trimestrielles encore au programme, en France comme aux Etats-Unis - Les Echos",
-      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOMS1tci1DQS1kWUNHbWZOOGNOUjRTUjlKNW1OU0pjRTVja0VuZXIwT2V0bkRpNS1LMWtmTXlRTGNIbVU1OWstZmZpbFpjMW9Hb2FpaGlaOGpfbXAzZThnY1Fxc2VtVUpFT2VLUjQ2bVNWRU1nS3k3VENfN1ZMRlF3S0k3RUxmemFjOVhpLV9nejZBM1BueXcxanJLd2ZOei16MWJMaTRhYWJDT2NXN2I3SDdKejZEWnF2QkdGRHFGLWRCV2FoOU95RV9yYXh5ZzBmZ2h0TTZFQmJpODQ5SEswdnljMV8zei0yR1ZaLVJOWDh6TWZzYVFTWEFxVE5Gcm1zOFdOYmRfOGlNOEh4TUlIN3JUcG1yRGhxZVI1YnhRcw?oc=5",
-      "publisher": "BCE · presse francophone",
-      "published_at": "2026-10-28T14:55:08+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb_presse",
-      "feed_url": "https://news.google.com/rss/search?q=BCE%20taux%20directeur%20zone%20euro%20politique%20mon%C3%A9taire&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "87150a0eeadb22a106",
-      "title": "US Oil Inventories Fall Again As Prices Rise",
-      "url": "https://oilprice.com/Energy/Crude-Oil/US-Oil-Inventories-Fall-Again-As-Prices-Rise.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T14:44:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "d1166b0309ab9e9d2c",
-      "title": "Le groupe kényan APA Apollo Group prend le contrôle de deux assureurs tanzaniens",
-      "url": "https://www.financialafrik.com/2026/10/28/le-groupe-kenyan-apa-apollo-group-prend-le-controle-de-deux-assureurs-tanzaniens/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-28T14:33:35+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "7a81e9f93e85aa9b9a",
-      "title": "China’s Refiners Turn to Africa and Brazil Crude as Freight Rates Ease",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Chinas-Refiners-Turn-to-Africa-and-Brazil-Crude-as-Freight-Rates-Ease.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T14:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "ec352648db6dc573c5",
-      "title": "Iran Eyes $130 Oil While at Least 50 Tankers Sit Stuck in the Gulf",
-      "url": "https://oilprice.com/Energy/Energy-General/Iran-Eyes-130-Oil-While-at-Least-50-Tankers-Sit-Stuck-in-the-Gulf.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T14:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-10-28T16:45:49.845011+00:00",
-    "checked_at": "2026-10-28T16:45:41.002314+00:00",
+    "cutoff": "2026-10-28T17:15:49.079655+00:00",
+    "checked_at": "2026-10-28T17:15:37.654413+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4235,51 +4336,51 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 7738.37,
-            "change_pct": 0.20420583741226433,
+            "value": 7743.77,
+            "change_pct": 0.2741304741926303,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:29+00:00",
+            "observed_at": "2026-10-28T17:15:27+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 52514.85,
-            "change_pct": 0.26209692431321047,
+            "value": 52544.89,
+            "change_pct": 0.31944971864865,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:29+00:00",
+            "observed_at": "2026-10-28T17:15:27+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
             "name": "CAC 40",
             "unit": "points",
-            "value": 7892.96,
-            "change_pct": 0.07379100662597225,
+            "value": 7886.96,
+            "change_pct": -0.002282196081219441,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:25:30+00:00",
+            "observed_at": "2026-10-28T16:35:30+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
@@ -4296,7 +4397,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4308,68 +4409,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.8469,
-            "change_pct": -0.10955902492467513,
+            "value": 9.8457,
+            "change_pct": -0.12173224991629567,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:17+00:00",
+            "observed_at": "2026-10-28T17:15:34+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.959,
-            "change_pct": -0.027367268746580128,
+            "value": 10.962,
+            "change_pct": 0,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:41:43+00:00",
+            "observed_at": "2026-10-28T17:11:44+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 17.33,
-            "change_pct": -1.0844748858447562,
+            "value": 17.38,
+            "change_pct": -0.7990867579908708,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:01+00:00",
+            "observed_at": "2026-10-28T17:15:01+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 102.268,
-            "change_pct": -0.09475895081326059,
+            "value": 102.25,
+            "change_pct": -0.11234308601572303,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:28+00:00",
+            "observed_at": "2026-10-28T17:15:26+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4381,51 +4482,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 4052.6,
-            "change_pct": -0.5399302999067392,
+            "value": 4054.7,
+            "change_pct": -0.4883914985520073,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:37+00:00",
+            "observed_at": "2026-10-28T17:15:29+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 112.39,
-            "change_pct": 2.7236998446211533,
+            "value": 111.93,
+            "change_pct": 2.303262955854136,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:37+00:00",
+            "observed_at": "2026-10-28T17:15:34+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 6.673,
-            "change_pct": 0.30815482901165253,
+            "value": 6.6725,
+            "change_pct": 0.3006388575723482,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-10-28T16:45:32+00:00",
+            "observed_at": "2026-10-28T17:15:15+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           },
           {
@@ -4442,7 +4543,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-10-28T16:45:41.002314+00:00",
+            "collected_at": "2026-10-28T17:15:37.654413+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4455,7 +4556,7 @@
     "referenced": 77,
     "titles": 80
   },
-  "limitations": "Total global annoncé non confirmé : seuls les titres détaillés sont recoupés entre deux fournisseurs ; consulter les écarts dans le suivi de collecte. Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
+  "limitations": "Scénarios descriptifs sans probabilités estimées ni prédiction de rendement; frais, carnet et flux non observés.",
   "edition_links": [
     {
       "label": "Briefing du matin",
