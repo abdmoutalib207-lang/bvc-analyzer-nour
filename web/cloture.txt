@@ -15,7 +15,7 @@ Le relevé de marché totalise 106,68 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–17 579,17 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-29T16:45:34.123583+00:00.
+Sources du marché · relevé 2026-10-29T17:32:27.326315+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -367,27 +367,31 @@ AMMC · 2026-10-28 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-29T16:45:35.189131+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-10-29T17:32:28.402243+00:00 · état partial. Horodatages en UTC.
+
+Détails de collecte macro
+
+EURONEXT:PX1 : Régression ou contradiction au même horodatage ; archive conservée
 
 Indices actions
 
 S&P 500
 
-7 712,68points · -0,40 %
+7 707,87points · -0,47 %
 
-Dernière observation source2026-10-29T16:45:30+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-29T17:32:26+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 270,16points · -0,39 %
+52 254,03points · -0,42 %
 
-Dernière observation source2026-10-29T16:45:30+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-29T17:32:26+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
 7 975,27points · 1,12 %
 
-Dernière observation source2026-10-29T16:35:30+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
+Archive conservée après collecte incomplète2026-10-29T16:35:30+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/EURONEXT-PX1/] Source ↗
 
 Nikkei 225
 
@@ -399,47 +403,47 @@ Risque et devises
 
 USD/MAD
 
-9,8287MAD / USD · -0,14 %
+9,8188MAD / USD · -0,24 %
 
-Dernière observation source2026-10-29T16:45:13+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-29T17:32:22+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9640MAD / EUR · -0,06 %
+10,9660MAD / EUR · -0,05 %
 
-Dernière observation source2026-10-29T16:41:45+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-29T17:31:42+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-16,33points · -3,43 %
+16,49points · -2,48 %
 
-Dernière observation source2026-10-29T16:45:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-29T17:32:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,02points · -0,13 %
+101,98points · -0,17 %
 
-Dernière observation source2026-10-29T16:45:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-29T17:32:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 023,90USD / once troy · -0,68 %
+4 032,90USD / once troy · -0,46 %
 
-Dernière observation source2026-10-29T16:45:23+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-29T17:32:21+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-110,03USD / baril · -1,44 %
+110,11USD / baril · -1,37 %
 
-Dernière observation source2026-10-29T16:45:26+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-29T17:32:22+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,60USD / livre · -1,14 %
+6,60USD / livre · -1,08 %
 
-Dernière observation source2026-10-29T16:45:23+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-29T17:32:18+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -451,37 +455,37 @@ Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas 
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
 
+ [https://oilprice.com/Latest-Energy-News/World-News/Mexicos-Richest-Man-Sells-115-Billion-in-Oil-Stocks.html] Mexico’s Richest Man Sells $1.15 Billion in Oil Stocks ↗
+
+OilPrice · 2026-10-29T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Europe-to-Release-42-Million-Barrels-of-Oil.html] Europe to Release 42 Million Barrels of Oil ↗
+
+OilPrice · 2026-10-29T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/29/standard-chartered-releve-ses-previsions-apres-une-hausse-de-27-du-benefice-avant-impot/] Standard Chartered relève ses prévisions après une hausse de 27 % du bénéfice avant impôt ↗
+
+Financial Afrik · 2026-10-29T17:22:46+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/29/maroc-laprophan-obtient-le-visa-de-lammc-et-prepare-son-entree-a-la-bourse-de-casablanca/] Maroc : Laprophan obtient le visa de l’AMMC et prépare son entrée à la Bourse de Casablanca ↗
+
+Financial Afrik · 2026-10-29T17:05:16+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Energy/Energy-General/The-CCS-Project-That-Passed-Every-Test-Except-the-Investment-Test.html] The CCS Project That Passed Every Test Except the Investment Test ↗
+
+OilPrice · 2026-10-29T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://news.google.com/rss/articles/CBMikwFBVV95cUxQajRvUk5VWXBSVm15Q3lKS2lVeHZQcmd5azNGQzZjM2cxRXZDcThjR0lndTduaGVweGt6LWFHaUpHdkNsbGVoa05uQk10a1lOamZrMGRIREF3czZrLXhSQ0xZTUV4anJsbk8ycWtsOHF3Tk1KMjN2NzBlWklzSTZ1QWFMa28zTjZKdllsVGtQWF9nbG8?oc=5] La Banque centrale européenne a décidé de maintenir ses taux d'intérêt inchangés à 2,5 %. - Vietnam.vn ↗
+
+BCE · presse francophone · 2026-10-29T16:49:50+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/10/29/ecobank-kenya-nomme-risper-alaro-au-conseil-les-femmes-desormais-majoritaires/] Ecobank Kenya nomme Risper Alaro au conseil, les femmes désormais majoritaires ↗
+
+Financial Afrik · 2026-10-29T16:49:24+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/10/29/egypte-quatre-nouvelles-cotations-publiques-visees-avant-la-fin-2026/] Égypte : quatre nouvelles cotations publiques visées avant la fin 2026 ↗
 
 Financial Afrik · 2026-10-29T16:39:34+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Sinopec-Third-Quarter-Profit-Jumps-64-as-Oil-Prices-Climb.html] Sinopec Third-Quarter Profit Jumps 64% as Oil Prices Climb ↗
-
-OilPrice · 2026-10-29T16:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/UK-Budget-Signals-Wave-of-New-North-Sea-Oil-and-Gas-Drilling.html] UK Budget Signals Wave of New North Sea Oil and Gas Drilling ↗
-
-OilPrice · 2026-10-29T16:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261029~e9b57c3495.en.html] Piero Cipollone: Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure ↗
-
-BCE · publications · 2026-10-29T15:50:00+00:00 · International · Macroéconomie · publication institutionnelle, contenu non analysé. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/29/africa-prize-2026-le-nigerien-mamane-kabirou-ousseini-prime-pour-sa-plateforme-de-surveillance-medicale/] Africa Prize 2026 : le Nigérien Mamane Kabirou Ousseini primé pour sa plateforme de surveillance médicale ↗
-
-Financial Afrik · 2026-10-29T15:47:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/29/egypte-la-bei-et-la-banque-centrale-examinent-leur-cooperation-en-finance-durable/] Égypte : la BEI et la banque centrale examinent leur coopération en finance durable ↗
-
-Financial Afrik · 2026-10-29T15:32:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Trafigura-Signs-New-Gas-Supply-Deal-with-German-SEFE.html] Trafigura Signs New Gas Supply Deal with German SEFE ↗
-
-OilPrice · 2026-10-29T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQUVUbjRKVHJZWDdlclJVOHk0X2x5NWdmZ29MWkNETUw1dUdSWnlQY3hLeVBKX3EtaGFNTGFUYUN4SUZYc2JENTJOV0FhWnVKNTk4QW5mR3dsYndHdTlCWGwyTjB2NXJhdGtRVVJLdGJYTTZNVS1UZXozVXhlQ2Q5Vy1fa212OUQtaEVqa0NNa095MHVDYlpKZXpwMFpzSUp2dERXNVNQM19GWnpoWnhOTWVVNURwbV9nVXkzV1J5YkNpUjFQb3J1T2t3X0F6MXJRSUFFa2lfbUxxdw?oc=5] Zone euro : la BCE maintient ses taux directeurs face à la hausse des prix de l’énergie - Anadolu Ajansı ↗
-
-BCE · presse francophone · 2026-10-29T15:26:06+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -535,27 +539,27 @@ Comparer les confirmations de cours, la largeur de marché et la liquidité. Une
 
 Radar de presse — alertes à recouper
 
- [https://www.financialafrik.com/2026/10/29/egypte-quatre-nouvelles-cotations-publiques-visees-avant-la-fin-2026/] Égypte : quatre nouvelles cotations publiques visées avant la fin 2026 ↗
+ [https://oilprice.com/Latest-Energy-News/World-News/Mexicos-Richest-Man-Sells-115-Billion-in-Oil-Stocks.html] Mexico’s Richest Man Sells $1.15 Billion in Oil Stocks ↗
 
-Financial Afrik · 2026-10-29T16:39:34+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-29T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://oilprice.com/Latest-Energy-News/World-News/Sinopec-Third-Quarter-Profit-Jumps-64-as-Oil-Prices-Climb.html] Sinopec Third-Quarter Profit Jumps 64% as Oil Prices Climb ↗
+ [https://oilprice.com/Latest-Energy-News/World-News/Europe-to-Release-42-Million-Barrels-of-Oil.html] Europe to Release 42 Million Barrels of Oil ↗
 
-OilPrice · 2026-10-29T16:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-29T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://oilprice.com/Energy/Energy-General/UK-Budget-Signals-Wave-of-New-North-Sea-Oil-and-Gas-Drilling.html] UK Budget Signals Wave of New North Sea Oil and Gas Drilling ↗
+ [https://www.financialafrik.com/2026/10/29/standard-chartered-releve-ses-previsions-apres-une-hausse-de-27-du-benefice-avant-impot/] Standard Chartered relève ses prévisions après une hausse de 27 % du bénéfice avant impôt ↗
 
-OilPrice · 2026-10-29T16:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+Financial Afrik · 2026-10-29T17:22:46+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/29/africa-prize-2026-le-nigerien-mamane-kabirou-ousseini-prime-pour-sa-plateforme-de-surveillance-medicale/] Africa Prize 2026 : le Nigérien Mamane Kabirou Ousseini primé pour sa plateforme de surveillance médicale ↗
+ [https://www.financialafrik.com/2026/10/29/maroc-laprophan-obtient-le-visa-de-lammc-et-prepare-son-entree-a-la-bourse-de-casablanca/] Maroc : Laprophan obtient le visa de l’AMMC et prépare son entrée à la Bourse de Casablanca ↗
 
-Financial Afrik · 2026-10-29T15:47:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+Financial Afrik · 2026-10-29T17:05:16+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://www.financialafrik.com/2026/10/29/egypte-la-bei-et-la-banque-centrale-examinent-leur-cooperation-en-finance-durable/] Égypte : la BEI et la banque centrale examinent leur coopération en finance durable ↗
+ [https://oilprice.com/Energy/Energy-General/The-CCS-Project-That-Passed-Every-Test-Except-the-Investment-Test.html] The CCS Project That Passed Every Test Except the Investment Test ↗
 
-Financial Afrik · 2026-10-29T15:32:40+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+OilPrice · 2026-10-29T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
- [https://oilprice.com/Latest-Energy-News/World-News/Trafigura-Signs-New-Gas-Supply-Deal-with-German-SEFE.html] Trafigura Signs New Gas Supply Deal with German SEFE ↗
+ [https://news.google.com/rss/articles/CBMikwFBVV95cUxQajRvUk5VWXBSVm15Q3lKS2lVeHZQcmd5azNGQzZjM2cxRXZDcThjR0lndTduaGVweGt6LWFHaUpHdkNsbGVoa05uQk10a1lOamZrMGRIREF3czZrLXhSQ0xZTUV4anJsbk8ycWtsOHF3Tk1KMjN2NzBlWklzSTZ1QWFMa28zTjZKdllsVGtQWF9nbG8?oc=5] La Banque centrale européenne a décidé de maintenir ses taux d'intérêt inchangés à 2,5 %. - Vietnam.vn ↗
 
-OilPrice · 2026-10-29T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+BCE · presse francophone · 2026-10-29T16:49:50+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
