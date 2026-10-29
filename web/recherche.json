@@ -2,8 +2,8 @@
   "version": "nour-research-v1",
   "asof": "2026-10-29",
   "masi_first": "2023-01-02",
-  "masi_last": "2026-10-28",
-  "masi_sessions": 934,
+  "masi_last": "2026-10-29",
+  "masi_sessions": 935,
   "universe_size": 80,
   "rows": [
     {
@@ -12423,6 +12423,19 @@
     },
     {
       "symbol": "BCP",
+      "horizon": 20,
+      "signal_date": "2026-09-30",
+      "entry_date": "2026-10-01",
+      "exit_date": "2026-10-29",
+      "entry": 247.0,
+      "exit": 247.0,
+      "gross_pct": 0.0,
+      "masi_pct": -4.42421,
+      "regime": "below",
+      "period": "2025+"
+    },
+    {
+      "symbol": "BCP",
       "horizon": 60,
       "signal_date": "2023-10-20",
       "entry_date": "2023-10-23",
@@ -14031,6 +14044,19 @@
       "gross_pct": -4.761905,
       "masi_pct": 5.345772,
       "regime": "above",
+      "period": "2025+"
+    },
+    {
+      "symbol": "BOA",
+      "horizon": 20,
+      "signal_date": "2026-09-30",
+      "entry_date": "2026-10-01",
+      "exit_date": "2026-10-29",
+      "entry": 190.0,
+      "exit": 188.0,
+      "gross_pct": -1.052632,
+      "masi_pct": -4.42421,
+      "regime": "below",
       "period": "2025+"
     },
     {
@@ -24262,6 +24288,19 @@
       "gross_pct": 4.225352,
       "masi_pct": -5.846596,
       "regime": "above",
+      "period": "2025+"
+    },
+    {
+      "symbol": "DTT",
+      "horizon": 20,
+      "signal_date": "2026-09-30",
+      "entry_date": "2026-10-01",
+      "exit_date": "2026-10-29",
+      "entry": 362.0,
+      "exit": 345.0,
+      "gross_pct": -4.696133,
+      "masi_pct": -4.42421,
+      "regime": "below",
       "period": "2025+"
     },
     {
@@ -61017,12 +61056,12 @@
     {
       "symbol": "MASI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 25,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 9
+      "no_trend": 10
     },
     {
       "symbol": "MASI",
@@ -61047,12 +61086,12 @@
     {
       "symbol": "ADH",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 17,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 17
+      "no_trend": 18
     },
     {
       "symbol": "ADH",
@@ -61077,12 +61116,12 @@
     {
       "symbol": "ADI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 23,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 11
+      "no_trend": 12
     },
     {
       "symbol": "ADI",
@@ -61107,9 +61146,9 @@
     {
       "symbol": "AFI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 24
@@ -61137,9 +61176,9 @@
     {
       "symbol": "AFM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 19
@@ -61167,9 +61206,9 @@
     {
       "symbol": "AGM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 18,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 15
@@ -61197,12 +61236,12 @@
     {
       "symbol": "AKD",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 18
+      "no_trend": 19
     },
     {
       "symbol": "AKD",
@@ -61227,9 +61266,9 @@
     {
       "symbol": "ALU",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 16,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 16
@@ -61257,12 +61296,12 @@
     {
       "symbol": "ARD",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 23
+      "no_trend": 24
     },
     {
       "symbol": "ARD",
@@ -61287,12 +61326,12 @@
     {
       "symbol": "ATL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 23
+      "no_trend": 24
     },
     {
       "symbol": "ATL",
@@ -61317,12 +61356,12 @@
     {
       "symbol": "ATW",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 20,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 14
+      "no_trend": 15
     },
     {
       "symbol": "ATW",
@@ -61347,9 +61386,9 @@
     {
       "symbol": "BAL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 18,
-      "missing": 0,
+      "missing": 1,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 16
@@ -61377,8 +61416,8 @@
     {
       "symbol": "BCP",
       "horizon": 20,
-      "candidates": 34,
-      "observed": 16,
+      "candidates": 35,
+      "observed": 17,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
@@ -61407,9 +61446,9 @@
     {
       "symbol": "BMC",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 18
@@ -61437,8 +61476,8 @@
     {
       "symbol": "BOA",
       "horizon": 20,
-      "candidates": 34,
-      "observed": 12,
+      "candidates": 35,
+      "observed": 13,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
@@ -61467,12 +61506,12 @@
     {
       "symbol": "CAR",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 10,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "CAR",
@@ -61497,12 +61536,12 @@
     {
       "symbol": "CASH",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 1,
       "missing": 28,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 5
+      "no_trend": 6
     },
     {
       "symbol": "CASH",
@@ -61527,12 +61566,12 @@
     {
       "symbol": "CDM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "CDM",
@@ -61557,12 +61596,12 @@
     {
       "symbol": "CFGB",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 15,
       "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 14
+      "no_trend": 15
     },
     {
       "symbol": "CFGB",
@@ -61587,12 +61626,12 @@
     {
       "symbol": "CIH",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "CIH",
@@ -61617,12 +61656,12 @@
     {
       "symbol": "CIM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 17,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 15
+      "no_trend": 16
     },
     {
       "symbol": "CIM",
@@ -61647,12 +61686,12 @@
     {
       "symbol": "CMGP",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 6,
       "missing": 16,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 12
+      "no_trend": 13
     },
     {
       "symbol": "CMGP",
@@ -61677,10 +61716,10 @@
     {
       "symbol": "CMT",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
       "missing": 27,
-      "event_boundary": 1,
+      "event_boundary": 2,
       "inactive": 0,
       "no_trend": 6
     },
@@ -61707,12 +61746,12 @@
     {
       "symbol": "COL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 18,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 16
+      "no_trend": 17
     },
     {
       "symbol": "COL",
@@ -61737,12 +61776,12 @@
     {
       "symbol": "CSR",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "CSR",
@@ -61767,9 +61806,9 @@
     {
       "symbol": "CTM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 19
@@ -61797,9 +61836,9 @@
     {
       "symbol": "DAR",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 21
@@ -61827,12 +61866,12 @@
     {
       "symbol": "DHO",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 15,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 19
+      "no_trend": 20
     },
     {
       "symbol": "DHO",
@@ -61857,11 +61896,11 @@
     {
       "symbol": "DIS",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
       "missing": 0,
       "event_boundary": 0,
-      "inactive": 34,
+      "inactive": 35,
       "no_trend": 0
     },
     {
@@ -61887,11 +61926,11 @@
     {
       "symbol": "DLM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
       "missing": 0,
       "event_boundary": 0,
-      "inactive": 34,
+      "inactive": 35,
       "no_trend": 0
     },
     {
@@ -61917,9 +61956,9 @@
     {
       "symbol": "DSW",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -61947,8 +61986,8 @@
     {
       "symbol": "DTT",
       "horizon": 20,
-      "candidates": 34,
-      "observed": 17,
+      "candidates": 35,
+      "observed": 18,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
@@ -61977,12 +62016,12 @@
     {
       "symbol": "ENK",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "ENK",
@@ -62007,9 +62046,9 @@
     {
       "symbol": "EQD",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 13,
-      "missing": 6,
+      "missing": 7,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 15
@@ -62037,12 +62076,12 @@
     {
       "symbol": "FNB",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "FNB",
@@ -62067,9 +62106,9 @@
     {
       "symbol": "GAZ",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
-      "missing": 0,
+      "missing": 1,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 22
@@ -62097,12 +62136,12 @@
     {
       "symbol": "HAL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 23
+      "no_trend": 24
     },
     {
       "symbol": "HAL",
@@ -62127,12 +62166,12 @@
     {
       "symbol": "HPS",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "HPS",
@@ -62157,12 +62196,12 @@
     {
       "symbol": "IAM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "IAM",
@@ -62187,9 +62226,9 @@
     {
       "symbol": "IBM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -62217,12 +62256,12 @@
     {
       "symbol": "IMI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "IMI",
@@ -62247,9 +62286,9 @@
     {
       "symbol": "INV",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 10,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -62277,12 +62316,12 @@
     {
       "symbol": "JET",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 21,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 13
+      "no_trend": 14
     },
     {
       "symbol": "JET",
@@ -62307,12 +62346,12 @@
     {
       "symbol": "LBV",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "LBV",
@@ -62337,9 +62376,9 @@
     {
       "symbol": "LES",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 21
@@ -62367,12 +62406,12 @@
     {
       "symbol": "LHM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 13,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 21
+      "no_trend": 22
     },
     {
       "symbol": "LHM",
@@ -62397,9 +62436,9 @@
     {
       "symbol": "M2M",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 10,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -62427,12 +62466,12 @@
     {
       "symbol": "MDP",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 10,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "MDP",
@@ -62457,9 +62496,9 @@
     {
       "symbol": "MGL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 3,
+      "missing": 4,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 22
@@ -62487,9 +62526,9 @@
     {
       "symbol": "MIC",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 16,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 16
@@ -62517,10 +62556,10 @@
     {
       "symbol": "MNG",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 21,
       "missing": 0,
-      "event_boundary": 2,
+      "event_boundary": 3,
       "inactive": 0,
       "no_trend": 11
     },
@@ -62547,9 +62586,9 @@
     {
       "symbol": "MOX",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
-      "missing": 0,
+      "missing": 1,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -62577,9 +62616,9 @@
     {
       "symbol": "MRL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
-      "missing": 3,
+      "missing": 4,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 19
@@ -62607,12 +62646,12 @@
     {
       "symbol": "MSA",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 24,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 8
+      "no_trend": 9
     },
     {
       "symbol": "MSA",
@@ -62637,12 +62676,12 @@
     {
       "symbol": "MUT",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 12,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 20
+      "no_trend": 21
     },
     {
       "symbol": "MUT",
@@ -62667,9 +62706,9 @@
     {
       "symbol": "NEJ",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 1,
+      "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 24
@@ -62697,9 +62736,9 @@
     {
       "symbol": "OUL",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -62727,9 +62766,9 @@
     {
       "symbol": "PPM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
-      "missing": 3,
+      "missing": 4,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 20
@@ -62757,12 +62796,12 @@
     {
       "symbol": "RDS",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 18,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 14
+      "no_trend": 15
     },
     {
       "symbol": "RDS",
@@ -62787,9 +62826,9 @@
     {
       "symbol": "REB",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 13,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 19
@@ -62817,12 +62856,12 @@
     {
       "symbol": "RIS",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 18
+      "no_trend": 19
     },
     {
       "symbol": "RIS",
@@ -62847,9 +62886,9 @@
     {
       "symbol": "S2M",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 15,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 17
@@ -62877,9 +62916,9 @@
     {
       "symbol": "SAF",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 16,
-      "missing": 4,
+      "missing": 5,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 14
@@ -62907,9 +62946,9 @@
     {
       "symbol": "SBS",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 15,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 17
@@ -62937,12 +62976,12 @@
     {
       "symbol": "SGTM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
       "missing": 28,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 6
+      "no_trend": 7
     },
     {
       "symbol": "SGTM",
@@ -62967,9 +63006,9 @@
     {
       "symbol": "SLM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 21
@@ -62997,12 +63036,12 @@
     {
       "symbol": "SMI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 18,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 14
+      "no_trend": 15
     },
     {
       "symbol": "SMI",
@@ -63027,12 +63066,12 @@
     {
       "symbol": "SNA",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 16,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 16
+      "no_trend": 17
     },
     {
       "symbol": "SNA",
@@ -63057,12 +63096,12 @@
     {
       "symbol": "SNP",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 10,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 22
+      "no_trend": 23
     },
     {
       "symbol": "SNP",
@@ -63087,12 +63126,12 @@
     {
       "symbol": "SOT",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
       "missing": 2,
       "event_boundary": 4,
       "inactive": 0,
-      "no_trend": 17
+      "no_trend": 18
     },
     {
       "symbol": "SOT",
@@ -63117,9 +63156,9 @@
     {
       "symbol": "SRM",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -63147,12 +63186,12 @@
     {
       "symbol": "STK",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 17,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 15
+      "no_trend": 16
     },
     {
       "symbol": "STK",
@@ -63177,12 +63216,12 @@
     {
       "symbol": "STR",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 14,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 18
+      "no_trend": 19
     },
     {
       "symbol": "STR",
@@ -63207,9 +63246,9 @@
     {
       "symbol": "T2S",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
-      "missing": 34,
+      "missing": 35,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
@@ -63237,12 +63276,12 @@
     {
       "symbol": "TGCC",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 23,
       "missing": 0,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 11
+      "no_trend": 12
     },
     {
       "symbol": "TGCC",
@@ -63267,12 +63306,12 @@
     {
       "symbol": "TMA",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 17,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 15
+      "no_trend": 16
     },
     {
       "symbol": "TMA",
@@ -63297,12 +63336,12 @@
     {
       "symbol": "TQA",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 11,
       "missing": 2,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 21
+      "no_trend": 22
     },
     {
       "symbol": "TQA",
@@ -63327,9 +63366,9 @@
     {
       "symbol": "UNI",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 9,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 23
@@ -63357,12 +63396,12 @@
     {
       "symbol": "VCNE",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 3,
       "missing": 23,
       "event_boundary": 0,
       "inactive": 0,
-      "no_trend": 8
+      "no_trend": 9
     },
     {
       "symbol": "VCNE",
@@ -63387,9 +63426,9 @@
     {
       "symbol": "WAF",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 15,
-      "missing": 2,
+      "missing": 3,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 17
@@ -63417,9 +63456,9 @@
     {
       "symbol": "ZLD",
       "horizon": 20,
-      "candidates": 34,
+      "candidates": 35,
       "observed": 0,
-      "missing": 34,
+      "missing": 35,
       "event_boundary": 0,
       "inactive": 0,
       "no_trend": 0
