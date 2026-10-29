@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-10-29
+Filet de sécurité de fin de journée — séance 2026-10-29
 Préparé le 2026-10-29
 
 Lecture de séanceL’essentiel
@@ -15,7 +15,7 @@ Le relevé de marché totalise 106,68 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 749,18–17 579,17 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-10-29T18:40:09.090412+00:00.
+Sources du marché · relevé 2026-10-29T19:00:37.905384+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -367,25 +367,27 @@ AMMC · 2026-10-28 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-10-29T18:40:13.699291+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-10-29T19:00:40.773172+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
 EURONEXT:PX1 : Régression ou contradiction au même horodatage ; archive conservée
 
+ICEEUR:ATW1! : Régression ou contradiction au même horodatage ; archive conservée
+
 Indices actions
 
 S&P 500
 
-7 697,90points · -0,60 %
+7 697,01points · -0,61 %
 
-Dernière observation source2026-10-29T18:40:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-10-29T19:00:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 196,10points · -0,53 %
+52 192,31points · -0,54 %
 
-Dernière observation source2026-10-29T18:40:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-10-29T19:00:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -403,57 +405,61 @@ Risque et devises
 
 USD/MAD
 
-9,8213MAD / USD · -0,22 %
+9,8289MAD / USD · -0,14 %
 
-Dernière observation source2026-10-29T18:40:00+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-10-29T19:00:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9550MAD / EUR · -0,15 %
+10,9640MAD / EUR · -0,06 %
 
-Dernière observation source2026-10-29T18:36:43+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-10-29T18:41:43+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-16,84points · -0,41 %
+17,00points · 0,53 %
 
-Dernière observation source2026-10-29T18:39:01+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-10-29T19:00:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
 102,03points · -0,12 %
 
-Dernière observation source2026-10-29T18:40:06+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-10-29T19:00:22+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 017,50USD / once troy · -0,84 %
+4 022,00USD / once troy · -0,73 %
 
-Dernière observation source2026-10-29T18:40:04+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-10-29T19:00:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-110,84USD / baril · -0,72 %
+110,80USD / baril · -0,75 %
 
-Dernière observation source2026-10-29T18:40:04+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-10-29T19:00:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,59USD / livre · -1,21 %
+6,60USD / livre · -1,10 %
 
-Dernière observation source2026-10-29T18:40:02+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-10-29T19:00:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
 145,70USD / tonne · -0,10 %
 
-Dernière observation source2026-10-29T10:00:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
+Archive conservée après collecte incomplète2026-10-29T10:00:31+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-ATW1!/] Source ↗
 
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/BYD-Earnings-Miss-Estimates-as-Chinas-EV-Price-War-Takes-Its-Toll.html] BYD Earnings Miss Estimates as China's EV Price War Takes Its Toll ↗
+
+OilPrice · 2026-10-29T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Pushes-Nuclear-Energy-Expansion-in-Central-Asia-and-Caucasus.html] U.S. Pushes Nuclear Energy Expansion in Central Asia and Caucasus ↗
 
@@ -482,10 +488,6 @@ Financial Afrik · 2026-10-29T17:05:16+00:00 · Maroc · Économie · alerte non
  [https://oilprice.com/Energy/Energy-General/The-CCS-Project-That-Passed-Every-Test-Except-the-Investment-Test.html] The CCS Project That Passed Every Test Except the Investment Test ↗
 
 OilPrice · 2026-10-29T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://news.google.com/rss/articles/CBMikwFBVV95cUxQajRvUk5VWXBSVm15Q3lKS2lVeHZQcmd5azNGQzZjM2cxRXZDcThjR0lndTduaGVweGt6LWFHaUpHdkNsbGVoa05uQk10a1lOamZrMGRIREF3czZrLXhSQ0xZTUV4anJsbk8ycWtsOHF3Tk1KMjN2NzBlWklzSTZ1QWFMa28zTjZKdllsVGtQWF9nbG8?oc=5] La Banque centrale européenne a décidé de maintenir ses taux d'intérêt inchangés à 2,5 %. - Vietnam.vn ↗
-
-BCE · presse francophone · 2026-10-29T16:49:50+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -539,6 +541,10 @@ Comparer les confirmations de cours, la largeur de marché et la liquidité. Une
 
 Radar de presse — alertes à recouper
 
+ [https://oilprice.com/Energy/Energy-General/BYD-Earnings-Miss-Estimates-as-Chinas-EV-Price-War-Takes-Its-Toll.html] BYD Earnings Miss Estimates as China's EV Price War Takes Its Toll ↗
+
+OilPrice · 2026-10-29T19:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Alternative-Energy/Nuclear-Power/US-Pushes-Nuclear-Energy-Expansion-in-Central-Asia-and-Caucasus.html] U.S. Pushes Nuclear Energy Expansion in Central Asia and Caucasus ↗
 
 OilPrice · 2026-10-29T18:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -558,8 +564,4 @@ OilPrice · 2026-10-29T17:30:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/10/29/standard-chartered-releve-ses-previsions-apres-une-hausse-de-27-du-benefice-avant-impot/] Standard Chartered relève ses prévisions après une hausse de 27 % du bénéfice avant impôt ↗
 
 Financial Afrik · 2026-10-29T17:22:46+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/10/29/maroc-laprophan-obtient-le-visa-de-lammc-et-prepare-son-entree-a-la-bourse-de-casablanca/] Maroc : Laprophan obtient le visa de l’AMMC et prépare son entrée à la Bourse de Casablanca ↗
-
-Financial Afrik · 2026-10-29T17:05:16+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
