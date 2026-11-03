@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T16:38:22.001178+00:00",
+  "updated_at": "2026-11-03T16:54:52.993370+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "729411ce5b3a9021bc",
+      "title": "Trump Bombs Iran, Talks Peace, and Sends Oil Prices Tumbling",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Trump-Bombs-Iran-Talks-Peace-and-Sends-Oil-Prices-Tumbling.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-03T16:43:43+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "efc8f312cfd8615bba",
       "title": "IEA Warns Global Gas Crunch Could Last Well into 2027",
@@ -3364,23 +3381,6 @@
       "scope": "INTL",
       "feed_id": "fed_presse",
       "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "a0c3e1be77e8b5a27f",
-      "title": "Federal Reserve issues FOMC statement",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-      "publisher": "Fed · politique monétaire",
-      "published_at": "2026-10-28T18:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed",
-      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
     },
     {
       "id": "79341b0bcd50fcb58a",
