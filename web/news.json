@@ -1,8 +1,40 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T17:22:55.725120+00:00",
+  "updated_at": "2026-11-03T17:45:46.054491+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "ec00ff62ad3e3ba659",
+      "title": "SRM - CP relatif aux indicateurs du 3ème trimestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_SRM_T3_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-11-03T17:34:24+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "cc6bf70cc46d0131ca",
+      "title": "Hormuz Oil Flows Unlikely to Return to Pre-War Levels, Rystad Says",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Hormuz-Oil-Flows-Unlikely-to-Return-to-Pre-War-Levels-Rystad-Says.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-03T17:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "49505b57c65669d281",
       "title": "Midterms aux USA : Abdul El-Sayed, un gros caillou sur le chemin de Donald Trump",
@@ -3334,23 +3366,6 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "5b3689fcd7fa80722a",
-      "title": "Réserve fédérale : statu quo probable en octobre, hausse des taux attendue en décembre - ABN AMRO - www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLUtWTXVfMGZnX0szYW8tekdVNUF5dGZPZXR2X0ZjNXN2Q1R1YmZ3MERZTHlRQTZvSlVXaHRlRlZ2WVRpekFfam5oYUU0ekJDQjNDWXJVWVhleDJlalAyWjdCWEE5WWhaRkpsc2F2S0R0OTZfLURVVmRUTUE4YkJGeHg3OVpRY0M1Wk92MVc0ZUNhVEVlYXFsY3RpR2ZIUzZuT1BjZVNFcGtGaTdENE9iUThVSmpULXBUaklSWjl1d2UyYzBxRFNmOThwME81Zw?oc=5",
-      "publisher": "Fed · presse francophone",
-      "published_at": "2026-10-28T22:14:47+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed_presse",
-      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
       "id": "890a0bc311d7e7f669",
       "title": "Laprophan - CP suite au visa de l'AMMC sur le prospectus relatif à l'introduction en bourse",
       "url": "https://www.ammc.ma/sites/default/files/CP_Laprophan_visa_AMMC.pdf",
@@ -3364,23 +3379,6 @@
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
-    },
-    {
-      "id": "c744ccee148334f6d7",
-      "title": "Les bourses en direct | Wall Street termine en hausse alors que la Fed maintient son taux directeur inchangé - L'Echo",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNR3JWUEhTX2JDUUtocDdsLVdIaVB5bFBpaU1YOXgyeENIVFNmLTRGQk9Oc1NhX0IxSXNUVkdnXzB1V25KM0doMGVVUDd3YVB3UFBSNWdHOWV0Q2k3WHl3X2Fwem8xRnNWZ2VYVEJqajEtbV9CSGR1alFoVkpQVXJBTUQ2amVrdlZ6OS1vNDhuOUlQcHg4WG1pX004VnJzMUxzM18tUUdxbTNtdi1zYmhVNHlUZklkQWVIcWpjZDVRemNSOEpOc2d1RF9BNFJheXVYajBxS2k2NlpTLVFlUWIwRlFXX3pkT0xwdDVqQ0hIZzl0c2ZLSmc?oc=5",
-      "publisher": "Fed · presse francophone",
-      "published_at": "2026-10-28T20:14:46+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed_presse",
-      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "79341b0bcd50fcb58a",
