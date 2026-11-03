@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T17:07:26.226504+00:00",
+  "updated_at": "2026-11-03T17:22:55.725120+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -87,6 +87,23 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "272fa3efcc2212dd17",
+      "title": "Agenda hebdomadaire économique International du mercredi 4 novembre 2026 au mercredi 11 novembre 2026 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzMFlXSWphVDZYY2VqVENsVVQ0S0JiZE12UWhMRE1FejA1SVUwMXhNRkE0X21sZzl0eERvNHhOdmJvNG1jcDRtV2hYY0tEbEc4NDExN21tLTRzc19tMVg2NlB3?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-11-03T15:37:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "2866aa6852bc311680",
@@ -293,6 +310,23 @@
       "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
+      "id": "ede52e753e29287742",
+      "title": "Prudence en Bourse avant le résultat des « midterms » aux Etats-Unis, Alstom chute encore, dégradé par les analystes - Les Echos",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNRUllNlYyWkticjR1cG9YWTRKRXVLajJmNHFWbkVMaU1GU0lwWWJJZWFLaEZyeGNJNnNJdXdZMVZIQWp5bU9VM1o2MmxsUkxkamE3Z3k2dW1CaXYtRlR4QmdDRWRJc0JvZDVya18tSUkzbGp2ZVFtdmJGTGlfQUUyeGRTcjNaY04zeXVvZXBOd0xwYUFaM1FlbVdJZ2l6SXdZTzgtcWcwdGlUX1BiYlVyQUJjUmoxVmljTkV5eWlQTW02LUx4UE4xNFVBM09zdHN3Q1JhaHBJQmxYWXFSM3haV3RCTkhzSmhHYThsdTdNcjBrZ3F2M1Z3SzJIT012VmJSa3pMWnl5TWxCRXV3amc?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-11-03T11:49:12+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
       "id": "c6ae1545c956a4e007",
       "title": "Le crédit-bail, un potentiel annuel d’environ 340 millions USD que le Gabon veut débloquer",
       "url": "https://www.financialafrik.com/2026/11/03/le-credit-bail-un-potentiel-annuel-denviron-340-millions-usd-que-le-gabon-veut-debloquer/",
@@ -393,6 +427,23 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "87363d6c7073c84fa1",
+      "title": "La Bourse de Paris sur la réserve avant les élections de mi-mandat aux Etats-Unis, Alstom poursuit sa chute, dégradé par les analystes - Les Echos",
+      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNZTNEdXNPOTRBTmROQWpNOVBKejU0VkMzM1VzU3pBbWtPY21mbm5pSzdUSEFWOXpGcVQ1S0RvYjZiR2NxQzgwS19oU0JDWFhZWlBOUzZPak03Zk1kWk9iWm5keUFpbjNtaVhpRmRicmE4Y0ZIOENZY2JFM2wwc0dmM0xjdVN6UnRKRVhUVHB0bnA5MzhGNTFTWDU5WUFtY1N3aGdJVzFtTmV1WEl4b2hQUGdSY1IzbEZkTjhNWE1KZ0NXN2hkYmpTendMNjd1QVk1Yk5mRXFkV2ttczU5RjJhTnZDTkNVTFpHcnNXRFpVQ1JfcjJzYVRvbm9DZUJhMTcyOG9NaXBRcWV5d1ZVbVhvcjdDSk01c2Q5b2VaVmNtbm9jdF9odTI1czlvNA?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-11-03T10:04:47+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "c526110843ec3b5d50",
@@ -937,6 +988,23 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "76259e3b06037cd60b",
+      "title": "L'Amérique aux urnes pour les « midterms », le Texas, le Maine, l'Ohio et l'Iowa sous surveillance - Les Echos",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQcnlFQTl5bTFLYUstNDFXY01hVHdCNmdOaGVXdjJWaXJiWlVONkRZWTBmTGxVWVNiV3hqVThpSnhMYzRaczJOak5Gclk4eUJpeHVLa3ZOMUVnOVQtbU4xQTBGUDdnSVFBeE95RHlDamIzOUtUS3FFUUREUkdmLVYtQl9OS0hoZzdXaVVFOE9pbkVMRkUxYmdKYWhuRFNUWDVaMEI4WUloQUF2dXctWnJHSHBJdkdJY2d3OTJab0xUSmJKODBNMlVINFJMX1JQc3p6cmRfbm85Y19YZndYc3FqU2Qxei1xdnhrdzloVFFYbU8?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-11-02T14:55:24+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "65bc700f6153a442ec",
@@ -3313,74 +3381,6 @@
       "scope": "INTL",
       "feed_id": "fed_presse",
       "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "89b907bcdafcfc5287",
-      "title": "Marchés en Asie : la tech trébuche, la roupie indonésienne sous pression - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4xR3RnRm9QLVRueU5oMzd0MHNUWVJ6b09LdzhnLS1zV1hfQUNySVNEallOcXViRmJRM0pDa25ZUXlzbVF2OWRQdVBjSzlxcE04V3AwNVBsTEdqdXR6OGtiNFF3?oc=5",
-      "publisher": "Fed · presse francophone",
-      "published_at": "2026-10-28T20:04:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed_presse",
-      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "591e4c2bd557bb9c4f",
-      "title": "Wall Street termine en hausse alors que la Fed maintient son taux directeur inchangé ; l'attention se porte dé - Boursorama",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxOREpkRXByMXZIdlhXWmRsV19RbnROY1pLUFFuTnFlX3Awb2ZqR3ljdmpzN3lQZFMzbmFTbUZGZHhNT04ybWZrQVk0TEQ4dElYR29tMU1DUGFOU3d2WHdVN3hSdFQ1T2h0cXJsT3ZGSXFqcG5rRmYtS3RqelVHeFJmWFlzYXJrb2V1X3lxcmp6ckJNYVhVbnk2cXdyNmxGakw5MkhzMjFaWXZ5SGNKQWJUcW8xelZzUVdkTDltd2xqcXhPcnl1V3V0MGh5VTY1NXU0WTBVUmlSY2M4YVlnMTFjbVFJVDd6Ym10dDNZWUF6UHF5MVZFeEF2c0FhWEpmVjJza0tPMnRsRWpaZjdyZlVMM0ozUjRDTVY4WjVPbVcwczdNUlh5WXIyVndIalFyWksxMm81a2tqU2dfRnhuZk9TdWdRWUVVbkFKX2g1RtIBzAJBVV95cUxOREpkRXByMXZIdlhXWmRsV19RbnROY1pLUFFuTnFlX3Awb2ZqR3ljdmpzN3lQZFMzbmFTbUZGZHhNT04ybWZrQVk0TEQ4dElYR29tMU1DUGFOU3d2WHdVN3hSdFQ1T2h0cXJsT3ZGSXFqcG5rRmYtS3RqelVHeFJmWFlzYXJrb2V1X3lxcmp6ckJNYVhVbnk2cXdyNmxGakw5MkhzMjFaWXZ5SGNKQWJUcW8xelZzUVdkTDltd2xqcXhPcnl1V3V0MGh5VTY1NXU0WTBVUmlSY2M4YVlnMTFjbVFJVDd6Ym10dDNZWUF6UHF5MVZFeEF2c0FhWEpmVjJza0tPMnRsRWpaZjdyZlVMM0ozUjRDTVY4WjVPbVcwczdNUlh5WXIyVndIalFyWksxMm81a2tqU2dfRnhuZk9TdWdRWUVVbkFKX2g1Rg?oc=5",
-      "publisher": "Fed · presse francophone",
-      "published_at": "2026-10-28T20:01:43+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed_presse",
-      "feed_url": "https://news.google.com/rss/search?q=R%C3%A9serve%20f%C3%A9d%C3%A9rale%20taux%20directeur%20Fed%20march%C3%A9s&hl=fr&gl=MA&ceid=MA:fr"
-    },
-    {
-      "id": "ce291fde44e714227a",
-      "title": "À cause de la canicule, les vins de champagne pourront dépasser les 13% d'alcool",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261028-%C3%A0-cause-de-la-canicule-les-vins-de-champagne-pourront-d%C3%A9passer-les-13-d-alcool",
-      "publisher": "RFI · économie",
-      "published_at": "2026-10-28T19:37:22+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "7200351b8257a7c4ff",
-      "title": "Why the Shipping Industry Is Turning Its Attention to Nuclear Power",
-      "url": "https://oilprice.com/Alternative-Energy/Nuclear-Power/Why-the-Shipping-Industry-Is-Turning-Its-Attention-to-Nuclear-Power.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-28T19:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "79341b0bcd50fcb58a",
