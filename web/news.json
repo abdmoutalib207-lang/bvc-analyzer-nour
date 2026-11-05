@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T17:40:32.158644+00:00",
+  "updated_at": "2026-11-05T18:03:33.195321+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "44331127013694f55d",
+      "title": "U.S. Refineries Make Dramatic Shift Away From Gasoline",
+      "url": "https://oilprice.com/Energy/Energy-General/US-Refineries-Make-Dramatic-Shift-Away-From-Gasoline.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-05T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "da088027909b178216",
       "title": "Guyana’s Oil Boom Could Ease the Global Supply Crunch",
@@ -3347,23 +3364,6 @@
       "scope": "INTL",
       "feed_id": "ecb",
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "66bba95977b11214b2",
-      "title": "Télécoms : Hausse de 13% du bénéfice consolidé du groupe Sonatel au troisième trimestre 2026",
-      "url": "https://www.financialafrik.com/2026/10/30/telecoms-hausse-de-13-du-benefice-consolide-du-groupe-sonatel-au-troisieme-trimestre-2026/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-10-30T13:51:44+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
       "id": "890a0bc311d7e7f669",
