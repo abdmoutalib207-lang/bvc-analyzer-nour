@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T18:03:33.195321+00:00",
+  "updated_at": "2026-11-05T19:00:30.137322+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "c8ea00cee5bb535bb7",
+      "title": "US and Turkmenistan Explore New Gas Routes Across the Caspian",
+      "url": "https://oilprice.com/Energy/Energy-General/US-and-Turkmenistan-Explore-New-Gas-Routes-Across-the-Caspian.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-05T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "44331127013694f55d",
       "title": "U.S. Refineries Make Dramatic Shift Away From Gasoline",
@@ -3347,23 +3364,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "116cf971800a3bfb4c",
-      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-      "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261030~e40f864093.en.html",
-      "publisher": "BCE · publications",
-      "published_at": "2026-10-30T14:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "890a0bc311d7e7f669",
