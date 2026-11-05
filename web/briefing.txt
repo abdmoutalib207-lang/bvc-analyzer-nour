@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-11-05
+Contrôle de clôture entre fournisseurs — séance 2026-11-05
 Préparé le 2026-11-05
 
 Lecture de séanceL’essentiel
@@ -13,7 +13,7 @@ Le relevé de marché totalise 502,41 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 390,89–17 134,15 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-11-05T16:53:06.810848+00:00.
+Sources du marché · relevé 2026-11-05T17:40:32.238280+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -389,7 +389,7 @@ AMMC · 2026-11-02 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-11-05T16:53:07.912822+00:00 · état partial. Horodatages en UTC.
+Collecte tentée : 2026-11-05T17:40:33.240350+00:00 · état partial. Horodatages en UTC.
 
 Détails de collecte macro
 
@@ -399,15 +399,15 @@ Indices actions
 
 S&P 500
 
-7 459,98points · -2,97 %
+7 414,40points · -3,57 %
 
-Dernière observation source2026-11-05T16:37:29+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-11-05T17:40:22+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 138,17points · -2,28 %
+51 878,24points · -2,77 %
 
-Dernière observation source2026-11-05T16:37:29+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-11-05T17:40:22+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -425,47 +425,47 @@ Risque et devises
 
 USD/MAD
 
-9,7540MAD / USD · -0,24 %
+9,7536MAD / USD · -0,24 %
 
-Dernière observation source2026-11-05T16:50:47+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-11-05T17:40:08+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9480MAD / EUR · -0,20 %
+10,9510MAD / EUR · -0,17 %
 
-Dernière observation source2026-11-05T16:49:28+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-11-05T17:39:29+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-22,70points · 36,66 %
+24,45points · 47,20 %
 
-Dernière observation source2026-11-05T16:37:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-11-05T17:40:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-101,47points · -0,02 %
+101,46points · -0,03 %
 
-Dernière observation source2026-11-05T16:51:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-11-05T17:40:20+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 125,30USD / once troy · 1,28 %
+4 121,60USD / once troy · 1,19 %
 
-Dernière observation source2026-11-05T16:52:57+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-11-05T17:40:23+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-96,98USD / baril · 2,49 %
+97,25USD / baril · 2,78 %
 
-Dernière observation source2026-11-05T16:52:56+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-11-05T17:40:24+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,32USD / livre · -1,65 %
+6,29USD / livre · -2,15 %
 
-Dernière observation source2026-11-05T16:52:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-11-05T17:40:24+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -476,6 +476,10 @@ Archive conservée après collecte incomplète2026-11-05T16:16:16+00:00Différé
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Energy/Energy-General/Guyanas-Oil-Boom-Could-Ease-the-Global-Supply-Crunch.html] Guyana’s Oil Boom Could Ease the Global Supply Crunch ↗
+
+OilPrice · 2026-11-05T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/11/05/technologies-baisse-de-35-du-chiffre-daffaires-de-la-societe-involys-au-premier-semestre-2026/] Technologies : Baisse de 35% du chiffre d’affaires de la société Involys au premier semestre 2026 ↗
 
@@ -504,10 +508,6 @@ Financial Afrik · 2026-11-05T15:26:56+00:00 · Périmètre non établi · Écon
  [https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aSFJBaXR0b1d6RTdBdzVMd25ENDR1SXBZVXFCWVptVDk3dVpDUUlIYkczMHU5QmMtWmY4azJobDFYUXdfM0ZxV1BoU0FsSlB3bkRXd0tsVTRXZ1BuNF9iNl9R?oc=5] Agenda mensuel économique international du vendredi 6 novembre 2026 au samedi 5 décembre 2026 - TradingView ↗
 
 Inflation US / zone euro · presse · 2026-11-05T15:25:04+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Iran-Braces-for-Trumps-Next-Move-After-Democrats-Sweep-Congress.html] Iran Braces for Trump's Next Move After Democrats Sweep Congress ↗
-
-OilPrice · 2026-11-05T15:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -563,6 +563,10 @@ Radar de presse — alertes à recouper
 
 Europe / partenaires du Maroc · 2026-11-04T03:30:00+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Energy/Energy-General/Guyanas-Oil-Boom-Could-Ease-the-Global-Supply-Crunch.html] Guyana’s Oil Boom Could Ease the Global Supply Crunch ↗
+
+OilPrice · 2026-11-05T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/11/05/technologies-baisse-de-35-du-chiffre-daffaires-de-la-societe-involys-au-premier-semestre-2026/] Technologies : Baisse de 35% du chiffre d’affaires de la société Involys au premier semestre 2026 ↗
 
 Financial Afrik · 2026-11-05T16:39:10+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -578,8 +582,4 @@ OilPrice · 2026-11-05T16:30:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/Iran-Opens-Strait-of-Hormuz-to-China-and-India-as-US-Blockade-Continues.html] Iran Opens Strait of Hormuz to China and India as U.S. Blockade Continues ↗
 
 OilPrice · 2026-11-05T16:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/EU-Not-Planning-to-Resume-Russian-Gas-Purchases.html] EU Not Planning to Resume Russian Gas Purchases ↗
-
-OilPrice · 2026-11-05T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

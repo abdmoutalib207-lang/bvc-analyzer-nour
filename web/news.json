@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T16:53:06.707003+00:00",
+  "updated_at": "2026-11-05T17:40:32.158644+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "da088027909b178216",
+      "title": "Guyana’s Oil Boom Could Ease the Global Supply Crunch",
+      "url": "https://oilprice.com/Energy/Energy-General/Guyanas-Oil-Boom-Could-Ease-the-Global-Supply-Crunch.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "438a6495027e011999",
       "title": "Technologies : Baisse de 35% du chiffre d’affaires de la société Involys au premier semestre 2026",
@@ -241,7 +258,7 @@
     },
     {
       "id": "202ba923d7f1b1e1c7",
-      "title": "Tanzanie : la BAD mobilise près d’un millions dollars pour étendre l’assurance climatique à 300 000 agriculteurs",
+      "title": "Tanzanie : la BAD mobilise près d’un million USD pour étendre l’assurance climatique à 300 000 agriculteurs",
       "url": "https://www.financialafrik.com/2026/11/05/tanzanie-la-bad-mobilise-pres-dun-millions-dollars-pour-etendre-lassurance-climatique-a-300-000-agriculteurs/",
       "publisher": "Financial Afrik",
       "published_at": "2026-11-05T13:43:28+00:00",
@@ -3347,23 +3364,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "0e07a1c140c084d0a9",
-      "title": "Japan to Tap $7 Billion from Government Fund to Subsidize Gasoline Prices",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Japan-to-Tap-7-Billion-from-Government-Fund-to-Subsidize-Gasoline-Prices.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-10-30T13:30:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     },
     {
       "id": "890a0bc311d7e7f669",
