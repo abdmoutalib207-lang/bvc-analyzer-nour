@@ -112,3 +112,13 @@ Les dossiers ADI, ENK et RDS sont inchangés. Les contrôles conservent les
 indicateurs de marché déjà mis en quarantaine ; ils ne les présentent pas comme
 des calculs validés. Le navigateur local ne peut pas lancer Chromium dans cet
 environnement ; les parcours Chromium du workflow distant restent à observer.
+
+## Publication observée
+
+La [revue de la PR 41](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/42227720398) a réussi sur le commit `1717a497cd37a4598716964f85f73746672b6d64` (arbre identique au lot testé localement). Fusion dans Nour : `7d22449f05abf2a06ccbc16ff1dff2d718c7ed18`.
+
+La [publication 42229347268](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/42229347268) a terminé avec succès le 6 novembre 2026 à 15:15:11, heure de Casablanca (14:15:11 UTC). Collectes, vérification complète, parcours Chromium normaux et avec ADI en quarantaine, déploiement, parcours sur le site réellement servi et audit public du marché ont réussi.
+
+La fiche ADH réellement servie a ensuite été ouverte dans le navigateur : CA annuel 2 708,92 MMAD, RNPG 453,72 MMAD, comparatifs CA/capitaux et liens PDF p.54/p.53 présents. Le cours reste indisponible et la croissance reste bloquée par sa réserve de méthode : aucune résolution de ces points n'est affirmée. La date de données affichée est le 6 novembre 2026. Le moteur principal n'a reçu aucune écriture.
+
+La couverture demeure partielle. Le dossier d'inventaire conserve les manques et les réserves par société ; les trois dossiers annuels DIS/DLM/IBM restent à renseigner. Aucune certification globale ni validation prédictive n'est revendiquée.
