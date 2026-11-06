@@ -1,0 +1,29 @@
+name: Nour reconciliation evidence
+on:
+  pull_request:
+    branches: [main]
+    paths: ['tools/reconcile_principal_facts.py', '.github/workflows/nour_reconciliation_evidence.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check Nour scope
+        run: python tools/assert_nour_scope.py
+      - name: Install PDF tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Collect selected primary evidence without promoting facts
+        run: python tools/prepare_accounting_review.py --symbols ADH,AKD,DSW
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nour-reconciliation-evidence
+          path: .cache/accounting-review
+          retention-days: 7

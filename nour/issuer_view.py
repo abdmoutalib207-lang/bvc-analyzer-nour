@@ -71,7 +71,7 @@ def issuer_heading(item, record, collection=None):
             + (f'<p class="quote-reference">Clôture de référence : {number(item.get("price"))} MAD · {date_label(item.get("asof"))}. Les indicateurs et ratios restent liés à cette clôture.</p>' if view['provisional'] else '')
             + '<p><a href="../sources.html#marche">Sources du cours</a></p><details class="quote-clock-details"><summary>Vérification de la collecte</summary><div class="quote-collector-check">'
             + collection_stamp((collection or {}).get('checked_at'), 'Dernière tentative de collecte' if (collection or {}).get('result')=='error' else 'Dernière vérification des sources') + '</div>'
-            + '</div></div>'
+            + '</details></div></div>'
             f'<nav class="issuer-nav" aria-label="Rubriques de la valeur">{links}</nav>')
 
 

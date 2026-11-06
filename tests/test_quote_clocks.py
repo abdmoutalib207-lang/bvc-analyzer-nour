@@ -69,6 +69,43 @@ class QuoteClocks(unittest.TestCase):
         return {'Symbol':'ADI','DateDernierCours':stamp,'Cours':357.35,'Ouverture':368,
                 'PlusHaut':370,'PlusBas':350,'QteEchangee':10,'Volumes':3600}
 
+    def test_quarantined_or_missing_quote_does_not_claim_successful_validation(self):
+        stamp='2026-10-21T16:10:00Z'
+        for fields in [{'price':None}, {'price':0}, {'price':-1}, {'price':float('nan')},
+                       {'price':True},
+                       {'resilience':{'suspended':{'market':{'code':'market_line_quarantined'}}}}]:
+            item={**self.item,'price_validated_at':stamp,'source_checked_at':stamp,**fields}
+            before=copy.deepcopy(item)
+            view=quote_view(item,self.record)
+            self.assertIsNone(view['price'])
+            self.assertEqual(view['label'],'Cours indisponible')
+            self.assertIsNone(view['change_pct'])
+            self.assertIsNone(view['reference_session'])
+            self.assertIsNone(view['price_validated_at'])
+            self.assertEqual(view['source_checked_at'],stamp)
+            page=quote_clocks(view,compact=True)
+            self.assertIn('Cotation non validée pour cette observation.',page)
+            self.assertIn('Source contrôlée pour ce titre',page)
+            self.assertNotIn('Dernière cotation validée',page)
+            self.assertEqual(item,before)
+        healthy=quote_view({**self.item,'price_validated_at':stamp},self.record)
+        self.assertEqual(healthy['price_validated_at'],stamp)
+        self.assertIn('Dernière cotation validée',quote_clocks(healthy))
+
+    def test_quarantine_hides_residual_close_and_live_quote_without_changing_facts(self):
+        item={**self.item,'intraday_quote':self.live,'intraday_status':'provisional',
+              'resilience':{'suspended':{'market':{'code':'market_line_quarantined'}}}}
+        before=copy.deepcopy((item,self.record))
+        view=quote_view(item,self.record)
+        page=issuer_heading(item,self.record)
+        self.assertFalse(view['provisional'])
+        self.assertIsNone(view['price'])
+        self.assertNotIn('Clôture disponible',page)
+        self.assertNotIn('data-primary-price>366,00',page)
+        self.assertNotIn('data-primary-price>357,35',page)
+        self.assertNotIn('quote-change',page)
+        self.assertEqual((item,self.record),before)
+
     def test_intraday_preserves_source_time_and_does_not_change_history(self):
         fixture={'records':{'ADI':self.record}};before=copy.deepcopy(fixture)
         point=capture_intraday(fixture,[self.row()],{'ADI':'ADI'},datetime(2026,10,22,14,tzinfo=CASABLANCA))

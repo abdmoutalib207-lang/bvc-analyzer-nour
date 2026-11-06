@@ -1,4 +1,5 @@
 import copy
+from html.parser import HTMLParser
 import unittest
 
 from nour.issuer_view import financial_history, issuer_heading
@@ -51,3 +52,20 @@ class IssuerPresentationTests(unittest.TestCase):
             self.assertIn(f'href="#{key}"', output)
         item['asof'] = '2026-10-15'
         self.assertNotIn('quote-change', issuer_heading(item, record))
+
+    def test_collecting_details_close_before_issuer_navigation(self):
+        class DetailNesting(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.depth=0
+                self.nav_depth=None
+            def handle_starttag(self,tag,attrs):
+                if tag=='details':self.depth+=1
+                if tag=='nav':self.nav_depth=self.depth
+            def handle_endtag(self,tag):
+                if tag=='details':self.depth-=1
+        output=issuer_heading({'symbol':'ADH','decision':'INDISPONIBLE','asof':'2026-11-05'},
+                              {'name':'Addoha','candles':[]})
+        parser=DetailNesting();parser.feed(output)
+        self.assertEqual(parser.nav_depth,0)
+        self.assertEqual(parser.depth,0)

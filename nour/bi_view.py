@@ -3,6 +3,7 @@ import html
 import math
 from datetime import date
 from urllib.parse import urlparse
+from .financial_audit import _basis
 
 
 def esc(value):
@@ -20,6 +21,27 @@ def finite(value):
 
 def number(value):
     return f'{value:,.2f}'.replace(',', ' ').replace('.', ',') if finite(value) else '—'
+
+
+def _annual_revenue_evidence(fundamental):
+    """Accept the documented annual amount only, without inferring a unit or scope."""
+    fact = (fundamental.get('evidence') or {}).get('chiffre_affaires') or {}
+    if not isinstance(fact, dict):
+        return None
+    try:
+        period = date.fromisoformat(fact.get('period_end'))
+    except (TypeError, ValueError):
+        return None
+    page = fact.get('page')
+    if (not finite(fact.get('value')) or fundamental.get('currency') != 'MAD'
+            or fact.get('currency') != 'MAD' or fact.get('unit') != 'MMAD'
+            or period.isoformat() != fundamental.get('period_end')
+            or not _basis(fundamental.get('accounting_basis'))
+            or _basis(fact.get('accounting_basis')) != _basis(fundamental.get('accounting_basis'))
+            or not isinstance(page, int) or isinstance(page, bool) or page <= 0
+            or urlparse(str(fact.get('document_url') or '')).scheme != 'https'):
+        return None
+    return fact
 
 
 def financial_dashboard(item):
@@ -65,10 +87,17 @@ def financial_dashboard(item):
         metrics.insert(4, ('pnb_mmad', 'Produit net bancaire', 'MMAD', 'rentabilite', False,
             'L’activité bancaire nette publiée. Le PNB n’est ni le résultat net, ni le chiffre d’affaires d’une entreprise industrielle.',
             'Montant bancaire repris du document annuel', None))
-    preferred = 'pe' if finite(f.get('pe')) else next((m[0] for m in metrics if finite(f.get(m[0]))), 'pe')
+    annual_revenue = _annual_revenue_evidence(f)
+    values = dict(f)
+    if annual_revenue:
+        values['annual_revenue_mmad'] = annual_revenue['value']
+        metrics.insert(0, ('annual_revenue_mmad', 'Chiffre d’affaires annuel', 'MMAD', 'rentabilite', False,
+            'Le chiffre d’affaires annuel publié pour le périmètre indiqué. Son montant reste distinct de sa croissance et du produit net bancaire.',
+            'Montant annuel repris du document, sans annualisation du semestre', annual_revenue['accounting_basis']))
+    preferred = 'pe' if finite(values.get('pe')) else next((m[0] for m in metrics if finite(values.get(m[0]))), 'pe')
     cards, explanations = [], []
     for key, title, unit, group, directional, meaning, formula, method in metrics:
-        value = f.get(key)
+        value = values.get(key)
         known = finite(value)
         selected = key == preferred
         tone = 'missing' if not known else 'positive' if directional and value > 0 else 'negative' if directional and value < 0 else 'neutral'
@@ -97,6 +126,9 @@ def financial_dashboard(item):
         if key in ('pe', 'pb'):
             period += f' · cours au {item.get("asof") or "date non documentée"}'
         method_html = '<p class="fineprint">' + esc(method) + '</p>' if method else ''
+        if key == 'annual_revenue_mmad':
+            method_html += (f'<p><a href="{esc(annual_revenue["document_url"])}#page={annual_revenue["page"]}" '
+                            f'target="_blank" rel="noopener noreferrer">Source du CA annuel · page PDF {annual_revenue["page"]}</a></p>')
         explanations.append(f'<details class="bi-explanation" id="bi-explain-{key}" '
             f'data-bi-explanation="{key}"{" open" if selected else ""}>'
             f'<summary>{esc(title)} · comprendre ce chiffre</summary><p class="bi-reading">{esc(meaning if known else missing)}</p>'
@@ -106,7 +138,7 @@ def financial_dashboard(item):
     doc = str(f.get('document_url') or '')
     source = (f'<a href="{esc(doc)}" target="_blank" rel="noopener noreferrer">Ouvrir le document annuel ↗</a>'
               if urlparse(doc).scheme == 'https' else 'Document annuel non référencé')
-    available = sum(finite(f.get(m[0])) for m in metrics)
+    available = sum(finite(values.get(m[0])) for m in metrics)
     return ('<div class="bi-dashboard" data-bi-dashboard>'
         '<div class="bi-heading"><div><h3>Chiffres et lecture</h3>'
         '</div>'

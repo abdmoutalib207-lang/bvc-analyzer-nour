@@ -1,0 +1,678 @@
+{
+  "source_repository": "abdmoutalib207-lang/-bvc-analyzer",
+  "source_commit": "f6aaba35de051b65fcb41b98ea94f1c71a01bd8f",
+  "source_path": "pipeline/faits_financiers.json",
+  "applied": false,
+  "candidates": [
+    {
+      "symbol": "AKD",
+      "fact": "titres_valeurs_placement",
+      "value": 601.775808,
+      "page": 78,
+      "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf"
+    },
+    {
+      "symbol": "DHO",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 2618.74624431,
+      "page": 11,
+      "document_url": "https://www.ammc.ma/sites/default/files/DHO_RFA_2025.pdf"
+    },
+    {
+      "symbol": "DSW",
+      "fact": "dotations_amortissements_exploitation",
+      "value": 13.804592,
+      "page": 21,
+      "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf"
+    },
+    {
+      "symbol": "DSW",
+      "fact": "titres_valeurs_placement",
+      "value": 28.763386,
+      "page": 18,
+      "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf"
+    },
+    {
+      "symbol": "IAM",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 20478.0,
+      "page": 23,
+      "document_url": "https://www.ammc.ma/sites/default/files/Maroc_Telecom_RFA_2025.pdf"
+    },
+    {
+      "symbol": "JET",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 1317.41641782,
+      "page": 2,
+      "document_url": "https://www.ammc.ma/sites/default/files/Jet_Contractors_2025.pdf"
+    },
+    {
+      "symbol": "LBV",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 3670.1539999,
+      "page": 54,
+      "document_url": "https://www.ammc.ma/sites/default/files/LabelVie_RFA_2025.pdf"
+    },
+    {
+      "symbol": "LHM",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 12156.299,
+      "page": 73,
+      "document_url": "https://www.ammc.ma/sites/default/files/LafargeHolcim_RFA_2025.pdf"
+    },
+    {
+      "symbol": "MDP",
+      "fact": "excedent_brut_exploitation",
+      "value": -4.56052,
+      "page": 41,
+      "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf"
+    },
+    {
+      "symbol": "MDP",
+      "fact": "resultat_exploitation",
+      "value": -10.355526,
+      "page": 41,
+      "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf"
+    },
+    {
+      "symbol": "MDP",
+      "fact": "resultat_non_courant",
+      "value": 22.126204,
+      "page": 41,
+      "document_url": "https://www.ammc.ma/sites/default/files/Med_Paper_RFA_2025.pdf"
+    },
+    {
+      "symbol": "MOX",
+      "fact": "titres_mis_en_equivalence",
+      "value": 86.416,
+      "page": 33,
+      "document_url": "https://www.ammc.ma/sites/default/files/MOX_RFA_2025.pdf"
+    },
+    {
+      "symbol": "MSA",
+      "fact": "provisions_durables_risques_charges",
+      "value": 1975.331,
+      "page": 121,
+      "document_url": "https://www.ammc.ma/sites/default/files/Marsa_RFA_2025.pdf"
+    },
+    {
+      "symbol": "NEJ",
+      "fact": "dotations_amortissements_exploitation",
+      "value": 37.618,
+      "page": 106,
+      "document_url": "https://www.ammc.ma/sites/default/files/Auto_Nejma_RFA_2025.pdf"
+    },
+    {
+      "symbol": "SBS",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 1578.4,
+      "page": 62,
+      "document_url": "https://www.ammc.ma/sites/default/files/SBM_RFA_2025_0.pdf"
+    },
+    {
+      "symbol": "SNA",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 1990.3,
+      "page": 74,
+      "document_url": "https://www.ammc.ma/sites/default/files/Sonasid_RFA_2025.pdf"
+    },
+    {
+      "symbol": "T2S",
+      "fact": "endettement_net",
+      "value": 222.346,
+      "page": 239,
+      "document_url": "https://www.ammc.ma/sites/default/files/T2S_IPO_DR_010_2026.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "dettes_financieres",
+      "value": 887.955,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "tresorerie_actif",
+      "value": 1176.535,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "titres_mis_en_equivalence",
+      "value": 185.89,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "resultat_exploitation",
+      "value": 1339.712,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "dotations_amortissements_exploitation",
+      "value": 345.774,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "resultat_avant_impot",
+      "value": 1257.093,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "TMA",
+      "fact": "impot_resultat",
+      "value": 467.785,
+      "page": 6,
+      "document_url": "https://www.ammc.ma/sites/default/files/Total_2025_avis_AGO_03_06_26_0.pdf"
+    },
+    {
+      "symbol": "UNI",
+      "fact": "titres_mis_en_equivalence",
+      "value": 681.234,
+      "page": 33,
+      "document_url": "https://www.ammc.ma/sites/default/files/Unimer_RFA_2025.pdf"
+    },
+    {
+      "symbol": "VCNE",
+      "fact": "capitaux_propres_part_groupe",
+      "value": 1244.927997,
+      "page": 57,
+      "document_url": "https://www.ammc.ma/sites/default/files/Vicenne_RFA_2025.pdf"
+    },
+    {
+      "symbol": "VCNE",
+      "fact": "excedent_brut_exploitation",
+      "value": 264.0,
+      "page": 21,
+      "document_url": "https://www.ammc.ma/sites/default/files/Vicenne_RFA_2025.pdf"
+    }
+  ],
+  "different_values": [
+    {
+      "symbol": "ADH",
+      "fact": "resultat_net_part_groupe",
+      "nour_value": 453.719263,
+      "principal_value": 453.719
+    },
+    {
+      "symbol": "ADI",
+      "fact": "chiffre_affaires",
+      "nour_value": 2431.512,
+      "principal_value": 2432.0
+    },
+    {
+      "symbol": "ADI",
+      "fact": "chiffre_affaires_2024",
+      "nour_value": 2363.364,
+      "principal_value": 2363.0
+    },
+    {
+      "symbol": "ATL",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 60283595,
+      "principal_value": 60283600
+    },
+    {
+      "symbol": "BAL",
+      "fact": "dettes_financieres",
+      "nour_value": 30.488521,
+      "principal_value": 23.69576093
+    },
+    {
+      "symbol": "CFGB",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 35007960,
+      "principal_value": 35007950
+    },
+    {
+      "symbol": "HPS",
+      "fact": "resultat_net_part_groupe",
+      "nour_value": 105.77774,
+      "principal_value": 106.0
+    },
+    {
+      "symbol": "LES",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 27631510,
+      "principal_value": 27600000
+    },
+    {
+      "symbol": "MNG",
+      "fact": "endettement_net",
+      "nour_value": 12674.4,
+      "principal_value": 12674.0
+    },
+    {
+      "symbol": "RDS",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 26208850,
+      "principal_value": 26208860
+    },
+    {
+      "symbol": "STK",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 17695200,
+      "principal_value": 17695150
+    },
+    {
+      "symbol": "TGCC",
+      "fact": "nombre_actions_au_rapport",
+      "nour_value": 34674332,
+      "principal_value": 34674300
+    },
+    {
+      "symbol": "TQA",
+      "fact": "capitaux_propres_part_groupe",
+      "nour_value": 6772.744,
+      "principal_value": 6773.0
+    },
+    {
+      "symbol": "TQA",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "nour_value": 6664.816,
+      "principal_value": 6665.0
+    }
+  ],
+  "rejected": [
+    {
+      "symbol": "AFI",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "AKD",
+      "fact": "excedent_brut_exploitation",
+      "reason": "unknown_report_unit"
+    },
+    {
+      "symbol": "AKD",
+      "fact": "endettement_net",
+      "reason": "different_fact_document"
+    },
+    {
+      "symbol": "ALU",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "ATW",
+      "fact": "actions_autodetenues",
+      "reason": "unknown_report_unit"
+    },
+    {
+      "symbol": "ATW",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "BAL",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "BCP",
+      "reason": "period_or_document_mismatch"
+    },
+    {
+      "symbol": "BMC",
+      "reason": "period_or_document_mismatch"
+    },
+    {
+      "symbol": "BOA",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "BOA",
+      "fact": "actions_autodetenues",
+      "reason": "unknown_report_unit"
+    },
+    {
+      "symbol": "BOA",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "CAR",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "CAR",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "CASH",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "CIM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "CMGP",
+      "fact": "endettement_net",
+      "reason": "different_fact_document"
+    },
+    {
+      "symbol": "CMT",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "COL",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "COL",
+      "fact": "endettement_net",
+      "reason": "missing_numeric_unit"
+    },
+    {
+      "symbol": "CSR",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "DAR",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "DHO",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "DHO",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "DTT",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "EQD",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "FNB",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "HAL",
+      "reason": "period_or_document_mismatch"
+    },
+    {
+      "symbol": "HPS",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "IAM",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "IAM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "IAM",
+      "fact": "endettement_net",
+      "reason": "missing_numeric_unit"
+    },
+    {
+      "symbol": "IMI",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "INV",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "JET",
+      "fact": "endettement_net",
+      "reason": "different_fact_document"
+    },
+    {
+      "symbol": "LBV",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "LBV",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "LBV",
+      "fact": "endettement_net",
+      "reason": "missing_numeric_unit"
+    },
+    {
+      "symbol": "LHM",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "LHM",
+      "fact": "actions_autodetenues",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "LHM",
+      "fact": "nombre_moyen_pondere_bpa",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "LHM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "M2M",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "MIC",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "MOX",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "MRL",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "MRL",
+      "fact": "resultat_net_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "MRL",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "MSA",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "NEJ",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "OUL",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "PPM",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "PPM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "REB",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "REB",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "REB",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "RIS",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "RIS",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "S2M",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SBS",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SLM",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "SLM",
+      "fact": "resultat_net_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "SLM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SMI",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "SMI",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SMI",
+      "fact": "endettement_net",
+      "reason": "missing_numeric_unit"
+    },
+    {
+      "symbol": "SNA",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SOT",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "SRM",
+      "fact": "resultat_net_consolide",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "SRM",
+      "fact": "capitaux_propres_part_groupe",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "SRM",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "STK",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "STR",
+      "fact": "resultat_net_consolide",
+      "reason": "different_accounting_scope"
+    },
+    {
+      "symbol": "T2S",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "UNI",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "VCNE",
+      "fact": "nombre_actions_au_rapport",
+      "reason": "missing_fact_period"
+    },
+    {
+      "symbol": "VCNE",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    },
+    {
+      "symbol": "VCNE",
+      "fact": "endettement_net",
+      "reason": "missing_numeric_unit"
+    },
+    {
+      "symbol": "ZLD",
+      "fact": "capitaux_propres_part_groupe_2024",
+      "reason": "missing_accounting_scope"
+    }
+  ],
+  "documents_certified": false
+}

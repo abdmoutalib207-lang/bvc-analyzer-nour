@@ -16,8 +16,13 @@ def quote_view(item, record):
     price, session = item.get('price'), item.get('asof')
     source_time, collected = item.get('price_source_datetime'), item.get('price_collected_at')
     live = item.get('intraday_quote') or {}
-    if item.get('resilience',{}).get('suspended',{}).get('market'):
+    market_quarantined = bool(item.get('resilience',{}).get('suspended',{}).get('market'))
+    if market_quarantined:
         live = {}
+        price = None
+    if not finite(price) or price <= 0:
+        price = None
+    validation_unavailable = market_quarantined or not finite(price) or price <= 0
     provisional = False
     try:
         provisional = (live.get('provisional') is True and finite(live.get('price'))
@@ -30,9 +35,10 @@ def quote_view(item, record):
     if provisional:
         price, session = live['price'], live['asof']
         source_time, collected = live.get('source_datetime'), item.get('intraday_observed_at')
-        if item.get('asof') and item['asof'] < session:
+        if (item.get('asof') and item['asof'] < session
+                and finite(item.get('price')) and item['price'] > 0):
             reference = (item.get('price'), item['asof'])
-    elif len(bars) > 1 and bars[-1].get('d') == session:
+    elif price is not None and len(bars) > 1 and bars[-1].get('d') == session:
         reference = (bars[-2].get('c'), bars[-2].get('d'))
     change = (100 * (price / reference[0] - 1)
               if reference and finite(price) and finite(reference[0]) and reference[0] > 0 else None)
@@ -40,7 +46,8 @@ def quote_view(item, record):
             'label': 'En séance · provisoire' if provisional else 'Clôture disponible' if finite(price) else 'Cours indisponible',
             'source_datetime': source_time, 'collected_at': collected,
             'source_checked_at': collected if provisional else item.get('source_checked_at'),
-            'price_validated_at': item.get('price_validated_at'),
+            'price_validated_at': None if validation_unavailable else item.get('price_validated_at'),
+            'validation_unavailable': validation_unavailable,
             'source_check_status': item.get('source_check_status'),
             'change_pct': change, 'reference_session': reference[1] if reference else None,
             'reference_price': reference[0] if reference else None}
@@ -60,8 +67,11 @@ def quote_clocks(view, compact=False):
                     '<small>Heure indiquée par la source</small>')
     except (TypeError, ValueError):
         cotation = f'<time datetime="{escape(view.get("session") or "")}">{day_text}</time><small>Heure de cotation non communiquée</small>'
+    validation = ('<p>Cotation non validée pour cette observation.</p>' if view.get('validation_unavailable')
+                  else collection_stamp(view['price_validated_at'], 'Dernière cotation validée') if view.get('price_validated_at')
+                  else '<p>Dernière cotation validée : heure non communiquée.</p>')
     checks = ('<div data-title-source-check>' + (collection_stamp(view['source_checked_at'], 'Source contrôlée pour ce titre') if view.get('source_checked_at') else '<p>Dernier contrôle de source pour ce titre : heure non communiquée.</p>') + '</div>'
-            + '<div data-title-validated>' + (collection_stamp(view['price_validated_at'], 'Dernière cotation validée') if view.get('price_validated_at') else '<p>Dernière cotation validée : heure non communiquée.</p>') + '</div>')
+            + '<div data-title-validated>' + validation + '</div>')
     if compact:
         checks = '<details class="quote-clock-details"><summary>Contrôle et validation du cours</summary>' + checks + '</details>'
         cotation = cotation.replace('<small>Heure indiquée par la source</small>', '')
