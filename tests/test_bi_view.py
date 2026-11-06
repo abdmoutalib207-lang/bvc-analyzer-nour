@@ -1,10 +1,81 @@
 import copy
+import json
+from pathlib import Path
 import unittest
 
 from nour.bi_view import financial_dashboard, semester_chart
+from nour.fundamentals import calculate
 
 
 class BiViewTests(unittest.TestCase):
+    def annual_revenue_item(self):
+        return {'fundamental': {'exercise': 2025, 'period_end': '2025-12-31',
+            'currency': 'MAD', 'accounting_basis': 'Consolidé IFRS',
+            'evidence': {'chiffre_affaires': {'value': 2431.512, 'unit': 'MMAD',
+                'period_end': '2025-12-31', 'currency': 'MAD', 'accounting_basis': 'Consolidé IFRS',
+                'document_url': 'https://www.ammc.ma/annual.pdf', 'page': 54}}}}
+
+    def test_annual_revenue_amount_is_visible_when_growth_is_not_comparable(self):
+        item = self.annual_revenue_item()
+        item['fundamental'].update(revenue_growth_pct=None, metric_availability={
+            'revenue_growth_pct': {'status': 'blocked', 'reason_codes': ['comparability_unresolved']}})
+        before = copy.deepcopy(item)
+        page = financial_dashboard(item)
+        self.assertIn('Chiffre d’affaires annuel', page)
+        self.assertIn('data-bi-metric="annual_revenue_mmad"', page)
+        self.assertIn('>2 431,51<', page)
+        self.assertIn('MMAD', page)
+        self.assertIn('2025-12-31', page)
+        self.assertIn('annual.pdf#page=54', page)
+        self.assertIn('comparability_unresolved', page)
+        self.assertIn('1 / 9 indicateurs affichables', page)
+        self.assertEqual(item, before)
+
+    def test_annual_revenue_requires_its_own_compatible_evidence(self):
+        for field, invalid in [('value', None), ('value', True), ('value', float('nan')),
+                               ('unit', None), ('unit', 'KMAD'), ('currency', 'EUR'),
+                               ('period_end', None), ('period_end', '2025-06-30'),
+                               ('accounting_basis', 'Social'), ('accounting_basis', None),
+                               ('page', 0), ('page', True), ('document_url', 'javascript:alert(1)')]:
+            item = self.annual_revenue_item()
+            item['fundamental']['evidence']['chiffre_affaires'][field] = invalid
+            page = financial_dashboard(item)
+            self.assertNotIn('data-bi-metric="annual_revenue_mmad"', page, (field, invalid))
+        for field, invalid in [('currency', 'EUR'), ('period_end', None), ('accounting_basis', None)]:
+            item = self.annual_revenue_item()
+            item['fundamental'][field] = invalid
+            self.assertNotIn('data-bi-metric="annual_revenue_mmad"', financial_dashboard(item))
+
+    def test_annual_revenue_never_comes_from_semester_pnb_or_other_products(self):
+        item = self.annual_revenue_item()
+        evidence = item['fundamental']['evidence']
+        fact = evidence.pop('chiffre_affaires')
+        evidence['produits_exploitation'] = fact
+        item['fundamental'].update(pnb_mmad=2431.512,
+            latest_report={'revenue_millions': 2431.512, 'period_end': '2026-06-30'})
+        self.assertNotIn('data-bi-metric="annual_revenue_mmad"', financial_dashboard(item))
+        for value in (0, -12.5):
+            item = self.annual_revenue_item()
+            item['fundamental']['evidence']['chiffre_affaires']['value'] = value
+            self.assertIn('data-bi-metric="annual_revenue_mmad"', financial_dashboard(item))
+
+    def test_annual_revenue_basis_normalizes_date_suffixes_only(self):
+        item = self.annual_revenue_item()
+        item['fundamental']['accounting_basis'] = 'consolidé IFRS, 31/12/2025'
+        self.assertIn('data-bi-metric="annual_revenue_mmad"', financial_dashboard(item))
+        item['fundamental']['accounting_basis'] = 'consolidé normes marocaines, 31/12/2025'
+        self.assertNotIn('data-bi-metric="annual_revenue_mmad"', financial_dashboard(item))
+
+    def test_current_adh_annual_revenue_survives_its_growth_comparability_block(self):
+        facts = json.loads((Path(__file__).resolve().parents[1] / 'data/facts_reference.json').read_text())['records']['ADH']
+        result = calculate({'symbol': 'ADH', 'price': None}, facts, '2026-11-06')
+        self.assertIsNone(result['revenue_growth_pct'])
+        self.assertEqual(result['metric_availability']['revenue_growth_pct']['status'], 'blocked')
+        page = financial_dashboard({'fundamental': result})
+        self.assertIn('data-bi-metric="annual_revenue_mmad"', page)
+        self.assertIn('>2 708,92<', page)
+        self.assertIn('Addoha_RFA_2025.pdf#page=54', page)
+
     def test_view_preserves_numbers_and_unresolved_debt_without_recomputing(self):
         item = {'asof': '2026-10-15', 'fundamental': {'exercise': 2025,
             'eps_mad': .17, 'pe': 943.03, 'roe_pct': 0, 'net_debt_ebitda': None,

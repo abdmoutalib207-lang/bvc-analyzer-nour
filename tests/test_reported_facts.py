@@ -31,3 +31,29 @@ class ReportedFactsTests(unittest.TestCase):
         card=reported_facts_card(reported_facts(f,'2026-10-24'))
         self.assertIn('Dette non rapprochée',card);self.assertIn('unité à préciser',card)
         self.assertNotIn('<script>',card);self.assertIn('-3 000 KMAD',card)
+
+    def test_same_documented_fact_in_both_archives_is_shown_once_with_origins(self):
+        facts=self.sample()
+        facts['sector_faits']={'capex_decaisse':deepcopy(facts['faits']['capex_decaisse'])}
+        before=deepcopy(facts)
+        report=reported_facts(facts,'2026-10-24')
+        rows=[r for r in report['records'] if r['id'].endswith('capex_decaisse')]
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['origins'],['faits','sector_faits'])
+        self.assertEqual(rows[0]['value'],-3000)
+        self.assertEqual(rows[0]['source']['page'],4)
+        self.assertEqual(facts,before)
+        card=reported_facts_card(report)
+        self.assertEqual(card.count('-3 000 KMAD'),1)
+
+    def test_disagreements_and_distinct_periods_scopes_or_sources_are_retained(self):
+        for field,value in [('valeur',4),('valeur_au_rapport',-4000),('period_end','2024-12-31'),
+                            ('unite','MAD'),('unite_au_rapport','MAD'),('base','consolidé IFRS'),
+                            ('url','https://www.ammc.ma/other.pdf'),('page',5),
+                            ('document_hash','sha256:'+'a'*64),('note','Réserve nouvelle')]:
+            facts=self.sample()
+            facts['sector_faits']={'capex_decaisse':{**facts['faits']['capex_decaisse'],field:value}}
+            rows=[r for r in reported_facts(facts,'2026-10-24')['records'] if r['id'].endswith('capex_decaisse')]
+            self.assertEqual(len(rows),2,field)
+            self.assertEqual(rows[0]['origins'],['faits'])
+            self.assertEqual(rows[1]['origins'],['sector_faits'])

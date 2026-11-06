@@ -30,7 +30,7 @@ def source_url(v):
 
 def reported_facts(facts, asof):
     """Read stored facts verbatim; retain original units, doubts and disagreements."""
-    f=facts or {}; rows=[]
+    f=facts or {}; rows=[]; seen=[]
     period=f.get('exercice_clos') or (str(f['exercice'])+'-12-31' if isinstance(f.get('exercice'),int) else None)
     for origin in ('faits','sector_faits'):
         for key,raw in (f.get(origin) or {}).items():
@@ -53,14 +53,25 @@ def reported_facts(facts, asof):
             reviewed=(raw.get('validation_status') in REVIEWED and unit and actual and raw.get('base')
                 and isinstance(raw.get('page'),int) and not isinstance(raw.get('page'),bool) and raw['page']>0
                 and re.fullmatch('sha256:[0-9a-f]{64}',str(raw.get('document_hash',''))))
-            rows.append(dict(id=origin+'-'+key,label=label,value=value,unit=unit or 'unité à préciser',
+            row=dict(id=origin+'-'+key,label=label,value=value,unit=unit or 'unité à préciser',
                 period_end=actual,period_context=period,period_status='documented' if actual else 'dossier_only',
                 scope=base,currency=raw.get('devise') or f.get('devise'),
                 source=dict(url=url,page=raw.get('page'),title=f.get('document'),document_hash=raw.get('document_hash')),
                 status='page_checked' if reviewed else 'referenced_to_review',
                 notice=None if reviewed else 'Relevé existant à confirmer : consulter la pièce et ses réserves. Ne vaut pas validation pour un ratio.',
                 note=raw.get('note') or '', original_amount_used=bool(original),
-                stored_value=raw['valeur'],stored_unit=raw.get('unite'),used_for_score=False))
+                stored_value=raw['valeur'],stored_unit=raw.get('unite'),used_for_score=False)
+            # A canonical annual fact may also remain in its sector archive.
+            # Merge only identical observations, including their review state
+            # and notes; conflicting amounts, scopes or sources stay separate.
+            content={k:v for k,v in row.items() if k!='id'}
+            previous=next((stored for field,details,stored in seen if field==key and details==content),None)
+            if previous is not None:
+                previous['origins'].append(origin)
+            else:
+                row['origins']=[origin]
+                rows.append(row)
+                seen.append((key,content,row))
     latest=f.get('latest_report') or {};url=source_url(latest.get('document_url'))
     end=latest.get('period_end')
     if url and isinstance(end,str) and end<=asof:

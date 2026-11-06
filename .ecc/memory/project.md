@@ -38,6 +38,13 @@ Cette mémoire est un aide-mémoire, jamais une preuve autonome. Lire les tests,
 sources et réserves actuels avant d'utiliser un chiffre. Ne pas y stocker des
 conversations privées, identifiants ou clés API.
 
+- Lot financier du 6 novembre 2026 : `docs/financial-completion-2026-11-06.md`.
+  CA annuels complétés, distinction CA/produits HPS et CSR, précision RNPG et
+  capitaux, provenance émetteur TQA distincte. ADH croissance et TQA multiple
+  de dette restent suspendus pour comparabilité non établie. Les montants restent
+  lisibles. Rejeu métier préserve les ajouts récents ; quarantaine et structure
+  des fiches corrigées. Inventaire des 80 sociétés et avant/après dans le dossier.
+
 Préférence d’interface confirmée le 19 octobre 2026 : alléger les mentions des
 fournisseurs de marché et centraliser les attributions dans Sources ; conserver
 les collecteurs, la provenance exacte et les réserves dans les données. Les

@@ -19,6 +19,9 @@ def quote_view(item, record):
     market_quarantined = bool(item.get('resilience',{}).get('suspended',{}).get('market'))
     if market_quarantined:
         live = {}
+        price = None
+    if not finite(price) or price <= 0:
+        price = None
     validation_unavailable = market_quarantined or not finite(price) or price <= 0
     provisional = False
     try:
@@ -32,9 +35,10 @@ def quote_view(item, record):
     if provisional:
         price, session = live['price'], live['asof']
         source_time, collected = live.get('source_datetime'), item.get('intraday_observed_at')
-        if item.get('asof') and item['asof'] < session:
+        if (item.get('asof') and item['asof'] < session
+                and finite(item.get('price')) and item['price'] > 0):
             reference = (item.get('price'), item['asof'])
-    elif len(bars) > 1 and bars[-1].get('d') == session:
+    elif price is not None and len(bars) > 1 and bars[-1].get('d') == session:
         reference = (bars[-2].get('c'), bars[-2].get('d'))
     change = (100 * (price / reference[0] - 1)
               if reference and finite(price) and finite(reference[0]) and reference[0] > 0 else None)

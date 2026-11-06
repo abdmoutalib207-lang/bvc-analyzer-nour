@@ -95,3 +95,32 @@ class SectorCalculatorTests(unittest.TestCase):
         self.assertFalse(audit['failures']);self.assertGreater(audit['arithmetic_checks'],4)
         m['operating_margin_pct']['value']=999
         self.assertEqual(audit_sector_calculations({'results':[{'symbol':'AKD','sector_indicators':{'metrics':m}}]})['failures'][0]['metric'],'operating_margin_pct')
+
+    def test_historical_replay_preserves_later_additions_and_reviews(self):
+        incoming=fact(100,reviewed_at='2026-10-23')
+        corrected=fact(101,reviewed_at='2026-11-06')
+        extra=fact(1214,reviewed_at='2026-11-06')
+        payload={'records':{'AKD':{'faits':{'legacy':{'valeur':7}},
+                   'sector_faits':{'chiffre_affaires':corrected,'ebitda_publie':extra}}}}
+        review={'reviewed_at':'2026-10-23','records':{'AKD':{'chiffre_affaires':incoming}}}
+        before,original_review=deepcopy(payload),deepcopy(review)
+        self.assertEqual(reconcile(payload,review),before)
+        self.assertEqual(payload,before)
+        self.assertEqual(review,original_review)
+        for stamp in ('2026-10-23',None,'not-a-date'):
+            broken=deepcopy(payload)
+            broken['records']['AKD']['sector_faits']['chiffre_affaires']['reviewed_at']=stamp
+            with self.subTest(reviewed_at=stamp), self.assertRaises(ValueError):
+                reconcile(broken,review)
+
+    def test_historical_replay_adds_only_reviewed_keys_idempotently(self):
+        payload={'records':{'AKD':{'faits':{'legacy':{'valeur':7}},
+                   'sector_faits':{'ebitda_publie':fact(1214,reviewed_at='2026-11-06')}}}}
+        review={'reviewed_at':'2026-10-23','records':{'AKD':{
+            'chiffre_affaires':fact(100,reviewed_at='2026-10-23')}}}
+        changed=reconcile(payload,review)
+        self.assertEqual(changed['records']['AKD']['faits'],payload['records']['AKD']['faits'])
+        self.assertEqual(changed['records']['AKD']['sector_faits']['ebitda_publie'],
+                         payload['records']['AKD']['sector_faits']['ebitda_publie'])
+        self.assertEqual(changed['records']['AKD']['sector_faits']['chiffre_affaires']['valeur'],100)
+        self.assertEqual(reconcile(changed,review),changed)

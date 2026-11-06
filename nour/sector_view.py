@@ -73,12 +73,13 @@ def sector_card(row):
 def quality_card(row):
     e=lambda x:escape(str(x if x is not None else 'Non communiqué'))
     issues=row.get('resilience',{}).get('anomalies',[])
+    reasons=list(dict.fromkeys(x['reason'] for x in issues))
     old=row.get('last_healthy')
     return ('<details class="panel reading-details" id="qualite-donnees" data-issuer-diagnostics><summary>Qualité des données et fraîcheur</summary>'
         f'<p>État : {e(row["decision"])} · Source utilisée : {e(row.get("price_source"))}.</p>'
         f'<p>Dernier traitement validé du titre : {e(row.get("last_validated_at"))}. La date de cotation ci-dessus conserve sa valeur réelle.</p>'
         '<p>Une cotation inchangée ne prouve pas une panne. Les heures inconnues restent non communiquées.</p>'
-        +''.join(f'<p class="banner">{e(x["reason"])}</p>' for x in issues)
+        +''.join(f'<p class="banner">{e(reason)}</p>' for reason in reasons)
         +(f'<p>Dernier état sain conservé : séance {e(old.get("asof"))}, contrôlé {e(old.get("validated_at"))}. '
           'Archive distincte ; aucune nouvelle cotation attestée.</p>' if old else '')
         +f'<a href="../anomalies.html">Historique des anomalies de {e(row["symbol"])}</a></details>')

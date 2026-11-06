@@ -41,3 +41,17 @@ class QuietIssuerTests(unittest.TestCase):
         self.assertIn('Unité à confirmer',page)
         self.assertIn('data-sector-missing',p.details[0]);self.assertNotIn('open',p.details[0])
         self.assertIn('id="metier"',page)
+
+    def test_repeated_anomaly_messages_are_readable_without_discarding_diagnostics(self):
+        row={'symbol':'ADH','decision':'INDISPONIBLE','resilience':{'anomalies':[
+            {'code':'market_line_quarantined','reason':'Cotation contestée.'},
+            {'code':'independent_calculation','fields':['rsi'],'reason':'Indicateur suspendu <à vérifier>.'},
+            {'code':'independent_calculation','fields':['ema20'],'reason':'Indicateur suspendu <à vérifier>.'},
+            {'code':'other_market_issue','reason':'Cotation contestée.'}]}}
+        before=deepcopy(row)
+        page=quality_card(row)
+        self.assertEqual(page.count('Cotation contestée.'),1)
+        self.assertEqual(page.count('Indicateur suspendu &lt;à vérifier&gt;.'),1)
+        self.assertLess(page.index('Cotation contestée.'),page.index('Indicateur suspendu'))
+        self.assertIn('Historique des anomalies de ADH',page)
+        self.assertEqual(row,before)
