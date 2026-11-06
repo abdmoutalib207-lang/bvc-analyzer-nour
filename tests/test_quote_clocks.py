@@ -69,6 +69,23 @@ class QuoteClocks(unittest.TestCase):
         return {'Symbol':'ADI','DateDernierCours':stamp,'Cours':357.35,'Ouverture':368,
                 'PlusHaut':370,'PlusBas':350,'QteEchangee':10,'Volumes':3600}
 
+    def test_quarantined_or_missing_quote_does_not_claim_successful_validation(self):
+        stamp='2026-10-21T16:10:00Z'
+        for fields in [{'price':None}, {'resilience':{'suspended':{'market':{'code':'market_line_quarantined'}}}}]:
+            item={**self.item,'price_validated_at':stamp,'source_checked_at':stamp,**fields}
+            before=copy.deepcopy(item)
+            view=quote_view(item,self.record)
+            self.assertIsNone(view['price_validated_at'])
+            self.assertEqual(view['source_checked_at'],stamp)
+            page=quote_clocks(view,compact=True)
+            self.assertIn('Cotation non validée pour cette observation.',page)
+            self.assertIn('Source contrôlée pour ce titre',page)
+            self.assertNotIn('Dernière cotation validée',page)
+            self.assertEqual(item,before)
+        healthy=quote_view({**self.item,'price_validated_at':stamp},self.record)
+        self.assertEqual(healthy['price_validated_at'],stamp)
+        self.assertIn('Dernière cotation validée',quote_clocks(healthy))
+
     def test_intraday_preserves_source_time_and_does_not_change_history(self):
         fixture={'records':{'ADI':self.record}};before=copy.deepcopy(fixture)
         point=capture_intraday(fixture,[self.row()],{'ADI':'ADI'},datetime(2026,10,22,14,tzinfo=CASABLANCA))
