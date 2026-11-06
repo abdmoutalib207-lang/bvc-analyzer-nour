@@ -1,6 +1,6 @@
 {
   "version": "nour-sector-evidence-v2",
-  "analysis_date": "2026-11-05",
+  "analysis_date": "2026-11-06",
   "universe": 80,
   "families": {
     "Agriculture et intrants": 1,
@@ -41,17 +41,45 @@
     "Télécommunications": 1
   },
   "review_states": {
-    "additional_review_required": 12,
+    "additional_review_required": 14,
     "archived_suspension": 2,
-    "financial_audit_blocked": 11,
+    "financial_audit_blocked": 13,
     "known_reporting_gap": 1,
-    "primary_page_check_required": 48,
+    "primary_page_check_required": 44,
     "selected_pages_checked": 6
   },
   "curated": 78,
-  "selected_pages_reviewed_issuers": 25,
+  "selected_pages_reviewed_issuers": 29,
   "violations": [],
   "review_queue": [
+    {
+      "symbol": "ADH",
+      "priority": "P1",
+      "code": "documentary_reconciliation_pending",
+      "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+      "fields": [
+        "chiffre_affaires",
+        "chiffre_affaires_2024"
+      ],
+      "blocked_metrics": [
+        "revenue_growth_pct"
+      ],
+      "document_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "accounting_basis": "consolidé IFRS, 31/12/2025",
+      "source_pages_to_check": [
+        {
+          "field": "chiffre_affaires",
+          "page_hint": 54,
+          "status": "selected_pages_visually_checked"
+        },
+        {
+          "field": "chiffre_affaires_2024",
+          "page_hint": 54,
+          "status": "selected_pages_visually_checked"
+        }
+      ]
+    },
     {
       "symbol": "ADI",
       "priority": "P1",
@@ -362,6 +390,40 @@
       ]
     },
     {
+      "symbol": "TQA",
+      "priority": "P1",
+      "code": "documentary_reconciliation_pending",
+      "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+      "fields": [
+        "dettes_financieres",
+        "tresorerie_actif",
+        "excedent_brut_exploitation"
+      ],
+      "blocked_metrics": [
+        "net_debt_ebitda"
+      ],
+      "document_url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+      "source_pages_to_check": [
+        {
+          "field": "dettes_financieres",
+          "page_hint": 114,
+          "status": "referenced_import"
+        },
+        {
+          "field": "tresorerie_actif",
+          "page_hint": 114,
+          "status": "referenced_import"
+        },
+        {
+          "field": "excedent_brut_exploitation",
+          "page_hint": 24,
+          "status": "referenced_import"
+        }
+      ]
+    },
+    {
       "symbol": "CAR",
       "priority": "P2",
       "code": "nonpositive_earnings_per_not_meaningful",
@@ -428,8 +490,8 @@
       ]
     }
   ],
-  "blocking_issuers": 11,
-  "blocking_actions": 14,
+  "blocking_issuers": 13,
+  "blocking_actions": 16,
   "issuers": [
     {
       "symbol": "AKD",
@@ -439,11 +501,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Akdital_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 9,
+      "selected_page_evidence_count": 6,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "capacité lits",
@@ -468,11 +528,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Aradei_Capital_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 9,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "revenus locatifs",
@@ -520,6 +578,34 @@
       "review_actions": []
     },
     {
+      "symbol": "CSR",
+      "family": "Agroalimentaire et boissons",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/Cosumar_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 9,
+      "selected_page_evidence_count": 2,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "volumes",
+        "prix/mix",
+        "coûts des intrants",
+        "marge",
+        "stocks",
+        "BFR",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "PNB bancaire",
+        "carnet de commandes BTP"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
       "symbol": "CTM",
       "family": "Transport routier",
       "classification": "curated",
@@ -527,8 +613,8 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/CTM_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 4,
+      "evidence_count": 9,
+      "selected_page_evidence_count": 5,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
@@ -553,11 +639,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Disway_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 9,
+      "selected_page_evidence_count": 6,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "chiffre d'affaires par segment",
@@ -581,8 +665,8 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/AFG_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 4,
+      "evidence_count": 9,
+      "selected_page_evidence_count": 5,
       "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
@@ -617,6 +701,32 @@
       "review_actions": []
     },
     {
+      "symbol": "HPS",
+      "family": "Technologie et services",
+      "classification": "curated",
+      "status": "additional_review_required",
+      "financial_audit_status": "review_required",
+      "document_url": "https://www.ammc.ma/sites/default/files/HPS_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 9,
+      "selected_page_evidence_count": 3,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "revenus récurrents si publiés",
+        "marge",
+        "concentration clients",
+        "BFR",
+        "cash-flow"
+      ],
+      "accounting_exclusions": [
+        "ARR supposé sans publication",
+        "multiple SaaS pour activités non SaaS"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
       "symbol": "IMI",
       "family": "Immobilier - foncières",
       "classification": "curated",
@@ -624,11 +734,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Immorente_Invest_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 6,
-      "selected_page_evidence_count": 3,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 7,
+      "selected_page_evidence_count": 4,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "revenus locatifs",
@@ -653,11 +761,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/Lesieur_Cristal_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 9,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "volumes",
@@ -712,11 +818,9 @@
       "financial_audit_status": "review_required",
       "document_url": "https://www.ammc.ma/sites/default/files/SRM_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 8,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "volumes",
@@ -805,6 +909,64 @@
       ],
       "blocked_metrics": [],
       "review_actions": []
+    },
+    {
+      "symbol": "ADH",
+      "family": "Immobilier - promotion",
+      "classification": "curated",
+      "status": "financial_audit_blocked",
+      "financial_audit_status": "blocked",
+      "document_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 11,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "préventes",
+        "livraisons",
+        "encaissements",
+        "marge",
+        "BFR",
+        "dette nette"
+      ],
+      "accounting_exclusions": [
+        "revenus locatifs comme mesure principale",
+        "valorisation sur préventes non encaissées"
+      ],
+      "blocked_metrics": [
+        "revenue_growth_pct"
+      ],
+      "review_actions": [
+        {
+          "symbol": "ADH",
+          "priority": "P1",
+          "code": "documentary_reconciliation_pending",
+          "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+          "fields": [
+            "chiffre_affaires",
+            "chiffre_affaires_2024"
+          ],
+          "blocked_metrics": [
+            "revenue_growth_pct"
+          ],
+          "document_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+          "annual_exercise": 2025,
+          "accounting_basis": "consolidé IFRS, 31/12/2025",
+          "source_pages_to_check": [
+            {
+              "field": "chiffre_affaires",
+              "page_hint": 54,
+              "status": "selected_pages_visually_checked"
+            },
+            {
+              "field": "chiffre_affaires_2024",
+              "page_hint": 54,
+              "status": "selected_pages_visually_checked"
+            }
+          ]
+        }
+      ]
     },
     {
       "symbol": "ADI",
@@ -1191,11 +1353,9 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/Mutandis_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 9,
-      "selected_page_evidence_count": 7,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 10,
+      "selected_page_evidence_count": 8,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "volumes",
@@ -1332,11 +1492,9 @@
       "financial_audit_status": "blocked",
       "document_url": "https://www.ammc.ma/sites/default/files/SNEP_RFA_2025.pdf",
       "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 4,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
+      "evidence_count": 8,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
       "unverified_annual_fact_groups": [],
       "business_kpis_to_collect": [
         "volumes industriels",
@@ -1493,6 +1651,69 @@
       ]
     },
     {
+      "symbol": "TQA",
+      "family": "Production électrique",
+      "classification": "curated",
+      "status": "financial_audit_blocked",
+      "financial_audit_status": "blocked",
+      "document_url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
+      "annual_exercise": 2025,
+      "evidence_count": 10,
+      "selected_page_evidence_count": 5,
+      "missing_annual_fact_groups": [],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "disponibilité",
+        "production MWh",
+        "contrats d’achat",
+        "coût combustible",
+        "dette",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "marge commerciale d’une station-service"
+      ],
+      "blocked_metrics": [
+        "net_debt_ebitda"
+      ],
+      "review_actions": [
+        {
+          "symbol": "TQA",
+          "priority": "P1",
+          "code": "documentary_reconciliation_pending",
+          "instruction": "Rapprocher les chiffres ou dénominateurs contradictoires des pages citées ; conserver les seuls ratios concernés suspendus.",
+          "fields": [
+            "dettes_financieres",
+            "tresorerie_actif",
+            "excedent_brut_exploitation"
+          ],
+          "blocked_metrics": [
+            "net_debt_ebitda"
+          ],
+          "document_url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
+          "annual_exercise": 2025,
+          "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
+          "source_pages_to_check": [
+            {
+              "field": "dettes_financieres",
+              "page_hint": 114,
+              "status": "referenced_import"
+            },
+            {
+              "field": "tresorerie_actif",
+              "page_hint": 114,
+              "status": "referenced_import"
+            },
+            {
+              "field": "excedent_brut_exploitation",
+              "page_hint": 24,
+              "status": "referenced_import"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "symbol": "UNI",
       "family": "Agroalimentaire et boissons",
       "classification": "curated",
@@ -1571,37 +1792,6 @@
       "accounting_exclusions": [
         "ARR supposé sans contrats",
         "multiples SaaS appliqués à la revente de matériel"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "ADH",
-      "family": "Immobilier - promotion",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 8,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [
-        "resultat_net_part_groupe/resultat_net_social"
-      ],
-      "business_kpis_to_collect": [
-        "préventes",
-        "livraisons",
-        "encaissements",
-        "marge",
-        "BFR",
-        "dette nette"
-      ],
-      "accounting_exclusions": [
-        "revenus locatifs comme mesure principale",
-        "valorisation sur préventes non encaissées"
       ],
       "blocked_metrics": [],
       "review_actions": []
@@ -1953,36 +2143,6 @@
       "review_actions": []
     },
     {
-      "symbol": "CSR",
-      "family": "Agroalimentaire et boissons",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Cosumar_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "volumes",
-        "prix/mix",
-        "coûts des intrants",
-        "marge",
-        "stocks",
-        "BFR",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "PNB bancaire",
-        "carnet de commandes BTP"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
       "symbol": "DAR",
       "family": "Agroalimentaire et boissons",
       "classification": "curated",
@@ -2120,34 +2280,6 @@
       "accounting_exclusions": [
         "production industrielle propre supposée",
         "PNB bancaire"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "HPS",
-      "family": "Technologie et services",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/HPS_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [
-        "chiffre_affaires"
-      ],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "revenus récurrents si publiés",
-        "marge",
-        "concentration clients",
-        "BFR",
-        "cash-flow"
-      ],
-      "accounting_exclusions": [
-        "ARR supposé sans publication",
-        "multiple SaaS pour activités non SaaS"
       ],
       "blocked_metrics": [],
       "review_actions": []
@@ -2861,32 +2993,6 @@
       "accounting_exclusions": [
         "ARR supposé sans publication",
         "multiple SaaS pour activités non SaaS"
-      ],
-      "blocked_metrics": [],
-      "review_actions": []
-    },
-    {
-      "symbol": "TQA",
-      "family": "Production électrique",
-      "classification": "curated",
-      "status": "primary_page_check_required",
-      "financial_audit_status": "review_required",
-      "document_url": "https://www.ammc.ma/sites/default/files/Taqa_Morocco_RFA_2025.pdf",
-      "annual_exercise": 2025,
-      "evidence_count": 7,
-      "selected_page_evidence_count": 0,
-      "missing_annual_fact_groups": [],
-      "unverified_annual_fact_groups": [],
-      "business_kpis_to_collect": [
-        "disponibilité",
-        "production MWh",
-        "contrats d’achat",
-        "coût combustible",
-        "dette",
-        "capex"
-      ],
-      "accounting_exclusions": [
-        "marge commerciale d’une station-service"
       ],
       "blocked_metrics": [],
       "review_actions": []
