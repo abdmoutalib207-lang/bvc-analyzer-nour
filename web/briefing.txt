@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-11-05
+Contrôle de clôture entre fournisseurs — séance 2026-11-05
 Préparé le 2026-11-06
 
 Lecture de séanceL’essentiel
@@ -13,7 +13,7 @@ Le relevé de marché totalise 502,41 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 390,89–17 134,15 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-11-06T17:03:37.872366+00:00.
+Sources du marché · relevé 2026-11-06T17:41:40.432240+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -389,21 +389,21 @@ AMMC · 2026-11-02 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-11-06T17:03:38.602769+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-11-06T17:41:41.242233+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 424,29points · 0,96 %
+7 416,50points · 0,85 %
 
-Dernière observation source2026-11-06T16:44:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-11-06T17:23:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-51 584,12points · 0,12 %
+51 541,30points · 0,04 %
 
-Dernière observation source2026-11-06T16:44:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-11-06T17:23:46+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -423,45 +423,45 @@ USD/MAD
 
 9,7536MAD / USD · 0,00 %
 
-Dernière observation source2026-11-06T15:58:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-11-06T17:13:16+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,8720MAD / EUR · -0,58 %
+10,8710MAD / EUR · -0,59 %
 
-Dernière observation source2026-11-06T16:54:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-11-06T17:39:27+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-24,00points · -14,83 %
+24,25points · -13,95 %
 
-Dernière observation source2026-11-06T16:44:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-11-06T17:23:46+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-102,17points · 0,60 %
+102,18points · 0,61 %
 
-Dernière observation source2026-11-06T16:44:35+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-11-06T17:23:35+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-4 073,20USD / once troy · -0,98 %
+4 070,70USD / once troy · -1,04 %
 
-Dernière observation source2026-11-06T17:03:24+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-11-06T17:41:34+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-97,41USD / baril · -0,90 %
+97,60USD / baril · -0,70 %
 
-Dernière observation source2026-11-06T17:03:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-11-06T17:41:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,28USD / livre · 0,13 %
+6,27USD / livre · 0,00 %
 
-Dernière observation source2026-11-06T17:03:22+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-11-06T17:41:36+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -472,6 +472,10 @@ Dernière observation source2026-11-06T16:08:01+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/ONGC-Moves-to-Take-Over-Venezuelan-Oilfields-Recover-500-Million.html] ONGC Moves to Take Over Venezuelan Oilfields, Recover $500 Million ↗
+
+OilPrice · 2026-11-06T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Energy-General/Norways-Oil-and-Gas-Industry-Faces-a-Major-Decline-Without-New-Discoveries.html] Norway’s Oil and Gas Industry Faces a Major Decline Without New Discoveries ↗
 
@@ -500,10 +504,6 @@ OilPrice · 2026-11-06T15:30:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html] The Iran War Isn't Over, but Oil Traders Are Already Pricing In Peace ↗
 
 OilPrice · 2026-11-06T15:28:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.financialafrik.com/2026/11/06/rdc-fmi-un-accord-preliminaire-ouvre-la-voie-a-771-millions-de-dollars-de-financements-supplementaires/] RDC-FMI : un accord préliminaire ouvre la voie à 771 millions de dollars de financements supplémentaires ↗
-
-Financial Afrik · 2026-11-06T15:21:58+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -563,6 +563,10 @@ Financial Afrik · 2026-11-06T06:30:29+00:00 · Maroc · Économie · alerte non
 
 Europe / partenaires du Maroc · 2026-11-04T11:59:36+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://oilprice.com/Latest-Energy-News/World-News/ONGC-Moves-to-Take-Over-Venezuelan-Oilfields-Recover-500-Million.html] ONGC Moves to Take Over Venezuelan Oilfields, Recover $500 Million ↗
+
+OilPrice · 2026-11-06T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://oilprice.com/Energy/Energy-General/Norways-Oil-and-Gas-Industry-Faces-a-Major-Decline-Without-New-Discoveries.html] Norway’s Oil and Gas Industry Faces a Major Decline Without New Discoveries ↗
 
 OilPrice · 2026-11-06T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
@@ -574,8 +578,4 @@ OilPrice · 2026-11-06T16:30:00+00:00 · International · Matières premières �
  [https://www.financialafrik.com/2026/11/06/saham-bank-private-le-nouveau-chantier-de-moulay-hafid-elalamy-pour-capter-les-93-du-tissu-entrepreneurial-marocain/] Saham Bank Private, le nouveau chantier de Moulay Hafid Elalamy pour capter les 93% du tissu entrepreneurial marocain ↗
 
 Financial Afrik · 2026-11-06T15:54:34+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://news.google.com/rss/articles/CBMiYkFVX3lxTFBiR01GbkV0RnV6eFJqZDVmeXhORGU4VDdKLWZkMTJIaFpma0JhaXlFM0pSdVhJQWktX01WbEdVWWdPSllKZFc0eWxLT1ZsZUdFcWRHWEFsUDEyc1hKZkFNNnZ3?oc=5] Agenda hebdomadaire économique International du samedi 7 novembre 2026 au samedi 14 novembre 2026 - TradingView ↗
-
-Inflation US / zone euro · presse · 2026-11-06T15:38:16+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 

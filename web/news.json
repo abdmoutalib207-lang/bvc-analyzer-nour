@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T17:03:37.800174+00:00",
+  "updated_at": "2026-11-06T17:41:40.351541+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "473a1be6742b60ad9d",
+      "title": "ONGC Moves to Take Over Venezuelan Oilfields, Recover $500 Million",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/ONGC-Moves-to-Take-Over-Venezuelan-Oilfields-Recover-500-Million.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-06T17:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "209cc241e3191c1dee",
       "title": "Norway’s Oil and Gas Industry Faces a Major Decline Without New Discoveries",
@@ -3334,23 +3351,6 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "f86d48705b8c1b1941",
-      "title": "Access Bank nomme Oluseyi Kumapayi à la tête des filiales africaines",
-      "url": "https://www.financialafrik.com/2026/11/02/access-bank-nomme-oluseyi-kumapayi-a-la-tete-des-filiales-africaines/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-02T11:56:13+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
       "id": "3436041a145ac9d3b7",
