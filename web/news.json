@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T13:55:29.289126+00:00",
+  "updated_at": "2026-11-06T14:45:35.177849+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "4d528d5036d592db35",
+      "title": "Europe's Grid Spending Is Up 155% Since 2019",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Europes-Grid-Spending-Is-Up-155-Since-2019.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-06T14:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "562ac2e1b86f349547",
       "title": "FGE NexantECA Sees Slim Chance of U.S.-Iran Deal",
@@ -3349,23 +3366,6 @@
       "scope": "INTL",
       "feed_id": "france24",
       "feed_url": "https://www.france24.com/fr/economie/rss"
-    },
-    {
-      "id": "98b9fe16248b2ef5b5",
-      "title": "La BCE dispose d'un bouclier contre les crises de la dette, pourquoi la France ne peut pas compter automatiquement dessus - Infosimmo",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9hT0x0MTdZc1JFQXQyRGF0LXQtUnBPYzBOaUlTa1VDc21CbVl2VlMybXFlTEd0S29wZkRzMDB2cG9EUG96Ml9nQldvY0owWnVQUnhScUVjREx0eC02Z0FSa1c0OTM1bU95c1VPc0l1TXlQUml5N3BaczRn?oc=5",
-      "publisher": "BCE · presse francophone",
-      "published_at": "2026-10-31T06:56:49+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb_presse",
-      "feed_url": "https://news.google.com/rss/search?q=BCE%20taux%20directeur%20zone%20euro%20politique%20mon%C3%A9taire&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "890a0bc311d7e7f669",
