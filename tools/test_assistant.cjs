@@ -5,7 +5,7 @@ const api=require('../web/assistant.js');
 const data=JSON.parse(fs.readFileSync('web/assistant-data.json','utf8'));
 let answer=api.localAnswer('Explique le PER de JET',data,'MASI');
 assert.deepEqual(answer.symbols,['JET']);
-assert.ok(answer.text.includes(data.symbols.JET.fundamental.pe.toLocaleString('fr-FR',{maximumFractionDigits:2})));
+assert.ok(answer.text.includes((Number.isFinite(data.symbols.JET.fundamental.pe)?data.symbols.JET.fundamental.pe.toLocaleString('fr-FR',{maximumFractionDigits:2}):'indisponible')));
 assert.ok(answer.text.includes(data.symbols.JET.asof));
 assert.ok(answer.sources.some(s=>s.url===data.symbols.JET.fundamental.document_url));
 assert.ok(answer.text.includes('semestre n’est pas annualisé'));
@@ -72,7 +72,7 @@ const scenarios=[
   ['Volume JET',r=>r.text.includes(f(data.symbols.JET.day_turnover_mad_actual))&&r.text.includes(f(data.symbols.JET.day_shares))],
   ['MASI le 11/03/26 et le 31/03/26',r=>['2026-03-11','2026-03-31'].every(d=>r.text.includes(f(data.masi_history[d])))],
   ['MASI le 31/02/26',r=>r.text.includes('Date invalide')&&!r.text.includes('Clôture du')],
-  ['Clôture JET le '+data.symbols.JET.asof,r=>r.text.includes(f(data.symbols.JET.price))],
+  ['Clôture JET le '+data.symbols.JET.asof,r=>r.text.includes(f(data.symbols.JET.price??data.symbols.JET.price_observation?.price))],
   ['Clôture JET le 2024-01-02',r=>r.text.includes('indisponible dans cet export')],
   ['Pourquoi le PER CIH est indisponible ?',r=>r.text.includes('PER : indisponible')&&r.text.includes('moyenne pondérée')&&r.text.includes('BPA/PER/P/B bloqués')],
   ['RNPG JET S1 2026',r=>r.text.includes(f(data.symbols.JET.fundamental.latest_report.reported_net_millions))&&r.text.includes('Réserves à lire')],

@@ -58,6 +58,16 @@ class PriceObservationTests(unittest.TestCase):
         self.assertEqual(exported['price_observation'], proof)
         self.assertEqual(exported['fundamental']['quote_valuation'], proof)
 
+    def test_publication_oracle_recomputes_from_disclosed_price_and_rejects_mismatches(self):
+        from tools.audit_readiness import publication_health
+        fixture, facts = inputs()
+        report = build_report(fixture, ASOF, facts=facts)
+        failures = publication_health(report)['failures']
+        self.assertFalse([x for x in failures if x['metric'] in ('pe', 'pb', 'dividend_yield_pct')])
+        report['results'][0]['fundamental']['quote_valuation']['price'] = 99
+        failures = publication_health(report)['failures']
+        self.assertTrue(any(x['metric'] == 'pe' for x in failures))
+
     def test_financial_block_still_withholds_per_at_usable_observed_price(self):
         fixture, facts = inputs()
         facts['ADH']['calculation_reservations'] = [dict(status='unresolved', metrics=['pe'],
