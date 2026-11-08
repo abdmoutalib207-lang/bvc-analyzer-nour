@@ -75,3 +75,51 @@ Un véritable conflit de prix ne produit aucune observation utilisable. L'écran
 indique « Cours publié · volume à vérifier » et distingue ce prix de la
 validation complète d'une cotation. Les incidents historiques ne sont pas
 supprimés et aucun rapprochement multisource n'est revendiqué.
+
+## Publication et contrôle réellement servi
+
+Les PR 42 puis 43 sont fusionnées. Le code publié est
+`4cb7a4587dfba9726746ad7b61056740f41998cd` ; les données et pages sont
+enregistrées dans `89a9676bc4fee07a3071078957d9998da55704b8`.
+Le [cycle 42512685007](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/42512685007)
+est terminé avec succès le 8 novembre à 19:13 UTC.
+
+Contrôles effectivement exécutés :
+
+- 514 tests Python réussis, contrôles JavaScript et gate complet réussis,
+  localement sur les données de l'échec puis sur la collecte fraîche en CI ;
+- 48 parcours navigateur sur la construction normale, 48 sur le site temporaire
+  avec ADI bloqué, puis 48 sur le site public réellement déployé ;
+- audit public des montants/quantités : aucune défaillance du contrat de
+  publication ; résultat explicite `checked_with_reservations` ;
+- contrôle HTTP indépendant du rapport public et de la fiche ADH :
+  80 titres, 78 cours affichables, DIS/DLM suspendus ; les six prix du tableau
+  ci-dessus sont servis avec la séance du 5 novembre ;
+- relecture visuelle dans Chromium de la fiche publique ADH : 38,70 MAD,
+  PER 34,33, P/B 1,64 ; historique jusqu'au 5 novembre, 840 séances.
+
+Le relevé utilisé par le contrôle final concorde avec les lignes conservées :
+la publication comporte 78 prix canoniques et aucune `price_observation`.
+Cela ne résout pas les dix divergences de quantités observées par le collecteur
+un peu plus tôt dans le même cycle. Elles restent dans les diagnostics et
+le journal. Les réponses successives de la source diffèrent ; ni une
+corroboration indépendante ni la résolution de ces incidents ne sont affirmées.
+L'intégrité globale reste partielle : 66 lignes contre 67 attendues, écart
+de 932,62 MAD et 221 titres sur l'agrégat ; la source secondaire est indisponible.
+
+Le repli prix seul a été vérifié sur l'artefact réellement divergent :
+dix prix datés consultables, volume/statistiques/scores bloqués. L'oracle
+financier de publication vérifie maintenant le prix explicitement déclaré dans
+`quote_valuation` avant de recalculer les ratios ; un prix incohérent est refusé.
+Le contrôle empêche donc aussi une disparition ultérieure des ratios lors de
+l'audit de publication.
+
+La croissance du CA ADH et son ratio dette nette/EBE restent suspendus pour
+leurs motifs financiers documentés ; les restrictions propres aux autres
+sociétés sont conservées. Ce lot ne prétend pas compléter tous les fondamentaux.
+Le principal n'a reçu aucune écriture.
+
+Leçons de reprise : tester le collecteur puis le contrôle secondaire, qui
+peuvent recevoir des réponses différentes ; contrôler le rapport après son
+oracle financier, puis les pages réellement servies. Un test isolé du moteur
+ne suffit pas à prouver qu'un chiffre restera présent après publication.
