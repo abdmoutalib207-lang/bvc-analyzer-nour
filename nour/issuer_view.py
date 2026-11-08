@@ -32,7 +32,7 @@ def issuer_snapshot(item):
     if warnings:
         alerts.append(f'{len(warnings)} réserve(s) financière(s)')
     if item.get('decision') in ('SUSPENDU', 'INDISPONIBLE', 'LIMITÉ'):
-        alerts.insert(0, 'Données ' + item['decision'].lower())
+        alerts.insert(0, 'Contrôles de volume incomplets' if item.get('price_observation') else 'Données ' + item['decision'].lower())
     market_issue = bool(item.get('resilience', {}).get('anomalies') or (item.get('quality') or {}).get('issues'))
     if market_issue:
         alerts.append('Historique : points de vigilance')
@@ -63,7 +63,7 @@ def issuer_heading(item, record, collection=None):
     return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
             f'<div class="eyebrow">{esc(record.get("sector") or "Action cotée")} · {esc(item["symbol"])}</div>'
             f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div>'
-            f'<span class="status {esc(item["decision"])}">{esc(item["decision"])}</span>'
+            f'<span class="status {esc(item["decision"])}">{("Cours disponible · volume à vérifier" if view["observed_only"] else esc(item["decision"]))}</span>'
             f'<button type="button" class="issuer-ask" data-assistant-question="Fais une synthèse complète de {esc(item["symbol"])} : marché, technique, fondamentaux, risques, qualité et sources. Distingue annuel et semestre et conserve les réserves.">Lire le dossier avec Nour</button></div>'
             f'<div class="issuer-quote" data-quote-mode="{"provisional" if view["provisional"] else "close"}"><span>{view["label"]}</span>'
             f'<strong data-primary-price>{number(view["price"])} <small>MAD</small></strong>{change}'

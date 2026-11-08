@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 from nour.assistant import build_data, source_links
-from nour.assistant_context import compact_data, retrieve
+from nour.assistant_context import compact_data, retrieve, collection_context
 from nour.market import import_session, CASABLANCA
 from nour.publication import collection_view, history_readiness, publication_manifest
 from nour.site import collection_panel, provenance_panel
@@ -80,6 +80,76 @@ class Consolidation(unittest.TestCase):
         index['symbols']['ADI']['fundamental']['warnings'] = ['Réserve importante ' * 10000]
         with self.assertRaisesRegex(ValueError, 'preuves requises'):
             retrieve(index, ['ADI'], 'PER ADI')
+
+    def test_title_context_scopes_global_collection_growth_without_losing_its_own_conflicts(self):
+        index=copy.deepcopy(self.index)
+        symbols=list(index['symbols'])
+        conflicts=[{'symbol':symbol,'session':'2026-11-05','fields':['v'],
+            'retained':{'v':10},'observed':{'v':11},'source':'https://www.cdgcapitalbourse.ma/api/',
+            'resolution':'pending_review','reason':'Conflit documenté à rapprocher. '*3} for symbol in symbols]
+        global_issue={'reason':'Agrégat global non confirmé','resolution':'pending_review'}
+        conflicts.append(global_issue)
+        sources=[{'name':'Source '+str(n),'status':'ok','items':1} for n in range(80)]
+        sources.extend([{'name':'Source retenue','status':'ok','items':1},
+                        {'name':'Source en panne','status':'failed','items':0}])
+        index['health']={'health':{'result':'conflict','message':'Conflits non résolus',
+            'details':{'active_quotes':80,'conflicts':conflicts}},
+            'news_health':{'status':'partial','errors':['Source en panne indisponible'],
+                           'fetched_items':81,'sources':sources}}
+        index['news']=[{'title':'Publication liée au titre','publisher':'Source retenue',
+            'tickers':['T2S'],'published_at':'2026-11-05','url':'https://www.ammc.ma/publication'}]
+        index['symbols']['T2S']['price_observation']={'price':215,'asof':'2026-11-05',
+            'source':'https://www.cdgcapitalbourse.ma/api/','source_datetime':None,
+            'collected_at':'2026-11-08T13:37:59Z','status':'price_fields_match_volume_disputed',
+            'volume_status':'disputed','cross_source_verified':False}
+        index['symbols']['T2S']['fundamental']['quote_valuation']=copy.deepcopy(index['symbols']['T2S']['price_observation'])
+        before=copy.deepcopy(index)
+        question='Synthèse complète : marché, technique, fondamentaux, risques, sources'
+        for symbol in symbols:
+            context=retrieve(index,[symbol],question)
+            self.assertLessEqual(len(json.dumps(context,ensure_ascii=False,separators=(',',':')).encode()),40000)
+            self.assertEqual(context['selected'][symbol]['fundamental']['warnings'],index['symbols'][symbol]['fundamental']['warnings'])
+            self.assertEqual(context['selected'][symbol]['fundamental']['evidence'],index['symbols'][symbol]['fundamental']['evidence'])
+            details=context['collection']['health']['details']
+            self.assertEqual(details['conflict_count'],81)
+            self.assertEqual(details['conflicts'],[c for c in conflicts if c.get('symbol') in (None,symbol)])
+            self.assertEqual(context['collection']['health']['result'],'conflict')
+        context=retrieve(index,['T2S'],question)
+        self.assertEqual(context['selected']['T2S']['price_observation'],index['symbols']['T2S']['price_observation'])
+        self.assertEqual(context['selected']['T2S']['fundamental']['quote_valuation'],index['symbols']['T2S']['fundamental']['quote_valuation'])
+        news=context['collection']['news_health']
+        self.assertEqual(news['source_count'],82)
+        self.assertEqual(news['source_status_counts'],{'ok':81,'failed':1})
+        self.assertEqual([s['name'] for s in news['sources']],['Source retenue','Source en panne'])
+        self.assertEqual(news['errors'],index['health']['news_health']['errors'])
+        self.assertEqual(context['collection']['diagnostics_url'],'report.json')
+        self.assertIn('ne vaut pas résolution',context['collection']['scope_notice'])
+        self.assertEqual(collection_context(index['health'],['MASI'],[]),index['health'])
+        with self.assertRaisesRegex(ValueError,'preuves requises'):
+            retrieve(index,['MASI'],'Qualité du marché')
+        cases=[(['T2S'],question),(['ADI'],'Synthèse complète ADI'),
+               (['T2S','ADI'],'Qualité du marché')]
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'collection-growth.json'
+            path.write_text(json.dumps({'index':index,'cases':[{'symbols':s,'question':q,
+                'expected':retrieve(index,s,q)} for s,q in cases]},ensure_ascii=False))
+            subprocess.run(['node','tools/compare_context.mjs',str(path)],cwd=ROOT,check=True,capture_output=True)
+        self.assertEqual(index,before)
+
+    def test_price_only_evidence_survives_compact_index_without_promoting_volume(self):
+        data=copy.deepcopy(self.data)
+        observation={'price':38.7,'asof':'2026-11-05','source':'CDG Capital Bourse',
+            'source_datetime':None,'collected_at':'2026-11-08T13:37:59Z',
+            'status':'price_fields_match_volume_disputed','volume_status':'disputed','cross_source_verified':False}
+        data['symbols']['ADH']['price_observation']=observation
+        data['symbols']['ADH']['fundamental']['quote_valuation']=observation
+        before=copy.deepcopy(data)
+        context=retrieve(compact_data(data),['ADH'],'Explique ses fondamentaux et son PER')
+        selected=context['selected']['ADH']
+        self.assertEqual(selected['price_observation'],observation)
+        self.assertEqual(selected['fundamental']['quote_valuation'],observation)
+        self.assertFalse(selected['price_observation']['cross_source_verified'])
+        self.assertEqual(data,before)
 
     def test_python_and_worker_context_are_identical(self):
         cases = [(['ADI'], 'PER ADI'), (['ADI'], 'Quel RSI ?'),

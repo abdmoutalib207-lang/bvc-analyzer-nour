@@ -71,3 +71,15 @@ const absent=structuredClone(data);absent.symbols.ADI.technical.bollinger_upper=
 assert.ok(localAnswer('Bollinger ADI',absent,'MASI').text.includes('bande supérieure : indisponible'));
 assert.equal(JSON.stringify(data),before,'read-only queries must never mutate canonical facts');
 console.log('Assistant query audit: compound answers, canonical ranking/filter oracles, sectors, blocked versus missing, financial periods, unknown criteria, source reservations, indicators, follow-ups and immutability passed.');
+// A documented price remains answerable while its quantities are disputed.
+{
+  const fixture=structuredClone(data),row=fixture.symbols.ADH;
+  row.price=null;row.day_shares=null;row.day_turnover_mad_actual=null;
+  row.price_observation={price:38.7,asof:'2026-11-05',status:'price_fields_match_volume_disputed',volume_status:'disputed',cross_source_verified:false};
+  for(const question of ['Cours ADH','Cours et RSI ADH','Synthèse complète ADH']){
+    const answer=localAnswer(question,fixture,'MASI');
+    assert.ok(answer.text.includes(fmt(38.7)),question+' must keep the documented price');
+    assert.ok(answer.text.includes('volume à vérifier'),question+' must retain the volume reservation');
+  }
+  assert.equal(row.price,null,'display must not promote the observation to a fully validated close');
+}

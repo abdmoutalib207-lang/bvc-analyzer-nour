@@ -46,3 +46,32 @@ indicateurs restent appliquées. Il ne s'agit pas d'un remplacement du libellé
 Contrôle ciblé : sept tests de rapprochement local réussis, dont deux nouvelles
 régressions couvrant les six lignes inchangées et le maintien des vrais conflits.
 La validation complète et la publication seront vérifiées avant clôture.
+
+## Contrôles après collecte fraîche
+
+La première publication (42485855155) a été refusée avant déploiement :
+les diagnostics de dix conflits de volumes étaient copiés dans le contexte de
+chaque société, faisant dépasser à T2S le plafond de 40 000 octets.
+Le contexte est maintenant limité aux incidents du titre et aux incidents
+collectifs ; compteurs et statuts globaux, erreurs de sources, preuves et réserves
+financières restent conservés. Sur l'artefact échoué : T2S passe de 40 780 à
+37 617 octets, sans augmenter le plafond. La parité Python/Worker est testée.
+
+Cette collecte a aussi révélé des quantités CDG modifiées sur dix lignes,
+dont ADH (1 566 874 contre 1 573 414 conservés) et Vicenne (29 883 contre
+30 883). Leurs prix et OHLC sont identiques. Aucune quantité n'est choisie
+arbitrairement pour effacer cet écart.
+
+Le rapport expose donc `price_observation` uniquement lorsque les prix OHLC
+primaires et conservés concordent exactement, pour la même séance et le même
+titre, avec source et collecte datées. Les prix et ratios correspondants sont
+consultables sur la fiche, dans le tableau du marché et dans l'assistant ;
+`fundamental.quote_valuation` conserve le prix réellement utilisé pour les
+ratios. Les contraintes comptables s'appliquent toujours. ADH : 38,70 MAD,
+PER 34,33 et P/B 1,64 ; Vicenne : 305 MAD, sans déblocage de ses ratios financiers.
+
+Les volumes contestés, statistiques courantes et scores restent indisponibles.
+Un véritable conflit de prix ne produit aucune observation utilisable. L'écran
+indique « Cours publié · volume à vérifier » et distingue ce prix de la
+validation complète d'une cotation. Les incidents historiques ne sont pas
+supprimés et aucun rapprochement multisource n'est revendiqué.

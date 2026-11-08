@@ -1,5 +1,7 @@
 """Transparent descriptive pilot engine. No automated buy/sell signal."""
-from datetime import date
+from datetime import date, datetime
+from decimal import Decimal
+from urllib.parse import urlsplit
 from math import ceil, sqrt, isfinite
 from statistics import median, stdev
 from .analytics import technical, fundamentals, canonical_score, SCORE_VERSION, ordered_sum
@@ -18,6 +20,63 @@ def _mean(items):
 
 def _round(value, digits=2):
     return round(value, digits) if value is not None else None
+
+
+def _price_observation(record, asof):
+    """Retain a dated price proof when only quantities/turnover are disputed.
+
+    It never accepts a changed price, clears a quarantine or certifies volumes.
+    """
+    from .market import CASABLANCA
+    try:
+        problem = record['quarantined_market']
+        session = date.fromisoformat(problem['session'])
+        source = urlsplit(problem['source'])
+        collected = datetime.fromisoformat(problem['observed_at'].replace('Z', '+00:00'))
+        local = collected.astimezone(CASABLANCA)
+        if (problem.get('code') != 'market_line_quarantined' or problem.get('domain') != 'volume'
+                or problem.get('symbol') != record['symbol'] or record.get('suspended')
+                or record.get('stale') or record.get('price_asof') != session.isoformat()
+                or session.weekday() >= 5 or not collected.tzinfo
+                or not session <= local.date() <= date.fromisoformat(asof)
+                or (date.fromisoformat(asof) - session).days > 4
+                or (local.date() == session and local.hour < 16)
+                or source.scheme != 'https' or source.hostname != 'www.cdgcapitalbourse.ma'
+                or source.path != '/api/' or source.query or source.fragment
+                or source.username or source.password):
+            return None
+        observed = problem['observed']
+        primary = observed['primary']
+        bars = [b for b in record['candles'] if b.get('d') == session.isoformat()]
+        if len(bars) != 1 or primary.get('d') != session.isoformat():
+            return None
+        def number(value):
+            if isinstance(value, bool):
+                raise ValueError('Boolean price')
+            result = Decimal(str(value))
+            if not result.is_finite() or result <= 0:
+                raise ValueError('Invalid price')
+            return result
+        if any(number(primary[k]) != number(bars[0][k]) for k in ('o', 'h', 'l', 'c')):
+            return None
+        close, low, high = number(primary['c']), number(primary['l']), number(primary['h'])
+        if (number(record['price']) != close or not low <= close <= high
+                or not low <= number(primary['o']) <= high):
+            return None
+        price = float(close)
+        if not isfinite(price):
+            return None
+        secondary = observed.get('secondary')
+        if secondary is not None and (not isinstance(secondary, dict)
+                or secondary.get('session') != session.isoformat()
+                or number(secondary.get('price')) != close):
+            return None
+        return dict(price=price, asof=session.isoformat(), source=problem['source'],
+                    source_datetime=None, collected_at=problem['observed_at'],
+                    status='price_fields_match_volume_disputed', volume_status='disputed',
+                    cross_source_verified=False)
+    except (KeyError, TypeError, ValueError, ArithmeticError, AttributeError):
+        return None
 
 
 def analyze(record, asof, quantity=1000):
@@ -185,6 +244,7 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         item["technical"] = guarded(item, 'technical', lambda: technical(dated),
                                     lambda: _fallback_technical({'candles':[]}))
         market_problem = rec.get('quarantined_market')
+        price_observation = _price_observation(rec, asof) if market_problem else None
         if market_problem:
             item.update(price=None, day_shares=None, day_turnover_mad_actual=None,
                         decision='INDISPONIBLE', price_source_datetime=None)
@@ -195,6 +255,8 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
             issue(item,'source','market_line_quarantined',market_problem['reason'],
                   ['market','technical','liquidity'],source=market_problem.get('source'),evidence=market_problem)
             item['quality']['issues'].append(market_problem['reason'])
+            if price_observation:
+                item['price_observation'] = price_observation
         item["history_readiness"] = history_readiness(item)
         # Imported current facts are not a point-in-time financial database.
         # A historical build must not quietly use the current fact snapshot.
@@ -205,9 +267,16 @@ def build_report(fixture, asof=None, quantity=1000, facts=None, news=None):
         quote_for_valuation = ({**rec, 'stale': True, 'price':None if market_problem else rec.get('price')}
                                if item['decision'] in ('INDISPONIBLE', 'SUSPENDU')
                                else rec)
+        if price_observation:
+            quote_for_valuation = {**rec, 'price': price_observation['price'],
+                                   'price_asof': price_observation['asof'], 'stale': False}
         item["fundamental"] = guarded(item, 'fundamental', lambda: fundamentals(
             quote_for_valuation, None if historical else facts.get(symbol), asof=asof),
             lambda: _empty_fundamentals(asof))
+        if price_observation:
+            item['fundamental']['quote_valuation'] = dict(price_observation)
+            item['fundamental']['warnings'].append('Ratios au cours publié du '
+                + price_observation['asof'] + ' ; volumes de cette séance à vérifier.')
         status = item.get('issuer_status') or {}
         if status and not item['fundamental'].get('document_url'):
             item['fundamental']['warnings'].append(status['reason'])

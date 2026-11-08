@@ -64,3 +64,9 @@ Le 19 octobre 2026, la collecte Nour passe à chaque heure de 09:45 à 17:45
 en jours ouvrés (Africa/Casablanca), avec les éditions 09:45, 12:45, 16:00
 et le contrôle 17:15 conservés. Une actualisation horaire ne remplace pas les
 briefings archivés ; un relevé provisoire ne devient pas une clôture.
+
+- Complément du 8 novembre : distinguer un prix OHLC concordant d'un volume
+  contesté. `price_observation` et `quote_valuation` rendent le prix daté et ses
+  ratios consultables sans valider les quantités, statistiques ou scores. Les
+  diagnostics de contexte IA sont limités au titre avec compteurs globaux,
+  erreurs et réserves conservés ; plafond de 40 000 octets inchangé.

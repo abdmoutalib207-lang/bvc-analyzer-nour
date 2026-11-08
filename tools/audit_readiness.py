@@ -51,6 +51,22 @@ def audit(report):
         if f.get('historical_per_share_only'):
             eps_shares = book_shares = value('nombre_actions_annuel_verifie')
         price = Decimal(str(row['price'])) if row.get('price') else None
+        # Recompute against the explicitly disclosed price input, without
+        # treating it as approval of the disputed quantity or the full candle.
+        observed = row.get('price_observation')
+        if (price is None and isinstance(observed, dict)
+                and observed == f.get('quote_valuation')
+                and observed.get('status') == 'price_fields_match_volume_disputed'
+                and observed.get('volume_status') == 'disputed'
+                and observed.get('cross_source_verified') is False
+                and observed.get('asof') == row.get('asof')
+                and observed.get('asof', '9999') <= report['analysis_date']
+                and observed.get('source') == 'https://www.cdgcapitalbourse.ma/api/'
+                and isinstance(observed.get('price'), (int, float))
+                and not isinstance(observed['price'], bool)):
+            candidate = Decimal(str(observed['price']))
+            if candidate.is_finite() and candidate > 0:
+                price = candidate
 
         def quotient(n, d):
             return n / d if n is not None and d is not None and d > 0 else None

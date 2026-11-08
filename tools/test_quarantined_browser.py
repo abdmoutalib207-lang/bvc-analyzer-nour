@@ -86,7 +86,14 @@ def main():
         assert set(before)==set(after) and len(after)==80
         assert partial_report['cross_source_volume_audit']['quarantined_symbols']==['ADI']
         assert after['ADI']['price'] is None and after['ADI']['technical']['sma50'] is None
-        assert after['ADI']['fundamental']['pe'] is None
+        observation = after['ADI'].get('price_observation')
+        if observation:  # Only a fresh, dated price proof permits quote-based ratios.
+            assert observation['price'] == before['ADI']['price']
+            assert after['ADI']['fundamental']['pe'] == before['ADI']['fundamental']['pe']
+            assert observation['cross_source_verified'] is False
+        else:
+            assert after['ADI']['fundamental']['pe'] is None
+        assert after['ADI']['day_shares'] is None
         for symbol in sorted(set(after)-{'ADI'}):
             for key in ('technical','fundamental','canonical_score'):
                 assert before[symbol][key]==after[symbol][key], (symbol,key)

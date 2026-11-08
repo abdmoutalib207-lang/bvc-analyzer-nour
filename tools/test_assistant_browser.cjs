@@ -77,7 +77,7 @@ async function answerAfter(page,action){
           }
           assert.equal(await page.locator('[data-market-row] [data-quote-clocks]').count(),80);
           const adi=report.results.find(r=>r.symbol==='ADI');
-          const shown=adi.intraday_quote?.price??adi.price;
+          const shown=adi.intraday_quote?.price??adi.price??adi.price_observation?.price;
           const primary=page.locator('[data-quote-symbol="ADI"] [data-primary-price]');
           await assertQuote(primary,shown);
           const datedChanges=page.locator('[data-change-reference]');
@@ -133,7 +133,7 @@ async function answerAfter(page,action){
         if(route.startsWith('titres/')){
           const symbol=route.split('/').pop().replace('.html','');
           const row=marketReport.results.find(r=>r.symbol===symbol);
-          const shown=row.intraday_quote?.price??row.price;
+          const shown=row.intraday_quote?.price??row.price??row.price_observation?.price;
           assert.equal(await page.locator('.issuer-quote [data-quote-clocks]').count(),1);
           await assertQuote(page.locator('.issuer-quote [data-primary-price]'),shown);
           assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
@@ -518,7 +518,7 @@ async function answerAfter(page,action){
           assert.ok(screening.includes('ne constitue pas une comparaison sectorielle validée'));
           const combined=await ask('Cours, PER, RSI et VaR ADI');
           for(const heading of ['fondamentaux','technique','risques','cours'])assert.ok(combined.includes(heading));
-          for(const [label,n] of [['Clôture : ',adi.price],['PER : ',adi.fundamental.pe],['RSI 14 : ',adi.technical.rsi14],['VaR historique 95 % · 1 séance : ',adi.market_risk.tail_risk.var95_loss_pct]])assert.ok(combined.includes(label+answerNumber(n)),label+combined);
+          for(const [label,n] of [[adi.price_observation?'Cours publié : ':'Clôture : ',adi.price??adi.price_observation?.price],['PER : ',adi.fundamental.pe],['RSI 14 : ',adi.technical.rsi14],['VaR historique 95 % · 1 séance : ',adi.market_risk.tail_risk.var95_loss_pct]])assert.ok(combined.includes(label+answerNumber(n)),label+combined);
           const bands=await ask('Bandes de Bollinger ADI');
           assert.ok(bands.includes(answerNumber(adi.technical.bollinger_upper)));
           assert.ok(bands.includes(answerNumber(adi.technical.bollinger_lower)));
