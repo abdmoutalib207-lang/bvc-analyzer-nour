@@ -17,6 +17,27 @@ def number(value):
     return n
 
 
+def same_primary_without_secondary_conflict(previous, symbol, bar, session):
+    """A missing secondary source is not a contradiction of an unchanged line.
+
+    This permits a fresh primary-only line proof, never a resolution of the
+    incident journal or an earlier session's disputed observations.
+    """
+    try:
+        if (not isinstance(previous, dict) or previous.get('symbol') != symbol
+                or previous.get('code') != 'market_line_quarantined'
+                or previous.get('domain') != 'volume' or previous.get('session') != session):
+            return False
+        observed = previous['observed']
+        if 'secondary' not in observed or observed['secondary'] is not None:
+            return False
+        primary = observed['primary']
+        return (primary['d'] == session and all(number(primary[k]) == number(bar[k])
+                for k in ('o','h','l','c','v','turnover_mad')))
+    except (KeyError, TypeError, ValueError, ArithmeticError):
+        return False
+
+
 def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimum=20):
     """No revision of a disputed line; independent healthy lines may proceed."""
     session = overview['asof']
@@ -85,7 +106,8 @@ def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimu
         rec = out['records'].get(s) or {}
         try:
             previous=rec.get('quarantined_market')
-            if previous and (previous.get('session')!=session or not secondary_ok):
+            if previous and (previous.get('session')!=session or (not secondary_ok
+                    and not same_primary_without_secondary_conflict(previous,s,bar,session))):
                 raise ValueError('Contradiction historique ou multisource non résolue')
             old = next(b for b in rec.get('candles',[]) if b.get('d') == session)
             if (rec.get('price_asof') != session or number(rec.get('price')) != number(bar['c'])

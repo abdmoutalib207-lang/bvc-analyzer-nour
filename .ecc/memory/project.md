@@ -1,5 +1,11 @@
 # Mémoire de projet vérifiable
 
+- Reprise cours du 8 novembre 2026 : `docs/quote-recovery-2026-11-08.md`.
+  Une quarantaine inchangée sans observation secondaire doit être réexaminée
+  sur une nouvelle observation primaire exacte ; une panne secondaire n'est
+  pas une contradiction actuelle. Les incidents historiques restent conservés,
+  sans déclaration de résolution ou de validation multisource.
+
 Date : 2026-10-06. État de reprise observé : commit Nour
 `ca350006e738bdb6e48820ebcd5d9f1b52b19c92`, publication Actions
 `37391634686` réussie. Revalider ces références lors d'une prochaine reprise.
