@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-08",
+  "principal_commit": "c92384a3a202d99322557e4f36199ad9a224a5f0",
+  "same_upstream_provider": true,
+  "documents_certified": false,
+  "observations": [
+    {
+      "symbol": "ADH",
+      "history_sha256": "04fc727a1e4c7094e49818dda4d04e939dcbb7264e1920d6ee98e9b960f29676",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/ADH.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 37.0,
+        "h": 38.7,
+        "l": 37.0,
+        "c": 38.7,
+        "v": 1573414
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 37.0,
+        "h": 38.7,
+        "l": 37.0,
+        "c": 38.7,
+        "v": 1573414,
+        "turnover_mad": 59970305.87
+      },
+      "amount_from_cdg": 59970305.87
+    },
+    {
+      "symbol": "DSW",
+      "history_sha256": "f70d1b1c970a97e115632c1c79f1d84ef2bcaa9dfadeac2d3e34b1e6b312a38d",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/DSW.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 732.3,
+        "h": 750.0,
+        "l": 732.0,
+        "c": 750.0,
+        "v": 991
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 732.3,
+        "h": 750.0,
+        "l": 732.0,
+        "c": 750.0,
+        "v": 991,
+        "turnover_mad": 742696.8
+      },
+      "amount_from_cdg": 742696.8
+    },
+    {
+      "symbol": "ENK",
+      "history_sha256": "3571177443b35ed17c3e75039bc4fce7813a50df9eb4dfa153e03e10b63a7483",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/ENK.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 45.7,
+        "h": 46.0,
+        "l": 45.0,
+        "c": 46.0,
+        "v": 1557
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 45.7,
+        "h": 46.0,
+        "l": 45.0,
+        "c": 46.0,
+        "v": 1557,
+        "turnover_mad": 71127.73
+      },
+      "amount_from_cdg": 71127.73
+    },
+    {
+      "symbol": "MNG",
+      "history_sha256": "30adddfa7a88763bf82aecd86e92b09d6672f7654751a77a54a29058636319b6",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/MNG.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 1485.0,
+        "h": 1528.0,
+        "l": 1453.0,
+        "c": 1489.0,
+        "v": 26397
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 1485.0,
+        "h": 1528.0,
+        "l": 1453.0,
+        "c": 1489.0,
+        "v": 26397,
+        "turnover_mad": 39300061.0
+      },
+      "amount_from_cdg": 39300061.0
+    },
+    {
+      "symbol": "RDS",
+      "history_sha256": "9729a70c6f20b192e0b22eb764c60a062260260c640cd0a6eae49fa1d4b24538",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/RDS.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 174.0,
+        "h": 177.2,
+        "l": 172.0,
+        "c": 177.0,
+        "v": 63465
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 174.0,
+        "h": 177.2,
+        "l": 172.0,
+        "c": 177.0,
+        "v": 63465,
+        "turnover_mad": 11179964.15
+      },
+      "amount_from_cdg": 11179964.15
+    },
+    {
+      "symbol": "VCNE",
+      "history_sha256": "8b18d7d9b35fb07cfef0d8107359376d84b284b8f117a3a5eb425401303f8844",
+      "source_url": "https://github.com/abdmoutalib207-lang/-bvc-analyzer/blob/c92384a3a202d99322557e4f36199ad9a224a5f0/pipeline/candles/VCNE.json",
+      "last_bar": {
+        "d": "2026-11-05",
+        "o": 296.0,
+        "h": 305.0,
+        "l": 291.0,
+        "c": 305.0,
+        "v": 30883
+      },
+      "nour_last_bar": {
+        "d": "2026-11-05",
+        "o": 296.0,
+        "h": 305.0,
+        "l": 291.0,
+        "c": 305.0,
+        "v": 30883,
+        "turnover_mad": 9334718.1
+      },
+      "amount_from_cdg": 9334718.1
+    }
+  ]
+}

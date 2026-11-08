@@ -28,6 +28,60 @@ def universe():
     return fixture,raw,overview,other,codes
 
 class LocalMarketTests(unittest.TestCase):
+    def test_missing_secondary_does_not_perpetuate_exact_same_session_quarantine(self):
+        from nour.error_memory import update_error_memory
+        inp=universe();rec=inp[0]['records']['ADI']
+        problem=dict(symbol='ADI',session=DAY,domain='volume',code='market_line_quarantined',
+                     observed={'primary':deepcopy(rec['candles'][-1]),'secondary':None})
+        rec['quarantined_market']=deepcopy(problem)
+        unavailable=dict(provider='Wafabourse',status='unavailable',
+                         source_url='https://www.wafabourse.com/marches')
+        before=deepcopy(inp[0])
+        memory=update_error_memory({},dict(session=DAY,status='partial',refusals=[problem]),now=NOW)
+        candidate,audit=isolate_market_lines(inp[0],inp[1],inp[2],unavailable,inp[4],now=NOW)
+        self.assertNotIn('quarantined_market',candidate['records']['ADI'])
+        self.assertEqual(candidate['records']['ADI'],{k:v for k,v in rec.items() if k!='quarantined_market'})
+        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertFalse(audit['cross_source_verified'])
+        self.assertFalse(audit['quantities_cross_source_verified'])
+        self.assertFalse(audit['aggregate_match'])
+        self.assertFalse(audit['corrections'])
+        self.assertEqual(inp[0],before)
+        updated=update_error_memory(memory,audit,now=NOW)
+        self.assertEqual(updated['entries'],memory['entries'])
+        self.assertEqual(next(iter(updated['entries'].values()))['status'],'open')
+
+    def test_real_or_unproven_previous_conflict_remains_quarantined_without_secondary(self):
+        inp=universe();rec=inp[0]['records']['ADI']
+        base=dict(symbol='ADI',session=DAY,domain='volume',code='market_line_quarantined',
+                  observed={'primary':deepcopy(rec['candles'][-1]),'secondary':None})
+        unavailable=dict(provider='Wafabourse',status='unavailable',
+                         source_url='https://www.wafabourse.com/marches')
+        cases=[]
+        prior=deepcopy(base);prior['observed']['secondary']={'price':999};cases.append(prior)
+        prior=deepcopy(base);prior['session']='2026-10-21';cases.append(prior)
+        prior=deepcopy(base);prior['observed']['primary']['d']='2026-10-21';cases.append(prior)
+        prior=deepcopy(base);prior['observed']['primary']['v']+=1;cases.append(prior)
+        prior=deepcopy(base);prior['observed']['primary']['turnover_mad']+=1;cases.append(prior)
+        prior=deepcopy(base);prior['observed']['primary']['c']+=1;cases.append(prior)
+        prior=deepcopy(base);prior['observed']['primary']['o']=None;cases.append(prior)
+        prior=deepcopy(base);prior['observed'].pop('secondary');cases.append(prior)
+        prior=deepcopy(base);prior['code']='different_conflict';cases.append(prior)
+        for i,prior in enumerate(cases):
+            with self.subTest(case=i):
+                rec['quarantined_market']=prior
+                candidate,audit=isolate_market_lines(inp[0],inp[1],inp[2],unavailable,inp[4],now=NOW)
+                self.assertIn('ADI',audit['quarantined_symbols'])
+                self.assertIn('quarantined_market',candidate['records']['ADI'])
+        rec['quarantined_market']=deepcopy(base)
+        contradictory=deepcopy(inp[3])
+        next(r for r in contradictory['rows'] if r['symbol']==inp[4]['ADI'])['shares']+=1
+        candidate,audit=isolate_market_lines(inp[0],inp[1],inp[2],contradictory,inp[4],now=NOW)
+        self.assertIn('ADI',audit['quarantined_symbols'])
+        raw=deepcopy(inp[1]);next(r for r in raw if r['Symbol']==inp[4]['ADI'])['QteEchangee']+=1
+        candidate,audit=isolate_market_lines(inp[0],raw,inp[2],unavailable,inp[4],now=NOW)
+        self.assertIn('ADI',audit['quarantined_symbols'])
+
     def test_adi_volume_conflict_publishes_exact_other_79(self):
         inp=universe();baseline=build_report(inp[0],'2026-10-23')
         adi=next(r for r in inp[3]['rows'] if r['symbol']==inp[4]['ADI']);adi['shares']+=1
