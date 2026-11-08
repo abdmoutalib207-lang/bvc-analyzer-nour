@@ -22,6 +22,13 @@
   const queries=typeof module==='object'&&module.exports?require('./assistant-query.js'):root?.NourAssistantQuery;
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const fmt=(x,unit='')=>typeof x==='number'&&Number.isFinite(x)?x.toLocaleString('fr-FR',{maximumFractionDigits:2})+(unit?' '+unit:''):'indisponible';
+  const quoteLine=row=>{
+    if(typeof row.price==='number'&&Number.isFinite(row.price))return `Clôture : ${fmt(row.price,'MAD')}`;
+    const p=row.price_observation;
+    return p?.status==='price_fields_match_volume_disputed'&&typeof p.price==='number'&&Number.isFinite(p.price)&&p.price>0
+      ?`Cours publié : ${fmt(p.price,'MAD')} · séance ${p.asof} · volume à vérifier (contrôle multisource non attesté)`
+      :'Clôture : indisponible';
+  };
   const validationLabel=status=>{
     if(typeof status==='string'&&status.startsWith('referenced_import'))return 'référence documentaire importée, vérification indépendante non attestée';
     if(typeof status==='string'&&status.startsWith('selected_pages_reconciled_with_reservations'))return 'pages sélectionnées rapprochées, avec réserves';
@@ -305,7 +312,7 @@
         lines.push(`BPA : ${f.eps_denominator||'dénominateur non disponible'}. Valeur comptable : ${f.book_denominator||'dénominateur non disponible'}.`);
       }
       if(volume)lines.push(`Volume de la dernière séance du titre (${row.asof||'non datée'}) : ${fmt(row.day_turnover_mad_actual,'MAD')} · ${fmt(row.day_shares,'titres échangés')}.`);
-      if(close)lines.push(`Clôture : ${fmt(row.price,'MAD')}.`);
+      if(close)lines.push(quoteLine(row)+'.');
       if(unsupported)lines.push('Le ROIC, le ROI et les objectifs de cours ne sont pas calculés dans Nour. Aucune valeur n’est reprise du moteur principal comme résultat Nour.');
       if(metrics.some(m=>m[4]==='fundamental')||earnings||equity||shares||evidenceMetrics.length){
         lines.push(`Vérification annuelle : ${validationLabel(f.validation_status)}. Le semestre n’est pas annualisé; PNB et chiffre d’affaires restent distincts.`);
@@ -326,7 +333,7 @@
       const row=data.symbols[symbol];if(!row)continue;
       const f=row.fundamental||{},t=row.technical||{},latest=f.latest_report||{},risk=row.market_risk||{},tail=risk.tail_risk||{},liq=row.liquidity||{},guide=row.sector_guidance||{};
       lines.push(`${symbol} · ${row.name} · ${row.sector||'secteur non renseigné'}`);
-      lines.push(`Marché · séance ${row.asof||'indisponible'}\nClôture : ${fmt(row.price,'MAD')}.\nQuantité : ${fmt(row.day_shares,'titres')} · montant échangé : ${fmt(row.day_turnover_mad_actual,'MAD')}.`);
+      lines.push(`Marché · séance ${row.asof||'indisponible'}\n${quoteLine(row)}.\nQuantité : ${fmt(row.day_shares,'titres')} · montant échangé : ${fmt(row.day_turnover_mad_actual,'MAD')}.`);
       lines.push(`Technique · ${t.sessions??0} séances utilisées\nRSI 14 : ${fmt(t.rsi14)} · MM20 : ${fmt(t.sma20,'MAD')} · MM50 : ${fmt(t.sma50,'MAD')} · MM200 : ${fmt(t.sma200,'MAD')}.\nEMA20 : ${fmt(t.ema20,'MAD')} · EMA50 : ${fmt(t.ema50,'MAD')}.\nMACD : ${fmt(t.macd,'MAD')} · signal : ${fmt(t.macd_signal,'MAD')}.\nBollinger 20/2 : ${fmt(t.bollinger_lower)} à ${fmt(t.bollinger_upper)} MAD.\nATR 14 Wilder : ${fmt(t.atr14_wilder,'MAD')} · ATR 14 moyenne simple : ${fmt(t.atr14,'MAD')}.\nSupport / résistance des 20 séances précédentes : ${fmt(t.support20)} / ${fmt(t.resistance20)} MAD.`);
       lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · fin de période ${f.period_end||'non renseignée'}\nPérimètre : ${f.accounting_basis||'non renseigné'} · devise ${f.currency||'non renseignée'}.\nRésultat annuel retenu : ${fmt(f.earnings_mmad,'MMAD')} · BPA : ${fmt(f.eps_mad,'MAD')}.\nPER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE de clôture : ${fmt(f.roe_pct,'%')}.\nPNB : ${fmt(f.pnb_mmad,'MMAD')} · croissance du CA : ${fmt(f.revenue_growth_pct,'%')}.\nDette nette stricte : ${fmt(f.net_debt_strict_mmad,'MMAD')} · dette nette / EBE : ${fmt(f.net_debt_ebitda)}.\nBPA : ${f.eps_denominator||'dénominateur non vérifié'}.\nVérification annuelle : ${validationLabel(f.validation_status)}.`);
       if(latest.period_end)lines.push(`Dernière publication · période ${latest.period_end}, distincte des comptes annuels\nPérimètre : ${latest.accounting_basis||'non renseigné'} · ${latest.reported_net_label||'résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)}. Le semestre n’est pas annualisé.`);
@@ -384,7 +391,7 @@
       const row=data.symbols[s];
       if(!row){lines.push(`Le titre ${s} est absent du référentiel Nour.`);continue;}
       const f=row.fundamental||{}, t=row.technical||{}, cs=row.canonical_score||{}, latest=f.latest_report||{};
-      lines.push(`${s} · ${row.name}\nClôture : ${fmt(row.price,'MAD')} · séance ${row.asof||'non datée'}. Statut des données : ${row.decision||'indisponible'}.`);
+      lines.push(`${s} · ${row.name}\n${quoteLine(row)} · séance ${row.asof||'non datée'}. ${row.price_observation?'Statut des calculs':'Statut des données'} : ${row.decision||'indisponible'}.`);
       if(fundamental){
         lines.push(`Comptes annuels ${f.exercise||'indisponibles'} · ${f.accounting_basis||'périmètre non précisé'} · ${validationLabel(f.validation_status)}.\nBPA : ${fmt(f.eps_mad,'MAD')} · PER : ${fmt(f.pe)} · P/B : ${fmt(f.pb)} · ROE : ${fmt(f.roe_pct,'%')}.\nDette nette / EBITDA : ${fmt(f.net_debt_ebitda)} · PNB : ${fmt(f.pnb_mmad,'MDH')}.`);
         if(latest.period_end)lines.push(`Dernière publication : ${latest.period_end} · ${latest.accounting_basis||'périmètre non précisé'}.\n${latest.reported_net_label||'Résultat publié'} : ${fmt(latest.reported_net_millions,'millions '+(latest.currency||'MAD'))}.\nVérification : ${validationLabel(latest.validation_status)} · pages ${latest.pages||'non renseignées'}.`);

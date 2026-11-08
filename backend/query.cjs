@@ -109,7 +109,11 @@
     const lines=[`Données Nour · analyse du ${data.analysis_date}.`],sources=[];
     for(const s of symbols){const r=data.symbols[s];if(!r)continue;
       lines.push(`${s} · ${r.name} · clôture ${r.asof||'non attestée'}.`);
-      for(const m of found)lines.push(`${m.label} : ${format(value(r,m.path),m.unit)}.`);
+      for(const m of found){
+        const p=r.price_observation;
+        const observed=m.path==='price'&&!numeric(r.price)&&p?.status==='price_fields_match_volume_disputed'&&numeric(p.price)&&p.price>0;
+        lines.push(`${m.label} : ${format(observed?p.price:value(r,m.path),m.unit)}.${observed?' Cours publié du '+p.asof+' ; volume à vérifier, sans validation multisource.':''}`);
+      }
       if(found.some(m=>m.domain==='risk'))lines.push('Risque : '+[r.market_risk?.first,r.market_risk?.last,r.market_risk?.note,r.market_risk?.tail_risk?.note].filter(Boolean).join(' · '));
       if(found.some(m=>m.domain==='technical'))lines.push('Indicateurs descriptifs sur les séances validées ; aucune prévision. Méthode : '+(r.technical?.methods?.version||'consulter la fiche')+'.');
       sources.push({label:'Fiche '+s+' · '+r.asof,url:r.url});

@@ -23,6 +23,14 @@ def quote_view(item, record):
     if not finite(price) or price <= 0:
         price = None
     validation_unavailable = market_quarantined or not finite(price) or price <= 0
+    observation = item.get('price_observation') or {}
+    observed_only = bool(market_quarantined
+        and observation.get('status') == 'price_fields_match_volume_disputed'
+        and observation.get('asof') == session
+        and finite(observation.get('price')) and observation['price'] > 0)
+    if observed_only:
+        price = observation['price']
+        source_time, collected = observation.get('source_datetime'), observation.get('collected_at')
     provisional = False
     try:
         provisional = (live.get('provisional') is True and finite(live.get('price'))
@@ -43,7 +51,8 @@ def quote_view(item, record):
     change = (100 * (price / reference[0] - 1)
               if reference and finite(price) and finite(reference[0]) and reference[0] > 0 else None)
     return {'price': price, 'session': session, 'provisional': provisional,
-            'label': 'En séance · provisoire' if provisional else 'Clôture disponible' if finite(price) else 'Cours indisponible',
+            'observed_only': observed_only,
+            'label': 'En séance · provisoire' if provisional else 'Cours publié · volume à vérifier' if observed_only else 'Clôture disponible' if finite(price) else 'Cours indisponible',
             'source_datetime': source_time, 'collected_at': collected,
             'source_checked_at': collected if provisional else item.get('source_checked_at'),
             'price_validated_at': None if validation_unavailable else item.get('price_validated_at'),
@@ -67,7 +76,8 @@ def quote_clocks(view, compact=False):
                     '<small>Heure indiquée par la source</small>')
     except (TypeError, ValueError):
         cotation = f'<time datetime="{escape(view.get("session") or "")}">{day_text}</time><small>Heure de cotation non communiquée</small>'
-    validation = ('<p>Cotation non validée pour cette observation.</p>' if view.get('validation_unavailable')
+    validation = ('<p>Prix publié concordant ; quantité et montant échangés non validés.</p>' if view.get('observed_only')
+                  else '<p>Cotation non validée pour cette observation.</p>' if view.get('validation_unavailable')
                   else collection_stamp(view['price_validated_at'], 'Dernière cotation validée') if view.get('price_validated_at')
                   else '<p>Dernière cotation validée : heure non communiquée.</p>')
     checks = ('<div data-title-source-check>' + (collection_stamp(view['source_checked_at'], 'Source contrôlée pour ce titre') if view.get('source_checked_at') else '<p>Dernier contrôle de source pour ce titre : heure non communiquée.</p>') + '</div>'

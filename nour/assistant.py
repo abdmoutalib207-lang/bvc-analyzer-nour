@@ -10,7 +10,7 @@ from .assistant_knowledge import knowledge
 from .market_integrity import integrity_summary
 
 VERSION = 'nour-assistant-data-v1'
-SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'issuer_status', 'history_provenance', 'sector_guidance', 'accounting_profile', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_source', 'price_source_datetime', 'price_collected_at', 'age_calendar_days',
+SYMBOL_FIELDS = ('symbol', 'name', 'sector', 'issuer_status', 'history_provenance', 'sector_guidance', 'accounting_profile', 'history_readiness', 'collection_conflicts', 'asof', 'price', 'price_observation', 'price_source', 'price_source_datetime', 'price_collected_at', 'age_calendar_days',
                  'decision', 'technical', 'canonical_score', 'historical_statistics',
                  'market_risk', 'sector_comparison', 'quality', 'day_turnover_mad_actual',
                  'day_shares', 'close_dates_last_60', 'close_series_last_60',
@@ -22,7 +22,7 @@ FUNDAMENTAL_FIELDS = ('exercise', 'document_url', 'eps_mad', 'book_value_per_sha
     'eps_denominator', 'book_denominator', 'net_debt_method', 'revenue_growth_pct',
     'period_end', 'historical_per_share_only', 'financial_review', 'provenance',
     'coverage_pct', 'missing_metrics', 'roe_method', 'calculation_version', 'semester_activity_label',
-    'roe_average_equity_pct', 'debt_reconciliation', 'external_references', 'metric_availability')
+    'roe_average_equity_pct', 'debt_reconciliation', 'external_references', 'metric_availability', 'quote_valuation')
 
 NEWS_FIELDS = ('title','url','publisher','published_at','tickers','tier','status',
                'category','scope','classification','feed_id','ticker_matching')

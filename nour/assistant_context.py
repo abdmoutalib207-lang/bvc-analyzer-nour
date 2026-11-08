@@ -4,6 +4,7 @@ No raw series, full financial review tree or laboratory rows go to the model.
 Warnings and documentary evidence are never shortened to meet a size budget.
 """
 from copy import deepcopy
+from collections import Counter
 from datetime import date
 import hashlib
 import json
@@ -12,7 +13,7 @@ import re
 import unicodedata
 
 POLICY_PATH = Path(__file__).resolve().parents[1] / 'knowledge/assistant_policy.json'
-BASE = ('symbol', 'name', 'sector', 'url', 'price', 'price_source', 'asof',
+BASE = ('symbol', 'name', 'sector', 'url', 'price', 'price_source', 'price_observation', 'asof',
         'decision', 'age_calendar_days', 'quality', 'history_readiness',
         'collection_conflicts', 'day_shares', 'day_turnover_mad_actual', 'issuer_status', 'history_provenance')
 FUNDAMENTALS = ('exercise', 'document_url', 'period_end', 'currency', 'accounting_basis',
@@ -21,7 +22,7 @@ FUNDAMENTALS = ('exercise', 'document_url', 'period_end', 'currency', 'accountin
     'pnb_growth_pct', 'revenue_growth_pct', 'net_debt_strict_mmad', 'net_debt_ebitda',
     'eps_denominator', 'book_denominator', 'net_debt_method', 'warnings',
     'validation_status', 'point_in_time_ready', 'coverage_pct', 'missing_metrics',
-    'latest_report', 'evidence', 'financial_review', 'debt_reconciliation', 'metric_availability')
+    'latest_report', 'evidence', 'financial_review', 'debt_reconciliation', 'metric_availability', 'quote_valuation')
 
 
 class ContextError(ValueError):
@@ -79,6 +80,41 @@ def compact_data(data):
                       for k, v in (data.get('briefings') or {}).items()})
     identity = json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     result['snapshot_id'] = hashlib.sha256(identity.encode()).hexdigest()
+    return result
+
+
+def collection_context(collection, symbols, news):
+    """Scope issuer diagnostics while retaining global health and all relevant caveats."""
+    result = deepcopy(collection)
+    if not isinstance(result, dict) or 'MASI' in symbols:
+        return result
+    scoped = False
+    health = result.get('health')
+    details = health.get('details') if isinstance(health, dict) else None
+    if isinstance(details, dict) and isinstance(details.get('conflicts'), list):
+        conflicts = details['conflicts']
+        details['conflict_count'] = len(conflicts)
+        details['conflicts_scope'] = 'selected_issuers_and_global'
+        details['conflicts'] = [c for c in conflicts
+            if not isinstance(c, dict) or not c.get('symbol') or c['symbol'] in symbols]
+        scoped = True
+    health = result.get('news_health')
+    if isinstance(health, dict) and isinstance(health.get('sources'), list):
+        sources = health['sources']
+        publishers = {article.get('publisher') for article in news if isinstance(article, dict)}
+        health['source_count'] = len(sources)
+        health['source_status_counts'] = dict(Counter(
+            str(source.get('status') or 'unknown') if isinstance(source, dict) else 'unknown'
+            for source in sources))
+        health['sources_scope'] = 'selected_news_publishers_and_non_ok_sources'
+        health['sources'] = [s for s in sources if not isinstance(s, dict)
+            or s.get('status') != 'ok' or s.get('name') in publishers]
+        scoped = True
+    if scoped:
+        result['diagnostics_url'] = 'report.json'
+        result['scope_notice'] = ('État et compteurs globaux conservés ; conflits détaillés limités aux titres demandés '
+            'et incidents globaux. Sources de veille liées aux actualités sélectionnées ou non opérationnelles conservées. '
+            'Les autres diagnostics restent dans le rapport complet ; leur absence ici ne vaut pas résolution.')
     return result
 
 
@@ -164,6 +200,8 @@ def retrieve(index, symbols, question):
             memory = result.get('error_memory_summary')
             if isinstance(memory, dict) and not re.search(r'journal|memoire|erreur|incident|recidive',q):
                 memory.pop('lessons_catalog',None)
+    if 'collection' in result:
+        result['collection'] = collection_context(result['collection'], symbols, result.get('news') or [])
     def size():
         return len(json.dumps(result, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode())
     query=result.get('query_result')
