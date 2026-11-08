@@ -32,7 +32,7 @@ def issuer_snapshot(item):
     if warnings:
         alerts.append(f'{len(warnings)} réserve(s) financière(s)')
     if item.get('decision') in ('SUSPENDU', 'INDISPONIBLE', 'LIMITÉ'):
-        alerts.insert(0, 'Données ' + item['decision'].lower())
+        alerts.insert(0, 'Contrôles de volume incomplets' if item.get('price_observation') else 'Données ' + item['decision'].lower())
     market_issue = bool(item.get('resilience', {}).get('anomalies') or (item.get('quality') or {}).get('issues'))
     if market_issue:
         alerts.append('Historique : points de vigilance')
