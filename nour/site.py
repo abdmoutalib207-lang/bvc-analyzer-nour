@@ -583,6 +583,23 @@ def write_diagnostics(report,output,style=None,script=None):
 
 def build_site(fixture, report, output, briefing=None, editions=None, closing=None):
     validate_catalog(fixture['symbols'])
+    # Secondary comparisons explain differences; they never feed calculations.
+    from .screener_view import body as screener_body, summary_card, visible_state
+    import hashlib
+    root = Path(__file__).resolve().parents[1]
+    try:
+        comparison_path = root / 'data/screener_reconciliation.json'
+        comparison = json.loads(comparison_path.read_text()) if comparison_path.exists() else {}
+        original_facts = json.loads((root / 'data/facts_reference.json').read_text())['records']
+        facts_hash = 'sha256:' + hashlib.sha256(json.dumps(original_facts, sort_keys=True,
+            separators=(',', ':'), ensure_ascii=False, allow_nan=False).encode()).hexdigest()
+        comparison = visible_state(comparison, report['analysis_date'], facts_hash)
+    except (OSError, ValueError, KeyError, TypeError):
+        comparison = visible_state({'status': 'unavailable',
+            'collection_error_code': 'local_comparison_unreadable'}, report['analysis_date'])
+    report['external_financial_comparison'] = {k: comparison.get(k) for k in
+        ('status', 'checked_at', 'last_success_at', 'source_generated_at',
+         'source_sha256', 'nour_facts_sha256', 'summary', 'automatic_corrections', 'documents_certified')}
     fixture = {**fixture, 'records': {s: {**rec, 'candles': [b for b in (rec.get('candles') if isinstance(rec.get('candles'),list) else [])
         if isinstance(b,dict) and isinstance(b.get('d'), str) and b['d'] <= report['analysis_date']
         and b['d'] != (rec.get('quarantined_market') or {}).get('session')]}
@@ -605,6 +622,19 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
         (output/'company-logos.json').write_bytes(logo_manifest.read_bytes())
     style = (assets / "nour.css").read_text(encoding="utf-8")
     script = '\n'.join((assets / name).read_text(encoding='utf-8') for name in ('nour.js', 'chart-controls.js', 'chart.js', 'market.js', 'bi.js'))
+    (output/'screener-reconciliation.json').write_text(json.dumps(comparison,
+        ensure_ascii=False, allow_nan=False, indent=2)+'\n', encoding='utf-8')
+    from .screener_primary_view import review_note
+    primary_review_path = root/'docs/screener-primary-review-2026-11-09.json'
+    primary_review = json.loads(primary_review_path.read_text()) if primary_review_path.exists() else {}
+    # A dated review is never backfilled into an earlier analysis.
+    primary_note = review_note(primary_review, report['analysis_date'])
+    (output/'screener-primary-review.json').write_text(json.dumps(primary_review if primary_note else {},
+        ensure_ascii=False, allow_nan=False, indent=2)+'\n', encoding='utf-8')
+    (output/'contre-verification.html').write_text(shell('Contre-vérification financière',
+        header('index.html', report.get('snapshot_updated') or '') +
+        screener_body(comparison, report['analysis_date']).replace('</main>', primary_note+'</main>'),
+        style, script), encoding='utf-8')
     from .resilience import guarded
     pages={}
     for row in report['results']:
@@ -641,7 +671,7 @@ def build_site(fixture, report, output, briefing=None, editions=None, closing=No
     (output / "sources.html").write_text(
         shell("Sources économiques marocaines",
               header("index.html", report.get("snapshot_updated") or "")
-              + catalog_page(economic_catalog).replace("</main>", market_sources(report) + logo_credits() + monitor_html(watch_state) + "</main>")
+              + catalog_page(economic_catalog).replace("</main>", summary_card(comparison, report['analysis_date']) + market_sources(report) + logo_credits() + monitor_html(watch_state) + "</main>")
               + "<footer>BVC Analyzer Nour · sources contextuelles non certifiantes.</footer>",
               style, script), encoding="utf-8")
     (output / "economic-sources-summary.json").write_text(

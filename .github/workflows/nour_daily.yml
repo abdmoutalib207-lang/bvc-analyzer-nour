@@ -143,6 +143,11 @@ jobs:
         if: needs.plan.outputs.slot == 'closing' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.slot != 'auto' && inputs.scheduled_for == '')
         continue-on-error: true
         run: python tools/update_sector_sources.py
+      - name: Compare published financial facts with MS Screener (no automatic corrections)
+        id: screener_comparison
+        if: needs.plan.outputs.slot == 'closing' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.slot != 'auto' && inputs.scheduled_for == '')
+        continue-on-error: true
+        run: python tools/update_screener_reconciliation.py
       - name: Restore bounded primary PDF cache
         if: needs.plan.outputs.slot == 'closing' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.slot != 'auto' && inputs.scheduled_for == '')
         uses: actions/cache@v4

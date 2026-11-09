@@ -35,8 +35,25 @@ async function answerAfter(page,action){
       const errors=[];const page=await context.newPage();let marketReport;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','comptabilite.html','sources.html','macro.html','anomalies.html']){
+      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','comptabilite.html','sources.html','contre-verification.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='contre-verification.html'){
+          const audit=page.locator('[data-screener-audit]');
+          assert.equal(await audit.getByRole('heading',{name:'Contre-vérification financière',exact:true}).count(),1);
+          assert.ok((await audit.innerText()).includes('Aucune correction automatique'));
+          const comparison=await (await context.request.get(new URL('screener-reconciliation.json',base).href)).json();
+          const symbols=[...new Set((comparison.rows||[]).map(r=>r.symbol))];
+          assert.equal(await audit.locator('[data-comparison-symbol]').count(),symbols.length);
+          assert.equal(await audit.locator('a[href="screener-reconciliation.json"]').count(),1);
+          if(symbols.includes('ADI')){
+            const detail=audit.locator('[data-comparison-symbol="ADI"]');
+            await detail.locator('summary').click();
+            assert.equal(await detail.locator('tbody tr').count(),comparison.rows.filter(r=>r.symbol==='ADI').length);
+            assert.ok((await detail.innerText()).includes('MS − Nour'));
+          }
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Financial comparison overflows '+width);
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`financial-comparison-${width}.png`)});}
+        }
         if(route==='comptabilite.html'){
           assert.equal(await page.locator('tbody tr').count(),80);
           assert.equal(await page.locator('details[open]').count(),0);
