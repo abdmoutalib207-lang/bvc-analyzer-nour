@@ -199,6 +199,10 @@ def validate_payload(payload):
         if (not re.fullmatch(r'[A-Z0-9]{1,10}', symbol) or not isinstance(company, dict)
                 or company.get('ticker') != symbol or not isinstance(company.get('f'), dict)):
             raise ValueError('issuer_schema')
+        issuer_scope = company.get('scope')
+        if issuer_scope is not None and (not isinstance(issuer_scope, str)
+                                        or issuer_scope not in ('social', 'consolidated')):
+            raise ValueError('issuer_scope_schema')
     # Python's JSON decoder also accepts overflowing exponents unless checked.
     def check(value, depth=0):
         if depth > 30:
@@ -243,6 +247,11 @@ def _row(payload, symbol, company, record, key, metric, unit, period, period_end
                scope=source_scope, screener_regime=source_regime,
                nour_provenance={k: own.get(k) for k in ('url', 'page', 'document_hash', 'validation_status', 'base', 'period_end')},
                screener_provenance=provenance, status='not_comparable', reason='dimensions_incomplete')
+    own_currency = own.get('devise', record.get('devise'))
+    row['nour_provenance'].update(currency=own_currency, unit=own.get('unite'))
+    if unit == 'MMAD' and (own_currency != 'MAD' or company.get('currency') != 'MAD'):
+        row['unit'] = ('Unités à rapprocher (Nour ' + str(own_currency or 'devise non précisée')
+                       + ' / source ' + str(company.get('currency') or 'devise non précisée') + ')')
     if not row['nour_provenance']['url']:
         row['nour_provenance']['url'] = record.get('url')
     def stop(status, reason):
@@ -345,9 +354,13 @@ def reconcile(payload, nour, *, checked_at=None, source_sha256=None, payload_sha
         send = latest.get('period_end')
         if isinstance(send, str) and re.fullmatch(r'\d{4}-06-30', send) and send <= today.isoformat():
             period = 'H1-' + send[:4]
-            for field, metric, key in [('reported_net_millions', 'RNPG', 'resultat_net_part_groupe'), ('revenue_millions', 'CA', 'chiffre_affaires')]:
+            # The stored activity label, never the sector, distinguishes PNB.
+            activity = {'PNB': ('PNB', 'produit_net_bancaire'),
+                        'CA': ('CA', 'chiffre_affaires')}.get(record.get('semester_activity_label'),
+                                                           ('activity_unspecified', 'revenue_millions'))
+            for field, metric, key in [('reported_net_millions', 'RNPG', 'resultat_net_part_groupe'), ('revenue_millions', *activity)]:
                 value = latest.get(field)
-                external = (periods.get(period) or {}).get(metric)
+                external = (periods.get(period) or {}).get(metric) if metric != 'activity_unspecified' else None
                 if value is None and not external: continue
                 item = dict(valeur=value, unite='MMAD', devise=latest.get('currency'), period_end=send,
                             base=latest.get('accounting_basis'), url=latest.get('document_url'),
@@ -355,7 +368,14 @@ def reconcile(payload, nour, *, checked_at=None, source_sha256=None, payload_sha
                 # A bare 'net' amount cannot establish group vs total profit.
                 if metric == 'RNPG' and 'part du groupe' not in _plain(item['base']):
                     item['base'] = None
-                rows.append(_row(payload, symbol, company, record, key, metric, 'MMAD', period, send, item, external))
+                unit = ('MMAD' if latest.get('currency') == 'MAD' else
+                        'millions de ' + latest['currency'] if isinstance(latest.get('currency'), str) else
+                        'millions — devise à confirmer')
+                comparison = _row(payload, symbol, company, record, key, metric, unit, period, send, item, external)
+                if metric == 'activity_unspecified':
+                    comparison.update(status='not_comparable', reason='activity_label_unverified',
+                                      activity_label=record.get('semester_activity_label'), screener_value=None, difference=None)
+                rows.append(comparison)
     counts = Counter(r['status'] for r in rows)
     return dict(schema_version=1, version=VERSION, status='collected', checked_at=stamp,
                 last_success_at=stamp, source_url=SOURCE_URL, source_generated_at=generated,

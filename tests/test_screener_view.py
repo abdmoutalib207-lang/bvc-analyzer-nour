@@ -142,6 +142,19 @@ class ScreenerViewTests(unittest.TestCase):
         self.assertNotIn('Lignes non comparées',future_page)
         self.assertNotIn('<strong>78</strong>',future_page)
 
+    def test_malformed_diagnostic_codes_do_not_block_publication_or_emit_markup(self):
+        for value in (['<script>bad</script>'], {'code':'<img onerror=bad>'}):
+            state=sample();state['status']=value
+            row=state['rows'][0]
+            for key in ('status','metric','reason','scope'):
+                row[key]=value
+            row['screener_provenance'].update(method=value,version=value)
+            state['coverage']=[dict(symbol='DIS',status=value,nour_available=False)]
+            page=body(state,'2026-11-09')
+            self.assertIn('À préciser',page)
+            self.assertNotIn('<script>',page);self.assertNotIn('<img ',page)
+            self.assertIn('contre-verification.html',summary_card(state,'2026-11-09'))
+
 
 if __name__ == '__main__':
     unittest.main()

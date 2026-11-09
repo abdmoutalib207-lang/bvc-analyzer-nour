@@ -38,6 +38,7 @@ METRICS = {
     'charges_fin_nettes': 'Résultat financier', 'EBE': 'Excédent brut d’exploitation',
     'dette_financiere': 'Dette financière', 'dette_nette': 'Dette nette', 'tresorerie': 'Trésorerie',
     'total_actif': 'Total actif', 'nb_titres': 'Nombre d’actions', 'dpa_propose': 'Dividende par action proposé',
+    'activity_unspecified': 'Niveau d’activité semestriel · libellé à vérifier',
 }
 REASONS = {
     'dimensions_incomplete': 'Dimensions comptables incomplètes',
@@ -59,6 +60,7 @@ REASONS = {
     'same_period_scope_currency_numeric_match': 'Même période, périmètre et devise ; montants concordants',
     'small_difference_rounding_unverified': 'Faible écart numérique ; l’arrondi reste à confirmer',
     'primary_document_review_required': 'Écart à vérifier dans les documents officiels',
+    'activity_label_unverified': 'Nature de l’activité semestrielle à confirmer ; aucune assimilation au chiffre d’affaires',
 }
 SCOPES = {'social': 'Comptes sociaux', 'consolidated': 'Comptes consolidés'}
 METHODS = {'text_parse': 'Extraction de texte', 'visual': 'Lecture visuelle déclarée',
@@ -68,7 +70,13 @@ VERSIONS = {'reported': 'Publié', 'restated': 'Retraité', 'proforma': 'Pro for
 
 
 def _esc(value):
-    return escape(str(value if value is not None else '—'), quote=True)
+    text = str(value if value is not None else '—')
+    return escape(text[:2000] + ('…' if len(text) > 2000 else ''), quote=True)
+
+
+def _label(mapping, value, default='À préciser'):
+    """Schema drift must not turn a diagnostic code into an unhashable key."""
+    return mapping.get(value, value) if isinstance(value, str) else default
 
 
 def _day(value):
@@ -79,9 +87,10 @@ def _day(value):
 
 
 def _totals(rows):
-    counts = Counter(row.get('status') for row in rows if isinstance(row, dict))
+    counts = Counter(row.get('status') for row in rows
+                     if isinstance(row, dict) and isinstance(row.get('status'), str))
     return {**{key: counts[key] for key in LABELS}, 'rows': len(rows),
-            'issuers': len({row.get('symbol') for row in rows if isinstance(row, dict)})}
+            'issuers': len({str(row.get('symbol')) for row in rows if isinstance(row, dict)})}
 
 
 def visible_state(state, asof, nour_facts_sha256=None):
@@ -151,8 +160,8 @@ def _external_provenance(row):
     p = row.get('screener_provenance') or {}
     p = p if isinstance(p, dict) else {}
     return (f'Document indiqué : {_esc(p.get("document"))}<br>Page indiquée : {_esc(p.get("page"))}'
-            f'<br>Libellé : {_esc(p.get("label"))}<br>Méthode : {_esc(METHODS.get(p.get("method"), p.get("method")))}'
-            f'<br>Version : {_esc(VERSIONS.get(p.get("version"), p.get("version")))}<br>Référentiel : {_esc(row.get("screener_regime"))}'
+            f'<br>Libellé : {_esc(p.get("label"))}<br>Méthode : {_esc(_label(METHODS, p.get("method")))}'
+            f'<br>Version : {_esc(_label(VERSIONS, p.get("version")))}<br>Référentiel : {_esc(row.get("screener_regime"))}'
             '<br><small>Référence externe ; cette mention ne prouve pas la lecture du PDF.</small>')
 
 
@@ -190,7 +199,7 @@ def _gaps(state):
     return ('<section class="panel"><h2>Lignes non comparées</h2>'
             '<p>Ces sociétés restent dans la couverture cible ; leur absence de tableau détaillé a les motifs suivants.</p><ul>'
             + ''.join('<li><strong>' + _esc(r.get('symbol')) + '</strong> : '
-                      + _esc(labels.get(r.get('status'), 'Couverture à préciser'))
+                      + _esc(_label(labels, r.get('status'), 'Couverture à préciser'))
                       + (' · dossier Nour présent' if r.get('nour_available') is True else ' · dossier Nour absent ou non confirmé')
                       + '</li>' for r in gaps) + '</ul></section>')
 
@@ -200,7 +209,7 @@ def summary_card(state, asof=None):
     summary = state.get('summary') or {}
     summary = summary if isinstance(summary, dict) else {}
     return ('<section class="panel" id="contre-verification"><h2>Contre-vérification des fondamentaux</h2>'
-            f'<p>{_esc(STATES.get(state.get("status"), state.get("status") or STATES["not_observed"]))}. '
+            f'<p>{_esc(_label(STATES, state.get("status"), STATES["not_observed"]))}. '
             f'{_value(summary.get("issuers", 0))} sociétés dans l’univers suivi ; '
             f'{_value(summary.get("difference", 0))} écarts numériques à rapprocher.</p>'
             + _dates(state) + _notices(state)
@@ -222,15 +231,17 @@ def body(state, asof=None):
     for symbol, rows in sorted(groups.items()):
         cells = []
         for row in rows:
-            status = LABELS.get(row.get('status'), row.get('status') or 'À préciser')
+            status = _label(LABELS, row.get('status'))
             metric = ('Résultat net social' if row.get('nour_field') == 'resultat_net_social'
-                      else METRICS.get(row.get('metric'), row.get('metric')))
+                      else _label(METRICS, row.get('metric')))
             cells.append('<tr><th scope="row">' + _esc(metric)
+                + ('<br><small>Libellé conservé : ' + _esc(row.get('activity_label')) + '</small>'
+                   if row.get('activity_label') else '')
                 + f'<details><summary>Clé technique</summary><small>{_esc(row.get("nour_field"))}</small></details></th>'
                 f'<td>{_esc(row.get("period"))}<br>{_esc(row.get("period_end"))}'
-                f'<br>{_esc(SCOPES.get(row.get("scope"), row.get("scope")))}<br>{_esc(row.get("unit"))}</td>'
+                f'<br>{_esc(_label(SCOPES, row.get("scope")))}<br>{_esc(row.get("unit"))}</td>'
                 f'<td>{_value(row.get("nour_value"))}</td><td>{_value(row.get("screener_value"))}</td>'
-                f'<td>{_value(row.get("difference"))}</td><td>{_esc(status)}<br>{_esc(REASONS.get(row.get("reason"), row.get("reason")))}</td>'
+                f'<td>{_value(row.get("difference"))}</td><td>{_esc(status)}<br>{_esc(_label(REASONS, row.get("reason")))}</td>'
                 '<td>' + _nour_provenance(row) + '</td><td>' + _external_provenance(row) + '</td></tr>')
         panels.append('<details class="panel reading-details" data-comparison-symbol="' + _esc(symbol) + '"><summary>' + _esc(symbol)
             + f' · {len(rows)} comparaison(s)</summary><div class="tablewrap"><table class="sc-table">'
@@ -247,7 +258,7 @@ def body(state, asof=None):
             '<h1>Contre-vérification financière</h1>'
             '<p>Comparer les observations de Nour et de MS Screener, puis remonter aux publications.</p>'
             '</div></div><section class="panel"><h2>'
-            + _esc(STATES.get(state.get('status'), state.get('status') or STATES['not_observed']))
+            + _esc(_label(STATES, state.get('status'), STATES['not_observed']))
             + '</h2>' + _dates(state) + _notices(state)
             + '<p><strong>Aucune correction automatique. Aucun document certifié.</strong> '
             'Une concordance numérique ne constitue pas une vérification indépendante du PDF. '

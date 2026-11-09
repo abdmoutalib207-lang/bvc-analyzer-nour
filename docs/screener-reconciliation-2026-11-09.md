@@ -7,21 +7,25 @@ Nour, distinct des données qui alimentent les ratios et scores. Aucun code du
 screener n'est exécuté ou copié. Aucun chiffre canonique n'est remplacé sur la
 seule foi d'une concordance externe. Le principal reste en lecture seule.
 
-La collecte réelle du 9 novembre à 14:48 UTC a examiné 1 032 lignes :
+La collecte réelle du 9 novembre à 15:06 UTC a examiné 1 033 lignes :
 
 | Catégorie | Lignes |
 | --- | ---: |
-| Concordance numérique exacte | 98 |
-| Faible écart, précision à vérifier | 11 |
-| Écart numérique à rapprocher | 2 |
-| Bases ou définitions non comparables | 562 |
-| Donnée absente ou invalide pour la comparaison | 359 |
+| Concordance numérique exacte | 94 |
+| Faible écart, précision à vérifier | 10 |
+| Écart numérique à rapprocher | 1 |
+| Bases ou définitions non comparables | 590 |
+| Donnée absente ou invalide pour la comparaison | 338 |
 
 La cible comprend 80 titres ; 77 dossiers financiers existent dans Nour,
 78 sociétés dans la source et 76 sociétés ont des lignes comparées. Ces
 compteurs ne mesurent ni le nombre de PDF relus ni une certification financière.
 La source annonce une génération à 13:19 sans fuseau attesté : aucun UTC n'est
-inventé. Les collectes ultérieures peuvent modifier ces chiffres.
+inventé. Les collectes ultérieures peuvent modifier ces chiffres. Le premier
+passage à 14:48 UTC comportait 1 032 lignes, 98 concordances et deux écarts.
+Le contrôle final des libellés d'activité, notamment le PNB bancaire, réserve
+les comparaisons dont le libellé semestriel Nour n'est pas documenté. Cette
+différence de comptage ne résulte pas d'une modification des montants.
 
 ## Constats financiers contrôlés
 
@@ -40,13 +44,15 @@ inventé. Les collectes ultérieures peuvent modifier ces chiffres.
   arithmétiquement cohérent. La petite différence de dette de 0,002 MMAD vient
   du total publié dans la note versus la somme de ses composants. Ne pas
   substituer le résultat total au RNPG, ni le comparatif original au retraité.
-- AKD S1 : les deux écarts numériques concernent 225 versus 225,051903 MMAD
+- AKD S1 : les deux écarts relevés au premier passage concernent 225 versus 225,051903 MMAD
   de RNPG et 2 532 versus 2 532,218920 MMAD de CA. La copie à en-tête émetteur
   publiée par Medias24 a été rendue et relue ; le RNPG se retrouve aussi par
   252,460278 − 27,408375. Les URL AMMC/Bourse étant indisponibles pendant la
   revue, l'identité du fichier miroir avec le fichier officiel n'est pas
   certifiée. Les montants Nour sont arrondis, pas des erreurs établies. Les
-  précisions restent candidates, sans modification automatique.
+  précisions restent candidates, sans modification automatique. Dans le
+  contrôle final, seul le RNPG figure comme écart numérique comparable ;
+  l'activité reste réservée tant que son libellé propre n'est pas documenté.
 
 Les fiches Bourse ne suffisent pas à certifier les capitaux propres groupe,
 compte tenu de leur libellé générique. Les 888 références du screener sont
@@ -68,6 +74,9 @@ Un régime national générique ne certifie pas une transition CNC/PCGI. Un
 montant dérivé, EBE/EBITDA, trésorerie avec/sans placements, consensus, projection
 ou cours mobile n'est pas transformé en fait publié comparable. La période
 Nour doit être propre au fait ; le millésime du dossier ne suffit pas.
+Un libellé PNB explicite reste PNB. Une activité semestrielle sans libellé
+vérifiable n'est pas appelée chiffre d'affaires par défaut. Les montants
+d'Ennakl en TND gardent leur devise et leurs unités à rapprocher, jamais MMAD.
 
 ## Automatisation et accès public
 
@@ -79,7 +88,9 @@ le dernier succès daté avec l'état du dernier essai. Elle ne résout aucun é
 
 Le script télécharge uniquement l'URL HTTPS fixe du bundle, avec origine et
 redirections autorisées, délai, taille, Base64 stricte et décompression bornée.
-Le JSON rejette les nombres non finis et les clés dupliquées. Les faits Nour
+Le JSON rejette les nombres non finis, les clés dupliquées et les types de
+périmètre invalides. Les méthodes d'extraction et codes mal formés ne peuvent
+pas faire échouer la présentation. Les faits Nour
 et la source ont des empreintes distinctes ; les références externes ne
 peuvent pas étendre la liste des domaines de publications autorisés.
 

@@ -59,6 +59,20 @@ class ScreenerReconciliationTests(unittest.TestCase):
         p,n=fixtures();n['records']['ADI']['faits']['resultat_net_part_groupe']['unite']='KMAD'
         self.assertEqual(row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}))['reason'],'unit_missing_or_mismatch')
 
+    def test_non_mad_annual_values_never_receive_a_mmad_display_unit(self):
+        p,n=fixtures();n['records']['ADI']['devise']='TND'
+        own=n['records']['ADI']['faits']['resultat_net_part_groupe']
+        own.update(valeur=512.318302,devise='TND',unite=None)
+        p['companies']['ADI']['currency']='TND'
+        observed=row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}))
+        self.assertEqual(observed['status'],'not_comparable')
+        self.assertEqual(observed['reason'],'currency_mismatch')
+        self.assertNotIn('MMAD',observed['unit'])
+        self.assertEqual(observed['unit'],'Unités à rapprocher (Nour TND / source TND)')
+        self.assertEqual(observed['nour_value'],512.318302)
+        self.assertEqual(observed['nour_provenance']['currency'],'TND')
+        self.assertIsNone(observed['nour_provenance']['unit'])
+
     def test_scopes_and_reporting_standards_never_blended(self):
         for field,value in [('scope','social'),('regime','IFRS')]:
             p,n=fixtures();p['companies']['ADI'][field]=value
@@ -111,6 +125,50 @@ class ScreenerReconciliationTests(unittest.TestCase):
         p,n=fixtures();p['generated_at']='2026-11-10T00:00'
         self.assertEqual(collect(n,now=NOW,source_codes={'ADI':'ADI'},script=script(p))['status'],'unavailable')
         with self.assertRaises(ValueError):reconcile(p,n,checked_at='2026-11-09T15:30')
+
+    def test_invalid_external_scope_is_isolated_as_failed_refresh(self):
+        p,n=fixtures();previous=collect(n,now=NOW,source_codes={'ADI':'ADI'},script=script(p))
+        for scope in (['consolidated'], {'scope':'social'}, 'unknown'):
+            p['companies']['ADI']['scope']=scope
+            out=collect(n,previous,now=NOW,source_codes={'ADI':'ADI'},script=script(p))
+            self.assertEqual(out['status'],'degraded')
+            self.assertEqual(out['rows'],previous['rows'])
+        p['companies']['ADI']['scope']=None
+        self.assertEqual(row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}))['status'],'not_comparable')
+
+    def test_invalid_external_method_is_not_propagated_as_a_rendering_code(self):
+        p,n=fixtures();ext=p['companies']['ADI']['f']['FY2025']['RNPG']['reported']
+        for method in (['text_parse'], {'method':'text_parse'}):
+            ext['m']=method
+            out=collect(n,now=NOW,source_codes={'ADI':'ADI'},script=script(p))
+            self.assertEqual(out['status'],'collected')
+            self.assertIsNone(row(out)['screener_provenance']['method'])
+            self.assertEqual(row(out)['reason'],'extraction_method_unrecognized')
+
+    def test_semester_pnb_uses_explicit_activity_label_not_ca_or_sector(self):
+        p,n=fixtures()
+        n['records']['ADI']['semester_activity_label']='PNB'
+        n['records']['ADI']['latest_report']=dict(period_end='2026-06-30',currency='MAD',
+            accounting_basis='consolidé normes nationales',revenue_millions=123)
+        p['fields']['PNB']={'unit':'Mcur'}
+        p['companies']['ADI']['f']['H1-2026']['PNB']={'reported':dict(v=123,d=0,p=3,m='text_parse')}
+        p['companies']['ADI']['f']['H1-2026']['CA']={'reported':dict(v=999,d=0,p=3,m='text_parse')}
+        out=reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'})
+        pnb=row(out,'produit_net_bancaire','H1-2026')
+        self.assertEqual(pnb['metric'],'PNB');self.assertEqual(pnb['status'],'agreement')
+        self.assertFalse(any(r['period']=='H1-2026' and r['metric']=='CA' for r in out['rows']))
+        n['records']['ADI']['semester_activity_label']='CA'
+        self.assertEqual(row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}),'chiffre_affaires','H1-2026')['screener_value'],999)
+        for label in (None, 'Produits d’assurance IFRS 17', 'Produits issus des contrats avec les clients'):
+            n['records']['ADI']['semester_activity_label']=label
+            unknown=row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}),'revenue_millions','H1-2026')
+            self.assertEqual(unknown['metric'],'activity_unspecified')
+            self.assertEqual(unknown['status'],'not_comparable')
+            self.assertEqual(unknown['reason'],'activity_label_unverified')
+            self.assertIsNone(unknown['screener_value'])
+        n['records']['ADI']['latest_report']['currency']='TND'
+        unknown=row(reconcile(p,n,checked_at=NOW,source_codes={'ADI':'ADI'}),'revenue_millions','H1-2026')
+        self.assertEqual(unknown['unit'],'millions de TND')
 
     def test_restated_never_silently_selected_when_reported_missing(self):
         p,n=fixtures();v=p['companies']['ADI']['f']['FY2025']['RNPG'];v['restated']=v.pop('reported')
