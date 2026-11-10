@@ -1,0 +1,482 @@
+{
+  "version": "screener-independent-review-v1",
+  "reviewed_at": "2026-11-09",
+  "screener_url": "https://ms-screener.vercel.app/",
+  "bundle_generated_at": "2026-11-09T13:19",
+  "bundle_sha256": "73f4ee814f397108963f01fbaa6da9ce15640b677635617ee9f6fb7cff31729a",
+  "snapshot_sha256": "e070e3f1f69633ece54977a3ca0cd06c6967ff950740a9b589ef41e9566f40a7",
+  "population": 78,
+  "document_labels": 888,
+  "all_documents_certified": false,
+  "checks": [
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "CA",
+      "screener_value": 2708.923803,
+      "unit": "MMAD",
+      "reference_value": 2708.923803,
+      "difference": 0.0,
+      "status": "primary_cached_document_checked",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 54,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "RNPG",
+      "screener_value": 453.719263,
+      "unit": "MMAD",
+      "reference_value": 453.719263,
+      "difference": 0.0,
+      "status": "primary_cached_document_checked",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 54,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "capitaux_propres_groupe",
+      "screener_value": 9481.694524,
+      "unit": "MMAD",
+      "reference_value": 9481.694524,
+      "difference": 0.0,
+      "status": "previous_primary_review_and_matching_fact",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 53,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "dettes_financieres_c",
+      "screener_value": 1127.706111,
+      "unit": "MMAD",
+      "reference_value": 1127.706111,
+      "difference": 0.0,
+      "status": "previous_primary_review_and_matching_fact",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 53,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "dettes_financieres_nc",
+      "screener_value": 3425.37268,
+      "unit": "MMAD",
+      "reference_value": 3425.37268,
+      "difference": 0.0,
+      "status": "previous_primary_review_and_matching_fact",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 53,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADH",
+      "period": "2025-12-31",
+      "metric": "tresorerie",
+      "screener_value": 167.628242,
+      "unit": "MMAD",
+      "reference_value": 167.628242,
+      "difference": 0.0,
+      "status": "previous_primary_review_and_matching_fact",
+      "primary_url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "page": 53,
+      "note": "Document officiel en cache, SHA-256 identique au contrôle du6novembre ; pages8et54 relues visuellement aujourd’hui. Pages53ànouveau extraites, pas renduesdanscettepasse.",
+      "primary_document_sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "source_hash_review_scope": "cached_primary_file_rehashed_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADI",
+      "period": "2025-12-31",
+      "metric": "CA",
+      "screener_value": 2431.512,
+      "unit": "MMAD",
+      "reference_value": 2431.512,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "page": 22,
+      "note": "Fiche Bourse ADI170708 concordante ; PDF annuel non retéléchargé aujourd’hui (timeout).",
+      "primary_document_sha256": "0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "Moroccan consolidated CNC as documented in existing primary review",
+      "prior_reviewed_at": "2026-10-11",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADI",
+      "period": "2025-12-31",
+      "metric": "RNPG",
+      "screener_value": 407.601,
+      "unit": "MMAD",
+      "reference_value": 407.601,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "page": 22,
+      "note": "Fiche Bourse ADI170708 concordante ; PDF annuel non retéléchargé aujourd’hui (timeout).",
+      "primary_document_sha256": "0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "Moroccan consolidated CNC as documented in existing primary review",
+      "prior_reviewed_at": "2026-10-11",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADI",
+      "period": "2025-12-31",
+      "metric": "capitaux_propres_groupe",
+      "screener_value": 3993.181,
+      "unit": "MMAD",
+      "reference_value": 3993.181,
+      "difference": 0.0,
+      "status": "previous_primary_review_only",
+      "primary_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "page": 21,
+      "note": "Le montant correspond au précédent contrôle PDF de Nour. La fiche Bourse utilise un libellé générique « capitaux propres ensemble consolidé » ; elle ne certifie donc pas le périmètre groupe de ce montant.",
+      "primary_document_sha256": "0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "Moroccan consolidated CNC as documented in existing primary review",
+      "prior_reviewed_at": "2026-10-11",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "ADI",
+      "period": "2025-12-31",
+      "metric": "nb_titres",
+      "screener_value": 22078588.0,
+      "unit": "actions",
+      "reference_value": 22078588,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf",
+      "page": 50,
+      "note": "Fiche Bourse ADI170708 concordante ; PDF annuel non retéléchargé aujourd’hui (timeout).",
+      "primary_document_sha256": "0d076ef448b6228ec8ff2ad60c2368044382d545ef84f51afb133636e4c538bc",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "Moroccan consolidated CNC as documented in existing primary review",
+      "prior_reviewed_at": "2026-10-11",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "RDS",
+      "period": "2025-12-31",
+      "metric": "CA",
+      "screener_value": 468.513,
+      "unit": "MMAD",
+      "reference_value": 468.513,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+      "page": 22,
+      "note": "Fiche Bourse RDS250612 concordante ; PDF lu partiellement par outilweb, téléchargement local timeout, pas de nouvelle revue visuelle complète.",
+      "primary_document_sha256": "af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "prior_reviewed_at": "2026-10-16",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "RDS",
+      "period": "2025-12-31",
+      "metric": "RNPG",
+      "screener_value": 4.494,
+      "unit": "MMAD",
+      "reference_value": 4.494,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+      "page": 22,
+      "note": "Fiche Bourse RDS250612 concordante ; PDF lu partiellement par outilweb, téléchargement local timeout, pas de nouvelle revue visuelle complète.",
+      "primary_document_sha256": "af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "prior_reviewed_at": "2026-10-16",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "RDS",
+      "period": "2025-12-31",
+      "metric": "capitaux_propres_groupe",
+      "screener_value": 3739.48,
+      "unit": "MMAD",
+      "reference_value": 3739.48,
+      "difference": 0.0,
+      "status": "previous_primary_review_only",
+      "primary_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+      "page": 26,
+      "note": "Le montant correspond au précédent contrôle PDF de Nour. La fiche Bourse utilise un libellé générique « capitaux propres ensemble consolidé » ; elle ne certifie donc pas le périmètre groupe de ce montant.",
+      "primary_document_sha256": "af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "prior_reviewed_at": "2026-10-16",
+      "automatic_promotion_authorized": false
+    },
+    {
+      "symbol": "RDS",
+      "period": "2025-12-31",
+      "metric": "nb_titres",
+      "screener_value": 26208850.0,
+      "unit": "actions",
+      "reference_value": 26208850,
+      "difference": 0.0,
+      "status": "official_exchange_corroborated_and_previous_primary_review",
+      "primary_url": "https://www.ammc.ma/sites/default/files/RDS_RFA_2025.pdf",
+      "page": 23,
+      "note": "Fiche Bourse RDS250612 concordante ; PDF lu partiellement par outilweb, téléchargement local timeout, pas de nouvelle revue visuelle complète.",
+      "primary_document_sha256": "af0e17be057fcc51f43834745462b8ca07dc9c9de506cf3340ca0330ca8576fd",
+      "source_hash_review_scope": "hash_from_existing_Nour_review_not_refetched_today",
+      "currency": "MAD",
+      "accounting_scope": "consolidated",
+      "accounting_basis": "IFRS",
+      "prior_reviewed_at": "2026-10-16",
+      "automatic_promotion_authorized": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "adi_debt_definition_differs",
+      "severity": "reservation",
+      "screener_net_debt": 1785.905,
+      "screener_ebe": 614.625,
+      "screener_ratio": 2.905682326621924,
+      "net_debt_including_vmp": 1361.489,
+      "company_reported_net_debt": 1303,
+      "remaining_reconciliation_gap": 58.489,
+      "excluded_vmp": 424.416,
+      "conclusion": "Le multiple 2,9x provient de la déduction des seules disponibilités. Il ne résout ni le pont avec 1 303 MMAD publié, ni le périmètre des VMP. Ne pas remplacer la réserve Nour par 2,9x."
+    },
+    {
+      "id": "adh_growth_method_change",
+      "severity": "reservation",
+      "arithmetic_growth_pct": 4.402647715444947,
+      "conclusion": "4,40265 % arithmétiquement exact ; la société décrit aussi une hausse de plus de 4 %. La page 8 précise un changement de comptabilisation et une simulation selon l’ancien mode à 3 535 MMAD. Ne pas qualifier cette croissance de comparable à méthodes constantes sans pont documentaire."
+    },
+    {
+      "id": "rds_reported_restated",
+      "severity": "info",
+      "original_2024_revenue": 135.909,
+      "restated_2024_revenue": 233.682,
+      "original_2024_equity": 4027.483,
+      "restated_2024_equity": 3735.121,
+      "conclusion": "Conserver les deux versions. Comparer 2025 à 2024 retraité, en distinguant la publication originale. Le CA retraité concorde avec la fiche Bourse et le précédent contrôle Nour ; le périmètre des capitaux exige le PDF, compte tenu du libellé générique de la fiche Bourse."
+    },
+    {
+      "id": "document_labels_not_identity",
+      "severity": "reservation",
+      "conclusion": "La clé docs contient des libellés texte sans URL ni empreinte. Les indices de document, page et libellé ne suffisent pas à certifier le fichier exact. Ne pas promouvoir automatiquement les mesures importées."
+    },
+    {
+      "id": "price_period_alignment",
+      "severity": "info",
+      "conclusion": "Le bundle embarque un relevé de prix daté ; le site peut charger ensuite une API de prix plus récente. Comparer les ratios uniquement à prix, date, période et définition égaux, sans mélanger cours courant et PER à la clôture de 2025."
+    },
+    {
+      "id": "rds_net_debt_rounding_difference",
+      "severity": "small_source_difference",
+      "screener_gross_debt_mmad": 2116.224,
+      "nour_document_total_mmad": 2116.222,
+      "arithmetic_components_total_mmad": 2116.224,
+      "difference_mmad": 0.002,
+      "conclusion": "Le screener reconstruit le total du bilan à 2 116,224 MMAD, tandis que Nour conserve le total 2 116,222 de la note de dette p.26. Le décalage de 2 KMAD est déjà signalé dans la provenance Nour ; garder les deux mesures et ne pas traiter cette petite divergence comme une preuve de faux document."
+    },
+    {
+      "id": "akd_semester_precision_candidate",
+      "severity": "precision_review",
+      "conclusion": "AKD S1 2026 : 225 et 2 532 MMAD dans Nour sont arrondis. La copie des états détaillés à en-tête émetteur donne 225,051903 et 2 532,218920 MMAD. Les URL officielles étant indisponibles lors de cette revue, le fichier miroir et son empreinte restent distincts ; ces précisions sont candidates, sans correction canonique automatique."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.ammc.ma/sites/default/files/Addoha_RFA_2025.pdf",
+      "sha256": "0bec51e016409c0204221352b76c179087461a19e4ac7e1076622f0c130b6dbb",
+      "retrieval": "existing_primary_pdf_cache",
+      "visually_reviewed_pdf_pages": [
+        8,
+        54
+      ]
+    },
+    {
+      "url": "https://casablanca-bourse.com/fr/live-market/emetteurs/RDS250612",
+      "retrieval": "official_exchange_indexed_response",
+      "verified_metrics": [
+        "CA",
+        "RNPG",
+        "nb_titres"
+      ]
+    },
+    {
+      "url": "https://www.casablanca-bourse.com/fr/live-market/emetteurs/ADI170708",
+      "retrieval": "official_exchange_indexed_response",
+      "verified_metrics": [
+        "CA",
+        "RNPG",
+        "nb_titres"
+      ]
+    }
+  ],
+  "limitations": [
+    "Les téléchargements directs des trois PDF AMMC ont expiré le 9 novembre. ADH a été contrôlé dans le cache du PDF officiel, dont l’empreinte correspond à celle déjà consignée dans Nour.",
+    "Échantillon de trois sociétés et quatorze montants ; aucune certification des 888 libellés de documents ni de tous les historiques.",
+    "Les montants dérivés EBE et dette nette doivent rester distincts des indicateurs publiés.",
+    "Le libellé générique « capitaux propres ensemble consolidé » sur la fiche Bourse empêche de certifier le périmètre groupe par cette seule source, même si le montant est identique au précédent contrôle PDF.",
+    "Revue AKD S1 2026 : précision concordante sur copie du document émetteur hébergée par un tiers ; identité avec le fichier officiel non vérifiée. Montants canoniques arrondis conservés."
+  ],
+  "related_existing_reviews": [
+    "docs/debt-review-2026-10-13.md",
+    "docs/accounting-methods-2026-10-26.md",
+    "docs/financial-completion-2026-11-06.md",
+    "tools/reconcile_adi_oct11.py"
+  ],
+  "canonical_facts_changed": false,
+  "primary_engine_write_count": 0,
+  "followup_precision_review": {
+    "symbol": "AKD",
+    "external_symbol": "AKT",
+    "period_end": "2026-06-30",
+    "currency": "MAD",
+    "accounting_scope": "consolidated",
+    "reviewed_at": "2026-11-09",
+    "status": "precision_candidates_official_file_identity_pending",
+    "canonical_facts_changed": false,
+    "original_source_url": "https://www.ammc.ma/sites/default/files/Akdital_S1_26.pdf",
+    "original_values": {
+      "reported_net_millions": 225,
+      "revenue_millions": 2532,
+      "reported_net_previous_millions": 194.130198,
+      "revenue_previous_millions": 2093
+    },
+    "candidate_values": {
+      "reported_net_millions": 225.051903,
+      "revenue_millions": 2532.21892,
+      "reported_net_previous_millions": 194.130198,
+      "revenue_previous_millions": 2093.336126
+    },
+    "external_reference": {
+      "document_label": "États financiers S1 2026",
+      "document_index": 77,
+      "pdf_page_claimed": 2,
+      "net_label": "Résultat de l’exercice",
+      "revenue_label": "Chiffre d’affaires",
+      "snapshot_generated_at": "2026-11-09T13:19"
+    },
+    "official_retrieval_attempts": [
+      {
+        "url": "https://www.ammc.ma/sites/default/files/Akdital_S1_26.pdf",
+        "status": "timeout",
+        "local_pdf_obtained": false
+      },
+      {
+        "url": "https://www.casablanca-bourse.com/sites/default/files/pemetteur/2026-09/akdital_s1_26.pdf",
+        "status": "unavailable",
+        "local_pdf_obtained": false
+      }
+    ],
+    "issuer_document_mirror": {
+      "url": "https://assets.medias24.com/communication-financiere/2026/09/30/akdital-indicateurs-semestriels-au-30-juin-2026-195856.pdf",
+      "publisher": "AKDITAL (document à en-tête de l’émetteur)",
+      "host": "Medias24",
+      "host_classification": "third_party_mirror",
+      "sha256": "561d0b852b2b174d359064cfbdb5ca67ba3e159f837f41588cf803c1ac9c89db",
+      "bytes": 1172990,
+      "visually_checked_pdf_pages": [
+        1
+      ],
+      "identity_with_official_host_pdf_verified": false,
+      "document_title": "Indicateurs semestriels au 30 juin 2026 — Comptes consolidés",
+      "original_unit": "MAD",
+      "checked_lines": [
+        {
+          "metric": "revenue",
+          "current_period": "2026-06-30",
+          "current_value_mad": 2532218920,
+          "previous_period": "2025-06-30",
+          "previous_value_mad": 2093336126
+        },
+        {
+          "metric": "total_consolidated_income",
+          "current_value_mad": 252460278,
+          "previous_value_mad": 214226312
+        },
+        {
+          "metric": "minority_interests",
+          "current_value_mad": 27408375,
+          "previous_value_mad": 20096114
+        },
+        {
+          "metric": "group_income",
+          "document_label": "Résultat de l’exercice",
+          "current_value_mad": 225051903,
+          "previous_value_mad": 194130198
+        }
+      ],
+      "arithmetic_checks": [
+        {
+          "formula": "252460278 - 27408375",
+          "expected_mad": 225051903,
+          "passed": true
+        },
+        {
+          "formula": "214226312 - 20096114",
+          "expected_mad": 194130198,
+          "passed": true
+        }
+      ]
+    },
+    "conclusion": "Les chiffres Nour 225 et 2 532 MMAD correspondent aux montants arrondis du communiqué. Les chiffres plus précis du screener concordent avec la copie des états détaillés à en-tête AKDITAL, dont la première page a été relue visuellement. Aucun de ces écarts ne constitue une preuve que les montants arrondis sont faux. L’identité du fichier avec celui de l’AMMC ou de la Bourse n’a pas pu être vérifiée : ne pas attribuer l’empreinte du miroir au fichier officiel et ne pas corriger automatiquement les faits canoniques.",
+    "annual_ratios_affected": false,
+    "requires_annualization": false,
+    "automatic_promotion_authorized": false
+  }
+}
