@@ -47,7 +47,7 @@ async function answerAfter(page,action){
           assert.equal(await audit.locator('a[href="screener-reconciliation.json"]').count(),1);
           if(symbols.includes('ADI')){
             const detail=audit.locator('[data-comparison-symbol="ADI"]');
-            await detail.locator('summary').click();
+            await detail.locator(':scope > summary').click();
             assert.equal(await detail.locator('tbody tr').count(),comparison.rows.filter(r=>r.symbol==='ADI').length);
             assert.ok((await detail.innerText()).includes('MS − Nour'));
           }
