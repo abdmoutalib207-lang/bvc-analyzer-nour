@@ -48,8 +48,9 @@ async function answerAfter(page,action){
           if(symbols.includes('ADI')){
             const detail=audit.locator('[data-comparison-symbol="ADI"]');
             await detail.locator(':scope > summary').click();
+            await detail.locator('table').waitFor({state:'visible'});
             assert.equal(await detail.locator('tbody tr').count(),comparison.rows.filter(r=>r.symbol==='ADI').length);
-            assert.ok((await detail.innerText()).includes('MS − Nour'));
+            await detail.locator('thead th').filter({hasText:'Écart MS − Nour'}).waitFor({state:'visible'});
           }
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Financial comparison overflows '+width);
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`financial-comparison-${width}.png`)});}
