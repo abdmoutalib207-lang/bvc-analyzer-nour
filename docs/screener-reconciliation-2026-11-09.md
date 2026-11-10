@@ -109,5 +109,36 @@ immuabilité des faits, conservation du dernier succès, états futurs et périm
 liens et rendu HTML. Le parcours navigateur couvre aussi la nouvelle page
 à trois largeurs, y compris le détail ADI et l'absence de débordement.
 
-La validation complète et la publication réellement servie sont consignées
-après leur exécution. Une construction locale n'est pas une preuve de déploiement.
+La validation complète et la publication réellement servie sont détaillées ci-dessous.
+
+## Validation et publication observées — 10 novembre 2026
+
+La PR 44 est fusionnée au commit de code
+`f37387021f8f444b7d031465ce7c8f6098cd4adf`.
+La [revue 42838808668](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/42838808668)
+a réussi : 551 tests Python, gate complet, 51 parcours Chromium sur le site
+temporaire avec ADI bloqué et 51 sur la construction normale. Le sélecteur du
+volet ADI cible son résumé direct ; le test attend l'affichage du tableau et
+vérifie son en-tête directement, sans dépendre du retour à la ligne du texte.
+
+La [publication 42840724962](https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/42840724962)
+a terminé avec succès : nouvelle collecte, 551 tests Python, contrôles JS,
+gate complet et 153 parcours navigateur (51 normaux, 51 en quarantaine,
+51 sur le site effectivement déployé). Aucun appel à un LLM.
+
+Le contrôle automatique réel du 10 novembre à 15:06:20 UTC (16:06 Casablanca)
+est `collected`, avec les 1 033 lignes du tableau ci-dessus. La génération
+indiquée par la source reste le 9 novembre à 13:19, sans fuseau attesté.
+Une collecte récente n'est donc pas présentée comme une nouvelle publication
+des états financiers.
+
+Relecture HTTP indépendante après déploiement :
+`contre-verification.html` répond, 76 groupes de sociétés correspondent au
+relevé JSON, le lien depuis `sources.html` est présent, la revue documentaire
+sélectionnée est affichée et le générateur dans `runtime.json` est bien
+le commit fusionné indiqué ci-dessus. Aucune correction canonique automatique.
+Le principal n'a reçu aucune écriture.
+
+Les 590 lignes non comparables et 338 manquantes restent explicitement hors
+concordance. Elles ne prouvent ni une erreur du screener ni une absence de
+publication officielle. Les 888 documents ne sont pas déclarés relus ou certifiés.
