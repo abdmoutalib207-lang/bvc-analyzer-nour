@@ -70,3 +70,13 @@ briefings archivés ; un relevé provisoire ne devient pas une clôture.
   ratios consultables sans valider les quantités, statistiques ou scores. Les
   diagnostics de contexte IA sont limités au titre avec compteurs globaux,
   erreurs et réserves conservés ; plafond de 40 000 octets inchangé.
+
+- Rapprochement MS Screener du 9 novembre : `docs/screener-reconciliation-2026-11-09.md`
+  et `docs/screener-primary-review-2026-11-09.json`. La comparaison secondaire
+  est séparée des faits et des scores. Le registre de codes est impératif :
+  SNA Nour = Sonasid = SID source, STK Nour = Stokvis = SNA source. Les références
+  externes document/page sans URL ni empreinte ne certifient pas le PDF.
+  ADI 2,9x emploie une autre définition de trésorerie ; la réserve de dette
+  reste ouverte. La croissance arithmétique ADH ne prouve pas la comparabilité
+  à méthodes constantes. La collecte planifiée conserve le dernier succès daté
+  en cas de panne et ne modifie jamais automatiquement les montants canoniques.
