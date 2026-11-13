@@ -1,1 +1,1 @@
-{"checked_at":"2026-11-13T17:45:28.705365+00:00","source":"CDG Capital Bourse","result":"error","last_session":null,"message":"Collecte refusée : HTTP Error 521: <none>"}
+{"checked_at":"2026-11-13T19:00:26.469129+00:00","source":"CDG Capital Bourse","result":"updated","last_session":"2026-11-13","message":"64 bougies validées ; 0 conflit(s) conservés","details":{"session":"2026-11-13","active_quotes":64,"new_bars":64,"observations_refreshed":64,"source":"https://www.cdgcapitalbourse.ma/api/","ignored_old_quotes":0,"conflicts":[]}}
