@@ -1,4 +1,4 @@
-Contrôle de clôture entre fournisseurs — séance 2026-11-12
+Actualisation horaire — séance 2026-11-12
 Préparé le 2026-11-13
 
 Lecture de séanceL’essentiel
@@ -409,21 +409,21 @@ AMMC · 2026-11-12 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-11-13T17:24:02.700840+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-11-13T17:45:33.538426+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
 S&P 500
 
-7 531,34points · -0,80 %
+7 540,64points · -0,68 %
 
-Dernière observation source2026-11-13T16:55:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
+Dernière observation source2026-11-13T17:45:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/SP-SPX/] Source ↗
 
 Dow Jones
 
-52 203,27points · -0,18 %
+52 254,52points · -0,08 %
 
-Dernière observation source2026-11-13T16:55:59+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
+Dernière observation source2026-11-13T17:45:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/DJ-DJI/] Source ↗
 
 CAC 40
 
@@ -441,47 +441,47 @@ Risque et devises
 
 USD/MAD
 
-9,9522MAD / USD · 0,78 %
+9,9529MAD / USD · 0,78 %
 
-Dernière observation source2026-11-13T17:23:59+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-11-13T17:45:26+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9720MAD / EUR · 0,58 %
+10,9700MAD / EUR · 0,56 %
 
-Dernière observation source2026-11-13T17:06:31+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-11-13T17:41:32+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
-19,70points · 5,35 %
+19,85points · 6,15 %
 
-Dernière observation source2026-11-13T16:55:31+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
+Dernière observation source2026-11-13T17:45:16+00:00Différé source : 15 min ·  [https://www.tradingview.com/symbols/CBOE-VIX/] Source ↗
 
 Indice dollar
 
-103,37points · 0,20 %
+103,40points · 0,22 %
 
-Dernière observation source2026-11-13T17:16:03+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-11-13T17:45:25+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-3 888,80USD / once troy · 0,09 %
+3 886,70USD / once troy · 0,04 %
 
-Dernière observation source2026-11-13T17:23:58+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-11-13T17:45:27+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-95,66USD / baril · -0,17 %
+95,76USD / baril · -0,06 %
 
-Dernière observation source2026-11-13T17:23:57+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-11-13T17:45:28+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-6,10USD / livre · -1,59 %
+6,09USD / livre · -1,77 %
 
-Dernière observation source2026-11-13T17:23:57+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-11-13T17:45:25+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -492,6 +492,18 @@ Dernière observation source2026-11-13T09:12:10+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261113-afrique-les-r%C3%A9cits-confisqu%C3%A9s-d-une-histoire-%C3%A9conomique] Afrique : les récits confisqués d'une histoire économique ↗
+
+RFI · économie · 2026-11-13T17:43:33+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/11/13/simandou-mining-summit-la-guinee-presente-38-milliards-de-dollars-de-projets-aux-investisseurs-internationaux/] Simandou Mining Summit : la Guinée présente 3,8 milliards de dollars de projets aux investisseurs internationaux ↗
+
+Financial Afrik · 2026-11-13T17:41:05+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Iraqs-Oil-Production-Soars-to-2019-High-as-Hormuz-Flows-Surge.html] Iraq’s Oil Production Soars to 2019 High as Hormuz Flows Surge ↗
+
+OilPrice · 2026-11-13T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://www.financialafrik.com/2026/11/13/sans-les-femmes-a-la-bourse-regionale-des-valeurs-mobilieres-brvm-la-cote-divoire-sappauvrit-tous-les-ans/] Sans les femmes à la Bourse Régionale des Valeurs Mobilières (BRVM), la Côte d’Ivoire s’appauvrit tous les ans ↗
 
@@ -512,18 +524,6 @@ OilPrice · 2026-11-13T16:30:00+00:00 · International · Matières premières �
  [https://news.google.com/rss/articles/CBMivAFBVV95cUxORzZqWUVjVThVRk52ZzFuTnBPUjFKXzQ4dnBvQlhuMmxEOXMtSlQzeTNzQlM1TXpRNzg5TXBaTDBzNEZKMURNaXhwMFVoMWZxcGZyci1RMHB3Nk44VDc3WnUzbTBnMzZHRDg2d1RvTWl3N2RmSWhNTDBKbnhUaEpnY2F0UzFpcFJMc3ZHQ3ZvSm5TT2JRc0JuWG84bWFwejNEQ1RodHE2NDU0aVFxWTNWeF9TUjl4M0pJV1JKcg?oc=5] AGENDA DU 16 AU 20 NOVEMBRE: Nvidia passera au révélateur après le départ brutal de Jensen Huang - ABC Bourse ↗
 
 Inflation US / zone euro · presse · 2026-11-13T16:25:19+00:00 · International · Macroéconomie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Germany-Is-Dismantling-a-Nord-Stream-Power-Plant-for-Ukraine.html] Germany Is Dismantling a Nord Stream Power Plant for Ukraine ↗
-
-OilPrice · 2026-11-13T16:10:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Iran-Rules-Out-Return-of-UN-Nuclear-Inspectors-as-US-War-Talks-Stall.html] Iran Rules Out Return of UN Nuclear Inspectors as U.S. War Talks Stall ↗
-
-OilPrice · 2026-11-13T15:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/How-Global-Energy-Markets-Survived-Eight-Months-of-Iran-War-Disruptions.html] How Global Energy Markets Survived Eight Months of Iran War Disruptions ↗
-
-OilPrice · 2026-11-13T14:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
@@ -583,19 +583,19 @@ Financial Afrik · 2026-11-12T17:36:14+00:00 · Maroc · Économie · alerte non
 
 Financial Afrik · 2026-11-09T15:12:43+00:00 · Maroc · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
+ [https://www.rfi.fr/fr/podcasts/%C3%A9co-d-ici-%C3%A9co-d-ailleurs/20261113-afrique-les-r%C3%A9cits-confisqu%C3%A9s-d-une-histoire-%C3%A9conomique] Afrique : les récits confisqués d'une histoire économique ↗
+
+RFI · économie · 2026-11-13T17:43:33+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://www.financialafrik.com/2026/11/13/simandou-mining-summit-la-guinee-presente-38-milliards-de-dollars-de-projets-aux-investisseurs-internationaux/] Simandou Mining Summit : la Guinée présente 3,8 milliards de dollars de projets aux investisseurs internationaux ↗
+
+Financial Afrik · 2026-11-13T17:41:05+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
+ [https://oilprice.com/Latest-Energy-News/World-News/Iraqs-Oil-Production-Soars-to-2019-High-as-Hormuz-Flows-Surge.html] Iraq’s Oil Production Soars to 2019 High as Hormuz Flows Surge ↗
+
+OilPrice · 2026-11-13T17:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
+
  [https://www.financialafrik.com/2026/11/13/sans-les-femmes-a-la-bourse-regionale-des-valeurs-mobilieres-brvm-la-cote-divoire-sappauvrit-tous-les-ans/] Sans les femmes à la Bourse Régionale des Valeurs Mobilières (BRVM), la Côte d’Ivoire s’appauvrit tous les ans ↗
 
 Financial Afrik · 2026-11-13T17:11:52+00:00 · Périmètre non établi · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://www.france24.com/fr/%C3%A9missions/tech-24/20261113-le-jour-o%C3%B9-outlook-s-est-tu-autopsie-d-un-black-out-mondial] Le jour où Outlook s'est tu : autopsie d'un black-out mondial ↗
-
-France 24 · économie · 2026-11-13T17:04:04+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Brent-Crude-Climbs-Back-Above-96-as-Iran-Tensions-Escalate.html] Brent Crude Climbs Back Above $96 as Iran Tensions Escalate ↗
-
-OilPrice · 2026-11-13T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Latest-Energy-News/World-News/Indias-Road-Fuel-Demand-Wont-Peak-Until-2034.html] India's Road Fuel Demand Won't Peak Until 2034 ↗
-
-OilPrice · 2026-11-13T16:30:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
