@@ -1,1 +1,1 @@
-{"checked_at":"2026-11-12T19:00:34.693633+00:00","source":"CDG Capital Bourse","result":"unchanged","last_session":"2026-11-12","message":"Aucune nouvelle séance vérifiée","details":{"session":"2026-11-12","active_quotes":62,"new_bars":0,"observations_refreshed":62,"source":"https://www.cdgcapitalbourse.ma/api/","ignored_old_quotes":0,"conflicts":[]}}
+{"checked_at":"2026-11-13T17:23:57.253882+00:00","source":"CDG Capital Bourse","result":"error","last_session":null,"message":"Collecte refusée : HTTP Error 521: <none>"}
