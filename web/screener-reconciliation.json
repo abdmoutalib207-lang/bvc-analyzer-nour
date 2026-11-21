@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "version": "nour-screener-reconciliation-v1",
-  "status": "collected",
-  "checked_at": "2026-11-10T15:06:20.760357+00:00",
+  "status": "stale",
+  "checked_at": "2026-11-21T13:18:41.268318+00:00",
   "last_success_at": "2026-11-10T15:06:20.760357+00:00",
   "source_url": "https://ms-screener.vercel.app/app.js",
   "source_generated_at": "2026-11-09T13:19",
@@ -38114,6 +38114,8 @@
     "Les documents et pages du screener sont des références déclarées sans URL ni empreinte primaire.",
     "Les dérivés, définitions de dette/trésorerie/dividende et périmètres non comparables exigent une revue documentaire.",
     "Aucun consensus, projection, second semestre calculé ou ratio au cours mobile n’est assimilé à un chiffre publié.",
-    "Un faible écart peut évoquer un arrondi mais ne le démontre pas. Une famille de référentiels identique ne certifie pas les choix de méthode ou leur transition."
-  ]
+    "Un faible écart peut évoquer un arrondi mais ne le démontre pas. Une famille de référentiels identique ne certifie pas les choix de méthode ou leur transition.",
+    "Dernier succès ancien : 11 jours. Ces observations datées sont conservées pour examen."
+  ],
+  "collection_error_code": "source_unavailable_or_schema_rejected"
 }
