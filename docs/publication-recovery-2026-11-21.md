@@ -64,3 +64,25 @@ L’assertion navigateur reste inchangée dans sa tolérance et inclut désormai
 les éléments qui débordent pour rendre un prochain échec diagnosticable.
 Le Chromium local ne pouvait pas démarrer dans cet environnement (socket
 refusée) ; validation du rendu déléguée au workflow Chromium existant.
+
+## Résultat distant vérifié
+
+- Exécution `44908136387` : succès complet, construction, contrôle Python/JS,
+  Chromium sur le site généré, scénario de quarantaine, déploiement, Chromium
+  sur le site public et audit final des données servies réussis.
+- Générateur publié : `7b70b735fb624b8d8c365670dfe29d78de6632bf`.
+- Commit de publication attesté par le manifeste public :
+  `1fc872c88a24eb3b592a3e6e42c59e95f6343220`.
+- `runtime.json` public : run 44908136387, dernière séance close 2026-11-20 ;
+  SHA-256 recalculé identique à celui du manifeste public.
+- Page d’accueil publique : identité du générateur et séance du 20 novembre
+  retrouvées dans le HTML effectivement servi.
+- Rapport public : 62 lignes validées ; ADI, MNG, MSA, SMI et TGCC conservés
+  en quarantaine, cours documentés distinctement consultables ; NRJ explicitement
+  exclu du référentiel. Publication partielle, agrégats non certifiés.
+- Les séances absentes pendant la panne et l’intégration documentaire de NRJ
+  restent à traiter séparément ; aucune guérison d’incident n’est déduite
+  du simple succès de publication.
+
+Preuve d’exécution :
+https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/44908136387
