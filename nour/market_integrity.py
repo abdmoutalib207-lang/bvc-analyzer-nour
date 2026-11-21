@@ -167,7 +167,7 @@ def memory_summary(memory):
 def integrity_summary(audit):
     result={k:deepcopy((audit or {}).get(k)) for k in ('status','session','observed_at',
         'publication_safe','internal_match','cross_source_verified','quantities_cross_source_verified',
-        'providers','notices','notice','publication_scope','aggregate_match','secondary_status')}
+        'providers','notices','notice','publication_scope','aggregate_match','secondary_status','excluded_source_symbols')}
     result['totals']={k:deepcopy((audit or {}).get('totals',{}).get(k)) for k in ('cdg_overview','cdg_lines','secondary','retained_after')}
     return result
 

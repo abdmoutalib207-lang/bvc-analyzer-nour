@@ -53,7 +53,13 @@ for(const metric of data.knowledge.metric_catalog){
   for(const row of r.rows)assert.equal(row.values[metric.id],read(data.symbols[row.symbol]),metric.id);
 }
 const multi=localAnswer('Cours, PER, RSI et VaR ADI',data,'MASI');
-for(const [label,value] of [['Clôture : ',data.symbols.ADI.price],['PER : ',data.symbols.ADI.fundamental.pe],['RSI 14 : ',data.symbols.ADI.technical.rsi14],['VaR historique 95 % · 1 séance : ',data.symbols.ADI.market_risk.tail_risk.var95_loss_pct]])assert.ok(multi.text.includes(label+fmt(value)),label+multi.text);
+// A quarantine may preserve a dated price observation without a validated close.
+const adi=data.symbols.ADI,observedPrice=adi.price_observation;
+const hasObservedPrice=!Number.isFinite(adi.price)&&observedPrice?.asof&&Number.isFinite(observedPrice?.price);
+const priceLabel=hasObservedPrice?'Cours publié : ':'Clôture : ';
+const priceValue=hasObservedPrice?observedPrice.price:adi.price;
+for(const [label,value] of [[priceLabel,priceValue],['PER : ',adi.fundamental.pe],['RSI 14 : ',adi.technical.rsi14],['VaR historique 95 % · 1 séance : ',adi.market_risk.tail_risk.var95_loss_pct]])assert.ok(multi.text.includes(label+fmt(value)),label+multi.text);
+if(hasObservedPrice){assert.ok(multi.text.includes(observedPrice.asof));assert.ok(multi.text.includes('volume à vérifier'));}
 for(const label of ['fondamentaux','technique','risques','cours'])assert.ok(multi.text.includes(label));
 for(const warning of data.symbols.ADI.fundamental.warnings)assert.ok(multi.text.includes(warning));
 assert.ok(multi.sources.some(s=>s.url.includes('ADI_RFA_2025.pdf')));
@@ -82,4 +88,8 @@ console.log('Assistant query audit: compound answers, canonical ranking/filter o
     assert.ok(answer.text.includes('volume à vérifier'),question+' must retain the volume reservation');
   }
   assert.equal(row.price,null,'display must not promote the observation to a fully validated close');
+  row.price_observation=null;
+  assert.ok(localAnswer('Cours ADH',fixture,'MASI').text.includes('Clôture : indisponible'));
+  row.price=40;
+  assert.ok(localAnswer('Cours ADH',fixture,'MASI').text.includes('Clôture : '+fmt(40)));
 }

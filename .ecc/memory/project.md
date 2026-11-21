@@ -80,3 +80,10 @@ briefings archivés ; un relevé provisoire ne devient pas une clôture.
   reste ouverte. La croissance arithmétique ADH ne prouve pas la comparabilité
   à méthodes constantes. La collecte planifiée conserve le dernier succès daté
   en cas de panne et ne modifie jamais automatiquement les montants canoniques.
+
+- Reprise de publication du 21 novembre : `docs/publication-recovery-2026-11-21.md`.
+  Un symbole source hors référentiel (NRJ) bloquait les clôtures après le
+  13 novembre. Le mode strict conserve son refus ; la voie partielle isole
+  les codes exclus et publie seulement les lignes contrôlées, sans certifier
+  les agrégats. Les conflits et séances manquantes ne sont pas résolus par
+  cette reprise. Vérifier la publication distante dans le dossier de reprise.

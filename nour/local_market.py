@@ -48,6 +48,7 @@ def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimu
         raise ValueError('Global market contract invalid')
     inverse = {v:k for k,v in codes.items()}
     candidates, rejected, seen = {}, {}, set()
+    excluded = set()
     def reject(s, reason, observed=None):
         rejected[s] = {'symbol':s,'session':session,'domain':'volume','code':'market_line_quarantined',
             'reason':reason,'source':SOURCE_URL,'observed_at':now.isoformat(),
@@ -57,10 +58,12 @@ def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimu
         if not isinstance(line, dict):
             raise ValueError('Global source schema invalid')
         code = str(line.get('Symbol') or '').strip().upper()
+        if not code:
+            raise ValueError('Global source symbol missing')
         s = inverse.get(code)
-        if s is None:
+        if s is None or s not in fixture['records']:
             if line.get('QteEchangee') not in (None,'',0,'0'):
-                raise ValueError('Traded issuer absent from registry')
+                excluded.add(code)
             continue
         if s in seen:
             reject(s,'Lignes primaires dupliquées pour ce titre'); continue
@@ -94,9 +97,13 @@ def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimu
             for r in secondary.get('rows') or []:
                 if not isinstance(r,dict):
                     raise ValueError('Global secondary schema invalid')
-                s = inverse.get(str(r.get('symbol') or '').strip().upper())
-                if not s:
-                    raise ValueError('Unknown secondary issuer')
+                code = str(r.get('symbol') or '').strip().upper()
+                if not code:
+                    raise ValueError('Global secondary symbol missing')
+                s = inverse.get(code)
+                if not s or s not in fixture['records']:
+                    excluded.add(code)
+                    continue
                 if s in other:
                     reject(s,'Lignes secondaires dupliquées'); continue
                 other[s] = r
@@ -147,6 +154,13 @@ def isolate_market_lines(fixture, lines, overview, secondary, codes, now, minimu
                  'Titres en conflit isolés ; dernière valeur saine distincte, jamais présentée comme cotation actuelle.'])
     if isinstance(secondary,dict):
         audit['providers'].append({k:secondary.get(k) for k in ('provider','source_url','status')})
+    audit['excluded_source_symbols'] = sorted(excluded)
+    if excluded:
+        audit['notices'].append('Titres sources hors référentiel Nour : ' + ', '.join(sorted(excluded))
+            + '. Non importés ; couverture partielle et agrégats non certifiés.')
+        audit['refusals'].extend({'symbol':code,'session':session,'domain':'source',
+            'code':'unregistered_source_issuer','reason':'Titre source absent du référentiel Nour ; non importé'}
+            for code in sorted(excluded))
     return out,audit
 
 
@@ -170,6 +184,10 @@ def validated_local_scope(report, audit):
             return False
         rows = {r['symbol']:r for r in report['results']}
         if len(rows) != len(report['results']):
+            return False
+        excluded = audit.get('excluded_source_symbols', [])
+        if (not isinstance(excluded, list) or any(not isinstance(s,str) or not s for s in excluded)
+                or len(excluded)!=len(set(excluded)) or set(excluded) & set(rows)):
             return False
         proof = audit['validated_lines']; isolated = set(audit['quarantined_symbols'])
         if not proof or set(proof) != set(audit['validated_symbols']) or set(proof) & isolated or not isolated <= set(rows):

@@ -28,6 +28,41 @@ def universe():
     return fixture,raw,overview,other,codes
 
 class LocalMarketTests(unittest.TestCase):
+    def test_unregistered_source_title_does_not_freeze_registered_titles(self):
+        inp=universe();before=deepcopy(inp[0])
+        raw=deepcopy(inp[1][0]);raw['Symbol']='NRJ';inp[1].append(raw)
+        other=deepcopy(inp[3]['rows'][0]);other['symbol']='NRJ';inp[3]['rows'].append(other)
+        self.assertFalse(reconcile_volumes(*inp,now=NOW)[1]['publication_safe'])
+        candidate,audit=reconcile_volumes(*inp,now=NOW,allow_local_isolation=True)
+        self.assertTrue(audit['publication_safe'])
+        self.assertEqual(audit['publication_scope'],'isolated_issuer_lines')
+        self.assertEqual(candidate,before)
+        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertEqual(audit['excluded_source_symbols'],['NRJ'])
+        self.assertFalse(audit['aggregate_match'])
+        self.assertFalse(audit['cross_source_verified'])
+        self.assertTrue(any(r.get('symbol')=='NRJ' for r in audit['refusals']))
+        report=build_report(candidate,'2026-10-23');report['market_overview']=inp[2]
+        report['provenance']={'market_snapshot_sha256':'a'*64}
+        audit['validated_snapshot_sha256']='a'*64;audit['providers'][0]['raw_sha256']='b'*64
+        report['cross_source_volume_audit']=audit
+        self.assertFalse(audit_market_integrity(report)['failures'])
+        audit['excluded_source_symbols'].append('ADI')
+        self.assertFalse(validated_local_scope(report,audit))
+
+    def test_partial_coverage_still_requires_schema_and_minimum(self):
+        inp=universe();raw=deepcopy(inp[1][0]);raw['Symbol']='NRJ'
+        with self.assertRaises(ValueError):
+            isolate_market_lines(inp[0],inp[1][:19]+[raw],inp[2],inp[3],inp[4],NOW)
+        malformed=deepcopy(inp[1]);malformed[0].pop('Symbol')
+        with self.assertRaises(ValueError):
+            isolate_market_lines(inp[0],malformed+[raw],inp[2],inp[3],inp[4],NOW)
+        unavailable=dict(provider='Wafabourse',status='unavailable',source_url='https://www.wafabourse.com/marches')
+        _,audit=isolate_market_lines(inp[0],inp[1]+[raw],inp[2],unavailable,inp[4],NOW)
+        self.assertEqual(audit['excluded_source_symbols'],['NRJ'])
+        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertFalse(audit['cross_source_verified'])
+
     def test_missing_secondary_does_not_perpetuate_exact_same_session_quarantine(self):
         from nour.error_memory import update_error_memory
         inp=universe();rec=inp[0]['records']['ADI']
