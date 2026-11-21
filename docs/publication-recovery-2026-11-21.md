@@ -53,3 +53,14 @@ Preuves publiques :
 - https://abdmoutalib207-lang.github.io/bvc-analyzer-nour/runtime.json
 - https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/44800704067
 - https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/blob/main/data/market_integrity_log.json
+
+## Contrôle navigateur de la première reprise
+
+Le run 44907081075 a franchi construction et vérifications Python/JS puis
+a refusé la publication : débordement de la page Sources à 375 pixels.
+Les textes des panneaux autorisent désormais une coupure des longues chaînes,
+sans masquer le contenu ni supprimer le défilement horizontal des tableaux.
+L’assertion navigateur reste inchangée dans sa tolérance et inclut désormais
+les éléments qui débordent pour rendre un prochain échec diagnosticable.
+Le Chromium local ne pouvait pas démarrer dans cet environnement (socket
+refusée) ; validation du rendu déléguée au workflow Chromium existant.

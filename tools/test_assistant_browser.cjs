@@ -397,7 +397,11 @@ async function answerAfter(page,action){
           assert.equal(await page.locator('main table').first().locator('tbody tr').count(),summary.institution_count);
           assert.equal(summary.auto_import_enabled,false);
           assert.equal(summary.usable_to_certify_issuer_financial_facts,false);
-          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Sources page overflows '+width);
+          const sourceOverflow=await page.evaluate(()=>({viewport:innerWidth,width:document.documentElement.scrollWidth,
+            elements:[...document.querySelectorAll('main p,main h2,main a,main li,main summary')]
+              .filter(e=>e.getBoundingClientRect().right>innerWidth+1&&e.checkVisibility())
+              .slice(0,8).map(e=>({tag:e.tagName,text:e.textContent.slice(0,180)}))}));
+          assert.ok(sourceOverflow.width<=sourceOverflow.viewport+1,'Sources page overflows '+width+' '+JSON.stringify(sourceOverflow));
         }
         if(route==='metiers.html'){
           const body=await page.locator('main').innerText();
