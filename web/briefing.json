@@ -1,53 +1,53 @@
 {
   "schema_version": 2,
   "editorial_version": "nour-briefing-v2",
-  "generated_for": "2026-11-21",
-  "market_session": "2026-11-20",
+  "generated_for": "2026-11-24",
+  "market_session": "2026-11-24",
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "push",
-    "slot": "adhoc",
-    "label": "Point de marché à la demande",
-    "target_time": null,
+    "event": "workflow_dispatch",
+    "slot": "refresh",
+    "label": "Filet de sécurité de fin de journée",
+    "target_time": "19:00",
     "schedule": null,
-    "scheduled_at": null,
-    "scheduled_at_basis": null,
-    "requested_scheduled_at": null,
-    "edition_for": "2026-11-21",
-    "started_at": "2026-11-21T13:18:08+00:00",
-    "built_at": "2026-11-21T13:20:17.700755+00:00",
+    "scheduled_at": "2026-11-24T19:00:00+00:00",
+    "scheduled_at_basis": "watchdog_requested_occurrence",
+    "requested_scheduled_at": "2026-11-24T19:00:00+00:00",
+    "edition_for": "2026-11-24",
+    "started_at": "2026-11-24T20:04:28+00:00",
+    "built_at": "2026-11-24T20:04:39.773914+00:00",
     "utc_offset_minutes": 0,
-    "delay_minutes": null,
-    "late": false,
-    "run_id": "44908136387",
-    "commit": "7b70b735fb624b8d8c365670dfe29d78de6632bf",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/44908136387",
+    "delay_minutes": 64.5,
+    "late": true,
+    "run_id": "45476789868",
+    "commit": "03530e8a0d4b3e96ebddd4ad08864421f5e8cf9d",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/45476789868",
     "collection": {
       "result": "updated",
       "label": "Nouvelle séance intégrée",
-      "checked_at": "2026-11-21T13:18:09.175752+00:00",
-      "last_session": "2026-11-20",
-      "message": "67 bougies validées ; 0 conflit(s) conservés",
+      "checked_at": "2026-11-24T20:04:28.682420+00:00",
+      "last_session": "2026-11-24",
+      "message": "63 bougies validées ; 0 conflit(s) conservés",
       "conflicts": [],
       "fully_validated": true
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "7b70b735fb624b8d8c365670dfe29d78de6632bf",
+      "generator_commit": "03530e8a0d4b3e96ebddd4ad08864421f5e8cf9d",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "88ba772a78c0afeabc6f944e672caabdae615123f573cf365688e650d411e30f",
+      "market_snapshot_sha256": "481e81f3ce3a32ccda6ca35f66562478dc8bdc2e7b7234061109f2dbc4187ab7",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
       "status": "partial",
-      "session": "2026-11-20",
-      "observed_at": "2026-11-21T13:20:09.871112+00:00",
+      "session": "2026-11-24",
+      "observed_at": "2026-11-24T20:04:34.080336+00:00",
       "cross_source_verified": false
     }
   },
-  "title": "Point de marché à la demande",
+  "title": "Filet de sécurité de fin de journée",
   "intraday": {
     "schema_version": 1,
     "session": "2026-11-10",
@@ -57,34 +57,34 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 15734.5,
+    "age_minutes": 20458.8,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
-  "edition_notice": null,
-  "snapshot_updated": "2026-11-21T13:18:09.175752+00:00",
+  "edition_notice": "Édition exécutée en retard de 64.5 minutes ; données observées au démarrage réel, pas reconstitution de l’heure programmée. ",
+  "snapshot_updated": "2026-11-24T20:04:28.682420+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 80,
-    "quoted_session": 62,
-    "observable": 60
+    "quoted_session": 58,
+    "observable": 56
   },
   "index": {
-    "value": 16974.4362,
-    "asof": "2026-11-20",
-    "veille": 16997.8867,
-    "change_pct": -0.14,
-    "variation_points": -23.45,
-    "ytd_pct": -9.93
+    "value": 16764.8174,
+    "asof": "2026-11-24",
+    "veille": 16882.5987,
+    "change_pct": -0.7,
+    "variation_points": -117.78,
+    "ytd_pct": -11.04
   },
-  "market_summary": "Le MASI clôture à 16 974,44 points (-0,14 %), soit -23,45 points par rapport à la clôture précédente. Fourchette de séance : 16 836,50 à 17 005,98 points. 33 valeurs en baisse, 25 en hausse et 11 inchangées parmi les 69 valeurs échangées recensées. Volume échangé : 302,54 MDH.",
+  "market_summary": "Le MASI clôture à 16 764,82 points (-0,70 %), soit -117,78 points par rapport à la clôture précédente. Fourchette de séance : 16 751,77 à 16 935,87 points. 35 valeurs en baisse, 23 en hausse et 7 inchangées parmi les 65 valeurs échangées recensées. Volume échangé : 214,72 MDH.",
   "index_notice": null,
   "focus": [
     {
       "symbol": "ADI",
       "name": "Alliances",
       "price": null,
-      "asof": "2026-11-20",
+      "asof": "2026-11-24",
       "data_status": "INDISPONIBLE",
       "score": null,
       "score_state": "NON_CALCULABLE",
@@ -98,9 +98,9 @@
       ],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -4.81,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -4.67,
+        "change_pct": -2.21,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -1.51,
         "paragraphs": [
           "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
         ],
@@ -266,8 +266,8 @@
           },
           "eps_mad": 18.46,
           "book_value_per_share_mad": 180.86,
-          "pe": 19.39,
-          "pb": 1.98,
+          "pe": 18.96,
+          "pb": 1.94,
           "revenue_growth_pct": 2.88,
           "roe_pct": 10.21,
           "dividend_yield_pct": null,
@@ -275,7 +275,7 @@
           "warnings": [
             "Le résultat financier existant (−45,0, p.17) est l'arrondi de −44.808 (p.22) : le contrôle REX + RF + RNC = RAI tolère donc 0,3 MMAD.",
             "Dette nette à rapprocher : calcul 1361.49 MMAD, publication 1303.0 MMAD ; écart 58.49 MMAD. Aucun arbitrage automatique.",
-            "Ratios au cours publié du 2026-11-20 ; volumes de cette séance à vérifier."
+            "Ratios au cours publié du 2026-11-24 ; volumes de cette séance à vérifier."
           ],
           "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
           "currency": "MAD",
@@ -417,7 +417,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "ADI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -463,7 +463,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -477,11 +477,11 @@
             "automatic_extraction_certified": false
           },
           "quote_valuation": {
-            "price": 357.9,
-            "asof": "2026-11-20",
+            "price": 350.0,
+            "asof": "2026-11-24",
             "source": "https://www.cdgcapitalbourse.ma/api/",
             "source_datetime": null,
-            "collected_at": "2026-11-21T13:20:09.871112+00:00",
+            "collected_at": "2026-11-24T20:04:34.080336+00:00",
             "status": "price_fields_match_volume_disputed",
             "volume_status": "disputed",
             "cross_source_verified": false
@@ -508,29 +508,29 @@
     {
       "symbol": "RDS",
       "name": "Résidences Dar Saada",
-      "price": 170.95,
-      "asof": "2026-11-20",
+      "price": 167.0,
+      "asof": "2026-11-24",
       "data_status": "OBSERVABLE",
-      "score": 65.0,
+      "score": 30.0,
       "score_state": "CALCULABLE",
       "support": 157.0,
       "resistance": 181.0,
-      "rsi": 51.12,
-      "activity": 0.5,
+      "rsi": 46.38,
+      "activity": 0.27,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -1.75,
-        "previous_session": "2026-11-13",
+        "change_pct": -2.31,
+        "previous_session": "2026-11-20",
         "relative_masi_pp": -1.61,
         "paragraphs": [
           "Le titre sous-performe le MASI de 1,61 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
-          "Clôture au-dessus de la moyenne à 20 et 50 séances : la tenue doit être confirmée lors des prochaines cotations.",
+          "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 157,00 et la borne haute 181,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 51,12 : momentum au-dessus du seuil neutre de 50.",
-          "Quantité échangée : 0,50 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,38 MDH, contre 2,03 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "RSI 14 à 46,38 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 0,27 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,24 MDH, contre 1,84 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -666,8 +666,8 @@
           },
           "eps_mad": 0.17,
           "book_value_per_share_mad": 142.68,
-          "pe": 996.97,
-          "pb": 1.2,
+          "pe": 973.94,
+          "pb": 1.17,
           "revenue_growth_pct": 100.49,
           "roe_pct": 0.12,
           "dividend_yield_pct": null,
@@ -796,7 +796,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "RDS",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -815,7 +815,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -834,16 +834,16 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 12521.0,
-          "median_turnover_mad_estimated": 2032708.55,
-          "median_turnover_ex_top5_mad_estimated": 1375470.0,
-          "capacity_shares_per_session_at_10pct": 1252.1,
+          "median_shares": 11208.0,
+          "median_turnover_mad_estimated": 1840045.0,
+          "median_turnover_ex_top5_mad_estimated": 1240565.7,
+          "capacity_shares_per_session_at_10pct": 1120.8,
           "exit_days_at_10pct": 1,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1064580.35
+        "turnover_mad": 564335.3
       },
       "publications": []
     },
@@ -851,7 +851,7 @@
       "symbol": "TGCC",
       "name": "TGCC SA",
       "price": null,
-      "asof": "2026-11-20",
+      "asof": "2026-11-24",
       "data_status": "INDISPONIBLE",
       "score": null,
       "score_state": "NON_CALCULABLE",
@@ -865,9 +865,9 @@
       ],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -2.61,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -2.47,
+        "change_pct": -1.42,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -0.72,
         "paragraphs": [
           "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
         ],
@@ -1019,15 +1019,15 @@
           },
           "eps_mad": 27.46,
           "book_value_per_share_mad": 131.05,
-          "pe": 23.13,
-          "pb": 4.85,
+          "pe": 22.8,
+          "pb": 4.78,
           "revenue_growth_pct": 57.06,
           "roe_pct": 20.95,
           "dividend_yield_pct": null,
           "earnings_mmad": 952.053,
           "warnings": [
             "TGCC : la note 13 publie le nombre retenu pour le BPA mais ne le qualifie pas de moyenne pondérée. Nour utilise ce dénominateur documenté en BPA indicatif ; augmentation de capital sur 2025.",
-            "Ratios au cours publié du 2026-11-20 ; volumes de cette séance à vérifier."
+            "Ratios au cours publié du 2026-11-24 ; volumes de cette séance à vérifier."
           ],
           "accounting_basis": "consolidé (normes marocaines, avis CNC n°5)",
           "currency": "MAD",
@@ -1145,7 +1145,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "TGCC",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1175,7 +1175,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1189,11 +1189,11 @@
             "automatic_extraction_certified": false
           },
           "quote_valuation": {
-            "price": 635.0,
-            "asof": "2026-11-20",
+            "price": 626.0,
+            "asof": "2026-11-24",
             "source": "https://www.cdgcapitalbourse.ma/api/",
             "source_datetime": null,
-            "collected_at": "2026-11-21T13:20:09.871112+00:00",
+            "collected_at": "2026-11-24T20:04:34.080336+00:00",
             "status": "price_fields_match_volume_disputed",
             "volume_status": "disputed",
             "cross_source_verified": false
@@ -1220,28 +1220,29 @@
     {
       "symbol": "SGTM",
       "name": "SGTM SA",
-      "price": 600.0,
-      "asof": "2026-11-20",
+      "price": 594.9,
+      "asof": "2026-11-24",
       "data_status": "OBSERVABLE",
-      "score": 90.0,
+      "score": 75.0,
       "score_state": "CALCULABLE",
       "support": 517.0,
       "resistance": 642.0,
-      "rsi": 52.88,
-      "activity": 1.53,
+      "rsi": 51.01,
+      "activity": 1.31,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -3.98,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -3.84,
+        "change_pct": -0.85,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -0.15,
         "paragraphs": [
-          "Le titre sous-performe le MASI de 3,84 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
-          "Clôture au-dessus de la moyenne à 20 et 50 séances : la tenue doit être confirmée lors des prochaines cotations.",
+          "Le titre sous-performe le MASI de 0,15 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.",
+          "Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.",
           "Le cours reste entre le plancher 517,00 et la borne haute 642,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 52,88 : momentum au-dessus du seuil neutre de 50.",
-          "Quantité échangée : 1,53 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "RSI 14 à 51,01 : momentum au-dessus du seuil neutre de 50.",
+          "Quantité échangée : 1,31 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 3,05 MDH, contre 4,71 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
@@ -1407,7 +1408,7 @@
           "eps_mad": null,
           "book_value_per_share_mad": 59.17,
           "pe": null,
-          "pb": 10.14,
+          "pb": 10.05,
           "revenue_growth_pct": 36.64,
           "roe_pct": 37.8,
           "dividend_yield_pct": null,
@@ -1538,7 +1539,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "SGTM",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1585,7 +1586,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -1613,37 +1614,36 @@
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 7675478.7
+        "turnover_mad": 6516536.7
       },
       "publications": []
     },
     {
       "symbol": "CMGP",
       "name": "CMGP Group",
-      "price": 271.0,
-      "asof": "2026-11-20",
+      "price": 259.7,
+      "asof": "2026-11-24",
       "data_status": "OBSERVABLE",
-      "score": 55.0,
+      "score": 37.5,
       "score_state": "CALCULABLE",
       "support": 250.0,
       "resistance": 291.0,
-      "rsi": 50.17,
-      "activity": 1.19,
+      "rsi": 42.93,
+      "activity": 1.21,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -3.21,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -3.07,
+        "change_pct": -4.17,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -3.47,
         "paragraphs": [
-          "Le titre sous-performe le MASI de 3,07 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
-          "Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.",
-          "Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.",
+          "Le titre sous-performe le MASI de 3,47 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 250,00 et la borne haute 291,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 50,17 : momentum au-dessus du seuil neutre de 50.",
-          "Quantité échangée : 1,19 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 0,55 MDH, contre 0,92 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "RSI 14 à 42,93 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 1,21 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 0,75 MDH, contre 1,00 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -1822,7 +1822,7 @@
           "eps_mad": null,
           "book_value_per_share_mad": 164.01,
           "pe": null,
-          "pb": 1.65,
+          "pb": 1.58,
           "revenue_growth_pct": 25.65,
           "roe_pct": 8.75,
           "dividend_yield_pct": null,
@@ -1952,7 +1952,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "CMGP",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -1998,7 +1998,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2017,24 +2017,42 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 3409.0,
-          "median_turnover_mad_estimated": 919547.8,
-          "median_turnover_ex_top5_mad_estimated": 546500.0,
-          "capacity_shares_per_session_at_10pct": 340.9,
+          "median_shares": 3753.5,
+          "median_turnover_mad_estimated": 1004770.3,
+          "median_turnover_ex_top5_mad_estimated": 745362.0,
+          "capacity_shares_per_session_at_10pct": 375.35,
           "exit_days_at_10pct": 3,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1102068.0
+        "turnover_mad": 1074342.55
       },
-      "publications": []
+      "publications": [
+        {
+          "id": "c8d7d2f8eb99cb8e57",
+          "title": "CMGP Group - CP relatif aux indicateurs du 3ème trimestre 2026",
+          "url": "https://www.ammc.ma/sites/default/files/CP_CMGP_T3_26.pdf",
+          "publisher": "AMMC",
+          "published_at": "2026-11-23T15:49:38+00:00",
+          "tickers": [
+            "CMGP"
+          ],
+          "tier": "S1",
+          "status": "index officiel, document non analysé",
+          "usable_for_score": false,
+          "ticker_matching": "issuer_name_or_official_filename",
+          "classification": "DOCUMENT_LISTED",
+          "category": "bvc",
+          "scope": "MAROC"
+        }
+      ]
     },
     {
       "symbol": "MSA",
       "name": "Sodep-Marsa Maroc",
       "price": null,
-      "asof": "2026-11-20",
+      "asof": "2026-11-24",
       "data_status": "INDISPONIBLE",
       "score": null,
       "score_state": "NON_CALCULABLE",
@@ -2048,9 +2066,9 @@
       ],
       "intraday_quote": null,
       "reading": {
-        "change_pct": 0.53,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": 0.67,
+        "change_pct": -0.76,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -0.06,
         "paragraphs": [
           "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
         ],
@@ -2188,14 +2206,14 @@
           },
           "eps_mad": 21.65,
           "book_value_per_share_mad": 55.16,
-          "pe": 36.26,
-          "pb": 14.23,
+          "pe": 35.99,
+          "pb": 14.12,
           "revenue_growth_pct": null,
           "roe_pct": 39.25,
           "dividend_yield_pct": null,
           "earnings_mmad": 1588.764,
           "warnings": [
-            "Ratios au cours publié du 2026-11-20 ; volumes de cette séance à vérifier."
+            "Ratios au cours publié du 2026-11-24 ; volumes de cette séance à vérifier."
           ],
           "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
           "currency": "MAD",
@@ -2305,7 +2323,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "MSA",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2350,7 +2368,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2364,11 +2382,11 @@
             "automatic_extraction_certified": false
           },
           "quote_valuation": {
-            "price": 785.0,
-            "asof": "2026-11-20",
+            "price": 779.0,
+            "asof": "2026-11-24",
             "source": "https://www.cdgcapitalbourse.ma/api/",
             "source_datetime": null,
-            "collected_at": "2026-11-21T13:20:09.871112+00:00",
+            "collected_at": "2026-11-24T20:04:34.080336+00:00",
             "status": "price_fields_match_volume_disputed",
             "volume_status": "disputed",
             "cross_source_verified": false
@@ -2396,7 +2414,7 @@
       "symbol": "SMI",
       "name": "Société Métallurgique d'Imiter",
       "price": null,
-      "asof": "2026-11-20",
+      "asof": "2026-11-24",
       "data_status": "INDISPONIBLE",
       "score": null,
       "score_state": "NON_CALCULABLE",
@@ -2410,9 +2428,9 @@
       ],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -13.22,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -13.08,
+        "change_pct": -0.49,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": 0.21,
         "paragraphs": [
           "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
         ],
@@ -2550,8 +2568,8 @@
           },
           "eps_mad": 241.39,
           "book_value_per_share_mad": 1009.2,
-          "pe": 17.81,
-          "pb": 4.26,
+          "pe": 17.73,
+          "pb": 4.24,
           "revenue_growth_pct": 48.76,
           "roe_pct": 23.92,
           "dividend_yield_pct": null,
@@ -2559,7 +2577,7 @@
           "warnings": [
             "BASE SOCIALE : SMI (filiale de Managem) ne publie pas de comptes consolidés ; tous les termes sont sociaux, y compris les capitaux propres.",
             "Dette nette = dettes de financement + trésorerie-passif − trésorerie-actif = 23,9 MMAD. La société publie un « endettement financier » de −539,8 MMAD parce qu'elle y retranche son compte courant d'associés (563,7 MMAD sur Managem) : deux définitions, le contrôle les recolle, celle de la formule du module est retenue.",
-            "Ratios au cours publié du 2026-11-20 ; volumes de cette séance à vérifier."
+            "Ratios au cours publié du 2026-11-24 ; volumes de cette séance à vérifier."
           ],
           "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
           "currency": "MAD",
@@ -2667,7 +2685,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "SMI",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -2702,7 +2720,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -2716,11 +2734,11 @@
             "automatic_extraction_certified": false
           },
           "quote_valuation": {
-            "price": 4300.0,
-            "asof": "2026-11-20",
+            "price": 4279.0,
+            "asof": "2026-11-24",
             "source": "https://www.cdgcapitalbourse.ma/api/",
             "source_datetime": null,
-            "collected_at": "2026-11-21T13:20:09.871112+00:00",
+            "collected_at": "2026-11-24T20:04:34.080336+00:00",
             "status": "price_fields_match_volume_disputed",
             "volume_status": "disputed",
             "cross_source_verified": false
@@ -2747,28 +2765,28 @@
     {
       "symbol": "T2S",
       "name": "T2S Group Holding",
-      "price": 208.0,
-      "asof": "2026-11-20",
+      "price": 203.7,
+      "asof": "2026-11-24",
       "data_status": "OBSERVABLE",
       "score": 42.5,
       "score_state": "CALCULABLE",
       "support": 200.1,
       "resistance": 225.5,
-      "rsi": 44.79,
-      "activity": 0.78,
+      "rsi": 41.38,
+      "activity": 0.6,
       "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
       "issues": [],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -2.71,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -2.57,
+        "change_pct": -2.07,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": -1.37,
         "paragraphs": [
-          "Le titre sous-performe le MASI de 2,57 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Le titre sous-performe le MASI de 1,37 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
           "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
           "Le cours reste entre le plancher 200,10 et la borne haute 225,50 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
-          "RSI 14 à 44,79 : momentum inférieur au seuil neutre de 50.",
-          "Quantité échangée : 0,78 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "RSI 14 à 41,38 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 0,60 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
           "Liquidité robuste estimée hors cinq plus fortes séances : 1,55 MDH, contre 1,67 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
@@ -3002,7 +3020,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "T2S",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3034,7 +3052,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3062,36 +3080,36 @@
           "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": 1278212.85
+        "turnover_mad": 976384.3
       },
       "publications": []
     },
     {
       "symbol": "CMT",
       "name": "Minière Touissit",
-      "price": 3290.0,
-      "asof": "2026-11-20",
+      "price": 3300.0,
+      "asof": "2026-11-24",
       "data_status": "LIMITÉ",
       "score": null,
       "score_state": "PARTIEL",
-      "support": 3390.0,
+      "support": 3016.0,
       "resistance": 4100.0,
-      "rsi": 39.84,
-      "activity": 0.92,
+      "rsi": 40.24,
+      "activity": 1.85,
       "scenario": "Attendre des séances comparables après la reprise",
       "issues": [
-        "Reprise récente : 42 séances ; tendance antérieure non comparable"
+        "Reprise récente : 43 séances ; tendance antérieure non comparable"
       ],
       "intraday_quote": null,
       "reading": {
-        "change_pct": -9.49,
-        "previous_session": "2026-11-13",
-        "relative_masi_pp": -9.35,
+        "change_pct": 0.3,
+        "previous_session": "2026-11-20",
+        "relative_masi_pp": 1.0,
         "paragraphs": [
-          "Le titre sous-performe le MASI de 9,35 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Le titre surperforme le MASI de 1,00 point(s) sur la même séance. Il progresse malgré la baisse de l’indice.",
           "La reprise change le régime de comparaison. Les tendances et niveaux antérieurs restent écartés ; observer la fréquence des échanges et l’offre réellement disponible.",
-          "Quantité échangée : 0,92 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
-          "Liquidité robuste estimée hors cinq plus fortes séances : 1,33 MDH, contre 1,73 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
+          "Quantité échangée : 1,85 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,42 MDH, contre 1,91 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -3213,8 +3231,8 @@
           },
           "eps_mad": 116.86,
           "book_value_per_share_mad": 536.0,
-          "pe": 28.15,
-          "pb": 6.14,
+          "pe": 28.24,
+          "pb": 6.16,
           "revenue_growth_pct": null,
           "roe_pct": 21.8,
           "dividend_yield_pct": 0.0,
@@ -3331,7 +3349,7 @@
           },
           "financial_audit": {
             "version": "nour-financial-audit-v1",
-            "asof": "2026-11-21",
+            "asof": "2026-11-24",
             "symbol": "CMT",
             "scope": "available_annual_inputs_only",
             "documents_certified": false,
@@ -3365,7 +3383,7 @@
               "annual_period_end": "2025-12-31",
               "latest_report_period_end": "2026-06-30",
               "newer_report_available": true,
-              "annual_age_calendar_days": 325,
+              "annual_age_calendar_days": 328,
               "annual_years_behind_latest": 1,
               "semester_annualized": false
             },
@@ -3384,21 +3402,55 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": 440.5,
-          "median_turnover_mad_estimated": 1726780.0,
-          "median_turnover_ex_top5_mad_estimated": 1329160.0,
-          "capacity_shares_per_session_at_10pct": 44.05,
-          "exit_days_at_10pct": 23,
+          "median_shares": 524.0,
+          "median_turnover_mad_estimated": 1910930.0,
+          "median_turnover_ex_top5_mad_estimated": 1420800.0,
+          "capacity_shares_per_session_at_10pct": 52.4,
+          "exit_days_at_10pct": 20,
           "scenario_shares": 1000,
           "ready": true,
           "post_resume_only": true
         },
-        "turnover_mad": 1300256.0
+        "turnover_mad": 2691601.0
       },
       "publications": []
     }
   ],
   "news": [
+    {
+      "id": "c8d7d2f8eb99cb8e57",
+      "title": "CMGP Group - CP relatif aux indicateurs du 3ème trimestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_CMGP_T3_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-11-23T15:49:38+00:00",
+      "tickers": [
+        "CMGP"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "b2456603db8ded3f4e",
+      "title": "Managem - CP relatif aux indicateurs du 3ème trimestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Managem_T3_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-11-23T09:30:25+00:00",
+      "tickers": [
+        "MNG"
+      ],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "issuer_name_or_official_filename",
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
     {
       "id": "874a1413a4a317e194",
       "title": "Sonasid - CP relatif aux indicateurs du 3ème trimestre 2026",
@@ -3417,21 +3469,119 @@
       "scope": "MAROC"
     },
     {
-      "id": "ca028fd1e11e3c8730",
-      "title": "Attijariwafa Bank - CP relatif aux indicateurs du 3ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_AWB_T3_26.pdf",
+      "id": "ee53adbaa022cb629b",
+      "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+      "publisher": "Fed · politique monétaire",
+      "published_at": "2026-11-24T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
+    },
+    {
+      "id": "58bc7856b7cca52e51",
+      "title": "Boris Vujčić: Resilience in an age of shocks: lessons from central and eastern Europe",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261124~17928e5456.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-11-24T11:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "aa00ea345004c63386",
+      "title": "M. Khalil Saïd prend ses fonctions de Directeur de l’École des Sciences de l’Information",
+      "url": "https://www.hcp.ma/M-Khalil-Said-prend-ses-fonctions-de-Directeur-de-l-Ecole-des-Sciences-de-l-Information_a4371.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-11-23T20:14:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
+    },
+    {
+      "id": "1eb7b0287c9c74bf8b",
+      "title": "Unimer - CP relatif aux indicateurs du 3ème trimestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_Unimer_T3_26.pdf",
       "publisher": "AMMC",
-      "published_at": "2026-11-17T19:50:12+00:00",
-      "tickers": [
-        "ATW"
-      ],
+      "published_at": "2026-11-23T15:07:24+00:00",
+      "tickers": [],
       "tier": "S1",
       "status": "index officiel, document non analysé",
       "usable_for_score": false,
-      "ticker_matching": "issuer_name_or_official_filename",
+      "ticker_matching": "unmatched",
       "classification": "DOCUMENT_LISTED",
       "category": "bvc",
       "scope": "MAROC"
+    },
+    {
+      "id": "9f91174a0be70691ec",
+      "title": "Philip R. Lane: Climate change and monetary policy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261123~b5816801a0.en.pdf",
+      "publisher": "BCE · publications",
+      "published_at": "2026-11-23T14:30:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
+    },
+    {
+      "id": "95bdc09b7d9c35f513",
+      "title": "Bank Of Africa - CP relatif aux indicateurs du 3ème trimestre 2026",
+      "url": "https://www.ammc.ma/sites/default/files/CP_BOA_T3_26.pdf",
+      "publisher": "AMMC",
+      "published_at": "2026-11-23T10:19:43+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "index officiel, document non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "DOCUMENT_LISTED",
+      "category": "bvc",
+      "scope": "MAROC"
+    },
+    {
+      "id": "fcdf24928d9144fa72",
+      "title": "ECB expands acceptance of DLT-based assets as eligible Eurosystem collateral",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261123~76b6f57b74.en.html",
+      "publisher": "BCE · publications",
+      "published_at": "2026-11-23T10:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "ecb",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
       "id": "1401273cd6c938fa7b",
@@ -3464,6 +3614,23 @@
       "scope": "MAROC"
     },
     {
+      "id": "3c0b8298ab478af366",
+      "title": "L'Indice des prix à la consommation (IPC) du mois d’octobre 2026",
+      "url": "https://www.hcp.ma/L-Indice-des-prix-a-la-consommation-IPC-du-mois-d-octobre-2026_a4369.html",
+      "publisher": "HCP · publications",
+      "published_at": "2026-11-20T09:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "MAROC",
+      "feed_id": "hcp",
+      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
+    },
+    {
       "id": "e6c33934d167226da4",
       "title": "Christine Lagarde: Acting in time",
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
@@ -3481,275 +3648,11 @@
       "feed_url": "https://www.ecb.europa.eu/rss/press.html"
     },
     {
-      "id": "141f4a33fce6f0ae95",
-      "title": "L'ndice des prix à la consommation (IPC) du mois d’octobre 2026",
-      "url": "https://www.hcp.ma/L-ndice-des-prix-a-la-consommation-IPC-du-mois-d-octobre-2026_a4369.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-11-19T23:44:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
-    },
-    {
-      "id": "8116f77583e3fa2482",
-      "title": "Vicenne - CP relatif aux indicateurs du 3ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Vicenne_T3_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-11-19T16:29:13+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "c0c4ef66e0d9307c05",
-      "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-      "publisher": "Fed · politique monétaire",
-      "published_at": "2026-11-18T19:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "fed",
-      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
-    },
-    {
-      "id": "cae0ebe96330058d23",
-      "title": "Boris Vujčić: Financial Stability Review - November 2026",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261118~86f1e8147e.en.pdf",
-      "publisher": "BCE · publications",
-      "published_at": "2026-11-18T09:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "01f1c87b91ecde2d24",
-      "title": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
-      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
-      "publisher": "BCE · publications",
-      "published_at": "2026-11-18T09:00:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "2568d5861593cc1f81",
-      "title": "Le Haut-Commissariat au Plan organise une cérémonie de remise des Wissams royaux à 24 de ses cadres et fonctionnaires",
-      "url": "https://www.hcp.ma/Le-Haut-Commissariat-au-Plan-organise-une-ceremonie-de-remise-des-Wissams-royaux-a-24-de-ses-cadres-et-fonctionnaires_a4368.html",
-      "publisher": "HCP · publications",
-      "published_at": "2026-11-17T22:57:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "MAROC",
-      "feed_id": "hcp",
-      "feed_url": "https://www.hcp.ma/xml/syndication.rss"
-    },
-    {
-      "id": "2ce385fa09e1ffe474",
-      "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261117~7f5d3b1a0e.en.pdf",
-      "publisher": "BCE · publications",
-      "published_at": "2026-11-17T18:30:00+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "publication institutionnelle, contenu non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "INSTITUTIONAL_PUBLICATION",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb",
-      "feed_url": "https://www.ecb.europa.eu/rss/press.html"
-    },
-    {
-      "id": "ad4189a2010e68219b",
-      "title": "Holding Al Omrane - CP relatif à la révision du taux facial des obligations tranche F (EO du 23-11-18)",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Al_Omrane_revision_taux_EO_2018.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-11-17T16:26:40+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "8fec2648929cd83c07",
-      "title": "ADM - Avis de convocation à l'AGE du 16 décembre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/Avis_ADM_AGE_16_12_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-11-17T16:19:50+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "06f6d30be7c2468aeb",
-      "title": "Sothema - CP relatif aux indicateurs du 3ème trimestre 2026",
-      "url": "https://www.ammc.ma/sites/default/files/CP_Sothema_T3_26.pdf",
-      "publisher": "AMMC",
-      "published_at": "2026-11-17T14:36:40+00:00",
-      "tickers": [],
-      "tier": "S1",
-      "status": "index officiel, document non analysé",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "DOCUMENT_LISTED",
-      "category": "bvc",
-      "scope": "MAROC"
-    },
-    {
-      "id": "b8b15439e6745a5103",
-      "title": "Succession chez Castel : la Haute Cour de Singapour valide l’éviction des dirigeants d’IBBM",
-      "url": "https://www.financialafrik.com/2026/11/21/succession-chez-castel-la-haute-cour-de-singapour-valide-leviction-des-dirigeants-dibbm/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T11:20:09+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "61d289981eb0eb3837",
-      "title": "Emploi des cadres en Afrique : trop de financiers, pénurie de commerciaux et de dirigeants",
-      "url": "https://www.financialafrik.com/2026/11/21/emploi-des-cadres-en-afrique-trop-de-financiers-penurie-de-commerciaux-et-de-dirigeants/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T10:46:15+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "db89cfcd34331107da",
-      "title": "Sénégal : 55 milliards de FCFA levés à des taux plus chers que la Côte d’Ivoire",
-      "url": "https://www.financialafrik.com/2026/11/21/senegal-55-milliards-de-fcfa-leves-a-des-taux-plus-chers-que-la-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T10:31:21+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "6ea1ad262dc2c63368",
-      "title": "Guide pratique : où et comment souscrire à l’OPV de Coris Bank Côte d’Ivoire ?",
-      "url": "https://www.financialafrik.com/2026/11/21/guide-pratique-ou-et-comment-souscrire-a-lopv-de-coris-bank-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T09:10:26+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "dca079d2822ffd8b07",
-      "title": "Les ventes de GTA VI ont atteint 3,79 milliards de dollars le jour de sa sortie, un «record»",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261121-les-ventes-de-gta-vi-ont-atteint-3-79-milliards-de-dollars-le-jour-de-sa-sortie-un-record",
-      "publisher": "RFI · économie",
-      "published_at": "2026-11-21T08:34:41+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "4ce58479a92c5c4a7b",
-      "title": "Côte d’Ivoire: le Saint Joseph Innoplaza Center, un complexe mixte de 13 milliards de FCFA pour redessiner le paysage urbain du Plateau",
-      "url": "https://www.financialafrik.com/2026/11/21/cote-divoire-le-saint-joseph-innoplaza-center-un-complexe-mixte-de-13-milliards-de-fcfa-pour-redessiner-le-paysage-urbain-du-plateau/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T06:00:17+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "ba84295befe06fabdc",
-      "title": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil",
-      "url": "https://oilprice.com/Energy/Energy-General/Oil-Prices-Caught-Between-a-Looming-Glut-and-Middle-East-Turmoil.html",
+      "id": "449a97e8de69df352c",
+      "title": "Is This Tiny Oil Giant The Real Crown Jewel Of Trump’s New World Order?",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Is-This-Tiny-Oil-Giant-The-Real-Crown-Jewel-Of-Trumps-New-World-Order.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-21T00:00:00+00:00",
+      "published_at": "2026-11-24T20:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -3762,11 +3665,11 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "9d41170337d8705caa",
-      "title": "Argentine Energy Firms Rush to Sell Bonds Before the 2027 Election",
-      "url": "https://oilprice.com/Energy/Energy-General/Argentine-Energy-Firms-Rush-to-Sell-Bonds-Before-the-2027-Election.html",
+      "id": "3b8231eebf800b256b",
+      "title": "Central Asia Pushes Ahead With Regional Electricity Market",
+      "url": "https://oilprice.com/Energy/Energy-General/Central-Asia-Pushes-Ahead-With-Regional-Electricity-Market.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-20T22:00:00+00:00",
+      "published_at": "2026-11-24T19:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -3779,11 +3682,130 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "1c11f80a2dfc5285aa",
-      "title": "US Data Center Boom Faces a New Political Reality",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Data-Center-Boom-Faces-a-New-Political-Reality.html",
+      "id": "a6887293066a8cbe67",
+      "title": "Cybersécurité, en marge du salon monétique régional : MédiaSoft Lafayette Group simule une cyberattaque assistée par l’IA",
+      "url": "https://www.financialafrik.com/2026/11/24/cybersecurite-mediasoft-lafayette-group-simule-une-cyberattaque-assistee-par-lia/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T18:47:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "e13ff861566b3fe74e",
+      "title": "Iraq Refuses to Accept OPEC+ Assessment of its Production Capacity",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iraq-Refuses-to-Accept-OPEC-Assessment-of-its-Production-Capacity.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-20T19:00:00+00:00",
+      "published_at": "2026-11-24T18:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "0c8765d40c1ab4e9ad",
+      "title": "Côte d’Ivoire : Massetou Traoré prend les commandes de CREDAF GROUP",
+      "url": "https://www.financialafrik.com/2026/11/24/cote-divoire-massetou-traore-prend-les-commandes-de-credaf-group/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T18:18:52+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "738e93aae800fd7b64",
+      "title": "Canada’s Oilfield Services Sector Is Gearing Up for a Stronger 2027",
+      "url": "https://oilprice.com/Energy/Energy-General/Canadas-Oilfield-Services-Sector-Is-Gearing-Up-for-a-Stronger-2027.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-24T18:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "9da21a8976b2bc90db",
+      "title": "IA : les femmes occupent majoritairement les emplois les plus menacés",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261124-intelligence-artificielle-femmes-occupent-majoritairement-emplois-menac%C3%A9s",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-11-24T17:20:30+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "a74ba5f55171492d92",
+      "title": "Après la Côte d’Ivoire, Coris Bank International Bénin se lance à la conquête de la BRVM",
+      "url": "https://www.financialafrik.com/2026/11/24/apres-la-cote-divoire-coris-bank-international-benin-se-lance-a-la-conquete-de-la-brvm/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T17:06:27+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "0cc7f5eb156135d70d",
+      "title": "Europe’s Gas Prices Jumped 163% in a Year",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Europes-Gas-Prices-Jumped-163-in-a-Year.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "623d9c488670c0472d",
+      "title": "Saudi Arabia Sees Smaller Economic Slump as More Oil Reaches Market",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sees-Smaller-Economic-Slump-as-More-Oil-Reaches-Market.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-24T17:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -3799,95 +3821,75 @@
   "news_role": "veille uniquement",
   "editorial": {
     "paragraphs": [
-      "Le MASI termine à 16 974,44 points (-0,14 %). La direction de cette séance est baissière.",
-      "33 valeurs baissent, 25 progressent et 11 sont inchangées sur 69 traitées. Les baisses représentent 47,83 % de cette couverture. La largeur de marché reste partagée.",
-      "L’indice se situe à 81,39 % de l’amplitude au-dessus du plus bas (16 836,50), pour un plus haut de 17 005,98 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.",
-      "Le relevé de marché totalise 302,54 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
+      "Le MASI termine à 16 764,82 points (-0,70 %). La direction de cette séance est baissière.",
+      "35 valeurs baissent, 23 progressent et 7 sont inchangées sur 65 traitées. Les baisses représentent 53,85 % de cette couverture. La largeur de marché reste partagée.",
+      "L’indice se situe à 7,09 % de l’amplitude au-dessus du plus bas (16 751,77), pour un plus haut de 16 935,87 points. Une clôture proche du bas de séance traduit une pression persistante jusqu’à la fin des échanges.",
+      "Le relevé de marché totalise 214,72 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.",
       "Les 20 clôtures précédentes dessinent un intervalle de référence 16 390,89–17 606,97 points. Ce sont des bornes observées, pas des objectifs de cours."
     ],
     "levels": {
       "support_close20": 16390.8887,
       "resistance_close20": 17606.9679,
-      "since": "2026-10-16",
-      "until": "2026-11-13"
+      "since": "2026-10-19",
+      "until": "2026-11-20"
     },
-    "previous_session": "2026-11-13",
+    "previous_session": "2026-11-20",
     "provisional": false,
     "sector_paragraphs": [
-      "8 indices sectoriels reculent sur 23 renseignés. Ces variations décrivent les prix, pas la qualité des résultats des entreprises.",
-      "Secteurs les plus résistants : ASSURANCES (2,98 %) ; INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS (1,99 %) ; SERVICES DE TRANSPORT (1,67 %).",
-      "Secteurs les plus faibles : MINES (-5,16 %) ; CHIMIE (-2,66 %) ; DISTRIBUTEURS (-2,21 %)."
+      "12 indices sectoriels reculent sur 23 renseignés. Ces variations décrivent les prix, pas la qualité des résultats des entreprises.",
+      "Secteurs les plus résistants : DISTRIBUTEURS (2,46 %) ; TELECOMMUNICATIONS (2,16 %) ; MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES (1,24 %).",
+      "Secteurs les plus faibles : MINES (-4,23 %) ; SYLVICULTURE ET PAPIER (-2,84 %) ; SANTE (-2,41 %)."
     ],
     "sectors": [
       {
-        "code": "ASSUR",
-        "libelle": "ASSURANCES",
-        "variation_pct": 2.98
-      },
-      {
-        "code": "I&BEI",
-        "libelle": "INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS",
-        "variation_pct": 1.99
-      },
-      {
-        "code": "SDT",
-        "libelle": "SERVICES DE TRANSPORT",
-        "variation_pct": 1.67
-      },
-      {
-        "code": "P&G",
-        "libelle": "PETROLE ET GAZ",
-        "variation_pct": 1.43
-      },
-      {
-        "code": "SF&AF",
-        "libelle": "SOCIETE DE FINANCEMENT ET AUTRES ACTIVITES FINANCI",
-        "variation_pct": 0.99
-      },
-      {
-        "code": "L&SI",
-        "libelle": "MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES",
-        "variation_pct": 0.75
-      },
-      {
-        "code": "SPI",
-        "libelle": "SOCIETES DE PLACEMENT IMMOBILIER",
-        "variation_pct": 0.72
+        "code": "DISTR",
+        "libelle": "DISTRIBUTEURS",
+        "variation_pct": 2.46
       },
       {
         "code": "TCOM",
         "libelle": "TELECOMMUNICATIONS",
-        "variation_pct": 0.54
+        "variation_pct": 2.16
       },
       {
-        "code": "BANK",
-        "libelle": "BANQUES",
-        "variation_pct": 0.5
+        "code": "L&SI",
+        "libelle": "MATERIELS,LOGICIELS ET SERVICES INFORMATIQUES",
+        "variation_pct": 1.24
       },
       {
-        "code": "L&H",
-        "libelle": "LOISIRS ET HOTELS",
-        "variation_pct": 0.32
+        "code": "ASSUR",
+        "libelle": "ASSURANCES",
+        "variation_pct": 1.21
       },
       {
-        "code": "IMMOB",
-        "libelle": "PARTICIPATION ET PROMOTION IMMOBILIERES",
-        "variation_pct": 0.31
+        "code": "SDT",
+        "libelle": "SERVICES DE TRANSPORT",
+        "variation_pct": 1.17
+      },
+      {
+        "code": "TRANS",
+        "libelle": "TRANSPORT",
+        "variation_pct": 1.16
+      },
+      {
+        "code": "SPI",
+        "libelle": "SOCIETES DE PLACEMENT IMMOBILIER",
+        "variation_pct": 1.04
+      },
+      {
+        "code": "I&BEI",
+        "libelle": "INGENIERIES ET BIENS D'EQUIPEMENT INDUSTRIELS",
+        "variation_pct": 0.24
       },
       {
         "code": "AGRO",
         "libelle": "AGROALIMENTAIRE / PRODUCTION",
-        "variation_pct": 0.21
+        "variation_pct": 0.18
       },
       {
-        "code": "SANTE",
-        "libelle": "SANTE",
-        "variation_pct": 0.02
-      },
-      {
-        "code": "SP&H",
-        "libelle": "SOCIETES DE PORTEFEUILLES - HOLDINGS",
-        "variation_pct": 0.0
+        "code": "CHIM",
+        "libelle": "CHIMIE",
+        "variation_pct": 0.17
       },
       {
         "code": "BOISS",
@@ -3895,111 +3897,131 @@
         "variation_pct": 0.0
       },
       {
-        "code": "B&MC",
-        "libelle": "BATIMENT ET MATERIAUX DE CONSTRUCTION",
-        "variation_pct": -0.01
-      },
-      {
-        "code": "TRANS",
-        "libelle": "TRANSPORT",
-        "variation_pct": -0.57
-      },
-      {
-        "code": "ELEC",
-        "libelle": "ELECTRICITE",
-        "variation_pct": -0.83
+        "code": "P&G",
+        "libelle": "PETROLE ET GAZ",
+        "variation_pct": -0.13
       },
       {
         "code": "PHARM",
         "libelle": "INDUSTRIE PHARMACEUTIQUE",
-        "variation_pct": -1.16
+        "variation_pct": -0.22
+      },
+      {
+        "code": "SF&AF",
+        "libelle": "SOCIETE DE FINANCEMENT ET AUTRES ACTIVITES FINANCI",
+        "variation_pct": -0.22
+      },
+      {
+        "code": "L&H",
+        "libelle": "LOISIRS ET HOTELS",
+        "variation_pct": -0.42
+      },
+      {
+        "code": "ELEC",
+        "libelle": "ELECTRICITE",
+        "variation_pct": -0.51
+      },
+      {
+        "code": "BANK",
+        "libelle": "BANQUES",
+        "variation_pct": -0.56
+      },
+      {
+        "code": "IMMOB",
+        "libelle": "PARTICIPATION ET PROMOTION IMMOBILIERES",
+        "variation_pct": -1.13
+      },
+      {
+        "code": "B&MC",
+        "libelle": "BATIMENT ET MATERIAUX DE CONSTRUCTION",
+        "variation_pct": -1.75
+      },
+      {
+        "code": "SP&H",
+        "libelle": "SOCIETES DE PORTEFEUILLES - HOLDINGS",
+        "variation_pct": -2.08
+      },
+      {
+        "code": "SANTE",
+        "libelle": "SANTE",
+        "variation_pct": -2.41
       },
       {
         "code": "S&P",
         "libelle": "SYLVICULTURE ET PAPIER",
-        "variation_pct": -1.63
-      },
-      {
-        "code": "DISTR",
-        "libelle": "DISTRIBUTEURS",
-        "variation_pct": -2.21
-      },
-      {
-        "code": "CHIM",
-        "libelle": "CHIMIE",
-        "variation_pct": -2.66
+        "variation_pct": -2.84
       },
       {
         "code": "MINES",
         "libelle": "MINES",
-        "variation_pct": -5.16
+        "variation_pct": -4.23
       }
     ],
     "leaders": [
       {
-        "symbol": "MRL",
-        "change_pct": 5.14
+        "symbol": "IBM",
+        "change_pct": 5.93
       },
       {
-        "symbol": "CFGB",
-        "change_pct": 3.03
+        "symbol": "BMC",
+        "change_pct": 4.98
       },
       {
-        "symbol": "ATL",
-        "change_pct": 2.56
+        "symbol": "LES",
+        "change_pct": 3.56
       },
       {
-        "symbol": "WAF",
-        "change_pct": 1.83
+        "symbol": "LBV",
+        "change_pct": 2.7
       },
       {
-        "symbol": "AKD",
-        "change_pct": 1.76
+        "symbol": "ZLD",
+        "change_pct": 2.07
       }
     ],
     "laggards": [
       {
-        "symbol": "ZLD",
-        "change_pct": -13.93
+        "symbol": "VCNE",
+        "change_pct": -6.33
       },
       {
-        "symbol": "CMT",
-        "change_pct": -9.49
+        "symbol": "LHM",
+        "change_pct": -5.15
       },
       {
-        "symbol": "JET",
-        "change_pct": -6.85
+        "symbol": "WAF",
+        "change_pct": -5.05
       },
       {
-        "symbol": "HPS",
-        "change_pct": -6.24
+        "symbol": "CFGB",
+        "change_pct": -4.41
       },
       {
-        "symbol": "FNB",
-        "change_pct": -5.93
+        "symbol": "CMGP",
+        "change_pct": -4.17
       }
     ],
-    "ranking_coverage": 57,
+    "ranking_coverage": 56,
     "flows": [
       {
-        "symbol": "ATW",
-        "amount": 28935794.7
-      },
-      {
-        "symbol": "JET",
-        "amount": 15556643.0
-      },
-      {
         "symbol": "IAM",
-        "amount": 13882633.93
+        "amount": 41070079.59
       },
       {
-        "symbol": "AKD",
-        "amount": 10794999.0
+        "symbol": "ATW",
+        "amount": 17303067.5
       },
       {
-        "symbol": "BOA",
-        "amount": 10466302.4
+        "symbol": "BMC",
+        "amount": 17267789.9
+      },
+      {
+        "symbol": "LBV",
+        "amount": 17220340.0
+      },
+      {
+        "symbol": "ARD",
+        "amount": 10758107.0
       }
     ],
     "scenarios": [
@@ -4029,121 +4051,19 @@
       "MSA : Données insuffisantes pour établir des niveaux.",
       "SMI : Données insuffisantes pour établir des niveaux.",
       "T2S : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 200.1 / 225.5 MAD).",
-      "CMT : Attendre des séances comparables après la reprise (références 3390.0 / 4100.0 MAD)."
+      "CMT : Attendre des séances comparables après la reprise (références 3016.0 / 4100.0 MAD)."
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-11-21T13:20:07.922591+00:00"
+    "observed_at": "2026-11-24T20:04:32.170237+00:00"
   },
   "context_news": [
     {
-      "id": "b8b15439e6745a5103",
-      "title": "Succession chez Castel : la Haute Cour de Singapour valide l’éviction des dirigeants d’IBBM",
-      "url": "https://www.financialafrik.com/2026/11/21/succession-chez-castel-la-haute-cour-de-singapour-valide-leviction-des-dirigeants-dibbm/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T11:20:09+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "61d289981eb0eb3837",
-      "title": "Emploi des cadres en Afrique : trop de financiers, pénurie de commerciaux et de dirigeants",
-      "url": "https://www.financialafrik.com/2026/11/21/emploi-des-cadres-en-afrique-trop-de-financiers-penurie-de-commerciaux-et-de-dirigeants/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T10:46:15+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "db89cfcd34331107da",
-      "title": "Sénégal : 55 milliards de FCFA levés à des taux plus chers que la Côte d’Ivoire",
-      "url": "https://www.financialafrik.com/2026/11/21/senegal-55-milliards-de-fcfa-leves-a-des-taux-plus-chers-que-la-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T10:31:21+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "6ea1ad262dc2c63368",
-      "title": "Guide pratique : où et comment souscrire à l’OPV de Coris Bank Côte d’Ivoire ?",
-      "url": "https://www.financialafrik.com/2026/11/21/guide-pratique-ou-et-comment-souscrire-a-lopv-de-coris-bank-cote-divoire/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T09:10:26+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "dca079d2822ffd8b07",
-      "title": "Les ventes de GTA VI ont atteint 3,79 milliards de dollars le jour de sa sortie, un «record»",
-      "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261121-les-ventes-de-gta-vi-ont-atteint-3-79-milliards-de-dollars-le-jour-de-sa-sortie-un-record",
-      "publisher": "RFI · économie",
-      "published_at": "2026-11-21T08:34:41+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "rfi",
-      "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "4ce58479a92c5c4a7b",
-      "title": "Côte d’Ivoire: le Saint Joseph Innoplaza Center, un complexe mixte de 13 milliards de FCFA pour redessiner le paysage urbain du Plateau",
-      "url": "https://www.financialafrik.com/2026/11/21/cote-divoire-le-saint-joseph-innoplaza-center-un-complexe-mixte-de-13-milliards-de-fcfa-pour-redessiner-le-paysage-urbain-du-plateau/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-21T06:00:17+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "ba84295befe06fabdc",
-      "title": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil",
-      "url": "https://oilprice.com/Energy/Energy-General/Oil-Prices-Caught-Between-a-Looming-Glut-and-Middle-East-Turmoil.html",
+      "id": "449a97e8de69df352c",
+      "title": "Is This Tiny Oil Giant The Real Crown Jewel Of Trump’s New World Order?",
+      "url": "https://oilprice.com/Energy/Crude-Oil/Is-This-Tiny-Oil-Giant-The-Real-Crown-Jewel-Of-Trumps-New-World-Order.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-21T00:00:00+00:00",
+      "published_at": "2026-11-24T20:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4156,11 +4076,28 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "9d41170337d8705caa",
-      "title": "Argentine Energy Firms Rush to Sell Bonds Before the 2027 Election",
-      "url": "https://oilprice.com/Energy/Energy-General/Argentine-Energy-Firms-Rush-to-Sell-Bonds-Before-the-2027-Election.html",
+      "id": "ee53adbaa022cb629b",
+      "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+      "publisher": "Fed · politique monétaire",
+      "published_at": "2026-11-24T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S1",
+      "status": "publication institutionnelle, contenu non analysé",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "INSTITUTIONAL_PUBLICATION",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "fed",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
+    },
+    {
+      "id": "3b8231eebf800b256b",
+      "title": "Central Asia Pushes Ahead With Regional Electricity Market",
+      "url": "https://oilprice.com/Energy/Energy-General/Central-Asia-Pushes-Ahead-With-Regional-Electricity-Market.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-20T22:00:00+00:00",
+      "published_at": "2026-11-24T19:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4173,11 +4110,28 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "1c11f80a2dfc5285aa",
-      "title": "US Data Center Boom Faces a New Political Reality",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Data-Center-Boom-Faces-a-New-Political-Reality.html",
+      "id": "a6887293066a8cbe67",
+      "title": "Cybersécurité, en marge du salon monétique régional : MédiaSoft Lafayette Group simule une cyberattaque assistée par l’IA",
+      "url": "https://www.financialafrik.com/2026/11/24/cybersecurite-mediasoft-lafayette-group-simule-une-cyberattaque-assistee-par-lia/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T18:47:06+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "e13ff861566b3fe74e",
+      "title": "Iraq Refuses to Accept OPEC+ Assessment of its Production Capacity",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iraq-Refuses-to-Accept-OPEC-Assessment-of-its-Production-Capacity.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-20T19:00:00+00:00",
+      "published_at": "2026-11-24T18:30:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4190,11 +4144,28 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "a10e2e4b6fbbbed35b",
-      "title": "Saudi Arabia Expands Oil Storage in Japan as Tokyo Restocks",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Expands-Oil-Storage-in-Japan-as-Tokyo-Restocks.html",
+      "id": "0c8765d40c1ab4e9ad",
+      "title": "Côte d’Ivoire : Massetou Traoré prend les commandes de CREDAF GROUP",
+      "url": "https://www.financialafrik.com/2026/11/24/cote-divoire-massetou-traore-prend-les-commandes-de-credaf-group/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T18:18:52+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "738e93aae800fd7b64",
+      "title": "Canada’s Oilfield Services Sector Is Gearing Up for a Stronger 2027",
+      "url": "https://oilprice.com/Energy/Energy-General/Canadas-Oilfield-Services-Sector-Is-Gearing-Up-for-a-Stronger-2027.html",
       "publisher": "OilPrice",
-      "published_at": "2026-11-20T18:30:00+00:00",
+      "published_at": "2026-11-24T18:00:00+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4207,28 +4178,11 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
-      "id": "f98dc9e2612c11688b",
-      "title": "U.S. Oil Drillers Pick Up the Pace Just as Oil Prices Fall",
-      "url": "https://oilprice.com/Energy/Energy-General/US-Oil-Drillers-Pick-Up-the-Pace-Just-as-Oil-Prices-Fall.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-11-20T18:09:09+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "71f2f96e18ef826327",
-      "title": "Boom de l'intelligence artificielle : la révolution à quel prix ?",
-      "url": "https://www.france24.com/fr/%C3%A9missions/la-semaine-de-l-%C3%A9co/20261120-boom-de-l-intelligence-artificielle-la-r%C3%A9volution-%C3%A0-quel-prix",
+      "id": "9da21a8976b2bc90db",
+      "title": "IA : les femmes occupent majoritairement les emplois les plus menacés",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261124-intelligence-artificielle-femmes-occupent-majoritairement-emplois-menac%C3%A9s",
       "publisher": "France 24 · économie",
-      "published_at": "2026-11-20T17:37:58+00:00",
+      "published_at": "2026-11-24T17:20:30+00:00",
       "tickers": [],
       "tier": "S2",
       "status": "alerte non vérifiée",
@@ -4239,12 +4193,80 @@
       "scope": "INTL",
       "feed_id": "france24",
       "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
+    {
+      "id": "a74ba5f55171492d92",
+      "title": "Après la Côte d’Ivoire, Coris Bank International Bénin se lance à la conquête de la BRVM",
+      "url": "https://www.financialafrik.com/2026/11/24/apres-la-cote-divoire-coris-bank-international-benin-se-lance-a-la-conquete-de-la-brvm/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T17:06:27+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
+    },
+    {
+      "id": "0cc7f5eb156135d70d",
+      "title": "Europe’s Gas Prices Jumped 163% in a Year",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Europes-Gas-Prices-Jumped-163-in-a-Year.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "623d9c488670c0472d",
+      "title": "Saudi Arabia Sees Smaller Economic Slump as More Oil Reaches Market",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sees-Smaller-Economic-Slump-as-More-Oil-Reaches-Market.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
+    {
+      "id": "bd40284180acce00a4",
+      "title": "BAD : Sidi Ould Tah installe une équipe de choc",
+      "url": "https://www.financialafrik.com/2026/11/24/bad-sidi-ould-tah-installe-une-equipe-de-choc/",
+      "publisher": "Financial Afrik",
+      "published_at": "2026-11-24T16:28:16+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "UNKNOWN",
+      "feed_id": "financialafrik",
+      "feed_url": "https://www.financialafrik.com/feed/"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-11-21T13:20:17.700755+00:00",
-    "checked_at": "2026-11-21T13:20:08.708223+00:00",
+    "cutoff": "2026-11-24T20:04:39.773914+00:00",
+    "checked_at": "2026-11-24T20:04:33.112339+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4254,68 +4276,68 @@
             "ticker": "SP:SPX",
             "name": "S&P 500",
             "unit": "points",
-            "value": 6910.39,
-            "change_pct": -3.69908428711382,
+            "value": 7187.13,
+            "change_pct": -0.6914304900948847,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T21:35:54+00:00",
+            "observed_at": "2026-11-24T20:04:24+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "DJ:DJI",
             "name": "Dow Jones",
             "unit": "points",
-            "value": 48147.33,
-            "change_pct": -1.9343928129301347,
+            "value": 49911.88,
+            "change_pct": 0.6383063237229483,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T21:35:59+00:00",
+            "observed_at": "2026-11-24T20:04:24+00:00",
             "currency": null,
             "mode": "delayed_streaming_600",
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "EURONEXT:PX1",
             "name": "CAC 40",
             "unit": "points",
-            "value": 7927.75,
-            "change_pct": -1.893267200776164,
+            "value": 8040.49,
+            "change_pct": -0.05407192685001024,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T16:35:30+00:00",
+            "observed_at": "2026-11-24T16:35:30+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:NI225",
             "name": "Nikkei 225",
             "unit": "points",
-            "value": 56436.65,
-            "change_pct": -5.059115311741349,
+            "value": 58644.56,
+            "change_pct": 3.9121918115267227,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T06:30:01+00:00",
+            "observed_at": "2026-11-24T06:30:01+00:00",
             "currency": "JPY",
             "mode": "streaming",
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4327,68 +4349,68 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 9.9885,
-            "change_pct": 0.19761656367868025,
+            "value": 9.9808,
+            "change_pct": -0.5123502322521404,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T22:27:20+00:00",
+            "observed_at": "2026-11-24T20:04:23+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.935,
-            "change_pct": 0.20159442866306462,
+            "value": 10.943,
+            "change_pct": 0.11893870082342088,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T21:56:46+00:00",
+            "observed_at": "2026-11-24T20:01:45+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "CBOE:VIX",
             "name": "VIX",
             "unit": "points",
-            "value": 35.89,
-            "change_pct": 26.195499296765117,
+            "value": 26.94,
+            "change_pct": 1.2021036814425254,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T21:14:46+00:00",
+            "observed_at": "2026-11-24T20:04:01+00:00",
             "currency": null,
             "mode": "delayed_streaming_900",
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 103.84,
-            "change_pct": -0.0808282976020969,
+            "value": 103.819,
+            "change_pct": -0.47834506029639684,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-20T21:59:59+00:00",
+            "observed_at": "2026-11-24T20:04:23+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4400,68 +4422,68 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 3515.4,
-            "change_pct": -4.615384615384613,
+            "value": 3556.4,
+            "change_pct": -2.6017417976666484,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-21T00:34:50+00:00",
+            "observed_at": "2026-11-24T20:04:18+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 92.57,
-            "change_pct": 0.6414437921287119,
+            "value": 88.78,
+            "change_pct": -0.6601767931073105,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-21T01:26:10+00:00",
+            "observed_at": "2026-11-24T20:04:11+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 5.485,
-            "change_pct": -2.636016685896857,
+            "value": 5.3885,
+            "change_pct": -4.357472488462917,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-21T00:34:50+00:00",
+            "observed_at": "2026-11-24T20:04:23+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:ATW1!",
             "name": "Charbon API2 · futures",
             "unit": "USD / tonne",
-            "value": 132.5,
-            "change_pct": 0.1890359168241966,
+            "value": 133.8,
+            "change_pct": -0.07468259895443936,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-21T01:26:11+00:00",
+            "observed_at": "2026-11-24T18:13:40+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-11-21T13:20:08.708223+00:00",
+            "collected_at": "2026-11-24T20:04:33.112339+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4488,7 +4510,7 @@
     },
     {
       "label": "Dernière clôture disponible",
-      "date": "2026-11-20",
+      "date": "2026-11-24",
       "url": "cloture.html"
     }
   ],
