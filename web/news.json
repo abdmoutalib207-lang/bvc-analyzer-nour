@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-26T18:55:20.292772+00:00",
+  "updated_at": "2026-11-26T19:28:11.877644+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
     {
@@ -1645,6 +1645,23 @@
       "feed_url": "https://oilprice.com/rss/main"
     },
     {
+      "id": "daaa5a2eea28b81369",
+      "title": "Euro dollar : l'EUR/USD gagne 0,5% après l'Ifo allemand - XTB.com",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNdVRlWVBPWTFKVThCZVhRN2pzdndYcmRfcFlpSzBRYzBLQ2VHTkZSNVFYTW94cWlVb2V5dDQ5cGV0ekxQeEN4YmZQbzZVc2xPZmM5LXpmcHNNWEtkTW1mb3NxalJMcm9iN3FleFBXWE5yVG42Z21WU29JSjVlU2cxTWxTTHQxUkk2cVl2Q3dNMUZOcHEydW5n?oc=5",
+      "publisher": "Inflation US / zone euro · presse",
+      "published_at": "2026-11-24T13:11:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "macro",
+      "scope": "INTL",
+      "feed_id": "inflation",
+      "feed_url": "https://news.google.com/rss/search?q=inflation%20%C3%89tats-Unis%20zone%20euro%20chiffres&hl=fr&gl=MA&ceid=MA:fr"
+    },
+    {
       "id": "0a67f36b87a8efccef",
       "title": "South Korea Says Its Crude Supply Is Stable Through the Winter",
       "url": "https://oilprice.com/Latest-Energy-News/World-News/South-Korea-Says-Its-Crude-Supply-Is-Stable-Through-the-Winter.html",
@@ -2927,23 +2944,6 @@
       "scope": "INTL",
       "feed_id": "rfi",
       "feed_url": "https://www.rfi.fr/fr/economie/rss"
-    },
-    {
-      "id": "597563617e5207c8ec",
-      "title": "Anthropic fait son entrée en bourse",
-      "url": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20261119-anthropic-fait-son-entr%C3%A9%C3%A9-en-bourse",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-11-19T19:23:52+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "8116f77583e3fa2482",
