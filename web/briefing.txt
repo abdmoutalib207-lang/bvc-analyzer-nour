@@ -1,4 +1,4 @@
-Actualisation horaire — séance 2026-11-26
+Filet de sécurité de fin de journée — séance 2026-11-26
 Préparé le 2026-11-26
 
 Lecture de séanceL’essentiel
@@ -13,7 +13,7 @@ Le relevé de marché totalise 127,43 MDH. Aucune comparaison avec le volume de 
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 390,89–17 606,97 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-11-26T18:55:20.374853+00:00.
+Sources du marché · relevé 2026-11-26T19:18:35.152308+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -27,15 +27,17 @@ Plus fortes hausses comparables
 
 NEJ · 5,98 %
 
+MSA · 3,57 %
+
 CMT · 3,06 %
 
 SBS · 2,98 %
 
 CAR · 2,65 %
 
-IBM · 2,00 %
-
 Plus fortes baisses comparables
+
+MNG · -3,20 %
 
 DTT · -2,73 %
 
@@ -45,23 +47,21 @@ BOA · -2,00 %
 
 ZLD · -1,98 %
 
-SNA · -1,92 %
-
-Classements sur 44 valeurs comparables à la même séance précédente (2026-11-25), parmi les données acceptées par Nour ; ils ne constituent pas le palmarès exhaustif de la Bourse.
+Classements sur 52 valeurs comparables à la même séance précédente (2026-11-25), parmi les données acceptées par Nour ; ils ne constituent pas le palmarès exhaustif de la Bourse.
 
 Liquidité et activité
 
 Principaux volumes monétaires renseignés dans la couverture Nour pour cette clôture :
 
+MNG : 11,56 MDH
+
 CDM : 8,24 MDH
+
+MSA : 7,77 MDH
 
 CASH : 6,31 MDH
 
 AFM : 6,20 MDH
-
-IAM : 5,93 MDH
-
-CMT : 4,88 MDH
 
 Une forte activité ne suffit pas à conclure à du Smart Money. Sans carnet, détail des transactions et persistance multi-séances, l’absorption, la distribution et l’identité des intervenants ne sont pas établies.
 
@@ -93,13 +93,23 @@ Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs rensei
 
 RDSRDS · Résidences Dar Saada
 
-— MAD1,85 %
+167,85 MAD1,85 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre surperforme le MASI de 1,85 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.
+
+Le cours reste entre le plancher 160,00 et la borne haute 181,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 48,02 : momentum inférieur au seuil neutre de 50.
+
+Quantité échangée : 0,46 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 1,24 MDH, contre 1,84 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 160,00 · borne haute 181,00 MAD · RSI 48,02 · activité 0,46 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -109,17 +119,29 @@ Base fondamentale référencée : exercice 2025. BPA 0,17 MAD ; PER 978,90 × ; 
 
 Points sectoriels à examiner : Backlog sécurisé, reconnaissance du chiffre d’affaires, livraisons et trésorerie.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 30/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
 TGCCTGCC · TGCC SA
 
-— MAD1,44 %
+634,00 MAD1,44 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre surperforme le MASI de 1,44 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.
+
+Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.
+
+Le cours reste entre le plancher 555,10 et la borne haute 674,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 52,63 : momentum au-dessus du seuil neutre de 50.
+
+Quantité échangée : 0,42 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 5,54 MDH, contre 8,35 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 555,10 · borne haute 674,00 MAD · RSI 52,63 · activité 0,42 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -129,17 +151,29 @@ Base fondamentale référencée : exercice 2025. BPA 27,46 MAD ; PER 23,09 × ; 
 
 Points sectoriels à examiner : Carnet de commandes, marges, BFR et conversion en cash.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 80/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
 SGTMSGTM · SGTM SA
 
-— MAD-0,05 %
+580,20 MAD-0,05 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre sous-performe le MASI de 0,05 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.
+
+Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.
+
+Le cours reste entre le plancher 517,00 et la borne haute 642,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 45,97 : momentum inférieur au seuil neutre de 50.
+
+Quantité échangée : 0,39 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 3,05 MDH, contre 4,85 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 517,00 · borne haute 642,00 MAD · RSI 45,97 · activité 0,39 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -149,17 +183,27 @@ Base fondamentale référencée : exercice 2025. P/B 9,81 × ; ROE 37,80 % ; Cro
 
 Points sectoriels à examiner : Carnet de commandes, prises de commandes, BFR et dette nette.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 70/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
 CMGPCMGP · CMGP Group
 
-— MAD1,17 %
+260,00 MAD1,17 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre surperforme le MASI de 1,17 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.
+
+Le cours reste entre le plancher 250,00 et la borne haute 291,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 43,80 : momentum inférieur au seuil neutre de 50.
+
+Quantité échangée : 0,66 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 0,64 MDH, contre 1,00 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 250,00 · borne haute 291,00 MAD · RSI 43,80 · activité 0,66 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -169,7 +213,7 @@ Base fondamentale référencée : exercice 2025. P/B 1,59 × ; ROE 8,75 % ; Croi
 
 Points sectoriels à examiner : Mix d’activité, marge, BFR et financement de la croissance.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 32/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
  [https://www.ammc.ma/sites/default/files/CP_CMGP_T3_26.pdf] CMGP Group - CP relatif aux indicateurs du 3ème trimestre 2026 ↗
 
@@ -179,13 +223,25 @@ AMMC · 2026-11-23 · Document officiel repéré
 
 MSAMSA · Sodep-Marsa Maroc
 
-— MAD3,57 %
+779,90 MAD3,57 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre surperforme le MASI de 3,57 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 50 séances : la structure reste fragile sur ces horizons.
+
+Clôture au-dessus de la moyenne à 20 séances : la tenue doit être confirmée lors des prochaines cotations.
+
+Le cours reste entre le plancher 725,00 et la borne haute 797,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 52,04 : momentum au-dessus du seuil neutre de 50.
+
+Quantité échangée : 0,83 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 6,72 MDH, contre 9,44 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 725,00 · borne haute 797,00 MAD · RSI 52,04 · activité 0,83 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -195,7 +251,7 @@ Base fondamentale référencée : exercice 2025. BPA 21,65 MAD ; PER 36,03 × ; 
 
 Points sectoriels à examiner : Trafic portuaire, concessions, capacité, investissements et trésorerie.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 85/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
  [https://www.ammc.ma/sites/default/files/CP_Marsa_Maroc_T3_26.pdf] Marsa Maroc - CP relatif aux indicateurs du 3ème trimestre 2026 ↗
 
@@ -225,13 +281,23 @@ Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs rensei
 
 T2ST2S · T2S Group Holding
 
-— MAD-0,15 %
+202,20 MAD-0,15 %
 
-Clôture 2026-11-26 · données INDISPONIBLE
+Clôture 2026-11-26 · données OBSERVABLE
 
-Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre.
+Le titre sous-performe le MASI de 0,15 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.
 
-Support de référence — · borne haute — MAD · RSI — · activité — ×
+Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.
+
+Le cours reste entre le plancher 200,10 et la borne haute 225,50 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.
+
+RSI 14 à 40,21 : momentum inférieur au seuil neutre de 50.
+
+Quantité échangée : 0,21 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.
+
+Liquidité robuste estimée hors cinq plus fortes séances : 1,29 MDH, contre 1,66 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés.
+
+Support de référence 200,10 · borne haute 225,50 MAD · RSI 40,21 · activité 0,21 ×
 
 Fondamentaux, sources et score descriptif
 
@@ -241,7 +307,7 @@ Base fondamentale référencée : exercice 2025. ROE 14,50 %.
 
 Points sectoriels à examiner : Mix équipements/services, marge, créances clients et trésorerie.
 
-Score canonique non calculable · NON_CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
+Score canonique 42/100 · CALCULABLE. Il décrit les facteurs renseignés ; il n’est ni une recommandation ni une probabilité.
 
 CMTCMT · Minière Touissit
 
@@ -337,7 +403,7 @@ AMMC · 2026-11-25 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-11-26T18:55:21.055314+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-11-26T19:18:35.887485+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
@@ -369,15 +435,15 @@ Risque et devises
 
 USD/MAD
 
-10,0198MAD / USD · 0,33 %
+10,0016MAD / USD · 0,14 %
 
-Dernière observation source2026-11-26T18:54:20+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-11-26T19:18:16+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
-10,9840MAD / EUR · 0,20 %
+10,9730MAD / EUR · 0,10 %
 
-Dernière observation source2026-11-26T18:51:43+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-11-26T19:16:43+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -389,15 +455,15 @@ Indice dollar
 
 103,78points · 0,08 %
 
-Dernière observation source2026-11-26T18:49:00+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-11-26T19:18:22+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-3 595,90USD / once troy · 1,70 %
+3 593,80USD / once troy · 1,64 %
 
-Dernière observation source2026-11-26T18:55:13+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-11-26T19:18:00+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
@@ -407,9 +473,9 @@ Dernière observation source2026-11-26T18:29:59+00:00Différé source : 10 min �
 
 Cuivre · futures
 
-5,44USD / livre · 1,90 %
+5,44USD / livre · 1,86 %
 
-Dernière observation source2026-11-26T18:55:13+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-11-26T19:18:09+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -483,19 +549,19 @@ MASI : tenue de 16 390,89 ; franchissement confirmé de 17 606,97 pour sortir de
 
 ADI : Données insuffisantes pour établir des niveaux.
 
-RDS : Données insuffisantes pour établir des niveaux.
+RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 160.0 / 181.0 MAD).
 
-TGCC : Données insuffisantes pour établir des niveaux.
+TGCC : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 555.1 / 674.0 MAD).
 
-SGTM : Données insuffisantes pour établir des niveaux.
+SGTM : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 517.0 / 642.0 MAD).
 
-CMGP : Données insuffisantes pour établir des niveaux.
+CMGP : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 250.0 / 291.0 MAD).
 
-MSA : Données insuffisantes pour établir des niveaux.
+MSA : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 725.0 / 797.0 MAD).
 
 SMI : Données insuffisantes pour établir des niveaux.
 
-T2S : Données insuffisantes pour établir des niveaux.
+T2S : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 200.1 / 225.5 MAD).
 
 CMT : Attendre des séances comparables après la reprise (références 3000.0 / 4100.0 MAD).
 
