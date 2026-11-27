@@ -102,3 +102,25 @@ sans décompte figé. Le contrôle de sélection conserve son compteur dynamique
 Les derniers liens génériques de retour aux valeurs, de couverture et de
 référentiels comptables ne portent plus le décompte historique de 80 titres.
 Les nombres du rapport et les compteurs d’interface restent ceux de l’univers réel.
+
+## Publication confirmée
+
+- PR #45 fusionnée après le succès de la revue `45988059762`.
+- Générateur publié : `8a7e47a4f149e305918bd9d5b176551163e0bf33`.
+- Workflow de production `45989642131` : succès ; génération, 556 tests Python,
+  contrôles JavaScript et audits, Chromium sur trois largeurs, scénario de
+  quarantaine, déploiement, Chromium public et audit final des données servies.
+- Commit de publication : `5ecef39bdf685e61aa32bf14a8bc294bbd7ef7bf`.
+- Lecture indépendante après déploiement : page LPH accessible, ISIN et bloc
+  introduction présents ; rapport public de 81 sociétés, LPH LIMITÉ,
+  clôture du 26 novembre 310 MAD, point provisoire séparé 308,25 MAD daté du
+  27 novembre à 11:03:30. Ces observations restent datées et ne constituent
+  aucune prévision ni validation des comptes annuels.
+- SHA-256 du runtime servi, identique au manifeste public :
+  `ac11c1eb4ba574ddabc7125bdc4803edb662cb2c2fa9a82fc07f697db9d6bbaf`.
+- Fiche : https://abdmoutalib207-lang.github.io/bvc-analyzer-nour/titres/LPH.html
+- Exécution : https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/45989642131
+
+La déclaration « vérification/publication à compléter » plus haut décrit l’état
+historique de préparation du lot ; les résultats observés ci-dessus la complètent.
+Le principal est resté strictement en lecture seule.
