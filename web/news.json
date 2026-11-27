@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T19:12:25.261669+00:00",
+  "updated_at": "2026-11-27T19:37:12.674937+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "aa3aefe717ce4c47ad",
+      "title": "L'IA, atout ou menace pour le travail des femmes ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/actuelles/20261127-l-ia-atout-ou-menace-pour-le-travail-des-femmes",
+      "publisher": "France 24 · économie",
+      "published_at": "2026-11-27T19:15:12+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "economie",
+      "scope": "INTL",
+      "feed_id": "france24",
+      "feed_url": "https://www.france24.com/fr/economie/rss"
+    },
     {
       "id": "bddf59be6df02dfada",
       "title": "Georgia Voters to Decide Fate of $17 Billion Data Center Megaproject",
@@ -2802,23 +2819,6 @@
       "scope": "INTL",
       "feed_id": "france24",
       "feed_url": "https://www.france24.com/fr/economie/rss"
-    },
-    {
-      "id": "48ed677b50d9ff731f",
-      "title": "Tunisie : suspension de l’arbitrage à 573 millions de dollars opposant l’État à Zenith Energy",
-      "url": "https://www.financialafrik.com/2026/11/24/tunisie-suspension-de-larbitrage-a-573-millions-de-dollars-opposant-letat-a-zenith-energy/",
-      "publisher": "Financial Afrik",
-      "published_at": "2026-11-24T12:01:43+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "UNKNOWN",
-      "feed_id": "financialafrik",
-      "feed_url": "https://www.financialafrik.com/feed/"
     },
     {
       "id": "c8d7d2f8eb99cb8e57",

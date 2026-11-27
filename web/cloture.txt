@@ -9,11 +9,11 @@ Le MASI termine à 16 634,29 points (0,38 %). La direction de cette séance est 
 
 L’indice se situe à 59,14 % de l’amplitude au-dessus du plus bas (16 554,75), pour un plus haut de 16 689,25 points. La position dans la fourchette décrit la séance ; elle ne prédit pas la suivante.
 
-Le relevé de marché totalise 405,77 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
+Le relevé de marché totalise 403,90 MDH. Aucune comparaison avec le volume de la veille n’est publiée sans un relevé de même périmètre ; une hausse des volumes n’est donc pas supposée.
 
 Les 20 clôtures précédentes dessinent un intervalle de référence 16 390,89–17 606,97 points. Ce sont des bornes observées, pas des objectifs de cours.
 
-Sources du marché · relevé 2026-11-27T19:23:43.877113+00:00.
+Sources du marché · relevé 2026-11-27T19:37:12.777768+00:00.
 
 Largeur, secteurs et valeurs motrices
 
@@ -39,15 +39,15 @@ Plus fortes baisses comparables
 
 JET · -4,67 %
 
-DHO · -3,10 %
-
 ADI · -2,94 %
-
-CIH · -2,24 %
 
 T2S · -2,08 %
 
-Classements sur 61 valeurs comparables à la même séance précédente (2026-11-26), parmi les données acceptées par Nour ; ils ne constituent pas le palmarès exhaustif de la Bourse.
+IBM · -1,96 %
+
+MIC · -1,92 %
+
+Classements sur 55 valeurs comparables à la même séance précédente (2026-11-26), parmi les données acceptées par Nour ; ils ne constituent pas le palmarès exhaustif de la Bourse.
 
 Liquidité et activité
 
@@ -427,7 +427,7 @@ AMMC · 2026-11-27 · Document officiel repéré
 
 Macroéconomie et international
 
-Collecte tentée : 2026-11-27T19:23:44.602902+00:00 · état ok. Horodatages en UTC.
+Collecte tentée : 2026-11-27T19:37:13.473993+00:00 · état ok. Horodatages en UTC.
 
 Indices actions
 
@@ -459,15 +459,15 @@ Risque et devises
 
 USD/MAD
 
-10,0473MAD / USD · 0,35 %
+10,0479MAD / USD · 0,36 %
 
-Dernière observation source2026-11-27T19:23:33+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
+Dernière observation source2026-11-27T19:36:56+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-USDMAD/] Source ↗
 
 EUR/MAD
 
 10,9780MAD / EUR · -0,02 %
 
-Dernière observation source2026-11-27T19:21:48+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
+Dernière observation source2026-11-27T19:31:48+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/FX_IDC-EURMAD/] Source ↗
 
 VIX
 
@@ -479,27 +479,27 @@ Indice dollar
 
 104,05points · 0,26 %
 
-Dernière observation source2026-11-27T19:23:15+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
+Dernière observation source2026-11-27T19:36:22+00:00Flux source « streaming » ; affichage par instantanés ·  [https://www.tradingview.com/symbols/TVC-DXY/] Source ↗
 
 Matières premières
 
 Or · futures
 
-3 670,40USD / once troy · 3,81 %
+3 669,70USD / once troy · 3,79 %
 
-Dernière observation source2026-11-27T19:23:24+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
+Dernière observation source2026-11-27T19:37:08+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-GC1!/] Source ↗
 
 Brent · futures
 
-90,56USD / baril · -1,21 %
+90,57USD / baril · -1,20 %
 
-Dernière observation source2026-11-27T19:23:32+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
+Dernière observation source2026-11-27T19:37:05+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/ICEEUR-BRN1!/] Source ↗
 
 Cuivre · futures
 
-5,60USD / livre · 5,02 %
+5,61USD / livre · 5,04 %
 
-Dernière observation source2026-11-27T19:23:30+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
+Dernière observation source2026-11-27T19:37:05+00:00Différé source : 10 min ·  [https://www.tradingview.com/symbols/COMEX-HG1!/] Source ↗
 
 Charbon API2 · futures
 
@@ -510,6 +510,10 @@ Dernière observation source2026-11-27T15:48:48+00:00Différé source : 10 min �
 Source : TradingView, scanner public. Instantanés à chaque collecte Nour, pas de diffusion en direct. La variation est celle fournie par la source, pas un rendement depuis la collecte Nour. Les marchés ont des horaires différents : ces observations ne sont pas simultanées. Or, Brent, cuivre et charbon : contrats futures continus, pas prix spot. USD/MAD et EUR/MAD : cotations indicatives, pas cours officiel de Bank Al-Maghrib. Aucune imputation des cours absents ; aucune influence sur les scores ni prédiction du MASI.
 
 Horodatages indépendants de la clôture BVC : les cotations peuvent être postérieures à celle-ci, mais aucune observation du lendemain n’est admise. Aucun lien causal avec la séance n’est établi.
+
+ [https://www.france24.com/fr/%C3%A9missions/actuelles/20261127-l-ia-atout-ou-menace-pour-le-travail-des-femmes] L'IA, atout ou menace pour le travail des femmes ? ↗
+
+France 24 · économie · 2026-11-27T19:15:12+00:00 · International · Économie · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
  [https://oilprice.com/Energy/Energy-General/Georgia-Voters-to-Decide-Fate-of-17-Billion-Data-Center-Megaproject.html] Georgia Voters to Decide Fate of $17 Billion Data Center Megaproject ↗
 
@@ -538,10 +542,6 @@ OilPrice · 2026-11-27T17:30:00+00:00 · International · Matières premières �
  [https://oilprice.com/Energy/Crude-Oil/The-Oil-Glut-Everyone-Expected-Is-Looking-Increasingly-Elusive.html] The Oil Glut Everyone Expected Is Looking Increasingly Elusive ↗
 
 OilPrice · 2026-11-27T17:04:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
-
- [https://oilprice.com/Energy/Energy-General/Soaring-Fuel-Prices-Threaten-to-Push-More-Airlines-Into-Bankruptcy.html] Soaring Fuel Prices Threaten to Push More Airlines Into Bankruptcy ↗
-
-OilPrice · 2026-11-27T17:00:00+00:00 · International · Matières premières · alerte non vérifiée. Contenu non analysé ; aucune conséquence boursière déduite.
 
 Marchés mondiaux et radar internationalCanaux à surveiller : taux et coût de financement ; énergie et transport ; change pour les importateurs ; prix des métaux pour les minières. Ce sont des facteurs de sensibilité, pas des événements supposés survenus aujourd’hui.
 
