@@ -69,3 +69,27 @@ Le nombre d’actions après IPO ne remplace aucun dénominateur annuel.
   Chromium avant et après publication ; aucun contrôle n’est désactivé.
 
 Leçon durable : `ipo_identity_before_short_history` dans error_memory.json.
+
+## Reprise dans cette conversation
+
+La PR #45 existante est reprise sans recréer le lot. Le premier contrôle
+Chromium (run 45981862243, job 140447497146) échouait sur une assertion
+exigeant une image de logo pour toute fiche, alors que LPH est explicitement
+non vérifiée dans le catalogue. Le contrôle vérifie maintenant soit une
+image déclarée vérifiée, soit le sigle exact et l’état de repli visible.
+Les autres vérifications de cours, sources, mise en page et calculs restent actives.
+
+Une nouvelle collecte réelle intraday du 27 novembre et sa preuve provisoire
+liée au snapshot de 81 titres sont conservées avec leurs heures. Aucune
+ancienne preuve de clôture n’est réétiquetée avec le nouveau hash.
+
+Preuve documentaire complémentaire effectivement téléchargée et pages
+sélectionnées contrôlées visuellement : note d’opération du syndicat de placement,
+https://www.sahambank.com/wp-content/uploads/2026/11/LAPROPHAN_IPO_NO_033_2026.pdf
+SHA-256 `97649c97cccf87110f56306af9576d953f0b8b058624fde0f96c999c9fe51542`.
+Page PDF 23 : ISIN et première cotation ; page 50 : capital après IPO.
+Ces pages corroborent l’identité ; elles ne certifient aucun ratio annuel.
+
+La tentative de vérification locale sur la reprise exploratoire a été
+interrompue pour repartir de la PR existante. Ses résultats partiels ne sont
+pas présentés comme une validation complète du lot final.

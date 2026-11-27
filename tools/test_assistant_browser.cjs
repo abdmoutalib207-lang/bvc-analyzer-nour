@@ -163,7 +163,14 @@ async function answerAfter(page,action){
           const shown=row.intraday_quote?.price??row.price??row.price_observation?.price;
           assert.equal(await page.locator('.issuer-quote [data-quote-clocks]').count(),1);
           await assertQuote(page.locator('.issuer-quote [data-primary-price]'),shown);
-          assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
+          const logo = page.locator('.company-heading .company-logo');
+          const marks = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/company_logos.json'),'utf8')).records;
+          const hasVerifiedLogo = marks[symbol]?.status === 'verified';
+          assert.equal(await logo.locator('img').count(), hasVerifiedLogo ? 1 : 0);
+          if (!hasVerifiedLogo) {
+            assert.ok(await logo.evaluate(el => el.classList.contains('is-missing')));
+            assert.equal((await logo.innerText()).trim(), symbol);
+          }
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
           if(marketReport.health?.checked_at){

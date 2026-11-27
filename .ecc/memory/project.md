@@ -95,3 +95,7 @@ briefings archivés ; un relevé provisoire ne devient pas une clôture.
   Le prix public 341 MAD n’est pas une clôture et les 17 315 725 titres après
   IPO ne constituent pas un dénominateur annuel. Seuils techniques inchangés.
   Les compteurs de couverture suivent le référentiel ; logo non confirmé.
+
+- Reprise LPH / PR #45 : contrôle navigateur du sigle sans logo corrigé ;
+  une nouvelle observation intraday fournit une preuve liée au snapshot de
+  81 titres. Voir le dossier LPH et la leçon unverified_issuer_logo_browser_contract.
