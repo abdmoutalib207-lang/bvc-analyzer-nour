@@ -6,7 +6,7 @@ fenêtres statistiques alignées sur le calendrier MASI, exclusion des séances 
 
 [Dernier contrôle de dette et des périmètres comptables (13/10/2026)](docs/debt-review-2026-10-13.md).
 
-Moteur d'analyse indépendant de `-bvc-analyzer` : 80 fiches, graphiques historiques, indicateurs techniques, fondamentaux sourcés, score descriptif unique, briefing de séance et radar de publications. Aucun NLP ni texte WhatsApp n'entre dans les calculs. Le projet principal ne reçoit aucune écriture.
+Moteur d'analyse indépendant de `-bvc-analyzer` : 81 fiches, graphiques historiques, indicateurs techniques, fondamentaux sourcés, score descriptif unique, briefing de séance et radar de publications. Aucun NLP ni texte WhatsApp n'entre dans les calculs. Le projet principal ne reçoit aucune écriture.
 
 [Fiabilité et collecte officielle du 16/10/2026](docs/official-reliability-2026-10-16.md) :
 contrôles d'unités/périodes/périmètres avant calcul, recalcul arithmétique avant
@@ -16,7 +16,7 @@ Les documents détectés n'alimentent jamais automatiquement les faits vérifié
 ## Références et consolidation du 18 octobre 2026
 
 [Étude IDBourse / TradingView / Yuna / EcoFinance et limites vérifiées](docs/reference-methods-2026-10-18.md).
-Explorateur fondamental des 80 titres et CSV canonique, MM200/EMA20/EMA50/ATR Wilder sur les graphiques,
+Explorateur fondamental de tous les titres suivis et CSV canonique, MM200/EMA20/EMA50/ATR Wilder sur les graphiques,
 et synthèse complète locale avec comptes annuels, dernière publication, risques, métier, réserves et pages PDF.
 Les valeurs antérieures et le score sont conservés. Les données privées IDBourse ne sont pas importées.
 

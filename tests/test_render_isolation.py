@@ -18,7 +18,7 @@ class RenderIsolation(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d,patch('nour.site.detail_page',side_effect=broken):
             out=Path(d)
             build_site(fixture,report,out)
-            self.assertEqual(len(list((out/'titres').glob('*.html'))),80)
+            self.assertEqual(len(list((out/'titres').glob('*.html'))),len(fixture["symbols"]))
             self.assertIn('Fiche indisponible',(out/'titres/RDS.html').read_text())
             self.assertIn('data-bi-dashboard',(out/'titres/ADI.html').read_text())
             actual=json.loads((out/'report.json').read_text())

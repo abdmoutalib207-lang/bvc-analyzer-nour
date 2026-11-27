@@ -118,7 +118,7 @@ def dashboard(journal, report):
     return ('<main><section class="panel"><h1>Surveillance des anomalies</h1>'
         '<p>Un blocage local suspend les sorties concernées. Une défaillance critique globale conserve le dernier site sain. '
         'La disparition d’une observation ou une panne de source ne résout pas un incident.</p>'
-        +watch+'<p><a href="anomalies.json">Journal et historique JSON</a> · <a href="couverture.json">Couverture des 80 sociétés</a></p>'
+        +watch+'<p><a href="anomalies.json">Journal et historique JSON</a> · <a href="couverture.json">Couverture des sociétés suivies</a></p>'
         '<div class="filters">'+filters+'</div><p data-anomaly-count></p><div class="tablewrap"><table>'
         '<thead><tr><th>Titre</th><th>Problème</th><th>Domaine</th><th>Gravité</th><th>Première détection</th>'
         '<th>Dernière détection</th><th>Statut</th><th>Conséquence</th><th>Action</th></tr></thead><tbody>'

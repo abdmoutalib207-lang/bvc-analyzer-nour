@@ -128,7 +128,7 @@ FAMILIES = {
         "sources": ("rapports de l'opérateur", "résultats consolidés", "AMMC"),
     },
     "Santé - industrie pharmaceutique": {
-        "symbols": ("SOT", "PPM"),
+        "symbols": ("SOT", "PPM", "LPH"),
         "metrics": ("croissance organique", "marge brute", "mix produits", "stocks", "BFR", "capex"),
         "exclude": ("taux d'occupation hôtelier", "PNB bancaire"),
         "sources": ("rapports émetteurs", "résultats", "AMMC"),

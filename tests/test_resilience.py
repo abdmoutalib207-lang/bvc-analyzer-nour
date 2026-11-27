@@ -33,7 +33,7 @@ class ResilienceTests(unittest.TestCase):
         cls.original={r['symbol']:r for r in cls.baseline['results']}
 
     def check_others(self, report, affected):
-        self.assertEqual(len(report['results']),80)
+        self.assertEqual(len(report['results']),len(self.fixture["symbols"]))
         for r in report['results']:
             if r['symbol'] not in affected:
                 # Includes technical/fundamental numbers and canonical factors.
@@ -162,8 +162,8 @@ class ResilienceTests(unittest.TestCase):
                     # including after midnight and later market sessions.
                     run._build(argparse.Namespace(asof=baseline['analysis_date'],slot='refresh'),output)
             actual=json.loads((target/'report.json').read_text())
-            self.assertEqual(len(list((target/'titres').glob('*.html'))),80)
-            self.assertEqual(len(actual['results']),80)
+            self.assertEqual(len(list((target/'titres').glob('*.html'))),len(self.fixture["symbols"]))
+            self.assertEqual(len(actual['results']),len(self.fixture["symbols"]))
             for row in actual['results']:
                 if row['symbol']=='ADI':
                     self.assertIsNone(row['technical']['sma20'])

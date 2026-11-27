@@ -32,7 +32,7 @@ def body(report):
         '<h1>Méthodes comptables</h1><p>Le référentiel dépend de la société, du document et de la période.</p>'
         '<button type="button" data-assistant-question="Quelles normes comptables selon chaque secteur marocain ?">Demander à Nour</button></div></div>'
         '<section class="panel"><h2>Les notions utiles</h2>'+topics+'</section>'
-        '<section class="panel"><h2>Référentiels des 80 titres</h2><p>'
+        '<section class="panel"><h2>Référentiels des titres suivis</h2><p>'
         +str(count['primary_scoped_reviews'])+' sociétés avec pages de méthodes contrôlées dans ce lot ; '
         +str(count['declared_to_review'])+' déclarations restant à approfondir. Les chiffres publiés restent consultables.</p>'
         '<div class="tablewrap"><table><thead><tr><th>Titre</th><th>Métier</th><th>Référentiel du document</th><th>Clôture comptable</th><th>Lecture des méthodes</th><th>Source</th></tr></thead>'

@@ -25,7 +25,7 @@ class FinancialMergeGate(unittest.TestCase):
         cls.items = {r['symbol']: r for r in cls.report['results']}
 
     def test_all_80_symbols_are_present_and_missing_reports_are_explicit(self):
-        self.assertEqual(len(self.items), 80)
+        self.assertEqual(len(self.items), len(self.fixture["symbols"]))
         self.assertEqual(set(self.items), set(self.fixture['symbols']))
         self.assertGreaterEqual(len(self.facts), 77)
         for symbol in set(self.items) - set(self.facts):

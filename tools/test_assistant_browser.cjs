@@ -33,10 +33,19 @@ async function answerAfter(page,action){
           body:fs.readFileSync(path.join(__dirname,'../web/assistant-config.json'),'utf8')});
       });
       const errors=[];const page=await context.newPage();let marketReport;
+      const contractReport=await (await context.request.get(new URL('report.json',base).href)).json();
+      const issuerCount=contractReport.results.length;
       page.on('pageerror',error=>errors.push(error.message));
       page.on('response',response=>{if(response.status()>=400){if(/\/logos\/[A-Z0-9]+\.svg(?:\?|$)/.test(response.url()))assetAnomalies.push({url:response.url(),http_status:response.status(),severity:'warning',at:new Date().toISOString()});else errors.push(response.status()+' '+response.url());}});
-      for(const route of ['index.html','titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','comptabilite.html','sources.html','contre-verification.html','macro.html','anomalies.html']){
+      for(const route of ['index.html',...(contractReport.results.some(r=>r.symbol==='LPH')?['titres/LPH.html']:[]),'titres/JET.html','titres/ADI.html','titres/MNG.html','titres/MUT.html','titres/ENK.html','titres/CFGB.html','titres/TGCC.html','titres/MSA.html','titres/SMI.html','recherche.html','metiers.html','comptabilite.html','sources.html','contre-verification.html','macro.html','anomalies.html']){
         await page.goto(new URL(route,base).href,{waitUntil:'networkidle'});
+        if(route==='titres/LPH.html'){
+          const intro=page.locator('#introduction');
+          assert.ok((await intro.innerText()).includes('MA0000012882'));
+          assert.ok((await intro.innerText()).includes('2026-11-25'));
+          assert.ok((await intro.innerText()).includes('341,00 MAD'));
+          if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`laprophan-${width}.png`)});}
+        }
         if(route==='contre-verification.html'){
           const audit=page.locator('[data-screener-audit]');
           assert.equal(await audit.getByRole('heading',{name:'Contre-vérification financière',exact:true}).count(),1);
@@ -56,7 +65,7 @@ async function answerAfter(page,action){
           if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`financial-comparison-${width}.png`)});}
         }
         if(route==='comptabilite.html'){
-          assert.equal(await page.locator('tbody tr').count(),80);
+          assert.equal(await page.locator('tbody tr').count(),issuerCount);
           assert.equal(await page.locator('details[open]').count(),0);
           await page.locator('details summary').filter({hasText:'Recherche, développement et logiciels'}).click();
           assert.ok((await page.locator('details[open]').innerText()).includes('HPS'));
@@ -64,7 +73,7 @@ async function answerAfter(page,action){
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Accounting guide overflows '+width);
         }
         if(route==='index.html'){
-          assert.equal(await page.locator('[data-market-row] .company-logo').count(),80);
+          assert.equal(await page.locator('[data-market-row] .company-logo').count(),issuerCount);
           await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));
           await page.waitForFunction(()=>[...document.querySelectorAll('[data-market-row] .company-logo img')].every(img=>img.complete));
           const failedLogos=await page.locator('[data-market-row] .company-logo img').evaluateAll(images=>images.filter(img=>img.naturalWidth===0).map(img=>({src:img.currentSrc||img.src,complete:img.complete})));
@@ -93,7 +102,7 @@ async function answerAfter(page,action){
             assert.ok(warning.includes('ne constitue pas une validation entre deux fournisseurs'));
             assert.equal(report.cross_source_volume_audit.cross_source_verified,false);
           }
-          assert.equal(await page.locator('[data-market-row] [data-quote-clocks]').count(),80);
+          assert.equal(await page.locator('[data-market-row] [data-quote-clocks]').count(),issuerCount);
           const adi=report.results.find(r=>r.symbol==='ADI');
           const shown=adi.intraday_quote?.price??adi.price??adi.price_observation?.price;
           const primary=page.locator('[data-quote-symbol="ADI"] [data-primary-price]');
@@ -114,7 +123,7 @@ async function answerAfter(page,action){
             assert.ok((await stamp.innerText()).includes('Casablanca'));
           }
           await page.locator('#fundamental-explorer summary').click();
-          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),issuerCount);
           await page.locator('#fundamental-availability').selectOption('missing_annual');
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),report.results.filter(r=>!r.fundamental.exercise).length);
           await page.locator('#fundamental-reset').click();
@@ -126,7 +135,7 @@ async function answerAfter(page,action){
           await page.locator('#fundamental-pe-max').fill('0');
           assert.equal(await page.locator('[data-fundamental-row]:visible').count(),report.results.filter(row=>Number.isFinite(row.fundamental.pe)&&row.fundamental.pe<=0).length);
           await page.locator('#fundamental-reset').click();
-          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),80);
+          assert.equal(await page.locator('[data-fundamental-row]:visible').count(),issuerCount);
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Fundamental explorer overflow '+width);
           await page.locator('#fundamental-explorer summary').click();
           await page.getByText('Suivi des mises à jour',{exact:true}).click();
@@ -154,7 +163,14 @@ async function answerAfter(page,action){
           const shown=row.intraday_quote?.price??row.price??row.price_observation?.price;
           assert.equal(await page.locator('.issuer-quote [data-quote-clocks]').count(),1);
           await assertQuote(page.locator('.issuer-quote [data-primary-price]'),shown);
-          assert.equal(await page.locator('.company-heading .company-logo img').count(),1);
+          const logo = page.locator('.company-heading .company-logo');
+          const marks = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/company_logos.json'),'utf8')).records;
+          const hasVerifiedLogo = marks[symbol]?.status === 'verified';
+          assert.equal(await logo.locator('img').count(), hasVerifiedLogo ? 1 : 0);
+          if (!hasVerifiedLogo) {
+            assert.ok(await logo.evaluate(el => el.classList.contains('is-missing')));
+            assert.equal((await logo.innerText()).trim(), symbol);
+          }
           assert.ok(!(await page.locator('.issuer-quote').innerText()).includes('CDG'));
           assert.equal(await page.locator('.issuer-quote a').getAttribute('href'),'../sources.html#marche');
           if(marketReport.health?.checked_at){
@@ -410,11 +426,11 @@ async function answerAfter(page,action){
             assert.ok(body.includes(label),'Missing métier review: '+label);
           }
           assert.equal(await page.locator('table').count(),2);
-          assert.equal(await page.locator('table').last().locator('tbody tr').count(),80);
+          assert.equal(await page.locator('table').last().locator('tbody tr').count(),issuerCount);
           assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Métier page overflows '+width);
           const json=await (await context.request.get(new URL('sector-readiness.json',base).href)).json();
-          assert.equal(json.universe,80);
-          assert.equal(json.curated,78);
+          assert.equal(json.universe,issuerCount);
+          assert.equal(json.curated,contractReport.results.filter(r=>r.sector_guidance.coverage==='curated').length);
           assert.equal(json.documents_certified,false);
           const publishedReport=await (await context.request.get(new URL('report.json',base).href)).json();
           // Review progress changes the reasons, not the visibility contract:
@@ -464,7 +480,7 @@ async function answerAfter(page,action){
         }
         await page.getByRole('button',{name:'Assistant Nour',exact:true}).click();
         await page.getByText('Données chargées · analyse du',{exact:false}).waitFor();
-        assert.equal(await page.locator('#assistant-symbol option').count(),81);
+        assert.equal(await page.locator('#assistant-symbol option').count(),issuerCount+1);
         assert.equal(await page.locator('#assistant-ai-option').isVisible(),true,
           JSON.stringify(await page.evaluate(async()=>({
             config:await fetch('assistant-config.json').then(r=>r.json()).catch(e=>String(e)),
@@ -533,9 +549,9 @@ async function answerAfter(page,action){
           const accountingBal=await ask('Méthodes comptables Balima en 2025');
           assert.ok(accountingBal.includes('reste au coût historique'));
           const screening=await ask('Les 5 PER les plus faibles en 2025');
-          assert.ok(screening.includes('titre(s) correspondant(s) sur 80'));
+          assert.ok(screening.includes('titre(s) correspondant(s) sur '+issuerCount));
           const eligiblePer=Object.values(facts.symbols).filter(row=>row.fundamental.exercise===2025&&Number.isFinite(row.fundamental.pe));
-          assert.ok(screening.includes(eligiblePer.length+' titre(s) correspondant(s) sur 80 ; '+Math.min(5,eligiblePer.length)+' affiché(s).'));
+          assert.ok(screening.includes(eligiblePer.length+' titre(s) correspondant(s) sur '+issuerCount+' ; '+Math.min(5,eligiblePer.length)+' affiché(s).'));
           assert.equal(screening.includes('PER annuel :'),eligiblePer.length>0);
           assert.ok(screening.includes('ne constitue pas une comparaison sectorielle validée'));
           const combined=await ask('Cours, PER, RSI et VaR ADI');

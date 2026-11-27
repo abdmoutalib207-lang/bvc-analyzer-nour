@@ -151,8 +151,8 @@ class CalculationAudit(unittest.TestCase):
             self.assertIsNone(rows[symbol]['price'])
             self.assertIsNone(rows[symbol]['technical']['sma20'])
         result = audit_calculations(f, r)
-        self.assertEqual(result['universe'], 80)
-        self.assertEqual(result['issuers_checked'], 80)
+        self.assertEqual(result['universe'], len(f['symbols']))
+        self.assertEqual(result['issuers_checked'], len(f['symbols']))
         # No healthy issuer's arithmetic may be excused by another quarantine.
         self.assertEqual([failure for failure in result['failures'] if failure['symbol'] not in blocked],[])
         isolate_audit_failures(r,result)

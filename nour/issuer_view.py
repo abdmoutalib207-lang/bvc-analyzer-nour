@@ -60,7 +60,7 @@ def issuer_heading(item, record, collection=None):
         ('graphique', 'Graphique'), ('metier', 'Métier'), ('technique', 'Technique'),
         ('fondamentaux', 'Comptes & ratios'), ('risques', 'Risques'),
         ('historique', 'Historique & sources')))
-    return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
+    return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Toutes les valeurs</a>'
             f'<div class="eyebrow">{esc(record.get("sector") or "Action cotée")} · {esc(item["symbol"])}</div>'
             f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div>'
             f'<span class="status {esc(item["decision"])}">{("Cours disponible · volume à vérifier" if view["observed_only"] else esc(item["decision"]))}</span>'
@@ -84,12 +84,21 @@ def documentary_status(item):
         parts.append(f'<h2>{esc(status["label"])}</h2><p>{esc(status["reason"])}</p>'
                      f'<p>Dernier dépôt identifié : {esc(status.get("last_known_filing_date"))} ; période : {esc(status.get("last_known_financial_period"))}. Observation au {esc(status.get("observed_asof"))}.</p>'
                      f'<p>{links}</p><p class="fineprint">{esc(status.get("validation"))}</p>')
-    if provenance:
+    if provenance.get('operator_period'):
         parts.append(f'<h2>Historique rapproché</h2><p>{esc(provenance.get("notice"))}</p>'
                      f'<p>Période opérateur : {esc(" → ".join(provenance["operator_period"]))}. '
                      f'{provenance["added"]} séances ajoutées ; {provenance["replaced"]} observations corrigées.</p>'
                      f'<p><a href="{esc(provenance["source_url"])}">Série source figée</a> · '
                      f'<a href="{esc(provenance["manifest_url"])}">Manifeste et empreinte de l’export</a></p>')
+    elif provenance:
+        parts.append('<h2>Provenance de l’historique</h2>'
+                     f'<p>{esc(provenance.get("source"))}</p>'
+                     f'<p>{esc(provenance.get("first_session"))} → {esc(provenance.get("last_session"))} '
+                     f'· {esc(provenance.get("sessions"))} séances importées.</p>'
+                     f'<p><a href="{esc(provenance.get("source_url"))}">Série source figée</a> · '
+                     f'commit {esc(provenance.get("source_commit"))}.</p>'
+                     f'<p class="fineprint">SHA-256 : {esc(provenance.get("source_sha256"))}. '
+                     'La provenance de reprise ne certifie pas les comptes financiers.</p>')
     return '<section class="panel">'+''.join(parts)+'</section>' if parts else ''
 
 

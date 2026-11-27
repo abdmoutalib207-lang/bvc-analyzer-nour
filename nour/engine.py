@@ -182,6 +182,7 @@ def analyze(record, asof, quantity=1000):
         "symbol": symbol, "name": record.get("name"), "sector": record.get("sector"),
         "issuer_status": record.get('issuer_status'),
         "history_provenance": record.get('history_provenance'),
+        "listing": record.get('listing'),
         "reference_quote": record.get('reference_quote'),
         "decision": verdict,
         "decision_type": "data_readiness_only",

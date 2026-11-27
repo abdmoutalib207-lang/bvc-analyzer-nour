@@ -22,7 +22,7 @@ def universe():
         rec['candles']=[b for b in rec['candles'] if b['d']<DAY]+[bar]
         raw.append(dict(Symbol=codes[s],DateDernierCours='22/10/2026 15:30:00',Cours=price,Ouverture=price,PlusHaut=price+1,PlusBas=price-1,QteEchangee=100,Volumes=price*100))
         secondary.append(dict(symbol=codes[s],session=DAY,price=price,shares=100,amount_mad=price*100))
-    overview=dict(asof=DAY,status='closed',turnover_mad=sum(r['Volumes'] for r in raw),shares=8000,breadth={'quoted':80})
+    overview=dict(asof=DAY,status='closed',turnover_mad=sum(r['Volumes'] for r in raw),shares=100*len(raw),breadth={'quoted':len(raw)})
     other=dict(provider='Wafabourse',status='ok',session=DAY,scope='cash_equities',market_closed=True,
         observed_at='2026-10-23T18:00:00+00:00',source_url='https://www.wafabourse.com/marches',rows=secondary)
     return fixture,raw,overview,other,codes
@@ -37,7 +37,7 @@ class LocalMarketTests(unittest.TestCase):
         self.assertTrue(audit['publication_safe'])
         self.assertEqual(audit['publication_scope'],'isolated_issuer_lines')
         self.assertEqual(candidate,before)
-        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertEqual(len(audit['validated_symbols']),len(inp[0]["symbols"]))
         self.assertEqual(audit['excluded_source_symbols'],['NRJ'])
         self.assertFalse(audit['aggregate_match'])
         self.assertFalse(audit['cross_source_verified'])
@@ -60,7 +60,7 @@ class LocalMarketTests(unittest.TestCase):
         unavailable=dict(provider='Wafabourse',status='unavailable',source_url='https://www.wafabourse.com/marches')
         _,audit=isolate_market_lines(inp[0],inp[1]+[raw],inp[2],unavailable,inp[4],NOW)
         self.assertEqual(audit['excluded_source_symbols'],['NRJ'])
-        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertEqual(len(audit['validated_symbols']),len(inp[0]["symbols"]))
         self.assertFalse(audit['cross_source_verified'])
 
     def test_missing_secondary_does_not_perpetuate_exact_same_session_quarantine(self):
@@ -76,7 +76,7 @@ class LocalMarketTests(unittest.TestCase):
         candidate,audit=isolate_market_lines(inp[0],inp[1],inp[2],unavailable,inp[4],now=NOW)
         self.assertNotIn('quarantined_market',candidate['records']['ADI'])
         self.assertEqual(candidate['records']['ADI'],{k:v for k,v in rec.items() if k!='quarantined_market'})
-        self.assertEqual(len(audit['validated_symbols']),80)
+        self.assertEqual(len(audit['validated_symbols']),len(inp[0]["symbols"]))
         self.assertFalse(audit['cross_source_verified'])
         self.assertFalse(audit['quantities_cross_source_verified'])
         self.assertFalse(audit['aggregate_match'])
@@ -122,7 +122,7 @@ class LocalMarketTests(unittest.TestCase):
         adi=next(r for r in inp[3]['rows'] if r['symbol']==inp[4]['ADI']);adi['shares']+=1
         candidate,audit=reconcile_volumes(*inp,now=NOW,allow_local_isolation=True)
         self.assertEqual(audit['status'],'partial');self.assertEqual(audit['quarantined_symbols'],['ADI'])
-        self.assertEqual(len(audit['validated_symbols']),79)
+        self.assertEqual(len(audit['validated_symbols']),len(inp[0]["symbols"])-1)
         corrected=deepcopy(inp[3]);next(r for r in corrected['rows'] if r['symbol']==inp[4]['ADI'])['shares']-=1
         recovered,recovery=reconcile_volumes(candidate,inp[1],inp[2],corrected,inp[4],now=NOW,allow_local_isolation=True)
         self.assertTrue(recovery['cross_source_verified'])
@@ -158,23 +158,23 @@ class LocalMarketTests(unittest.TestCase):
             atomic_json(root/'data/issuer_status.json',{'observed_asof':'2026-10-23','records':{}})
             with patch.object(run,'ROOT',root),patch.dict('os.environ',{},clear=True):run._build(argparse.Namespace(asof='2026-10-23',slot='refresh'),output)
             actual=json.loads((output/'report.json').read_text())
-            self.assertEqual(len(list((output/'titres').glob('*.html'))),80)
+            self.assertEqual(len(list((output/'titres').glob('*.html'))),len(inp[0]["symbols"]))
             self.assertFalse(audit_market_integrity(actual)['failures'])
-            self.assertEqual(len(actual['cross_source_volume_audit']['validated_symbols']),79)
+            self.assertEqual(len(actual['cross_source_volume_audit']['validated_symbols']),len(inp[0]['symbols'])-1)
             self.assertIsNone(next(r for r in actual['results'] if r['symbol']=='ADI')['price'])
             self.assertEqual(json.loads((output/'calculation-health.json').read_text())['status'],'degraded')
 
     def test_primary_bad_price_is_local_and_global_schema_is_not(self):
         inp=universe();raw=next(r for r in inp[1] if r['Symbol']==inp[4]['ADI']);raw['Cours']=None
         candidate,audit=isolate_market_lines(*inp,now=NOW)
-        self.assertEqual(audit['quarantined_symbols'],['ADI']);self.assertEqual(len(audit['validated_symbols']),79)
+        self.assertEqual(audit['quarantined_symbols'],['ADI']);self.assertEqual(len(audit['validated_symbols']),len(inp[0]["symbols"])-1)
         inp[1].append('bad general schema')
         with self.assertRaises(ValueError):isolate_market_lines(*inp,now=NOW)
 
     def test_import_adi_inconsistent_ohlc_does_not_stop_79_observations(self):
         inp=universe();raw=next(r for r in inp[1] if r['Symbol']==inp[4]['ADI']);raw['PlusHaut']=1
         candidate,details=import_session(inp[0],inp[1],inp[4],now=NOW)
-        self.assertEqual(details['observations_refreshed'],79)
+        self.assertEqual(details['observations_refreshed'],len(inp[0]['symbols'])-1)
         self.assertEqual(details['conflicts'][0]['symbol'],'ADI')
         self.assertEqual(candidate['records']['ADI']['source_check_status'],'retained_conflict')
 

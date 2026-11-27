@@ -87,3 +87,15 @@ briefings archivés ; un relevé provisoire ne devient pas une clôture.
   les codes exclus et publie seulement les lignes contrôlées, sans certifier
   les agrégats. Les conflits et séances manquantes ne sont pas résolus par
   cette reprise. Vérifier la publication distante dans le dossier de reprise.
+
+- Introduction LAPROPHAN du 27 novembre : `docs/laprophan-integration-2026-11-27.md`.
+  LPH, ISIN MA0000012882, cotation depuis le 25 novembre ; univers Nour de 81.
+  Historique initial sur deux séances, repris du principal en lecture seule
+  avec commit/empreintes et OHLC recoupés au texte des bulletins officiels.
+  Le prix public 341 MAD n’est pas une clôture et les 17 315 725 titres après
+  IPO ne constituent pas un dénominateur annuel. Seuils techniques inchangés.
+  Les compteurs de couverture suivent le référentiel ; logo non confirmé.
+
+- Reprise LPH / PR #45 : contrôle navigateur du sigle sans logo corrigé ;
+  une nouvelle observation intraday fournit une preuve liée au snapshot de
+  81 titres. Voir le dossier LPH et la leçon unverified_issuer_logo_browser_contract.

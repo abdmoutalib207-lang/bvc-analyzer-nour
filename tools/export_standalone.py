@@ -35,9 +35,9 @@ header{padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap
 header a{color:#b4e283}select{max-width:100%;padding:8px;background:#142933;color:#e7eeed;border:1px solid #36515b;border-radius:6px}
 small{color:#c6d1d5}iframe{border:0;width:100%;height:calc(100dvh - 105px);min-height:420px;display:block}
 #error{color:#ffc2b2;padding:8px}#error:empty{display:none}</style></head><body>
-<header><strong>BVC Analyzer Nour · 80 titres</strong>
+<header><strong>BVC Analyzer Nour · __COUNT__ titres</strong>
 <a href="#index.html">Marché</a><a href="#briefing.html">Briefing</a><a href="#actualites.html">Actualités</a>
-<label>Ouvrir un titre <select id="ticker"><option value="index.html">Les 80 valeurs</option>__OPTIONS__</select></label>
+<label>Ouvrir un titre <select id="ticker"><option value="index.html">Les __COUNT__ valeurs</option>__OPTIONS__</select></label>
 <small>Copie hors ligne · données du __DATE__ · aucune actualisation réseau des cours</small></header>
 <p id="error" role="status"></p>
 <noscript>Activez JavaScript pour naviguer entre les fiches dans ce fichier unique.</noscript>
@@ -79,7 +79,7 @@ small{color:#c6d1d5}iframe{border:0;width:100%;height:calc(100dvh - 105px);min-h
   addEventListener('hashchange',show); show();
 })();
 </script></body></html>'''
-    output = shell.replace('__OPTIONS__', options).replace('__DATE__', html.escape(report['snapshot_updated'][:10]))
+    output = shell.replace('__COUNT__', str(len(report['results']))).replace('__OPTIONS__', options).replace('__DATE__', html.escape(report['snapshot_updated'][:10]))
     output = output.replace('__HOME__', html.escape(files['index.html'], quote=True)).replace('__PAYLOAD__', payload)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(output, encoding='utf-8')

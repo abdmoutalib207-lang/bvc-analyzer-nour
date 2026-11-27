@@ -958,6 +958,10 @@
       "identity_check": "exact_csema_ticker_and_previously_matched_issuer_page_declared_large_logo_urls",
       "observed_at": "2026-10-19T09:37:55.937166+00:00",
       "variant": "large"
+    },
+    "LPH": {
+      "status": "unconfirmed",
+      "brand_note": "Nouvelle cotation : identité officielle vérifiée, logo non encore confirmé ; sigle LPH affiché."
     }
   },
   "notice": "Logos d’identification provenant de pages publiques ; marques de leurs titulaires, sans partenariat implicite."
