@@ -1,10 +1,10 @@
 {
   "version": "nour-research-v1",
-  "asof": "2026-11-26",
+  "asof": "2026-11-27",
   "masi_first": "2023-01-02",
   "masi_last": "2026-11-26",
   "masi_sessions": 949,
-  "universe_size": 80,
+  "universe_size": 81,
   "rows": [
     {
       "symbol": "MASI",
@@ -56526,6 +56526,36 @@
     },
     {
       "symbol": "LHM",
+      "horizon": 60,
+      "candidates": 12,
+      "observed": 0,
+      "missing": 12,
+      "event_boundary": 0,
+      "inactive": 0,
+      "no_trend": 0
+    },
+    {
+      "symbol": "LPH",
+      "horizon": 5,
+      "candidates": 124,
+      "observed": 0,
+      "missing": 124,
+      "event_boundary": 0,
+      "inactive": 0,
+      "no_trend": 0
+    },
+    {
+      "symbol": "LPH",
+      "horizon": 20,
+      "candidates": 35,
+      "observed": 0,
+      "missing": 35,
+      "event_boundary": 0,
+      "inactive": 0,
+      "no_trend": 0
+    },
+    {
+      "symbol": "LPH",
       "horizon": 60,
       "candidates": 12,
       "observed": 0,

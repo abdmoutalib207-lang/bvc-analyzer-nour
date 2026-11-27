@@ -1,7 +1,7 @@
 {
   "version": "nour-sector-evidence-v2",
-  "analysis_date": "2026-11-26",
-  "universe": 80,
+  "analysis_date": "2026-11-27",
+  "universe": 81,
   "families": {
     "Agriculture et intrants": 1,
     "Agroalimentaire et boissons": 8,
@@ -33,7 +33,7 @@
     "Production électrique": 1,
     "Santé - distribution et équipements": 1,
     "Santé - hôpitaux": 1,
-    "Santé - industrie pharmaceutique": 2,
+    "Santé - industrie pharmaceutique": 3,
     "Services informatiques et logiciels": 3,
     "Technologie et services": 4,
     "Tourisme et hôtellerie": 1,
@@ -45,10 +45,11 @@
     "archived_suspension": 2,
     "financial_audit_blocked": 13,
     "known_reporting_gap": 1,
+    "missing_primary_document": 1,
     "primary_page_check_required": 44,
     "selected_pages_checked": 6
   },
-  "curated": 78,
+  "curated": 79,
   "selected_pages_reviewed_issuers": 29,
   "violations": [],
   "review_queue": [
@@ -1792,6 +1793,35 @@
       "accounting_exclusions": [
         "ARR supposé sans contrats",
         "multiples SaaS appliqués à la revente de matériel"
+      ],
+      "blocked_metrics": [],
+      "review_actions": []
+    },
+    {
+      "symbol": "LPH",
+      "family": "Santé - industrie pharmaceutique",
+      "classification": "curated",
+      "status": "missing_primary_document",
+      "financial_audit_status": "review_required",
+      "document_url": null,
+      "annual_exercise": null,
+      "evidence_count": 0,
+      "selected_page_evidence_count": 0,
+      "missing_annual_fact_groups": [
+        "chiffre_affaires"
+      ],
+      "unverified_annual_fact_groups": [],
+      "business_kpis_to_collect": [
+        "croissance organique",
+        "marge brute",
+        "mix produits",
+        "stocks",
+        "BFR",
+        "capex"
+      ],
+      "accounting_exclusions": [
+        "taux d'occupation hôtelier",
+        "PNB bancaire"
       ],
       "blocked_metrics": [],
       "review_actions": []
