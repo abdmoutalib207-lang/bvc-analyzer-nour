@@ -111,7 +111,7 @@ class Consolidation(unittest.TestCase):
             self.assertEqual(context['selected'][symbol]['fundamental']['warnings'],index['symbols'][symbol]['fundamental']['warnings'])
             self.assertEqual(context['selected'][symbol]['fundamental']['evidence'],index['symbols'][symbol]['fundamental']['evidence'])
             details=context['collection']['health']['details']
-            self.assertEqual(details['conflict_count'],81)
+            self.assertEqual(details['conflict_count'],len(conflicts))
             self.assertEqual(details['conflicts'],[c for c in conflicts if c.get('symbol') in (None,symbol)])
             self.assertEqual(context['collection']['health']['result'],'conflict')
         context=retrieve(index,['T2S'],question)

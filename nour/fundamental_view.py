@@ -46,7 +46,7 @@ def panel(report):
             + ''.join(f'<td>{amount(k)}</td>' for k in ('eps_mad','pe','pb','roe_pct'))
             + f'<td>{esc(row["price_date"]) or "Indisponible"}</td>'
             + f'<td><a href="titres/{esc(row["symbol"])}.html">Sources et réserves</a></td></tr>')
-    return ('<details class="panel" id="fundamental-explorer"><summary>Explorer les fondamentaux des 80 titres</summary>'
+    return (f'<details class="panel" id="fundamental-explorer"><summary>Explorer les fondamentaux des {len(data)} titres</summary>'
         '<p>Les mêmes calculs annuels que les fiches Nour, avec leurs périodes et leurs cours datés. '
         'BPA en MAD ; PER et P/B en multiples ; ROE de clôture en %. Aucun ratio manquant n’est remplacé par zéro.</p>'
         '<div class="filters"><input class="search" type="search" id="fundamental-search" aria-label="Rechercher dans les fondamentaux" placeholder="Code ou société">'

@@ -120,7 +120,7 @@ for(const question of ['PER TTM ADI','BPA prévisionnel ADI']){
   assert.ok(unsupported.text.includes('Le ratio annuel ne le remplace pas'));
   assert.ok(!unsupported.text.includes('PER :'));
 }
-console.log('Assistant dossiers: 80 complete sourced summaries, all reservations, EMA20/50 and distinct ATR methods passed.');
+console.log('Assistant dossiers: all canonical sourced summaries, all reservations, EMA20/50 and distinct ATR methods passed.');
 
 const collectionAnswer=api.localAnswer('Quand a lieu la collecte ?',data,'MASI');
 for(const slot of ['09:45','12:45','16:00','17:15','17:45'])assert.ok(collectionAnswer.text.includes(slot));

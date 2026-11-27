@@ -40,9 +40,9 @@ class VisibleMarketSite(unittest.TestCase):
     def test_main_page_is_visible_with_scripts_disabled(self):
         page = (self.output / "index.html").read_text()
         static = re.sub(r"<script\b[^>]*>.*?</script>", "", page, flags=re.DOTALL)
-        self.assertIn("80 valeurs", static)
+        self.assertIn(f"{len(self.fixture['symbols'])} valeurs", static)
         self.assertIn('<polyline points="', static)
-        self.assertEqual(static.count('<tr data-market-row '), 80)
+        self.assertEqual(static.count('<tr data-market-row '), len(self.fixture['symbols']))
         self.assertIn('href="titres/ADI.html"', static)
 
     def test_laboratory_help_is_present_without_javascript(self):
@@ -146,7 +146,7 @@ class VisibleMarketSite(unittest.TestCase):
 
     def test_csv_matches_snapshot_and_published_quality_counts(self):
         """The audit counters and each warning must describe exported rows."""
-        self.assertEqual(len(self.fixture["symbols"]), 80)
+        self.assertEqual(len(self.fixture["symbols"]), len(self.report["results"]))
         self.assertEqual(set(self.fixture["records"]), set(self.fixture["symbols"]))
         by_symbol = {r["symbol"]: r for r in self.report["results"]}
         for symbol in self.fixture["symbols"]:

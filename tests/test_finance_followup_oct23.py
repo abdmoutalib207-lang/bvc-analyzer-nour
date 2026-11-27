@@ -105,7 +105,7 @@ class FinancialFollowupTests(unittest.TestCase):
             old[s].pop('sector_faits');old[s].pop('sector_review_followup')
         baseline=build_report(fixture,DAY,facts=old)
         changed=build_report(fixture,DAY,facts=self.payload['records'])
-        self.assertEqual(len(changed['results']),80)
+        self.assertEqual(len(changed['results']),len(fixture['symbols']))
         for before,after in zip(baseline['results'],changed['results']):
             symbol=before['symbol'];b=deepcopy(before);a=deepcopy(after)
             b.pop('sector_indicators');a.pop('sector_indicators')

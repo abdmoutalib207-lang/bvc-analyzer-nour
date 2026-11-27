@@ -25,7 +25,7 @@ class ScreenerViewTests(unittest.TestCase):
         state=sample(); before=deepcopy(state); page=body(state, '2026-11-09')
         for text in ('Résultat net part du groupe', 'FY2025', 'MMAD', 'consolidé', '407,6', 'Concordance numérique',
                      'Part du Groupe', 'RFA 2025', 'PCGI 2025', 'sha256:'+'c'*64,
-                     'Aucune correction automatique', 'Aucun document certifié', '80 sociétés Nour'):
+                     'Aucune correction automatique', 'Aucun document certifié', 'sociétés du référentiel Nour'):
             self.assertIn(text, page)
         self.assertIn('href="https://www.ammc.ma/sites/default/files/ADI_RFA_2025.pdf"', page)
         self.assertNotIn('href="RFA 2025"', page)

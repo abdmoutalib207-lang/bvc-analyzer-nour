@@ -267,7 +267,7 @@ def body(state, asof=None):
             'MS Screener, données publiquement embarquées</a>.<br>'
             f'<small class="sc-hash">Empreinte de collecte : {_esc(state.get("source_sha256"))}</small></p>'
             + _coverage_counts(summary)
-            + '<p>La couverture cible comprend les 80 sociétés Nour ; un chiffre absent de la source externe reste manquant.</p>'
+            + '<p>La couverture cible comprend les sociétés du référentiel Nour ; un chiffre absent de la source externe reste manquant.</p>'
             '<ul>' + counters + '</ul><a href="screener-reconciliation.json">Télécharger le relevé daté JSON</a>'
             '</section>' + _gaps(state) + '<section><h2>Comparaisons par société</h2><p>Ouvrez une société pour consulter '
             'toutes ses lignes, y compris les concordances. Les valeurs sont exprimées dans l’unité de chaque ligne.</p>'

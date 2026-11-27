@@ -220,6 +220,20 @@ def detail_page(item, record, fixture, style, script, collection=None):
     first = bars[0]["d"] if bars else "—"
     last = bars[-1]["d"] if bars else "—"
     issues = item["quality"]["issues"]
+    listing = record.get('listing') or {}
+    listing_html = ''
+    if listing:
+        listing_html = (
+            '<section class="panel" id="introduction"><span class="eyebrow">Nouvelle cotation</span>'
+            f'<h2>Première cotation : {esc(listing.get("first_session"))}</h2>'
+            f'<p>{esc(symbol)} · ISIN {esc(listing.get("isin"))} · {esc(listing.get("sector"))}.</p>'
+            f'<p>Prix de souscription : {number(listing.get("subscription_price_mad"))} MAD. '
+            f'Actions après introduction : {number(listing.get("shares_after_ipo"), 0)}.</p>'
+            '<p>Historique depuis la première séance cotée. Les indicateurs et le score restent '
+            'soumis aux seuils habituels de profondeur ; aucune séance antérieure n’est reconstituée.</p>'
+            f'<p class="fineprint">{esc(listing.get("notice"))}</p>'
+            f'<p><a href="{esc(listing.get("source_url"))}" target="_blank" rel="noopener noreferrer">'
+            'Publication officielle de la Bourse de Casablanca</a></p></section>')
     liq = item["liquidity"]
     cards = ''.join((
         info_card("Nombre de séances", str(len(bars))),
@@ -355,6 +369,7 @@ def detail_page(item, record, fixture, style, script, collection=None):
     body = (header('../index.html', fixture["snapshot_updated"])
             + '<main class="issuer-page">' + issuer_heading(item, record, collection)
             + issuer_snapshot(item)
+            + listing_html
             + f'<section class="panel chart-workspace" id="graphique" data-chart-symbol="{esc(symbol)}"><div class="section-heading"><div><span class="eyebrow">Historique graphique · {esc(symbol)}</span><h2>Prix & volumes</h2></div><span class="chart-frequency">1 jour · MAD · cours non ajustés</span></div><p class="panel-sub">Historique {esc(first)} → {esc(last)} · {len(bars)} séances. Pointez une séance ou choisissez un outil de tracé.</p>{graph(bars, indicator_since=bars[-record["sessions_since_resume"]]["d"] if record.get("resumed_recently") and isinstance(record.get("sessions_since_resume"),int) and 0 < record["sessions_since_resume"] <= len(bars) else None)}</section>'
             + f'<details class="reading-details"><summary>Liquidité et profondeur de l’historique</summary><div class="detail-grid">{cards}</div>{caveat}</details>'
             + f'<section class="panel" id="fondamentaux"><span class="eyebrow">Comptes annuels · {esc(calculated.get("exercise") or "non documentés")}</span><h2>Résultats & ratios</h2>{financial_dashboard(item)}{financial_history(item)}{semester_details}'

@@ -30,7 +30,7 @@ class OfficialSourcesTests(unittest.TestCase):
         snapshot = json.loads((root / 'data/market_snapshot.json').read_text())
         validate_registry(registry)
         self.assertEqual(set(registry['issuers']), set(snapshot['symbols']))
-        self.assertEqual(len(registry['issuers']), 80)
+        self.assertEqual(len(registry['issuers']), len(snapshot['symbols']))
 
     def test_rejects_external_credentials_ports_and_lookalike(self):
         for url in ['http://issuer.ma/a.pdf', 'https://issuer.ma.evil/a.pdf',

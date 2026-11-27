@@ -16,7 +16,7 @@ class FundamentalExplorer(unittest.TestCase):
         report=json.loads((ROOT/'web/report.json').read_text())
         original=copy.deepcopy(report)
         output=rows(report)
-        self.assertEqual(len(output),80)
+        self.assertEqual(len(output),len(report["results"]))
         for source,row in zip(report['results'],output):
             for key in ('eps_mad','pe','pb','roe_pct','warnings'):
                 self.assertEqual(row[key],source['fundamental'].get(key))
@@ -25,7 +25,7 @@ class FundamentalExplorer(unittest.TestCase):
             path=Path(temp)/'fundamentaux.csv';export_csv(report,path)
             with path.open(encoding='utf-8-sig') as stream:
                 data=list(csv.DictReader(stream,delimiter=';'))
-            self.assertEqual(len(data),80)
+            self.assertEqual(len(data),len(report["results"]))
             for row in data:
                 canonical=next(r for r in output if r['symbol']==row['symbol'])
                 if canonical['eps_mad'] is None:self.assertEqual(row['eps_mad'],'')

@@ -3,8 +3,8 @@
   "role": "official_document_discovery_only",
   "usable_for_score": false,
   "issuer_site_coverage": {
-    "registered": 5,
-    "universe": 80
+    "registered": 6,
+    "universe": 81
   },
   "issuer_site_seeds": {
     "provenance": "4 issuer investor URLs supplied in project context; TMA public official-site search 2026-10-16",
@@ -1701,6 +1701,26 @@
           "origin": "facts_reference.json"
         }
       ]
+    },
+    "LPH": {
+      "record_id": "LPH",
+      "name": "LAPROPHAN",
+      "aliases": [
+        "Laprophan S.A.",
+        "LAPROPHAN S.A"
+      ],
+      "allowed_origins": [
+        "https://ammc.ma",
+        "https://www.ammc.ma",
+        "https://laprophan.com",
+        "https://www.laprophan.com"
+      ],
+      "pages": [
+        "https://www.ammc.ma/fr/espace-emetteurs/liste-des-emetteurs/55953",
+        "https://laprophan.com/"
+      ],
+      "issuer_site_status": "seeded_official_page",
+      "reference_documents": []
     }
   }
 }

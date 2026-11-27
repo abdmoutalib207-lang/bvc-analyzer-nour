@@ -14,7 +14,7 @@ class SectorMethodsTests(unittest.TestCase):
             for ticker in details['symbols']:
                 self.assertIn(ticker, symbols, (family, ticker))
                 curated.add(ticker)
-        self.assertEqual(len(curated), 78)
+        self.assertEqual(len(curated), len(symbols)-2)
         self.assertEqual(symbols - curated, {"DIS", "HAL"})
         self.assertEqual(guidance("DIS")["coverage"], "partial")
         self.assertEqual(guidance("DIS")["metrics_to_verify"], [])

@@ -101,7 +101,7 @@ class IssuerStatusTests(unittest.TestCase):
             self.assertIsNone(rows[s]['fundamental']['pe'])
         self.assertEqual(rows['IBM']['price'],self.fixture['records']['IBM']['price'])
         self.assertEqual(rows['IBM']['issuer_status']['trading_status'],'listed')
-        self.assertEqual(report['fundamental_coverage']['current_universe'],78)
+        self.assertEqual(report['fundamental_coverage']['current_universe'],len(self.fixture['symbols'])-2)
         self.assertEqual(set(report['fundamental_coverage']['archived_symbols']),{'DIS','DLM'})
 
     def test_status_is_dated_and_does_not_mutate_source(self):

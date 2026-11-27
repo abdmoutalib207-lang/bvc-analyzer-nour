@@ -10,7 +10,7 @@ class CompanyIdentity(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         symbols = json.loads((root/'data/market_snapshot.json').read_text())['symbols']
         validate_catalog(symbols)
-        self.assertEqual(len(catalog()),80)
+        self.assertEqual(len(catalog()),len(symbols))
         for symbol,mark in catalog().items():
             if mark['status']!='verified':self.assertNotIn('src=',company_logo(symbol))
         self.assertIn('../logos/ADI.svg',company_logo('ADI','../'))

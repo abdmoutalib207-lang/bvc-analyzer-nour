@@ -83,7 +83,7 @@ def main():
         partial_report=prepare(root/'quarantined', broken_inputs)
         before={r['symbol']:r for r in healthy['results']}
         after={r['symbol']:r for r in partial_report['results']}
-        assert set(before)==set(after) and len(after)==80
+        assert set(before)==set(after) and len(after)==len(healthy_inputs[0]['symbols'])
         assert partial_report['cross_source_volume_audit']['quarantined_symbols']==['ADI']
         assert after['ADI']['price'] is None and after['ADI']['technical']['sma50'] is None
         observation = after['ADI'].get('price_observation')
@@ -99,7 +99,7 @@ def main():
                 assert before[symbol][key]==after[symbol][key], (symbol,key)
             relative=Path('historique')/(symbol+'.csv')
             assert (root/'healthy/web'/relative).read_bytes()==(root/'quarantined/web'/relative).read_bytes(), symbol
-        print('Browser stress fixture: ADI invalid, 79 technical/fundamental/scores and CSVs identical.', flush=True)
+        print(f'Browser stress fixture: ADI invalid, {len(after)-1} technical/fundamental/scores and CSVs identical.', flush=True)
         if args.prepare_only:
             return
         handler=partial(QuietHandler, directory=str(root/'quarantined/web'))
@@ -114,7 +114,7 @@ def main():
                             f'http://127.0.0.1:{server.server_port}/'],cwd=ROOT,env=env,check=True)
         finally:
             server.shutdown();server.server_close();thread.join(timeout=5)
-        print('Quarantined browser stress PASS: 80 pages, 79 preserved, no invalid ADI price/PER/MM50.', flush=True)
+        print(f'Quarantined browser stress PASS: {len(after)} pages, {len(after)-1} preserved, no invalid ADI price/PER/MM50.', flush=True)
 
 
 if __name__=='__main__':

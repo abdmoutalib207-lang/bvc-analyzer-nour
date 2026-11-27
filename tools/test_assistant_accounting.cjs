@@ -25,7 +25,7 @@ const cases=[
  ['Normes comptables du courtier AFM et commissions',/pas traité comme un assureur/],
  ['Pourquoi le bénéfice HPS a baissé ?',/ne démontre pas à elle seule la cause/],
  ['Quel PER OCP ?',/absence de cotation en actions n’implique pas/],
- ['Normes comptables ONEE',/référentiel de 80 actions/],
+ ['Normes comptables ONEE',new RegExp('référentiel de '+Object.keys(data.symbols).length+' actions')],
  ['Normes comptables BCP 2025',/trois stages/,'BCP'],
  ['Normes comptables BOA 2025',/test SPPI/,'BOA'],
  ['IFRS 17 BMCI en 2025 ?',/non applicable au contexte de la BMCI/,'BMC'],
@@ -69,7 +69,7 @@ assert.equal(api.validURL('titres/IMI.html#unknown','../'),null);
 const stale=structuredClone(data);
 for(const row of Object.values(stale.symbols))row.fundamental.pe=null;
 const empty=api.localAnswer('Les 5 PER les plus faibles en 2025',stale,'BAL');
-assert(empty.text.includes('0 titre(s) correspondant(s) sur 80 ; 0 affiché(s).'));
+assert(empty.text.includes('0 titre(s) correspondant(s) sur '+Object.keys(data.symbols).length+' ; 0 affiché(s).'));
 assert(!empty.text.includes('PER annuel :'));
 
 console.log('Accounting assistant: '+(checked+6)+' sourced answers and period/follow-up/immutability regressions passed; no LLM call.');

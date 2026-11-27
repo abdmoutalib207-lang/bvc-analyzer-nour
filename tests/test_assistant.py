@@ -36,7 +36,7 @@ class AssistantFacts(unittest.TestCase):
         original = copy.deepcopy(self.report)
         data = build_data(self.report)
         self.assertEqual(self.report, original)
-        self.assertEqual(len(data['symbols']), 80)
+        self.assertEqual(len(data['symbols']), len(self.report["results"]))
         for row in self.report['results']:
             actual = data['symbols'][row['symbol']]
             self.assertEqual(actual['canonical_score'], row['canonical_score'])
