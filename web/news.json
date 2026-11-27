@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T11:20:51.053081+00:00",
+  "updated_at": "2026-11-27T11:48:00.759901+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "fc6fa924e02691ebd1",
+      "title": "Iraq Boosts Oil Exports to 3.6 Million Barrels per Day",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iraq-Boosts-Oil-Exports-to-36-Million-Barrels-per-Day.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-27T11:30:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "8761d0611829bfdb59",
       "title": "Côte d’Ivoire : le taux de transformation de la noix de cajou passe à près de 57% en 2026, selon Beugré Mambé",
@@ -2880,23 +2897,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "bcfdc54f476eed5348",
-      "title": "BCE : Laurence Boone et Markus Brunnermeier officiellement candidats au directoire - Politique Matin",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRlIwMndhMGV6OV81T2llZXFjbVpjdE5xV1FHRDZHNHh5c2Q2M3BDZlU4c01WcWJwM3Q4RE52TmQ4Vy1nOEVtdHAtQUtLOXItUm9wNHBwa09UenBWbXBiR0dEaVNadUZzb1hwTmphRGtLOF9mQ1F6RXRmRUZCb2toaEM5UkNGX1FWMS11eVNXYVhUWDhyei1GOUNFUEgycHJrSGY2cG85bzl2bWZPUGc?oc=5",
-      "publisher": "BCE · presse francophone",
-      "published_at": "2026-11-21T03:14:42+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "macro",
-      "scope": "INTL",
-      "feed_id": "ecb_presse",
-      "feed_url": "https://news.google.com/rss/search?q=BCE%20taux%20directeur%20zone%20euro%20politique%20mon%C3%A9taire&hl=fr&gl=MA&ceid=MA:fr"
     },
     {
       "id": "874a1413a4a317e194",
