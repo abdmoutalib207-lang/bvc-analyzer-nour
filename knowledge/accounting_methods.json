@@ -519,7 +519,7 @@
     "nonlisted": {
       "title": "Périmètre boursier et obligations de publication",
       "pattern": "\\bocp\\b|\\bonee\\b|\\bram\\b|non cote|titres? de creance|obligataire",
-      "text": "OCP, ONEE et RAM ne figurent pas dans le référentiel de 80 actions de Nour ; l’application ne leur attribue donc aucun cours d’action ou ratio boursier. L’absence de cotation en actions n’implique pas l’absence d’obligations d’information : un émetteur de titres de créance faisant appel public à l’épargne peut aussi être soumis à l’AMMC. Ne pas bloquer la consultation de publications utiles au seul motif que l’entité ne figure pas dans la cote suivie.",
+      "text": "OCP, ONEE et RAM ne figurent pas dans le référentiel des actions suivies par Nour ; l’application ne leur attribue donc aucun cours d’action ou ratio boursier. L’absence de cotation en actions n’implique pas l’absence d’obligations d’information : un émetteur de titres de créance faisant appel public à l’épargne peut aussi être soumis à l’AMMC. Ne pas bloquer la consultation de publications utiles au seul motif que l’entité ne figure pas dans la cote suivie.",
       "sources": [
         {
           "id": "AMMC2026",

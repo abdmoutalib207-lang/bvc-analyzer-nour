@@ -93,3 +93,8 @@ Ces pages corroborent l’identité ; elles ne certifient aucun ratio annuel.
 La tentative de vérification locale sur la reprise exploratoire a été
 interrompue pour repartir de la PR existante. Ses résultats partiels ne sont
 pas présentés comme une validation complète du lot final.
+
+La suite locale finale a exécuté 556 tests Python avec succès. Le contrôle JS
+a ensuite détecté un libellé de la bibliothèque comptable encore figé à
+80 actions : ce texte décrit désormais le référentiel des actions suivies,
+sans décompte figé. Le contrôle de sélection conserve son compteur dynamique.

@@ -25,7 +25,7 @@ const cases=[
  ['Normes comptables du courtier AFM et commissions',/pas traité comme un assureur/],
  ['Pourquoi le bénéfice HPS a baissé ?',/ne démontre pas à elle seule la cause/],
  ['Quel PER OCP ?',/absence de cotation en actions n’implique pas/],
- ['Normes comptables ONEE',new RegExp('référentiel de '+Object.keys(data.symbols).length+' actions')],
+ ['Normes comptables ONEE',/référentiel des actions suivies/],
  ['Normes comptables BCP 2025',/trois stages/,'BCP'],
  ['Normes comptables BOA 2025',/test SPPI/,'BOA'],
  ['IFRS 17 BMCI en 2025 ?',/non applicable au contexte de la BMCI/,'BMC'],
