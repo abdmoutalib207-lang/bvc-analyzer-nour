@@ -66,7 +66,7 @@ def sector_card(row):
         +business_disclosures_card(sector.get('business_disclosures') or {})
         +(table(rows) if rows else '')+unavailable+reported_facts_card(sector.get('reported_facts') or {})
         +'<details class="reading-details"><summary>Couverture et méthode sectorielle</summary><p>Les indicateurs métier restent distincts du score.</p>'
-        '<a href="../couverture.json">Entrées et état de couverture des 80 sociétés</a></details></section>')
+        '<a href="../couverture.json">Entrées et état de couverture des sociétés suivies</a></details></section>')
 
 
 

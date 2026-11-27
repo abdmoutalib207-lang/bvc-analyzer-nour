@@ -60,7 +60,7 @@ def issuer_heading(item, record, collection=None):
         ('graphique', 'Graphique'), ('metier', 'Métier'), ('technique', 'Technique'),
         ('fondamentaux', 'Comptes & ratios'), ('risques', 'Risques'),
         ('historique', 'Historique & sources')))
-    return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Les 80 valeurs</a>'
+    return ('<div class="hero issuer-hero"><div><a href="../index.html" class="muted">← Toutes les valeurs</a>'
             f'<div class="eyebrow">{esc(record.get("sector") or "Action cotée")} · {esc(item["symbol"])}</div>'
             f'<div class="company-heading">{company_logo(item["symbol"], "../")}<h1>{esc(record["name"])}</h1></div>'
             f'<span class="status {esc(item["decision"])}">{("Cours disponible · volume à vérifier" if view["observed_only"] else esc(item["decision"]))}</span>'

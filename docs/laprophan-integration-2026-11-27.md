@@ -98,3 +98,7 @@ La suite locale finale a exécuté 556 tests Python avec succès. Le contrôle J
 a ensuite détecté un libellé de la bibliothèque comptable encore figé à
 80 actions : ce texte décrit désormais le référentiel des actions suivies,
 sans décompte figé. Le contrôle de sélection conserve son compteur dynamique.
+
+Les derniers liens génériques de retour aux valeurs, de couverture et de
+référentiels comptables ne portent plus le décompte historique de 80 titres.
+Les nombres du rapport et les compteurs d’interface restent ceux de l’univers réel.
