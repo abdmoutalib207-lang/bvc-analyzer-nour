@@ -5,49 +5,49 @@
   "market_session": "2026-11-27",
   "runtime": {
     "timezone": "Africa/Casablanca",
-    "event": "workflow_dispatch",
+    "event": "schedule",
     "slot": "refresh",
-    "label": "Actualisation horaire",
-    "target_time": "17:45",
-    "schedule": null,
-    "scheduled_at": "2026-11-27T17:45:00+00:00",
+    "label": "Filet de sécurité de fin de journée",
+    "target_time": "19:00",
+    "schedule": "45 9 * * 1-5",
+    "scheduled_at": "2026-11-27T19:00:00+00:00",
     "scheduled_at_basis": "watchdog_requested_occurrence",
-    "requested_scheduled_at": "2026-11-27T17:45:00+00:00",
+    "requested_scheduled_at": "2026-11-27T19:00:00+00:00",
     "edition_for": "2026-11-27",
-    "started_at": "2026-11-27T18:47:30+00:00",
-    "built_at": "2026-11-27T18:47:47.761837+00:00",
+    "started_at": "2026-11-27T19:12:21+00:00",
+    "built_at": "2026-11-27T19:12:35.440971+00:00",
     "utc_offset_minutes": 0,
-    "delay_minutes": 62.5,
-    "late": true,
-    "run_id": "46052002318",
-    "commit": "f173f792375b1f3ce6a3f11052f46704ecacd505",
-    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/46052002318",
+    "delay_minutes": 12.3,
+    "late": false,
+    "run_id": "46054981200",
+    "commit": "a05b600af735c1dee9a226ce03c33a2aef80d5f2",
+    "run_url": "https://github.com/abdmoutalib207-lang/bvc-analyzer-nour/actions/runs/46054981200",
     "collection": {
-      "result": "updated",
-      "label": "Nouvelle séance intégrée",
-      "checked_at": "2026-11-27T18:47:30.541256+00:00",
+      "result": "unchanged",
+      "label": "Aucune nouveauté",
+      "checked_at": "2026-11-27T19:12:22.283871+00:00",
       "last_session": "2026-11-27",
-      "message": "67 bougies validées ; 0 conflit(s) conservés",
+      "message": "Aucune nouvelle séance vérifiée",
       "conflicts": [],
       "fully_validated": true
     },
     "provenance": {
       "source_snapshot_commit": "dd8e89f29f6e6777f783db634a12fcccb3d5088a",
-      "generator_commit": "f173f792375b1f3ce6a3f11052f46704ecacd505",
+      "generator_commit": "a05b600af735c1dee9a226ce03c33a2aef80d5f2",
       "publication_commit": null,
       "publication_manifest": "publication.json",
       "publication_commit_status": "resolved_in_artifact_manifest_after_data_commit",
-      "market_snapshot_sha256": "5ae4d5e42d050d260c2573925f1fae3f0f294064d2fcd713f38c10f0085c096a",
+      "market_snapshot_sha256": "95149cc741d70bfe1e616762bf2b5d0349b47750f1c3711b4049381cc2ebc836",
       "notice": "Le commit de publication est enregistré après sauvegarde des exports. Une construction locale ne prouve pas un déploiement."
     },
     "market_integrity": {
       "status": "partial",
       "session": "2026-11-27",
-      "observed_at": "2026-11-27T18:47:37.423182+00:00",
+      "observed_at": "2026-11-27T19:12:27.165229+00:00",
       "cross_source_verified": false
     }
   },
-  "title": "Actualisation horaire",
+  "title": "Filet de sécurité de fin de journée",
   "intraday": {
     "schema_version": 1,
     "session": "2026-11-27",
@@ -57,17 +57,17 @@
     "rejected": [],
     "timestamp_kind": "collector_observation_not_exchange_timestamp",
     "status": "stale",
-    "age_minutes": 419.8,
+    "age_minutes": 444.6,
     "notice": "Point de séance archivé ou trop ancien ; aucun cours intrajournalier frais présenté."
   },
   "edition_status": "published",
-  "edition_notice": "Édition exécutée en retard de 62.5 minutes ; données observées au démarrage réel, pas reconstitution de l’heure programmée. ",
-  "snapshot_updated": "2026-11-27T18:47:30.541256+00:00",
+  "edition_notice": null,
+  "snapshot_updated": "2026-11-27T19:12:22.283871+00:00",
   "market_status": "closed",
   "coverage": {
     "titles": 81,
-    "quoted_session": 61,
-    "observable": 59
+    "quoted_session": 67,
+    "observable": 65
   },
   "index": {
     "value": 16634.2915,
@@ -83,26 +83,29 @@
     {
       "symbol": "ADI",
       "name": "Alliances",
-      "price": null,
+      "price": 330.0,
       "asof": "2026-11-27",
-      "data_status": "INDISPONIBLE",
-      "score": null,
-      "score_state": "NON_CALCULABLE",
-      "support": null,
-      "resistance": null,
-      "rsi": null,
-      "activity": null,
-      "scenario": "Données insuffisantes pour établir des niveaux",
-      "issues": [
-        "Cotation ou volume non rapproché ; aucune source choisie arbitrairement"
-      ],
+      "data_status": "OBSERVABLE",
+      "score": 37.5,
+      "score_state": "CALCULABLE",
+      "support": 335.0,
+      "resistance": 394.0,
+      "rsi": 33.93,
+      "activity": 2.83,
+      "scenario": "Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future",
+      "issues": [],
       "intraday_quote": null,
       "reading": {
         "change_pct": -2.94,
         "previous_session": "2026-11-26",
         "relative_masi_pp": -3.32,
         "paragraphs": [
-          "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
+          "Le titre sous-performe le MASI de 3,32 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
+          "Le plancher des 20 séances précédentes, 335,00 MAD, est rompu. Il devient un niveau de reconquête ; il n’est plus présenté comme un support qui tient. La borne haute de référence reste 394,00 MAD.",
+          "RSI 14 à 33,93 : momentum inférieur au seuil neutre de 50.",
+          "Quantité échangée : 2,83 fois la médiane des 20 séances précédentes. L’activité s’intensifie ; le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,73 MDH, contre 2,40 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -274,8 +277,7 @@
           "earnings_mmad": 407.601,
           "warnings": [
             "Le résultat financier existant (−45,0, p.17) est l'arrondi de −44.808 (p.22) : le contrôle REX + RF + RNC = RAI tolère donc 0,3 MMAD.",
-            "Dette nette à rapprocher : calcul 1361.49 MMAD, publication 1303.0 MMAD ; écart 58.49 MMAD. Aucun arbitrage automatique.",
-            "Ratios au cours publié du 2026-11-27 ; volumes de cette séance à vérifier."
+            "Dette nette à rapprocher : calcul 1361.49 MMAD, publication 1303.0 MMAD ; écart 58.49 MMAD. Aucun arbitrage automatique."
           ],
           "accounting_basis": "consolidé (normes marocaines), 31/12/2025",
           "currency": "MAD",
@@ -475,16 +477,6 @@
               "tolerance_mmad": 26.060000000000002
             },
             "automatic_extraction_certified": false
-          },
-          "quote_valuation": {
-            "price": 330.0,
-            "asof": "2026-11-27",
-            "source": "https://www.cdgcapitalbourse.ma/api/",
-            "source_datetime": null,
-            "collected_at": "2026-11-27T18:47:37.423182+00:00",
-            "status": "price_fields_match_volume_disputed",
-            "volume_status": "disputed",
-            "cross_source_verified": false
           }
         },
         "checkpoint": "Préventes, livraisons, stocks, dette et conversion du résultat en trésorerie.",
@@ -492,16 +484,16 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": null,
-          "median_turnover_mad_estimated": null,
-          "median_turnover_ex_top5_mad_estimated": null,
-          "capacity_shares_per_session_at_10pct": null,
-          "exit_days_at_10pct": null,
+          "median_shares": 6694.5,
+          "median_turnover_mad_estimated": 2403344.25,
+          "median_turnover_ex_top5_mad_estimated": 1729700.0,
+          "capacity_shares_per_session_at_10pct": 669.45,
+          "exit_days_at_10pct": 2,
           "scenario_shares": 1000,
-          "ready": false,
+          "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": null
+        "turnover_mad": 5143185.2
       },
       "publications": []
     },
@@ -2433,26 +2425,29 @@
     {
       "symbol": "SMI",
       "name": "Société Métallurgique d'Imiter",
-      "price": null,
+      "price": 3800.0,
       "asof": "2026-11-27",
-      "data_status": "INDISPONIBLE",
-      "score": null,
-      "score_state": "NON_CALCULABLE",
-      "support": null,
-      "resistance": null,
-      "rsi": null,
-      "activity": null,
-      "scenario": "Données insuffisantes pour établir des niveaux",
-      "issues": [
-        "Cotation ou volume non rapproché ; aucune source choisie arbitrairement"
-      ],
+      "data_status": "OBSERVABLE",
+      "score": 40.0,
+      "score_state": "CALCULABLE",
+      "support": 3741.0,
+      "resistance": 5795.0,
+      "rsi": 12.8,
+      "activity": 1.42,
+      "scenario": "Surveiller la tenue du support et le franchissement confirmé de la résistance",
+      "issues": [],
       "intraday_quote": null,
       "reading": {
         "change_pct": -0.05,
         "previous_session": "2026-11-26",
         "relative_masi_pp": -0.43,
         "paragraphs": [
-          "Donnée absente, ancienne ou suspendue : aucune lecture de la séance courante n’est attribuée à ce titre."
+          "Le titre sous-performe le MASI de 0,43 point(s) sur la même séance. Cette comparaison mesure la résistance relative de la séance, pas une accumulation institutionnelle.",
+          "Clôture sous la moyenne à 20 et 50 séances : la structure reste fragile sur ces horizons.",
+          "Le cours reste entre le plancher 3 741,00 et la borne haute 5 795,00 MAD des 20 séances précédentes. Une rupture du plancher détériorerait la structure ; un dépassement de la borne haute nécessiterait une confirmation.",
+          "RSI 14 à 12,80 : momentum très faible ; une survente ne garantit pas un rebond.",
+          "Quantité échangée : 1,42 fois la médiane des 20 séances précédentes. le volume seul ne permet pas de distinguer absorption, distribution ou achats institutionnels.",
+          "Liquidité robuste estimée hors cinq plus fortes séances : 1,92 MDH, contre 2,77 MDH de médiane. Montants estimés par clôture × quantité ; carnet et glissement non observés."
         ],
         "fundamental": {
           "source": "relevé documentaire référencé, non certifié par cet import",
@@ -2596,8 +2591,7 @@
           "earnings_mmad": 397.10859401,
           "warnings": [
             "BASE SOCIALE : SMI (filiale de Managem) ne publie pas de comptes consolidés ; tous les termes sont sociaux, y compris les capitaux propres.",
-            "Dette nette = dettes de financement + trésorerie-passif − trésorerie-actif = 23,9 MMAD. La société publie un « endettement financier » de −539,8 MMAD parce qu'elle y retranche son compte courant d'associés (563,7 MMAD sur Managem) : deux définitions, le contrôle les recolle, celle de la formule du module est retenue.",
-            "Ratios au cours publié du 2026-11-27 ; volumes de cette séance à vérifier."
+            "Dette nette = dettes de financement + trésorerie-passif − trésorerie-actif = 23,9 MMAD. La société publie un « endettement financier » de −539,8 MMAD parce qu'elle y retranche son compte courant d'associés (563,7 MMAD sur Managem) : deux définitions, le contrôle les recolle, celle de la formule du module est retenue."
           ],
           "accounting_basis": "SOCIAL (SMI ne publie pas de comptes consolidés), 31/12/2025",
           "currency": "MAD",
@@ -2752,16 +2746,6 @@
               "tolerance_mmad": null
             },
             "automatic_extraction_certified": false
-          },
-          "quote_valuation": {
-            "price": 3800.0,
-            "asof": "2026-11-27",
-            "source": "https://www.cdgcapitalbourse.ma/api/",
-            "source_datetime": null,
-            "collected_at": "2026-11-27T18:47:37.423182+00:00",
-            "status": "price_fields_match_volume_disputed",
-            "volume_status": "disputed",
-            "cross_source_verified": false
           }
         },
         "checkpoint": "Production, prix de l’argent, coûts, investissements et trésorerie.",
@@ -2769,16 +2753,16 @@
         "liquidity": {
           "window_sessions": 20,
           "active_sessions": 20,
-          "median_shares": null,
-          "median_turnover_mad_estimated": null,
-          "median_turnover_ex_top5_mad_estimated": null,
-          "capacity_shares_per_session_at_10pct": null,
-          "exit_days_at_10pct": null,
+          "median_shares": 594.0,
+          "median_turnover_mad_estimated": 2774338.0,
+          "median_turnover_ex_top5_mad_estimated": 1923537.0,
+          "capacity_shares_per_session_at_10pct": 59.4,
+          "exit_days_at_10pct": 17,
           "scenario_shares": 1000,
-          "ready": false,
+          "ready": true,
           "post_resume_only": false
         },
-        "turnover_mad": null
+        "turnover_mad": 2844404.0
       },
       "publications": []
     },
@@ -3995,20 +3979,24 @@
         "change_pct": -3.1
       },
       {
+        "symbol": "ADI",
+        "change_pct": -2.94
+      },
+      {
         "symbol": "CIH",
         "change_pct": -2.24
       },
       {
         "symbol": "T2S",
         "change_pct": -2.08
-      },
-      {
-        "symbol": "IBM",
-        "change_pct": -1.96
       }
     ],
-    "ranking_coverage": 55,
+    "ranking_coverage": 61,
     "flows": [
+      {
+        "symbol": "ATW",
+        "amount": 48136113.0
+      },
       {
         "symbol": "IAM",
         "amount": 29834583.14
@@ -4022,12 +4010,8 @@
         "amount": 23198196.3
       },
       {
-        "symbol": "MNG",
-        "amount": 20811069.0
-      },
-      {
-        "symbol": "CFGB",
-        "amount": 19431224.0
+        "symbol": "LHM",
+        "amount": 20919269.0
       }
     ],
     "scenarios": [
@@ -4049,21 +4033,38 @@
     ],
     "vigilance": [
       "MASI : tenue de 16 390,89 ; franchissement confirmé de 17 606,97 pour sortir de l’intervalle observé.",
-      "ADI : Données insuffisantes pour établir des niveaux.",
+      "ADI : Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future (références 335.0 / 394.0 MAD).",
       "RDS : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 160.0 / 181.0 MAD).",
       "TGCC : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 555.1 / 674.0 MAD).",
       "SGTM : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 517.0 / 642.0 MAD).",
       "CMGP : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 250.0 / 291.0 MAD).",
       "MSA : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 725.0 / 797.0 MAD).",
-      "SMI : Données insuffisantes pour établir des niveaux.",
+      "SMI : Surveiller la tenue du support et le franchissement confirmé de la résistance (références 3741.0 / 5795.0 MAD).",
       "T2S : Clôture sous le support de référence ; vérifier une éventuelle reconquête, sans présumer de sa direction future (références 200.1 / 225.5 MAD).",
       "CMT : Attendre des séances comparables après la reprise (références 3000.0 / 4020.0 MAD)."
     ],
     "source_url": "https://www.cdgcapitalbourse.ma/Bourse/market",
     "source": "CDG Capital Bourse",
-    "observed_at": "2026-11-27T18:47:34.224698+00:00"
+    "observed_at": "2026-11-27T19:12:25.341440+00:00"
   },
   "context_news": [
+    {
+      "id": "bddf59be6df02dfada",
+      "title": "Georgia Voters to Decide Fate of $17 Billion Data Center Megaproject",
+      "url": "https://oilprice.com/Energy/Energy-General/Georgia-Voters-to-Decide-Fate-of-17-Billion-Data-Center-Megaproject.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-27T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "d824ca1dec23a634f5",
       "title": "Gabon : environ 680 millions USD de dette convertis en obligations du Trésor",
@@ -4250,29 +4251,12 @@
       "scope": "INTL",
       "feed_id": "oilprice",
       "feed_url": "https://oilprice.com/rss/main"
-    },
-    {
-      "id": "b93ba0f77c8f796b90",
-      "title": "Trump Urges Putin to End Aggression as Europe Braces for U.S. Military Cuts",
-      "url": "https://oilprice.com/Geopolitics/Europe/Trump-Urges-Putin-to-End-Aggression-as-Europe-Braces-for-US-Military-Cuts.html",
-      "publisher": "OilPrice",
-      "published_at": "2026-11-27T15:00:00+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "commodites",
-      "scope": "INTL",
-      "feed_id": "oilprice",
-      "feed_url": "https://oilprice.com/rss/main"
     }
   ],
   "macro": {
     "schema_version": 1,
-    "cutoff": "2026-11-27T18:47:47.761837+00:00",
-    "checked_at": "2026-11-27T18:47:36.171088+00:00",
+    "cutoff": "2026-11-27T19:12:35.440971+00:00",
+    "checked_at": "2026-11-27T19:12:25.967371+00:00",
     "status": "ok",
     "groups": [
       {
@@ -4292,7 +4276,7 @@
             "description": "S&P 500",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/SP-SPX/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
@@ -4309,7 +4293,7 @@
             "description": "Dow Jones Industrial Average",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/DJ-DJI/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
@@ -4326,7 +4310,7 @@
             "description": "CAC 40 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/EURONEXT-PX1/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
@@ -4343,7 +4327,7 @@
             "description": "Japan 225 Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-NI225/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4355,34 +4339,34 @@
             "ticker": "FX_IDC:USDMAD",
             "name": "USD/MAD",
             "unit": "MAD / USD",
-            "value": 10.0475,
-            "change_pct": 0.3535721776650174,
+            "value": 10.0477,
+            "change_pct": 0.3555697605896917,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:46:13+00:00",
+            "observed_at": "2026-11-27T19:10:56+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "U.S. DOLLAR / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-USDMAD/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "FX_IDC:EURMAD",
             "name": "EUR/MAD",
             "unit": "MAD / EUR",
-            "value": 10.978,
-            "change_pct": -0.018214936247729217,
+            "value": 10.977,
+            "change_pct": -0.027322404371585736,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:46:47+00:00",
+            "observed_at": "2026-11-27T19:11:47+00:00",
             "currency": "MAD",
             "mode": "streaming",
             "description": "EURO / MOROCCAN DIRHAM",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/FX_IDC-EURMAD/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
@@ -4399,24 +4383,24 @@
             "description": "CBOE Volatility Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/CBOE-VIX/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "TVC:DXY",
             "name": "Indice dollar",
             "unit": "points",
-            "value": 104.05,
-            "change_pct": 0.26306407007332655,
+            "value": 104.054,
+            "change_pct": 0.26691848868246437,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:47:26+00:00",
+            "observed_at": "2026-11-27T19:11:20+00:00",
             "currency": "USD",
             "mode": "streaming",
             "description": "U.S. Dollar Currency Index",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/TVC-DXY/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           }
         ]
@@ -4428,51 +4412,51 @@
             "ticker": "COMEX:GC1!",
             "name": "Or · futures",
             "unit": "USD / once troy",
-            "value": 3666.9,
-            "change_pct": 3.7077889020872195,
+            "value": 3666.7,
+            "change_pct": 3.7021324735561865,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:47:09+00:00",
+            "observed_at": "2026-11-27T19:12:10+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Gold Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-GC1!/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "ICEEUR:BRN1!",
             "name": "Brent · futures",
             "unit": "USD / baril",
-            "value": 90.39,
-            "change_pct": -1.3963128613504976,
+            "value": 90.45,
+            "change_pct": -1.3308606959746905,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:47:24+00:00",
+            "observed_at": "2026-11-27T19:12:14+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Brent Crude Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-BRN1!/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
             "ticker": "COMEX:HG1!",
             "name": "Cuivre · futures",
             "unit": "USD / livre",
-            "value": 5.6015,
-            "change_pct": 4.965801555326519,
+            "value": 5.6025,
+            "change_pct": 4.9845404291202104,
             "state": "observed",
             "notice": "Dernière observation source",
-            "observed_at": "2026-11-27T18:46:52+00:00",
+            "observed_at": "2026-11-27T19:12:09+00:00",
             "currency": "USD",
             "mode": "delayed_streaming_600",
             "description": "Copper Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/COMEX-HG1!/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           },
           {
@@ -4489,7 +4473,7 @@
             "description": "API2 Rotterdam Coal Futures",
             "source": "TradingView — scanner public",
             "source_url": "https://www.tradingview.com/symbols/ICEEUR-ATW1!/",
-            "collected_at": "2026-11-27T18:47:36.171088+00:00",
+            "collected_at": "2026-11-27T19:12:25.967371+00:00",
             "collection_state": "collected"
           }
         ]

@@ -1,8 +1,25 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T18:47:34.130158+00:00",
+  "updated_at": "2026-11-27T19:12:25.261669+00:00",
   "role": "veille uniquement, aucun score NLP",
   "articles": [
+    {
+      "id": "bddf59be6df02dfada",
+      "title": "Georgia Voters to Decide Fate of $17 Billion Data Center Megaproject",
+      "url": "https://oilprice.com/Energy/Energy-General/Georgia-Voters-to-Decide-Fate-of-17-Billion-Data-Center-Megaproject.html",
+      "publisher": "OilPrice",
+      "published_at": "2026-11-27T19:00:00+00:00",
+      "tickers": [],
+      "tier": "S2",
+      "status": "alerte non vérifiée",
+      "usable_for_score": false,
+      "ticker_matching": "unmatched",
+      "classification": "UNVERIFIED_ALERT",
+      "category": "commodites",
+      "scope": "INTL",
+      "feed_id": "oilprice",
+      "feed_url": "https://oilprice.com/rss/main"
+    },
     {
       "id": "d824ca1dec23a634f5",
       "title": "Gabon : environ 680 millions USD de dette convertis en obligations du Trésor",
@@ -2802,23 +2819,6 @@
       "scope": "UNKNOWN",
       "feed_id": "financialafrik",
       "feed_url": "https://www.financialafrik.com/feed/"
-    },
-    {
-      "id": "338e4ff4277d561d21",
-      "title": "De retour à la tête de Nvidia, Jensen Huang assure qu'il \"sera un meilleur PDG la deuxième fois\"",
-      "url": "https://www.france24.com/fr/vid%C3%A9o/20261124-de-retour-%C3%A0-la-t%C3%AAte-de-nvidia-jensen-huang-assure-qu-il-sera-un-meilleur-pdg-la-deuxi%C3%A8me-fois",
-      "publisher": "France 24 · économie",
-      "published_at": "2026-11-24T11:49:06+00:00",
-      "tickers": [],
-      "tier": "S2",
-      "status": "alerte non vérifiée",
-      "usable_for_score": false,
-      "ticker_matching": "unmatched",
-      "classification": "UNVERIFIED_ALERT",
-      "category": "economie",
-      "scope": "INTL",
-      "feed_id": "france24",
-      "feed_url": "https://www.france24.com/fr/economie/rss"
     },
     {
       "id": "c8d7d2f8eb99cb8e57",
